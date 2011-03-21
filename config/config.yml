@@ -42,7 +42,7 @@ cache: false
 #     your actual content and the (optional) menu.txt file that links to your
 #     main category pages.
 #
-content: content
+content: content-demo
 
 # google_analytics_code
 #     Set this if you want Google Analytics to track traffic on your site.
