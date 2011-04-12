@@ -1,0 +1,126 @@
+#1
+
+Resize and process images on the fly
+
+Via the query string (all languages):
+image.jpg?width=300
+
+Via the Managed API (.NET and COM languages)
+ImageBuilder.Current.Build(source,destination,parameters)
+
+Works with bitmaps, streams, files, uploaded files, S3*, SQL*, and more. 
+Understands jpeg, png, gif, tiff, exif, and psd* formats.
+
+Resizer Core is Free & Open Source
+Can be used in commercial and open-source projects.
+
+Plugins may be licensed differently.
+
+*With plugins
+
+#2 
+
+Works with IIS versions 5, 5.1, 6, 7, and 7.5 in both classic and integrated mode. As well as IIS Express and Cassini.
+
+ASP.NET is not required - everything is accessible via the query string.
+Process images from PHP, ASP, Python, Ruby, Flex, Flash, HTML, javascript - anything!
+
+Certain plugins may require .NET 3.5 to be installed on the server.
+
+#3 
+
+Crop!  image.jpg?width=200
+Rotate!  image.jpg?rotate=20
+Flip! image.jpg?flip=h
+Add padding, borders, margins, change background colors...
+Encode in jpeg, gif, or png format with adjustable quality.
+
+Every combination of commands is supported:
+image.jpg?format=png&flip=h&width=200&height=150&rotate=70&... etc
+
+
+#4
+
+Highly tuned performance. Memory-leak-free guarantee.
+
+Use a caching plugin to drastically increase scalability:
+
+DiskCache - Serves resized images from disk, increasing load scalability as much as 10,000%. URLs remain unchanged.
+
+S3Cache - Asynchronously uploads resized images to an Amazon S3 bucket, while still serving the images quickly in the meantime. 
+Drastically decreases server bandwidth usage, increases load scalability, and allows your server to focus on logic-intensive tasks instead  of drowning in mundane IO.
+Causes an invisible redirect. (Image URLs don't appear in the address bar.) Compatible with CloudFront edge caching.
+Works well with DiskCache. DiskCache decreases memory and cpu usage while an image is uploading.
+
+#5
+
+Process images from multiple sources at the same time.
+
+Resize and process images located on disk
+S3Reader - Resize and process images located in an Amazon S3 bucket
+SqlReader - Resize and process images stored in a SQL database.
+AzureReader - Resize and process images stored in Azure Blob storage.
+
+#6
+
+Protect against denial-of-service attacks and  hot-linking
+
+RequestLimiting - Limit each client to a certain quantity of requests per minute
+HotlinkPrevention - Reject requests that don't come from your site.
+
+#7
+
+Generate amazing GIF and 8-bit PNG files with the PrettyGIFs plugin. Control bit depth and dithering with &colors= and &dither=
+
+Resize and process GIF movies with the AnimatedGifs plugin!
+
+#8
+
+Resize and process PSD images extremely fast with the PsdReader plugin!
+
+Hide and show layers, modify text layers, and change layer effects with the PsdComposer plugin.
+
+#9
+
+Easily watermark (or apply transparent overlays) to your images with the Watermark plugin. 
+
+#10 
+
+Apply artistic filters and adjustments on the fly with the SimpleFilters and AdvancedFilters plugin
+
+SimpleFilters - B&W, Sepia, Alpha, and Brightness adjustments. Extremely fast, uses GDI.
+AdvancedFilters - Watercolor, Sharpening, Blurring. Slightly slower, managed code.
+
+#11
+
+Let users download .ZIP files of your content.
+
+BatchResizeAndZip is flexible, can operate in asynchronous or synchronous mode, and works with non-image filetypes as well.
+
+#12
+
+Clean up your URLs and make shortcuts to frequently used command sequences with the Rewriting plugin.
+
+Express your rewriting rules declaratively in Web.config.
+
+#13
+
+Get image captions that don't mess up your flow layout.
+
+Caption
+
+#14 
+
+Get Design-time support with the Controls plugin. Add attributes to the Image and HtmlImage controls that control server-side resizing, or use the Imagine control to access everything the Pipeline has to offer.
+
+
+#15
+
+Resize images as they are uploaded with the managed API
+
+ImageBuilder.Current.Build(UploadFile f, string path, ResizeSetting settings)
+
+
+
+
+
