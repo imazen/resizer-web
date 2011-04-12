@@ -1,4 +1,32 @@
-%header(role="banner")
-  %hgroup
-    %h1= @heading
-    %h2= @subtitle
+:plain
+	<!-- header -->
+	<div id="header">			
+	
+		<a name="top"></a>
+		
+		<h1 id="logo-text"><a href="index.html" title="">#{@heading}</a></h1>		
+		<p id="slogan">#{@subtitle}</p>					
+		
+		<div  id="nav">
+			<ul>
+				<li id="current"><a href="index.html">Home</a></li>
+				<li><a href="style.html">Style Demo</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="archives.html">Archives</a></li>
+				<li><a href="index.html">Support</a></li>
+				<li><a href="index.html">About</a></li>		
+			</ul>		
+		</div>		
+		
+		<p id="rss-feed"><a href="index.html" class="feed">Grab the RSS FEEd</a></p>	
+		
+		<form id="quick-search" action="index.html" method="get" >
+			<p>
+			<label for="qsearch">Search:</label>
+			<input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" />
+			<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="images/search.png" />
+			</p>
+		</form>	
+						
+	<!-- /header -->					
+	</div>

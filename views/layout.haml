@@ -18,7 +18,7 @@
     %link(href="/articles.xml" rel="alternate" type="application/atom+xml")
     = haml :analytics, :layout => false
   %body
-    #container
+    %div#wrap
       = haml :header, :layout => false
       = yield
-      = haml :footer, :layout => false
+    = haml :footer, :layout => false
