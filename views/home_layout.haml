@@ -22,9 +22,15 @@
 	%body
 		%div#wrap
 			= haml :header, :layout => false
+			= haml :banners, :layout => false
 			= yield
 		= haml :footer, :layout => false
 		%script{:type => "text/javascript",
 				:src  => "/js/jquery-1.5.2.min.js"}
-		
+		%script{:type => "text/javascript",
+				:src  => "/js/jquery.jshowoff.js"}	
+		:javascript
+			$(function(){
+				$('.featured').jshowoff({speed:10000});
+			});
 

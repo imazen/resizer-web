@@ -1,8 +1,8 @@
 # Title and subheading for your site. Used on the home page and in page
 # titles.
 #
-title: "Image resizing and processing module"
-subtitle: "For IIS. Use the query string API from every langugage: ASP.NET, PHP, Ruby, Javascript, Flash, Flex, Silverlight,.... "
+title: "Image resizing for IIS"
+subtitle: "URL-based image resizing has arrived, and it works with every language imaginable"
 
 # If you want to set the descrition or keywords meta tags on your site's
 # home page, do it here.

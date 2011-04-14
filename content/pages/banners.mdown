@@ -1,58 +1,6 @@
-#1
-
-Resize and process images on the fly
-
-Via the query string (all languages):
-image.jpg?width=300
-
-Via the Managed API (.NET and COM languages)
-ImageBuilder.Current.Build(source,destination,parameters)
-
-Works with bitmaps, streams, files, uploaded files, S3*, SQL*, and more. 
-Understands jpeg, png, gif, tiff, exif, and psd* formats.
-
-Resizer Core is Free & Open Source
-Can be used in commercial and open-source projects.
-
-Plugins may be licensed differently.
-
-*With plugins
-
-#2 
-
-Works with IIS versions 5, 5.1, 6, 7, and 7.5 in both classic and integrated mode. As well as IIS Express and Cassini.
-
-ASP.NET is not required - everything is accessible via the query string.
-Process images from PHP, ASP, Python, Ruby, Flex, Flash, HTML, javascript - anything!
-
-Certain plugins may require .NET 3.5 to be installed on the server.
-
-#3 
-
-Crop!  image.jpg?width=200
-Rotate!  image.jpg?rotate=20
-Flip! image.jpg?flip=h
-Add padding, borders, margins, change background colors...
-Encode in jpeg, gif, or png format with adjustable quality.
-
-Every combination of commands is supported:
-image.jpg?format=png&flip=h&width=200&height=150&rotate=70&... etc
 
 
-#4
 
-Highly tuned performance. Memory-leak-free guarantee.
-
-Use a caching plugin to drastically increase scalability:
-
-DiskCache - Serves resized images from disk, increasing load scalability as much as 10,000%. URLs remain unchanged.
-
-S3Cache - Asynchronously uploads resized images to an Amazon S3 bucket, while still serving the images quickly in the meantime. 
-Drastically decreases server bandwidth usage, increases load scalability, and allows your server to focus on logic-intensive tasks instead  of drowning in mundane IO.
-Causes an invisible redirect. (Image URLs don't appear in the address bar.) Compatible with CloudFront edge caching.
-Works well with DiskCache. DiskCache decreases memory and cpu usage while an image is uploading.
-
-#5
 
 Process images from multiple sources at the same time.
 

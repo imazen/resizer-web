@@ -1,0 +1,137 @@
+<div class="banner first-banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/leaf-cropping.jpg" alt="cropping a leaf" width="350px"  style="padding: 9px 9px 15px 15px;" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+	<h2>Work less, do more</h2>
+	<p>Resize, crop, and fix images without ever leaving your code editor or browser, with the simplest API imaginable.</p>
+	<ul>
+		<li><strong>Via the query string (all languages):</strong><br />
+			image.jpg?width=300
+		</li>
+		<li><strong>Via the Managed API (.NET and COM languages)</strong><br />
+	        ImageBuilder.Current.Build(source,destination,parameters)
+		</li>
+	</ul>
+	<p style="color:white">Stop managing multiple image versions. Stop the endless photoshop-upload-test cycle, and let images become the <em>easiest</em> part of your job.
+		
+	</div>
+</div>
+
+<div class="banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/sample-usage.png" alt="featured" width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h2>Any language</h2>
+		<p>Process images from ASP.NET, PHP, ASP, Python, Ruby, Flex, Flash, HTML, javascript - anything!</p>
+		<h3>Any version of IIS, IIS express, or Cassini</h3>
+		<p>Works with IIS 5, 5.1, 6, 7, and 7.5 in both classic and integrated mode.</p>
+		<p>.NET 2 is required on the server. Some plugins may require higher versions to be installed.</p>
+		<p>Low-trust compatible. Compatible with every hosting plan (as far as we know).</p>
+	</div>
+</div>
+
+<div class="banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/image-formats.png" alt="featured" width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h2>No restrictions</h2>
+		<p>Works with bitmaps, streams, files, uploaded files, amazon S3 buckets, sql databases, and more. 
+		Understands jpeg, png, gif, tiff, exif, and psd formats.
+		</p>
+		<p>Mix and match image management strategies</p>
+		<ul>
+			<li>Keep the originals, generating versions on the fly</li>
+			<li>Pre-generate versions with ImageBuilder</li>
+			<li>Automatically resize and encode images as users upload them</li>
+			<li>Let users crop, rotate, and resize their own images</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/sample-usage.png" alt="featured" width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h2>Open Source</h2>
+		<p>When you download the core, up-to-date source code is included alongside the binaries. Everything you get for free, and everything you buy, includes source code.</p>
+		<h3>Plugin architecture</h3>
+		<ul>
+		<li><strong>Everything you need and nothing you don't.</strong> With over 22 plugins available, you can pick and choose what functionality you want.</li>
+		<li><strong>Flexible core.</strong> Everything in the core module can be modified with a plugin. And plugins are extremely easy to build.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/rocket.jpg" alt="Rocket. Fast. Like this module." width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h2>Highly tuned performance</h2>
+		<p>This software comes with a memory-leak-free guarantee.
+		</p>
+		<h3>Incredible scalability with a caching plugin</h3>
+		<ul>
+			<li>Kiss high RAM/CPU/IO usage goodbye with our third-generation DiskCache plugin. Serve 100x more images per second.</li>
+			<li>Cloudify with S3Cache.<br />
+			Asynchronously uploads resized images to an Amazon S3 bucket, while still serving the images quickly in the meantime. 
+			Drastically decreases server bandwidth usage, increases load scalability, and allows your server to focus on logic-intensive tasks instead  of drowning in mundane IO.
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+<div class="banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h2>Combine commands</h2>
+		<p>Every combination of commands is supported.</p>
+		
+		<p>This, for example, rotates 90 degrees, crops to a square, sizes to 300x300, flips horizontally, adds a 5 pixel gray border and a 10 pixel black padding.
+			</p><p><strong>?format=png &amp;width=300 &amp;height=300 &amp;crop=auto &amp;rotate=90 &amp;bgcolor=black &amp;flip=h &amp;borderWidth=5 &amp;borderColor=gray &amp;paddingWidth=10</strong></p>
+	</div>
+</div>
+
+<div class="banner">
+	<div class="open-source-ribbon ribbon"></div>	
+	<div class="image-block">
+	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h2>Free core + 5 plugins</h2>
+		<p>The free download includes everything most people need.</p>
+		<ul>
+			<li>Core ImageResizer module</li>
+			<li>BasicEncoder plugin, for high-quality jpeg and png encoding.<br/>
+				Upgrade to the PrettyGifs plugin for Photoshop-quality GIFs.</li>
+			<li>Diagnostic, Shadow, Caption, and SizeLimits plugins.</li>
+			<li>Trial licenses for all other plugins, without time limits. Trials shouldn't be a trial on your patience.</li>
+		</ul>
+		<p>Consider buying the DiskCache plugin when you launch your site - it will speed up your site tremendously.</p>
+	</div>
+</div>
+
+

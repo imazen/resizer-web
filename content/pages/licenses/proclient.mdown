@@ -1,0 +1,48 @@
+#Professional Client license
+
+##License summary
+
+The holder of a Pro or Enterprise license may grant a client this license, which allows the client to use the Software as part of a larger piece of software.
+
+This permits a developer or business to integrate the Software on behalf of a Client, without the need for the client to purchase an additional license. The developer may provide both source code and binaries to the Client.
+
+##License Terms
+
+A holder of a Professional/Enterprise license (the Provider) may grant another individual/business (the Client) the Professional Client license, which allows the Client to use the Software as part of a larger piece of software (the Project) provided by the Provider. This license is only valid if the Project does not compete with any previously existing product offerings of the original author of the Software.
+
+The "Software" is the plugin which is being sub-licensed by a Provider to a Client.
+
+The Client is granted the following rights:
+
+ * Usage on an unlimited number of virtual or physical machines machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers.
+ * Modification of configuration settings related to the Software.
+
+The Client is prohibited from:
+
+ * Using the Software except as part the Project provided by the Provider.
+ * Modifying the way in which the Software is integrated with the Project.
+ * Using or integrating the Software with another project or web site.
+ * Extracting the Software from the Project.
+ * Redistributing the Software.
+ * Modifying the Software.
+
+All of the above restrictions are lifted with a Professional or Enterprise license, which can be purchased for a reasonable fee.
+If the Client purchases a Professional or Enterprise license, they will be subject to those terms instead, and this license will become null and void.
+
+All rights are reserved unless explicitly specified. This license is only valid when and if the Provider holds a valid, qualifying license.
+
+Limitation of liability
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+[freedom]: /licenses/freedom  "Resizer Freedom License"
+[trial]: /liceses/trial  "Resizer Trial License"
+[pro]: /liceses/pro  "Resizer Professional License"
+[proclient]: /liceses/proclient  "Resizer Professional Client License"
+[enterprise]: /licenses/enterprise  "Resizer Enterprise License"
