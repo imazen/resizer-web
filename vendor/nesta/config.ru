@@ -3,9 +3,7 @@ require 'bundler/setup'
 
 Bundler.require(:default)
 
+$LOAD_PATH.unshift(::File.expand_path('lib', ::File.dirname(__FILE__)))
 require 'nesta/app'
-require 'erubis'
 
-Nesta::App.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 run Nesta::App
-

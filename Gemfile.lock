@@ -1,16 +1,22 @@
-GEM
-  remote: http://rubygems.org/
+PATH
+  remote: vendor/nesta
   specs:
-    RedCloth (4.2.7)
-    haml (3.0.25)
-    maruku (0.6.0)
-      syntax (>= 1.0.0)
     nesta (0.9.4)
       RedCloth (~> 4.2)
       haml (~> 3.0)
       maruku (>= 0.6.0)
       shotgun (>= 0.8)
       sinatra (= 1.1.2)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    RedCloth (4.2.7)
+    erubis (2.7.0)
+    haml (3.0.25)
+    haml-edge (3.1.79)
+    maruku (0.6.0)
+      syntax (>= 1.0.0)
     rack (1.2.2)
     shotgun (0.9)
       rack (>= 1.0)
@@ -24,4 +30,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nesta (= 0.9.4)
+  erubis
+  haml-edge
+  nesta!
