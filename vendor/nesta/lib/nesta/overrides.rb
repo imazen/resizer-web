@@ -5,6 +5,10 @@ module Nesta
         defaults = Overrides.render_options(template, :haml)
         super(template, defaults.merge(options), locals)
       end
+      def erubis(template, options = {}, locals = {})
+        defaults = Overrides.render_options(template, :erubis)
+        super(template, defaults.merge(options), locals)
+      end
 
       def scss(template, options = {}, locals = {})
         defaults = Overrides.render_options(template, :scss)
