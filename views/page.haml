@@ -1,11 +1,4 @@
 :plain
-		<!-- content -->
-			<div id="content-wrap" class="clear">
-				<div id="content">
-					<div id="main" class="mainContent">
-				#{@page.to_html(self)}
-				</div>
-				<!-- /content -->	
-				</div>				
-		<!-- /content-wrap -->	
-		</div>
+	<div class="page-content">
+		#{@page.to_html(self)}
+	</div>

@@ -1,10 +1,8 @@
+%div.banners-wrap
+	%div.banners
+		= erubis :banners_content, :layout => false
 :plain
-		<!-- content -->
-			<div id="content-wrap" class="clear">
-				<div id="content">
-				#{@page.to_html(self)}
-				<!-- /content -->	
-				</div>				
-		<!-- /content-wrap -->	
-		</div>
+	<div class="page-content">
+		#{@page.to_html(self)}
+	</div>
 	

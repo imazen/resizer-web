@@ -1,0 +1,13 @@
+Template: home
+
+#Getting started
+
+1) Download the module (free, 1MB)
+
+2) Copy ImageResizer.dll into the /bin directory of your web site.
+
+3) Create a Web.Config file (or modify yours to include these settings)
+
+<pre><code>
+</code>
+</pre>

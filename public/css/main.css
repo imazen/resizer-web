@@ -1,0 +1,10 @@
+.page-content{
+  background-color: #FEFEFE;
+  border: 7px solid #E0E0E0;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	color:#202020;
+	font-family:'Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,Sans-Serif;
+	padding:20px;
+}
