@@ -29,7 +29,7 @@ List of non-free plugins
 
 
 [freedom]: /licenses/freedom  "Resizer Freedom License"
-[trial]: /liceses/trial  "Resizer Trial License"
-[pro]: /liceses/pro  "Resizer Professional License"
-[proclient]: /liceses/proclient  "Resizer Professional Client License"
+[trial]: /licenses/trial  "Resizer Trial License"
+[pro]: /licenses/pro  "Resizer Professional License"
+[proclient]: /licenses/proclient  "Resizer Professional Client License"
 [enterprise]: /licenses/enterprise  "Resizer Enterprise License"
