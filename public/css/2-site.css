@@ -4,7 +4,6 @@ body{
 .site-container{
 	width:960px;
 	margin:0px auto 0px auto;
-	padding-top:20px;
 	/*background:url("/images/open-source-ribbon.png") no-repeat scroll top right transparent;*/
 }
 
@@ -16,15 +15,18 @@ header{
 
 header h1{
 	width:400px;
+	padding-top:6px;
 }
 header h1 a{
   color: white;
   font-size: 32px;
   letter-spacing: 2px;
-  line-height: .8em;
+  line-height: 1em;
   text-decoration: none;
   text-shadow: 0 0 70px white;
-text-transform: lowercase;
+	text-transform: lowercase;
+	
+	
 }
 header h1 span.tech{
 	font-size:50%;
@@ -32,6 +34,7 @@ header h1 span.tech{
 }
 header .menu-wrap{
 	float:right;
+	padding-top:20px;
 }
 
 header ul.menu{
@@ -63,9 +66,11 @@ header div.site-subheader{
 	display:none;
 }
 footer{
+	font-family:'Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,Sans-Serif;
 	display:block;
 	text-align:center;
-	color:#e0e0e0;
-	padding-top:5px;
+	color:#d0d0d0;
+	padding-top:10px;
+	margin-bottom:20px;
 }
 

@@ -1,60 +1,44 @@
 .banners-wrap {
   margin: 0;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 920px;
 }
 .banners {
   position: relative;
-  width: 920px;
-  height: 337px;
-  margin-bottom: -7px; }
+  width: 960px;
+  height: 400px;
+}
 
-.ribbon {
-  position: absolute;
-  background: url(../images/ribbon.png) no-repeat;
-  width: 99px;
-  height: 98px;
-  top: -1px;
-  right: -2px;
-  z-index: 99999; }
+/* So only the first banner is visible until the javascript loads */
+div.banner{ display:none;}
+.jshowoff div.banner, div.first-banner{ display:block;}
 
-.open-source-ribbon {
-  background: url(../images/open-source-ribbon.png) no-repeat; }
 
 div.banner {
-  width: 920px;
+  width: 960px;
   height: 337px;
-  color: #dfdfdf; }
-  div.banner p, div.banner li {
-    font-size: 10pt; }
-  div.banner h2, div.banner h3 {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font: bold 2.7em "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, Sans-Serif;
-    letter-spacing: -2px;
-    color: #f0e8e8; }
-    div.banner h2 a, div.banner h3 a {
-      color: #f0e8e8;
-      border: none; }
-  div.banner h3 {
-    font: bold 1.6em "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, Sans-Serif; }
-  div.banner .image-block, div.banner .text-left {
+  color: #dfdfdf;
+}
+
+.t .banner h1,.t .banner h2,.t .banner h3{
+	margin-top:0;
+}
+
+div.banner .image-block, div.banner .text-left {
     float: left;
-    width: 380px;
-    margin: 20px 0 0 25px;
-    padding: 10px 0 0 0;
-    display: inline; }
-    div.banner .image-block img, div.banner .text-left img {
+    width: 400px;
+    display: inline; 
+		padding-top:16px;
+}
+div.banner .image-block img, div.banner .text-left img {
       background-color: #1c130e;
       border: 1px solid #251a15;
-      padding: 12px; }
+      padding: 12px; 
+}
   div.banner .text-block, div.banner .text-right {
     float: right;
-    width: 480px;
-    margin: 15px 25px 0 0;
+    width: 512px;
     display: inline; }
+
+
   div.banner a.more-link {
     float: left;
     margin-top: 5px;
@@ -72,14 +56,7 @@ div.banner {
       border: 1px solid #2f4c13;
       background: #4a781d url(../images/button-hover-bg.png) repeat-x; }
 
-div.banner {
-  display: none; }
 
-div.first-banner {
-  display: block; }
-
-.jshowoff div.banner {
-  display: block; }
 
 /*-- jShowOff module styles -- */
 .jshowoff.basicFeatures {
