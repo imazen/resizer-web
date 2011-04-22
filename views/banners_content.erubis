@@ -29,7 +29,6 @@
 		<p>Process images from ASP.NET, PHP, ASP, Python, Ruby, Flex, Flash, HTML, javascript - anything!</p>
 		<h3>Any version of IIS, IIS express, or Cassini</h3>
 		<p>Works with IIS 5, 5.1, 6, 7, and 7.5 in both classic and integrated mode.</p>
-		<p>.NET 2 is required on the server. Some plugins may require higher versions to be installed.</p>
 		<p>Low-trust compatible. Compatible with every hosting plan (as far as we know).</p>
 	</div>
 </div>
