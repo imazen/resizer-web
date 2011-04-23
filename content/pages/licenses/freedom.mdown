@@ -1,3 +1,5 @@
+title: Resizer Freedom License
+
 #Resizer Freedom license
 
 Used by the Resizer Core and the NoCache, DefaultEncoder, Caption, Shadow, and SizeLimiting plugins.

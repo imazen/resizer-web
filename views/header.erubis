@@ -1,13 +1,8 @@
 	<a name="top"></a>
 	<header>
 		<div class="menu-wrap">
-			<ul class="menu">
-				<li class="current"><a href="/">Home</a></li>
-				<li><a href="/download"><span class="downloadicon">Download</span></a></li>
-				<li><a href="/plugins">Plugins</a></li>
-				<li><a href="/documentation">Documentation</a></li>
-				<li><a href="/support">Support</a></li>	
-			</ul>
+			<%= haml(:site_menu, :layout => false) %>
+			
 				
 		</div>
 			<h1><a href="/" title="">ImageResizer <span class="tech">the IIS/ASP.NET module for everyone </span></a></h1>

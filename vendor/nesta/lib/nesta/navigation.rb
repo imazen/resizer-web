@@ -1,6 +1,8 @@
 module Nesta
   module Navigation
     module Renderers
+ 
+      
       def display_menu(menu, options = {})
         defaults = { :class => nil, :levels => 2 }
         options = defaults.merge(options)
@@ -21,9 +23,9 @@ module Nesta
             end
           end
         else
-          haml_tag :li do
+          haml_tag :li, :class => (@page.abspath == item.abspath) ? "current" : "" do
             haml_tag :a, :<, :href => item.abspath do
-              haml_concat item.heading
+              haml_concat item.metadata("menu").nil? ? item.heading : item.metadata("menu")
             end
           end
         end

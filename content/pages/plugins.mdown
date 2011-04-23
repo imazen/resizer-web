@@ -1,0 +1,4 @@
+Title: Plugins - Image Resizer
+
+
+#Plugins

@@ -83,6 +83,7 @@ abbr,acronym{
 	border:0;
 }
 
+
 /* Selectively enabled text styling */
 
 .t {
@@ -135,12 +136,16 @@ html>body .t{
 } 
 
 .t ul li{
-	list-style-type: square;
 	margin:0;
 	padding:0;
+	background: url("/images/bullet.png") no-repeat scroll left 10px transparent;
+	list-style: none outside none;
+	margin: 0 0 0 -12px;
+	padding: 0 0 0 12px;
 }
 .t ul{
 	margin-top:1.5em;
+	margin-bottom:1.5em;
 }
 
 .t a,
@@ -179,16 +184,14 @@ html>body .t{
 }
 
 .t pre, .t code {
-	overflow-x: auto;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	background: #111;
-	border: 1px solid #333;
 	font-family: monaco, courier, "courier new", monospace;
-	font-size: 11px;
-	margin: 0 0 18px;
-	padding: 9px;
+	font-size: 10px;
+	line-height:12px;
 }
+
+
+.t strong{font-weight:bold;}
+
 
 .t .amp {
 	font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;

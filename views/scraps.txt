@@ -1,0 +1,9 @@
+<%-#
+<ul class="menu">
+	<li class="current"><a href="/">Home</a></li>
+	<li><a href="/download"><span class="downloadicon">Download</span></a></li>
+	<li><a href="/plugins">Plugins</a></li>
+	<li><a href="/documentation">docs</a></li>
+	<li><a href="/documentation">license</a></li>
+	<li><a href="/support">Support</a></li>	
+</ul>-%>

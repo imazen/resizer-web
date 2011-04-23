@@ -1,13 +1,50 @@
 Template: home
+Menu: home
+Title: ASP.NET Image Resizing Module for IIS
 
 #Getting started
 
-1) Download the module (free, 1MB)
+1) [Download the module (free, 1MB)](/download)
 
 2) Copy ImageResizer.dll into the /bin directory of your web site.
 
-3) Create a Web.Config file (or modify yours to include these settings)
+3) Modify or create the /Web.Config file for your site:
 
-<pre><code>
-</code>
-</pre>
+	<?xml version="1.0" encoding="utf-8" ?>
+	<configuration>
+		<configSections>
+			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" />
+		</configSections>
+
+		<resizer>
+			<!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
+			     you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 -->
+			<pipeline fakeExtensions=".ashx" />
+
+			<plugins>
+				<!-- <add name="DiskCache" /> -->
+				<!-- <add name="PrettyGifs" /> -->
+			</plugins>	
+		</resizer>
+
+		<system.web>
+			<httpModules>
+				<!-- This is for IIS5, IIS6, and IIS7 Classic, and Cassini/VS Web Server-->
+				<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+			</httpModules>
+		</system.web>
+
+		<system.webServer>
+			<validation validateIntegratedModeConfiguration="false"/>
+			<modules>
+				<!-- This is for IIS7+ Integrated mode -->
+				<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+			</modules>
+		</system.webServer>
+	</configuration>
+
+4) [Increase performance and add features with plugins](/plugins)! 
+
+Buying one of our awesome plugins gives you access to priority support and funds open-source development. How can you resist?
+
+5) Relax and have fun!

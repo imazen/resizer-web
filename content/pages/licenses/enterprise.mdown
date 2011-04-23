@@ -1,3 +1,5 @@
+title: Resizer Enterprise License
+
 # Resizer Enterprise license
 
 This license can be purchased for any plugin not available under the Freedom license or another open-source license.

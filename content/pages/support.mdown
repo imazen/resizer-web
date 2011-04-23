@@ -1,4 +1,28 @@
+Title: Support - Image Resizer
+
 #Support
 
-http://image-resizing-module.tenderapp.com/
+
+Standard e-mail support is free with every purchase
+
+Visit [resizer.uservoice.com](http://resizer.uservoice.com/) for the forums, wish list, and knowledge base.
+
+You can e-mail support at **support@imageresizingin.net**.
+
+## Hours
+
+Support is provided on a best-effort basis every day of the week. Average response time is under 5 hours, and under 2 hours during the following time periods:
+
+* 9am to 9pm GMT
+* 4am to 4pm EST
+* 1am to 1pm PST
+
+## Emergency telephone support
+
+Emergency support costs $95 per incident. To initiate, send an e-mail to support indicating it is an emergency situation, providing your telephone number(s).
+You will receive a phone call as soon as your e-mail is received, as well as a payment link.
+
+It is suggested that you download and install [Team Viewer](http://teamviewer.com) on the computer in question, as remote desktop access may be required to resolve your issue.
+
+We will make our best effort to respond as quickly as possible, but may not be available due to internet connection problems, sick days, etc.
 

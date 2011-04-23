@@ -1,8 +1,10 @@
 /
-license
-download/core
-changelog
- changes/v1
- changes/v2
-
-about
+download
+plugins
+docs
+support
+licenses/
+  freedom
+  trial
+  pro
+  enterprise

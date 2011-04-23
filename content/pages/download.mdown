@@ -1,1 +1,4 @@
+menu: download
+title: Download the Image Resizer Free
+
 #Download

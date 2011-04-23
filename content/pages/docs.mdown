@@ -1,0 +1,9 @@
+Menu: Docs
+Title: Documentation - Image Resizer
+
+#Documentation
+
+* Install guide (core)
+* Install guide (plugins)
+* Customize
+* [Licenses](/licenses/)

@@ -73,7 +73,8 @@ footer{
 	display:block;
 	text-align:center;
 	color:#aaa;
-	padding-top:10px;
-	margin-bottom:20px;
+	padding-top:1.5em;
+	margin-bottom:1.5em;
+	line-height:1.5em;
 }
 
