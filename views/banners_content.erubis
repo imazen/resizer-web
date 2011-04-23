@@ -7,10 +7,10 @@
 	<h2>Work less, do more</h2>
 	<p>Resize, crop, rotate, watermark, and modify images without ever leaving your code editor or browser, with a <strong>simple</strong> API.</p>
 	<ul>
-		<li><strong>Via the query string (all languages):</strong><br />
+		<li><strong>Query string API (all languages)</strong><br />
 			image.jpg?width=300
 		</li>
-		<li><strong>Via the Managed API (.NET and COM languages)</strong><br />
+		<li><strong>Managed API (.NET and COM languages)</strong><br />
 	        ImageBuilder.Current.Build(source,destination,parameters)
 		</li>
 	</ul>
@@ -26,7 +26,7 @@
 		
 	<div class="text-right">
 		<h2>Free</h2>
-		<p>The most popular features are free:</p>
+		<p>The most popular features are free and open-source:</p>
 		<ul>
 			<li>Resizing, cropping, rotating, flipping</li>
 			<li>Borders, drop-shadows, padding, background colors</li>
@@ -34,7 +34,7 @@
 			<li>Animated GIF frame selection. Comprehensive, real-time diagnostics.</li>
 			<li>Basic GIF and PNG encoding</li>
 		</ul>
-		<p>No time limits on trial versions of plugins.</p>
+		<p>And &mdash; no time limits on plugin trials!</p>
 	</div>
 </div>
 
@@ -62,7 +62,7 @@
 		<p>Works with bitmaps, streams, files, uploaded files, amazon S3 buckets, sql databases, and more. 
 		Understands jpeg, png, gif, tiff, exif, and psd formats.
 		</p>
-		<p>Mix and match image management strategies</p>
+		<h3>Mix and match image management strategies</h3>
 		<ul>
 			<li>Keep the originals, generating versions on the fly</li>
 			<li>Pre-generate versions with ImageBuilder</li>
@@ -80,12 +80,8 @@
 		
 	<div class="text-right">
 		<h2>Open Source</h2>
-		<p>Our simple <a href="/licenses/freedom">Freedom license</a> frees you from worry. Even paid plugins <a href="/licenses/pro">permit source modification and redistribution. And source comes with everything.</a></p>
-		<h3>Plugin architecture</h3>
-		<ul>
-		<li><strong>Everything you need and nothing you don't.</strong> With over 22 plugins available, you can pick and choose what functionality you want.</li>
-		<li><strong>Flexible core.</strong> Everything in the core module can be modified with a plugin. And plugins are extremely easy to build.</li>
-		</ul>
+		<p>Our simple <a href="/licenses/freedom">Freedom license</a> frees you from worry. Even paid plugins <a href="/licenses/pro">permit source modification and redistribution</a>. And source comes with everything.</a></p>
+		<p>stress = 0;</p>
 	</div>
 </div>
 
@@ -108,6 +104,23 @@
 	</div>
 </div>
 
+<div class="banner">
+	<div class="image-block">
+	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	</div>
+		
+	<div class="text-right">
+		<h1>Great plugins</h1>
+		<ul>
+		<li><strong>PrettyGifs</strong> provides Photoshop-quality GIFs and 8-bit PNG results</li>
+		<lu><strong>DiskCache</strong> gives you the same speed and scalability as static, pre-rendered images.</li>
+		</ul>
+		
+		
+	</div>
+</div>
+
+
 
 
 
@@ -125,23 +138,5 @@
 	</div>
 </div>
 
-<div class="banner">
-	<div class="image-block">
-	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
-	</div>
-		
-	<div class="text-right">
-		<h2>Free core + 5 plugins</h2>
-		<p>The free download includes everything most people need.</p>
-		<ul>
-			<li>Core ImageResizer module</li>
-			<li>BasicEncoder plugin, for high-quality jpeg and png encoding.<br/>
-				Upgrade to the PrettyGifs plugin for Photoshop-quality GIFs.</li>
-			<li>Diagnostic, Shadow, Caption, and SizeLimits plugins.</li>
-			<li>Trial licenses for all other plugins, without time limits. Trials shouldn't be a trial on your patience.</li>
-		</ul>
-		<p>Consider buying the DiskCache plugin when you launch your site - it will speed up your site tremendously.</p>
-	</div>
-</div>
 
 

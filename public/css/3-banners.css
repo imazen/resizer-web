@@ -21,6 +21,11 @@ div.banner {
 	margin-top:0;
 }
 
+
+.t .banner a, .t .banner a:active, .t .banner a:hover{
+	color:inherit;
+	text-decoration:underline;
+}
 div.banner .image-block, div.banner .text-left {
     float: left;
     width: 400px;
