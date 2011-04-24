@@ -27,6 +27,7 @@
 		= local_stylesheet_link_tag('local')
 
 		%link(href="/articles.xml" rel="alternate" type="application/atom+xml")
+		= haml :analytics, :layout => false
 	%body
 		%div.site-container
 			= erubis :header, :layout => false
@@ -40,5 +41,5 @@
 			<script src="js/jquery.jshowoff.js"></script>
 			<script src="js/highlight/highlight.pack.js"></script>
 			<script src="js/script.js"></script>
-		= haml :analytics, :layout => false
+		
 

@@ -1,7 +1,7 @@
 # Title and subheading for your site. Used on the home page and in page
 # titles.
 #
-title: "Image resizing for IIS"
+title: "ASP.NET Image resizing for IIS"
 subtitle: "URL-based image resizing has arrived, and it works with every language imaginable"
 
 # If you want to set the descrition or keywords meta tags on your site's
@@ -60,7 +60,7 @@ content: content
 #     scroll down a bit to set it in production even if you're not deploying
 #     to your own server.
 #
-# google_analytics_code: "UA-???????-?"
+google_analytics_code: "UA-5218175-5"
 
 # Overriding "cache" and "content" in production is recommended if you're
 # deploying Nesta to your own server (but see the deployment documentation
@@ -69,7 +69,5 @@ content: content
 #
 # Don't forget to uncomment the "production:" line too...
 
-# production:
-#   cache: true    
-#   content: /var/apps/nesta/shared/content
-#   google_analytics_code: "UA-???????-?"
+production:
+   google_analytics_code: "UA-5218175-5"
