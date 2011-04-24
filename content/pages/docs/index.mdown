@@ -1,9 +1,10 @@
 Menu: Docs
-Title: Documentation - Image Resizer
+Title: Documentation - Image Resizer V3
 
 #Documentation
 
 * Install guide (core)
 * Install guide (plugins)
-* Customize
+* [Configuration](configuration)
+* [Extending](extending)
 * [Licenses](/licenses/)

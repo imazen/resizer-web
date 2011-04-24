@@ -1,0 +1,51 @@
+Title: Plugins - Image Resizer
+
+#Plugins
+
+## Install
+
+Installing a plugin typically involves 3 steps:
+
+1) Copy the plugin .DLL file into the site's /bin directory
+2) In the []&lt;plugins&gt; section](/docs/configuration), insert `<add name="PluginName" />`
+3) Look at the plugin documentation to see what configuration options (if any) are available.
+
+## Free
+
+The following are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+
+* DefaultEncoder (default)
+* Diagnostics (default)
+* NoCache (default)
+* DropShadow 
+* ClientCache
+* SizeLimiting
+* Caption
+
+The free download also includes trial licenses for the following paid bundles. You may use them for development and testing purpose without time limits, but you 
+are required to purchase a license for production/live use. 
+
+## Bundle 1
+
+Single-developer license: $99
+Enterprise-wide license:$250
+
+* DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
+* PrettyGifs - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
+
+## Bundle 2
+
+Single-developer license: $99
+Enterprise-wide license:$250
+
+* AnimatedGifs - Process and resize GIF animations like normal GIF images. Works best with PrettyGifs.
+* PsdReader - Adds support for PSD source files as if they were jpegs.
+* S3Reader - Process and resize images located on a remote Amazon S3 bucket. 
+
+## Bundle 3
+
+Single-developer license: $50
+Enterprise-wide license:$150
+
+* SimpleFilters - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring.
+* Watermark - Render image overlays with incredible flexibility and great performance.

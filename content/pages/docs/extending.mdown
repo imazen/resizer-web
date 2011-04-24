@@ -1,0 +1,89 @@
+# Extending the Image Resizer
+
+The goal of the v3 rewrite was to make everything open and extensible. v2 was a monolithic design that, while elegant and very concise, was hard to extend except through source code modification.
+
+V3 Introduces the concept of Plugins, as well as adding an array of Events that can be used to customize the behavior of the pipeline.
+It also introduces a dedicated configuration section for the Resizer and its plugins, which is freeform and easily queried with a CSS-like syntax through the Config.Current class.
+
+## Plugins can
+
+1) Modify caching behavior, or implement new kinds of persistent caches (ICache)
+2) Modify http headers
+3) Modify the behavior of image processing (40+ methods to override, with XML documentation).
+4) Implement new visual effects, add watermarks, or new functionality
+5) Perform URL rewriting or query string expansion
+6) Add support for new image formats
+7) Add support for new image output formats (IEncoder)
+8) Apply advanced security rules
+
+## Interfaces
+
+* IPlugin - Implement this to allow addition and removal of the plugin via web.config
+* ICache - Implement this to create an alternate caching system
+* IEncoder - Implement this to modify how images are encoded into binary streams. (For example, adding or improving an output format)
+* IQuerystringPlugin - Always implement this if your plugin accepts querystring arguments
+* IFileExtensionPlugin - Implement this if your plugin adds support for new file types
+* IVirtualBitmapFile - Implement this if you are building a VirtualPathProvider that produces bitmap files. (No need unless your VPP modifies or generates images)
+* IVirtualFileWithModifiedDate - Your VirtualFile instances should implement this so the caching system can detect changes to source files.
+
+## BuilderExtension
+
+Inherit from this class for everything else. Includes 40+ override-able methods for modifying every part of the processing pipeline.
+(You'll also need to implement IPlugin (and possibly IQuerystringPlugin).
+
+* Support new source image formats by overriding PreLoadImage and/or LoadImageFailed
+* Add new effects with LayoutEffect and RenderEffect
+* Do custom watermarking with RenderOverlays
+
+
+
+## Events
+
+Events can be registered through the ImageResizer.Configuration.Config.Current.Pipeline class
+
+All events include comprehensive event information and most include mutable objects that allow behavior to be modified.
+
+###RequestHook OnFirstRequest;
+
+Fired once, on the first PostAuthorizeRequest event.
+
+### RequestHook PostAuthorizeRequestStart;
+
+Fires during the PostAuthorizeRequest phase, prior to any module-specific logic.
+Executes for every request to the website. Use only as a last resort. Other events occur only for image requests, and thus have lower overhead.
+
+### UrlRewritingHook Rewrite;
+
+Fired during PostAuthorizeRequest, after ResizeExtension has been removed.
+Only fired on requests with extensions that match supported image types. 
+You can add additional supported image extensions by registering a plugin that implements IQuerystringPlugin, or you can add an 
+extra extension in the URL and remove it here. Example: .psd.jpg</para>
+
+### UrlRewritingHook RewriteDefaults;
+
+Fired during PostAuthorizeRequest, after Rewrite.
+Any changes made here (which conflict) will be overwritten by the the current query string values. I.e, this is a good place to specify default settings.
+Only fired on accepted image types. Plugins can specify additional image extensions to intercept. Rewrite rules can be used to change extensions.
+
+### UrlRewritingHook PostRewrite;
+
+Fired after all other rewrite events.
+Only fired on accepted image types. (see Rewrite)
+
+### UrlRewritingHook PostAuthorizeImage;
+
+Fired after all rewriting should be finished, and the secondary UrlAuthorization has been completed. Plugins wanting to add additional authorization rules can implement them in a handler,
+and modify the response accordingly.
+
+### UrlRewritingHook ImageMissing;
+
+Fired when an image is missing. Allows redirection to 'fallback' images.
+
+### PreHandleImageHook PreHandleImage;
+
+Fired immediately before the image request is sent off to the caching system for processing.
+Allows modification of response headers, caching arguments, and callbacks.
+
+### CacheSelectionDelegate SelectCachingSystem;
+
+Allows cache selection to be determined by external code
