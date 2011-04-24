@@ -4,7 +4,7 @@ Title: ASP.NET Image Resizing Module for IIS
 
 #Getting started
 
-1) [Download the module (free, 1MB)](/download)
+1) [Download the module](/download)
 
 2) Copy ImageResizer.dll into the /bin directory of your web site.
 
