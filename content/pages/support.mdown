@@ -2,9 +2,6 @@ Title: Support - Image Resizer
 
 #Support
 
-
-Standard e-mail support is free with every purchase
-
 Visit [resizer.uservoice.com](http://resizer.uservoice.com/) for the forums, wish list, and knowledge base.
 
 You can e-mail support at **support@imageresizingin.net**.
