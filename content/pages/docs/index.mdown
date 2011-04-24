@@ -3,8 +3,8 @@ Title: Documentation - Image Resizer V3
 
 #Documentation
 
-* Install guide (core)
-* Install guide (plugins)
+* [Getting started](/)
+* [Plugins](/plugins)
 * [Configuration](configuration)
 * [Extending](extending)
 * [Licenses](/licenses/)

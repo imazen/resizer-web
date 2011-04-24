@@ -3,4 +3,16 @@ title: Download the Image Resizer Free
 
 #Download
 
-Coming soon.
+By downloading these files you agree to follow the [licenses](/license).
+
+## Kitchen Sink
+
+Includes binaries and source code for everything.
+
+* [Version 3 alpha 2 - April 24 20011](/attachments/releases/ImageResizer3-full-alpha2_apr-24-2011.zip) (~3MB)
+
+## Super light
+
+Get just the .dll and .pdb for the Core and Basic plugins (All under the [Freedom license](/licenses/freedom))
+
+* [Version 3 alpha 2 - April 24 20011](/attachments/releases/ImageResizer3-min-alpha2_apr-24-2011.zip) (~100k)

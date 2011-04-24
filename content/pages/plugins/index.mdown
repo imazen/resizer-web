@@ -7,7 +7,9 @@ Title: Plugins - Image Resizer
 Installing a plugin typically involves 3 steps:
 
 1) Copy the plugin .DLL file into the site's /bin directory
-2) In the []&lt;plugins&gt; section](/docs/configuration), insert `<add name="PluginName" />`
+
+2) In the [&lt;plugins> section](/docs/configuration), insert &lt;add name="PluginName" />
+
 3) Look at the plugin documentation to see what configuration options (if any) are available.
 
 ## Free
@@ -38,14 +40,15 @@ Enterprise-wide license:$250
 Single-developer license: $99
 Enterprise-wide license:$250
 
-* AnimatedGifs - Process and resize GIF animations like normal GIF images. Works best with PrettyGifs.
-* PsdReader - Adds support for PSD source files as if they were jpegs.
-* S3Reader - Process and resize images located on a remote Amazon S3 bucket. 
+* AnimatedGifs - Process and resize GIF animations like normal GIF images. Works best when used with Bundle 1.
+* PsdReader - Adds support for PSD source files as if they were jpegs. Implemented as a VirtualPathProvider, so even the originals can be accessed naturally.
+* S3Reader - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
 
 ## Bundle 3
 
-Single-developer license: $50
-Enterprise-wide license:$150
+Single-developer license: $99
+Enterprise-wide license: $250
 
+* SQLReader - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
 * SimpleFilters - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring.
 * Watermark - Render image overlays with incredible flexibility and great performance.

@@ -2,7 +2,9 @@ title: Licenses - Image Resizer
 
 #Licenses
 
-The core and 7 plugins are under [Resizer Freedom license][freedom], which is a modified MIT license.
+The core and [7+ plugins](/plugins) are under [Resizer Freedom license][freedom], which is a modified MIT license, as are all sample projects. 
+
+If a plugin is in the ImageResizer.Plugins.Basic namespace, it is under the [Freedom license][freedom].
 
 The paid plugins are available under the following licenses
 
@@ -10,31 +12,6 @@ The paid plugins are available under the following licenses
  * [Resizer Professional][pro]: This is the license you buy if you are an individual.
  * [Resizer Enterprise][enterprise]: This is an business-wide license. 
  * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] license, for use as part of a delivered project.
-
-###Free plugins (as in Freedom and $0)
-
- * Resizer Core
- * Diagnostic plugin
- * NoCache plugin
- * DefaultEncoder plugin
- * Caption plugin
- * SizeLimiting plugin
- * Shadow plugin
- * All sample projects, unless otherwise specified. Note that sample projects may include binary versions of non-free plugins, which are
-licensed under the [Resizer Trial][trial] license.
-
-
-###Paid plugins (as in freedom and $$)
-
- * PrettyGifs
- * AnimatedGifs
- * DiskCache
- * .. to be completed
-
-
-
-
-
 
 [freedom]: /licenses/freedom  "Resizer Freedom License"
 [trial]: /licenses/trial  "Resizer Trial License"
