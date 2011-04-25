@@ -29,7 +29,8 @@ are required to purchase a license for production/live use.
 
 ## Bundle 1
 
-Single-developer license: $99
+Single-developer license: $99 <a href="https://www.e-junkie.com/ecom/gb.php?i=929356&amp;c=single&amp;cl=41912" target="ejejcsingle"><img src="http://www.e-junkie.com/ej/x-click-butcc.gif" border="0" alt="Buy Now"/></a>
+
 Enterprise-wide license:$250
 
 * DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
@@ -38,6 +39,7 @@ Enterprise-wide license:$250
 ## Bundle 2
 
 Single-developer license: $99
+
 Enterprise-wide license:$250
 
 * AnimatedGifs - Process and resize GIF animations like normal GIF images. Works best when used with Bundle 1.
@@ -47,6 +49,7 @@ Enterprise-wide license:$250
 ## Bundle 3
 
 Single-developer license: $99
+
 Enterprise-wide license: $250
 
 * SQLReader - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.

@@ -31,10 +31,10 @@ furnished to do so, subject to the following conditions:
 1. The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software. 
 
-2. <p><span style="color:white;font-weight:bold;">Sale, distribution, and publishing of this software or derivative works 
+2. **Sale, distribution, and publishing of this software or derivative works 
 are not permitted if they directly compete with previously existing product
 offerings of the original author. I.e, no back-stabbing, if you please.
-You may, however, derive and use competing products personally.</span></p>
+You may, however, derive and use competing products personally.**
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
