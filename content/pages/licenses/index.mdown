@@ -8,10 +8,12 @@ If a plugin is in the ImageResizer.Plugins.Basic namespace, it is under the [Fre
 
 The paid plugins are available under the following licenses
 
- * [Resizer Trial][trial]: This is the license you get for free. 
- * [Resizer Professional][pro]: This is the license you buy if you are an individual.
- * [Resizer Enterprise][enterprise]: This is an business-wide license. 
- * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] license, for use as part of a delivered project.
+ * [Resizer Trial][trial]: You get this for free.
+ * [Resizer Professional][pro]: You buy this if you are an individual.
+ * [Resizer Enterprise][enterprise]: You buy this for business-wide use.
+ * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] or [Enterprise][enterprise] licenses, for use as part of a delivered project.
+
+If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **computer.linguist@gmail.com** for details.
 
 [freedom]: /licenses/freedom  "Resizer Freedom License"
 [trial]: /licenses/trial  "Resizer Trial License"
