@@ -3,3 +3,6 @@ $(function(){
 });
 hljs.tabReplace = '  '; 
 hljs.initHighlightingOnLoad();
+$('a[href$=".zip"]').click(function(){
+	_gaq.push(['_trackPageview', $(this).attr('href') ]);
+});
