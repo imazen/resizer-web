@@ -7,14 +7,16 @@ It also introduces a dedicated configuration section for the Resizer and its plu
 
 ## Plugins can
 
-1) Modify caching behavior, or implement new kinds of persistent caches (ICache)
-2) Modify http headers
-3) Modify the behavior of image processing (40+ methods to override, with XML documentation).
-4) Implement new visual effects, add watermarks, or new functionality
-5) Perform URL rewriting or query string expansion
-6) Add support for new image formats
-7) Add support for new image output formats (IEncoder)
-8) Apply advanced security rules
+
+1.  Modify caching behavior, or implement new kinds of persistent caches (ICache)
+2.  Modify http headers
+3.  Modify the behavior of image processing (40+ methods to override, with XML documentation).
+4.  Implement new visual effects, add watermarks, or new functionality
+5.  Perform URL rewriting or query string expansion
+6.  Add support for new image formats
+7.  Add support for new image output formats (IEncoder)
+8.  Apply advanced security rules
+
 
 ## Interfaces
 

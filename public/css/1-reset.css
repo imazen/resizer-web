@@ -143,9 +143,24 @@ html>body .t{
 	margin: 0 0 0 -12px;
 	padding: 0 0 0 12px;
 }
-.t ul{
+.t ul, .t ol{
 	margin-top:1.5em;
 	margin-bottom:1.5em;
+}
+
+.t ol{
+	list-style-type:decimal;
+	margin-left:1.5em;
+	margin-top:1.5em;
+	margin-bottom:1.5em;
+}
+.t ol ol, .t ol ul, .t ul ol, .t ul ul{
+	margin-top:0px; 
+	margin-bottom:0px;
+}
+}
+.t ol li{
+	
 }
 
 .t a,

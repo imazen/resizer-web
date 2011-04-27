@@ -4,49 +4,47 @@ Title: ASP.NET Image Resizing Module for IIS
 
 #Getting started
 
-1) [Download version 3 of the module](/download)
+1. [Download version 3 of the module](/download)
+2. Copy ImageResizer.dll into the /bin directory of your web site.
+3. Modify or create the /Web.Config file for your site:
+	
+		<?xml version="1.0" encoding="utf-8" ?>
+		<configuration>
+			<configSections>
+				<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" />
+			</configSections>
 
-2) Copy ImageResizer.dll into the /bin directory of your web site.
+			<resizer>
+				<!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
+				     you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 -->
+				<pipeline fakeExtensions=".ashx" />
 
-3) Modify or create the /Web.Config file for your site:
+				<plugins>
+					<!-- <add name="DiskCache" /> -->
+					<!-- <add name="PrettyGifs" /> -->
+				</plugins>	
+			</resizer>
 
-	<?xml version="1.0" encoding="utf-8" ?>
-	<configuration>
-		<configSections>
-			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" />
-		</configSections>
+			<system.web>
+				<httpModules>
+					<!-- This is for IIS5, IIS6, and IIS7 Classic, and Cassini/VS Web Server-->
+					<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+				</httpModules>
+			</system.web>
 
-		<resizer>
-			<!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
-			     you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 -->
-			<pipeline fakeExtensions=".ashx" />
-
-			<plugins>
-				<!-- <add name="DiskCache" /> -->
-				<!-- <add name="PrettyGifs" /> -->
-			</plugins>	
-		</resizer>
-
-		<system.web>
-			<httpModules>
-				<!-- This is for IIS5, IIS6, and IIS7 Classic, and Cassini/VS Web Server-->
-				<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
-			</httpModules>
-		</system.web>
-
-		<system.webServer>
-			<validation validateIntegratedModeConfiguration="false"/>
-			<modules>
-				<!-- This is for IIS7+ Integrated mode -->
-				<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
-			</modules>
-		</system.webServer>
-	</configuration>
-
-4) [Increase performance and add features with plugins](/plugins)! 
-
-Buying one of our awesome plugins gives you access to priority support and funds open-source development. How can you resist?
-
-5) Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of version 2](http://nathanaeljones.com/products/asp-net-image-resizer/)! And, unlike *all* the sample code you find on the internet, it avoids [all 20 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/).
-
-6) [Keep sharing ideas and feedback online](http://resizer.uservoice.com) so we know what to improve!
+			<system.webServer>
+				<validation validateIntegratedModeConfiguration="false"/>
+				<modules>
+					<!-- This is for IIS7+ Integrated mode -->
+					<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+				</modules>
+			</system.webServer>
+		</configuration>
+	
+4. [Increase performance and add features with plugins](/plugins)! 
+	
+	Buying one of our awesome plugins gives you access to priority support and funds open-source development. How can you resist?
+	
+5. Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of version 2](http://nathanaeljones.com/products/asp-net-image-resizer/)! And, unlike *all* the sample code you find on the internet, it avoids [all 20 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/).
+	
+6. [Keep sharing ideas and feedback online](http://resizer.uservoice.com) so we know what to improve!
