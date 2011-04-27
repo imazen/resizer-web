@@ -185,8 +185,16 @@ html>body .t{
 
 .t pre, .t code {
 	font-family: monaco, courier, "courier new", monospace;
-	font-size: 10px;
-	line-height:12px;
+	font-size: 12px;
+	line-height:14px;
+}
+
+
+
+.no-banner  pre, .no-banner  code {
+	font-family: monaco, courier, "courier new", monospace;
+	font-size: 13px;
+	line-height:16px;
 }
 
 

@@ -1,0 +1,54 @@
+
+#Managed API
+
+Most tasks with the managed API only require one line:
+
+	ImageResizer.ImageBuilder.Current.Build(object source, object dest, ResizeSettings settings)
+	
+	or
+	
+	Bitmap b = ImageResizer.ImageBuilder.Current.Build(object source, ResizeSettings settings)
+
+###object source
+
+May be a physical path, an Image, Bitmap, Stream, VirtualFile, or HttpPostedFile instance. 
+
+###object dest
+
+May be a Stream instance or a physical path.
+
+###ResizeSetting settings
+
+ResizeSettings is a friendly wrapper for a query string which provides named properties as well as the regular NameValueCollection interface.
+
+You can create one like so:
+
+	new ResizeSettings("maxwidth=200&maxheight=200")
+	
+	//or
+	new ResizeSettings(Request.QueryString)
+	
+	//or
+	var r = new ResizeSettings();
+	r.MaxWidth = 200;
+	r.MaxHeight = 300;
+	
+
+
+## Examples
+
+
+	using ImageResizer;
+	
+	//Converts a jpeg into a png
+	
+	ImageBuilder.Current.Build(Server.MapPath("~/images/photo.jpg"),Server.MapPath("~/images/photo.png"), 
+														 new ResizeSettings("format=png"));
+	
+	//Crops to a square (in place)
+	ImageBuilder.Current.Build(Server.MapPath("~/images/photo.jpg"),Server.MapPath("~/images/photo.jpg"), 
+														 new ResizeSettings("width=100&height=200&crop=auto"));
+	
+
+
+More to come...

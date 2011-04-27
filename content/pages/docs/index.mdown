@@ -5,6 +5,7 @@ Title: Documentation - Image Resizer V3
 
 * [Getting started](/)
 * [Plugins](/plugins)
-* [Configuration](configuration)
-* [Extending](extending)
+* [Configuration](/docs/configuration)
+* [Managed API](/docs/managed)
+* [Extending](/docs/extending)
 * [Licenses](/licenses/)
