@@ -95,11 +95,11 @@
 		<p>No memory leaks. Optimized data streaming. Scale to millions of images and millions of requests with smart caching plugins</p>
 		</p>
 		<ul>
-			<li>Kiss high RAM/CPU/IO usage goodbye with our third-generation DiskCache plugin. Serve 100x more images per second.</li>
-			<li style="margin-top:1.5em">Cloudify with S3Cache.<br />
+			<li>Kiss high RAM/CPU/IO usage goodbye with our third-generation DiskCache plugin. Serve up to 100x more images per second.</li>
+		<!--	<li style="margin-top:1.5em">Cloudify with S3Cache.<br />
 			Asynchronously uploads resized images to an Amazon S3 bucket, while still serving the images quickly in the meantime. 
 			Drastically decreases server bandwidth usage, increases load scalability, and allows your server to focus on logic-intensive tasks instead  of drowning in mundane IO.
-			</li>
+			</li>-->
 		</ul>
 	</div>
 </div>
@@ -113,7 +113,13 @@
 		<h1>Great plugins</h1>
 		<ul>
 		<li><strong>PrettyGifs</strong> provides Photoshop-quality GIFs and 8-bit PNG results</li>
-		<lu><strong>DiskCache</strong> gives you the same speed and scalability as static, pre-rendered images.</li>
+		<li><strong>DiskCache</strong> gives you the same speed and scalability as static, pre-rendered images.</li>
+		<li><strong>PsdReader</strong> lets you process PSD files like regular bitmaps!</li>
+		<li><strong>Watermark</strong> makes image watermarking simple</li>
+		<li><strong>S3Reader</strong> works with images in one or more S3 buckets</li>
+		<li><strong>SQLReader</strong> works with images in a SQL db</li>
+		<li><strong>AnimatedGifs</strong> lets you resize and process animated GIFs.</li>
+		<li><a href="/plugins">And more...</a></li>
 		</ul>
 		
 		
