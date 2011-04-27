@@ -1,0 +1,45 @@
+
+# Signup
+
+Average volume is 4 e-mails per year. 
+
+You will only be e-mailed about important updates to the Image Resizer. I do not rent, share, or sell your info to anyone. I use iContact for managing the list, and they are very reliable.
+
+You can unsubscribe at any time.
+
+
+<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();" >
+<input type="hidden" name="redirect" value="http://imageresizingin.net/newsletter/thankyou" />
+<input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
+
+Email: <input type="text" name="fields_email"/><input type="submit" name="Submit" value="Submit"/>
+
+    <input type="hidden" name="listid" value="25207"/>
+    <input type="hidden" name="specialid:25207" value="CR0N"/>
+
+    <input type="hidden" name="clientid" value="905228"/>
+    <input type="hidden" name="formid" value="2612"/>
+    <input type="hidden" name="reallistid" value="1"/>
+    <input type="hidden" name="doubleopt" value="0"/>
+    
+</form>
+<script type="text/javascript">
+
+var icpForm2612 = document.getElementById('icpsignup2612');
+
+if (document.location.protocol === "https:")
+
+	icpForm2612.action = "https://app.icontact.com/icp/signup.php";
+function verifyRequired2612() {
+  if (icpForm2612["fields_email"].value == "") {
+    icpForm2612["fields_email"].focus();
+    alert("The Email field is required.");
+    return false;
+  }
+
+
+return true;
+}
+</script>
+
+<p></p>
