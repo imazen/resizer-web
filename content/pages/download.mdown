@@ -7,13 +7,13 @@ title: Download the Image Resizer Free
 
 Includes binaries and source code for everything.
 
-* [Version 3 alpha 2 - April 24 20011](/attachments/releases/ImageResizer3-full-alpha2_apr-24-2011.zip) (~3MB)
+* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip)
 
 ## Super light
 
 Get just the .dll and .pdb for the Core and Basic plugins (All under the [Freedom license](/licenses/freedom))
 
-* [Version 3 alpha 2 - April 24 20011](/attachments/releases/ImageResizer3-min-alpha2_apr-24-2011.zip) (~100k)
+* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-min-May-02-2011.zip)
 
 ## Get notified of important updates
 
@@ -21,6 +21,11 @@ It's only happened once (a year ago), but if there is a security-related bug, we
 
 [Subscribe to the **extremely** low volume mailing list](/newsletter/signup). You will only be contacted about **important** updates and releases.
 
+## Older releases
+
+* [Version 3 alpha 2 (full) - April 24 2011](/attachments/releases/ImageResizer3-full-alpha2_apr-24-2011.zip) (~3MB)
+* [Version 3 alpha 2 (core) - April 24 2011](/attachments/releases/ImageResizer3-min-alpha2_apr-24-2011.zip) (~100k)
+* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip)
 
 
 <!-- Google Code for View download page Conversion Page -->
