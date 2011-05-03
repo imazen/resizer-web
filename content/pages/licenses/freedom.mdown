@@ -36,7 +36,7 @@ are not permitted if those works directly and primarily compete with previously 
 offerings of the author (Nathanael Jones).**
 
 **To comply with this clause, compare the purpose of your derived product 
-to the purpose of each of the products listed on <http://nathanaeljones.com> and <http://imageresizing.net/>.
+to the purpose of each of the products listed on <http://imageresizing.net/>.
 If the purpose or marketing of the products are similar, then you should contact 
 nathanael.jones@gmail.com for written clarification and permission (provided free of charge).**
 

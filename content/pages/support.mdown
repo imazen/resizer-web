@@ -4,7 +4,7 @@ Title: Support - Image Resizer
 
 Visit [resizer.uservoice.com](http://resizer.uservoice.com/) for the forums, wish list, and knowledge base.
 
-You can e-mail support at **support@imageresizingin.net**. 
+You can e-mail support at **support@imageresizing.net**. 
 
 Both online tickets and this e-mail address are immediately forwarded to my personal e-mail account, so please use them! It helps me track support requests in a more organized manner. If you e-mail me at my personal e-mail address (nathanael.jones@gmail.com), your request may get lost!
 

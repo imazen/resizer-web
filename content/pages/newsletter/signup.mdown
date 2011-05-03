@@ -9,7 +9,7 @@ You can unsubscribe at any time.
 
 
 <form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();" >
-<input type="hidden" name="redirect" value="http://imageresizingin.net/newsletter/thankyou" />
+<input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou" />
 <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
 
 Email: <input type="text" name="fields_email"/><input type="submit" name="Submit" value="Submit"/>

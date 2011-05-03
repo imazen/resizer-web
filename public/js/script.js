@@ -20,3 +20,6 @@ $('a[href$=".zip"]').click(function(){
 	_gaq.push(['_trackEvent', 'Downloads', 'Releases', $(this).attr('href')]);
 	_gaq.push(['_trackPageview', $(this).attr('href') ]);
 });
+
+
+
