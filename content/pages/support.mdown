@@ -1,4 +1,5 @@
 Title: Support - Image Resizer
+Uservoice: true
 
 #Support
 

@@ -40,12 +40,14 @@
 			<script src="/js/jquery.jshowoff.js"></script>
 			<script src="/js/highlight/highlight.pack.js"></script>
 			<script src="/js/script.js"></script>
-			<script type="text/javascript">
-			  (function() {
-			    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-			    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-			  })();
-			</script>
+		- if @page.metadata("uservoice")
+			:plain
+				<script type="text/javascript">
+				  (function() {
+				    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+				    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+				  })();
+				</script>
 		
 
