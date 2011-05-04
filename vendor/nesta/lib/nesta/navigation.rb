@@ -23,7 +23,7 @@ module Nesta
             end
           end
         else
-          haml_tag :li, :class => (@page.abspath == item.abspath) ? "current" : "" do
+          haml_tag :li, :class => (@page != nil and @page.abspath == item.abspath) ? "current" : "" do
             haml_tag :a, :<, :href => item.abspath do
               haml_concat item.metadata("menu").nil? ? item.heading : item.metadata("menu")
             end

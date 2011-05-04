@@ -40,7 +40,7 @@
 			<script src="/js/jquery.jshowoff.js"></script>
 			<script src="/js/highlight/highlight.pack.js"></script>
 			<script src="/js/script.js"></script>
-		- if @page.metadata("uservoice")
+		- if @page and @page.metadata("uservoice")
 			:plain
 				<script type="text/javascript">
 				  (function() {

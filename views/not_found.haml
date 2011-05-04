@@ -1,12 +1,5 @@
-%nav.breadcrumb
-  %a(href="/") Home
-
-#content
-  %section(role="main")
-    %h1 Page not found
-
-    %p
-      Please try another page or, if you think something is wrong with
-      our site, do get in touch and let us know.
-
-= haml :sidebar, :layout => false
+:plain
+	<div class="page-content t no-banner">
+		<h1>Page not found</h1>
+		<p>If you believe there is a problem with the site, <a href="/support">please leave a note</a>.
+	</div>
