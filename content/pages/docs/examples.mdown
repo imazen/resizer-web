@@ -1,0 +1,5 @@
+# Usage examples
+
+Version 3 and version 2 are fully compatible - all v2 commands work in v3 (with the right plugins installed).
+
+[View version 2 usage examples](http://nathanaeljones.com/155/image-resizer-v2-examples/)
