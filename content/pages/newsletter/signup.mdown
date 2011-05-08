@@ -14,8 +14,9 @@ You can unsubscribe at any time.
 
 Email: <input type="text" name="fields_email"/><input type="submit" name="Submit" value="Submit"/>
 
-    <input type="hidden" name="listid" value="25207"/>
-    <input type="hidden" name="specialid:25207" value="CR0N"/>
+
+    <input type="hidden" name="listid" value="29803"/>
+    <input type="hidden" name="specialid:29803" value="LH6H"/>
 
     <input type="hidden" name="clientid" value="905228"/>
     <input type="hidden" name="formid" value="2612"/>
