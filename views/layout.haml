@@ -49,5 +49,7 @@
 				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
 				  })();
 				</script>
-		
+		-if @page and @page.metadata("ejunkie")
+			:plain
+				<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
 
