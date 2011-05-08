@@ -6,55 +6,99 @@ Title: Plugins - Image Resizer
 
 Installing a plugin typically involves 3 steps:
 
-1) Copy the plugin .DLL file into the site's /bin directory
-
-2) In the [&lt;plugins> section](/docs/configuration), insert &lt;add name="PluginName" />
-
-3) Look at the plugin documentation to see what configuration options (if any) are available.
+1. Copy the plugin .DLL file into the site's /bin directory
+2. In the [&lt;plugins> section](/docs/configuration), insert &lt;add name="PluginName" />
+3. Look at the plugin documentation to see what configuration options (if any) are available.
 
 ## Free
 
-The following are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
 
-* DefaultEncoder (default)
-* Diagnostics (default)
-* NoCache (default)
-* ClientCache (default)
-* DropShadow 
-* Gradient
-* Image404
-* SizeLimiting
-* VirtualFolder
+* **[DefaultEncoder](/plugins/defaultencoder)** (default) - Adjustable jpeg compression, 24-bit PNG with transparency support, and standard .NET GIF encoding (which is very lousy).
+* **[Diagnostics](/plugins/diagnostics)** (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
+* **NoCache** (default) - Serves the resulting image directly from memory
+* **ClientCache** (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
+* **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
+* **Gradient** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
+* **Image404** - Supply default images instead of a 404 when an image is missing. 
+* **SizeLimiting** - Limit maximum resolution of photos, or the total size of all processed images.
+* **VirtualFolder** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
 
 
 The free download also includes trial licenses for the following paid bundles. You may use them for development and testing purpose without time limits, but you 
-are required to purchase a license for production/live use. 
+are required to purchase them for production/live use. 
 
-## Bundle 1
 
-Single-developer license: $99 <a href="https://www.e-junkie.com/ecom/gb.php?i=929356&amp;c=single&amp;cl=41912" target="ejejcsingle"><img src="http://www.e-junkie.com/ej/x-click-butcc.gif" border="0" alt="Buy Now"/></a>
 
-Enterprise-wide license:$250
+Every bundle comes with full source code and binaries for ALL plugins and the core, so you only have one file to manage regardless of how many plugins you buy.
+
+<div style="float:right;width:150px;padding:10px">
+
+
+	<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=929356&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+	Bundle:<br/>
+	<select name="o1">
+	<option value="Performance Bundle">Performance Bundle</option>
+	<option value="Designer Bundle">Designer Bundle</option>
+	<option value="Cloud Bundle">Cloud Bundle</option>
+	</select>
+	<br/>
+	License:<br/>
+	<select name="o2">
+	<option value="Pro License">Pro License</option>
+	<option value="Enterprise License">Enterprise License</option>
+	</select>
+	<br/>
+	<input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
+	</form>
+	
+	<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
+	<script language="javascript" type="text/javascript">
+	<!--
+	function EJEJC_lc(th) { return false; }
+	// -->
+	</script>
+	<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+	
+
+	<p>
+	<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onclick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart" /></a>
+	</p>
+	<script language="javascript" type="text/javascript">
+	//<!--
+	function EJEJC_lc(th) { return false; }
+	// -->
+	</script>
+	<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'>
+	</script>
+	
+	100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>.
+	<br /> All major credit cards accepted. 
+	<br /> Processed by PayPal or Google Checkout
+</div>
+
+
+## Performance Bundle - $99
+
 
 * DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
 * PrettyGifs - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
+* AnimatedGifs - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
 
-## Bundle 2
+## Designer Bundle - $99
 
-Single-developer license: $99
-
-Enterprise-wide license:$250
-
-* AnimatedGifs - Process and resize GIF animations like normal GIF images. Works best when used with Bundle 1.
 * PsdReader - Adds support for PSD source files.
-* S3Reader - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
-
-## Bundle 3
-
-Single-developer license: $99
-
-Enterprise-wide license: $250
-
-* SQLReader - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
-* SimpleFilters - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring.
 * Watermark - Render image overlays with incredible flexibility and great performance.
+* SimpleFilters - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
+* AdvancedFilters - Blur and sharpen photos with adjustable radius. 
+
+## Cloud Bundle - $99
+
+
+* S3Reader - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
+* SQLReader - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
+* RemoteSiteReader - (Coming soon, - leave feedback if you want it faster!)
+
+
+
+<script src='https://checkout.google.com/buttons/logos?merchant_id=458177065889728&amp;loc=en&amp;f=png' ></script>
