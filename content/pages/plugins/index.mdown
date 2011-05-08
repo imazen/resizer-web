@@ -1,36 +1,7 @@
 Title: Plugins - Image Resizer
+ejunkie: true
 
 #Plugins
-
-## Install
-
-Installing a plugin typically involves 3 steps:
-
-1. Copy the plugin .DLL file into the site's /bin directory
-2. In the [&lt;plugins> section](/docs/configuration), insert &lt;add name="PluginName" />
-3. Look at the plugin documentation to see what configuration options (if any) are available.
-
-## Free
-
-The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
-
-* **[DefaultEncoder](/plugins/defaultencoder)** (default) - Adjustable jpeg compression, 24-bit PNG with transparency support, and standard .NET GIF encoding (which is very lousy).
-* **[Diagnostics](/plugins/diagnostics)** (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
-* **NoCache** (default) - Serves the resulting image directly from memory
-* **ClientCache** (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
-* **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
-* **Gradient** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
-* **Image404** - Supply default images instead of a 404 when an image is missing. 
-* **SizeLimiting** - Limit maximum resolution of photos, or the total size of all processed images.
-* **VirtualFolder** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
-
-
-The free download also includes trial licenses for the following paid bundles. You may use them for development and testing purpose without time limits, but you 
-are required to purchase them for production/live use. 
-
-
-
-Every bundle comes with full source code and binaries for ALL plugins and the core, so you only have one file to manage regardless of how many plugins you buy.
 
 <div style="float:right;width:150px;padding:10px">
 
@@ -49,37 +20,33 @@ Every bundle comes with full source code and binaries for ALL plugins and the co
 	<option value="Enterprise License">Enterprise License</option>
 	</select>
 	<br/>
+	<div style="padding-top:15px;"> </div>
 	<input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
 	</form>
 	
 	<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
-	<script language="javascript" type="text/javascript">
-	<!--
-	function EJEJC_lc(th) { return false; }
-	// -->
-	</script>
-	<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
-	
 
-	<p>
-	<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onclick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart" /></a>
-	</p>
-	<script language="javascript" type="text/javascript">
-	//<!--
-	function EJEJC_lc(th) { return false; }
-	// -->
-	</script>
-	<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'>
-	</script>
 	
+	<div class="info" style="font-size:10px; color:#888888;">
 	100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>.
 	<br /> All major credit cards accepted. 
 	<br /> Processed by PayPal or Google Checkout
+	</div>
 </div>
 
+For plugin installation, [see here](/plugins/install).
+
+The free download [includes 9 plugins, 4 of which are installed by default](/plugins/free). 9 more are available below for a 'download fee'. [Read the details](/licenses/) on how awesome and open our licenses are!
+
+This 'download fee' allows me to provide support, develop new features, fix bugs, and write documentation. Thank you for supporting open-source development.
+
+By purchasing 1 or more of the bundles below, you will get 
+
+ * Full source code and binaries for *everything* offered on the site, in a single .zip file. 
+ * Free upgrades for all minor releases (major releases occur every ~2 years). 
+ * Priority support. 
 
 ## Performance Bundle - $99
-
 
 * DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
 * PrettyGifs - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
@@ -100,5 +67,4 @@ Every bundle comes with full source code and binaries for ALL plugins and the co
 * RemoteSiteReader - (Coming soon, - leave feedback if you want it faster!)
 
 
-
-<script src='https://checkout.google.com/buttons/logos?merchant_id=458177065889728&amp;loc=en&amp;f=png' ></script>
+Enterprise-wide licenses [are available for very low prices](/plugins/enterprise).

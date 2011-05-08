@@ -1,0 +1,21 @@
+
+# Free plugins
+
+The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+
+This can all be found in the ImageResizer.Plugins.Basic namespace
+
+* **[DefaultEncoder](/plugins/defaultencoder)** (default) - Adjustable jpeg compression, 24-bit PNG with transparency support, and standard .NET GIF encoding (which is very lousy).
+* **[Diagnostics](/plugins/diagnostics)** (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
+* **NoCache** (default) - Serves the resulting image directly from memory
+* **ClientCache** (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
+* **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
+* **Gradient** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
+* **Image404** - Supply default images instead of a 404 when an image is missing. 
+* **SizeLimiting** - Limit maximum resolution of photos, or the total size of all processed images.
+* **VirtualFolder** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
+
+
+The free download also includes trial licenses for the following paid bundles. You may use them for development and testing purpose without time limits, but you 
+are required to purchase them for production/live use. 
+
