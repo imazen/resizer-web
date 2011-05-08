@@ -21,5 +21,16 @@ $('a[href$=".zip"]').click(function(){
 	_gaq.push(['_trackPageview', $(this).attr('href') ]);
 });
 
+//So e-junkie falls back gracefully.
+if (typeof(EJEJC_lc) !== undefined) var EJEJC_lc = function (th) { return false; };
 
 
+/*function EJEJC_config() {
+EJEJC_BEACON = "https://www.googleadservices.com/pagead/conversion/0062225003/?value=1&label=purchase&script=0";
+}
+
+
+$(function(){
+  ejGATracker = _gat._getTracker("UA-XXXXX-X");
+});
+	*/
