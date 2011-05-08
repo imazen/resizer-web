@@ -1,8 +1,6 @@
 
 #Upgrade from Version 2
 
-Users of Version 2 may upgrade to version 3 for half off.
+Users of Version 2 may upgrade to version 3 for 60% off.
 
-Enter "50OFFLOYALTY" to receive your discount.
-
-<form method="POST" action="https://www.e-junkie.com/ecom/gb.php?i=929356&amp;c=single&amp;cl=41912" accept-charset="UTF-8" target="ejejcsingle"><input type="hidden" name="on0" value="Promotion"/>Discount Code:<br/><input type="text" name="os0"/><br/><input type="image" src="http://www.e-junkie.com/ej/x-click-butcc.gif" border="0" alt="Buy Now"/></form>
+Enter "60OFFLOYALTY" in the shopping cart to receive your discount.
