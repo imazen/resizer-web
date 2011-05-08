@@ -1,0 +1,26 @@
+# Purchase complete!
+
+You should receive an e-mail with a link to this page, in case you need to download the product again.
+
+* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip)
+
+Free upgrades will be sent to the following e-mail address: 
+
+<!-- http://imageresizing.net/purchase/completed?txn_id=8S630904NC944974C&item_number=929356&payer_email=nathanael.jones%40gmail.com&first_name=Nathanael&last_name=Jones&quantity=1&currency=USD&payment_status=Completed&sku=R3Bundle1Pro&hash=74eb5504bd2cb6f9bf83010276b42bb2comp -->
+<script type="text/javascript">
+//<!--
+var queryString = {};
+window.location.href.replace(
+    new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+    function($0, $1, $2, $3) { queryString[unescape($1)] = unescape($3); }
+);
+
+document.write(queryString['payer_email']); 
+//-->
+</script>
+
+<!--If there is an additional e-mail address you would like e-mail notifications to be sent to, you may add it here:-->
+
+
+
+All e-mails include unsubscribe links.
