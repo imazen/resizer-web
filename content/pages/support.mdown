@@ -5,7 +5,11 @@ Uservoice: true
 
 Visit [resizer.uservoice.com](http://resizer.uservoice.com/) for the forums, wish list, and knowledge base.
 
-You can e-mail support at **support@imageresizing.net**. 
+You can e-mail support at **support@imageresizing.net**. You will get an automated reply immediately if your e-mail arrives, followed by a human response as soon as possible. If you do not get an automated reply, your e-mail did not arrive. Please try re-sending it or contacting imageresizer.net@gmail.com.
+
+In your first e-mail, please include (a) the error message you are getting, and (b) the diagnostics page. To get the error message, visit the image URL directly. To get the diagnostics page, [enable diagnostics](/plugins/diagnostics) and copy the output into the e-mail. 
+
+In most cases, the diagnostics page will tell you how to fix the problem.
 
 Both online tickets and this e-mail address are immediately forwarded to my personal e-mail account, so please use them! It helps me track support requests in a more organized manner. If you e-mail me at my personal e-mail address (nathanael.jones@gmail.com), your request may get lost!
 
