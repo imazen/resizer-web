@@ -46,6 +46,9 @@ By purchasing 1 or more of the bundles below, you will get
  * Free upgrades for all minor releases (major releases occur every ~2 years). 
  * Priority support. 
 
+Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
+are required to purchase them for production/live use.
+
 ## Performance Bundle - $99
 
 * DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.

@@ -2,7 +2,7 @@ title: Licenses - Image Resizer
 
 #Licenses
 
-The core and [9+ plugins](/plugins) are under [Resizer Freedom license][freedom], which is a modified MIT license, as are all sample projects. 
+The core and [the 9+ free plugins](/plugins/free) are under [Resizer Freedom license][freedom], which is a modified MIT license, as are all sample projects. 
 
 If a plugin is in the ImageResizer.Plugins.Basic namespace, it is under the [Freedom license][freedom].
 
