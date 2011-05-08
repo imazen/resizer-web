@@ -2,7 +2,7 @@ title: Resizer Freedom License
 
 #Resizer Freedom license
 
-Used by the Resizer Core and the [7+ free plugins](/plugins) in the ImageResizer.Plugins.Basic namespace.
+Used by the Resizer Core and the [9+ free plugins](/plugins) in the ImageResizer.Plugins.Basic namespace.
 
 ##License summary:
 

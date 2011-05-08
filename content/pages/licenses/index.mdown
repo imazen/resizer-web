@@ -2,18 +2,18 @@ title: Licenses - Image Resizer
 
 #Licenses
 
-The core and [7+ plugins](/plugins) are under [Resizer Freedom license][freedom], which is a modified MIT license, as are all sample projects. 
+The core and [9+ plugins](/plugins) are under [Resizer Freedom license][freedom], which is a modified MIT license, as are all sample projects. 
 
 If a plugin is in the ImageResizer.Plugins.Basic namespace, it is under the [Freedom license][freedom].
 
-The paid plugins are available under the following licenses
+The other plugin bundles are available under the following licenses
 
  * [Resizer Trial][trial]: You get this for free.
  * [Resizer Professional][pro]: You buy this if you are an individual.
  * [Resizer Enterprise][enterprise]: You buy this for business-wide use.
  * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] or [Enterprise][enterprise] licenses, for use as part of a delivered project.
 
-If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **computer.linguist@gmail.com** for details.
+If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **support@imageresizing.net** for details.
 
 [freedom]: /licenses/freedom  "Resizer Freedom License"
 [trial]: /licenses/trial  "Resizer Trial License"
