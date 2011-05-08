@@ -3,17 +3,11 @@ title: Download the Image Resizer Free
 
 #Download
 
-## Kitchen Sink
+Latest release:
 
-Includes binaries and source code for everything.
-
-* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip)
-
-## Super light
-
-Get just the .dll and .pdb for the Core and Basic plugins (All under the [Freedom license](/licenses/freedom))
-
-* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-min-May-02-2011.zip)
+* Version 3 alpha 3 - May 2 2011 
+* * [Download everything: source, binaries, and samples](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip) 
+* * [Download core binary only](/attachments/releases/Resizer3-alpha-3-min-May-02-2011.zip)
 
 ## Get notified of important updates
 
