@@ -1,0 +1,8 @@
+Date: Apr 24 2011
+FullFile: /attachments/releases/ImageResizer3-full-alpha2_apr-24-2011.zip
+Categories: releases
+
+# Resizer 3 alpha 2 - Apr 24 2011
+
+* * [Download everything: source, binaries, and samples](/attachments/releases/ImageResizer3-full-alpha2_apr-24-2011.zip) 
+* * [Download core binary only](/attachments/releases/ImageResizer3-min-alpha2_apr-24-2011.zip)
