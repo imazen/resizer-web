@@ -2,7 +2,7 @@
 
 The goal of the v3 rewrite was to make everything open and extensible. v2 was a monolithic design that, while elegant and very concise, was hard to extend except through source code modification.
 
-V3 Introduces the concept of Plugins, as well as adding an array of Events that can be used to customize the behavior of the pipeline.
+V3 introduces the concept of Plugins, as well as adding an array of Events that can be used to customize the behavior of the pipeline.
 It also introduces a dedicated configuration section for the Resizer and its plugins, which is freeform and easily queried with a CSS-like syntax through the Config.Current class.
 
 ## Plugins can

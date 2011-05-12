@@ -34,16 +34,14 @@ ejunkie: true
 	</div>
 </div>
 
-For plugin installation, [see here](/plugins/install).
+[9 plugins are included](/plugins/free) in the free download, and 9 more are sold. The project is supported by purchases of the following paid plugin bundles.
 
-The free download [includes 9 plugins, 5 of which are installed by default](/plugins/free). 9 more are available below for a 'download fee'. [Read the details](/licenses/) on how awesome and open our licenses are!
-
-This 'download fee' allows me to provide support, develop new features, fix bugs, and write documentation. Thank you for supporting open-source development.
+The licenses are as MIT-like and unrestrictive as possible - even the $99 Pro license [allows modification, redistribution, and sub-licensing](/licenses/pro). This 'download fee' allows me to provide support to everyone, develop new features, fix bugs, and write documentation.
 
 By purchasing 1 or more of the bundles below, you will get 
 
- * Full source code and binaries for *everything* offered on the site, in a single .zip file. 
- * Free upgrades for all minor releases (major releases occur every ~2 years). 
+ * Full source code and binaries for **everything** offered on the site, in a single .zip file. 
+ * **Free** upgrades for all minor releases (major releases occur every ~2 years). 
  * Priority support. 
 
 Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
