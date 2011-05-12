@@ -36,7 +36,7 @@ ejunkie: true
 
 For plugin installation, [see here](/plugins/install).
 
-The free download [includes 9 plugins, 4 of which are installed by default](/plugins/free). 9 more are available below for a 'download fee'. [Read the details](/licenses/) on how awesome and open our licenses are!
+The free download [includes 9 plugins, 5 of which are installed by default](/plugins/free). 9 more are available below for a 'download fee'. [Read the details](/licenses/) on how awesome and open our licenses are!
 
 This 'download fee' allows me to provide support, develop new features, fix bugs, and write documentation. Thank you for supporting open-source development.
 
