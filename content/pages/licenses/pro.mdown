@@ -2,7 +2,7 @@ title: Resizer Professional License
 
 # Resizer Professional license
 
-This license can be purchased for any plugin not available under the Freedom license or another open-source license.
+The [paid plugin bundles](/plugins) can be purchased under this license. An Pro license for a bundle costs <span class="price">$99</span>.
 
 ## License summary
 

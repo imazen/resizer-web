@@ -229,3 +229,11 @@ html>body .t{
 	font-weight: normal;
 	line-height: inherit;
 }
+
+
+.t .price{
+	color:#3A741F;
+}
+.t p .price{
+	font-weight:bold;
+}
