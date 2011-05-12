@@ -212,6 +212,13 @@ html>body .t{
 	line-height:16px;
 }
 
+.no-banner code{
+	color: #0066a1;
+}
+.no-banner pre code{
+	color: inherit;
+}
+
 
 .t strong{font-weight:bold;}
 
