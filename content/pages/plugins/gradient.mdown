@@ -1,0 +1,28 @@
+
+# Gradient plugin
+
+Generates gradients on the fly. Very useful for rapid prototyping and design - but safe for production use!
+
+## Installation
+
+1. Add `<add name="Gradient" />` to the `<plugins />` section.
+
+## Syntax
+
+`gradient.png?width=10&height=10&color1=EEAAFFDD&color2=AAABB3300&angle=90`
+
+* width/height: The size of the PNG to create
+* color1: can be a named color, or a hex color. Accepts 6 and 8-digit hex values (last two digits of 8-digit hex values are for transparency)
+* color2: the second color in the gradient.
+* angle: the gradient angle in degrees.
+* Can be combined with all other standard image resizing commands.
+
+
+## Examples
+
+
+* `/gradient.png?width=200&height=10&color1=00dd0099&color2=0000ee991`: ![gradient](http://img.imageresizing.net/gradient.png;width=200;height=10;color1=00dd0099;color2=0000ee99)
+
+* `/gradient.png?width=200&height=10&color1=0066a1&color2=black`: ![gradient](http://img.imageresizing.net/gradient.png;width=200;height=10;color1=0066a1;color2=black)
+
+* `/gradient.png?width=200&height=10&color1=0066a122&color2=00000044&angle=90`: ![gradient](http://img.imageresizing.net/gradient.png;width=100;height=10;color1=0066a122;color2=00000044;angle=10)

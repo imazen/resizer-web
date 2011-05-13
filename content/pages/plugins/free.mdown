@@ -17,4 +17,4 @@ These can all be found in the ImageResizer.Plugins.Basic namespace
 
 
 * **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
-* **Gradient** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
+* **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
