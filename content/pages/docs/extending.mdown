@@ -41,51 +41,63 @@ Inherit from this class for everything else. Includes 40+ override-able methods 
 
 ## Events
 
+
 Events can be registered through the ImageResizer.Configuration.Config.Current.Pipeline class
 
 All events include comprehensive event information and most include mutable objects that allow behavior to be modified.
 
-###RequestHook OnFirstRequest;
+### RequestEventHandler OnFirstRequest;
 
 Fired once, on the first PostAuthorizeRequest event.
 
-### RequestHook PostAuthorizeRequestStart;
+### RequestEventHandler PostAuthorizeRequestStart;
 
 Fires during the PostAuthorizeRequest phase, prior to any module-specific logic.
 Executes for every request to the website. Use only as a last resort. Other events occur only for image requests, and thus have lower overhead.
 
-### UrlRewritingHook Rewrite;
+### UrlRewritingEventHandler Rewrite;
 
 Fired during PostAuthorizeRequest, after ResizeExtension has been removed.
 Only fired on requests with extensions that match supported image types. 
 You can add additional supported image extensions by registering a plugin that implements IQuerystringPlugin, or you can add an 
 extra extension in the URL and remove it here. Example: .psd.jpg</para>
 
-### UrlRewritingHook RewriteDefaults;
+### UrlRewritingEventHandler RewriteDefaults;
 
 Fired during PostAuthorizeRequest, after Rewrite.
 Any changes made here (which conflict) will be overwritten by the the current query string values. I.e, this is a good place to specify default settings.
 Only fired on accepted image types. Plugins can specify additional image extensions to intercept. Rewrite rules can be used to change extensions.
 
-### UrlRewritingHook PostRewrite;
+### UrlRewritingEventHandler PostRewrite;
 
 Fired after all other rewrite events.
 Only fired on accepted image types. (see Rewrite)
 
-### UrlRewritingHook PostAuthorizeImage;
+### UrlAuthorizationEventHandler AuthorizeImage;
 
-Fired after all rewriting should be finished, and the secondary UrlAuthorization has been completed. Plugins wanting to add additional authorization rules can implement them in a handler,
-and modify the response accordingly.
+Fired after all rewriting should be finished.
+Plugins wanting to add additional authorization rules can implement them in a handler,
+and set "e.AllowAccess" to false. Plugins can also bypass UrlAuthorization by setting "e.AllowAccess" to true.
 
-### UrlRewritingHook ImageMissing;
+### UrlEventHandler ImageMissing;
 
 Fired when an image is missing. Allows redirection to 'fallback' images.
 
-### PreHandleImageHook PreHandleImage;
+### PreHandleImageEventHandler PreHandleImage;
 
 Fired immediately before the image request is sent off to the caching system for processing.
 Allows modification of response headers, caching arguments, and callbacks.
 
-### CacheSelectionDelegate SelectCachingSystem;
+### CacheSelectionHandler SelectCachingSystem;
 
 Allows cache selection to be determined by external code
+
+
+## Event signature reference
+
+* void RequestEventHandler(IHttpModule sender, HttpContext context);
+* void UrlRewritingEventHandler(IHttpModule sender, HttpContext context, IUrlEventArgs e);
+* void UrlEventHandler(IHttpModule sender, HttpContext context, IUrlEventArgs e);
+* void UrlAuthorizationEventHandler(IHttpModule sender, HttpContext context, IUrlAuthorizationEventArgs e);
+* void PreHandleImageEventHandler(IHttpModule sender, HttpContext context, IResponseArgs e);
+* void CacheSelectionHandler(object sender, ICacheSelectionEventArgs e);
