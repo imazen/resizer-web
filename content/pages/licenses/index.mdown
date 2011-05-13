@@ -22,6 +22,8 @@ Development of this project is funded by people purchasing [Pro][pro] (<span cla
 
 If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **support@imageresizing.net** for details.
 
+I have written every license to provide maximum freedom, minimum restrictions, and maximum simplicity. 99% of use cases should be covered, I hope. 
+
 [freedom]: /licenses/freedom  "Resizer Freedom License"
 [trial]: /licenses/trial  "Resizer Trial License"
 [pro]: /licenses/pro  "Resizer Professional License"
