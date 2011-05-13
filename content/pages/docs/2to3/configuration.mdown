@@ -1,0 +1,60 @@
+
+# Migrating Web.Config from V2 to V3
+
+1. Search for "fbs.ImageResizer.InterceptModule" and replace it with "ImageResizer.InterceptModule". There should be 1 or 2 occurrences, in the `<modules>` and `<httpModules>` sections.
+	It should look like this:
+	
+		<modules>
+			<add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+		</modules>
+	
+2. At the top of the file, you should see a `<configSettings>` section. If not, add it, and then add `<section name="resizer" type="ImageResizer.ResizerSection"/>`.
+	It should look like this:
+	
+		<?xml version="1.0"?>
+		<configuration>
+			<configSections>
+				<section name="resizer" type="ImageResizer.ResizerSection"/>
+		</configSections>
+	
+3. Add a `<resizer>` section after `</configSettings>`:
+	
+		...
+		</configSections>
+		<resizer>
+			<!-- insert settings here -->
+			<pipeline fakeExtensions=".ashx" vppUsage="Fallback" />
+			<clientcache minutes="1440" />
+			<sizelimits imageWidth="1680" imageHeight="1680">
+				
+			<diskcache dir="imagecache" subfolders="32"
+						enabled="true" autoClean="true" hashModifiedDate="false"/>
+					   
+			<plugins>
+				<add name="DiskCache" />
+				<add name="PrettyGifs" />
+				<add name="AnimatedGifs" />
+			</plugins>
+		</resizer>
+
+
+## Setting-by-setting explanation
+
+* `ImageDiskCacheDir` is now `<diskcache dir="value" />` (defaults to "imagecache")
+* `ImageCacheSubfolders` is now `<diskcache subfolders="value" />` (defaults to 32)
+* `DisableCacheCleanup` is now `<diskcache autoClean="false" />` (defaults to false, no cache cleanup)
+* `DiskCacheAlwaysInvalid`=true is the equivalent of `<diskcache enabled="false" />` (defaults to true, enabled).
+* `ImageResizerMaxWidth` and `ImageResizerMaxHeight` are now `<sizelimits imageWidth="value" imageHeight="value" />` (See [SizeLimits](/plugins/sizelimiting) documentation for detailed info)
+* `ImageResizerClientCacheMinutes` is now `<clientcache minutes="value" />` Defaults to 0 instead of 1440.
+* `DisableCustomQuantization`=`true` is the same as removing `<add name="PrettyGifs" />` from the `<plugins />` section.
+* `ResizeExtension` is now `<pipeline fakeExtensions=".ashx,.axd" />`. Multiple extensions can be separated by commas. Defaults to ".ashx", the safest choice.
+* `MaxCachedImages` has been replaced by a more flexible system of cleanup criteria. Basically defaults to 12,800. 
+* `DisableImageURLAuthorization` no longer exists, but can be implemented by handling the Pipeline.AuthorizeImage event and setting AllowAccess to true.
+* `ImageResizerUseVirtualPathProvider` and `ImageResizerUseVirtualPathProviderAsFallback` have been replaced by `<pipeline vppMode="Fallback|Never|Always"" />`. Defaults to "Fallback".
+* `AllowURLRewriting` has been removed. URL rewriting is permitted by default, but URL rewriting is also not performed by default.
+*  The `/resize(x,y,f)/` syntax has been moved to a plugin.
+
+
+
+
+
