@@ -14,12 +14,23 @@
 
 
 .buySidebar{
-	float:right;
-	width:150px;
-	padding:10px;
-	margin-top:100px;
+  float: right;
+  margin-top: 75px;
+  padding: 10px;
+  text-align: center;
+  width: 160px;
 }
 
+.buySidebar h3{
+  color: #666666;
+  font-size: inherit;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+.buySidebar p{
+	line-height:1em;
+}
 
 .awesome, .awesome:visited {
 	background: #222 url(/images/alert-overlay.png) repeat-x; 
