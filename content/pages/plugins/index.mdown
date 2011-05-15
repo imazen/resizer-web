@@ -5,13 +5,13 @@ Template: buy_page
 
 #Plugins
 
-[9 plugins are included](/plugins/free) in the free download, and 9 more are sold. The project is supported by purchases of the following paid plugin bundles.
+[9 plugins are included](/plugins/free) in the free download, and 12 more are sold. The project is supported by purchases of the following paid plugin bundles.
 
 The licenses are as MIT-like and unrestrictive as possible - even the <span class="price">$99</span> Pro license [allows modification, redistribution, and sub-licensing](/licenses/pro). This 'download fee' allows me to provide support to everyone, develop new features, fix bugs, and write documentation.
 
 By purchasing 1 or more of the bundles below, you will get 
 
- * Full source code and binaries for **everything** offered on the site, in a single .zip file. 
+ * Full source code and binaries for **everything** offered on the site, in a single .zip file. I'm trusting you to purchase licenses for the bundles you use.
  * **Free** upgrades for all minor releases (major releases occur every ~2 years). 
  * Priority support. 
 
@@ -23,6 +23,7 @@ are required to purchase them for production/live use.
 * DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
 * PrettyGifs - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
 * AnimatedGifs - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
+* FriendlyUrls - Resize images without using the query string.
 
 ## Designer Bundle - <span class="price">$99</span>
 
@@ -36,6 +37,7 @@ are required to purchase them for production/live use.
 
 * S3Reader - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
 * SQLReader - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
+* CloudFront - Allows you to use Amazon CloudFront with the resizer. 
 * RemoteSiteReader - (Coming soon, - leave feedback if you want it faster!)
 
 
