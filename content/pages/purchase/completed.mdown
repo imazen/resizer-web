@@ -2,7 +2,9 @@
 
 You should receive an e-mail with a link to this page, in case you need to download the product again.
 
-* [Version 3 alpha 3 - May 2 2011](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip)
+* [Version 3 alpha 5 - May 15, 2011 ](http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip) 
+
+Read about the [7 bug fixes, 5 api changes, and 3 new plugins since alpha 3](/releases/3-alpha-5).
 
 Free upgrades will be sent to the following e-mail address: 
 

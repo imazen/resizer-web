@@ -3,11 +3,11 @@ title: Download the Image Resizer Free
 
 #Download
 
-Latest release:
+Latest release: Version 3 alpha 5 - May 15 2011 
+* **[Download everything (source, binaries, and samples)](http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip)** (5MB)
+* [Download core binary only](http://downloads.imageresizing.net/Resizer3-alpha-5-min-May-15-2011.zip) (100K)
 
-* Version 3 alpha 3 - May 2 2011 
-* * [Download everything: source, binaries, and samples](/attachments/releases/Resizer3-alpha-3-full-May-02-2011.zip) 
-* * [Download core binary only](/attachments/releases/Resizer3-alpha-3-min-May-02-2011.zip)
+Read about the [7 bug fixes, 5 api changes, and 3 new plugins since alpha 3](/releases/3-alpha-5).
 
 ## Get notified of important updates
 
@@ -17,9 +17,8 @@ It's only happened once (a year ago), but if there is a security-related bug, we
 
 ## Older releases
 
-* [Version 3 alpha 2 (full) - April 24 2011](/attachments/releases/ImageResizer3-full-alpha2_apr-24-2011.zip) (~3MB)
-* [Version 3 alpha 2 (core) - April 24 2011](/attachments/releases/ImageResizer3-min-alpha2_apr-24-2011.zip) (~100k)
-
+* [Version 3 alpha 3 - May 2 2011](/releases/3-alpha-3)
+* [Version 3 alpha 2 - April 24 2011](/releases/3-alpha-2)
 
 <!-- Google Code for View download page Conversion Page -->
 <script type="text/javascript">
