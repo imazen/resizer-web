@@ -12,3 +12,9 @@ Title: Documentation - Image Resizer V3
 * [Configuration](/docs/configuration)
 * [Extending](/docs/extending)
 * [Licenses](/licenses/)
+
+
+# Migrating from V2
+
+* [Why you should upgrade](/docs/2to3/)
+* [Migration guide](/docs/2to3/guide)
