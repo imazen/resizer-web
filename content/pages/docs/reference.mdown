@@ -19,4 +19,7 @@
 * **colors=2-255** – Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit.
 * **frame=x** – Choose which frame of an animated GIF to display.
 * **page=x**– Choose which page of a multi-page TIFF document to display.
-* **format=jpg|png|gif**
+* **format=jpg|png|gif** - Choose the output format
+
+
+... under construction
