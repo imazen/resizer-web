@@ -1,6 +1,6 @@
 # V2 to V3 migration guide
 
-This guide assumes you have already purchased the V3 Performance bundle. If not, that's your first step.
+This guide assumes you have already [purchased the V3 Performance bundle](/plugins/upgradefrom2). If not, that's your first step.
 
 1. Back up your project, or at least the Web.Config file, /bin, and /App_Code/ImageResizer folders.
 2. Delete your /imagecache/ folder.
