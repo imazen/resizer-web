@@ -23,11 +23,13 @@ If required permissions do not exist, (a) an issue will be logged, and (b) url a
 
 ### Managed API Changes
 
+* The **[SizeLimiting](/plugins/sizelimiting)** plugin is now installed by default! This helps protect against RAM usage DOS attacks. SizeLimiting now defaults to imageWidth=0, imageHeight=0, totalWidth=3200, totalHeight=3200. (imageWidth/Height were 1680x1680)
 * Replaced LoadImageFailed overloads with DecodeStream and DecodeStreamFailed methods. (Allows plugins to decode alternative formats more easily)
 * Replaced the Pipeline.PostAuthorizeImage event with Pipeline.AuthorizeImage. The new event allows handlers to prevent (as well as create) access denied responses by simply changing the default of "e.AllowAccess".
 * Moved exception classes to the ImageResizer root namespace.
 * Moved PathUtils to the ImageResizer.Util namespace
 * Moved SafeList and ReverseEnumerator to the Collections namespace/folder. Added ReadOnlyDictionary class.
+
 
 ### New features
 
