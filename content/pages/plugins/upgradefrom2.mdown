@@ -16,6 +16,11 @@ The V3 "Performance Bundle" includes everything users of V2 expect, and more.
 
 Remember to enter your upgrade code (sent to you by e-mail) to get your discount!
 
+Want an [enterprise-wide license](/plugins/enterprise)? They are $99 with the upgrade code.
+
+
+Professional license:
+
 <form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=929356&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
 <input type="hidden" name="o1" value="Performance Bundle" />
 <input type="hidden" name="o2" value="Pro License" />

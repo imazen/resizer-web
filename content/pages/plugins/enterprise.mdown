@@ -2,7 +2,7 @@
 
 Enterprise-wide licenses are very affordable and flexible.
 
-They permit use, modification, integration, redistribution\*, and sub-licensing\* by all employees or contract workers of the purchasing business. [Details here](/licenses/enterprise).
+They permit use, modification, integration, redistribution\*, and sub-licensing\* by all employees or contract workers of the purchasing business. [Read the license](/licenses/enterprise).
 
 ## Pricing
 
@@ -10,4 +10,4 @@ They permit use, modification, integration, redistribution\*, and sub-licensing\
 * Designer Bundle: <span class="price">$250</span>
 * Cloud Bundle: <span class="price">$250</span>
 
-To purchase, choose "Enterprise" from the License menu on the [plugins page](/plugins/).
+To purchase, choose "Enterprise-wide" on the [plugins page](/plugins/).
