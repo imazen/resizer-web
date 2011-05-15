@@ -3,18 +3,24 @@ Title: Documentation - Image Resizer V3
 
 #Documentation
 
-* [Getting started](/)
-* [Examples](/docs/examples)
-* [Command reference](/docs/reference)
+* [Getting started (home)](/)
+* [Usage examples](/docs/examples)
 * [Managed API examples](/docs/managed)
-* [Basic Plugins](/plugins/free)
 * [Plugin bundles](/plugins)
-* [Configuration](/docs/configuration)
-* [Extending](/docs/extending)
-* [Licenses](/licenses/)
+* [Configuration reference](/docs/configuration)
 
+## Reference
 
-# Migrating from V2
+* [9 core plugins -  installation and usage documentation](/plugins/free)
+* [URL command reference](/docs/reference)
+* [Extending the resizer (plugins and events)](/docs/extending)
+
+## Debugging
+
+* [How to get a detailed error message](/docs/geterror)
+* [Accessing self-diagnostics](/plugins/diagnostics)
+
+## Migrating from V2
 
 * [Why you should upgrade](/docs/2to3/)
 * [Migration guide](/docs/2to3/guide)
