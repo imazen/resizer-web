@@ -15,8 +15,6 @@ By purchasing 1 or more of the bundles below, you will get
  * **Free** upgrades for all minor releases (major releases occur every ~2 years). 
  * Priority support. 
 
-Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
-are required to purchase them for production/live use.
 
 ## Performance Bundle - <span class="price">$99</span>
 
@@ -42,3 +40,8 @@ are required to purchase them for production/live use.
 
 
 Enterprise-wide licenses [are available for very low prices](/plugins/enterprise).
+
+Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
+are required to purchase them for production/live use.
+
+Are you using version 2? [Upgrade discounts are available](/docs/2to3/)!
