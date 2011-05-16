@@ -1,5 +1,53 @@
 # Usage examples
 
+## maxwidth & maxheight
+
+Shrinks an image to *within* the specified bounds, but maintains aspect ratio. Does not add padding. 
+
+**?maxwidth=100&amp;maxheight=100**
+
+<img src="http://img.imageresizing.net/quality-original.jpg;maxwidth=100;maxheight=100" />
+
+Notice the resulting image is 100x65. 
+
+## width & height
+
+Shrinks an image to exactly the specified size. Adds whitespace and centers to maintain aspect ratio.
+
+**?width=100&height=100**
+
+<img src="http://img.imageresizing.net/quality-original.jpg;width=100;height=100" />
+
+Add **stretch=fill** to 'stretch' the image instead of adding whitespace.
+
+**?width=100&height=100&stretch=fill**
+
+<img src="http://img.imageresizing.net/quality-original.jpg;width=100;height=100;stretch=fill;" />
+
+Add **crop=auto** to crop the image to match the final aspect ratio. Crops edges minimally.
+
+**?width=100&height=100&crop=auto**
+
+<img src="http://img.imageresizing.net/quality-original.jpg;width=100;height=100;crop=auto" />
+
+## bgcolor
+
+Dislike white? Transparent padding is added (when required) for PNGs and GIFs, but jpegs don't support transparency.
+
+Add **bgcolor=name** or **bgcolor=33ddff** to set the background color. Named colors and hex values supported.
+
+**?width=100&amp;height=100&bgcolor=0066a1**
+
+<img src="http://img.imageresizing.net/quality-original.jpg;width=100;height=100;bgcolor=0066a1" />
+
+## What if I want to *grow* images?
+
+Well, by default images are only shrunk, but you can choose to expand either the photo or the canvas with **scale**.
+
+**scale=both** scales both up and down. **scale=upscalecanvas** scales down, and adds a margin to 'scale up'. The default is **downscaleonly**. 
+
+.... under construction. Maybe you should check out the old samples page?
+
 Version 3 and version 2 are fully compatible - all v2 commands work in v3 (with the right plugins installed).
 
 [View version 2 usage examples](http://nathanaeljones.com/155/image-resizer-v2-examples/)
