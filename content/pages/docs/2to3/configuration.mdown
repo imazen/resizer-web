@@ -22,21 +22,29 @@
 		...
 		</configSections>
 		<resizer>
-			<!-- insert settings here -->
-			<pipeline fakeExtensions=".ashx" vppUsage="Fallback" />
-			<clientcache minutes="1440" />
-			<sizelimits imageWidth="1680" imageHeight="1680">
+			<!-- This configuration mostly duplicates v2 default behavior-->
+			
+			<pipeline fakeExtensions=".ashx" vppUsage="Fallback" /> <!-- Optional, these are the defaults anyway -->
+			
+			<clientcache minutes="1440" /> <!-- defaults to 0, no expires header sent. -->
+			
+			<sizelimits imageWidth="1680" imageHeight="1680" totalWidth="3200" totalHeight="3200" />
 				
 			<diskcache dir="imagecache" subfolders="32"
-						enabled="true" autoClean="true" hashModifiedDate="false"/>
+						enabled="true" autoClean="true" hashModifiedDate="false" /> 
+						
+			<!-- defaults to  autoClean="false" and hashModifiedDate="true"
+					 hashModifiedDate=true causes new files to be written when the source files change, but also prevents 
+				   locking delays that can occur when trying to update a cached file on a busy site-->
 					   
 			<plugins>
 				<add name="DiskCache" />
 				<add name="PrettyGifs" />
-				<add name="AnimatedGifs" />
+				<add name="AnimatedGifs" /> <!-- Only if you resize animated Gifs -->
+				<add name="FriendlyUrls" /> <!-- Only if you use the /resize(x,y,f)/ folder syntax -->
 			</plugins>
 		</resizer>
-
+4. Visit [/resizer.debug.ashx](/plugins/diagnostics) to make sure everything is working.
 
 ## Setting-by-setting explanation
 
@@ -51,8 +59,8 @@
 * `MaxCachedImages` has been replaced by a more flexible system of cleanup criteria. Basically defaults to 12,800. 
 * `DisableImageURLAuthorization` no longer exists, but can be implemented by handling the Pipeline.AuthorizeImage event and setting AllowAccess to true.
 * `ImageResizerUseVirtualPathProvider` and `ImageResizerUseVirtualPathProviderAsFallback` have been replaced by `<pipeline vppMode="Fallback|Never|Always"" />`. Defaults to "Fallback".
-* `AllowURLRewriting` has been removed. URL rewriting is permitted by default, but URL rewriting is also not performed by default.
-*  The `/resize(x,y,f)/` syntax has been moved to a plugin.
+* `AllowURLRewriting` has been removed. URL rewriting is permitted by default, but URL rewriting is also not performed by default, except for removal of fakeExtensions (".jpg.ashx" -> ".jpg"). 
+*  The `/resize(x,y,f)/` syntax has been moved to a plugin, FriendlyUrls.
 
 
 

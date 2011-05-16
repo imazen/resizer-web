@@ -1,9 +1,14 @@
 # V2 to V3 migration guide
 
-This guide assumes you have already [purchased the V3 Performance bundle](/plugins/upgradefrom2). If not, that's your first step.
-
-1. Back up your project, or at least the Web.Config file, /bin, and /App_Code/ImageResizer folders.
-2. Delete your /imagecache/ folder.
-3. Add the V3 ImageResizer.dll, ImageResizer.Plugins.DiskCache.dll, ImageResizer.Plugins.PrettyGifs.dll, and (optionally) ImageResizer.Plugins.AnimatedGifs.dll to your project, replacing the old DLL if it exists.
-4. Users of the source code ("App_Code") version: Migrate your [CustomFolders.cs](customfolders) and [WatermarkSettings.cs](watermarksettings) customizations, then delete the ImageResizer folder of source code.
-5. [Migrate your web.config file](configuration).
+1. [Purchase the v3 Performance bundle](/plugins/upgradefrom2). .
+2. Back up your project, or at least the Web.Config file, /bin, and /App_Code/ImageResizer folders.
+3. Delete your /imagecache/ folder.
+4. With version 2, did you customize [CustomFolders.cs](customfolders) or [WatermarkSettings.cs](watermarksettings)? Follow the links for instructions.
+5. Remove the old ImageResizer.dll reference and/or the App_Code\ImageResizer folder.
+4. Add the following dlls to your project, from the `dlls\release\` folder in the purchased download.
+	* ImageResizer.dll 
+	* ImageResizer.Plugins.DiskCache.dll
+	* ImageResizer.Plugins.PrettyGifs.dll
+	* ImageResizer.Plugins.FriendlyUrls.dll (optional, only if you use the /resize(w,h,f)/ syntax)
+	* ImageResizer.Plugins.AnimatedGifs.dll (optional, only if you resize animated gifs)
+5. [Migrate your web.config file settings](/docs/2to3/configuration).
