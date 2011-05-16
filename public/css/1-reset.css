@@ -237,3 +237,7 @@ html>body .t{
 .t p .price{
 	font-weight:bold;
 }
+
+.t em{
+	font-style:italic;
+}
