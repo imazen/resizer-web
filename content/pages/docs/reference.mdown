@@ -6,7 +6,7 @@
 * **width, height** – force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.
 
 * **crop=auto** – Crop the image the the size specified by width and height. Centers and minimally crops to preserve aspect ratio.
-* **crop=(x1,y1,x2,y2)** – Crop the image to the specified rectangle on the source image. You can use negative coordinates to specifiy bottom-right relative locations.
+* **crop=(x1,y1,x2,y2)** – Crop the image to the specified rectangle on the source image. You can use negative coordinates to specify bottom-right relative locations.
 * **rotate=degress** – Rotate the image.
 * **bgcolor=color name | hex code (6-char).** Sets the background/whitespace color.
 * **stretch=fill** – Stretches the image to width and height if both are specified. This is the only way to lose aspect ratio.
