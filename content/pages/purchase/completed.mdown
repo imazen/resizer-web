@@ -6,6 +6,8 @@ You should receive an e-mail with a link to this page, in case you need to downl
 
 Read about the [7 bug fixes, 5 api changes, and 3 new plugins since alpha 3](/releases/3-alpha-5).
 
+When new versions are released, you can revisit this page to download the new version.
+
 Free upgrades will be sent to the following e-mail address: 
 
 <!-- http://imageresizing.net/purchase/completed?txn_id=8S630904NC944974C&item_number=929356&payer_email=nathanael.jones%40gmail.com&first_name=Nathanael&last_name=Jones&quantity=1&currency=USD&payment_status=Completed&sku=R3Bundle1Pro&hash=74eb5504bd2cb6f9bf83010276b42bb2comp -->
