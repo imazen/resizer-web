@@ -5,7 +5,7 @@ Uservoice: true
 
 *Please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message](/docs/geterror) when contacting support. 
 
-Email:  **support@imageresizing.net**. If you do not get immediately get a reply, your e-mail *did not arrive*. 
+Email:  **support@imageresizing.net**. If you do not immediately get a reply, your e-mail *did not arrive*. 
 
 Both online tickets and this e-mail address are immediately forwarded to my personal e-mail account, so please use them! It helps me track support requests in a more organized manner. If you e-mail me at my personal e-mail address (nathanael.jones@gmail.com), your request may get lost!
 
