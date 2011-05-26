@@ -1,0 +1,68 @@
+
+# Maturity chart
+
+Last updated May 26, 2011 regarding V3.0.7
+
+This chart represents the author's honest opinion on the maturity of the various plugins.
+
+* *alpha* - There may be API changes coming, and these have a higher likelihood of bugs.
+* *beta* - Significant testing has occurred, unlikely to undergo big changes or have severe bugs.
+* *stable* - Extremely well tested, reliable, and API changes would be unlikely.
+
+Note that my 'beta' equals most people's idea of 'stable'.
+
+## Core 
+
+* Core framework - *beta* (likely to have API refinements)
+* DefaultEncoder - *stable*
+* NoCache - *stable*
+* Diagnostics - *beta*
+* ClientCache - *beta*
+* SizeLimiting - *beta*
+* DropShadow - *stable* 
+* Gradient - *alpha*
+* Image404 -  *alpha*
+* VirtualFolder - *alpha*
+
+
+
+## Performance Bundle
+
+* PrettyGifs - *stable*
+* AnimatedGifs - *stable*
+* DiskCache - *stable*/*alpha* (Stable with default settings, alpha with autoClean=True)
+* FriendlyUrls - *beta*
+
+## Designer Bundle
+
+
+* PsdReader - *beta*
+* Watermark - *alpha*.
+* AdvancedFilters - *alpha*
+* SimpleFilters - *pre-alpha* (Querystring API will be changing soon to allow filters to be combined)
+
+## Cloud Bundle
+
+
+* S3Reader - *beta* (used by a large social networking site)
+* SQLReader - *beta* 
+* CloudFront - *alpha* (*stable*, but will have new API additions soon)
+
+
+<script type="text/javascript">
+//<!--
+
+if (loadq === undefined) var loadq = [];
+loadq.push(function(){
+	$("em:contains('alpha')").addClass('alpha');
+	$("em:contains('beta')").addClass('beta');
+	$("em:contains('stable')").addClass('stable');
+});
+//-->
+</script>
+
+<style type="text/css">
+em.alpha{color:red;}
+em.stable{color:green;}
+em.beta{color:#333;}
+</style>

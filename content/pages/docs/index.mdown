@@ -14,6 +14,7 @@ Title: Documentation - Image Resizer V3
 * [9 core plugins -  installation and usage documentation](/plugins/free)
 * [URL command reference](/docs/reference)
 * [Extending the resizer (plugins and events)](/docs/extending)
+* [Plugin maturity chart](/plugins/maturity)
 
 ## Debugging
 
