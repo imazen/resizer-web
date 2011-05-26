@@ -21,6 +21,10 @@ $('a[href*=".zip"]').click(function(){
 	_gaq.push(['_trackPageview', $(this).attr('href') ]);
 });
 
+if (loadq !== undefined){
+	for (var i = 0; i < loadq.length; i++)
+		$(loadq[i]);
+}
 //So e-junkie falls back gracefully.
 if (typeof(EJEJC_lc) !== undefined) var EJEJC_lc = function (th) { return false; };
 
