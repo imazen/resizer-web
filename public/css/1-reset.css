@@ -157,8 +157,9 @@ html>body .t{
 .t ol ol, .t ol ul, .t ul ol, .t ul ul{
 	margin-top:0px; 
 	margin-bottom:0px;
+	margin-left:1.5em;
 }
-}
+
 .t ol li{
 	
 }
