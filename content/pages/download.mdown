@@ -3,14 +3,14 @@ title: Download the Image Resizer Free
 
 #Download
 
-Latest release: Version 3 alpha 5 - May 15 2011 
+Latest release: Version 3 alpha 7 - May 26 2011 
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip" class="awesome green">Download source, binaries, and sample code (5MB)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-7-full-May-26-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-5-min-May-15-2011.zip" class="awesome black">Download core binary only (100K)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-7-min-May-26-2011.zip" class="awesome black">Download core binary only (100K)</a>
 
 
-Read about the [7 bug fixes, 5 api changes, and 3 new plugins since alpha 3](/releases/3-alpha-5).
+Read about the [3 stability fixes, 7 new features, 4 API changes, 7 API additions, and 13 bug fixes since alpha 5](/releases/3-alpha-7). This is a high-importance update.
 
 ## Get notified of important updates
 
@@ -20,8 +20,11 @@ It's only happened once (a year ago), but if there is a security-related bug, we
 
 ## Older releases
 
+* [Version 3 alpha 5 - May 15 2011](/releases/3-alpha-5) - 7 bug fixes, 5 API changes, and 3 new plugins
 * [Version 3 alpha 3 - May 2 2011](/releases/3-alpha-3)
 * [Version 3 alpha 2 - April 24 2011](/releases/3-alpha-2)
+
+Why do we skip version numbers? Private builds and beta testing. If you received a build via e-mail in response to a support request, you should upgrade to a newer release as soon as it is made available.
 
 <!-- Google Code for View download page Conversion Page -->
 <script type="text/javascript">
