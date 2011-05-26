@@ -2,6 +2,7 @@ Title: Plugins - Image Resizer
 ejunkie: true
 ejunkiecart:true
 Template: buy_page
+Uservoice: true
 
 #Plugins
 
