@@ -21,7 +21,7 @@ $('a[href*=".zip"]').click(function(){
 	_gaq.push(['_trackPageview', $(this).attr('href') ]);
 });
 
-if (loadq !== undefined){
+if (typeof(loadq) !== 'undefined'){
 	for (var i = 0; i < loadq.length; i++)
 		$(loadq[i]);
 }
