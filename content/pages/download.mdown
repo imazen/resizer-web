@@ -23,6 +23,7 @@ It's only happened once (a year ago), but if there is a security-related bug, we
 * [Version 3 alpha 5 - May 15 2011](/releases/3-alpha-5) - 7 bug fixes, 5 API changes, and 3 new plugins
 * [Version 3 alpha 3 - May 2 2011](/releases/3-alpha-3)
 * [Version 3 alpha 2 - April 24 2011](/releases/3-alpha-2)
+* [Version 2.8 May 27 2011](/releases/2-8) - The last build of the version 2 line.
 
 Why do we skip version numbers? Private builds and beta testing. If you received a build via e-mail in response to a support request, you should upgrade to a newer release as soon as it is made available.
 

@@ -1,0 +1,34 @@
+# Resizer 2.8 - May 27 2011
+
+This is probably the last update the v2 line will receive. v2.X is depreciated and discontinued. Support for 2.X will be ending June 15, 2011. Version 3 was released Apr. 24, and contains hundreds of bug fixes and improvements, only some of which were back-ported in this release. [A detailed migration guide is available](/docs/2to3/). Version 3 is fully supported.
+
+This is a **high-priority update** for users of v2, as it blocks a potential avenue for a DOS attack and fixes many important bugs. Users of v2.6 can simply replace the ImageResizer.DLL file or the ImageResizer folder of .cs files.
+
+Most of the patches were back-ported from [version 3](/).
+
+<a href="http://downloads.imageresizing.net/ImageResizer2.8-full-may-27-2011.zip" class="awesome green">Download source, binaries, and sample code (3.5MB)</a>
+
+<a href="http://downloads.imageresizing.net/ImageResizer2.8-core-may-27-2011.zip" class="awesome black">Download core binary only (100K)</a>
+
+
+## Changes since v2.6
+
+For changes between this and older versions,  read [the changelog](/docs/v2/changelog).
+
+### Critical bugs
+
+* <span style="color:red;">Fixed serious limitation of ImageResizerMaxWidth/Height settings.</span>  
+  These settings only control the size of the photo portion of the image. They do not limit the dimensions of the resulting bitmap. By using paddingWidth=100000, **an attacker could perform a denial-of-service attack against the server to deprive it of RAM.**
+  
+  **New behavior**: When the final dimensions of an image would exceed 2x the configured max width and height, the request will be ignored with the following message: "The specified image will be more the 2x the permitted size. Request terminated."
+
+
+### Other bug fixes
+
+* Fixed bug in disk caching system: **Cached files modified by just one day or one hour don't get updated.**
+* Fixed bug: Mime-type: image/x-png was being sent instead of image/png. **Causes Chrome to download images instead of displaying them.**
+* Fixed bug where **specifying both width and maxheight would cause width to be ignored.**
+* Fixed bug: Two simultaneous ImageManager.getBestInstance() calls at app startup could return two different instances.
+* Fixed bug causing Dictionary exception on the first request after the app was restarted. Only occurred if two simultaneous requests occurred. Only would happen once per app lifetime. 
+* Fixed potential bug: **Extremely** rare Access Denied message occurring on one of 2 simultaneous requests for a newly added source image. No reported occurrences.
+* Removed System.Data and System.Xml dependencies.
