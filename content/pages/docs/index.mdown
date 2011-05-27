@@ -8,6 +8,9 @@ Title: Documentation - Image Resizer V3
 * [Managed API examples](/docs/managed)
 * [Plugin bundles](/plugins)
 * [Configuration reference](/docs/configuration)
+* [Frequently asked questions](/docs/faq)
+* [System requirements](/docs/requirements)
+* [Removing the .ashx on IIS7 Classic or IIS6](/docs/cleanurls)
 
 ## Reference
 

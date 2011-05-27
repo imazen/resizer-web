@@ -1,0 +1,24 @@
+# System Requirements
+
+Supported operating systems: Windows 2000, Server 2000, XP, Server 2003, Vista, Server 2008, and Windows 7. Both 32 and 64 bit versions.
+
+Supported web servers (for ASP.NET mode): IIS5, IIS 5.1, IIS 6, IIS 7, IIS 7.5 (both classic and integrated modes).
+
+Unless listed below, everything runs under .NET 2.0 (although fully compatible with 3.0, 3.5, and 4.0).
+
+## Plugins that use .NET 3.5
+
+* BatchZipper
+* PsdReader
+* S3Reader
+
+
+## Samples that use .NET 3.5 and 4.0
+
+* ConsoleApplication uses .NET 4.0
+* ComplexWebApplication uses .NET 3.5
+* ImageResizerGUI (WPF) uses .NET 4.0
+
+
+Visual Studio 2010 is suggested for opening the sample projects and source code, although you can use 2008 if you rebuild the project files.
+
