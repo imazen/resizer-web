@@ -1,14 +1,19 @@
 # Resizer 2.8 - May 27 2011
 
-This is probably the last update the v2 line will receive. v2.X is depreciated and discontinued. Support for 2.X will be ending June 15, 2011. Version 3 was released Apr. 24, and contains hundreds of bug fixes and improvements, only some of which were back-ported in this release. [A detailed migration guide is available](/docs/2to3/). Version 3 is fully supported.
+This is probably the last update the V2 line will receive, as it was superseded by V3 on Apr. 24. Support for 2.8 will be ending June 15, 2011, **3 years** after V2 was first released.
 
-This is a **high-priority update** for users of v2, as it blocks a potential avenue for a DOS attack and fixes many important bugs. Users of v2.6 can simply replace the ImageResizer.DLL file or the ImageResizer folder of .cs files.
+This is a **high-priority update** for all users, as it blocks a potential avenue for a DOS attack and fixes many important bugs. Users of v2.6 can simply replace the ImageResizer.DLL file or the ImageResizer folder of .cs files. See [the changelog](/docs/v2/changelog) if you have an version prior to 2.6, as configuration changes may be required..
 
-Most of the patches were back-ported from [version 3](/).
 
-<a href="http://downloads.imageresizing.net/ImageResizer2.8-full-may-27-2011.zip" class="awesome green">Download source, binaries, and sample code (3.5MB)</a>
+It is highly recommended that [you upgrade to V3 instead of V2.8, so you can continue to receive support and patches for the next few years](/docs/2to3/). V3 is designed for better performance, has an easier API, and is far more flexible. 
 
-<a href="http://downloads.imageresizing.net/ImageResizer2.8-core-may-27-2011.zip" class="awesome black">Download core binary only (100K)</a>
+Existing users can upgrade before June 15 for only $40. 
+
+<a href="/docs/2to3/" class="awesome green">Upgrade to V3</a>
+
+<a href="http://downloads.imageresizing.net/ImageResizer2.8-full-may-27-2011.zip" class="awesome black">Download V2.8 (3.5MB)</a>
+
+<a href="http://downloads.imageresizing.net/ImageResizer2.8-core-may-27-2011.zip" class="awesome black">Download V2.8 DLL only (100K)</a>
 
 
 ## Changes since v2.6
