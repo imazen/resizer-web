@@ -1,6 +1,6 @@
 # Purchase complete!
 
-You should receive an e-mail with a link to this page, in case you need to download the product again.
+Please bookmark this page, as it will be updated each time a new version is released. 
 
 Latest release: Version 3 alpha 7 - May 26 2011 
 
