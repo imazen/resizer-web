@@ -14,9 +14,9 @@ The V3 "Performance Bundle" includes everything users of V2 expect, and more.
 * And more...
 
 
-Remember to enter your upgrade code (sent to you by e-mail) to get your discount!
+Remember to enter the upgrade code 60OFFLOYALTY to get your discount!
 
-Want an [enterprise-wide license](/plugins/enterprise)? They are $99 with the upgrade code.
+Want an [enterprise-wide license for multiple developers](/plugins/enterprise)? They are $99 with the upgrade code.
 
 
 Professional license:
