@@ -1,18 +1,14 @@
 # Purchase complete!
 
-Please bookmark this page, as it will be updated each time a new version is released. 
+Please bookmark this page, as it will be updated each time a new version is released. The e-mailed link will expire after 9 visits, due to e-junkie restrictions.
 
-Please note that *all* plugin bundles are included in this download, as well as the core. I'm trusting you to buy the correct licenses for the bundles you use. 
+Please note that *all* plugin bundles are included in this download, as well as the core. I'm trusting you to buy the correct licenses for the  [bundles](/plugins) you use. 
 
-Latest release: Version 3 alpha 7 - May 26 2011 
+Version 3 alpha 7 - May 26, 2011 ([changelog](/releases/3-alpha-7)): 
 
 <a href="http://downloads.imageresizing.net/Resizer3-alpha-7-full-May-26-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
 
-Read about the [3 stability fixes, 7 new features, 4 API changes, 7 API additions, and 13 bug fixes since alpha 5](/releases/3-alpha-7). This is a high-importance update.
-
-When new versions are released, you can revisit this page to download the new version.
-
-Free upgrades will be sent to the following e-mail address: 
+Free minor upgrades will be sent to the following e-mail address: 
 
 <!-- http://imageresizing.net/purchase/completed?txn_id=8S630904NC944974C&item_number=929356&payer_email=nathanael.jones%40gmail.com&first_name=Nathanael&last_name=Jones&quantity=1&currency=USD&payment_status=Completed&sku=R3Bundle1Pro&hash=74eb5504bd2cb6f9bf83010276b42bb2comp -->
 <script type="text/javascript">
