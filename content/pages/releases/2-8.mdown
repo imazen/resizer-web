@@ -7,7 +7,7 @@ This is a **high-priority update** for all users, as it blocks a potential avenu
 
 It is highly recommended that [you upgrade to V3 instead of V2.8, so you can continue to receive support and patches for the next few years](/docs/2to3/). V3 is designed for better performance, has an easier API, and is far more flexible. 
 
-Existing users can upgrade before June 15 for only $40. 
+Existing users can upgrade before June 15 for only $40 using the discount code 60OFFLOYALTY.
 
 <a href="/docs/2to3/" class="awesome green">Upgrade to V3</a>
 

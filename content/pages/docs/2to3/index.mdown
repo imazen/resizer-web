@@ -9,7 +9,7 @@
 6. Simple, intuitive configuration. No more polluting `<appSettings>`. Go from 2 complex pages to 6 easy lines.
 
 
-Upgrade before July 15 and get a 60% discount. Didn't get your upgrade code yet, or changed e-mail addresses? E-mail `support@imageresizing.net`.
+Upgrade before July 15 and get a 60% discount with the code 60OFFLOYALTY. 
 
 <a class="large awesome green" href="/plugins/upgradefrom2">Upgrade now for $40</a> &nbsp; 
 <a class="large awesome black" href="/docs/2to3/diff">V2 and V3 differences</a>  &nbsp; 
