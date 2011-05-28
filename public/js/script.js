@@ -16,10 +16,16 @@ $(function(){
 	/*$('pre code').not('code[class]').each(function(i, e) {$(e).addClass('csharp c-sharp'); hljs.highlightBlock(e, '  ')});*/
 });
 
-$('a[href*=".zip"]').click(function(){
+$('a[href*="Resizer3"]').click(function(){
 	_gaq.push(['_trackEvent', 'Downloads', 'Releases', $(this).attr('href')]);
 	_gaq.push(['_trackPageview', $(this).attr('href') ]);
 });
+
+$('a[href*="Resizer2"]').click(function(){
+	_gaq.push(['_trackEvent', 'Downloads', 'Releases-v2', $(this).attr('href')]);
+	_gaq.push(['_trackPageview', $(this).attr('href') ]);
+});
+
 
 if (typeof(loadq) !== 'undefined'){
 	for (var i = 0; i < loadq.length; i++)
