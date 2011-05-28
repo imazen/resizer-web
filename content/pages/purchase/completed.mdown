@@ -2,9 +2,11 @@
 
 You should receive an e-mail with a link to this page, in case you need to download the product again.
 
-* [Version 3 alpha 5 - May 15, 2011 ](http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip) 
+Latest release: Version 3 alpha 7 - May 26 2011 
 
-Read about the [7 bug fixes, 5 api changes, and 3 new plugins since alpha 3](/releases/3-alpha-5).
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-7-full-May-26-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
+
+Read about the [3 stability fixes, 7 new features, 4 API changes, 7 API additions, and 13 bug fixes since alpha 5](/releases/3-alpha-7). This is a high-importance update.
 
 When new versions are released, you can revisit this page to download the new version.
 
