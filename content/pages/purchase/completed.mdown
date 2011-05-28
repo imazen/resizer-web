@@ -2,6 +2,8 @@
 
 Please bookmark this page, as it will be updated each time a new version is released. 
 
+Please note that *all* plugin bundles are included in this download, as well as the core. I'm trusting you to buy the correct licenses for the bundles you use. 
+
 Latest release: Version 3 alpha 7 - May 26 2011 
 
 <a href="http://downloads.imageresizing.net/Resizer3-alpha-7-full-May-26-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
