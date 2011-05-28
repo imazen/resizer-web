@@ -21,7 +21,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
@@ -40,7 +40,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/usage-sample.png" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/usage-sample.png" alt="featured" width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
@@ -54,7 +54,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/image-formats.png" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/image-formats.png" alt="featured" width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
@@ -75,7 +75,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/usage-sample.png" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/usage-sample.png" alt="featured" width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
@@ -87,7 +87,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/rocket.jpg" alt="Rocket. Fast. Like this module." width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/rocket.jpg" alt="Rocket. Fast. Like this module." width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
@@ -106,7 +106,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
@@ -132,7 +132,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
