@@ -24,7 +24,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
 body {
 	line-height: 1;
 	color: black;
-	background: white;
+	background: black;
 }
 ol, ul {
 	list-style: none;
