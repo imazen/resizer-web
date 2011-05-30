@@ -12,6 +12,10 @@ Title: Documentation - Image Resizer V3
 * [System requirements](/docs/requirements)
 * [Removing the .ashx on IIS7 Classic or IIS6](/docs/cleanurls)
 
+## How to...
+
+* [Use jCrop to create a cropping UI in 11 lines](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
+
 ## Reference
 
 * [9 core plugins -  installation and usage documentation](/plugins/free)
