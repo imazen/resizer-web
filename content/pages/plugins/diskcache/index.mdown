@@ -1,0 +1,74 @@
+
+# DiskCache plugin
+
+Writes resized images directly to disk, then lets IIS serve them as normal images. Uses URL rewriting, not URL redirects - this maintains the filename for SEO and reduces latency.
+
+With this plugin, a server can usually process as many concurrent 'dynamic' image requests as 'static' image requests, since there is only a 1-time hit (and it's small to begin with) for resizing an image.
+
+Suggested for all live sites. Works well in combination with the CloudFront plugin, which adds edge-caching. Also works great with the PsdReader, SqlReader, S3Reader, and AnimatedGifs plugin (these benefit greatly from caching due to their slightly higher resource cost).
+
+Compatible with *all* plugins.
+
+## Installation
+
+In the plugins section, insert `<add name="DiskCache" />`.
+
+You're done. If you want to configure the cache directory, you can set `<diskcache dir="~/app-relative-path-here" />`. 
+
+## Configuration
+
+The defaults are good - you don't actually need to specify any configuration. 
+
+The following is what the default settings look like. Only specify what you need to change.
+
+	<diskCache dir="~/imagecache" autoClean="false" hashModifiedDate="true" enabled="true" subfolders="32" cacheAccessTimeout="15000" />
+	
+	<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" optimalWorkSegmentLength="00:00:04" targetItemsPerFolder="400" maximumItemsPerFolder="1000" 
+	  avoidRemovalIfCreatedWithin="24:00" avoidRemovalIfUsedWithin="4.00:00" prohibitRemovalIfUsedWithin="00:05" prohibitRemovalIfCreatedWithin="00:10" />
+	
+
+
+### dir
+
+Where to store the images. This can specify an IIS virtual directory, if you want to cache images outside the site folder.
+
+Should be in virtual path form, like /vdir/cache or ~/imagecache.
+
+### autoClean
+
+When true, will keep a background thread running to 'clean' unused items from the disk cache. This background thread uses smart 'activity sensing' to avoid doing cleanup work when the site is busy. 
+Defaults to false, since the cleanup system is still in beta.
+
+### hashModifiedDate
+
+When true, the modified date of the source images will be used as part of the cached filename. True is a good setting for busy sites, as it avoids the locking issues you would encounter while trying to replace a file users are actively downloading. 
+
+False has the benefit of creating less 'cache trash', since extra files are not left around.
+
+### enabled
+
+true by default. False disables the plugin completely.
+
+### subfolders
+
+Controls how many subfolders to use for disk caching. Rounded to the next power of to. (1->2, 3->4, 5->8, 9->16, 17->32, 33->64, 65->128,129->256,etc.)
+
+NTFS does not handle more than 8,000 files per folder well. Larger folders also make cleanup more resource-intensive.
+
+Defaults to 32, which combined with the default setting of 400 images per folder, allows for scalability to 12,800 actively used image versions. 
+
+For example, given a desired cache size of 100,000 items, this should be set to 256.
+
+### cacheAccessTimeout
+
+Defaults to 15 seconds. How long to wait for a file lock to become available before giving up on the request.
+
+## CleanupStrategy
+
+Controls how the background thread determines which files to 'clean up'. Not used unless autoClean='true'
+
+Changing the 'cleanupStrategy' settings may void your warranty - it's tricky business.
+
+Times are parsed in the following format:  { s | d.hh:mm[:ss[.ff]] | hh:mm[:ss[.ff]] }. If you just enter a number, it's considered seconds.
+
+

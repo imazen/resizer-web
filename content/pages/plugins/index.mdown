@@ -19,7 +19,7 @@ By purchasing 1 or more of the bundles below, you will get
 
 ## Performance Bundle - <span class="price">$99</span>
 
-* DiskCache - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
+* [DiskCache](/plugins/diskcache) - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
 * PrettyGifs - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
 * AnimatedGifs - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
 * FriendlyUrls - Resize images without using the query string.
