@@ -1,0 +1,37 @@
+uservoice:true
+
+# SQL reader
+
+Allows you to access binary blobs in a SQL database using a URL. Accepts both integer and GUID identifiers for images. It's pretty easy to add support for new kinds of primary keys, though, don't hesitate to ask.
+
+Ex. www.mysite.com/databaseimages/38.jpg  or  mysite.com/databaseimages/21EC2020-3AEA-1069-A2DD-08002B30309D.jpg
+
+
+* Can serve non-image data if desired
+* Compatible with CloudFront and DiskCache
+* Supports modified-date comparison between SQL and the filesystem so updated versions of cached files are detected.
+* Easy to configure.
+
+
+## Example installation
+
+	 public class Global : System.Web.HttpApplication
+	 {
+	     protected void Application_Start(object sender, EventArgs e)
+	     {
+	         //Configure Sql Backend
+	         SqlReaderSettings s = new SqlReaderSettings();
+	         s.ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
+	         s.PathPrefix = "~/databaseimages";
+	         s.ImageIdType = System.Data.SqlDbType.UniqueIdentifier;
+	         s.ImageBlobQuery = "SELECT Content FROM Images WHERE ImageID=@id";
+	         s.ModifiedDateQuery = "Select ModifiedDate, CreatedDate From Images WHERE ImageID=@id";
+	         s.ImageExistsQuery = "Select COUNT(ImageID) From Images WHERE ImageID=@id";
+
+	         //Add plugin
+	         new SqlReaderPlugin(s).Install(Config.Current);
+
+	     }
+	}
+	
+

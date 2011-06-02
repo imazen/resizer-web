@@ -1,0 +1,43 @@
+UserVoice=true
+
+# CloudFront plugin
+
+Makes the ImageResizer work nicely with Amazon CloudFront. I use this extensively for my own site, as edge-caching makes things much more responsive, and is not expensive.
+
+Install by adding `<add name="CloudFront" />` in `<plugins>`. Make sure you're referencing ImageResizer.Plugins.CloudFront.dll.
+
+## Details
+
+Amazon CloudFront strips off all query string before passing the request on to the origin server (the Image Resizer). To avoid this limitation, we've devised an alternate syntax using semicolons.
+
+	image.jpg;width=100;height=100;crop=auto
+
+This allows us to reference a CloudFront server, but still dynamically process and edge-cache images.
+
+Here's a URL directly to my origin server
+
+http://images.imageresizing.net/red-leaf.jpg;width=100
+
+Here's a URL pointing to CloudFront (I've set up a CNAME to mask the distribution name)
+
+http://img.imageresizing.net/red-leaf.jpg;width=100
+
+Feel free to play around with them and experiment. 
+
+
+CloudFront caches all requests for 24 hours at minimum, or longer if you have set `<clientcache minutes="1441" />`. 1440 is 24 hours, so unless you set it higher you won't affect Amazon's caching time.
+
+Browsers also mimic CloudFront's caching behavior. If you need to invalidate a cached item immediately, you can either (a) use Amazon's invalidation request feature, or (b) add something to change the URL, like ";invalidate=1".
+
+
+## Future plans
+
+I'm hoping to add a redirect feature that can be configured to redirect all direct requests through a configured CloudFront distribution.
+
+Redirection adds latency, so this feature would be useful primarily to make a site more scalable for higher traffic, not necessarily to make it more responsive.
+
+To get both responsiveness and scalability, we actually have to mess with the HTML your site outputs, which requires Control Adapters and/or Html filters. Both are tricky business.
+
+I'd like to get several use cases before plunging into development. I don't want to develop the wrong functionality. 
+
+Please send feedback! There's a little tab at the bottom that makes it easy. You can even suggest ideas and vote for them. Check it out!
