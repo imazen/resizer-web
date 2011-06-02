@@ -15,6 +15,7 @@ Title: Documentation - Image Resizer V3
 ## How to...
 
 * [Use jCrop to create a cropping UI in 11 lines](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
+* [Use the Resizer without ASP.NET](/docs/howto/use-with-asp)
 
 ## Reference
 
