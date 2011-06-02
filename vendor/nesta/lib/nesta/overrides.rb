@@ -44,7 +44,7 @@ module Nesta
         elsif template_exists?(engine, theme_view_path, template)
           { :views => theme_view_path }
         else
-          {}
+          { :views => Nesta::Path.local("content/pages")}
         end
       end
 
