@@ -41,9 +41,12 @@ Defaults to false, since the cleanup system is still in beta.
 
 ### hashModifiedDate
 
-When true, the modified date of the source images will be used as part of the cached filename. True is a good setting for busy sites, as it avoids the locking issues you would encounter while trying to replace a file users are actively downloading. 
+If true, when a source file is changed, a new file will be created instead of overwriting the old cached file.
+This helps prevent file lock contention on high-traffic servers. Defaults to true. 
+Changes the hash function, so you should delete the cache folder whenever this setting is modified.
 
-False has the benefit of creating less 'cache trash', since extra files are not left around.
+
+False has the benefit of creating less 'cache trash', since extra files are not left around for a while.
 
 ### enabled
 
