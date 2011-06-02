@@ -6,7 +6,7 @@ Please note that *all* plugin bundles are included in this download, as well as 
 
 Version 3 alpha 8 - Jun 2, 2011 ([changelog](/releases/3-alpha-8)): 
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-2-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-02-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
 
 Free minor upgrades will be sent to the following e-mail address: 
 

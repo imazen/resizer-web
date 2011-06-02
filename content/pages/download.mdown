@@ -5,9 +5,9 @@ title: Download the Image Resizer Free
 
 Latest release: Version 3 alpha 8 - Jun 2 2011 
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-2-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-02-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-min-Jun-2-2011.zip" class="awesome black">Download core binary only (100K)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-min-Jun-02-2011.zip" class="awesome black">Download core binary only (100K)</a>
 
 Read about the [4 core bug fixes, 2 new sample projects, and the important fixes to the DiskCache, SqlReader, and AnimatedGifs plugins](/releases/3-alpha-8). 
 

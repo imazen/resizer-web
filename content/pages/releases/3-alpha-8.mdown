@@ -1,12 +1,12 @@
 Date: June 2 2011
-FullFile: http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-2-2011.zip
+FullFile: http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-02-2011.zip
 Categories: releases
 
 # Resizer 3 alpha 8 - Jun 2 2011
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-2-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-02-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-min-Jun-2-2011.zip" class="awesome black">Download core binary only (100K)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-8-min-Jun-02-2011.zip" class="awesome black">Download core binary only (100K)</a>
 
 
 
