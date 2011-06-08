@@ -3,7 +3,7 @@ Uservoice: true
 
 #Support
 
-*Please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message](/docs/geterror) when contacting support. 
+When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). Without this information, I can't diagnose the problem.
 
 Email:  **support@imageresizing.net**. If you do not immediately get a reply, your e-mail *did not arrive*. 
 
