@@ -16,6 +16,7 @@ Title: Documentation - Image Resizer V3
 
 * [Use jCrop to create a cropping UI in 11 lines](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
 * [Use the Resizer without ASP.NET](/docs/howto/use-with-asp)
+* [Use the Resizer to cache non-image files](/docs/howto/cache-non-images)
 
 ## Reference
 
@@ -23,6 +24,7 @@ Title: Documentation - Image Resizer V3
 * [URL command reference](/docs/reference)
 * [Extending the resizer (plugins and events)](/docs/extending)
 * [Plugin maturity chart](/plugins/maturity)
+* [Understanding processing and caching in the ImageResizer](/docs/process-and-cache)
 
 ## Debugging
 

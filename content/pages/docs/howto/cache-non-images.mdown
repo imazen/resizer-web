@@ -1,0 +1,20 @@
+
+# How to DiskCache non-image files.
+
+By default, the ImageResizer ignores all requests that don't have a supported image extension. 
+
+We can change this with an event handler and a tiny bit of code. We'll need to determine which requests get cached to disk by checking the Config.Current.Pipeline.PreRewritePath and possibly ModifiedQueryString. Since this code will run for every request, don't do any database lookups, IO calls, or anything *slow*. Use smart string comparison code.
+
+
+	Config.Current.Pipeline.PostAuthorizeRequestStart += delegate(IHttpModule sender2, HttpContext context) {
+			string path = Config.Current.Pipeline.PreRewritePath;
+			//Only work with requests in a certain folder
+			if (!path.StartsWith(PathUtils.ResolveAppRelative("~/folder/of/files"), StringComparison.OrdinalIgnoreCase)) return;
+			//And only those with certain extensions (Maybe we are dynamically generating ZIP files with a VirtualPathProvider?)
+			if (!path.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) return;
+		
+			Config.Current.Pipeline.SkipFileTypeCheck = true; //Skip the file extension check. FakeExtensions will still be stripped.
+			//Non-images will be served as-is
+			//Cache all file types, whether they are processed or not.
+			Config.Current.Pipeline.ModifiedQueryString["cache"] = ServerCacheMode.Always.ToString();
+	};
