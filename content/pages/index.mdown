@@ -47,6 +47,6 @@ uservoice: true
 5.	[Increase performance and add features with plugins](/plugins)! 
 	Buying one of our awesome plugins gives you access to priority support and funds open-source development. How can you resist?
 	
-5. Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of version 2](http://nathanaeljones.com/products/asp-net-image-resizer/)! And, unlike *all* the sample code you find on the internet, it avoids [all 20 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Please [share your ideas and feedback](http://resizer.uservoice.com).
+5. Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of the project](/history). Unlike all the sample code you find on the internet, it avoids [the 29 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Please [share your ideas and feedback](http://resizer.uservoice.com).
 
 Using version 2? Read [why you should upgrade](/docs/2to3/) and check out [the migration guide](/docs/2to3/guide).
