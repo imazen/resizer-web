@@ -2,7 +2,9 @@ uservoice: true
 
 # How to use the Image Resizer without ASP.NET
 
-It's just as easy. You do have to be running Windows and IIS, though. If you are not, remember you can set up a separate port or subdomain dedicated to images, separate from your application, using IIS.
+It's just as easy. If you want to use the COM interface, [read this page](/docs/howto/use-from-com). If you're using the URL API (a better choice), continue with this article.
+
+You do have to be running Windows and IIS, though. If you are not, remember you can set up a separate port or subdomain dedicated to images, separate from your application, using IIS.
 
 1. Create a folder in the site named 'bin'. [Download](/download/) ImageResizer.dll and paste it into the 'bin' folder, along with any plugins you wish to use.
 2. Create a new file named "Web.config" in the root of the site. Paste the following into it.
@@ -39,42 +41,5 @@ It's just as easy. You do have to be running Windows and IIS, though. If you are
 	
 
 3. You're done! Visit /resizer.debug.ashx to verify everything is working. If you need help, [just ask](/support)!
-
-
-## But I want to use the code API, not the awesome URL syntax!
-
-Ok, you can do that also. 
-
-You'll need to use the COM API, and if a copy of the DLLs isn't in the same directory with the script, you may need to use the 'registerdll.bat' scripting included in the "Samples/ScriptAccess" folder of the download.
-
-### JScript example
-
-	//The first step is to create a configuration object (where you register plugins, configure stuff, etc.)
-	var c = new ActiveXObject("ImageResizer.Configuration.Config");
-
-	//This is how you install a plugin
-	var p = new ActiveXObject("ImageResizer.Plugins.PrettyGifs.PrettyGifs");
-	p.Install(c);
-
-	//This is how you generate an image
-	c.BuildImage("..\\Images\\quality-original.jpg","grass.gif", "rotate=3&width=600&format=gif&colors=128");
-
-	// You can even get diagnostics output if something's not working
-	// c.WriteDiagnosticsTo("advancedScript-1.txt");
-
-	//You can create different configurations
-	var c2 = new ActiveXObject("ImageResizer.Configuration.Config");
-
-	//And use them separately
-	c2.BuildImage("..\\Images\\quality-original.jpg","grass-ugly.gif", "rotate=3&width=600&format=gif");
-
-	//c2.WriteDiagnosticsTo("advancedScript-2.txt");
-
-### VBScript example
-
-	Set c = CreateObject("ImageResizer.Configuration.Config")
-
-	c.BuildImage "..\\Images\\tractor.jpg", "tractor-rotated.jpg", "rotate=45"
-
 
 
