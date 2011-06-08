@@ -1,7 +1,7 @@
 
 # Signup
 
-Average volume is 4 e-mails per year. 
+Average volume was 4 e-mails per year in 2010. 2011 may have a higher average due to V3 updates.
 
 You will only be e-mailed about important updates to the Image Resizer. I do not rent, share, or sell your info to anyone. I use iContact for managing the list, and they are very reliable.
 
@@ -24,23 +24,5 @@ Email: <input type="text" name="fields_email"/><input type="submit" name="Submit
     <input type="hidden" name="doubleopt" value="0"/>
     
 </form>
-<script type="text/javascript">
-
-var icpForm2612 = document.getElementById('icpsignup2612');
-
-if (document.location.protocol === "https:")
-
-	icpForm2612.action = "https://app.icontact.com/icp/signup.php";
-function verifyRequired2612() {
-  if (icpForm2612["fields_email"].value == "") {
-    icpForm2612["fields_email"].focus();
-    alert("The Email field is required.");
-    return false;
-  }
-
-
-return true;
-}
-</script>
 
 <p></p>

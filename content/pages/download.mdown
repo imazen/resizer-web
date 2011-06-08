@@ -3,21 +3,32 @@ title: Download the Image Resizer Free
 
 #Download
 
-Latest release: Version 3 alpha 9 - Jun 8 2011 
+Latest release: Version 3 alpha 9 - Jun 8 2011. [8 bug fixes and 8 new features since alpha 8](/releases/3-alpha-9).
 
 
+
+
+
+<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();" >
+<input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou" />
+<input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
+
+<h3> Notify me when important updates are available</h3>
+
+Email: <input type="text" name="fields_email"/> &nbsp; <input type="submit" name="Submit" value="Get notified (avg 8 per year)"/>
+
+<input type="hidden" name="listid" value="29803"/><input type="hidden" name="specialid:29803" value="LH6H"/><input type="hidden" name="clientid" value="905228"/><input type="hidden" name="formid" value="2612"/><input type="hidden" name="reallistid" value="1"/><input type="hidden" name="doubleopt" value="0"/> 
+</form>
+
+<p>
 <a href="http://downloads.imageresizing.net/Resizer3-alpha-9-full-Jun-8-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
 
 <a href="http://downloads.imageresizing.net/Resizer3-alpha-9-min-Jun-8-2011.zip" class="awesome black">Download core binary only (100K)</a>
+</p>
 
 
-Read about the [8 bug fixes and 8 new features since alpha 8](/releases/3-alpha-9). 
+It's only happened once (a year ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
 
-## Get notified of important updates
-
-It's only happened once (a year ago), but if there is a security-related bug, we'll let you know.
-
-[Subscribe to the **extremely** low volume mailing list](/newsletter/signup). You will only be contacted about **important** updates and releases.
 
 ## Older releases
 

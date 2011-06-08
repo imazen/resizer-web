@@ -34,6 +34,22 @@ if (typeof(loadq) !== 'undefined'){
 //So e-junkie falls back gracefully.
 if (typeof(EJEJC_lc) !== undefined) var EJEJC_lc = function (th) { return false; };
 
+/* Handles signup forms */
+
+var icpForm2612 = document.getElementById('icpsignup2612');
+
+if (document.location.protocol === "https:")
+	icpForm2612.action = "https://app.icontact.com/icp/signup.php";
+	
+function verifyRequired2612() {
+  if (icpForm2612["fields_email"].value == "") {
+    icpForm2612["fields_email"].focus();
+    alert("The Email field is required.");
+    return false;
+  }
+	return true;
+}
+
 
 /*function EJEJC_config() {
 EJEJC_BEACON = "https://www.googleadservices.com/pagead/conversion/0062225003/?value=1&label=purchase&script=0";
