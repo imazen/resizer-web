@@ -18,3 +18,22 @@ We can change this with an event handler and a tiny bit of code. We'll need to d
 			//Cache all file types, whether they are processed or not.
 			Config.Current.Pipeline.ModifiedQueryString["cache"] = ServerCacheMode.Always.ToString();
 	};
+	
+
+## I'm getting 404s when I try to access non-image files.
+
+Non-image files are cached internally with a .unknown file extension to prevent exploitation or code execution.
+
+IIS may not serve these files by default, as they don't have an assigned mime-type.
+
+[Read this article on how to add a mapping to IIS6](http://support.microsoft.com/kb/326965).
+
+On IIS7, you need to place the following settings inside web.config.
+
+	<configuration>
+	    <system.webServer>
+	        <staticContent>
+	            <mimeMap fileExtension=".unknown" mimeType="application/octet-stream" />
+	     </staticContent>
+	    </system.webServer>
+	</configuration> 
