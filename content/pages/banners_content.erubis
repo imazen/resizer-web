@@ -34,7 +34,7 @@
 			<li>Animated GIF frame selection. Comprehensive, real-time diagnostics.</li>
 			<li>Basic GIF and PNG encoding</li>
 		</ul>
-		<p>And &mdash; no time limits on plugin trials!</p>
+		
 	</div>
 </div>
 
@@ -100,6 +100,7 @@
 			Asynchronously uploads resized images to an Amazon S3 bucket, while still serving the images quickly in the meantime. 
 			Drastically decreases server bandwidth usage, increases load scalability, and allows your server to focus on logic-intensive tasks instead  of drowning in mundane IO.
 			</li>-->
+			<li>Get responsive edge caching and leverage the scalability of Amazon's CloudFront network with the CloudFront plugin.</li>
 		</ul>
 	</div>
 </div>
