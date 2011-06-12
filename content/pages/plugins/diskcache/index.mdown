@@ -11,6 +11,8 @@ Compatible with *all* plugins.
 
 ## Installation
 
+Verify you have already added the ImageResizer.Plugins.DiskCache.dll file to your project.
+
 In the plugins section, insert `<add name="DiskCache" />`.
 
 You're done. If you want to configure the cache directory, you can set `<diskcache dir="~/app-relative-path-here" />`. 
