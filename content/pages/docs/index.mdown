@@ -3,6 +3,8 @@ Title: Documentation - Image Resizer V3
 
 #Documentation
 
+Not finding what you're looking for? Try [searching the site](/search).
+
 * [Getting started (home)](/)
 * [Usage examples](/docs/examples)
 * [Managed API examples](/docs/managed)
