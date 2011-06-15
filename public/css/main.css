@@ -72,3 +72,7 @@
 	.orange.awesome:hover							{ background-color: #d45500; }
 	.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
 	.yellow.awesome:hover							{ background-color: #fc9200; }
+	
+	
+	
+	.gsc-control-cse {background-color:inherit; border:0;}
