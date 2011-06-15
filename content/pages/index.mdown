@@ -5,7 +5,7 @@ uservoice: true
 
 #Getting started
 
-1. [Download and unzip the package](/download). If you're not using ASP.NET, [read this guide](/docs/howto/use-without-asp-net).
+1. [Download and unzip the package](/download) or [install the NuGet package](/docs/howto/nuget). If you're not using ASP.NET, [read this guide](/docs/howto/use-without-asp-net).
 2. In Visual Studio, right click your project and choose "Add reference". Browse to the extracted folder, and choose `dlls\release\ImageResizer.dll`. Or just copy it into the 'bin' folder. Whichever you prefer. (Compatible with .NET 2-4).
 3. Modify or create the /Web.Config file for your site:
 	
