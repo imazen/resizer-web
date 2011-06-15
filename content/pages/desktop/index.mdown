@@ -1,0 +1,4 @@
+# Batch Image Resizer
+
+Designed for XP, Vista, Windows 7 and all 2003+ server OSes.
+

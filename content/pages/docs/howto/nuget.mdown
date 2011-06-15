@@ -1,0 +1,16 @@
+
+# Installing the ImageResizer via NuGet
+
+[NuGet](http://nuget.org) is a package manager for .NET, and a pretty good one. It's easy to set up, and friendly to use.
+
+The ImageResizer Core is published as a NuGet package. If you have [NuGet](http://nuget.org) installed, you can right-click on your project and choose "Add Library Package Refrence". Search for "ImageResizer", and you should see a list of packages. Click Install, and you're done.
+
+## Choosing the right package
+
+* ImageResizer - Just includes the core DLL. It doesn't change your web.config file or do any other helpful things.
+* ImageResizer.WebConfig - Modifies your web.config file (carefully, never deleting anything) to make the image resizer work. Includes ImageResizer.
+* ImageResizer.Samples.Jcrop - Adds 2 example pages to your Web Application that demo usage of jCrop and the ImageResizer. Includes ImageResizer.WebConfig.
+
+All the above packages can be installed together in any combination. 
+
+
