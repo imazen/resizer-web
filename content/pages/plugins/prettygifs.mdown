@@ -1,0 +1,14 @@
+
+# PrettyGifs plugin
+
+Replaces .NET's disgusting default GIF encoding algorithm with Octree quantization and dithering. Also upgrades the 8-bit PNG output equally well. Compatible with all plugins.
+
+## Installation
+
+* Add ImageResizer.Plugins.PrettyGifs to your project
+* Add `<add name="PrettyGifs" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+## Supported querystring commands
+
+* colors=2-256
+* dither=true|4pass
