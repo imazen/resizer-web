@@ -1,0 +1,42 @@
+<mockup version="1.0" skin="sketch" measuredW="1603" measuredH="734" mockupW="1543" mockupH="725">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::LinkBar" x="873" y="100" w="-1" h="-1" measuredW="426" measuredH="23" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <selectedIndex>-1</selectedIndex>
+        <text>Home%2C%20Download%2C%20Plugins%2C%20Documentation%2C%20Support%2C%20About</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="421" y="9" w="969" h="725" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+      <controlProperties>
+        <text>Image%20Resizing%20Module%20for%20IIS%20and%20ASP.NET.%20URL-based%2C%20works%20with%20every%20language.%0Ahttp%3A//imageresizingin.net/</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::ComboBox" x="60" y="20" w="-1" h="-1" measuredW="89" measuredH="23" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Menu" x="1453" y="132" w="-1" h="-1" measuredW="150" measuredH="176" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%0AInstallation%20Guide%0AUpgrade%20Guide%0AUsage%20Guide%0AAPI%20Reference%0AFAQ%0ALicense%0AHistory</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="510" y="198" w="789" h="246" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Title" x="510" y="95" w="-1" h="-1" measuredW="317" measuredH="29" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Image%20resizing%20and%20processing%20module</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::SubTitle" x="536" y="132" w="-1" h="-1" measuredW="750" measuredH="24" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>For%20IIS.%20Use%20the%20query%20string%20API%20from%20every%20langugage%3A%20ASP.NET%2C%20PHP%2C%20Ruby%2C%20Javascript%2C%20Flash%2C%20Flex%2C%20Silverlight%2C....%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="842" y="165" w="-1" h="-1" measuredW="85" measuredH="23" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>download%20now</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
