@@ -1,0 +1,14 @@
+
+# AdvancedFilters plugin
+
+Apply advanced effects to your images.
+
+If you want more effects, [post your idea and vote for it](http://resizer.uservoice.com).
+
+* Gaussian blur with adjustable radius: &blur=radius
+* Gaussian sharpen with adjustable radius: &sharpen=radius
+
+## Installation
+
+* Add ImageResizer.Plugins.AdvancedFilters.dll to your project
+* Add `<add name="AdvancedFilters" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.

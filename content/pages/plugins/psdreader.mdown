@@ -1,0 +1,10 @@
+
+# PsdReader plugin
+
+Adds support for .PSD source files. No configuration required
+
+## Installation
+
+* Add ImageResizer.Plugins.PsdReader.dll to your project
+* Add `<add name="PsdReader" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+

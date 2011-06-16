@@ -1,0 +1,7 @@
+
+# RemoteSiteReader plugin (doesn't exist yet)
+
+This plugin is in the planning stage. You can [vote and comment on it at resizer.uservoice.com](http://resizer.uservoice.com/forums/108373-image-resizer-v3/suggestions/1876777-create-the-remotesitereader-plugin).
+
+This plugin would allow images from remote websites to be resized and displayed from your server.
+

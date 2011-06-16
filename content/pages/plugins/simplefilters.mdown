@@ -1,0 +1,20 @@
+
+# SimpleFilters plugin
+
+This plugin provides grayscale, sepia, brightness, and alpha filtering options.
+
+These filters are implemented as adjustment matrices and are processed by native code for very high performance.
+
+## Usage
+
+**Warning!! This URL syntax may change!!  It has not yet been finalized due to insufficient use cases.**
+
+* &filter=grayscale
+* &filter=sepia
+* &filter=brightness(.5)  (Change .5 to the brightness multiplier you want)
+* &filter=alpha(.5)   (Change .5 to the alpha multiplier you want)
+
+## Installation
+
+* Add ImageResizer.Plugins.SimpleFilters.dll to your project
+* Add `<add name="SimpleFilters" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
