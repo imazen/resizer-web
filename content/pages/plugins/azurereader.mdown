@@ -1,0 +1,11 @@
+
+# AzureReader plugin
+
+Allows images located in an Azure Blobstore to be read, processed, and resized.
+
+This plugin was developed by Wouter Alberts with a bit of help and consultation from me. He's graciously donated it to the project, and you can find it in the /Contrib folder along with some sample projects.
+
+When I have more time, I'll get more up to speed on Azure and get some good documentation published.
+
+Until then, feel free to send comments, suggestions, and bug reports to support@imageresizing.net.
+
