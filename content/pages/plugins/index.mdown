@@ -20,27 +20,28 @@ By purchasing 1 or more of the bundles below, you will get
 ## Performance Bundle - <span class="price">$99</span>
 
 * [DiskCache](/plugins/diskcache) - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
-* PrettyGifs - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
-* AnimatedGifs - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
-* FriendlyUrls - Resize images without using the query string.
+* [PrettyGifs](/plugins/prettygifs) - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
+* [AnimatedGifs](/plugins/animatedgifs) - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
+* [FriendlyUrls](/plugins/friendlyurls) - Resize images without using the query string.
 
 ## Designer Bundle - <span class="price">$99</span>
 
-* PsdReader - Adds support for PSD source files.
+* [PsdReader](/plugins/psdreader) - Adds support for PSD source files.
 * Watermark - Render image overlays with incredible flexibility and great performance.
-* SimpleFilters - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
-* AdvancedFilters - Blur and sharpen photos with adjustable radius. 
+* [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
+* [AdvancedFilters](/plugins/advancedfilters) - Blur and sharpen photos with adjustable radius. 
 
 ## Cloud Bundle - <span class="price">$99</span>
 
 
-* S3Reader - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
+* [S3Reader](/plugins/s3reader) - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
 * [SQLReader](/plugins/sqlreader) - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
 * [CloudFront](/plugins/cloudfront) - Allows you to use Amazon CloudFront with the resizer. 
-* RemoteSiteReader - (Coming soon, - leave feedback if you want it faster!)
+* [AzureReader](/plugins/azurereader) (very, very alpha) - Allows blobstore images to be resized and served. 
+* [RemoteSiteReader](/plugins/remotesitereader) - [Not built yet - Vote for it if you want it!](http://resizer.uservoice.com/forums/108373-image-resizer-v3/suggestions/1876777-create-the-remotesitereader-plugin)
 
 
-Enterprise-wide licenses [are available for very low prices](/plugins/enterprise).
+Enterprise-wide licenses [are available for $250 per bundle](/plugins/enterprise).
 
 Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
 are required to purchase them for production/live use.
