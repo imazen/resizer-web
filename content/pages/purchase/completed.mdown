@@ -4,9 +4,9 @@ Please bookmark this page, as it will be updated each time a new version is rele
 
 Please note that *all* plugin bundles are included in this download, as well as the core. I'm trusting you to buy the correct licenses for the  [bundles](/plugins) you use. 
 
-Version 3 alpha 9 - Jun 8, 2011 ([changelog](/releases/3-alpha-9)): 
+Version 3 alpha 10 - Jun 16, 2011 ([changelog](/releases/3-alpha-10)): 
 
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-9-full-Jun-8-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
+<a href="http://downloads.imageresizing.net/Resizer3-alpha-10-full-Jun-16-2011.zip" class="awesome green">Download source, binaries, and sample code (7MB)</a>
 
 Free minor upgrades will be sent to the following e-mail address: 
 
