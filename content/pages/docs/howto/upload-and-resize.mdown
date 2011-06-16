@@ -1,0 +1,25 @@
+
+# How to resize images as they are uploaded
+
+Resizing and processing images as they are uploaded is very straightforward. Most of the required code is about paths and directories.
+
+The following sample code generates a GUID filename for each upload, determines the appropriate file extension that is needed, then resizes/crops/formats the image according to the specified ResizeSettings.
+
+	//Loop through each uploaded file
+	foreach (string fileKey in HttpContext.Current.Request.Files.Keys) {
+	    HttpPostedFile file = HttpContext.Current.Request.Files[fileKey];
+	    if (file.ContentLength <= 0) continue; //Skip unused file controls.
+
+	    //Get the physical path for the uploads folder and make sure it exists
+	    string uploadFolder = MapPath("~/uploads");
+	    if (!Directory.Exists(uploadFolder)) Directory.CreateDirectory(uploadFolder);
+
+	    //The resizing settings can specify any of 30 commands.. See http://imageresizing.net for details.
+	    ResizeSettings resizeCropSettings = new ResizeSettings("width=200&height=200&format=jpg&crop=auto");
+
+	    //Generate a filename (GUIDs are safest).
+	    string fileName = Path.Combine(uploadFolder, System.Guid.NewGuid().ToString());
+
+	    //Let the image builder add the correct extension based on the output file type (which may differ).
+	    fileName = ImageBuilder.Current.Build(file, fileName, resizeCropSettings, false, true);
+	}
