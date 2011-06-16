@@ -6,6 +6,7 @@ Title: Documentation - Image Resizer V3
 Not finding what you're looking for? Try [searching the site](/search).
 
 * [Getting started (home)](/)
+* [Using the NuGet packages](/docs/nuget)
 * [Usage examples](/docs/examples)
 * [Managed API examples](/docs/managed)
 * [Plugin bundles](/plugins)
@@ -21,6 +22,8 @@ Not finding what you're looking for? Try [searching the site](/search).
 * [Use the Resizer from COM (ASP/VBScript/JScript)](/docs/howto/use-from-com)
 * [Use the Resizer to cache non-image files](/docs/howto/cache-non-images)
 * [Watermark images based on folder name or display size](/docs/howto/watermark-by-folder-or-size)
+* [Convert and resize images as they are uploaded](/docs/howto/upload-and-resize)
+* [Generate thumbnails and multiple sizes to disk](/docs/howto/generate-versions)
 
 ## Reference
 
