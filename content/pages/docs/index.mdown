@@ -9,11 +9,6 @@ Not finding what you're looking for? Try [searching the site](/search).
 * [Using the NuGet packages](/docs/nuget)
 * [Usage examples](/docs/examples)
 * [Managed API examples](/docs/managed)
-* [Plugin bundles](/plugins)
-* [Configuration reference](/docs/configuration)
-* [Frequently asked questions](/docs/faq)
-* [System requirements](/docs/requirements)
-* [Removing the .ashx on IIS7 Classic or IIS6](/docs/cleanurls)
 
 ## How to...
 
@@ -27,11 +22,16 @@ Not finding what you're looking for? Try [searching the site](/search).
 
 ## Reference
 
-* [9 core plugins -  installation and usage documentation](/plugins/free)
+* [9 core plugins](/plugins/free)
+* [12 paid plugins](/plugins)
 * [URL command reference](/docs/reference)
+* [Configuration reference](/docs/configuration)
 * [Extending the resizer (plugins and events)](/docs/extending)
 * [Plugin maturity chart](/plugins/maturity)
 * [Understanding processing and caching in the ImageResizer](/docs/process-and-cache)
+* [Removing the .ashx on IIS7 Classic or IIS6](/docs/cleanurls)
+* [Frequently asked questions](/docs/faq)
+* [System requirements](/docs/requirements)
 
 ## Debugging
 
