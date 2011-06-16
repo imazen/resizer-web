@@ -16,7 +16,7 @@
 </dd> <dt>Q: Can the resizer both crop, then resize at the same time? </dt> <dd>A: Yes, you can specify a crop rectangle with ?crop=(x1,y1,x2,y2) or ?crop=auto, and add &amp;width=x or any of the resizing commands to resizing the resulting crop.
 All commands can be combined.
 
-</dd> <dt>Q: Can I use this on images not located on the server? </dt> <dd>A: Yes, with S3Reader and SqlReader. [Leave a vote for RemoteSiteReader](http://resizer.uservoice.com/forums/108373-image-resizer-v3/suggestions/1876777-create-the-remotesitereader-plugin) if you want to get that.
+</dd> <dt>Q: Can I use this on images not located on the server? </dt> <dd>A: Yes, with S3Reader and SqlReader. <a href="http://resizer.uservoice.com/forums/108373-image-resizer-v3/suggestions/1876777-create-the-remotesitereader-plugin">Leave a vote for RemoteSiteReader</a> if you would want HTTP-based image resizing from remote servers.
 	
 </dd> <dt>Q: Do the image names change when they are resized? Is SEO affected? </dt> <dd>A: No, image names are retained - SEO isn't affected.
 
