@@ -3,7 +3,7 @@ Uservoice: true
 
 #Support
 
-When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). Without this information, I can't diagnose the problem.
+When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). Without this information, **I cannot diagnose the problem**.
 
 Email:  **support@imageresizing.net**. If you do not immediately get a reply, your e-mail *did not arrive*. 
 
@@ -18,6 +18,12 @@ Support is provided on a best-effort basis every day of the week. Average respon
 * 9am to 9pm GMT
 * 4am to 4pm EST
 * 1am to 1pm PST
+
+## June 29 through July 16, 2011
+
+From June 29 through July 16 I will be on my honeymoon, and will probably not have internet access. A very good friend (and good software developer) will be handling support during this period at the same e-mail address, support@imageresizing.net.
+
+I've written very comprehensive documentation, provided sample code for (nearly) every circumstance, and the source code is fully documented. There aren't any known bugs at this time, so any issues *should* be configuration or usage related. I encourage you to take time to read the documentation (and perform a [search](/search)) before e-mailing support.
 
 ## Emergency telephone support
 
