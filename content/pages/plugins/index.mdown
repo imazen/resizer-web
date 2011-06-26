@@ -30,6 +30,7 @@ By purchasing 1 or more of the bundles below, you will get
 * Watermark - Render image overlays with incredible flexibility and great performance.
 * [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
 * [AdvancedFilters](/plugins/advancedfilters) - Blur and sharpen photos with adjustable radius. 
+* [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust) (Coming in 3.0.11).
 
 ## Cloud Bundle - <span class="price">$99</span>
 
