@@ -11,7 +11,15 @@ Both online tickets and this e-mail address are immediately forwarded to my pers
 
 You can search the forums, wish list, and knowledge base (as well as create tickets) at [resizer.uservoice.com](http://resizer.uservoice.com/).
 
-## Hours
+## June 29 through July 16, 2011
+
+From June 29 through July 16 I will be on my honeymoon, and will probably not have internet access. A very good friend (and good software developer) will be handling support during this period at the same e-mail address, support@imageresizing.net.
+
+I've written very comprehensive documentation, provided sample code for (nearly) every circumstance, and the source code is fully documented. There aren't any known bugs at this time, so any issues *should* be configuration or usage related. I encourage you to take time to read the documentation (and perform a [search](/search)) before e-mailing support.
+
+During this time, the best time to contact support is between 6am and 6pm EST (3am to 3pm PST, 11am to 11pm GMT).
+
+## Hours (Except June 29 - July 16)
 
 Support is provided on a best-effort basis every day of the week. Average response time is under 5 hours, and under 2 hours during the following time periods:
 
@@ -19,11 +27,6 @@ Support is provided on a best-effort basis every day of the week. Average respon
 * 4am to 4pm EST
 * 1am to 1pm PST
 
-## June 29 through July 16, 2011
-
-From June 29 through July 16 I will be on my honeymoon, and will probably not have internet access. A very good friend (and good software developer) will be handling support during this period at the same e-mail address, support@imageresizing.net.
-
-I've written very comprehensive documentation, provided sample code for (nearly) every circumstance, and the source code is fully documented. There aren't any known bugs at this time, so any issues *should* be configuration or usage related. I encourage you to take time to read the documentation (and perform a [search](/search)) before e-mailing support.
 
 ## Emergency telephone support
 
