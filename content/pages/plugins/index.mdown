@@ -30,7 +30,7 @@ By purchasing 1 or more of the bundles below, you will get
 * Watermark - Render image overlays with incredible flexibility and great performance.
 * [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
 * [AdvancedFilters](/plugins/advancedfilters) - Blur and sharpen photos with adjustable radius. 
-* [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust) (Coming in 3.0.11).
+* [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust)
 
 ## Cloud Bundle - <span class="price">$99</span>
 
@@ -39,8 +39,7 @@ By purchasing 1 or more of the bundles below, you will get
 * [SQLReader](/plugins/sqlreader) - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
 * [CloudFront](/plugins/cloudfront) - Allows you to use Amazon CloudFront with the resizer. 
 * [AzureReader](/plugins/azurereader) (very, very alpha) - Allows blobstore images to be resized and served. 
-* [RemoteSiteReader](/plugins/remotesitereader) - [Not built yet - Vote for it if you want it!](http://resizer.uservoice.com/forums/108373-image-resizer-v3/suggestions/1876777-create-the-remotesitereader-plugin)
-
+* [RemoteReader](/plugins/remotereader) - (alpha) Allows images located on external servers to be resized and processed as if they existed locally.
 
 Enterprise-wide licenses [are available for $250 per bundle](/plugins/enterprise).
 
@@ -48,3 +47,24 @@ Trial versions of these plugins are available in the [free download](/download).
 are required to purchase them for production/live use.
 
 Are you using version 2? [Upgrade discounts are available](/docs/2to3/)!
+
+
+# Free plugins
+
+The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+
+These can all be found in the ImageResizer.Plugins.Basic namespace
+
+* **[DefaultEncoder](/plugins/defaultencoder)** (default) - Adjustable jpeg compression, 24-bit PNG with transparency support, and standard .NET GIF encoding (which is very lousy).
+* **[Diagnostics](/plugins/diagnostics)** (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
+* **NoCache** (default) - Serves the resulting image directly from memory
+* **[ClientCache](/plugins/clientcache)** (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
+* **[SizeLimiting](/plugins/sizelimiting)** (default)- Limit maximum resolution of photos, or the total size of all processed images.
+
+
+* **[Image404](/plugins/image404)** - Supply default images instead of a 404 when an image is missing. 
+* **[VirtualFolder](/plugins/virtualfolder)** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
+
+
+* **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
+* **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
