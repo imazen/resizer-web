@@ -6,7 +6,7 @@ Uservoice: true
 
 #Plugins
 
-[9 plugins are included](/plugins/free) in the free download, and 12 more are sold. The project is supported by purchases of the following paid plugin bundles.
+9 plugins are included in the free download, and 14 more are sold. The core project is supported by purchases of the paid plugin bundles.
 
 The licenses are as MIT-like and unrestrictive as possible - even the <span class="price">$99</span> Pro license [allows modification, redistribution, and sub-licensing](/licenses/pro). This 'download fee' allows me to provide support to everyone, develop new features, fix bugs, and write documentation.
 
@@ -46,10 +46,9 @@ Enterprise-wide licenses [are available for $250 per bundle](/plugins/enterprise
 Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
 are required to purchase them for production/live use.
 
-Are you using version 2? [Upgrade discounts are available](/docs/2to3/)!
+Are you using version 2? [Upgrading is easy and will increase your site's performance](/docs/2to3/)!
 
-
-# Free plugins
+## Free plugins
 
 The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
 
@@ -60,11 +59,7 @@ These can all be found in the ImageResizer.Plugins.Basic namespace
 * **NoCache** (default) - Serves the resulting image directly from memory
 * **[ClientCache](/plugins/clientcache)** (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
 * **[SizeLimiting](/plugins/sizelimiting)** (default)- Limit maximum resolution of photos, or the total size of all processed images.
-
-
 * **[Image404](/plugins/image404)** - Supply default images instead of a 404 when an image is missing. 
 * **[VirtualFolder](/plugins/virtualfolder)** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
-
-
 * **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
 * **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
