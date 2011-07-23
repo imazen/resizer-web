@@ -15,3 +15,15 @@ To override, add one of the following to the &lt;resizer&gt; section.
 
 
 I think they are pretty obvious.
+
+
+### ASP.NET MVC notes
+
+ASP.NET MVC currently requires a small change so that this page can display.
+
+In Global.asax.cs, in RegisterRoutes, add the line of code displayed below. 
+
+	public static void RegisterRoutes(RouteCollection routes) {
+		routes.IgnoreRoute("resizer\\debug(\\.ashx)?");
+	}
+
