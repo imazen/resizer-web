@@ -1,7 +1,7 @@
 
 # Maturity chart
 
-Last updated May 26, 2011 regarding V3.0.7
+Last updated Jul 23, 2011 regarding V3.0.11
 
 This chart represents the author's honest opinion on the maturity of the various plugins.
 
@@ -13,16 +13,16 @@ Note that my 'beta' equals most people's idea of 'stable'.
 
 ## Core 
 
-* Core framework - *beta* (likely to have API refinements)
+* Core framework - *beta* (likely to have API refinements, but otherwise very stable)
 * DefaultEncoder - *stable*
 * NoCache - *stable*
 * Diagnostics - *beta*
-* ClientCache - *beta*
-* SizeLimiting - *beta*
+* ClientCache - *stable*
+* SizeLimiting - *stable*
 * DropShadow - *stable* 
 * Gradient - *alpha*
-* Image404 -  *alpha*
-* VirtualFolder - *alpha*
+* Image404 -  *beta*
+* VirtualFolder - *beta*
 
 
 
@@ -30,24 +30,26 @@ Note that my 'beta' equals most people's idea of 'stable'.
 
 * PrettyGifs - *stable*
 * AnimatedGifs - *stable*
-* DiskCache - *stable*/*alpha* (Stable with default settings, alpha with autoClean=True)
+* DiskCache - *stable*/*beta* (Stable with default settings, beta with autoClean=True)
 * FriendlyUrls - *beta*
 
 ## Designer Bundle
 
 
 * PsdReader - *beta*
-* Watermark - *alpha*.
+* Watermark - *alpha* (Backwards-incompatible changes may be coming, looking for feedback)
 * AdvancedFilters - *alpha*
-* SimpleFilters - *pre-alpha* (Querystring API will be changing soon to allow filters to be combined)
+* SimpleFilters - *alpha* (Querystring API will be changing soon to allow filters to be combined)
+* SeamCarving - *alpha* 
 
 ## Cloud Bundle
 
 
-* S3Reader - *beta* (used by a large social networking site)
-* SQLReader - *beta* 
-* CloudFront - *alpha* (*stable*, but will have new API additions soon)
-
+* S3Reader - *stable* (used by a large social networking site)
+* SQLReader - *stable* 
+* CloudFront - *stable* (Will have new API additions soon, but no breaking changes are expected)
+* RemoteReader - *alpha*
+* AzureReader - *alpha*
 
 <script type="text/javascript">
 //<!--
