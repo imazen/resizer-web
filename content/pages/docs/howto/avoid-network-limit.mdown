@@ -1,0 +1,37 @@
+
+# Network BIOS limit reached
+
+Users of ASP.NET often receive the following error message when running an website from a network share or NAS device.
+
+	The network BIOS command limit has been reached
+	Failed to start monitoring changes
+
+There are three solutions
+
+1. Stop using a network share or NAS (recommended)
+2. Disable FCN (File change notifications) completely for ASP.NET. (Has side effects - no restart on web.config change, output cache gets dirty)
+3. Raise the command limit (has a ceiling that you will hit if you have over 40,000 folders in sites on your server)
+
+
+## Disabling FCN
+
+1. Open Regedit
+
+2. Add a DWORD at HKLM\Software\Microsoft\ASP.NET\FCNMode, with a value of '1'
+
+3. If you are running a 32-bit process on an x64-based system, add the DWORD value at the following registry key:
+
+4. HKLM\SOFTWARE\Wow6432Node\Microsoft\ASP.NET\FCNMode
+
+Microsoft also documents a value '2' that is supposed to use recursive monitoring and only create one FileSystemWatcher/DirectoryChangeNotification object. Unfortunately, we haven't been able to get this to work - it behaves as if the value is '0' (default functionality, one watcher per folder).
+
+[More information](http://blogs.iis.net/hosterposter/archive/2006/10/30/Hosting-IIS-with-UNC-content-_2D00_-Network-BIOS-commands-and-other-errors.aspx)
+
+[Microsoft KB article](http://support.microsoft.com/?id=911272)
+
+## Raise the number of commands
+
+Alternatively, if there is a small number of folders on the site, you can simply raise the number of commands
+
+[See Microsoft KB 810886](http://support.microsoft.com/kb/810886)
+

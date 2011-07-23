@@ -5,39 +5,48 @@ Title: Documentation - Image Resizer V3
 
 Not finding what you're looking for? Try [searching the site](/search).
 
+## Installation
+
 * [Getting started (home)](/)
 * [Using the NuGet packages](/docs/nuget)
-* [Usage examples](/docs/examples)
-* [Managed API examples](/docs/managed)
 * [ASP.NET MVC notes](/docs/mvc)
-
-## How to...
-
-* [Use jCrop to create a cropping UI in 11 lines](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
 * [Use the Resizer without ASP.NET](/docs/howto/use-without-asp-net)
 * [Use the Resizer from COM (ASP/VBScript/JScript)](/docs/howto/use-from-com)
-* [Use the Resizer to cache non-image files](/docs/howto/cache-non-images)
+* [System requirements](/docs/requirements)
+
+## Basic usage
+
+* [Usage examples](/docs/examples)
+* [Managed API examples](/docs/managed)
+* [URL command reference](/docs/reference)
+* [Configuration reference](/docs/configuration)
+* [Frequently asked questions](/docs/faq)
+
+## Advanced techniques
+
+* [Use jCrop to create a cropping UI in 11 lines](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
 * [Watermark images based on folder name or display size](/docs/howto/watermark-by-folder-or-size)
 * [Convert and resize images as they are uploaded](/docs/howto/upload-and-resize)
 * [Generate thumbnails and multiple sizes to disk](/docs/howto/generate-versions)
-
-## Reference
-
-* [9 core plugins](/plugins/free)
-* [12 paid plugins](/plugins)
-* [URL command reference](/docs/reference)
-* [Configuration reference](/docs/configuration)
-* [Extending the resizer (plugins and events)](/docs/extending)
-* [Plugin maturity chart](/plugins/maturity)
-* [Understanding processing and caching in the ImageResizer](/docs/process-and-cache)
+* [Use the Resizer to cache non-image files](/docs/howto/cache-non-images)
 * [Removing the .ashx on IIS7 Classic or IIS6](/docs/cleanurls)
-* [Frequently asked questions](/docs/faq)
-* [System requirements](/docs/requirements)
+* [How to crop images](/docs/howto/crop)
+
+## In Depth
+
+* [Understanding processing and caching in the ImageResizer](/docs/process-and-cache)
+* [Extending the resizer (plugins and events)](/docs/extending)
+
+## Plugins
+
+* [Overview of all plugins](/plugins)
+* [Plugin maturity chart](/plugins/maturity)
 
 ## Debugging
 
 * [How to get a detailed error message](/docs/geterror)
 * [Accessing self-diagnostics](/plugins/diagnostics)
+* [Avoid the Network BIOS limit reached error message](/docs/howto/avoid-network-limit)
 
 ## Migrating from V2
 
