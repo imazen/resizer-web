@@ -9,6 +9,7 @@ Not finding what you're looking for? Try [searching the site](/search).
 * [Using the NuGet packages](/docs/nuget)
 * [Usage examples](/docs/examples)
 * [Managed API examples](/docs/managed)
+* [ASP.NET MVC notes](/docs/mvc)
 
 ## How to...
 

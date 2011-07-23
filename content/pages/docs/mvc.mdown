@@ -1,0 +1,18 @@
+
+# ASP.NET MVC
+
+The ImageResizer is fully MVC (1-4) compatible, however, you may need to add a couple routes to allow it to function.
+
+In global.asax.cs
+
+	public static void RegisterRoutes(RouteCollection routes) {
+	    routes.IgnoreRoute("resizer\\debug(\\.ashx)?");
+	    routes.IgnoreRoute("[^?]+\\.(psd|bmp|gif|exif|png|tif|tiff|tff|jpg|jpeg|jpe|jif|jfif|jfi)");
+			...
+
+
+### S3Reader, SqlReader, RemoteReader with non-images
+
+If you are using any of the above plugins for non-image files (or for images without extensions), you should also add the following line. 
+
+		routes.IgnoreRoute("(remote|databaseimages|s3)/");
