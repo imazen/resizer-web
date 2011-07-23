@@ -43,7 +43,7 @@ plusone:true
 			</system.webServer>
 		</configuration>
 	
-4. Start your web site, then visit [/resizer.debug.ashx](/plugins/diagnostics) to verify you've done everything correctly. If you ever encounter issues, simply revisit that page to access the self-diagnostics. If you need help, [just ask](/support)!
+4. Start your web site, then visit [/resizer.debug.ashx](/plugins/diagnostics) to verify you've done everything correctly. If you ever encounter issues, simply revisit that page to access the self-diagnostics. If you need help, [just ask](/support)! ASP.NET MVC is fully supported, [although you may have to add 2 IgnoreRoute statements](/docs/mvc), depending upon your route table.
 
 5.	[Increase performance and add features with plugins](/plugins)! 
 	Buying one of our awesome plugins gives you access to priority support and funds open-source development. How can you resist?
