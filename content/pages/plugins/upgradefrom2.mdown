@@ -1,6 +1,6 @@
 ejunkie:true
 
-# Upgrade from version 2 for $40
+# Upgrade from version 2
 
 The V3 "Performance Bundle" includes everything users of V2 expect, and more. 
 
@@ -13,11 +13,7 @@ The V3 "Performance Bundle" includes everything users of V2 expect, and more.
 * live diagnostics (new!).
 * And more...
 
-
-Remember to enter the upgrade code 60OFFLOYALTY to get your discount!
-
-Want an [enterprise-wide license for multiple developers](/plugins/enterprise)? They are $99 with the upgrade code.
-
+Want an [enterprise-wide license for multiple developers](/plugins/enterprise)?
 
 Professional license:
 
