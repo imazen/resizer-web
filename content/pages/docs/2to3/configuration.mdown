@@ -40,6 +40,7 @@
 			<plugins>
 				<add name="DiskCache" />
 				<add name="PrettyGifs" />
+				<add name="DropShadow" /> <!-- Only if you use the drop shadow feature -->
 				<add name="AnimatedGifs" /> <!-- Only if you resize animated Gifs -->
 				<add name="FriendlyUrls" /> <!-- Only if you use the /resize(x,y,f)/ folder syntax -->
 			</plugins>
