@@ -22,7 +22,8 @@
 * **format=jpg|png|gif** - The output format to use
 * **quality** - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly
 * **ignoreicc** - true|false. If true, the ICC profile embedded in the source image will be ignored.
-* **useresizingpipeline** - Has no effect other than using the resizing pipeline to re-encode the image.
+* **cache** - always|no|default - Always forces the image to be cached even if it wasn't modified by the resizing module. No disables caching even if it was.
+* **process** - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. No prevents the image from being modified.
 
 ## Watermark plugin
 
