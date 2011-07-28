@@ -7,7 +7,7 @@ In global.asax.cs
 
 	public static void RegisterRoutes(RouteCollection routes) {
 	    routes.IgnoreRoute("resizer\\debug(\\.ashx)?");
-	    routes.IgnoreRoute("[^?]+\\.(psd|bmp|gif|exif|png|tif|tiff|tff|jpg|jpeg|jpe|jif|jfif|jfi)");
+	    routes.IgnoreRoute("[^?]+\\.(psd|bmp|gif|exif|png|tif|tiff|tff|jpg|jpeg|jpe|jif|jfif|jfi)(\\.ashx)?");
 			...
 
 
