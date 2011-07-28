@@ -1,0 +1,38 @@
+Date: July 29 2011
+FullFile: http://downloads.imageresizing.net/Resizer3-0-11-full-Jul-28-2011.zip
+
+
+# Resizer 3.0.11 - July 29 2011
+
+<a href="http://downloads.imageresizing.net/Resizer3-0-11-full-Jul-28-2011.zip" class="awesome green">Download source, binaries, and sample code (8MB)</a>
+
+<a href="http://downloads.imageresizing.net/Resizer3-0-11-min-Jul-28-2011.zip" class="awesome black">Download core binary only (160K)</a>
+
+### Changes since [3.0.10 (Jun 16)](/releases/3-alpha-10)
+
+# New features
+
+* Added [SeamCarving](/plugins/seamcarving) plugin, uses C++ CAIR.EXE underneath. Requires full trust.
+* Added [RemoteReader](/plugins/remotereader) plugin. Allows images located on external sites/servers to be processed and resized using both the URL and managed APIs.
+* ImageResizingGUI and BatchZipper are now 200KB lighter (using Ionc.Ziplib.Reduced version)
+* Build() now supports HttpPostedFileBase as a valid source.
+* Build() now supports byte[] as a valid source.
+* There are now [NuGet packages](/docs/nuget) for 12 of the 14 plugins. AzureReader and Watermark do not yet have NuGet packages.
+
+# Bug fixes
+
+* Fixed bug in StreamUtils - was causing Build() to fail on non-seekable source streams. Added unit test.
+* The incorrect file type was being guessed for png and gif images that (a) didn't have a file extension, or (b) were loaded directly from a stream.
+	This was also causing AnimatedGif resizing to crash completely. The source was a .NET framework bug:
+	`ImageFormat.Gif.Equals(f)` evaluates to `true`, yet 	`ImageFormat.Gif == f` evaluates to `false`. Switched to using .Equals().
+* AnimatedGif plugin no longer closes the source stream incorrectly.
+* Fixed bug in LoadImage: HttpPostedFileBase stream is returned to its original position after use. 
+* Fixed several bugs in Samples\ImageResizerGUI
+* Added lots of tests for new functionality
+
+# API additions
+
+* Added URL-safe base 64 encoding and decoding methods to PathUtils.
+* Added PolygonMath.ScaleOutside and PolygonPath.getParallelogramSize
+* Modified BuilderExtension.PreLoadImage to include path and disposeStream parameters. If you are overriding this method, you will need to change your code.
+* LoadImage now supports byte[] arrays.
