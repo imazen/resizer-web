@@ -6,6 +6,7 @@ The image URL is **not** the same as the page URL. Screenshots of IE's broken im
 
 * In Chrome, right-click on the broken image and choose "Open image in new tab"
 * In Firefox, right-click and choose "View image"
+* In IE, right-click the image and choose Properties. Copy and paste the Address (URL) field contents into the address bar of a new window.
 
 If you do not get a specific error message, you must enable detailed error messages on your ASP.NET site.
 
