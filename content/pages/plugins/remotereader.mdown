@@ -1,7 +1,7 @@
 
 # RemoteReader plugin
 
-The RemoteReader plugin allows the ImageResizer to resize and display images that are located at arbitrary URLs. Kind of like a resizing relay.
+The RemoteReader plugin allows the ImageResizer to resize and display images that are located at any URL. Kind of like a resizing relay.
 
 There are 3 layers of security to prevent abuse. 
 
