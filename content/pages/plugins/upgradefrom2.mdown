@@ -13,28 +13,4 @@ The V3 "Performance Bundle" includes everything users of V2 expect, and more.
 * live diagnostics (new!).
 * And more...
 
-Want an [enterprise-wide license for multiple developers](/plugins/enterprise)?
-
-Professional license:
-
-<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=929356&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
-<input type="hidden" name="o1" value="Performance Bundle" />
-<input type="hidden" name="o2" value="Pro License" />
-
-<input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
-</form>
-
-
-<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
-<div class="info" style="font-size:10px; color:#888888;">
-100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>.
-<br /> All major credit cards accepted. 
-<br /> Processed by PayPal or Google Checkout
-</div>
-
-
-
-
-
-
-
+[Continue to the Bundle selection page](/plugins)
