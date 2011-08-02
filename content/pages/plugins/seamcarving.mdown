@@ -7,6 +7,8 @@ Based on the [CAIR](https://sites.google.com/site/brainrecall/cair) library.
 
 This plugin requires full trust to work. 
 
+For live examples, [see this page](http://nathanaeljones.com/596/dynamic-seam-carving-with-imageresizing-net/).
+
 # Algorithm choices
 
 * carve=true
