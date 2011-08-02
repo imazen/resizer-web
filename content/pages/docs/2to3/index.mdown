@@ -9,8 +9,6 @@
 6. Simple, intuitive configuration. No more polluting `<appSettings>`. Go from 2 complex pages to 6 easy lines.
 
 
-Upgrade before July 15 and get a 60% discount with the code 60OFFLOYALTY. 
-
 <a class="large awesome green" href="/plugins/upgradefrom2">Upgrade now</a> &nbsp; 
 <a class="large awesome black" href="/docs/2to3/diff">V2 and V3 differences</a>  &nbsp; 
 <a class="large awesome black" href="/docs/2to3/guide">Migration guide</a>  &nbsp; 
