@@ -7,7 +7,7 @@
 2. V3 is easy to extend without modifying the source code. V2 was designed for source code modification.
 3. V3 is configured within the `<resizer />` element, not the `<appSettings />` element.
 4. V3 has good default settings. Configuration is *optional*.
-4. V3 has 18+ plugins. Plugins are easy to write, and can affect *any* aspect of the pipeline.
+4. V3 has 24+ plugins. Plugins are easy to write, and can affect *any* aspect of the pipeline.
 5. V3 makes URL rewriting easy.
 6. V3 has a self-diagnostics page.
 7. The V3 core is under [MIT-like license](/licenses/freedom), which is clearer and offers much more freedom than the 'V2' license.
