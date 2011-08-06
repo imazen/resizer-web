@@ -13,7 +13,7 @@ You do have to be running Windows and IIS, though. If you are not, remember you 
 		<configuration>
 		  <configSections>
 		    <section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" />
-		  </configSections>=
+		  </configSections>
 		  <resizer>
 		    <!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
 		         you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 
