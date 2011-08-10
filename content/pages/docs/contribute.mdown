@@ -1,0 +1,33 @@
+
+# Contribute to the project!
+
+The ImageResizing.Net project welcomes developers, contributors, documentation writers, translators, and any help it can find. I work on the project nearly full-time, but I can't do everything.
+
+If you have changes or patches to the project, please share them! The best way to share code is to connect to the Git repository. Just e-mail `support@imageresizing.net` and request commit access. To give you an account, I'll need your preferred e-mail address, your full name, and your preferred username. If you aren't familiar with Git, I accept .zip files, but it may take longer for them to be merged into a future release.
+
+If you're not sharing code, simply use the NuGet packages to get the latest binaries automatically, and [configure Visual Studio to download sources and symbols](http://www.symbolsource.org/Public/Home/VisualStudio) automatically for debugging.
+
+
+
+## Connecting to the Git repository
+
+If you don't have Git installed, download "Git-1.7.6.Preview" or later from [the msysgit website](http://code.google.com/p/msysgit/downloads/list). Install it, then [download the SmartGit GUI](http://www.shareit.com/affiliate.html?affiliateid=200142144&publisherid=200020344&target=http%3A%2F%2Fwww.syntevo.com%2Fsmartgit%2Findex.html) and install it.
+
+Log into your account at [nathanael.repositoryhosting.com](http://nathanael.repositoryhosting.com) using the credentials I sent you, then click My Profile, Public Keys, New Key, and paste in your public key. If you don't know what your public key is, [download and run this tool](http://windowsgit.com/keytool) to find or generate it for you.
+
+Then, open SmartGit and `Clone` `ssh://git@nathanael.repositoryhosting.com/nathanael/resizer.git`. If the ssh port is blocked, you can access a read-only copy at `https://nathanael.repositoryhosting.com/git/nathanael/resizer.git`.
+
+
+### Why don't you use GitHub?
+
+I do, just not for this repository. There are a number of reasons for this.
+
+1. This repository has copyrighted image files in the history that can't be 'published'. In the next version I might start over with a fresh repository and rid myself of this problem.
+2. The repository structure is confusing - The generated packages are greatly simplified and reduce the chance of errors.
+
+
+
+
+, and also contains stub projects and lots of confusing things
+
+

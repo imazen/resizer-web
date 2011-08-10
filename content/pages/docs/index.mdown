@@ -52,3 +52,15 @@ Not finding what you're looking for? Try [searching the site](/search).
 
 * [Why you should upgrade](/docs/2to3/)
 * [Migration guide](/docs/2to3/guide)
+
+## Contribute!
+
+Please [share your patches, changes, plugins, and suggestions](/docs/contribute)!
+
+If you have a similar project and would like to merge or collaborate, just e-mail me at `support@imageresizing.net`.
+
+We encourage other projects to use this library for their image processing needs, and will definitely go the extra mile to help out with any integration hurdles.
+
+A strong and diverse community is essential to the continued health of the library. 
+
+
