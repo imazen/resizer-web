@@ -1,6 +1,12 @@
 # Frequently asked questions
 
-<dl class="faq"> <dt>Q: Is it possible to specify the width and height, and have your image resized and cropped to fit the aspect ratio, losing as little image area as possible? </dt> <dd>A: Yes, and it is easy. Use ?width=x&amp;height=y&amp;crop=auto.
+<dl class="faq">
+	<dt>Q: I get the error message "Could not find the name of the type or namespace "ImageResizer" (missing a using directive or an assembly reference ?)" and my project is using .NET 3.5 or .NET 4.0 Client Profile. What's wrong?</dt> <dd>The ImageResizer doesn't require you to use ASP.NET, but it does reference the System.Web assembly. You need to use the standard .NET 3.5 and .NET 4.0 framework when you are using the ImageResizer. The Client Profile versions won't work.
+
+
+	</dd>
+	
+	 <dt>Q: Is it possible to specify the width and height, and have your image resized and cropped to fit the aspect ratio, losing as little image area as possible? </dt> <dd>A: Yes, and it is easy. Use ?width=x&amp;height=y&amp;crop=auto.
 
 
 </dd> <dt>Q: Are multi-page .TIFFs supported? </dt> <dd>A: Yes - you can convert any page of a multi-page .TIFF to .jpg, .png, or .gif. Use ?page=x&amp;format=jpg
