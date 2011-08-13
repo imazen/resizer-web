@@ -35,7 +35,7 @@ IIS 7 mode mappings are done in web.config. Do *not* add these if you are using 
 	    ...
 	</configuration>
 
-## IIS7 Classic 64-bit
+### Use this instead on 64-bit machines
 
 	<configuration>
 	    ...
