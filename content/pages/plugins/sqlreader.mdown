@@ -1,11 +1,18 @@
 uservoice:true
 
-# SQL reader
+# SQLReader plugin
 
-Allows you to access binary blobs in a SQL database using a URL. Accepts both integer and GUID identifiers for images. It's pretty easy to add support for new kinds of primary keys, though, don't hesitate to ask.
+Allows you to access binary blobs in a SQL database using a URL. Accepts integer, GUID, and string identifiers for images. 
 
-Ex. www.mysite.com/databaseimages/38.jpg  or  mysite.com/databaseimages/21EC2020-3AEA-1069-A2DD-08002B30309D.jpg
+### Example Urls
 
+* http://mysite.com/databaseimages/38.jpg
+* http://mysite.com/databaseimages/21EC2020-3AEA-1069-A2DD-08002B30309D.jpg
+* http://mysite.com/databaseimages/flower32.jpg
+
+See Samples/SqlReaderSample/ in the download for a comprehensive sample project, complete with uploading, listing, and processing.
+
+### Features
 
 * Can serve non-image data if desired
 * Compatible with CloudFront and DiskCache
@@ -13,7 +20,15 @@ Ex. www.mysite.com/databaseimages/38.jpg  or  mysite.com/databaseimages/21EC2020
 * Easy to configure.
 
 
-## Example installation
+## Installation
+
+Either run `Install-Package ImageResizer.Plugins.SqlReader` in the NuGet package manager, or:
+
+1. Add a reference to ImageResizer.Plugins.SqlReader to your project.
+
+After adding the reference or using NuGet, you'll need to configure the plugin via code.
+
+### Example
 
 	 public class Global : System.Web.HttpApplication
 	 {
@@ -34,4 +49,17 @@ Ex. www.mysite.com/databaseimages/38.jpg  or  mysite.com/databaseimages/21EC2020
 	     }
 	}
 	
+### Supported key types
+
+Built-in support is included for the following kinds of keys in the URL.
+
+* Int
+* Guid
+* TinyInt
+* SmallInt
+* BigInt
+* VarChar
+* NVarChar
+* NChar
+* Char
 
