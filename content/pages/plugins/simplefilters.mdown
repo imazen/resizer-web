@@ -11,10 +11,12 @@ These filters are implemented as adjustment matrices and are processed by native
 
 * &filter=grayscale
 * &filter=sepia
-* &filter=brightness(.5)  (Change .5 to the brightness multiplier you want)
+* &filter=brightness(.1) (-1..1) (Change .1 to the brightness offset you want)
 * &filter=alpha(.5)   (Change .5 to the alpha multiplier you want)
 
 ## Installation
 
-* Add ImageResizer.Plugins.SimpleFilters.dll to your project
-* Add `<add name="SimpleFilters" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet package manager, or:
+
+1. Add ImageResizer.Plugins.SimpleFilters.dll to your project
+2. Add `<add name="SimpleFilters" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
