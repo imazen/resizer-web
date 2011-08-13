@@ -11,9 +11,10 @@ Compatible with *all* plugins.
 
 ## Installation
 
-Verify you have already added the ImageResizer.Plugins.DiskCache.dll file to your project.
+Either run `Install-Package ImageResizer.Plugins.DiskCache` in the NuGet package manager, or:
 
-In the plugins section, insert `<add name="DiskCache" />`.
+1. Add a reference to ImageResizer.Plugins.DiskCache.dll file in your project.
+2. In the plugins section, insert `<add name="DiskCache" />`.
 
 You're done. If you want to configure the cache directory, you can set `<diskcache dir="~/app-relative-path-here" />`. 
 
@@ -23,10 +24,14 @@ The defaults are good - you don't actually need to specify any configuration.
 
 The following is what the default settings look like. Only specify what you need to change.
 
-	<diskCache dir="~/imagecache" autoClean="false" hashModifiedDate="true" enabled="true" subfolders="32" cacheAccessTimeout="15000" />
+	<diskCache dir="~/imagecache" autoClean="false" hashModifiedDate="true" enabled="true"
+	 subfolders="32" cacheAccessTimeout="15000" />
 	
-	<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" optimalWorkSegmentLength="00:00:04" targetItemsPerFolder="400" maximumItemsPerFolder="1000" 
-	  avoidRemovalIfCreatedWithin="24:00" avoidRemovalIfUsedWithin="4.00:00" prohibitRemovalIfUsedWithin="00:05" prohibitRemovalIfCreatedWithin="00:10" />
+	<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" 
+		optimalWorkSegmentLength="00:00:04" 
+		targetItemsPerFolder="400" maximumItemsPerFolder="1000" 
+	  avoidRemovalIfCreatedWithin="24:00" avoidRemovalIfUsedWithin="4.00:00" 
+		prohibitRemovalIfUsedWithin="00:05" prohibitRemovalIfCreatedWithin="00:10" />
 	
 
 
