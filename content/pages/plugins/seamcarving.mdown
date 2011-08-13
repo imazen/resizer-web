@@ -24,7 +24,7 @@ For live examples, [see this page](http://nathanaeljones.com/596/dynamic-seam-ca
 
 ## Installation
 
-* Add ImageResizer.Plugins.SeamCarving.dll to your project
-* Add `<add name="SeamCarving" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+Either run `Install-Package ImageResizer.Plugins.SeamCarving` in the NuGet package manager, or:
 
-Or, you could install the NuGet package ImageResizer.Plugins.SeamCarving which performs both steps
+1. Add ImageResizer.Plugins.SeamCarving.dll to your project
+2. Add `<add name="SeamCarving" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.

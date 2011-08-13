@@ -1,10 +1,15 @@
-UserVoice=true
+UserVoice: true
 
 # CloudFront plugin
 
 Makes the ImageResizer work nicely with Amazon CloudFront. I use this extensively for my own site, as edge-caching makes things much more responsive, and is not expensive.
 
-Install by adding `<add name="CloudFront" />` in `<plugins>`. Make sure you're referencing ImageResizer.Plugins.CloudFront.dll.
+## Installation
+
+Either run `Install-Package ImageResizer.Plugins.AdvancedFilters` in the NuGet package manager, or:
+
+1. Add a reference to ImageResizer.Plugins.CloudFront.dll in your project.
+2. Add `<add name="CloudFront" />` in the `<plugins>` section of Web.Config
 
 ## Details
 

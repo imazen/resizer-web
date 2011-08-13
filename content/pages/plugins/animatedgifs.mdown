@@ -6,5 +6,7 @@ Best used with disk caching, as large animations can take a while to process (so
 
 ## Installation
 
-* Add ImageResizer.Plugins.AnimatedGifs to your project
-* Add `<add name="AnimatedGifs" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+Either run `Install-Package ImageResizer.Plugins.AnimatedGifs` in the NuGet package manager, or:
+
+1. Add ImageResizer.Plugins.AnimatedGifs to your project
+2. Add `<add name="AnimatedGifs" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
