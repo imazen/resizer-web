@@ -23,16 +23,18 @@ It is possible to set 'allowAllSignedRequests=true', but you must handle the Rem
 
 ## Installation
 
-* Add ImageResizer.Plugins.RemoteReader.dll to your project
-* Add `<add name="RemoteReader" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
-* Add `<remotereader signingKey="put a long and very secure key here" />` inside `<resizer></resizer>`. Make sure the key is kept safe, and is the same across all servers in the web farm (if you're using one). This key can contain any xml-safe characters, and should be as long as possible. URLs generated with one key will not work with another.
+Either run `Install-Package ImageResizer.Plugins.RemoteReader` in the NuGet package manager, then follow the 3rd step below, or:
+
+1. Add ImageResizer.Plugins.RemoteReader.dll to your project
+2. Add `<add name="RemoteReader" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+3. Add `<remotereader signingKey="put a long and very secure key here" />` inside `<resizer></resizer>`. Make sure the key is kept safe, and is the same across all servers in the web farm (if you're using one). This key can contain any xml-safe characters, and should be as long as possible. URLs generated with one key will not work with another.
 
 
 ## Configuration reference
 
 	<configuration>
 	  <resizer>
-			<remotereader signingKey="ag383ht23sag#laf#lafF#oyfafqewt;2t w	eyfwfefwqefqw" allowAllSignedRequests="true" />
+			<remotereader signingKey="ag383ht23sag#laf#lafF#oyfafqewt;2twfqw" allowAllSignedRequests="true" />
 			<plugins>
 				<add name="RemoteReader" />
 			</plugins>
@@ -57,9 +59,11 @@ It is possible to set 'allowAllSignedRequests=true', but you must handle the Rem
 
 	using ImageResizer.Plugins.RemoteReader;
 	
-	img1.ImageUrl = RemoteReaderPlugin.Current.CreateSignedUrl("http://atrustedwebsite.com/photos/leaf.jpg", new ResizeSettings("width=200&height=100"));
+	img1.ImageUrl = RemoteReaderPlugin.Current.CreateSignedUrl("http://atrustedwebsite.com/photos/leaf.jpg", 
+																				new ResizeSettings("width=200&height=100"));
 	//For the following to work, allowAllSignedRequests must be true
-	img2.ImageUrl = RemoteReaderPlugin.Current.CreateSignedUrl("http://arandomwebsite.com/photos/leaf.jpg", new ResizeSettings("width=200&height=100"));
+	img2.ImageUrl = RemoteReaderPlugin.Current.CreateSignedUrl("http://arandomwebsite.com/photos/leaf.jpg", 
+																				new ResizeSettings("width=200&height=100"));
 
 
 
@@ -76,4 +80,4 @@ It is possible to set 'allowAllSignedRequests=true', but you must handle the Rem
 
 ## Non-ascii URLs
 
-.NET [requires a tiny bit of configuration to allow non-ascii characters in remote URLs](stackoverflow.com/questions/6107621/uri-iswellformeduristring-needs-to-be-updated).
+.NET [requires a tiny bit of configuration to allow non-ascii characters in remote URLs](http://stackoverflow.com/questions/6107621/uri-iswellformeduristring-needs-to-be-updated).
