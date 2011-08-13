@@ -31,12 +31,12 @@ All employees and contract workers of the Business are granted the following rig
 
 Subject to the following restrictions:
 
-  * Redistribution is **only permitted as part of a larger project that does not compete with the Software or any products distributed by the the owner of the Software**. The receiving party is licensed the software under the [Professional Client license][proclient].
-  * * For example, it is permitted to integrate the Software in a project for a client, and the client may use the project on any number of servers. But for the client to integrate the Software with another project themselves, they must buy  a license.
-  * A copy of the [Professional Client license][proclient] must be included with the Software when it is distributed externally.
-  * When redistributing a modified copy of the Software, a notice that the Software has been modified must be included.
-  * This license cannot be transferred.
-  * This license is only valid for current employees or contract workers of the business.
+ * Redistribution is **only permitted as part of a larger project that does not compete with the Software or any products distributed by the the owner of the Software**. The receiving party is licensed the software under the [Professional Client license][proclient].
+ * For example, it is permitted to integrate the Software in a project for a client, and the client may use the project on any number of servers. But for the client to integrate the Software with another project themselves, they must buy  a license.
+ * A copy of the [Professional Client license][proclient] must be included with the Software when it is distributed externally.
+ * When redistributing a modified copy of the Software, a notice that the Software has been modified must be included.
+ * This license cannot be transferred.
+ * This license is only valid for current employees or contract workers of the business.
 
 Suggestions:
 
