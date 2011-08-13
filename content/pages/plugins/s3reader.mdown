@@ -3,16 +3,30 @@
 
 Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk.
 
-## Path Syntax
+### Example URLs
 
-/s3/bucket-name/filename.jpg?width=100
+* http://localhost/s3/bucket-name/filename.jpg?width=100
+* http://localhost/s3/bucket-name/folder/filename.jpg?width=100
 
-/s3/ is located in the application root.
+
+See Samples/S3ReaderSample/ in the download for a sample project.
+
+
+### Features
+
+* Fast - no unnecessary http requests.
+* Offers mode for checking for newer files on a configured interval (useful when combined with disk caching)
+* Works great with the DiskCache and CloudFront caching plugins
+* Has an optional ssl mode
+* Can be configured to access private bucket files with an access key.
+
 
 ## Installation
 
-* Add ImageResizer.Plugins.S3Reader.dll to your project
-* Add `<add name="S3Reader" buckets="my-bucket-1,my-bucket-2,my-bucket-3"/>` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+Either run `Install-Package ImageResizer.Plugins.S3Reader` in the NuGet package manager, or:
+
+1. Add ImageResizer.Plugins.S3Reader.dll to your project
+2. Add `<add name="S3Reader" buckets="my-bucket-1,my-bucket-2,my-bucket-3"/>` inside `<plugins></plugins>` in Web.config.
 
 
 ## Configuration
