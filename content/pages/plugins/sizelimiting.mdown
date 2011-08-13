@@ -1,15 +1,11 @@
 
 # SizeLimiting plugin
 
-(Installed by default)
+(Installed by default in 3.0.5+)
 .
 For preventing DOS attacks and limiting photo resolution. Prevents request that would result in an image over 3200x3200 (configure with `totalWidth/totalHeight`).
 
 You can also limit photo resolution with `imageWidth/imageHeight`. Originals will still be accessible unless you add a rewrite handler.
-
-## Installation
-
-1. Installed by default in 3.0.5+. In earlier versions, add `<add name="SizeLimiting" />` to the `<plugins />` section.
 
 #Configuration
 
