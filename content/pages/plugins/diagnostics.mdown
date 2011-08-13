@@ -19,11 +19,14 @@ I think they are pretty obvious.
 
 ### ASP.NET MVC notes
 
-ASP.NET MVC currently requires a small change so that this page can display.
+If you can't access the diagnostics page, your routes may be interfering. 
+
+Either (a) install the [MvcRoutingShim plugin](/plugins/mvcroutingshim), or (b) make the following code change.
 
 In Global.asax.cs, in RegisterRoutes, add the line of code displayed below. 
 
 	public static void RegisterRoutes(RouteCollection routes) {
-		routes.IgnoreRoute("resizer\\debug(\\.ashx)?");
+		routes.IgnoreRoute("resizer.debug");
+		routes.IgnoreRoute("resizer.debug.ashx");
 	}
 
