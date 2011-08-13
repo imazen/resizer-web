@@ -1,7 +1,7 @@
 
 # Maturity chart
 
-Last updated Jul 23, 2011 regarding V3.0.11
+Last updated Aug 13, 2011 regarding V3.0.12
 
 This chart represents the author's honest opinion on the maturity of the various plugins.
 
@@ -23,15 +23,16 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * Gradient - *alpha*
 * Image404 -  *beta*
 * VirtualFolder - *beta*
-
-
+* ImageHandlerSyntax - *alpha*
+* FolderResizeSyntax - *beta*
+* MvcRoutingShim - *alpha*
 
 ## Performance Bundle
 
 * PrettyGifs - *stable*
 * AnimatedGifs - *stable*
 * DiskCache - *stable*/*beta* (Stable with default settings, beta with autoClean=True)
-* FriendlyUrls - *beta*
+
 
 ## Designer Bundle
 
@@ -41,6 +42,7 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * AdvancedFilters - *alpha*
 * SimpleFilters - *alpha* (Querystring API will be changing soon to allow filters to be combined)
 * SeamCarving - *alpha* 
+* WhitespaceTrimmer - *alpha*
 
 ## Cloud Bundle
 
