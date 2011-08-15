@@ -1,0 +1,54 @@
+Date: August 15, 2011
+FullFile: http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip
+
+
+# Resizer 3.0.12 - Aug 15 2011
+
+<a href="http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip" class="awesome green">Download source, binaries, plugins, and sample code (8MB)</a>
+
+<a href="http://downloads.imageresizing.net/Resizer3-0-12-min-Aug-15-2011.zip" class="awesome black">Download core binary only (160K)</a>
+
+### Changes since [3.0.11 (Jul 28)](/releases/3-0-11)
+
+## Upgrade steps for users of the FriendlyUrls plugin
+
+Make sure you perform the following step before upgrading to 3.0.13, as `ImageResizer.Plugins.FriendlyUrls.dll` will not be included in the next version.
+
+* Change `<add name="FriendlyUrls" />` to `<add name="FolderResizeSyntax" />` in Web.config and remove `ImageResizer.Plugins.FriendlyUrls` from Project References, /bin/, or nuget. 
+
+## New features
+
+* Added new [WhitespaceTrimmer](/plugins/whitespacetrimmer) plugin to Design bundle. (Also on NuGet)
+* Added new [ImageHandlerSyntax](/plugins/imagehandlersyntax) plugin to Core. (Provides URL syntax compatibility with 4 other image resizing handlers)
+* Added new [MvcRoutingShim](/plugins/mvcroutingshim) plugin to Core.Mvc, in the ImageResizer.Mvc.dll assembly. (Allows MVC routing to be disabled for certain requests - useful when routes are interfering with images).
+* Added NuGet packages for Watermark, BatchZipper, WhitespaceTrimmer, and ImageResizer.Mvc
+* Added dlls\release\COMInstaller.exe for quick and accurate COM installation. 
+* Added SampleAspSite project for ASP users.
+* Added a copy of the [ImageStudio](http://imagestudio.codeplex.com) project in the Contrib folder. The ImageStudio project now uses the ImageResizer to perform image manipulation, resulting in higher-quality images. 
+* AdvancedFilters now has experimental support for oil painting filters, noise removal, histogram equalization, contrast, brightness, and saturation adjustment. These features may disappear, change, or be modified based on feedback. Share yours.
+
+## API additions/changes
+
+* New method RemoteReaderPlugin.CreateSignedUrlWithKey(string remoteUrl, string settings, string key) allows COM clients (such as ASP) to generate signed URLs.
+* Config.Current.BuildImage() now creates the destination directory if it is missing, as a convenience for COM clients. ImageBuilder.Current.Build() does not do this. 
+
+
+## Significant bug fixes
+
+* Core: Now works in low-trust on .NET 4. Fixed "[VerificationException: Operation could destabilize the runtime](http://stackoverflow.com/questions/6919808/why-does-this-line-cause-a-verificationexception-when-running-under-net-4)" error.
+* Core: Diagnostics page now works in low-trust, thanks to Jesse Ehrenzweig's patches! Also thanks to Jesse, there are now far few compiler warnings!
+* SeamCarving: Now works through Build() as well as the URL syntax.  &carve=true was previously only accessible through the URL syntax.
+* SeamCarving: Now maintains transparency for GIF and 8-bit PNG images. 32-bit PNG images still lose most of their alpha channel due to limitations in CAIR.EXE.
+* AnimatedGifs: Fixed bug where animated (but non-looping) gifs would start looping in certain browsers. 
+* SimpleFilters: Brightness adjustments no long cause color inversions on overexposed photographs
+
+## Insignificant bug fixes
+
+The bugs that nobody has probably ever encountered, but were turned up by comprehensive unit testing.
+
+* Core: Fixed NotImplemetedException when &borderWidth is negative
+* Core: Fixed exception when &paddingColor is specified but &paddingWidth is not used.
+* Core: Fixed bug where &margin= would not be applied unless other commands were present.
+* AdvancedFilters: Fixed: &sharpen and &blur were not taking effect unless used with other commands. 
+* DropShadow: Fixed bug where ImageBuilder.GetFinalSize() causes a NullReferenceException when &shadowWidth or &shadowColor is used
+* AdvancedFilters: Fixed NullReferenceException when ImageBuilder.GetFinalSize() is called and &blur or &sharpen is specified
