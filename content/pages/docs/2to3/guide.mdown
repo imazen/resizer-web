@@ -9,6 +9,5 @@
 	* ImageResizer.dll 
 	* ImageResizer.Plugins.DiskCache.dll
 	* ImageResizer.Plugins.PrettyGifs.dll
-	* ImageResizer.Plugins.FriendlyUrls.dll (optional, only if you use the /resize(w,h,f)/ syntax)
 	* ImageResizer.Plugins.AnimatedGifs.dll (optional, only if you resize animated gifs)
 5. [Migrate your web.config file settings](/docs/2to3/configuration).

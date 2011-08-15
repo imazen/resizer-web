@@ -84,7 +84,7 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<add name="AnimatedGifs" />
 
 				<!-- Adds the /resize(w,h,f)/ folder syntax -->
-				<add name="FriendlyUrls" />
+				<add name="FolderResizeSyntax" />
 				
 				<!-- Designer Bundle starts here -->
 				
