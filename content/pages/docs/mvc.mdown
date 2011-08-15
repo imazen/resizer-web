@@ -1,20 +1,6 @@
 
 # ASP.NET MVC
 
-The ImageResizer is fully MVC (1-4) compatible, however, you may need to add the following routes to allow it to function.
+The ImageResizer is fully MVC (1-4) compatible, however, some routes may conflict with the ImageResizer URLs. 
 
-In global.asax.cs
-
-	public static void RegisterRoutes(RouteCollection routes) {
-	    routes.IgnoreRoute("resizer\\.debug");
-		  routes.IgnoreRoute("resizer\\.debug\\.ashx");
-	    routes.IgnoreRoute("[^?]+\\.(psd|bmp|gif|exif|png|tif|tiff|tff|jpg|jpeg|jpe|jif|jfif|jfi)");
-	    routes.IgnoreRoute("[^?]+\\.(psd|bmp|gif|exif|png|tif|tiff|tff|jpg|jpeg|jpe|jif|jfif|jfi)\\.ashx");
-			...
-
-
-### S3Reader, SqlReader, RemoteReader with non-images
-
-If you are using any of the above plugins for non-image files (or for images without extensions), you should also add the following line. 
-
-		routes.IgnoreRoute("(remote|databaseimages|s3)/");
+To resolve this conflict, simply install the [MvcRoutingShim](/plugins/mvcroutingshim) plugin. The MvcRoutingShim plugin prevents routes from messing with a request that is already being processed by the ImageResizer. 
