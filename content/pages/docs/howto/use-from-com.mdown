@@ -3,7 +3,7 @@
 
 While the [URL API method is preferred](/docs/howto/use-without-asp-net), you can use the ImageResizer with the COM API. This means VB6, VBScript, JScript, C++, and other COM-compatible languages can resize images, even if they're desktop apps or command-line scripts.
 
-You should either (a) put the ImageResizer.dll file (and any plugins) in the same directory as your app/script, or (b) use the 'registerdll.bat' script included in the "Samples/ScriptAccess" folder of the download to make them available to the entire computer.
+To install the ImageResizer as a COM component, run \dlls\release\COMInstaller.exe with Administrator privileges and click 'Install'.
 
 ### JScript example
 
