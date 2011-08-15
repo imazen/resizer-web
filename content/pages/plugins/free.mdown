@@ -1,7 +1,7 @@
 
 # Free plugins
 
-The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+The following 12 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
 
 These can all be found in the ImageResizer.Plugins.Basic namespace
 
@@ -16,7 +16,11 @@ These can all be found in the ImageResizer.Plugins.Basic namespace
 * **[VirtualFolder](/plugins/virtualfolder)** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
 
 
-* **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
+* **[DropShadow](/plugins/dropshadow)** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
 * **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
+
+* **[FolderResizeSyntax](/plugins/folderresizesyntax) - Resize images without using the query string.
+* **[MvcRoutingShim](/plugins/mvcroutingshim) - Prevent MVC Routes from taking over the ImageResizer's requests.
+* **[ImageHandlerSyntax](/plugins/imagehandlersyntax) - Migrate websites from other image resizing handlers without breaking any URLs.
 
 Check out the [new maturity chart](/plugins/maturity) to see which plugins are the most stable.

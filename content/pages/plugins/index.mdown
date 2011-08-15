@@ -6,7 +6,7 @@ Uservoice: true
 
 #Plugins
 
-9 plugins are included in the free download, and 14 more are sold. The core project is supported by purchases of the paid plugin bundles.
+12 plugins are included in the free download, and 15 more are sold. The core project is supported by purchases of the paid plugin bundles.
 
 The licenses are as MIT-like and unrestrictive as possible - even the <span class="price">$99</span> Pro license [allows modification, redistribution, and sub-licensing](/licenses/pro). This 'download fee' allows me to provide support to everyone, develop new features, fix bugs, and write documentation.
 
@@ -22,7 +22,6 @@ By purchasing 1 or more of the bundles below, you will get
 * [DiskCache](/plugins/diskcache) - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic.
 * [PrettyGifs](/plugins/prettygifs) - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
 * [AnimatedGifs](/plugins/animatedgifs) - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
-* [FriendlyUrls](/plugins/friendlyurls) - Resize images without using the query string.
 
 ## Designer Bundle - <span class="price">$99</span>
 
@@ -31,6 +30,7 @@ By purchasing 1 or more of the bundles below, you will get
 * [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
 * [AdvancedFilters](/plugins/advancedfilters) - Blur and sharpen photos with adjustable radius. 
 * [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust)
+* [WhitespaceTrimmer](/plugins/whitespacetrimmer) - Automatically trims whitespace off an image using smart edge detection
 
 ## Cloud Bundle - <span class="price">$99</span>
 
@@ -50,7 +50,7 @@ Are you using version 2? [Upgrading is easy and will increase your site's perfor
 
 ## Free plugins
 
-The following 9 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+The following 12 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
 
 These can all be found in the ImageResizer.Plugins.Basic namespace
 
@@ -61,5 +61,8 @@ These can all be found in the ImageResizer.Plugins.Basic namespace
 * **[SizeLimiting](/plugins/sizelimiting)** (default)- Limit maximum resolution of photos, or the total size of all processed images.
 * **[Image404](/plugins/image404)** - Supply default images instead of a 404 when an image is missing. 
 * **[VirtualFolder](/plugins/virtualfolder)** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
-* **DropShadow** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
+* **[DropShadow](/plugins/dropshadow)** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
 * **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
+* **[FolderResizeSyntax](/plugins/folderresizesyntax) - Resize images without using the query string.
+* **[MvcRoutingShim](/plugins/mvcroutingshim) - Prevent MVC Routes from taking over the ImageResizer's requests.
+* **[ImageHandlerSyntax](/plugins/imagehandlersyntax) - Migrate websites from other image resizing handlers without breaking any URLs.
