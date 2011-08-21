@@ -1,7 +1,15 @@
 /
 download
-plugins
-docs
+  /releases/2-8
+  /releases/3-alpha-2
+  /releases/3-alpha-3
+  /releases/3-alpha-5
+  /releases/3-alpha-7
+  /releases/3-alpha-8
+  /releases/3-alpha-9
+  /releases/3-alpha-10
+plugins/
+docs/
 support
 licenses/
   freedom
