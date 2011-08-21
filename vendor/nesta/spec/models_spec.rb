@@ -285,6 +285,16 @@ describe "Page", :shared => true do
     end
   end
   
+  describe "with no content" do
+    it "should produce no HTML output" do
+      create_article do |path|
+        file = File.open(path, 'w')
+        file.close
+      end
+      Nesta::Page.find_all.first.to_html.should == ''
+    end
+  end
+
   describe "without metadata" do
     before(:each) do
       create_article
@@ -445,12 +455,14 @@ describe "Markdown page" do
   it_should_behave_like "Page"
 
   it "should set heading from first h1 tag" do
-    create_page(
-      :path => "a-page",
-      :heading => "First heading",
-      :content => "# Second heading"
-    )
-    Nesta::Page.find_by_path("a-page").heading.should == "First heading"
+    page = create_page(
+      :heading => "First heading", :content => "# Second heading")
+    page.heading.should == "First heading"
+  end
+
+  it "should ignore trailing # characters in headings" do
+    article = create_article(:heading => 'With trailing #')
+    article.heading.should == 'With trailing'
   end
 end
 

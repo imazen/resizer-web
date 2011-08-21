@@ -27,8 +27,8 @@ describe "Rendering" do
   end
 
   before(:each) do
-    @app_root = Nesta::App.root
-    Nesta::App.root = File.expand_path('fixtures/tmp', File.dirname(__FILE__))
+    @app_root = Nesta::Env.root
+    Nesta::Env.root = File.expand_path('fixtures/tmp', File.dirname(__FILE__))
     @theme = 'my-theme'
     @fixtures = []
     stub_configuration
@@ -36,9 +36,23 @@ describe "Rendering" do
   
   after(:each) do
     @fixtures.each { |path| FileUtils.rm(path) if File.exist?(path) }
-    Nesta::App.root = @app_root
+    Nesta::Env.root = @app_root
   end
     
+  describe "when rendering stylesheets" do
+    it "should render the SASS stylesheets" do
+      create_template(:local, 'master.sass', "body\n  width: 10px * 2")
+      get "/css/master.css"
+      body.should match(/width: 20px;/)
+    end
+
+    it "should render the SCSS stylesheets" do
+      create_template(:local, 'master.scss', "body {\n  width: 10px * 2;\n}")
+      get "/css/master.css"
+      body.should match(/width: 20px;/)
+    end
+  end
+
   describe "when local files exist" do
     before(:each) do
       create_template(:local, 'page.haml', '%p Local template')
