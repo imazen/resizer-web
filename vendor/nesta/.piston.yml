@@ -1,8 +1,8 @@
 --- 
-repository_url: https://github.com/gma/nesta.git
+repository_url: https://github.com/nathanaeljones/nesta.git
 lock: false
 repository_class: Piston::Git::Repository
 format: 1
 handler: 
-  commit: 34b1b8090146c259f886e46b509ddd16f2560727
+  commit: 99dddf3402dda2dd1ae0d6ea49a74d4546236e10
   branch: master
