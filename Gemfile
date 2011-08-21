@@ -1,6 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'nesta', :path => "vendor/nesta"
+
+gem 'nesta', :git => "git://github.com/nathanaeljones/nesta.git"
+#gem 'nesta', :path => "../nesta"
+
+
 gem 'haml-edge'
 gem 'erubis'
 gem 'sinatra-reloader'

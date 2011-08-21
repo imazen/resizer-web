@@ -1,9 +1,0 @@
-- if short_name = Nesta::Config.disqus_short_name
-  #disqus_thread
-    - if Sinatra::Application.environment == :development
-      :javascript
-        var disqus_developer = true;
-    %script{:type => 'text/javascript', :src => "http://#{short_name}.disqus.com/embed.js", :async => true}
-
-    %noscript
-      %a(href="http://#{short_name}.disqus.com/embed.js?url=ref") View comments.

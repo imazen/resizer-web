@@ -1,5 +1,6 @@
-PATH
-  remote: vendor/nesta
+GIT
+  remote: git://github.com/nathanaeljones/nesta.git
+  revision: 874553028ff1854b8045a9cc051de164c22f4161
   specs:
     nesta (0.9.7)
       RedCloth (~> 4.2)
