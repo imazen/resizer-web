@@ -1,0 +1,11 @@
+
+# Migrating from WebImageResizer
+
+WebImageResizer and ImageResizing.Net have a lot in common. 
+
+The URL syntax differs slightly, but is more readable in ImageResizing.net.
+
+
+For example, 
+
+* /ImageHandler.ashx?src=/bla.jpg&width=100 becomes /bla.jpg?width=100
