@@ -83,11 +83,11 @@ module Nesta
   
       def local_stylesheet?
         Nesta.deprecated('local_stylesheet?', 'use local_stylesheet_link_tag')
-        File.exist?(File.expand_path('views/local.sass', Nesta::App.root))
+        File.exist?(File.expand_path('views/local.sass', Nesta::Env.root))
       end
 
       def local_stylesheet_link_tag(name)
-        pattern = File.expand_path("views/#{name}.s{a,c}ss", Nesta::App.root)
+        pattern = File.expand_path("views/#{name}.s{a,c}ss", Nesta::Env.root)
         if Dir.glob(pattern).size > 0
           haml_tag :link, :href => "/css/#{name}.css", :rel => "stylesheet"
         end
@@ -98,11 +98,7 @@ module Nesta
       end
 
       def article_summaries(articles)
-        haml(
-          :summaries,
-          :layout => false,
-          :locals => { :pages => articles }
-        )
+        haml(:summaries, :layout => false, :locals => { :pages => articles })
       end
     end
 
@@ -129,7 +125,7 @@ module Nesta
 
     get '/css/:sheet.css' do
       content_type 'text/css', :charset => 'utf-8'
-      cache sass(params[:sheet].to_sym)
+      cache stylesheet(params[:sheet].to_sym)
     end
 
     get %r{/attachments/([\w/.-]+)} do
