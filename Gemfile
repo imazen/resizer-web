@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'nesta', :path => "../nesta",  :git => "git://github.com/nathanaeljones/nesta.git"
+
+gem 'nesta', :git => "git://github.com/nathanaeljones/nesta.git"
+#gem 'nesta', :path => "../nesta"
 
 
 gem 'haml-edge'
