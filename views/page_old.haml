@@ -1,7 +1,7 @@
 %nav.breadcrumb
   - display_breadcrumbs
 
-#content
+%div(class="page-content t no-banner")
   %article(role="main")
     ~ @page.to_html(self)
 
@@ -17,5 +17,3 @@
     = haml :page_meta, :layout => false, :locals => { :page => @page }
 
   = haml :comments, :layout => false
-
-= haml :sidebar, :layout => false
