@@ -17,7 +17,7 @@
 				<section name="resizer" type="ImageResizer.ResizerSection"/>
 		</configSections>
 	
-3. Add a `<resizer>` section after `</configSettings>`:
+3. Add a `<resizer>` section after `</configSections>`:
 	
 		...
 		</configSections>
