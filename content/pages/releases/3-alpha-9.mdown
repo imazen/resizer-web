@@ -1,6 +1,7 @@
 Date: June 8 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-9-full-Jun-8-2011.zip
-Categories: releases
+Tags: releases
+Summary: 8 bug fixes and 8 new features
 
 # Resizer 3 alpha 9 - Jun 8 2011
 

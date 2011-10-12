@@ -1,0 +1,31 @@
+Date: November 20, 2011
+FullFile: http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-0-12-min-Aug-15-2011.zip
+Summary: 6 bug fixes, raw support, and 1 breaking change (renaming the FriendlyUrls plugin)
+Tags: releases
+Flags: hidden
+
+# Resizer 3.0.15 - Sept 24 2011
+
+### Changes since [3.0.13 (Aug 15)](/releases/3-0-12)
+
+## Manual steps for users of the FriendlyUrls plugin
+
+Like version 3.0.13, 3.0.14 does not include `ImageResizer.Plugins.FriendlyUrls.dll`! The FriendlyUrls plugin is now included in `ImageResizer.dll`, and has been renamed to `FolderResizeSyntax`. This change reduces the number of dlls you need to deploy, and simplifies migration for v2 customers.
+
+* Change `<add name="FriendlyUrls" />` to `<add name="FolderResizeSyntax" />` in Web.config and remove `ImageResizer.Plugins.FriendlyUrls` through Project References, /bin/, or nuget. 
+
+## New features
+
+* Completely rewritten Watermark plugin can be completely configured through XML, and allows both image and text layers.  
+* New &anchor=topleft|bottomright|middlecenter... command allows you to modify the way the image is cropped or padded when the aspect ratio is being changed.
+* New SpeedOrQuality plugin offers a 10-30% performance boost in exchange for reduced image quality. 
+* New Logging system - the Config.Current.Plugins.LogManager property and the Config.Current.Plugins.LoggingAvailable event allow plugins to support logging without having NLog as a dependency.
+* New Logging plugin provides an NLog-based implementation of the logging system. This allows logging to be supported, but not required - no extra dependencies or overhead unless you add the Logging plugin!.
+* The DiskCache plugin now supports detailed (optional) logging. Enabled by setting `<diskcache logging="true"/>`, installing the Logging plugin, and configuring NLog. 
+
+
+
+## Bug fixes
+
+* Fixed sample code in JCropExample - the commented out code for cropping to disk was incorrect.

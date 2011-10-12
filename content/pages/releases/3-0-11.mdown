@@ -1,12 +1,10 @@
 Date: July 29 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-0-11-full-Jul-28-2011.zip
-
+Tags: releases
+Summary: 5 bug fixes and 2 new plugins since alpha 10
+Template:release
 
 # Resizer 3.0.11 - July 29 2011
-
-<a href="http://downloads.imageresizing.net/Resizer3-0-11-full-Jul-28-2011.zip" class="awesome green">Download source, binaries, and sample code (8MB)</a>
-
-<a href="http://downloads.imageresizing.net/Resizer3-0-11-min-Jul-28-2011.zip" class="awesome black">Download core binary only (160K)</a>
 
 ### Changes since [3.0.10 (Jun 16)](/releases/3-alpha-10)
 

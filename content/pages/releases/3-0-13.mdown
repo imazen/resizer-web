@@ -1,0 +1,29 @@
+Date: October 12, 2011
+FullFile: http://downloads.imageresizing.net/Resizer3-0-13-full-Oct-12-2011.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-0-13-min-Oct-12-2011.zip
+Summary: 6 bug fixes, raw support, and 1 breaking change (renaming the FriendlyUrls plugin)
+Tags: releases
+Template:release
+
+# Resizer 3.0.13 - Oct 12 2011
+
+### Changes since [3.0.12 (Aug 15)](/releases/3-0-12)
+
+## Manual steps for users of the FriendlyUrls plugin
+
+Version 3.0.13 does not include `ImageResizer.Plugins.FriendlyUrls.dll`! The FriendlyUrls plugin is now included in `ImageResizer.dll`, and has been renamed to `FolderResizeSyntax`. This change reduces the number of dlls you need to deploy, and simplifies migration for v2 customers.
+
+* Change `<add name="FriendlyUrls" />` to `<add name="FolderResizeSyntax" />` in Web.config and remove `ImageResizer.Plugins.FriendlyUrls` through Project References, /bin/, or nuget. 
+
+## New features
+
+* New alpha [FreeImageDecoder plugin](/plugins/freeimage) introduces support for RAW & HDR image formats, such as CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc. Also introduced support for XBM, XPM, TARGA, SGI, Sun RAS, PSD, PICT, PNG, PFM, PBM, PGM, PPM, PCX, MNG, Kodak PhotoCD, KOALA, JPEG-2000, JIF, JNG, IFF, ICO, Raw Fax G3, EXR, DDS, and Dr. Halo CUT files.
+
+## Bug fixes
+
+* Fixed: Using the &404 command without any other resizing commands would cause the image to be re-encoded needlessly. 
+* Fixed: Converting a transparent PNG or GIF to jpeg format would cause the transparent areas to become black unless otherwise specified. Now defaults to white.
+* Fixed: RemoteReaderPlugin was modifying the cache key incorrectly, causing different remote URLs to be cached as the same request.
+* Fixed: DiskCache; setting subfolders=1 no longer causes config error - behaves as subfolders=0 
+* Fixed: Watermark plugin would display decreasingly smaller watermarks.
+* Fixed in ClientCache plugin: On a web server serving images from another file server, when the servers' clocks are not synchronized, and images are served within the time offset (between the servers) from when they are created. Symptoms: ArgumentOutOfRangeException. Fault: Overzealous ASP.NET framework code. Extremely rare.

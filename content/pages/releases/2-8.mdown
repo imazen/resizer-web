@@ -1,3 +1,7 @@
+Date: May 27 2011
+Tags: releases
+Summary: The last build of the version 2 line.
+
 # Resizer 2.8 - May 27 2011
 
 This is probably the last update the V2 line will receive, as it was superseded by V3 on Apr. 24. Support for 2.8 will be ending June 15, 2011, **3 years** after V2 was first released.

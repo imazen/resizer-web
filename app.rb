@@ -12,12 +12,15 @@ module Nesta
 
     helpers do
       # Add new helpers here.
+      def latest_release
+        Page.articles_by_tag("releases").first
+      end
+      def releases
+        Page.articles_by_tag("releases")
+      end
     end
+    
+    
 
-    # Add new routes here.
-    get '/css/:sheet.css' do
-       content_type 'text/css', :charset => 'utf-8'
-       cache scss(params[:sheet].to_sym)
-     end
   end
 end

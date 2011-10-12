@@ -1,45 +1,31 @@
 menu: download
 title: Download the Image Resizer Free
+Renderer: RubyPoweredMarkdown
 
-#Download
 
-Latest release: Version 3.0.12 - Aug 15 2011. [12 bug fixes, 10 new features, 3 new plugins since 3.0.11](/releases/3-0-12).
+#Download <%= latest_release.heading %>
 
 <form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();" >
 <input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou" />
 <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
-
-<h3> Notify me when important updates are available</h3>
-
-Email: <input type="text" name="fields_email"/> &nbsp; <input type="submit" name="Submit" value="Get notified (avg 8 per year)"/>
-
+<h3 style="margin-bottom:0"> Notify me when important updates are available</h3>
+<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <input type="submit" name="Submit" value="Get notified (avg 8 per year)"/></p>
 <input type="hidden" name="listid" value="29803"/><input type="hidden" name="specialid:29803" value="LH6H"/><input type="hidden" name="clientid" value="905228"/><input type="hidden" name="formid" value="2612"/><input type="hidden" name="reallistid" value="1"/><input type="hidden" name="doubleopt" value="0"/> 
 </form>
 
-<p>
-<a href="http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip" class="awesome green">Download source, binaries, plugins, and sample code (8MB)</a>
 
-<a href="http://downloads.imageresizing.net/Resizer3-0-12-min-Aug-15-2011.zip" class="awesome black">Download core binary only (160K)</a>
+This release contains [<%= latest_release.inline_summary %>](<%= latest_release.abspath %>). 
+
+<p>
+<a href="<%= latest_release.metadata('FullFile') %>" class="awesome green">Download source, binaries, plugins, and sample code (8MB)</a>
+
+<a href="<%= latest_release.metadata('MinFile') %>" class="awesome black">Download core binary only (160K)</a>
 
 </p>
 
+[Show all releases](/releases).
 
-It's only happened once (a year ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
-
-
-## Older releases
-
-* [Version 3.0.11 - Jul 29 2011](/releases/3-0-11) - 5 bug fixes and 2 new plugins since alpha 10
-* [Version 3 alpha 10 - Jun 16 2011](/releases/3-alpha-10) - 2 bug fixes and 5 new features since alpha 9
-* [Version 3 alpha 9 - Jun 8 2011](/releases/3-alpha-9) - 8 bug fixes and 8 new features
-* [Version 3 alpha 8 - Jun 2 2011](/releases/3-alpha-8) - 4 core bug fixes, 2 new sample projects, and the important fixes to the DiskCache, SqlReader, and AnimatedGifs plugins
-* [Version 3 alpha 7 - May 26 2011](/releases/3-alpha-7) - 3 stability fixes, jCrop support, COM support, better diagnostics.
-* [Version 3 alpha 5 - May 15 2011](/releases/3-alpha-5) - 7 bug fixes, 5 API changes, and 3 new plugins
-* [Version 3 alpha 3 - May 2 2011](/releases/3-alpha-3)
-* [Version 3 alpha 2 - April 24 2011](/releases/3-alpha-2)
-* [Version 2.8 May 27 2011](/releases/2-8) - The last build of the version 2 line.
-
-Why do we skip version numbers? Private builds and beta testing. If you received a build via e-mail in response to a support request, you should upgrade to a newer release as soon as it is made available.
+It's only happened once (a long time ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
 
 <!-- Google Code for View download page Conversion Page -->
 <script type="text/javascript">

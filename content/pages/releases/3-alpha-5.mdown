@@ -1,6 +1,7 @@
 Date: May 15 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip
-Categories: releases
+Tags: releases
+Summary: 7 bug fixes, 5 API changes, and 3 new plu
 
 # Resizer 3 alpha 5 - May 15 2011
 
