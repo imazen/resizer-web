@@ -1,0 +1,52 @@
+# New Watermark plugin (version 3.0.14 and later) (available by request)
+
+The new watermark plugin is fully XML configurable, and supports named watermark configurations, multiple image and text layers, layer groups, and background (as well as overlay) layers.
+
+## Installation
+
+Either run `Install-Package ImageResizer.Plugins.Watermark` in the NuGet package manager, or:
+
+1. Add ImageResizer.Plugins.Watermark.dll to your project
+2. Add `<add name="Watermark" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+## Usage
+
+To be continued... Examples available in Samples\ComplexWebApplication
+
+# Original watermark plugin (Versions 3.0.13 and older)
+
+The original version of the Watermark plugin did not support XML configuration, and only allowed one set of layout directions, which were applied to all watermark files. 
+All watermark files were required to be located in the same folder. The &watermark=file.png command would select a file from that directory for use.
+
+To install and configure the plugin, you must place some code in the Application_Start event of Global.asax.cs.
+
+Here is an example Global.asax.cs file
+
+	using System;
+	using System.Collections.Generic;
+	using System.Web;
+	using ImageResizer;
+	using System.Drawing;
+	using ImageResizer.Configuration;
+	using ImageResizer.Plugins.RemoteReader;
+	
+	namespace ComplexWebApplication {
+		public class Global : System.Web.HttpApplication {
+			protected void Application_Start(object sender, EventArgs e) {
+			
+				// Code that runs on application startup
+				ImageResizer.Plugins.Watermark.WatermarkPlugin w = new ImageResizer.Plugins.Watermark.WatermarkPlugin();
+				w.align = System.Drawing.ContentAlignment.BottomLeft; //Where to align the watermark within the bounds specified by bottomRightPadding and topLeftPadding
+				w.hideIfTooSmall = true;
+				w.keepAspectRatio = true; //Maintains the aspect ratio of the watermark itself.
+				w.valuesPercentages = false; //When true .bottomRightPadding, .topLeftPadding, and .watermarkSize are all percentages of the primary image size. Percentages are 0..1, not 0..100.
+				w.watermarkDir = "~/watermarks/"; //Where the watermark plugin looks for the image specifed in the querystring ?watermark=file.png
+				w.bottomRightPadding = new System.Drawing.SizeF(20, 20); //Padding between the bottom and right edges of the watermark and the primary image
+				w.topLeftPadding = new System.Drawing.SizeF(20, 20); //Padding between the top  and left edges of the watermark and the primary image
+				w.watermarkSize = new System.Drawing.SizeF(30, 30); //The desired size of the watermark, maximum dimensions (aspect ratio maintained if keepAspectRatio = true)
+				//Install the plugin
+				w.Install(Config.Current);
+			}
+		}
+	}
+

@@ -26,7 +26,8 @@ By purchasing 1 or more of the bundles below, you will get
 ## Designer Bundle - <span class="price">$99</span>
 
 * [PsdReader](/plugins/psdreader) - Adds support for PSD source files.
-* Watermark - Render image overlays with incredible flexibility and great performance.
+* [FreeImage](/plugins/freeimage) - Adds support for RAW & HDR source images - over 20 formats supported.
+* [Watermark](/plugins/watermark) - Render image overlays with incredible flexibility and great performance.
 * [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead.
 * [AdvancedFilters](/plugins/advancedfilters) - Blur and sharpen photos with adjustable radius. 
 * [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust)

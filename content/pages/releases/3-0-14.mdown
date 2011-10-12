@@ -5,9 +5,9 @@ Summary: 6 bug fixes, raw support, and 1 breaking change (renaming the FriendlyU
 Tags: releases
 Flags: hidden
 
-# Resizer 3.0.15 - Sept 24 2011
+# Resizer 3.0.14 - Nov 20 2011
 
-### Changes since [3.0.13 (Aug 15)](/releases/3-0-12)
+### Changes since [3.0.13 (Oct 12)](/releases/3-0-13)
 
 ## Manual steps for users of the FriendlyUrls plugin
 
@@ -29,3 +29,8 @@ Like version 3.0.13, 3.0.14 does not include `ImageResizer.Plugins.FriendlyUrls.
 ## Bug fixes
 
 * Fixed sample code in JCropExample - the commented out code for cropping to disk was incorrect.
+
+
+## Potentially breaking API changes
+
+* The ImageBuilder.Create() and ImageBuilder constructors now require an additional argument, "IVirtualImageProvider virtualFileProvider". As the ImageBuilder class shouldn't be created directly, this change should not affect anyone. Only subclasses of ImageBuilder should be affected - they will need to modify their constructors, .Create(), and .Copy() methods to include this new parameter. This change does not affect plugins or user code - only ImageBuilder subclasses such as FreeImageBuilder are affected. 
