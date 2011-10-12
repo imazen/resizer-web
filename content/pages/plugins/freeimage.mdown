@@ -1,0 +1,33 @@
+
+# FreeImage Plugins
+
+`ImageResizer.Plugins.FreeImage.dll` contains several plugins, all based around the abilities offered by the C/C++ FreeImage library. These plugins are very, very alpha. Use at your own risk. 
+
+Has not been tested with 64-bit operating systems. 
+
+## Required files
+
+3 dlls are required in the /bin folder of the application for the plugins to work. 
+
+`ImageResizer.Plugins.FreeImage.dll` (dlls\release)
+`FreeImageNET.dll` (dlls\release)
+`FreeImage.dll` (Plugins\Libs\FreeImage\Dist) **NOTE - this is not in the dlls folder, you must copy it!**
+
+## FreeImageDecoder
+
+Introduces support for RAW & HDR image formats, such as CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc. Also introduced support for XBM, XPM, TARGA, SGI, Sun RAS, PSD, PICT, PNG, PFM, PBM, PGM, PPM, PCX, MNG, Kodak PhotoCD, KOALA, JPEG-2000, JIF, JNG, IFF, ICO, Raw Fax G3, EXR, DDS, and Dr. Halo CUT files.
+
+Install by adding `<add name="FreeImageDecoder">` to the plugins section of Web.config. And make sure you've added the 3 required dlls.
+	
+## FreeImageEncoder
+
+Under development
+
+## FreeImageBuilder
+
+Under development
+
+## License
+
+This set of plugins is currently under the [Resizer Trial](/licenses/trial) license. FreeImageNET.dll and FreeImage.dll are under the [FreeImage license](http://freeimage.sourceforge.net/freeimage-license.txt).
+If you have performed appropriate testing and would like a production license, just send me an e-mail. I haven't yet decided which bundle to assign this set of plugins to.
