@@ -37,7 +37,7 @@ By purchasing 1 or more of the bundles below, you will get
 
 * [S3Reader](/plugins/s3reader) - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
 * [SQLReader](/plugins/sqlreader) - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
-* [CloudFront](/plugins/cloudfront) - Allows you to use Amazon CloudFront with the resizer. 
+* [CloudFront](/plugins/cloudfront) - Allows you to use Amazon CloudFront with the resizer. Highly recommended - offers inexpensive worldwide edge caching and great scalability.
 * [AzureReader](/plugins/azurereader) (very, very alpha) - Allows blobstore images to be resized and served. 
 * [RemoteReader](/plugins/remotereader) - (alpha) Allows images located on external servers to be resized and processed as if they existed locally.
 
