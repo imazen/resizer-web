@@ -1,14 +1,28 @@
 GIT
-  remote: git://github.com/nathanaeljones/nesta.git
-  revision: 874553028ff1854b8045a9cc051de164c22f4161
+  remote: git://github.com/nathanaeljones/nesta-plugin-simplicity.git
+  revision: 7b6cf16722828fd6042e2256d050b78ee03b27ec
   specs:
-    nesta (0.9.7)
+    nesta-plugin-simplicity (0.0.1)
+      nesta (>= 0.9.11)
+
+GIT
+  remote: git://github.com/nathanaeljones/nesta-plugin-tags.git
+  revision: 893ed9d58caa902926ce6f1ec61ecb9a80109e80
+  specs:
+    nesta-plugin-tags (0.0.1)
+      nesta (>= 0.9.11)
+
+GIT
+  remote: git://github.com/nathanaeljones/nesta.git
+  revision: 2a08636bf6b62ad217a33bdc7477280af2c49ec6
+  specs:
+    nesta (0.9.11)
       RedCloth (~> 4.2)
       haml (~> 3.1)
-      maruku (>= 0.6.0)
+      rdiscount (~> 1.6)
       sass (~> 3.1)
       shotgun (>= 0.8)
-      sinatra (= 1.1.2)
+      sinatra (= 1.2.6)
 
 GEM
   remote: http://rubygems.org/
@@ -16,19 +30,18 @@ GEM
     RedCloth (4.2.8)
     backports (2.3.0)
     erubis (2.7.0)
-    haml (3.1.2)
+    haml (3.1.3)
     haml-edge (3.1.79)
-    maruku (0.6.0)
-      syntax (>= 1.0.0)
     monkey-lib (0.5.4)
       backports
-    rack (1.3.2)
-    sass (3.1.7)
+    rack (1.3.4)
+    rdiscount (1.6.8)
+    sass (3.1.10)
     shotgun (0.9)
       rack (>= 1.0)
-    sinatra (1.1.2)
+    sinatra (1.2.6)
       rack (~> 1.1)
-      tilt (~> 1.2)
+      tilt (< 2.0, >= 1.2.2)
     sinatra-advanced-routes (0.5.1)
       monkey-lib (~> 0.5.0)
       sinatra (~> 1.0)
@@ -39,8 +52,7 @@ GEM
     sinatra-sugar (0.5.1)
       monkey-lib (~> 0.5.0)
       sinatra (~> 1.0)
-    syntax (1.0.0)
-    tilt (1.3.2)
+    tilt (1.3.3)
 
 PLATFORMS
   ruby
@@ -49,4 +61,6 @@ DEPENDENCIES
   erubis
   haml-edge
   nesta!
+  nesta-plugin-simplicity!
+  nesta-plugin-tags!
   sinatra-reloader
