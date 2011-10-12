@@ -46,7 +46,7 @@
 		
 	<div class="text-right">
 		<h2>Any language</h2>
-		<p>Process images from ASP.NET, PHP, ASP, Python, Ruby, Flex, Flash, HTML, javascript - anything!</p>
+		<p>Process images from ASP.NET, MVC, PHP, ASP, Python, Ruby, Flex, Flash, HTML, javascript - anything!</p>
 		<h3>Any version of IIS, IIS express, or Cassini</h3>
 		<p>Works with IIS 5, 5.1, 6, 7, and 7.5 in both classic and integrated mode.</p>
 		<p>Low-trust compatible. Compatible with every hosting plan (as far as we know).</p>
@@ -61,7 +61,7 @@
 	<div class="text-right">
 		<h2>No restrictions</h2>
 		<p>Works with bitmaps, streams, files, uploaded files, amazon S3 buckets, sql databases, and more. 
-		Understands jpeg, png, gif, tiff, exif, and psd formats.
+		Understands jpeg, png, gif, tiff, exif, psd*, raw*, hdr* and 20+ other formats (* plugin required).
 		</p>
 		<h3>Mix and match image management strategies</h3>
 		<ul>
