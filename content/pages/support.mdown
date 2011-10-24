@@ -3,13 +3,13 @@ Uservoice: true
 
 #Support
 
-When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). Without this information, **I cannot diagnose the problem**.
+When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). Without this information, **I cannot diagnose the problem**. It's also a good idea to skim the [troubleshooting page](/docs/troubleshoot), as there's a good chance it covers your issue.
 
 Email:  **support@imageresizing.net**. If you do not immediately get a reply, your e-mail *did not arrive*. 
 
 Both online tickets and this e-mail address are immediately forwarded to my personal e-mail account, so please use them! It helps me track support requests in a more organized manner. If you e-mail me at my personal e-mail address (nathanael.jones@gmail.com), your request may get lost!
 
-You can search the forums, wish list, and knowledge base (as well as create tickets) at [resizer.uservoice.com](http://resizer.uservoice.com/).
+You can search the forums, wish list, and knowledge base (as well as create tickets) at [resizer.uservoice.com](http://resizer.uservoice.com/). To go directly to the Ideas page to create and vote for new features, [click here](http://resizer.uservoice.com/forums/108373-image-resizer-v3).
 
 ## Hours
 
