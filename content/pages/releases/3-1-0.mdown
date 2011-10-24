@@ -5,15 +5,25 @@ Summary: 6 bug fixes, raw support, and 1 breaking change (renaming the FriendlyU
 Tags: releases
 Flags: hidden
 
-# Resizer 3.0.14 - Nov 20 2011
+# Resizer 3.1 - Nov 20 2011
 
 ### Changes since [3.0.13 (Oct 12)](/releases/3-0-13)
 
-## Manual steps for users of the FriendlyUrls plugin
+If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now](/plugins/friendlyurls).
 
-Like version 3.0.13, 3.0.14 does not include `ImageResizer.Plugins.FriendlyUrls.dll`! The FriendlyUrls plugin is now included in `ImageResizer.dll`, and has been renamed to `FolderResizeSyntax`. This change reduces the number of dlls you need to deploy, and simplifies migration for v2 customers.
 
-* Change `<add name="FriendlyUrls" />` to `<add name="FolderResizeSyntax" />` in Web.config and remove `ImageResizer.Plugins.FriendlyUrls` through Project References, /bin/, or nuget. 
+
+## Breaking changes to the URL API
+
+Well, these are rare. We haven't had a big one in 3 years, but it's time. Most people find it confusing that &scale=downscaleonly is the default instead of &scale=both. 
+
+
+
+* &scale=downscaleonly used to be the default. 
+
+ &scale=both is now the default when using &width and &height. Based on customer feedback, &scale=downscaleonly was not the expected behavior in this scenario. &scale=downscaleonly is still the default when using &maxwidth and &maxheight
+
+
 
 ## New features
 
@@ -24,11 +34,16 @@ Like version 3.0.13, 3.0.14 does not include `ImageResizer.Plugins.FriendlyUrls.
 * New Logging plugin provides an NLog-based implementation of the logging system. This allows logging to be supported, but not required - no extra dependencies or overhead unless you add the Logging plugin!.
 * The DiskCache plugin now supports detailed (optional) logging. Enabled by setting `<diskcache logging="true"/>`, installing the Logging plugin, and configuring NLog. 
 
+* &dpi=96|300|600 allows you to set the print density of an image. No browsers support this, but a few printers do. Default is 96.  http://apptools.com/examples/dpi.php
+
 
 
 ## Bug fixes
 
 * Fixed sample code in JCropExample - the commented out code for cropping to disk was incorrect.
+* Fixed bug in PrettyGifs causing failed requests when on a 64-bit server with over 4GB of memory in used.
+* Fixed sepia filter in SimpleFilters
+
 
 
 ## Potentially breaking API changes
