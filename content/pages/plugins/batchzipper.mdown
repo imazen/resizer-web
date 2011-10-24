@@ -1,0 +1,28 @@
+# BatchZipper plugin
+
+Provides batch resizing and zip file creation, with asynchronous support. Great for generating customized user downloads.
+
+This plugin isn't actually a plugin - in fact, it wraps the ImageResizer instead of the other way around.
+
+## Installation
+
+Either run `Install-Package ImageResizer.Plugins.BatchZipper` in the NuGet package manager, or:
+
+1. Add `ImageResizer.Plugins.BatchZipper.dll` to your project
+
+
+## Usage
+
+Reference `Image`
+
+Create a job specification with the BatchResizeSettings class:
+
+	var s = new BatchResizeSettings(string destinationFile, Guid jobId, IList<BatchResizeItem> files);
+
+Start it with this:
+
+	ImageResizer.Plugins.BatchZipper.BatchResizeManager.BeginBatchResize(s)
+
+You can attach event handlers to s.ItemEvent and s.JobEvent to monitor progress and provide user notification when the process is complete.
+
+Please refer to the excellent XML documentation for further details - it is very comprehensive.

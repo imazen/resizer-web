@@ -1,0 +1,40 @@
+#Presets plugin (v3.1+)
+
+Allows you to define sets of settings in Web.config and reference them by name.
+
+
+## Installation
+
+1. Add `<add name="Presets" />` to the `<plugins />` section.
+
+## Configuration Syntax
+
+A named preset can specify default settings (these can be overridden in the URL), or normal settings (which override corresponding URL settings) - or both. 
+
+	<resizer>
+	...
+		<presets>
+			<preset name="thumb-defs" defaults="width=100;height=100" />
+			<preset name="thumb" settings="width=100;height=100" />
+			<preset name="thumb-width" defaults="height=100" settings="width=100" /><!-- The height can be overriden, but not the width -->
+		</presets>
+	...
+	</resizer>
+
+## Usage syntax
+
+Use a default settings group, then overriding the width:
+
+	image.jpg?preset=thumb-defs&width=120
+
+Referencing a normal preset
+
+	image.jpg?preset=thumb
+
+Referencing a preset with both default and normal settings, and overriding the default height
+
+	image.jpg?preset=thumb-width&height=200
+
+Referencing two presets (although they're kind of redundant in this example)
+
+	image.jpg?preset=thumb,thumb-defs

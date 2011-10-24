@@ -1,0 +1,7 @@
+# PsdComposer
+
+Allows you to edit PSD files (hide/show layers, change text layer contents, apply certain effects), and render them to a jpeg dynamically.
+
+High performance - under 400ms for test psds with 40+ layers.
+
+More documentation coming soon - in the meantime, please contact support@imageresizing.net 
