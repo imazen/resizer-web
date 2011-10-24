@@ -4,7 +4,7 @@ Supported operating systems: Windows 2000, Server 2000, XP, Server 2003, Vista, 
 
 Supported web servers (for ASP.NET mode): IIS5, IIS 5.1, IIS 6, IIS 7, IIS 7.5 (both classic and integrated modes).
 
-Unless listed below, everything runs under .NET 2.0 (although fully compatible with 3.0, 3.5, and 4.0).
+Unless listed below, everything runs under .NET 2.0 SP2 (although fully compatible with 3.0, 3.5, and 4.0).
 
 ## Plugins that use .NET 3.5
 
