@@ -1,7 +1,7 @@
 
 # Free plugins
 
-The following 12 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+The following 16 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
 
 These can all be found in the ImageResizer.Plugins.Basic namespace
 
@@ -19,8 +19,13 @@ These can all be found in the ImageResizer.Plugins.Basic namespace
 * **[DropShadow](/plugins/dropshadow)** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
 * **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
 
-* **[FolderResizeSyntax](/plugins/folderresizesyntax) - Resize images without using the query string.
-* **[MvcRoutingShim](/plugins/mvcroutingshim) - Prevent MVC Routes from taking over the ImageResizer's requests.
-* **[ImageHandlerSyntax](/plugins/imagehandlersyntax) - Migrate websites from other image resizing handlers without breaking any URLs.
+* **[FolderResizeSyntax](/plugins/folderresizesyntax)** - Resize images without using the query string.
+* **[MvcRoutingShim](/plugins/mvcroutingshim)** - Prevent MVC Routes from taking over the ImageResizer's requests.
+* **[ImageHandlerSyntax](/plugins/imagehandlersyntax)** - Migrate websites from other image resizing handlers without breaking any URLs.
+* **[SpeedOrQuality](/plugins/speedorquality)** - Gain a 15-30% speed boost by sacrificing rendering quality.
+* **[Presets](/plugins/presets)** - Created named settings groups and and reference them with ?preset=name instead of specifying them all in the URL
+* **[AutoRotate](/plugins/autorotate)** - Created named settings groups and and reference them with ?preset=name instead of specifying them all in the URL
+
+
 
 Check out the [new maturity chart](/plugins/maturity) to see which plugins are the most stable.

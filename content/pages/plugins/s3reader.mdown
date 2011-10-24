@@ -1,7 +1,7 @@
 
 # S3Reader plugin
 
-Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk.
+Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk. Also serves files located on S3 - not restricted to images (unless vpp="false") is used.
 
 ### Example URLs
 
@@ -35,7 +35,7 @@ You must specify a comma-delimited list of permitted bucket names that can be ac
 
 If you want to access non-public bucket items, you will need to specify an access ID and key.
 
-	<add name="S3Reader" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
+	<add name="S3Reader" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
 	 checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" />
 
 * buckets (requrired) - Comma-delimited list of permitted bucket names that can be accessed.
@@ -44,4 +44,4 @@ If you want to access non-public bucket items, you will need to specify an acces
 	If false, S3 will never be checked for newer versions of cached files, reducing latency costs by 50%. Defaults to false.
 * useSsl - Defaults to false. Set to true to transfer the image data over an encrypted connection. Slows things down significantly.
 * accessKeyId, secretAccessKey - Use these if you need to access non-public files in your amazon buckets.
-
+* vpp - Set to false to only serve image URLs that have a querystring.

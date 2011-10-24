@@ -1,8 +1,10 @@
 #Diagnostics plugin
 
-Provides the helpful /resizer.debug page. Installed by default.
+The `/resizer.debug` page is provided by this plugin (which is installed by default)
 
 If you're not using IIS Integrated mode, you will need to access it via /resizer.debug.ashx
+
+## Diagnostics page not working?
 
 By default, the Diagnostics plugin uses the same setting as [customErrors](http://msdn.microsoft.com/en-us/library/h0hfz6fc.aspx) (which defaults to Localhost). Thus, if you can see ASP.NET error messages, you will also be able to get the diagnostics page. This ensures that the diagnostics page never exposes data to a host that doesn't already have access to detailed error messages. 
 

@@ -1,18 +1,10 @@
 
 # SimpleFilters plugin
 
-This plugin provides grayscale, sepia, brightness, and alpha filtering options.
+This plugin provides grayscale, sepia, brightness, saturation, contrast, inversion, and alpha filtering options.
 
 These filters are implemented as adjustment matrices and are processed by native code for very high performance.
 
-## Usage
-
-**Warning!! This URL syntax may change!!  It has not yet been finalized due to insufficient use cases.**
-
-* &filter=grayscale
-* &filter=sepia
-* &filter=brightness(.1) (-1..1) (Change .1 to the brightness offset you want)
-* &filter=alpha(.5)   (Change .5 to the alpha multiplier you want)
 
 ## Installation
 
@@ -20,3 +12,25 @@ Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet pac
 
 1. Add ImageResizer.Plugins.SimpleFilters.dll to your project
 2. Add `<add name="SimpleFilters" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+
+## Usage (v3.1+)
+
+**Note the order in which effects are applied *WILL CHANGE* in future releases** Don't combine them if you want repeatable results.
+
+**The names for these may also change in future releases**
+
+* &s.grayscale=y|ry|ntsc|bt709|flat  (ntsc and y are identical)
+* &s.sepia=true
+* &s.alpha= 0..1
+* &s.brightness=-1..1
+* &s.contrast=-1..1
+* &s.saturation=-1..1
+* &s.invert=true
+
+## Usage (Before v3.1)
+
+* &filter=grayscale
+* &filter=sepia (didn't work)
+* &filter=brightness(.1) (-1..1) (Change .1 to the brightness offset you want)
+* &filter=alpha(.5)   (Change .5 to the alpha multiplier you want)

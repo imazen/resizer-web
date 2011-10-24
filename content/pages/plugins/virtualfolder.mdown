@@ -14,5 +14,3 @@ Functions like an IIS virtual folder, but works within Visual Studio/Cassini web
 * VirtualPath can either be app-relative (~/folder) or domain-relative (/appfolder/folder).
 
 * PhysicalPath can be absolute (C:\folder\etc) or relative to the app physical path (..\Images).
-
-* This plugin is new, and not thoroughly tested.

@@ -52,8 +52,8 @@ If true, when a source file is changed, a new file will be created instead of ov
 This helps prevent file lock contention on high-traffic servers. Defaults to true. 
 Changes the hash function, so you should delete the cache folder whenever this setting is modified.
 
-
-False has the benefit of creating less 'cache trash', since extra files are not left around for a while.
+Never use 'False' in a Web Garden scenario - it will cause random failed requests. False may also cause rare failed requests during an overlapped recycle (which is the default for IIS). False may also cause failed requests if a source image is updated while the older version is still being streamed to clients, and those requests take over 'cacheAccessTimeout' seconds. 
+False has the benefit of creating less 'cache trash', since extra files are not left around for a while; however, the benefits rarely outweigh the disadvantages.
 
 ### enabled
 

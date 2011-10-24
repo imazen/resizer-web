@@ -6,7 +6,7 @@ Provides adjustable jpeg encoding, 32-bit PNG encoding with transparency support
 
 Jpeg quality defaults to 90, which is very good balance. You can override the setting by adding &quality=0-100
 
-You can choose the format with &format=png|jpg|gif
+You can choose the file format with &format=png|jpg|gif
 
 
 

@@ -1,7 +1,7 @@
 
 # Maturity chart
 
-Last updated Aug 13, 2011 regarding V3.0.12
+Last updated Oct 23, 2011 regarding V3.1
 
 This chart represents the author's honest opinion on the maturity of the various plugins.
 
@@ -16,33 +16,39 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * Core framework - *beta* (likely to have API refinements, but otherwise very stable)
 * DefaultEncoder - *stable*
 * NoCache - *stable*
-* Diagnostics - *beta*
+* Diagnostics - *stable*
 * ClientCache - *stable*
 * SizeLimiting - *stable*
 * DropShadow - *stable* 
-* Gradient - *alpha*
+* Gradient - *beta*
 * Image404 -  *beta*
 * VirtualFolder - *beta*
 * ImageHandlerSyntax - *alpha*
-* FolderResizeSyntax - *beta*
-* MvcRoutingShim - *alpha*
+* FolderResizeSyntax - *stable*
+* MvcRoutingShim - *beta*
+* AutoRotate - *beta*
+* Presets - *beta* 
+* SpeedOrQuality - *beta*
+* Logging - *alpha*
+
 
 ## Performance Bundle
 
 * PrettyGifs - *stable*
 * AnimatedGifs - *stable*
-* DiskCache - *stable*/*beta* (Stable with default settings, beta with autoClean=True)
-
+* DiskCache - *stable*
+* BatchZipper - *alpha*
 
 ## Designer Bundle
 
 
 * PsdReader - *beta*
-* Watermark - *alpha* (Backwards-incompatible changes may be coming, looking for feedback)
-* AdvancedFilters - *alpha*
-* SimpleFilters - *alpha* (Querystring API will be changing soon to allow filters to be combined)
-* SeamCarving - *alpha* 
-* WhitespaceTrimmer - *alpha*
+* Watermark - *beta*
+* AdvancedFilters - *beta*
+* SimpleFilters - *beta*
+* SeamCarving - *beta* 
+* WhitespaceTrimmer - *beta*
+* FreeImage - *alpha*
 
 ## Cloud Bundle
 
@@ -50,7 +56,7 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * S3Reader - *stable* (used by a large social networking site)
 * SQLReader - *stable* 
 * CloudFront - *stable* (Will have new API additions soon, but no breaking changes are expected)
-* RemoteReader - *alpha*
+* RemoteReader - *beta*
 * AzureReader - *alpha*
 
 <script type="text/javascript">
