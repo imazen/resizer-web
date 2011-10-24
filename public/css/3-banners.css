@@ -1,4 +1,4 @@
-.banners-wrap {
+/*.banners-wrap {
   margin: 0;
 }
 .banners {
@@ -7,13 +7,12 @@
   height: 340px;
 }
 
-/* So only the first banner is visible until the javascript loads */
+/* So only the first banner is visible until the javascript loads *
 div.banner{ display:none;}
 .jshowoff div.banner, div.first-banner{ display:block;}
+*/
 
-
-div.banner {
-  width: 930px;
+div.banner {/*  width: 930px;*/
   color: #dfdfdf;
 }
 
@@ -63,6 +62,46 @@ div.banner .image-block img, div.banner .text-left img {
       border: 1px solid #2f4c13;
       background: #4a781d url(../images/button-hover-bg.png) repeat-x; }
 
+
+/*bxSlider */
+
+
+
+/*start / stop*/
+.bx-auto {
+    text-align: center; 
+}
+
+.bx-start {
+    color: #f1eee7;
+    font-size: 14px;
+    background: #838383;
+    padding: 4px 7px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.bx-start:hover {
+    background: #525044;
+    text-decoration: none;
+}
+
+/*pager*/
+.bx-pager {
+    text-align: center;
+}
+
+.bx-pager a {
+    font-size: 16px;
+    color: #838383;
+    padding: 0 10px;
+}
+
+.bx-pager .pager-active,
+.bx-pager a:hover {
+    color: #de312a;
+    text-decoration: none;
+}
 
 
 /*-- jShowOff module styles -- */

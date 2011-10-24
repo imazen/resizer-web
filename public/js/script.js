@@ -12,9 +12,14 @@ hljs.tabReplace = '  ';
 hljs.initHighlightingOnLoad();
 
 $(function(){
-	$(".banners").jshowoff({speed:10000});
+	$(".banners").bxSlider({
+    auto: true,
+    pager: true,
+    pause: 3000
+  });
 	/*$('pre code').not('code[class]').each(function(i, e) {$(e).addClass('csharp c-sharp'); hljs.highlightBlock(e, '  ')});*/
 });
+
 
 $('a[href*="Resizer3"]').click(function(){
 	_gaq.push(['_trackEvent', 'Downloads', 'Releases', $(this).attr('href')]);
