@@ -25,7 +25,7 @@ The defaults are good - you don't actually need to specify any configuration.
 The following is what the default settings look like. Only specify what you need to change.
 
 	<diskCache dir="~/imagecache" autoClean="false" hashModifiedDate="true" enabled="true"
-	 subfolders="32" cacheAccessTimeout="15000" />
+	 subfolders="32" cacheAccessTimeout="15000" asyncWrites="false" asyncBufferSize="10485760" />
 	
 	<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" 
 		optimalWorkSegmentLength="00:00:04" 
@@ -72,6 +72,17 @@ For example, given a desired cache size of 100,000 items, this should be set to 
 ### cacheAccessTimeout
 
 Defaults to 15 seconds. How long to wait for a file lock to become available before giving up on the request.
+
+### asyncWrites (new in v3.1)
+
+When true, writes to the disk cache will occur on separate threads, permitting the request to complete faster in the case of a cache miss. 
+This adds a bit more overhead on the server, but makes the client experience more responsive. Very helpful on slow or overwhelmed I/O systems.
+
+### asyncBufferSize (new in v3.1)
+
+The number of bytes to allow used for the async write queue. Defaults to 10MB (10485760). This is the maximum amount of RAM that will be used for the write cache. 
+If this value would be exceeded, the disk cache switches to synchronous mode until the queue has emptied enough to permit another job to be added without exceeding the maximum.
+
 
 ## CleanupStrategy
 
