@@ -15,7 +15,8 @@ $(function(){
 	$(".banners").bxSlider({
     auto: true,
     pager: true,
-    pause: 3000
+		controls:false,
+    pause: 6000
   });
 	/*$('pre code').not('code[class]').each(function(i, e) {$(e).addClass('csharp c-sharp'); hljs.highlightBlock(e, '  ')});*/
 });

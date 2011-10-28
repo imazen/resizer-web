@@ -7,10 +7,12 @@
   height: 340px;
 }
 
-/* So only the first banner is visible until the javascript loads *
-div.banner{ display:none;}
-.jshowoff div.banner, div.first-banner{ display:block;}
-*/
+/* So only the first banner is visible until the javascript loads */
+div.banner{ display:none;
+	height:320px;
+	}
+.bx-wrapper div.banner, div.first-banner{ display:block;}
+
 
 div.banner {/*  width: 930px;*/
   color: #dfdfdf;
@@ -40,7 +42,7 @@ div.banner .image-block img, div.banner .text-left img {
     float: right;
     width: 512px;
     display: inline; 
-		text-shadow: 564px 0 32px white;
+		/*text-shadow: 564px 0 32px white;*/
 		
 }
 
@@ -72,54 +74,34 @@ div.banner .image-block img, div.banner .text-left img {
     text-align: center; 
 }
 
-.bx-start {
-    color: #f1eee7;
-    font-size: 14px;
-    background: #838383;
-    padding: 4px 7px;
-    border-radius: 3px;
-    text-transform: capitalize;
-}
-
-.bx-start:hover {
-    background: #525044;
-    text-decoration: none;
-}
-
 /*pager*/
 .bx-pager {
     text-align: center;
+		margin-bottom:10px;
 }
 
 .bx-pager a {
     font-size: 16px;
     color: #838383;
     padding: 0 10px;
+		text-decoration: none;
 }
 
 .bx-pager .pager-active,
 .bx-pager a:hover {
-    color: #de312a;
+    color: white;
     text-decoration: none;
 }
+/*
 
-
-/*-- jShowOff module styles -- */
-.jshowoff p.jshowoff-slidelinks {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin: 0;
-  padding: 0; }
-
-.jshowoff-slidelinks a, .jshowoff-controls a {
+a.pager-link{
 	background-color: transparent;
 	border: 1px solid #222222;
   border-radius: 30px;
 	-moz-border-radius: 30px;
   -webkit-border-radius: 30px;
 	color: #AAAAAA;
-  display: block;
+  
   padding: 5px 7px 5px;
   margin: 0px;
   text-decoration: none;
@@ -127,29 +109,10 @@ div.banner .image-block img, div.banner .text-left img {
   font-size: 12px;
   line-height: 12px; }
 
-.jshowoff-controls a {
-  font-size: 12px;
-  line-height: 15px;
-  padding: 4px 8px 5px; }
-
-
-.jshowoff-slidelinks a:hover, .jshowoff-controls a:hover ,.jshowoff-slidelinks a.jshowoff-active, .jshowoff-slidelinks a.jshowoff-active:hover {
+a.pager-link:hover, a.pager-active{
     background-color: #222;
     color: #aaa; 
-text-decoration:none;
+		text-decoration:none;
 }
+*/
 
-p.jshowoff-controls {
-	display:none;
-  overflow: auto;
-  height: 1%;
-  padding: 0 0 5px 5px;
-  margin: 0;
-  position: relative;
-  -moz-border-radius-bottomleft: 6px;
-  -moz-border-radius-bottomright: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-  -webkit-border-bottom-right-radius: 6px; }
-
-.jshowoff-pausetext {
-  color: white; }
