@@ -48,7 +48,10 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * SimpleFilters - *beta*
 * SeamCarving - *beta* 
 * WhitespaceTrimmer - *beta*
-* FreeImage - *alpha*
+* FreeImageDecoder - *alpha*
+* FreeImageEncoder - *alpha*
+* FreeImageResizer - *alpha*
+* FreeImageBuilder - *alpha*
 
 ## Cloud Bundle
 
@@ -58,6 +61,11 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * CloudFront - *stable* (Will have new API additions soon, but no breaking changes are expected)
 * RemoteReader - *beta*
 * AzureReader - *alpha*
+
+## Extras Bundle
+
+* BatchZipper - *alpha*
+* PsdComposer - *alpha*
 
 <script type="text/javascript">
 //<!--
