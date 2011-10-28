@@ -20,7 +20,7 @@ It is a wrapper for NLog, and as such, requires NLog.dll
   
 	  <targets  async="true" >
 	    <target name="resizer" xsi:type="File" fileName="${basedir}/Logs/Resizer.txt" />
-	    <target name="diskcache" xsi:type="File" fileName="${basedir}/Logs/Diskcache.txt" layout="${processid} ${threadid} ${time} ${message}"  />
+	    <target name="diskcache" xsi:type="File" fileName="${basedir}/Logs/Diskcache.txt" layout="${processid} ${pad:padCharacter= :padding=3:inner=${threadid}} ${time} ${message}"  />
 	  </targets>
 
 	  <rules>
