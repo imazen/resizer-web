@@ -6,15 +6,15 @@ Renderer: RubyPoweredMarkdown
 #Download <%= latest_release.heading %>
 
 <form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();" >
-<input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou" />
+<input type="hidden" name="redirect" value="<%= latest_release.metadata('FullFile') %>" />
 <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
 <h3 style="margin-bottom:0"> Notify me when important updates are available</h3>
-<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <input type="submit" name="Submit" value="Get notified (avg 8 per year)"/></p>
+<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <button type="submit" name="Submit" class="awesome black" >Subscribe and Download (avg 8 per year)</button></p>
 <input type="hidden" name="listid" value="29803"/><input type="hidden" name="specialid:29803" value="LH6H"/><input type="hidden" name="clientid" value="905228"/><input type="hidden" name="formid" value="2612"/><input type="hidden" name="reallistid" value="1"/><input type="hidden" name="doubleopt" value="0"/> 
 </form>
 
 
-This release contains [<%= latest_release.inline_summary %>](<%= latest_release.abspath %>). 
+[<%= latest_release.inline_summary %>](<%= latest_release.abspath %>) are included in this release. 
 
 <p>
 <a href="<%= latest_release.metadata('FullFile') %>" class="awesome green">Download source, binaries, plugins, and sample code (8MB)</a>
