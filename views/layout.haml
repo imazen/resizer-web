@@ -13,17 +13,21 @@
 		%meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		
 		:plain
-			<link rel="shortcut icon" href="/favicon.ico">
-			<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-			<link rel="stylesheet" href="/css/1-reset.css?v=2">
-			<link rel="stylesheet" href="/css/2-site.css?v=2">
-			<link rel="stylesheet" href="/css/3-banners.css?v=2">
-			<link rel="stylesheet" href="/css/main.css?v=2">
-			<link rel="stylesheet" href="/js/highlight/styles/vs.css">
+			<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+			<link rel="stylesheet" href="/css/1-reset.css?v=2" />
+			<link rel="stylesheet" href="/css/2-site.css?v=2" />
+			<link rel="stylesheet" href="/css/3-banners.css?v=2" />
+			<link rel="stylesheet" href="/css/main.css?v=2" />
+			<link rel="stylesheet" href="/js/highlight/styles/vs.css" />
 			<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
-	
+			- if @page and @page.metadata("jqueryui")
+				:plain
+					<link rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.6.custom.css"/>
+			- if @page and @page.metadata("jqueryui")
+				:plain
+					<link rel="stylesheet" href="/css/jquery.Jcrop.css" />
 		= local_stylesheet_link_tag('local')
 
 		%link(href="/articles.xml" rel="alternate" type="application/atom+xml")
@@ -35,11 +39,18 @@
 				= yield
 			= erubis :footer, :layout => false
 		:plain
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-			<script>!window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.5.2.min.js"%3E%3C/script%3E'))</script>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+			<script>!window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.6.2.min.js"%3E%3C/script%3E'))</script>
 			<script src="/js/jquery.bxSlider.min.js"></script>
 			<script src="/js/highlight/highlight.pack.js"></script>
+		- if @page and @page.metadata("jqueryui")
+			:plain
+				<script src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+		- if @page and @page.metadata("jcrop")
+			:plain
+				<script src="/js/jquery.Jcrop.min.js"></script>
 			<script src="/js/script.js"></script>
+
 		- if @page and @page.metadata("uservoice")
 			:plain
 				<script type="text/javascript">
