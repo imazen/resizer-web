@@ -245,3 +245,22 @@ html>body .t{
 
 .t dl.faq dt{font-weight:bold;}
 .t dl.faq dd{margin-bottom:1.5em;}
+
+
+.t input[type='submit']{
+	border: 1px solid #aaa;
+	padding:5px;
+	font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 16px; 
+	cursor:pointer;
+	background-color:white;
+}
+.t input[type='sumbit']:hover{
+	border: 1px solid #555;
+}
+.t input[type='text']{
+	padding: 5px; font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 16px; color: #666;
+	border: 1px solid #aaa;
+}
+.t input[type='text']:hover{
+	border: 1px solid #555;
+}
