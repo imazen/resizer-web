@@ -15,7 +15,7 @@ header{
 }
 
 header h1{
-	width:400px;
+	width:300px;
 	padding-top:6px;
 }
 header h1 a{
@@ -42,7 +42,7 @@ header .menu-wrap{
 header ul.menu{
 	float:left;
 	list-style-type:none;
-	width:557px;
+	width:600px;
 	color:#aaa;
 }
 

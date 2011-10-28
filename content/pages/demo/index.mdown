@@ -1,0 +1,7 @@
+jqueryui: true
+jcrop :true
+
+# Demo
+
+
+![](http://img.imageresizing.net/mountain.jpg?width=100)
