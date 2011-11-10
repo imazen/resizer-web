@@ -16,11 +16,11 @@ Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet pac
 
 ## Usage (v3.1+)
 
-**Note the order in which effects are applied *WILL CHANGE* in future releases** Don't combine them if you want repeatable results.
+**Note the order in which effects are applied *MAY CHANGE* in future releases**
 
 **The names for these may also change in future releases**
 
-* &s.grayscale=y|ry|ntsc|bt709|flat  (ntsc and y are identical)
+* &s.grayscale=true|y|ry|ntsc|bt709|flat  (true, ntsc, and y produce identical results)
 * &s.sepia=true
 * &s.alpha= 0..1
 * &s.brightness=-1..1
