@@ -3,4 +3,4 @@
 
 The ImageResizer is fully MVC (1-4) compatible, however, some routes may conflict with the ImageResizer URLs. 
 
-To resolve this conflict, simply install the [MvcRoutingShim](/plugins/mvcroutingshim) plugin. The MvcRoutingShim plugin prevents routes from messing with a request that is already being processed by the ImageResizer. 
+To resolve these conflicts, simply install the [MvcRoutingShim](/plugins/mvcroutingshim) plugin. The MvcRoutingShim plugin prevents routes from messing with a request that is already being processed by the ImageResizer. 
