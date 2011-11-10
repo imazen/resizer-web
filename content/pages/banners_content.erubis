@@ -5,7 +5,7 @@
 		
 	<div class="text-right">
 	<h2>Work less, do more</h2>
-	<p>Resize, crop, rotate, watermark, and modify images without ever leaving your code editor or browser, with a <strong>simple</strong> API.</p>
+	<p>Resize, crop, rotate, watermark, and modify images without ever leaving your browser or editor, with a <strong>simple</strong> API.</p>
 	<ul>
 		<li><strong>Query string API (all languages)</strong><br />
 			image.jpg?width=300
@@ -14,7 +14,7 @@
 	        ImageBuilder.Current.Build(source,destination,parameters)
 		</li>
 	</ul>
-	<p style="color:white">Stop managing multiple image versions. Stop the endless photoshop-upload-test cycle, and let images become the <em>easiest</em> part of your job.
+	<p style="color:white">Stop managing multiple versions. Stop the endless photoshop-upload-test cycle, and make images the <em>easiest</em> part of your job.
 		
 	</div>
 </div>
@@ -96,7 +96,7 @@
 		<p>No memory leaks. Optimized data streaming. Scale to millions of images and millions of requests with smart caching plugins</p>
 		</p>
 		<ul>
-			<li>Kiss high RAM/CPU/IO usage goodbye with our third-generation DiskCache plugin. Serve up to 100x more images per second.</li>
+			<li>Kiss high RAM/CPU/IO usage goodbye with our fifth-generation DiskCache plugin. Serve up to 100x more images per second.</li>
 		<!--	<li style="margin-top:1.5em">Cloudify with S3Cache.<br />
 			Asynchronously uploads resized images to an Amazon S3 bucket, while still serving the images quickly in the meantime. 
 			Drastically decreases server bandwidth usage, increases load scalability, and allows your server to focus on logic-intensive tasks instead  of drowning in mundane IO.
@@ -134,15 +134,15 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	  <img src="http://img.imageresizing.net/red-leaf.jpg;width=220;height=220;crop=auto;rotate=90;bgcolor=black;flip=h;borderWidth=5;borderColor=gray;paddingWidth=10" alt="featured" width="250px" height="250px"/>
 	</div>
 		
 	<div class="text-right">
 		<h2>Combine commands</h2>
 		<p>Every combination of commands is supported.</p>
 		
-		<p>This, for example, rotates 90 degrees, crops to a square, sizes to 300x300, flips horizontally, adds a 5 pixel gray border and a 10 pixel black padding.
-			</p><p><strong>?format=png &amp;width=300 &amp;height=300 &amp;crop=auto &amp;rotate=90 &amp;bgcolor=black &amp;flip=h &amp;borderWidth=5 &amp;borderColor=gray &amp;paddingWidth=10</strong></p>
+		<p>This, for example, rotates 90 degrees, crops to a square, sizes to 220x220, flips horizontally, adds a 5 pixel gray border and a 10 pixel black padding, and converts to PNG.
+			</p><p><strong>?format=png &amp;width=220 &amp;height=220 &amp;crop=auto &amp;rotate=90 &amp;bgcolor=black &amp;flip=h &amp;borderWidth=5 &amp;borderColor=gray &amp;paddingWidth=10</strong></p>
 	</div>
 </div>
 
