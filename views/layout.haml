@@ -41,15 +41,17 @@
 		:plain
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 			<script>!window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.6.2.min.js"%3E%3C/script%3E'))</script>
-			<script src="/js/jquery.bxSlider.min.js"></script>
+
 			<script src="/js/highlight/highlight.pack.js"></script>
+		- if @page and @page.lib("bxSlider")
+			:plain
+				<script src="/js/jquery.bxSlider.min.js"></script>
 		- if @page and @page.lib("jqueryui")
 			:plain
 				<script src="/js/jquery-ui-1.8.16.custom.min.js"></script>
 		- if @page and @page.lib("jcrop")
 			:plain
 				<script src="/js/jquery.Jcrop.min.js"></script>
-			<script src="/js/script.js"></script>
 		- if @page and @page.lib("tinybox")
 			:plain
 				<script src="/js/tinybox.js"></script>
@@ -101,5 +103,7 @@
 			:plain
 				<!-- Place this tag in your head or just before your close body tag -->
 				<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		:plain
+			<script src="/js/script.js"></script>
 
 

@@ -2,7 +2,7 @@ Template: home
 Menu: home
 Title: ASP.NET Image Resizing Module for IIS
 Renderer: RubyPoweredMarkdown
-Libs: uservoice, plusone
+Libs: uservoice, plusone, bxSlider
 
 #Quick start
 
