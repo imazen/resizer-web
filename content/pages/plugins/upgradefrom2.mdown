@@ -1,4 +1,4 @@
-ejunkie:true
+Libs: ejunkie
 
 # Upgrade from version 2
 

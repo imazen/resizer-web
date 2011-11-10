@@ -1,8 +1,6 @@
 Title: Plugins - Image Resizer
-ejunkie: true
-ejunkiecart:true
+Libs: ejunkie, ejunkiecart, uservoice
 Template: buy_page
-Uservoice: true
 
 #Plugins
 
