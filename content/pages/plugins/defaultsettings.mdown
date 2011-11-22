@@ -1,0 +1,28 @@
+# DefaultSettings plugin
+
+Allows you to specify the default settings to use when certain settings are omitted. Currently supports ScaleMode defaults. May be extended to allow defaults for other settings in the future - please [create an idea](http://resizer.uservoice.com) for additional features you'd like to see.
+
+
+## Installation
+
+1. Add `<add name="DefaultSettings" />` to the `<plugins />` section.
+
+## Configuration Syntax
+
+	<resizer>
+	...
+		<defaultsettings explicitSizeScaleMode="DownscaleOnly" maxSizeScaleMode="DownscaleOnly" />
+	...
+	</resizer>
+
+## Configuration reference
+
+* `explicitSizeScaleMode` is the default ScaleMode value to use when `width` and/or `height` are being used
+* `maxSizeScaleMode` is the default ScaleMode value to use when `maxwidth` and/or `maxheight` are being used, or when `mode`=`max`.
+
+### Valid ScaleMode values:
+
+* `DownscaleOnly` - The default. Only downsamples images - never enlarges. If an image is smaller than 'width' and 'height', the image coordinates are used instead.
+* `UpscaleOnly` - Only upscales (zooms) images - never downsamples except to meet web.config restrictions. If an image is larger than 'width' and 'height', the image coordinates are used instead.
+* `Both` -  Upscales and downscales images according to 'width' and 'height', within web.config restrictions.
+* `UpscaleCanvas` - When the image is smaller than the requested size, padding is added instead of stretching the image. `anchor` can be used to determine where the padding is added.
