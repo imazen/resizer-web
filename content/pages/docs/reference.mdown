@@ -1,33 +1,62 @@
 # Reference
 
+## Selecting a frame or page
 
-* **maxwidth, maxheight** – fit the image within the specified bounds, preserving aspect ratio. (Most often used)
-
-* **width, height** – force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.
-
-* **crop=auto** – Crop the image the the size specified by width and height. Centers and minimally crops to preserve aspect ratio.
-* **crop=(x1,y1,x2,y2)** – Crop the image to the specified rectangle on the source image. You can use negative coordinates to specify bottom-right relative locations.
-* **rotate=degress** – Rotate the image.
-* **bgcolor=color name | hex code (6-char).** Sets the background/whitespace color.
-* **stretch=fill** – Stretches the image to width and height if both are specified. This is the only way to lose aspect ratio.
-* **scale=both|upscaleonly|downscaleonly|upscalecanvas** – By default, images are never upscaled. Use &scale=both to grow an image.
-* **flip=h|v|both** – Flips the image after resizing.
-* **sourceFlip=h|v|both** – Flips the source image before resizing/rotation.
-* **paddingWidth=px & paddingColor=color|hex** paddingColor defaults to bgcolor, which defaults to white.
-* **borderWidth=px, borderColor=color|hex**
-
-* **colors=2-255** – Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit.
 * **frame=x** – Choose which frame of an animated GIF to display.
 * **page=x**– Choose which page of a multi-page TIFF document to display.
+
+## Rotation & flipping
+
+* **autorotate=true** Automatically rotates the image based on the EXIF info from the camera. (Install AutoRotate plugin)
+* **sflip=none|x|y|xy** Flips the source image prior to processing
+* **srotate=0|90|180|270** Rotates the source image prior to processing (only 90 degree intervals)
+* **rotate=degrees** – Rotate the image any arbitrary angle (occurs after cropping)
+* **flip=none|x|y|xy** - Flip the image after everything is done
+
+## Manual cropping
+
+* **crop=(x1,y1,x2,y2)** – Crop the image to the specified rectangle on the source image. You can use negative coordinates to specify bottom-right relative locations.
+* **cropxunits** The width the x1 and x2 coordinates are relative to. I.e, use '100' to make x1 and x2 percentages. Useful when you don't know the original image size.
+* **cropyunits** The height the y1 and y2 coordinates are relative to. I.e, use '100' to make y1 and y2 percentages. Useful when you don't know the original image size.
+
+
+## Sizing (and padding,autocropping, carving and stretchign)
+
+Please note that width/height/maxwidth/maxheight do NOT include border, margin, or padding widths, and do not include the extra space used by rotation. They constrain the image, not the canvas.
+
+* **maxwidth, maxheight** – fit the image within the specified bounds, preserving aspect ratio.
+* **width, height** – force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.
+* **mode=max|pad|crop|carve|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight.
+* **align=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to align the image when padding or cropping.
+* **scale=both|upscaleonly|downscaleonly|upscalecanvas** – By default, images are never upscaled. Use &scale=both to upscale images if they are smaller than width and height
+
+## Border, padding, margins and background colors
+
+* **bgcolor=color name | hex code (6-char).** Sets the background/whitespace color.
+
+* **paddingWidth=px & paddingColor=color|hex** paddingColor defaults to bgcolor, which defaults to white.
+* **borderWidth=px, borderColor=color|hex**
+* **margin=3 or margin=5,5,10,10** Specify a universal margin or left,top,right,bottom widths..
+
+## Output format
 * **format=jpg|png|gif** - The output format to use
 * **quality** - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly
+* **colors=2-255** – Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit. (PrettyGifs plugin required for GIFs)
+
+## Misc
+
 * **ignoreicc** - true|false. If true, the ICC profile embedded in the source image will be ignored.
 * **cache** - always|no|default - Always forces the image to be cached even if it wasn't modified by the resizing module. No disables caching even if it was.
 * **process** - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. No prevents the image from being modified.
+* **dpi=90|300|600** - The DPI at which the image should be printed. Ignored by all browsers, most operating systems, and most printers.
+
+## Autorotate plugin
+
+* **autorotate**=true - Automatically rotates the image based on the camera's exif orientation.
 
 ## Watermark plugin
 
-* **watermark** - The name of a file to overlay on the current image. 
+* **watermark** - The name of one or more watermark layers (or layer groups) to render.
 
 ## [Image404](/plugins/image404) plugin
 
@@ -42,20 +71,59 @@
 ## PrettyGifs plugin
 
 * **colors** - 2 to 256 (the number of colors to allow in the output image palette). For Gifs and 8-bit PNGs.
+* **dither**=true|false|4pass|30|50|79|[percentage] - How much to dither
 
 ## SimpleFilters plugin
 
-* **filter** - grayscale|sepia|alpha(value)|brightness(value) where value is a decimal between 0 and 1.
-
-Yeah, I know, you can't combine them. Working on it.
+* &s.grayscale=true|y|ry|ntsc|bt709|flat  (true, ntsc, and y produce identical results)
+* &s.sepia=true
+* &s.alpha= 0..1
+* &s.brightness=-1..1
+* &s.contrast=-1..1
+* &s.saturation=-1..1
+* &s.invert=true
 
 ## AdvancedFilters plugin
 
-* **blur** - integer, blur radius
-* **sharpen** - integer, sharpen radius
+* &a.blur=radius - Gaussian blur with adjustable radius:
+* &a.sharpen=radius - Gaussian sharpen with adjustable radius
+* &a.contrast=-1..1
+* &a.saturation=-1..1
+* &a.brightness=-1..1
+* &a.equalize=true - Adjusts contrast, saturation, and brightness with curves based on the histogram. Good for adjusting slightly foggy or dark daytime photos. 
+* &a.sepia=true - Sepia effect, slightly different from the one in SimpleFilters
+* &a.oilpainting=1..100 -Try `1` for impressionist, `100` for modern art ;)
+* &a.removenoise=1-100 - Not a blur effect - designed to remove color noise, 'pepper noise'. Very conservative, doesn't affect edges.
 
 ## DropShadow plugin
 
 * **shadowWidth** - width of the shadow
 * **shadowOffset** - (x,y) how to offset the drop shadow
 * **shadowColor** - named or hex color of the shadow
+
+## SpeedOrQuality plugin
+
+* **speed**=0..5 - The amount of quality to sacrifice for speed - each value uses different settings and techniques, and may not support all features.
+
+## Presets plugin
+
+* **preset**=name1,name2,name3 - A list of preset settings groups to apply. 
+
+## WhitespaceTrimmer plugin
+
+* **trim.threshold=80** - The threshold to use for trimming whitespace
+* **trim.percentpadding=0.5** - The percentage of padding to restore after trimming
+
+## WicBuilder & FreeImageBuilder
+
+* **builder=freeimage|wic** - Enables the FreeImage or Wic pipeline instead of the default GDI pipeline. Special effect plugins not supported.
+
+## FreeImageDecoder, WicDecoder
+
+These act as fallback decoders, but you can tell them to try first by using 
+
+* **decoder=wic|freeimage**
+
+## FreeImageEncoder, WicEncoder
+
+* **subsampling**==444|422|420
