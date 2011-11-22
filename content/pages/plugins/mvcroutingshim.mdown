@@ -6,6 +6,8 @@ Included in 3.0.12+
 
 ## Installation
 
+Either run `Install-Package ImageResizer.MvcWebConfig` in the NuGet package manager (this will also install the HttpModule settings), or:
+
 1. Add a reference to ImageResizer.Mvc.dll, or run "Install-Package ImageResizer.Mvc" in the NuGet package manager.
-2. Add `<add name="MvcRoutingShim">` in the `<plugins />` section of Web.config. (The NuGet package doesn't add this automatically).
+2. Add `<add name="MvcRoutingShim" />` in the `<plugins />` section of Web.config. (The NuGet package doesn't add this automatically).
 	
