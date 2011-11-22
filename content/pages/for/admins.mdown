@@ -2,9 +2,9 @@
 
 99% of the power of the Dynamic Image Resizing Module can be accessed through the querystring - simple name and value pairs. 
 
-Everything is configurable via XML, and there are examples so you can copy & paste.
+You can drop this product into ANY IIS-hosted website, and users will immediately be able to do dynamic resizing. 
 
-You don't need to write a line of code.
+Everything is configurable via XML, and there are examples so you can copy & paste. No coding required. 
 
 ## Usage
 
