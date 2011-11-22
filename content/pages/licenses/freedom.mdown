@@ -9,6 +9,7 @@ Used by the Resizer Core and the [17+ free plugins](/plugins) in the ImageResize
 No restrictions, except you can't use my own code to compete with my own products.
 
 Permitted actions
+
  * Usage
  * Modification
  * Redistribution

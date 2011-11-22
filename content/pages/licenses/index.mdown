@@ -21,9 +21,9 @@ Development of this project is funded by people purchasing [Pro][pro] (<span cla
  * [Resizer Enterprise][enterprise]: You buy this for business-wide use. $250 per bundle.
  * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] or [Enterprise][enterprise] licenses, for use as part of a delivered project.
 
-If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **support@imageresizing.net** for details.
-
 I have written every license to provide maximum freedom, minimum restrictions, and maximum simplicity. 99% of use cases should be covered, I hope. 
+
+If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **support@imageresizing.net** for details.
 
 [freedom]: /licenses/freedom  "Resizer Freedom License"
 [trial]: /licenses/trial  "Resizer Trial License"

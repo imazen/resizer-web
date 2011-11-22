@@ -24,7 +24,7 @@ These can all be found in the ImageResizer.Plugins.Basic namespace
 * **[ImageHandlerSyntax](/plugins/imagehandlersyntax)** - Migrate websites from other image resizing handlers without breaking any URLs.
 * **[SpeedOrQuality](/plugins/speedorquality)** - Gain a 15-30% speed boost by sacrificing rendering quality.
 * **[Presets](/plugins/presets)** - Created named settings groups and and reference them with ?preset=name instead of specifying them all in the URL
-* **[AutoRotate](/plugins/autorotate)** - Created named settings groups and and reference them with ?preset=name instead of specifying them all in the URL
+* **[AutoRotate](/plugins/autorotate)** - Use the EXIF rotation data from the camera to auto-rotate your images.
 * **[DefaultSettings](/plugins/defaultsettings)** - Allows you to configure the default setting values when commands (like `scale`) are omitted
 
 These plugins are in separate assemblies due to their dependencies
