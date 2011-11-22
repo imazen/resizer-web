@@ -2,7 +2,7 @@ title: Licenses - Image Resizer
 
 #Licenses
 
-The core and [the 16 basic plugins](/plugins/free) are free and open-source. No strings attached. They are under [a modified MIT license called the Freedom license][freedom]. No restrictions, no money.
+The core and [the 17 basic plugins](/plugins/free) are free and open-source. No strings attached. They are under [a modified MIT license called the Freedom license][freedom]. No restrictions, no money.
 
 Development of this project is funded by people purchasing [Pro][pro] (<span class="price">$99</span>) and [Enterprise][enterprise] (<span class="price">$250</span>) licenses to the [3 paid plugin bundles](/plugins). Both Pro and Enterprise licenses are as MIT-like as possible, allowing redistribution, modification, and sub-licensing. 
 
@@ -10,9 +10,9 @@ Development of this project is funded by people purchasing [Pro][pro] (<span cla
 
  * If it is in the ImageResizer.Plugins.Basic namespace, it is under the [Freedom license][freedom]. 
  * All sample source code is under the [Freedom license][freedom].
- * If it is part of ImageResizing.dll or ImageResizing.Mvc.dll, then it's under the [Freedom license][freedom].
- * If the dll is named ImageResizing.Plugins.something.dll, it's probably a [paid plugin](/plugins).
- * Except for ImageResizing.Plugins.Logging.dll, which is also under the [Freedom license][freedom].
+ * If it is part of ImageResizer.dll or ImageResizer.Mvc.dll, then it's under the [Freedom license][freedom].
+ * If the dll is named ImageResizer.Plugins.something.dll, it's probably a [paid plugin](/plugins).
+ * Except for ImageResizer.Plugins.Logging.dll, which is also under the [Freedom license][freedom].
 
 # List of licenses available for paid bundles
 
