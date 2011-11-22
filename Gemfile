@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-if ENV['LOGNAME'] == "nathanael1"
+if ENV['LOGNAME'] == "nathanael2"
 	gem 'nesta', :path => "../nesta"
 	gem 'nesta-plugin-simplicity', :path => "../nesta-plugin-simplicity"
 	gem 'nesta-plugin-tags', :path => "../nesta-plugin-tags"
