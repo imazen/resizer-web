@@ -7,7 +7,7 @@
 
 ## Rotation & flipping
 
-* **autorotate=true** Automatically rotates the image based on the EXIF info from the camera. (Install AutoRotate plugin)
+* **autorotate=true** Automatically rotates the image based on the EXIF info from the camera. (Requires the [AutoRotate plugin](/plugins/autorotate))
 * **sflip=none|x|y|xy** Flips the source image prior to processing
 * **srotate=0|90|180|270** Rotates the source image prior to processing (only 90 degree intervals)
 * **rotate=degrees** – Rotate the image any arbitrary angle (occurs after cropping)
@@ -20,7 +20,7 @@
 * **cropyunits** The height the y1 and y2 coordinates are relative to. I.e, use '100' to make y1 and y2 percentages. Useful when you don't know the original image size.
 
 
-## Sizing (and padding,autocropping, carving and stretchign)
+## Sizing (and padding, autocropping, carving and stretching)
 
 Please note that width/height/maxwidth/maxheight do NOT include border, margin, or padding widths, and do not include the extra space used by rotation. They constrain the image, not the canvas.
 
@@ -41,7 +41,7 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 ## Output format
 * **format=jpg|png|gif** - The output format to use
 * **quality** - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly
-* **colors=2-255** – Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit. (PrettyGifs plugin required for GIFs)
+* **colors=2-255** – Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit. ([PrettyGifs plugin](/plugins/prettygifs) required)
 
 ## Misc
 
@@ -50,30 +50,26 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 * **process** - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. No prevents the image from being modified.
 * **dpi=90|300|600** - The DPI at which the image should be printed. Ignored by all browsers, most operating systems, and most printers.
 
-## Autorotate plugin
-
-* **autorotate**=true - Automatically rotates the image based on the camera's exif orientation.
-
-## Watermark plugin
+## [Watermark plugin](/plugins/watermark)
 
 * **watermark** - The name of one or more watermark layers (or layer groups) to render.
 
-## [Image404](/plugins/image404) plugin
+## [Image404 plugin](/plugins/image404)
 
 * **404** - The path to the fallback image, or a named preset
 
-## [Gradient](/plugins/gradient) plugin
+## [Gradient plugin](/plugins/gradient)
 
 * **color1,color2** - 6 or 8 digit hex values specifying the start and end gradient colors. 
 * **angle** - 0 is horizontal. Degrees to rotate the gradient
 * **width/height** - the size of the gradient image
 
-## PrettyGifs plugin
+## [PrettyGifs plugin](/plugins/prettygifs)
 
 * **colors** - 2 to 256 (the number of colors to allow in the output image palette). For Gifs and 8-bit PNGs.
 * **dither**=true|false|4pass|30|50|79|[percentage] - How much to dither
 
-## SimpleFilters plugin
+## [SimpleFilters plugin](/plugins/simplefilters)
 
 * &s.grayscale=true|y|ry|ntsc|bt709|flat  (true, ntsc, and y produce identical results)
 * &s.sepia=true
@@ -83,7 +79,7 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 * &s.saturation=-1..1
 * &s.invert=true
 
-## AdvancedFilters plugin
+## [AdvancedFilters plugin](/plugins/advancedfilters)
 
 * &a.blur=radius - Gaussian blur with adjustable radius:
 * &a.sharpen=radius - Gaussian sharpen with adjustable radius
@@ -95,35 +91,37 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 * &a.oilpainting=1..100 -Try `1` for impressionist, `100` for modern art ;)
 * &a.removenoise=1-100 - Not a blur effect - designed to remove color noise, 'pepper noise'. Very conservative, doesn't affect edges.
 
-## DropShadow plugin
+## [DropShadow plugin](/plugins/dropshadow)
 
 * **shadowWidth** - width of the shadow
 * **shadowOffset** - (x,y) how to offset the drop shadow
 * **shadowColor** - named or hex color of the shadow
 
-## SpeedOrQuality plugin
+## [SpeedOrQuality plugin](/plugins/speedorquality)
 
 * **speed**=0..5 - The amount of quality to sacrifice for speed - each value uses different settings and techniques, and may not support all features.
 
-## Presets plugin
+## [Presets plugin](/plugins/presets)
 
 * **preset**=name1,name2,name3 - A list of preset settings groups to apply. 
 
-## WhitespaceTrimmer plugin
+## [WhitespaceTrimmer plugin](/plugins/whitespacetrimmer)
 
 * **trim.threshold=80** - The threshold to use for trimming whitespace
 * **trim.percentpadding=0.5** - The percentage of padding to restore after trimming
 
-## WicBuilder & FreeImageBuilder
+## [WicBuilder](/plugins/wic) & [FreeImageBuilder](/plugins/freeimage)
 
 * **builder=freeimage|wic** - Enables the FreeImage or Wic pipeline instead of the default GDI pipeline. Special effect plugins not supported.
 
-## FreeImageDecoder, WicDecoder
+## [FreeImageDecoder](/plugins/freeimage), [WicDecoder](/plugins/wic)
 
 These act as fallback decoders, but you can tell them to try first by using 
 
 * **decoder=wic|freeimage**
 
-## FreeImageEncoder, WicEncoder
+## [FreeImageEncoder](/plugins/freeimage), [WicEncoder](/plugins/wic)
+
+In addition to jpeg quality and gif/png colors, you can configure the jpeg subsampling for both Wic and FreeImage.
 
 * **subsampling**==444|422|420
