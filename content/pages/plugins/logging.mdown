@@ -6,10 +6,13 @@ It is a wrapper for NLog, and as such, requires NLog.dll
 
 ## Installation
 
+Either run `Install-Package ImageResizer.Plugins.Logging` in the NuGet package manager, or:
 
-* Add ImageResizer.Plugins.Logging.dll and to your project. NLog.dll is also needed, but doesn't have to be referenced directly - it should be automatically copied if you are using Visual Studio. If not, copy it to the /bin folder as well
-* Add `<add name="Logging" />` inside `<plugins></plugins>` in Web.config.
-* Add a configuration section for NLog and configure logging:
+1. Add ImageResizer.Plugins.Logging.dll to your project. NLog.dll is also needed, but doesn't have to be referenced directly - it should be automatically copied if you are using Visual Studio. If not, copy it to the /bin folder as well
+2. Add `<add name="Logging" />` inside `<plugins></plugins>` in Web.config.
+
+
+NuGet or not, you'll need to manually add a configuration section for NLog and configure logging rules & targets:
 
 	<configSections>
 	  <section name="resizer" type="ImageResizer.ResizerSection"/>
