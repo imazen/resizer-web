@@ -1,5 +1,4 @@
 /
-demo/
 download
   /releases/2-8
   /releases/3-alpha-2
