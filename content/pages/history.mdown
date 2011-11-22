@@ -28,8 +28,6 @@ It also introduced a dedicated configuration section for the Resizer and its plu
 
 V3 was released [Apr. 24](/releases/3-alpha-2) after 4 months of coding and testing. [Alpha 7](/releases/3-alpha-7) was released May 26, and I back-ported many bug fixes to V2 with the [May 27, 2011 release of 2.8](/releases/2-8). A collection of pages on the V2 to V3 differences is [available here](/docs/2to3/).
 
-Although the package is labeled 'alpha', most components of V3 are already stable. Only [certain optional plugins are alpha](/plugins/maturity). 
-
 The V3 core is under [an MIT-like license](/licenses/freedom). This license is much clearer than the V2 license (something I had lots of complaints and confusion about). 
 
 Some V3 plugins are under a [slightly more restrictive license](/licenses), but even those give you redistribution and sub-licensing rights. If your project needs a different license, [contact me](/support). I'm flexible about licensing, and I can probably get you what you need.
