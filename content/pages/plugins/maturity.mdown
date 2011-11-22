@@ -1,15 +1,18 @@
 
 # Maturity chart
 
-Last updated Oct 23, 2011 regarding V3.1
+Last updated Nov 10, 2011 regarding V3.1
 
-This chart represents the author's honest opinion on the maturity of the various plugins.
+This chart represents the author's honest opinion on the maturity of the various plugins. 
 
-* *alpha* - There may be API changes coming, and these have a higher likelihood of bugs.
-* *beta* - Significant testing has occurred, unlikely to undergo big changes or have severe bugs.
-* *stable* - Extremely well tested, reliable, and API changes would be unlikely.
+Meaning of the terms *stable*, *beta*, and *alpha* in the context of this project.
 
-Note that my 'beta' equals most people's idea of 'stable'.
+* *stable* - Extremely well tested, reliable, and API changes would be unlikely. Very high confidence rating.
+* *beta* - Lots of testing has occurred, and the plugin has had a significant user base for several months.
+* *alpha* - Either (a) the plugin has a very small user base (AzureReader, BatchZipper, PsdComposer), or (b) the plugin is fewer than 2 months old, and therefore hasn't endured enough real-world usage for long enough to be classified as *beta* or *stable*.
+
+You shouldn't worry about using alpha plugins on production servers; even alpha-rated plugins have undergone extensive security assessment and memory usage profiling. It's very unlikely an alpha plugin will cause external issues - at worst, it may simply not function properly in  certain usage scenarios. Also, remember... Free Support! Alpha plugins get the same level of support that the rest do.
+
 
 ## Core 
 
@@ -20,16 +23,17 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * ClientCache - *stable*
 * SizeLimiting - *stable*
 * DropShadow - *stable* 
-* Gradient - *beta*
+* Gradient - *stable*
+* FolderResizeSyntax - *stable*
 * Image404 -  *beta*
 * VirtualFolder - *beta*
-* ImageHandlerSyntax - *alpha*
-* FolderResizeSyntax - *stable*
+* ImageHandlerSyntax - *beta*
 * MvcRoutingShim - *beta*
 * AutoRotate - *beta*
 * Presets - *beta* 
-* SpeedOrQuality - *beta*
+* SpeedOrQuality - *alpha*
 * Logging - *alpha*
+* DefaultSettings - *alpha*
 
 
 ## Performance Bundle
@@ -37,10 +41,8 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * PrettyGifs - *stable*
 * AnimatedGifs - *stable*
 * DiskCache - *stable*
-* BatchZipper - *alpha*
 
 ## Designer Bundle
-
 
 * PsdReader - *beta*
 * Watermark - *beta*
@@ -52,17 +54,20 @@ Note that my 'beta' equals most people's idea of 'stable'.
 * FreeImageEncoder - *alpha*
 * FreeImageResizer - *alpha*
 * FreeImageBuilder - *alpha*
+* WicDecoder - *alpha*
+* WicEncoder - *alpha*
+* WicBuilder - *alpha*
 
 ## Cloud Bundle
 
 
-* S3Reader - *stable* (used by a large social networking site)
+* S3Reader - *stable*
 * SQLReader - *stable* 
-* CloudFront - *stable* (Will have new API additions soon, but no breaking changes are expected)
+* CloudFront - *stable*
 * RemoteReader - *beta*
 * AzureReader - *alpha*
 
-## Extras Bundle
+## Intense Bundle
 
 * BatchZipper - *alpha*
 * PsdComposer - *alpha*
