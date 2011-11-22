@@ -11,6 +11,8 @@ Unless listed below, everything runs under .NET 2.0 SP2 (although fully compatib
 * BatchZipper
 * PsdReader
 * S3Reader
+* Wic
+* ImageResizer.mvc
 
 
 ## Samples that use .NET 3.5 and 4.0
@@ -22,3 +24,4 @@ Unless listed below, everything runs under .NET 2.0 SP2 (although fully compatib
 
 Visual Studio 2010 is suggested for opening the sample projects and source code, although you can use 2008 if you rebuild the project files.
 
+Visual Studio 2005 can be used to build the ImageResizer core project and many of the plugins. As before, you'll need to create a new project and add the existing code files into it.
