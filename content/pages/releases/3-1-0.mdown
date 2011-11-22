@@ -1,66 +1,66 @@
 Date: November 20, 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip
 MinFile: http://downloads.imageresizing.net/Resizer3-0-12-min-Aug-15-2011.zip
-Summary: 6 bug fixes, raw support, and 1 breaking change (renaming the FriendlyUrls plugin)
+Summary: 5 new free plugins, 4 new paid plugins, 5 rewritten plugins, and 5 bug fixes.
 Tags: releases
-Flags: hidden
+Template: release
+
 
 # Resizer 3.1 alpha - Nov 20 2011
 
+If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now](/plugins/friendlyurls), and is no longer included as a separate dll.
+
+
 ### Changes since [3.0.13 (Oct 12)](/releases/3-0-13)
 
-If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now](/plugins/friendlyurls).
-
+As nearly all plugins were modified in this release, please refer to the individual plugin-specific sections below to see how you might be affected.
 
 This version adds the following free plugins:
 
-* SpeedOrQuality - Sacrifice quality for more speed, if you dare.
-* Logging
-* DefaultSettings - Decide which ScaleMode setting should be the default, and for which situations.
-* Presets - Create preset setting groups in Web.config and use them from the URL.
-* AutoRotate - Automatically rotate the image based on the camera's gravity sensor data, with `&autorotate=true`
+* [SpeedOrQuality](/plugins/speedorquality) - Sacrifice quality for 10-40% more speed, if you dare.
+* [DefaultSettings](/plugins/defaultsettings) - Decide which ScaleMode setting should be the default, and for which situations.
+* [Presets](/plugins/presets) - Create preset setting groups in Web.config and use them from the URL.
+* [AutoRotate](/plugins/autorotate) - Automatically rotate the image based on the camera's gravity sensor data, with `&autorotate=true`
+* [Logging](/plugins/logging) - NLog wrapper
 
-And the following plugins to the Design bundle
+The Design bundle gets the these new plugins. If you've already bought the Design bundle, you get these for free!
 
-* WicEncoder
-* WicDecoder
-* WicBuilder
-* FreeImageResizer
+* [WicEncoder](/plugins/wic) - Encode jpegs with adjustable quality and subsampling settings. Encode GIFs and 8-bit PNGs with adjustable palette size and bit depth.
+* [WicDecoder](/plugins/wic) - Decode images using any WIC-enabled codec installed on the computer
+* [WicBuilder](/plugins/wic) - Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request bass.
+* [FreeImageResizer](/plugins/freeimage) - Adds support for Lanczos3 and CatmullRom scaling algorithms: &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos command
 
-## New features
- 
-* New SpeedOrQuality plugin offers a 10-30% performance boost in exchange for reduced image quality. 
-
-* The new ImageBuilder.Build(Job job) overload allows you more control over how streams are handled - you can even choose to dispose the destination stream when the job is complete, or restore the position of the original stream.
-
-
-## Core
+## New features in ImageResizer.dll 
 
 * New, simplified way to control how aspect ratio changes are handled. `mode=max|pad|crop|stretch|carve` provides a single command to handle the situation - easier to remember than `maxwidth` vs `width`, `crop=auto`, `stretch=fill`, and `carve=true`. Although, as always, everything is fully backwards-compatible. Examples: `?maxwith=10&maxheight=10` is equivalent to `?width=10&height=10&mode=max`. 
 * &scale=down|up|canvas are now shortcuts for downscaleonly,  upscaleonly, and upscalecanvas
-
-* Diagnostics page has dozens of new checks to ensure you've configured everything for optimal performance. 
 * Control how images are cropped or padded (when the aspect ratio is being modified) using the `anchor` command:  &anchor=topleft|bottomright|middlecenter... 
 * Set the print density of an output image with `&dpi=96|300|600`. No browsers support this, but a few printers do. Default is 96.  See [this article on why the DPI (resolution) setting is worthless](http://apptools.com/examples/dpi.php).
 * You can now perform a source flip on an image using `sFlip` instead of `sourceFlip`, although the longer name is also supported.
+* You can now rotate the source image in 90 degree intervals using `sRotate`. This is useful if you'd like to rotate prior to doing a manual crop.
 * ResizeSetting now accepts semicolon-delimited strings in its constructor. Yay for readability!
-* Added member ResizeSettings.Quality
+* Added performance optimization for resizing non-transparent to non-transparent images with no padding.
+* The new ImageBuilder.Build(Job job) overload allows you more control over how streams are handled - you can even choose to dispose the destination stream when the job is complete, or restore the position of the original stream.
+* Diagnostics page has dozens of new checks to ensure you've configured everything for optimal performance. 
 
-ImageBuilder: reintroduced performance optimization for non-transparent to non-transparent images with no padding. Added support for sRotate. Made byte[] array sources re-accessible after being wrapped in MemoryStream. Moved 'source->stream' object simplification to  GetStreamFromSource method. (needs refactoring).
+For a list of API changes that affect plugin developers, see the bottom of the page.
 
-## PrettyGifs
+
+## [DiskCache](/plugins/diskcache)
+
+* Added beta support for async writes. Enable by setting `asyncWrites=true` on the `<diskcache>` element. The async buffer size defaults to a maximum of 10MB, but can be changed with the `asyncBufferSize` setting (which is in bytes). Async writes can greatly improve performance if you have a slow, overloaded, or high-latency hard disk/SAN.
+* Fixed bug in LockProvider where a failed image resizing request would cause the lock provider to fail to remove the lock object for the request from the dictionary. If you have millions of failed requests during a single app pool cycle, this could cause reduced performance an higher RAM usage.
+* Added support for cooperative cache cleanup, using a mutex to prevent more than one processes from cleaning the same folder at the same time. Should help support extended overlapped recycles and web garden scenarios.
+* Added support for recovering from another process writing to the same cache file at the same time. Only works in `hashModifiedDate=true` mode.
+* Added optional logging support so you can see exactly what is happening with the cache in real-time
+
+
+## [PrettyGifs](/plugins/prettygifs)
 
 * Fixed bug where an OverflowException would occur when generating a GIF or 8-bit PNG file on a 64-bit server, but only when over 4GB of ram was in use.
 
 
-## Logging
-
-* New Logging system - the Config.Current.Plugins.LogManager property and the Config.Current.Plugins.LoggingAvailable event allow plugins to support logging without having NLog as a dependency.
-* New Logging plugin provides an NLog-based implementation of the logging system. This allows logging to be supported, but not required - no extra dependencies or overhead unless you add the Logging plugin!.
-* The DiskCache plugin now supports detailed (optional) logging. Enabled by setting `<diskcache logging="true"/>`, installing the Logging plugin, and configuring NLog. 
-
-
-## Watermark plugin
+## [Watermark](/plugins/watermark) plugin
 
 We admit, the original Watermark plugin was pretty sad. 
 
@@ -80,19 +80,24 @@ The new one isn't. Here are a few of the new features
 
 Oh, and guess what - it's fully backwards compatible. You can take advantage of the new features while still supporting your old code and URLs. You can migrate your old code to the new XML syntax at your leisure. Your URLs don't ever need to be changed.
 
-## CloudFront
 
-* Now supports automatic redirection (when configured)- enforce usage of edge caching without modifying your URLs. While this will improve server throughput, response times may not improve.
+## [SimpleFilters](/plugins/simplefilters)
 
-## FreeImage
+* Added support for combining multiple filters
+* Added adjustable grayscale conversion
+* Added brightness, contrast, and saturation adjustment settings ("s.brightness", "s.contrast", "s.saturation")
+* Fixed broken sepia filter
+* Added invert filter
 
-Breaking changes
+## [FreeImage](/plugins/freeimage)
+
+###Breaking changes
 
 * FreeImageEncoder no longer acts as the default encoder. To enable, use `encoder=freeimage` in the request URL.
 * FreeImageBuilder is no longer activated via &freeimage=true. To activate, use `builder=freeimage`.
 * FreeImageDecoder can be requested as the primary decoder with `decoder=freeimage` instead of `freeimage=true`. As always, it is a default fallback decoder if the other decoders can't handle the stream.
 
-The good news
+###The good news
 
 * Got a customized version of FreeImage based on libjpeg-turbo. 2-4x faster jpeg encoding and decoding!
 * Improved overall performance of non freeimage-related requests when a FreeImage plugin was installed by reordering some statements.
@@ -100,20 +105,18 @@ The good news
 * Now works with COM clients such as ASP
 * FreeImageBuilder now supports all the standard 'source' and 'dest' formats (except Bitmap), plus all the standard parameters.
 * Added FreeImageResizer plugin, with &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos command. Uses GDI resizing afterwards for cases where stretching or rotation occurs. Useful if you need a high-quality upscaling algorithm or something a bit more specialized than GDI's 2-pass bicubic algorithm.
-
-
 * FreeImageBuilder longer rescales image unless needed.
 * FreeImageEncoder now supports `quality=10|25|50|75|100`, `subsampling=444|422|420|411`, and `progressive=true` for adjusting jpeg encoding!
 * FreeImageDecoder and FreeImageBuilder now support &autorotate=true
 
-## CloudFront
+## [CloudFront](/plugins/cloudfront)
 
 * Now supports (optional) automatic redirection - change a setting to redirect all image traffic through a CloudFront distribution. `<cloudfront redirectThrough="http://cdn.mysite.com/" redirectPermanent="false /">`
 * Fixed bug - now handles folders with a '.' in them properly, i.e, /folder.ext/file.ext;width=100 (ASP.NET's PathInfo madness...).
 * Now merges query strings during PreAuthorizeEvent instead of at RewriteDefaults, which should be more expected. 
 * Now plays nice with other PreRewritePath and ModifiedQueryString stuff that may be registered.
 
-## SqlReader
+## [SqlReader](/plugins/sqlreader)
 
 * Now completely configurable via XML
 * Added RequireImageExtension, CacheUnmodifiedFiles, and UntrustedData settings
@@ -131,12 +134,7 @@ Also added complete XML configurability.
 .getDateModifiedUtc -> GetDateModifiedUtc
 .getIdFromPath -> ParseIdFromVirtualPath
 
-
-## S3Reader
-
-* Can now fallback to IVirtualImageProvider if security restrictions prevent it registering as a VirtualPathProvider. Or, you can manually request it only register as an IVirtualPathProvider by setting `vpp="false"`. IVirtualImageProviders can only provide files to the image resizer.
-
-## AzureReader
+## [AzureReader](/plugins/azurereader)
 
 * Can now fallback to IVirtualImageProvider if security restrictions prevent it registering as a VirtualPathProvider. Or, you can manually request it only register as an IVirtualPathProvider by setting `vpp="false"`. IVirtualImageProviders can only provide files to the image resizer.
 * Can now use lazy blob existence checking to increase performance. Use `lazyExistenceCheck=true` to enable (warning: untested).
@@ -144,38 +142,25 @@ Also added complete XML configurability.
 * Fixed bug where images outside the prefix directory were assumed to be image files
 * Now a nuget package
 
-## RemoteReader
+## [S3Reader](/plugins/s3reader)
 
+* Can now fallback to IVirtualImageProvider if security restrictions prevent it registering as a VirtualPathProvider. Or, you can manually request it only register as an IVirtualPathProvider by setting `vpp="false"`. IVirtualImageProviders can only provide files to the image resizer.
+
+## [RemoteReader](/plugins/remotereader)
 
 * RemoteReader: Now overrides GetStream() instead of PreLoadImage() so that it can be used across all pipelines. Added support for underscores instead of periods in the domain name of the 'friendly' syntax. Allows users to avoid peculiar IIS configurations.
 
-## ImageHandlerSyntax
+## [ImageHandlerSyntax](/plugins/imagehandlersyntax)
 
 * WebImageResizer compatibility - now supports grayscale and invert commands when the SimpleFilters plugin is installed.
 
-## SimpleFilters
+## [Logging](/plugins/logging)
 
-* Added beta support for "s.grayscale", "s.sepia", "s.alpha", "s.brightness", "s.contrast", "s.saturation", and "s.invert"
+* New Logging system - the Config.Current.Plugins.LogManager property and the Config.Current.Plugins.LoggingAvailable event allow plugins to support logging without having NLog as a dependency.
+* New Logging plugin provides an NLog-based implementation of the logging system. This allows logging to be supported, but not required - no extra dependencies or overhead unless you add the Logging plugin!.
+* The DiskCache plugin now supports detailed (optional) logging. Enabled by setting `<diskcache logging="true"/>`, installing the Logging plugin, and configuring NLog. 
 
-# DiskCache
-
-* Added beta support for async writes. Enable by setting `asyncWrites=true` on the `<diskcache>` element. The async buffer size defaults to a maximum of 10MB, but can be changed with the `asyncBufferSize` setting (which is in bytes). Async writes can greatly improve performance if you have a slow, overloaded, or high-latency hard disk/SAN.
-
-* Fixed bug in LockProvider where a failed image resizing request would cause the lock provider to fail to remove the lock object for the request from the dictionary. If you have millions of failed requests during a single app pool cycle, this could cause reduced performance an higher RAM usage.
-	
-* Added support for cooperative cache cleanup, using a mutex to prevent more than one processes from cleaning the same folder at the same time. Should help support extended overlapped recycles and web garden scenarios.
-
-* Added support for recovering from another process writing to the same cache file at the same time. Only works in `hashModifiedDate=true` mode.
-* Added optional logging support so you can see exactly what is happening with the cache in real-time
-
-
-## Bug fixes
-
-* Fixed sample code in JCropExample - the commented out code for cropping to disk was incorrect.
-* Fixed bug in PrettyGifs causing failed requests when on a 64-bit server with over 4GB of memory in used.
-* Fixed sepia filter in SimpleFilters
-
-
+# Core API changes
 
 ## Breaking API changes that affect nobody
 
@@ -191,6 +176,8 @@ Also added complete XML configurability.
 * New method for converting 99% of the 'source' object types into a stream: Stream ImageBuilder.GetStreamFromSource(object source, ResizeSettings settings, ref bool disposeStream, out string path, out bool restoreStreamPosition); Plugins can extend by subclassing BuilderExtension and overriding protected method GetStream (same parameters). This method makes it easier to build replacement pipelines.
 * ImageBuilder, AbstractImageProcessor: Added PostDecodeStream() method, called at end of LoadImage method. Used by AutoRotate
 * ImageResizer.Configuration.Logging namespace - ILogManager, ILogger, ILoggerProvider and PluginConfig support mean that the ImageResizer can support any logging library - with no extra dependencies. 
+
+
 ## Extensibility additions
 
 * Alternate pipelines can now be implemented as BuilderExtension plugins instead of being forced to subclass ImageBuilder.
