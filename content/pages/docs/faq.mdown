@@ -58,9 +58,4 @@ operation are roughly 110MB (15 + 80 + 15). If you plan on using the resizer for
 </dt> <dd>A: Your hosting provider has messed with the machine.config on the server, and
 has prohibited the Marshal class from being used. PrettyGifs can't operate with such low permissions. 
 
-
-</dd> <dt>Q: When I resize a dark image, I noticed that there is a 1 pixel border around the image that is slightly brighter than the rest - like a dark gray. What causes this? </dt> <dd>A: This is a bug in Microsoft's GDI code. I've tried over 8 different workarounds, and I don't think any exist.
-I may switch to a different image processing library for this reason, but I've had very, very few complaints about the issue.
-
-
-</dd> </dl>
+</dl>
