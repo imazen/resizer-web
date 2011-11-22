@@ -1,7 +1,9 @@
 
 # PsdReader plugin
 
-Adds support for .PSD source files. No configuration required
+Adds support for .PSD source files. No configuration required.
+
+Transparent PSD files will be displayed with a white background. For transparency support for PSDs, see [FreeImageDecoder](/plugins/freeimage), which is part of the same bundle.
 
 ## Installation
 
