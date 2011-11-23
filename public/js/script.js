@@ -12,6 +12,7 @@ hljs.tabReplace = '  ';
 hljs.initHighlightingOnLoad();
 
 $(function(){
+	if (!$(".banners").bxSlider) return;
 	$(".banners").bxSlider({
     auto: true,
     pager: true,
