@@ -1,7 +1,7 @@
 
 #Configuration
 
-The following is a basic, default configuration. [Click here](/docs/2to3/configuration) to see a configuration example that mimics the V2 defaults.
+The following is a basic, typical configuration. [Click here](/docs/2to3/configuration) to see a configuration example that mimics the V2 defaults.
 
 For an example of a configuration that uses all available settings, [click here](/docs/configuration-all) (mess warning!).
 
@@ -18,8 +18,8 @@ For an example of a configuration that uses all available settings, [click here]
 	    <pipeline fakeExtensions=".ashx" />
 
 	    <plugins>
-	      <!-- <add name="DiskCache" /> -->
-	      <!-- <add name="PrettyGifs" /> -->
+	      <add name="DiskCache" />
+	      <add name="PrettyGifs" />
 	    </plugins>	
 	  </resizer>
 
