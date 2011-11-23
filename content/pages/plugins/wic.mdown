@@ -1,4 +1,6 @@
-# WIC Plugins
+Bundle: 2
+
+# WIC Plugins (V3.1+)
 
 ImageResizer.Plugins.Wic.dll contains 3 plugins: WicImageDecoder, WicImageEncoder, and WicImageBuilder.
 
