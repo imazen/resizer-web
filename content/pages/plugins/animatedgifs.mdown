@@ -1,3 +1,6 @@
+Tags: plugin
+Bundle: 1
+
 # AnimatedGifs plugin
 
 Adds support for resizing animated gifs. Once added, animated gifs will be resized while maintaining all animated frames. By default, .NET only saves the first frame of the GIF image.

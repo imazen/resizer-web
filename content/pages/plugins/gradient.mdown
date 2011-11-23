@@ -1,3 +1,5 @@
+Tags: plugin
+Bundle: free
 
 # Gradient plugin
 

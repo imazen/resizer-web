@@ -1,3 +1,5 @@
+Bundle: 4
+
 # PsdComposer
 
 Allows you to edit PSD files (hide/show layers, change text layer contents, apply certain effects), and render them to a jpeg dynamically.

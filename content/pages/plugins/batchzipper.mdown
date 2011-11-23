@@ -1,3 +1,6 @@
+Tags: plugin
+Bundle: 4
+
 # BatchZipper plugin
 
 Provides batch resizing and zip file creation, with asynchronous support. Great for generating customized user downloads.

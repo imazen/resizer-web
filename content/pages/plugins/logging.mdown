@@ -1,3 +1,5 @@
+Bundle: free
+
 # Logging plugin (v3.1+)
 
 The Logging plugin allows the Image Resizer to perform logging (to disk, SQL, e-mail, whatever you configure).

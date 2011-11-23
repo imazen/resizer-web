@@ -1,3 +1,5 @@
+Bundle: 2
+
 # WhitespaceTrimmer plugin
 
 Trims whitespace (even smooth gradients) from around images automatically using edge detection filters. Requires Full Trust, uses unmanaged code.

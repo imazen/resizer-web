@@ -1,3 +1,5 @@
+Bundle: 2
+
 # New Watermark plugin (v3.1+)
 
 The new watermark plugin is fully XML configurable, and supports named watermark configurations, multiple image and text layers, layer groups, and background (as well as overlay) layers. The positioning system is per-layer, permits flexible pixel and percent layout, anchoring, and container selection.

@@ -1,3 +1,5 @@
+Tags: plugin
+Bundle: 3
 
 # AzureReader plugin
 

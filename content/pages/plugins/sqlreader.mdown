@@ -1,4 +1,6 @@
 uservoice:true
+Bundle: 3
+
 
 # SQLReader plugin
 

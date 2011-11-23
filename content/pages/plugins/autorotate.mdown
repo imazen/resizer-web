@@ -1,3 +1,6 @@
+Tags: plugin
+Bundle: free
+
 # AutoRotate plugin (v3.1+)
 
 Automatically rotates images based on the EXIF Orientation flag embedded by the camera. 
