@@ -8,8 +8,8 @@
 ## Rotation & flipping
 
 * **autorotate=true** Automatically rotates the image based on the EXIF info from the camera. (Requires the [AutoRotate plugin](/plugins/autorotate))
-* **sflip=none|x|y|xy** Flips the source image prior to processing
-* **srotate=0|90|180|270** Rotates the source image prior to processing (only 90 degree intervals)
+* **sflip=none|x|y|xy** Flips the source image prior to processing (new in V3.1)
+* **srotate=0|90|180|270** Rotates the source image prior to processing (only 90 degree intervals) (new in V3.1)
 * **rotate=degrees** – Rotate the image any arbitrary angle (occurs after cropping)
 * **flip=none|x|y|xy** - Flip the image after everything is done
 
@@ -26,17 +26,16 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 
 * **maxwidth, maxheight** – fit the image within the specified bounds, preserving aspect ratio.
 * **width, height** – force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.
-* **mode=max|pad|crop|carve|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight.
-* **align=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to align the image when padding or cropping.
+* **mode=max|pad|crop|carve|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight. (new in V3.1)
+* **align=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to align the image when padding or cropping. (new in V3.1)
 * **scale=both|upscaleonly|downscaleonly|upscalecanvas** – By default, images are never upscaled. Use &scale=both to upscale images if they are smaller than width and height
 
 ## Border, padding, margins and background colors
 
 * **bgcolor=color name | hex code (6-char).** Sets the background/whitespace color.
-
 * **paddingWidth=px & paddingColor=color|hex** paddingColor defaults to bgcolor, which defaults to white.
 * **borderWidth=px, borderColor=color|hex**
-* **margin=3 or margin=5,5,10,10** Specify a universal margin or left,top,right,bottom widths..
+* **margin=3 or margin=5,5,10,10** Specify a universal margin or left,top,right,bottom widths. (new in V3.1)
 
 ## Output format
 * **format=jpg|png|gif** - The output format to use
