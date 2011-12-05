@@ -6,7 +6,7 @@ Tags: releases
 Template: release
 
 
-# Resizer 3.1 alpha - Nov 20 2011
+# Resizer 3.1 alpha 2 - Dec 5 2011
 
 If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now](/plugins/friendlyurls), and is no longer included as a separate dll.
 
@@ -30,6 +30,12 @@ The Design bundle gets the these new plugins. If you've already bought the Desig
 * [WicBuilder](/plugins/wic) - Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request bass.
 * [FreeImageResizer](/plugins/freeimage) - Adds support for Lanczos3 and CatmullRom scaling algorithms: &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos command
 
+The Extras bundle is introduced, and starts out with the following 2 plugins
+
+* [BatchZipper](/plugins/batchzipper) - Asynchronously generated .zip archives of files and resized images. Great for providing customized downloads to customers.
+* [PsdComposer](/plugins/psdcomposer) - Dynamically edit and render PSD files - turn layers on and off, edit text layer contents, and apply certain effects.
+
+
 ## New features in ImageResizer.dll 
 
 * New, simplified way to control how aspect ratio changes are handled. `mode=max|pad|crop|stretch|carve` provides a single command to handle the situation - easier to remember than `maxwidth` vs `width`, `crop=auto`, `stretch=fill`, and `carve=true`. Although, as always, everything is fully backwards-compatible. Examples: `?maxwith=10&maxheight=10` is equivalent to `?width=10&height=10&mode=max`. 
@@ -42,6 +48,8 @@ The Design bundle gets the these new plugins. If you've already bought the Desig
 * Added performance optimization for resizing non-transparent to non-transparent images with no padding.
 * The new ImageBuilder.Build(Job job) overload allows you more control over how streams are handled - you can even choose to dispose the destination stream when the job is complete, or restore the position of the original stream.
 * Diagnostics page has dozens of new checks to ensure you've configured everything for optimal performance. 
+* You can now specify individual left, top, right, and bottom edge widths for margin, borderWidth, and paddingWidth values. I.e, ?margin=10,20,10,20&borderWidth=50,10,50,10&borderColor=blue
+
 
 For a list of API changes that affect plugin developers, see the bottom of the page.
 
@@ -62,7 +70,7 @@ For a list of API changes that affect plugin developers, see the bottom of the p
 
 ## [Watermark](/plugins/watermark) plugin
 
-We admit, the original Watermark plugin was pretty sad. 
+We admit, the original Watermark plugin was sad. 
 
 The new one isn't. Here are a few of the new features
 
@@ -166,11 +174,12 @@ Also added complete XML configurability.
 
 * The ImageBuilder.Create() and ImageBuilder constructors now require 2 additional arguments, "IVirtualImageProvider virtualFileProvider" and "ISettingsModifier settingsModifier". As the ImageBuilder class shouldn't be created directly, this change should not affect anyone. Only subclasses of ImageBuilder should be affected - they will need to modify their constructors, .Create(), and .Copy() methods to include this new parameter. This change does not affect plugins or user code - only ImageBuilder subclasses (of which there are currently none).
 * Removed unused constructor overload ImageBuilder(IEncoderProvider encoderProvider, IVirtualImageProvider virtualFileProvider) as it didn't offer anything new, and added to cost of implementing a subclass.
-* The internal class BitmapHolder is no more. It has been replaced by ImageBuilder.Job
+* The internal class BitmapHolder is no more. It has been replaced by ImageJob
+* Non-breaking change: Config.Pipeline.GetFile now always returns an IVirtualFile instance, instead of an object which could either be a VirtualFile or IVirtualFile instance.
 
 ## API additions
 
-* New class ImageBuilder.Job - A class to contain all the parameters of a job. Makes alternate pipeline support easier.
+* New class ImageJob - A class to contain all the parameters of a job. Makes alternate pipeline support easier.
 * Added ImageBuilder.Build(Job job) overload. All other overloads now funnel through this method, and subsequently through extensible protected method BuildJob()
 * ImageBuilder.LoadImage has a new overload with a 3rd parameter, restoreStreamPosition.
 * New method for converting 99% of the 'source' object types into a stream: Stream ImageBuilder.GetStreamFromSource(object source, ResizeSettings settings, ref bool disposeStream, out string path, out bool restoreStreamPosition); Plugins can extend by subclassing BuilderExtension and overriding protected method GetStream (same parameters). This method makes it easier to build replacement pipelines.
@@ -182,10 +191,20 @@ Also added complete XML configurability.
 
 * Alternate pipelines can now be implemented as BuilderExtension plugins instead of being forced to subclass ImageBuilder.
 
-* AbstractImageProcessor: Added `protected virtual RequestedAction BuildJob(ImageResizer.ImageBuilder.Job job)` Enables replacement pipelines to be implemented as a plugin.
+* AbstractImageProcessor: Added `protected virtual RequestedAction BuildJob(ImageResizer.ImageJob job)` Enables replacement pipelines to be implemented as a plugin.
 
 * AbstractImageProcessor: Added `protected virtual Stream GetStream(object source, ResizeSettings settings, ref bool disposeStream, out string path, out bool restoreStreamPosition)` Allows RemoteReader and similar plugins to support alternate pipelines.
+* ISettingsModifier plugins are now supported, and allow modified of resizing settings without subclassing BuilderExtension.
 
 
-	
+## Minor bug fixes
+
+* Plugins missing a constructor don't crash the request, just log an issue.
+* If a plugin throws an exception during GetIssues, it is now logged as an issue instead of crashing the resizer.debug page.
+
+
+## Depreciated
+
+* ImageResizer.StretchMode and ImageResizer.CropMode are depreciated, and have been replaced by ImageResizer.FitMode
+
 
