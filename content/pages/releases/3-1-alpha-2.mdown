@@ -1,21 +1,24 @@
-Date: December 20, 2011
+Date: December 5, 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip
 MinFile: http://downloads.imageresizing.net/Resizer3-0-12-min-Aug-15-2011.zip
-Summary: 5 new free plugins, 4 new paid plugins, 5 rewritten plugins, and 5 bug fixes.
+Summary: 5 new free plugins, 6 new bundle plugins, 5 rewritten plugins, and innumerable bug fixes
 Tags: releases
 Template: release
 
 
 # Resizer 3.1 alpha 2 - Dec 5 2011
 
-Please note: If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now as FolderResizeSyntax](/plugins/friendlyurls), and is no longer included as a separate dll.
+This is the first public release of 3.1. It's a major milestone, involving over 229 commits, introducing 11 new plugins, and bringing majorly cool features or overhauls to 10 existing plugins. Please contact support@imageresizing.net with any bugs or suggestions about this release.
 
+In fact, to encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$50 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $50 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`.
+
+Please [visit the idea forum](http://resizer.uservoice.com/forums/108373-image-resizer-v3) and share any new plugin ideas or features you don't see listed in this release or on the forums. 
 
 ### Changes since [3.0.13 (Oct 12)](/releases/3-0-13)
 
 As nearly all plugins were modified in this release, please refer to the individual plugin-specific sections below to see how you might be affected.
 
-This version adds the following free plugins:
+Version 3.1 adds the following *free* plugins:
 
 * [SpeedOrQuality](/plugins/speedorquality) - Sacrifice quality for 10-40% more speed. Still in alpha.
 * [DefaultSettings](/plugins/defaultsettings) - Decide which ScaleMode setting should be the default, and for which situations. Many people find the &scale=downscaleonly default value frustrating - now they can change it.
@@ -36,20 +39,27 @@ The Extras bundle is introduced, and starts out with the following 2 plugins
 * [PsdComposer](/plugins/psdcomposer) - Dynamically edit and render PSD files - turn layers on and off, edit text layer contents, and apply certain effects.
 
 
-## New features in ImageResizer.dll 
+### FriendlyUrls reminder
 
-* New, simplified way to control how aspect ratio changes are handled. `mode=max|pad|crop|stretch|carve` provides a single command to handle the situation - easier to remember than `maxwidth` vs `width`, `crop=auto`, `stretch=fill`, and `carve=true`. Although, as always, everything is fully backwards-compatible. Examples: `?maxwith=10&maxheight=10` is equivalent to `?width=10&height=10&mode=max`. 
-* &scale=down|up|canvas are now shortcuts for downscaleonly,  upscaleonly, and upscalecanvas
+If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now as FolderResizeSyntax](/plugins/friendlyurls), and is no longer included as a separate dll.
+
+## Cool new features in the ImageResizer.dll core project
+
+* `mode=max|pad|crop|stretch|carve` provides a single command to control how aspect ratio changes are handled. It doesn't introduce new features, but is easier to remember than `maxwidth` vs `width`, `crop=auto`, `stretch=fill`, and `carve=true`. Although, as always, everything is fully backwards-compatible. Example: `?maxwith=10&maxheight=10` is equivalent to `?width=10&height=10&mode=max`. 
 * Control how images are cropped or padded (when the aspect ratio is being modified) using the `anchor` command:  &anchor=topleft|bottomright|middlecenter... 
-* Set the print density of an output image with `&dpi=96|300|600`. No browsers support this, but a few printers do. Default is 96.  See [this article on why the DPI (resolution) setting is worthless](http://apptools.com/examples/dpi.php).
-* You can now perform a source flip on an image using `sFlip` instead of `sourceFlip`, although the longer name is also supported.
 * You can now rotate the source image in 90 degree intervals using `sRotate`. This is useful if you'd like to rotate prior to doing a manual crop.
-* ResizeSetting now accepts semicolon-delimited strings in its constructor. Yay for readability!
-* Added performance optimization for resizing non-transparent to non-transparent images with no padding.
-* The new ImageBuilder.Build(Job job) overload allows you more control over how streams are handled - you can even choose to dispose the destination stream when the job is complete, or restore the position of the original stream.
-* Diagnostics page has dozens of new checks to ensure you've configured everything for optimal performance. 
-* You can now specify individual left, top, right, and bottom edge widths for margin, borderWidth, and paddingWidth values. I.e, ?margin=10,20,10,20&borderWidth=50,10,50,10&borderColor=blue
+* The new `ImageBuilder.Build(Job job)` overload allows you more control over how streams are handled - you can even choose to dispose the destination stream when the job is complete, or restore the position of the original stream.
+* You can now specify individual left, top, right, and bottom edge widths for margin, borderWidth, and paddingWidth values. I.e, `?margin=10,20,10,20&borderWidth=50,10,50,10&borderColor=blue`
 
+## Boring new features in ImageResizer.dll 
+
+* Set the print density of an output image with `&dpi=96|300|600`. No browsers support this, but a few printers do. Default is 96.  See [this article on why the DPI (resolution) setting is worthless](http://apptools.com/examples/dpi.php).
+* Added performance optimization for resizing non-transparent to non-transparent images with no padding.
+* Diagnostics page has dozens of new checks to ensure you've configured everything for optimal performance.
+* &scale=down|up|canvas are newly supported shortcuts for downscaleonly,  upscaleonly, and upscalecanvas
+* You can now perform a source flip on an image using `sFlip` instead of `sourceFlip`, although the longer name is also supported.
+* ResizeSetting now accepts semicolon-delimited pairs in its constructor: `new ResizeSettings("width=100;height=100")` Yay for readability!  
+* You can now both perform a manual crop, then autocrop the result to a specified with and height. I.e. `image.jpg?crop=400,10,-10,-10&width=100&height=100&mode=crop`
 
 For a list of API changes that affect plugin developers, see the bottom of the page.
 
@@ -61,7 +71,7 @@ For a list of API changes that affect plugin developers, see the bottom of the p
 * Added support for cooperative cache cleanup, using a mutex to prevent more than one processes from cleaning the same folder at the same time. Should help support extended overlapped recycles and web garden scenarios.
 * Added support for recovering from another process writing to the same cache file at the same time. Only works in `hashModifiedDate=true` mode.
 * Added optional logging support so you can see exactly what is happening with the cache in real-time
-
+* Handles insufficient permissions more gracefully, explains issue on the diagnostics page
 
 ## [PrettyGifs](/plugins/prettygifs)
 
@@ -96,6 +106,17 @@ Oh, and guess what - it's fully backwards compatible. You can take advantage of 
 * Added brightness, contrast, and saturation adjustment settings ("s.brightness", "s.contrast", "s.saturation")
 * Fixed broken sepia filter
 * Added invert filter
+
+
+## [SizeLimiting](/plugins/sizelimiting)
+
+* Size limits are now inclusive instead of exclusive, to match normal user expectation
+
+## [VirtualFolder](/plugins/virtualfolder)
+
+* Now can fall back to IVirtualImageProvider
+* Handles insufficient permissions more gracefully, explains issue on the diagnostics page
+
 
 ## [FreeImage](/plugins/freeimage)
 
@@ -201,7 +222,7 @@ Also added complete XML configurability.
 
 * Plugins missing a constructor don't crash the request, just log an issue.
 * If a plugin throws an exception during GetIssues, it is now logged as an issue instead of crashing the resizer.debug page.
-
+* Earlier disposal of Pen and Brush instances used for rendering image padding, borders, and drop shadow.
 
 ## Depreciated
 
