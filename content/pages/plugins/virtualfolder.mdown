@@ -4,6 +4,8 @@ Bundle: free
 
 Functions like an IIS virtual folder, but works within Visual Studio/Cassini web server.
 
+IIS Virtual Folders perform better, however, so this plugin should only be used for testing, development, or as a last resort.
+
 ## Installation
 
 1. Add `<add name="VirtualFolder" virtualPath="~/" physicalPath="..\Images"/>` to the `<plugins />` section.

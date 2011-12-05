@@ -1,6 +1,5 @@
 UserVoice: true
-Tags: plugin
-Bundle: 4
+Bundle: 3
 
 # CloudFront plugin
 

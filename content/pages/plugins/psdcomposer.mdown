@@ -6,6 +6,12 @@ New in V3.1
 
 Allows you to edit PSD files (hide/show layers, change text layer contents, apply certain effects), and render them to jpeg, gif, or png dynamically. Works as an IVirtualImageProvider, so you can post-process the composed result with any of the other plugins or commands.
 
+Great for
+
+* Dynamically generating clickable maps based on search results
+* Generating customized product simulations where users can change multiple product variables independently, or enter text for engraving.
+
+
 High performance - under 400ms for test psds with 40+ layers.
 
 More documentation coming soon - in the meantime, please contact support@imageresizing.net with questions

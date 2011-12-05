@@ -1,3 +1,5 @@
+Template: plugin_page
+
 # Custom plugin development
 
 I can create custom plugins or enhance an existing plugin to meet your needs for as *little as $250*.
@@ -11,7 +13,7 @@ I've made it easy for users to develop plugins and I have provided extensive XML
 
 My normal hourly rate is $95/hr. I'm charging 1/5th of that for plugin creation and customization, because it helps the community.
 
-If you can't afford $250, you can either (a) post your plugin/enhancement idea on [the UserVoice site](https://resizer.uservoice.com/forums/108373-image-resizer-v3) and wait for enough votes for it to be implemented, or (b) develop it yourself, and [contribute it back to the community](/docs/contribute). Or not contribute it back, if you want to maintain it yourself, and you're that kind of business ;)
+If you can't afford $250, you can either (a) post your plugin/enhancement idea on [the UserVoice site](https://resizer.uservoice.com/forums/108373-image-resizer-v3) and wait for enough votes for it to be implemented, or (b) develop it yourself, and [contribute it back to the community](/docs/contribute). Or not contribute it back, if you want to maintain it yourself ;)
 
 
 ## Payment information

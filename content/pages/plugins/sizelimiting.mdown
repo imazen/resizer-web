@@ -4,7 +4,7 @@ Bundle: free
 
 (Installed by default in 3.0.5+)
 .
-For preventing DOS attacks and limiting photo resolution. Prevents request that would result in an image over 3200x3200 (configure with `totalWidth/totalHeight`).
+For preventing abuse and limiting photo resolution. Prevents request that would result in an image over 3200x3200 (configure with `totalWidth/totalHeight`).
 
 You can also limit photo resolution with `imageWidth/imageHeight`. Originals will still be accessible unless you add a rewrite handler.
 
@@ -13,7 +13,8 @@ You can also limit photo resolution with `imageWidth/imageHeight`. Originals wil
 Example configuration with defaults: 
 
 	<resizer>
-		<sizelimits imageWidth="0" imageHeight="0" totalWidth="3200" totalHeight="3200" totalBehavior="throwexception" />
+		<sizelimits imageWidth="0" imageHeight="0" totalWidth="3200"
+		            totalHeight="3200" totalBehavior="throwexception" />
 		...
 	</resizer>
 
@@ -23,7 +24,11 @@ Example configuration with defaults:
 
 (Defaults: 3200x3200, throwexception)
 
-These settings can be used to prevent misuse of the image resizer. For example, an attacker could request a very large image to use too much memory, as a form of a [DOS attack](http://en.wikipedia.org/wiki/Denial-of-service_attack).
+These settings can be used to prevent misuse of the image resizer. 
+
+For example, an attacker could request a very large image to use a lot of CPU and RAM in a single request. Practically, it's insanely difficult to [DOS attack](http://en.wikipedia.org/wiki/Denial-of-service_attack) or DDOS attack the image resizer, due to GDI's memory allocation algorithm. GDI doesn't allow paging to disk, and requires consecutive chunks of memory. Under attack, memory gets fragmented, so image resizing requests get denied by GDI until the attack (or extremely high load) is over, and memory can be defragmented. 
+
+With disk caching enabled, users may not even notice a DOS attack, since GDI calls would fail first, leaving plenty of fragmented RAM around for ASPX/HTML/CSS/Javascript files and cached images to be served, since their contiguous memory requirements are minimal.
 
 totalWidth and totalHeight restrict the final output size of an image. They do not 'shrink' the image as `imageWidth` and `imageHeight` do, they simply cancel requests that exceed the permitted size. This prevents the memory from even being allocated for invalid requests.
 
