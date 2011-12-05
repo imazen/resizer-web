@@ -219,7 +219,10 @@ html>body .t{
 .no-banner pre code{
 	color: inherit;
 }
-
+.t code, .no-banner code{
+	font-size:inherit;
+	line-height:inherit;
+}
 
 .t strong{font-weight:bold;}
 

@@ -1,0 +1,25 @@
+Bundle: 2
+Flags: bundle
+
+#Design bundle
+
+This bundle gives you tremendous flexibility for a very low price point. The Watermark and SimpleFilters plugins are medium-trust compatible.
+
+- Get a 2-4x speed boost by using WIC instead of GDI (requires full trust)
+- Go nuts with your RAW files, PSD files, and apply advanced filters you'd only expect from Photoshop.
+- Overlay (or underlay) multiple text and image layers with the Watermark plugin - anything is possible.
+- Auto-trim your product photos with WhitespaceTrimmer, or use SeamCarving to magically change the aspect ratio of images by slicing seams of pixels from background (low-energy) areas of the image.
+
+* [Watermark](/plugins/watermark) - Render multiple image & text overlays and background layers with incredible flexibility and great performance. 
+* [PsdReader](/plugins/psdreader) - Adds support for PSD source files.
+* [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead - matrix-based.
+* [AdvancedFilters](/plugins/advancedfilters) - Blur, sharpen, remove noise, and perform automatic histogram adjustment. Plus several other cool effects. 
+* [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust)
+* [WhitespaceTrimmer](/plugins/whitespacetrimmer) - Automatically trims whitespace off an image using smart edge detection
+* [FreeImageDecoder](/plugins/freeimage) - Adds support for RAW & HDR source images - over 20 formats supported.
+* [FreeImageEncoder](/plugins/freeimage) - 2-4x Faster jpeg encoding.
+* [FreeImageResizer](/plugins/freeimage) - Adds support for Lanczos3 and CatmullRom scaling algorithsm: &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos command
+* [FreeImageBuilder](/plugins/freeimage) - Provides an alternate pipeline that uses FreeImage exclusively. Faster for some operations, slower for others.
+* [WicDecoder](/plugins/wic) - Supports decoding images through WIC, supporting any image codecs installed on the computer.
+* [WicEncoder](/plugins/wic) - Encode jpeg, gif, and png images through WIC for better performance and more control. Adjust jpeg quality, subsampling, gif dithering, and palette size.
+* [WicBuilder](/plugins/wic) - Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request bass.

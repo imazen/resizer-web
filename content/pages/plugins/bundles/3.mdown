@@ -1,0 +1,13 @@
+Bundle: 3
+Flags: bundle
+
+
+# Cloud Bundle
+
+Resize images (or serve files) from remote websites, Amazon S3 buckets, Azure Blob Storage, or Microsoft SQL. Integrate your website with Amazon's CloudFront CDN in seconds for unbeatable performance worldwide. All plugins are medium-trust compatible.
+
+* [S3Reader](/plugins/s3reader) - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
+* [SQLReader](/plugins/sqlreader) - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
+* [CloudFront](/plugins/cloudfront) - Allows you to use Amazon CloudFront with the resizer. Highly recommended - offers inexpensive worldwide edge caching and great scalability.
+* [AzureReader](/plugins/azurereader) (alpha) - Allows blobstore images to be resized and served. 
+* [RemoteReader](/plugins/remotereader) - (beta) Allows images located on external servers to be resized and processed as if they existed locally.

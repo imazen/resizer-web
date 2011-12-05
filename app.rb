@@ -18,9 +18,41 @@ module Nesta
       def releases
         Page.articles_by_tag("releases")
       end
+      
+      def bundles
+        Page.find_all.select { |item| item.flagged_as?('bundle')}
+      end
     end
     
     
 
   end
+  
+  class FileModel
+    def template
+      fallback = metadata('bundle') ? 'plugin_page' : 'page'
+      (metadata('template') || fallback).to_sym
+    end
+    
+    
+  end
+  class Page
+
+    def self.plugins_by_bundle(bundle)
+      Page.find_all.select { |item| item.bundle_name == bundle and not item.flagged_as?('bundle')}
+    end
+
+    def bundle_name
+      metadata('Bundle')
+    end
+       
+    def bundle
+      Page.find_by_path("/plugins/bundles/#{bundle_name}")
+    end
+    
+    def bundle_plugins
+      Page.plugins_by_bundle(bundle_name)
+    end
+  end
+
 end
