@@ -1,4 +1,4 @@
-Date: December 5, 2011
+Date: December 5, 2012
 FullFile: http://downloads.imageresizing.net/Resizer3-0-12-full-Aug-15-2011.zip
 MinFile: http://downloads.imageresizing.net/Resizer3-0-12-min-Aug-15-2011.zip
 Summary: 5 new free plugins, 6 new bundle plugins, 5 rewritten plugins, and innumerable bug fixes
