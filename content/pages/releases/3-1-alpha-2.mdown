@@ -8,7 +8,7 @@ Template: release
 
 # Resizer 3.1 alpha 2 - Dec 5 2011
 
-If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now](/plugins/friendlyurls), and is no longer included as a separate dll.
+Please note: If you are still using the FriendlyUrls plugin, [you need to rename it in Web.config - it has been part of the core for 3 releases now as FolderResizeSyntax](/plugins/friendlyurls), and is no longer included as a separate dll.
 
 
 ### Changes since [3.0.13 (Oct 12)](/releases/3-0-13)
@@ -17,11 +17,11 @@ As nearly all plugins were modified in this release, please refer to the individ
 
 This version adds the following free plugins:
 
-* [SpeedOrQuality](/plugins/speedorquality) - Sacrifice quality for 10-40% more speed, if you dare.
-* [DefaultSettings](/plugins/defaultsettings) - Decide which ScaleMode setting should be the default, and for which situations.
-* [Presets](/plugins/presets) - Create preset setting groups in Web.config and use them from the URL.
+* [SpeedOrQuality](/plugins/speedorquality) - Sacrifice quality for 10-40% more speed. Still in alpha.
+* [DefaultSettings](/plugins/defaultsettings) - Decide which ScaleMode setting should be the default, and for which situations. Many people find the &scale=downscaleonly default value frustrating - now they can change it.
+* [Presets](/plugins/presets) - Create preset setting groups in Web.config and use them from the URL. 
 * [AutoRotate](/plugins/autorotate) - Automatically rotate the image based on the camera's gravity sensor data, with `&autorotate=true`
-* [Logging](/plugins/logging) - NLog wrapper
+* [Logging](/plugins/logging) - NLog wrapper to allow optional logging. Logging only implemented for DiskCache plugin at the moment.
 
 The Design bundle gets the these new plugins. If you've already bought the Design bundle, you get these for free!
 
