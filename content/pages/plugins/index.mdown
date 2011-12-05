@@ -1,6 +1,7 @@
 Title: Plugins - Image Resizer
 Libs: ejunkie, ejunkiecart, uservoice
 Template: buy_page
+Renderer:RubyPoweredMarkdown
 
 #Plugins
 
@@ -17,52 +18,22 @@ By purchasing 1 or more of the bundles below, you will get
 
 ## Performance Bundle (3 plugins)- <span class="price">$99</span>
 
-This bundle gives you scalable performance, high-quality GIF, animated GIF, and 8-bit PNG support. 
 
-* [DiskCache](/plugins/diskcache) - Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, *required* for websites with significant traffic. Medium-trust compatible.
-* [PrettyGifs](/plugins/prettygifs) - Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
-* [AnimatedGifs](/plugins/animatedgifs) - Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. Medium-trust compatible.
+<%= Nesta::Page.find_by_path("/plugins/bundles/1").body %>
+
 
 ## Design Bundle (13 plugins)- <span class="price">$99</span>
 
-This bundle gives you tremendous flexibility for a very low price point. The Watermark and SimpleFilters plugins are medium-trust compatible.
-
-- Get a 2-4x speed boost by using WIC instead of GDI (requires full trust)
-- Go nuts with your RAW files, PSD files, and apply advanced filters you'd only expect from Photoshop.
-- Overlay (or underlay) multiple text and image layers with the Watermark plugin - anything is possible.
-- Auto-trim your product photos with WhitespaceTrimmer, or use SeamCarving to magically change the aspect ratio of images by slicing seams of pixels from background (low-energy) areas of the image.
-
-* [Watermark](/plugins/watermark) - Render multiple image & text overlays and background layers with incredible flexibility and great performance. 
-* [PsdReader](/plugins/psdreader) - Adds support for PSD source files.
-* [SimpleFilters](/plugins/simplefilters) - Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead - matrix-based.
-* [AdvancedFilters](/plugins/advancedfilters) - Blur, sharpen, remove noise, and perform automatic histogram adjustment. Plus several other cool effects. 
-* [SeamCarving](/plugins/seamcarving) - Content-aware image resizing (Fast C++ exe, requires Full Trust)
-* [WhitespaceTrimmer](/plugins/whitespacetrimmer) - Automatically trims whitespace off an image using smart edge detection
-* [FreeImageDecoder](/plugins/freeimage) - Adds support for RAW & HDR source images - over 20 formats supported.
-* [FreeImageEncoder](/plugins/freeimage) - 2-4x Faster jpeg encoding.
-* [FreeImageResizer](/plugins/freeimage) - Adds support for Lanczos3 and CatmullRom scaling algorithsm: &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos command
-* [FreeImageBuilder](/plugins/freeimage) - Provides an alternate pipeline that uses FreeImage exclusively. Faster for some operations, slower for others.
-* [WicDecoder](/plugins/wic) - Supports decoding images through WIC, supporting any image codecs installed on the computer.
-* [WicEncoder](/plugins/wic) - Encode jpeg, gif, and png images through WIC for better performance and more control. Adjust jpeg quality, subsampling, gif dithering, and palette size.
-* [WicBuilder](/plugins/wic) - Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request bass.
+<%= Nesta::Page.find_by_path("/plugins/bundles/2").body %>
 
 
 ## Cloud Bundle (5 plugins)- <span class="price">$99</span>
 
-Resize images (or serve files) from remote websites, Amazon S3 buckets, Azure Blob Storage, or Microsoft SQL. Integrate your website with Amazon's CloudFront CDN in seconds for unbeatable performance worldwide. All plugins are medium-trust compatible.
-
-* [S3Reader](/plugins/s3reader) - Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
-* [SQLReader](/plugins/sqlreader) - Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
-* [CloudFront](/plugins/cloudfront) - Allows you to use Amazon CloudFront with the resizer. Highly recommended - offers inexpensive worldwide edge caching and great scalability.
-* [AzureReader](/plugins/azurereader) (alpha) - Allows blobstore images to be resized and served. 
-* [RemoteReader](/plugins/remotereader) - (beta) Allows images located on external servers to be resized and processed as if they existed locally.
+<%= Nesta::Page.find_by_path("/plugins/bundles/3").body %>
 
 ## Extras Bundle (2 plugins)- <span class="price">$99</span>
 
-The Extras Bundle is not yet available through the checkout system. Please email support@imageresizing.net to purchase a license.
-
-* [BatchZipper](/plugins/batchzipper) - Asynchronously generated .zip archives of files and resized images. Great for providing customized downloads to customers.
-* [PsdComposer](/plugins/psdcomposer) - Dynamically edit and render PSD files - turn layers on and off, edit text layer contents, and apply certain effects.
+<%= Nesta::Page.find_by_path("/plugins/bundles/4").body %>
 
 Enterprise-wide licenses [are available for $250 per bundle](/plugins/enterprise).
 
@@ -73,26 +44,7 @@ Are you using version 2? [Upgrading is easy and will increase your site's perfor
 
 ## Free bundle (17+ plugins)
 
-The following 17 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+<%= Nesta::Page.find_by_path("/plugins/bundles/free").body %>
 
-These can all be found in the ImageResizer.Plugins.Basic namespace (except for Logging and MvcRoutingShim)
-
-* **[DefaultEncoder](/plugins/defaultencoder)** (default) - Adjustable jpeg compression, 32-bit PNG with transparency support, and standard .NET GIF encoding (which is very lousy).
-* **[Diagnostics](/plugins/diagnostics)** (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
-* **NoCache** (default) - Serves the resulting image directly from memory
-* **[ClientCache](/plugins/clientcache)** (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
-* **[SizeLimiting](/plugins/sizelimiting)** (default)- Limit maximum resolution of photos, or the total size of all processed images.
-* **[Image404](/plugins/image404)** - Supply default images instead of a 404 when an image is missing. 
-* **[VirtualFolder](/plugins/virtualfolder)** - Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
-* **[DropShadow](/plugins/dropshadow)** - Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor)
-* **[Gradient](/plugins/gradient)** - Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.
-* **[FolderResizeSyntax](/plugins/folderresizesyntax)** - Resize images without using the query string.
-* **[MvcRoutingShim](/plugins/mvcroutingshim)** - Prevent MVC Routes from taking over the ImageResizer's requests.
-* **[ImageHandlerSyntax](/plugins/imagehandlersyntax)** - Migrate websites from other image resizing handlers without breaking any URLs.
-* **[SpeedOrQuality](/plugins/speedorquality)** - Get a 15-30% performance boost at the expense of rendering quality
-* **[Presets](/plugins/presets)** - Created named settings groups and and reference them with ?preset=name instead of specifying them all in the URL
-* **[AutoRotate](/plugins/autorotate)** - Use the EXIF rotation data from the camera to auto-rotate your images.
-* **[Logging](/plugins/logging)** - Allows logging
-* **[DefaultSettings](/plugins/defaultsettings)** - Allows you to configure the default setting values when commands (like `scale`) are omitted
 
 **Don't see the plugin or feature you need?** I offer 80% off my standard rate for [custom plugin development](/plugins/custom).
