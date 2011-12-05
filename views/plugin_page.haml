@@ -1,15 +1,15 @@
 %div(class="page-content t no-banner")
 	%div(class="plugins_sidebar")
+		-if @page and @page.metadata('Bundle') and not @page.flagged_as?('bundle')
+			%p
+				This plugin (#{@page.heading}) is part of the 
+				%a{href:@page.bundle.abspath}
+					= @page.bundle.heading
 		:markdown
 			### Where is the plugins section?
 			The `<plugins>` section is located in Web.config, and is nested inside the `<resizer>` element, which is nested inside `<configuration>`. For examples, see [this sample Web.config file](/docs/configuration).
 			### What is NuGet? 
 			NuGet is a better way to manage your project's libraries, and is [fully supported by the ImageResizer](/docs/nuget).  
-		-if @page and @page.metadata('Bundle')
-			%p
-				This plugin (#{@page.heading}) is part of the 
-				%a{href:@page.bundle.abspath}
-					= @page.bundle.heading
 		-bundles.each do |bundle|
 			%h3
 				%a(href="#{bundle.abspath}")= bundle.heading

@@ -42,6 +42,19 @@
 	line-height:1em;
 }
 
+.breadcrumbs{
+		font-size:8pt;
+}
+.breadcrumbs a{
+	color:inherit;
+	padding-right:10px;
+}
+.breadcrumbs a:after{
+	content: ">";
+}
+.breadcrumbs a:last-child{
+	content: inherit;
+}
 .plugins_sidebar{
   float: right;
   margin-top: 75px;

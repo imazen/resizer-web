@@ -7,3 +7,12 @@
 	<li><a href="/documentation">license</a></li>
 	<li><a href="/support">Support</a></li>	
 </ul>-%>
+
+%div(class="breadcrumbs")
+	%a(href='/plugins')
+		All plugins
+	-if @page and @page.metadata('Bundle')
+		%a{href:@page.bundle.abspath}
+			= @page.bundle.heading
+	-if @page and @page.metadata('Bundle')  and not @page.flagged_as?('bundle')
+		= @page.heading
