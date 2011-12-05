@@ -15,9 +15,9 @@ You can search the forums, wish list, and knowledge base (as well as create tick
 
 Support is provided on a best-effort basis every day of the week. 60% of e-mails are answered within 1 hour. For the quickest response, please contact support during the following times.
 
-* 9am to 9pm GMT
-* 4am to 4pm EST
-* 1am to 1pm PST
+* 2pm to 2am GMT
+* 9am to 9pm EST
+* 6am to 6pm PST
 
 
 ## Emergency telephone support
