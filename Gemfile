@@ -8,6 +8,7 @@ else
 	gem 'nesta', :git => "git://github.com/nathanaeljones/nesta.git"
 	gem 'nesta-plugin-simplicity', :git => "git://github.com/nathanaeljones/nesta-plugin-simplicity.git"
 	gem 'nesta-plugin-tags', :git => "git://github.com/nathanaeljones/nesta-plugin-tags.git"
+	gem 'nesta-plugin-aliases', :git => "git://github.com/nathanaeljones/nesta-plugin-aliases.git"
 end
 
 

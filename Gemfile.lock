@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/nathanaeljones/nesta-plugin-aliases.git
+  revision: dc4dca1d6e801321d486a4a4031b97c4dbc3ee17
+  specs:
+    nesta-plugin-aliases (0.0.1)
+      nesta (>= 0.9.11)
+
+GIT
   remote: git://github.com/nathanaeljones/nesta-plugin-simplicity.git
   revision: 54c08d18cc7a76b40059d1e423085b28142b2865
   specs:
@@ -61,6 +68,7 @@ DEPENDENCIES
   erubis
   haml-edge
   nesta!
+  nesta-plugin-aliases!
   nesta-plugin-simplicity!
   nesta-plugin-tags!
   sinatra-reloader
