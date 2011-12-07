@@ -11,18 +11,9 @@ Potential causes:
 1. You didn't copy ImageResizer.dll into the /bin folder (unlikely).
 2. Your website has  a 'sub-site' (Application Folder) inside it. Application Folders inherit all Web.config settings from their parent sites, yet expect to have their own copies of all the dlls referenced by those settings in their own /bin folder. You can resolve this problem by (a) changing the app folder to a virtual folder, (b) adding a copy of ImageResizer.dll and plugins into the /bin folder inside that application also, or (c) using <remove /> statements in the child Web.config to cancel out the inherited <add /> statements from the parent Web.config. Option (c) will disable image resizing within the sub-application.
 
+## Blank page, 404, or invalid image error in browser
 
-## Method Not Found (System.MissingMethodException)
-
-	Server Error in '/' Application. 
-	------------------------------ 
-	Method not found: 'Void System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.
-	Exception Details: System.MissingMethodException: Method not found: 'Void 
-	System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.
-	
-This error occurs when you do not have .NET 2.0 Service Pack 2 applied. No other conditions cause this error. The RemapHanlder method was added in .NET 2.0 SP2, and is required by this product.
-Yes, it is possible to have .NET 3, 3.5, and .NET 4 installed (and up-to-date), yet not have .NET SP2 installed. This peculiar circumstance has been verified on over 5 machines.
-
+Most likely cause: You are using ASP.NET MVC, but do not have the [MvcRoutingShim](/plugins/mvcroutingshim) plugin enabled. Both MVC and the ImageResizer are trying to answer the request, and corrupting the response.
 
 ## The type or namespace name "ImageResizer" could not be found
 
@@ -30,7 +21,7 @@ When using the ImageResizer from a .NET project that is not a web project you ma
 
 	The type or namespace name "ImageResizer" could not be found (are you missing a using directive or assembly reference?)
 
-This is caused by using a Client Profile version of .NET instead of the Full version. You can change this in Project Properties -> Application -> Target Framework. The ImageResizer requires the full version, as it is also designed to support ASP.NET usage and references the System.Web assembly (which is not part of the client profile).
+This is caused by using a Client Profile version of .NET instead of the Full version. You can change this in Project Properties -> Application -> Target Framework. The ImageResizer requires the full version, as it is also designed to support ASP.NET usage and references the System.Web assembly (which is not part of the client profile version of .NET).
 
 
 ## File not found
@@ -59,6 +50,37 @@ Possible causes
 2. The images are from S3 or Sql: The S3Reader and SqlReader plugins require AspNetHostingPermission to register themselves as VirtualPathProviders. If they lack permission, they register as IVirtualImageProviders instead - but then only the image resizer can find them, and the image resizer only accepts requests with a querystring that uses one of the defined commands.
 
 3. Alternatively, you may have a URL rewriting event that is affecting the path names.
+
+
+## Method Not Found (System.MissingMethodException)
+
+	Server Error in '/' Application. 
+	------------------------------ 
+	Method not found: 'Void System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.
+	Exception Details: System.MissingMethodException: Method not found: 'Void 
+	System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.
+	
+This error occurs when you do not have .NET 2.0 Service Pack 2 applied. No other conditions cause this error. The RemapHanlder method was added in .NET 2.0 SP2, and is required by this product.
+Yes, it is possible to have .NET 3, 3.5, and .NET 4 installed (and up-to-date), yet not have .NET SP2 installed. This peculiar circumstance has been verified on over 5 machines.
+
+
+
+## Server object error 'ASP 0178 : 80070005'
+
+	Server object error 'ASP 0178 : 80070005'
+	Server.CreateObject Access Error
+	The call to Server.CreateObject failed while checking permissions. 
+	Access is denied to this object.
+
+This error usually means that the user that the ASP website is running under does not have NTFS permissions to the ImageResizer dlls. 
+Right click the `C:\Program Files\ImageResizingNet\v3` folder and choose Properties, Security, hit Edit, then click Add, type in the user name your website is running under, hit OK, then check "Read & Execute", and hit OK, then Apply.
+
+On IIS6, this [account is typically IUSR_ComputerName](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/3648346f-e4f5-474b-86c7-5a86e85fa1ff.mspx?mfr=true), but on IIS7, the account is usually `NETWORK SERVICE` or (if you're not use a default app pool), a custom user account. You'll need to open IIS and inspect the appropriate Application Pool to find out which account you need to give permissions to. 
+
+If that fails, providing Readonly access to the Everyone group should work, but that may not be acceptable if you have highly-isolated application pools which you don't want to be able to access the ImageResizer dlls files.
+
+If you still encounter issues, perform a reinstall with COMInstaller.exe, and save the install log. If the reinstall doesn't fix the problem, send the install log to support@imageresizing.net to get help with your issue.
+
 
 ## SecurityException on GIF images when using the PrettyGifs plugin	
 
