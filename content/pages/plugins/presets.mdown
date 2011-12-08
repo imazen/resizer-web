@@ -6,6 +6,7 @@ Allows you to define sets of settings in Web.config and reference them by name.
 
 Also offers a method for restricting commands to predefined presets, for the truly paranoid.
 
+The current version only works with the URL API.
 
 ## Installation
 
