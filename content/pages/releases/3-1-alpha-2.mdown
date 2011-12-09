@@ -62,6 +62,13 @@ If you are still using the FriendlyUrls plugin, [you need to rename it in Web.co
 
 For a list of API changes that affect plugin developers, see the bottom of the page.
 
+## The last surviving GDI+ artifact, dead
+
+After 3 years of wrestling with the last GDI+ border bug (the 50% transparency white 1px border on resized images), it has finally been killed! 
+
+With the introduction of the WIC and FreeImage pipelines, I finally tried the border test on them as well, and guess what... All three had the the border artifact! Knowing that to be impossible, I checked the original photos, and it was there as well. Sometime in 2008, those photos were resized with V2.0, and acquired the border artifact. The last remaining GDI border bug was actually solved in V2.6, but since the border was already in the original images, it only showed up as a 25% reduction in brightness. 
+
+Chagrin would be the word. How could I ever fix a non-existent bug? I sure spent a lot of time trying...
 
 ## [DiskCache](/plugins/diskcache)
 
