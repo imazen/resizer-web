@@ -17,9 +17,9 @@ Renderer: RubyPoweredMarkdown
 [<%= latest_release.inline_summary %>](<%= latest_release.abspath %>) are included in this release. 
 
 <p>
-<a href="<%= latest_release.metadata('FullFile') %>" class="awesome green">Download source, binaries, plugins, and sample code (15MB)</a>
+<a href="<%= latest_release.metadata('FullFile') %>" class="awesome black">(Recommended) Download source, binaries, plugins, and sample code (15MB)</a>
 
-<a href="<%= latest_release.metadata('MinFile') %>" class="awesome black">Download core binary only (170K)</a>
+<a href="<%= latest_release.metadata('MinFile') %>" class="awesome black">Download ImageResizer.dll only (170K)</a>
 
 </p>
 
