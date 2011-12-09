@@ -1,10 +1,8 @@
 # Frequently asked questions
 
+If you're getting an error message, [see the troubleshooting page instead](/docs/troubelshoot).
+
 <dl class="faq">
-	<dt>Q: I get the error message "Could not find the name of the type or namespace "ImageResizer" (missing a using directive or an assembly reference ?)" and my project is using .NET 3.5 or .NET 4.0 Client Profile. What's wrong?</dt> <dd>The ImageResizer doesn't require you to use ASP.NET, but it does reference the System.Web assembly. You need to use the standard .NET 3.5 and .NET 4.0 framework when you are using the ImageResizer. The Client Profile versions won't work.
-
-
-	</dd>
 	
 	 <dt>Q: Is it possible to specify the width and height, and have your image resized and cropped to fit the aspect ratio, losing as little image area as possible? </dt> <dd>A: Yes, and it is easy. Use ?width=x&amp;height=y&amp;crop=auto.
 
@@ -13,7 +11,7 @@
 
 </dd> <dt>Q: Can I resize the same image to different sizes? </dt> <dd>A: Yes - there is no limit on how many sizes of an image can be created.
 
-</dd> <dt>Q: Is load balancing across multiple servers supported? </dt> <dd>A: Yep! Although both DiskCache and CloudFront caching is supported, I suggest the latter. 
+</dd> <dt>Q: Is load balancing across multiple servers supported? </dt> <dd>A: Yes, and all plugins support web farms, web gardens, and load balancing.
 
 </dd> <dt>Q: Do the image names change when they are resized? Is SEO affected? </dt> <dd>A: No, image names are retained - SEO isn't affected.
 
@@ -22,11 +20,11 @@
 </dd> <dt>Q: Can the resizer both crop, then resize at the same time? </dt> <dd>A: Yes, you can specify a crop rectangle with ?crop=(x1,y1,x2,y2) or ?crop=auto, and add &amp;width=x or any of the resizing commands to resizing the resulting crop.
 All commands can be combined.
 
-</dd> <dt>Q: Can I use this on images not located on the server? </dt> <dd>A: Yes, with S3Reader and SqlReader. <a href="http://resizer.uservoice.com/forums/108373-image-resizer-v3/suggestions/1876777-create-the-remotesitereader-plugin">Leave a vote for RemoteSiteReader</a> if you would want HTTP-based image resizing from remote servers.
+</dd> <dt>Q: Can I use this on images not located on the server? </dt> <dd>A: Yes, with RemoteReader (Any HTTP server), S3Reader (Amazon S3 blobs), AzureReader (Azure blobs), or  SqlReader (SQL blobs).
 	
 </dd> <dt>Q: Do the image names change when they are resized? Is SEO affected? </dt> <dd>A: No, image names are retained - SEO isn't affected.
 
-</dd> <dt>Q: When I resize a small image to larger dimensions, it stays at the original size. </dt> <dd>A: This is by design - add &amp;scale=both to allow images to be upscaled. You might want to consider up-scaling client-side to save bandwidth... Just set both width and height on the &lt;img&gt; tag.
+</dd> <dt>Q: When I resize a small image to larger dimensions, it stays at the original size. </dt> <dd>A: This is by design - add &amp;scale=both to allow images to be upscaled. You might want to consider up-scaling client-side to save bandwidth... Just set both width and height on the &lt;img&gt; tag. If you just want padding, use &amp;scale=canvas
 
 </dd> <dt>Q: Can I use this with images stored in a database? </dt> <dd>A: Sure, with the SqlReader plugin. 
 
@@ -35,10 +33,8 @@ However, it's easy to resize and overwrite an image - 1 line of code.
 
 ImageBuilder.Current.Build(sourceFile, destFile, new ResizeSettings("?maxwidth=80&amp;maxheight=80&amp;format=png"));
 
-</dd> <dt>Q: Is in necessary to wildcard map everything to ASP.NET when using IIS6? </dt> <dd>A: No - you can map .jpg, .png, and .gif individually, but I've had numerous reports of IIS issues when using this configuration. I suggest you avoid it.
+</dd> <dt>Q: Is in necessary to wildcard map everything to ASP.NET when using IIS6? </dt> <dd>A: No - you can map .jpg, .png, and .gif individually, but <a href="http://support.microsoft.com/Default.aspx?kbid=909641">you need to follow this KB article</a> to prevent issues.
 
-</dd> <dt>Q: I'm seeing a username and password dialog when resizing some images. What is causing this? </dt> <dd>A: You are probably using IIS6, and have inserted individual mappings for .jpg, .gif, and .png instead of using the wildcard mapping as suggested.
-The best solution is to add the wildcard mapping.
 
 </dd> <dt>Q: I asked my hosting company to add the wildcard mapping, but images don't resize when I add ?width=x; they appear in their original size. I've verified that the HttpModule entry is in Web.Config </dt> <dd>A: The tech support person didn't add the wildcard mapping correctly. Sorry. You can prove it to them by enabling tracing and verifying that the
 image requests never reach asp.net.
@@ -50,12 +46,5 @@ Visit mysite.com/trace.axd. If the JPG URL isn't in here, it is impossible that 
 </dd> <dt>Q: I'm getting OutOfMemory exceptions when I try to resize certain large images for the first time (subsequent requests are fine). They're only 15MB in jpeg form, and I have 100MB of free RAM. </dt> <dd>A:
 A 15MB JPG uncompresses to about 80MB in bitmap form (depending upon the compression level). If you are resizing to a 2MB jpeg (15MB BMP), memory requirements for the
 operation are roughly 110MB (15 + 80 + 15). If you plan on using the resizer for very high-resolution photos (above 8MP), I suggest making sure you have ample amounts of RAM.
-
-</dd> <dt>Q: I've upgraded from the trial version, but I'm still seeing watermarks on my images. </dt> <dd>A: You need to delete the contents of the /imagecache folder, which still contains some cached images generated by the trial version.
-
-</dd> <dt>Q: I'm getting a .NET security error when resizing GIF images  or using ?format=png&amp;colors=255. I'm using the PrettyGifs plugin. All other image types work fine.
-
-</dt> <dd>A: Your hosting provider has messed with the machine.config on the server, and
-has prohibited the Marshal class from being used. PrettyGifs can't operate with such low permissions. 
-
+</dd>
 </dl>

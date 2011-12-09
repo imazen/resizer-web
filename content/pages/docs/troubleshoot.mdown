@@ -11,9 +11,18 @@ Potential causes:
 1. You didn't copy ImageResizer.dll into the /bin folder (unlikely).
 2. Your website has  a 'sub-site' (Application Folder) inside it. Application Folders inherit all Web.config settings from their parent sites, yet expect to have their own copies of all the dlls referenced by those settings in their own /bin folder. You can resolve this problem by (a) changing the app folder to a virtual folder, (b) adding a copy of ImageResizer.dll and plugins into the /bin folder inside that application also, or (c) using <remove /> statements in the child Web.config to cancel out the inherited <add /> statements from the parent Web.config. Option (c) will disable image resizing within the sub-application.
 
-## Blank page, 404, or invalid image error in browser
+## Blank page, invalid image error in browser, or Page cannot be displayed on image URL.
 
-Most likely cause: You are using ASP.NET MVC, but do not have the [MvcRoutingShim](/plugins/mvcroutingshim) plugin enabled. Both MVC and the ImageResizer are trying to answer the request, and corrupting the response.
+If this happens when the image has a querystring:
+
+* You are using ASP.NET MVC, but do not have the [MvcRoutingShim](/plugins/mvcroutingshim) plugin enabled. Both MVC and the ImageResizer are trying to answer the request, and corrupting the response.
+
+If this only happens when the image doesn't have a querystring, you're running IIS6, and you have mapped individual extensions to ASP.NET instead of wildcard mapping:
+
+* See [this fantastic Microsoft KB article for ways to fix this](http://support.microsoft.com/Default.aspx?kbid=909641).
+
+Keep reading if it's a `404: File Not Found error`
+
 
 ## The type or namespace name "ImageResizer" could not be found
 

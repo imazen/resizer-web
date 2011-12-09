@@ -21,6 +21,7 @@ Not finding what you're looking for? Try [searching the site](/search).
 * [URL command reference](/docs/reference)
 * [Configuration reference](/docs/configuration)
 * [Frequently asked questions](/docs/faq)
+* [Troubleshooting](/docs/troubleshoot)
 
 ## Advanced techniques
 

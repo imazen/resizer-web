@@ -18,6 +18,8 @@ For the module to operate properly, we must configure IIS to pass all requests t
 
 Note: For 64-bit installs, use "%windir%\Microsoft.NET\Framework64\v2.0.50727\aspnet\_isapi.dll". The most reliable way to determine the path of aspnet\_isapi.dll is to copy it from the .aspx mapping. You have to use the right-click menus - the keyboard shortcuts don't work.
 
+Note: If you choose to use individual mappings on IIS6 instead of using a wildcard mapping, [you must read and follow this Microsoft KB article file](http://support.microsoft.com/Default.aspx?kbid=909641).
+
 
 ## Installing on IIS 7 classic mode
 
