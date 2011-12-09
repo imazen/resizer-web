@@ -65,6 +65,7 @@ For a list of API changes that affect plugin developers, see the bottom of the p
 
 ## [DiskCache](/plugins/diskcache)
 
+* Greatly reduced CPU usage when autoClean="true" (for certain rare situations).
 * Added beta support for async writes. Enable by setting `asyncWrites=true` on the `<diskcache>` element. The async buffer size defaults to a maximum of 10MB, but can be changed with the `asyncBufferSize` setting (which is in bytes). Async writes can greatly improve performance if you have a slow, overloaded, or high-latency hard disk/SAN.
 * Fixed bug in LockProvider where a failed image resizing request would cause the lock provider to fail to remove the lock object for the request from the dictionary. If you have millions of failed requests during a single app pool cycle, this could cause reduced performance an higher RAM usage.
 * Added support for cooperative cache cleanup, using a mutex to prevent more than one processes from cleaning the same folder at the same time. Should help support extended overlapped recycles and web garden scenarios.
