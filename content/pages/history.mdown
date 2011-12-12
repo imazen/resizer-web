@@ -5,7 +5,7 @@ The ImageResizer was created in January 2007 to simplify the process of changing
 
 The image resizer was designed with security, stability, and performance in mind from day 1. It was never a hack. It has always used proper memory (and resource) management techniques, and has leveraged disk caching to provide ideal scalability. It has always used .NET 2.0, and worked properly on XP through Windows 7 (and Server 2000 through 2008).
 
-It has always been open-source, although I charged a 'download fee' for V1 and V2, which was the best way I could think of to fund development without restricting developer rights. I've also always had a no-questions-asked refund policy... Which only 1 person (of 400+ V2 users) ever took advantage of - and only because their project was cancelled. 
+It has always been open-source, although I charged a 'download fee' for V1 and V2, which was the best way I could think of to fund development without restricting developer rights. I've also always had a no-questions-asked refund policy... Which only 1 person (of 400+ V2 users) ever took advantage of - and only because their project was cancelled. No V3 user has requested a refund yet.
 
 I've always supported the product 100%, and I (believe) I have resolved every issue every user has sent me. Once I spent an entire week helping a user debug their application since they (incorrectly) suspected the ImageResizer of causing a memory leak. This issue ended up being caused by a different component.
 
@@ -35,7 +35,7 @@ Some V3 plugins are under a [slightly more restrictive license](/licenses), but 
 # Interesting statistics
 
 * From Feb 2011 to December 2011, 889 commits were made to the project, an average of 3 per day. Each commit contains between 1 and 5 improvements to the project.
-* In 2011, 70% of support e-mails were answered in under 1 hour. Please note that roughly 30% of support e-mails arrive between 12am and 7am. 
+* In 2011, 70% of support e-mails were answered in under 1 hour. Please note that roughly 30% of support e-mails arrive between 12am and 7am in my timezone. 
 * V3.0 was download 3,150 times between June 2011 and December 2011
 * Between June and December, 24 nuget packages for the ImageResizer were published. Nearly all plugins are nuget compatible. 
 * The ImageResizer handles image processing for (several) photo album sites each containing 10-20TB of images.
