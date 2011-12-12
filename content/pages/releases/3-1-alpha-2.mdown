@@ -2,6 +2,7 @@ Date: December 7, 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-1-alpha-2-full-Dec-7-2011.zip
 MinFile: http://downloads.imageresizing.net/Resizer3-1-alpha-2-min-Dec-7-2011.zip
 Summary: 5 new free plugins, 6 new bundle plugins, 5 rewritten plugins, and innumerable bug fixes
+ShortVersion: 3.1.2
 Tags: releases
 Template: release
 
@@ -29,7 +30,7 @@ The Design bundle gets the these new plugins. If you've already bought the Desig
 
 * [WicEncoder](/plugins/wic) - Encode jpegs with adjustable quality and subsampling settings. Encode GIFs and 8-bit PNGs with adjustable palette size and bit depth.
 * [WicDecoder](/plugins/wic) - Decode images using any WIC-enabled codec installed on the computer
-* [WicBuilder](/plugins/wic) - Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request bass.
+* [WicBuilder](/plugins/wic) - Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request basis using `builder=wic`.
 * [FreeImageResizer](/plugins/freeimage) - Adds support for Lanczos3 and CatmullRom scaling algorithms: &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos command
 
 The Extras bundle is introduced, and starts out with the following 2 plugins

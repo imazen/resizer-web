@@ -9,21 +9,18 @@ Renderer: RubyPoweredMarkdown
 <input type="hidden" name="redirect" value="<%= latest_release.metadata('FullFile') %>" />
 <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
 <h3 style="margin-bottom:0"> Notify me when important updates are available</h3>
-<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <button type="submit" name="Submit" class="awesome black" >Subscribe and Download (avg 8 per year)</button></p>
+<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <button type="submit" name="Submit" class="awesome black" >Subscribe and Download V<%= latest_release.metadata('ShortVersion') %> (avg 8 per year)</button></p>
 <input type="hidden" name="listid" value="29803"/><input type="hidden" name="specialid:29803" value="LH6H"/><input type="hidden" name="clientid" value="905228"/><input type="hidden" name="formid" value="2612"/><input type="hidden" name="reallistid" value="1"/><input type="hidden" name="doubleopt" value="0"/> 
 </form>
 
-
-[<%= latest_release.inline_summary %>](<%= latest_release.abspath %>) are included in this release. 
-
-<p>
-<a href="<%= latest_release.metadata('FullFile') %>" class="awesome black">(Recommended) Download source, binaries, plugins, and sample code (15MB)</a>
-
-<a href="<%= latest_release.metadata('MinFile') %>" class="awesome black">Download ImageResizer.dll only (170K)</a>
-
+<p style="margin-top:10px;margin-bottom:0">
+<a href="<%= latest_release.metadata('FullFile') %>" class="awesome black">Download V<%= latest_release.metadata('ShortVersion') %> source, binaries, plugins, and sample code (15MB)</a> 
+</p>
+<p style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0">
+This version includes <a href="<%= latest_release.abspath %>"><%= latest_release.inline_summary %>. Click for release notes.</a>
 </p>
 
-[Show all releases](/releases).
+[Show previous releases](/releases).
 
 It's only happened once (a long time ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
 
