@@ -90,6 +90,21 @@ If that fails, providing Readonly access to the Everyone group should work, but 
 
 If you still encounter issues, perform a reinstall with COMInstaller.exe, and save the install log. If the reinstall doesn't fix the problem, send the install log to support@imageresizing.net to get help with your issue.
 
+## System.Security.SecurityException
+
+	System.Security.SecurityException: Request for the 
+	permission of type 'System.Configuration.ConfigurationPermission, 
+	System.Configuration, Version=2.0.0.0, Culture=neutral, 
+	PublicKeyToken=b03f5f7f11d50a3a' failed
+
+This can occur in certain medium or low trust environments. To correct, set `requirePermission="false"` on the resizer section declaration in Web.config.
+
+	<?xml version="1.0" encoding="utf-8" ?>
+	<configuration>
+		<configSections>
+			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" />
+		</configSections>
+		...
 
 ## SecurityException on GIF images when using the PrettyGifs plugin	
 
