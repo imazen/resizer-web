@@ -1,18 +1,44 @@
 # System Requirements
 
-Supported operating systems: Windows 2000, Server 2000, XP, Server 2003, Vista, Server 2008, and Windows 7. Both 32 and 64 bit versions.
+## Supported operating systems
 
-Supported web servers (for ASP.NET mode): IIS5, IIS 5.1, IIS 6, IIS 7, IIS 7.5 (both classic and integrated modes).
+Both 32 and 64-bit versions of the following operating systems are supported.
 
-Unless listed below, everything runs under .NET 2.0 SP2 (although fully compatible with 3.0, 3.5, and 4.0).
+* Windows 2000
+* Windows Server 2000
+* Windows XP
+* Windows Server 2003 (and R2)
+* Windows Vista
+* Windows Server 2008 (and R2)
+* Windows 7
 
-## Plugins that use .NET 3.5
+## Supported web servers
+
+One of the following web servers is required to host the image resizing server, although you can use any web server to host the actual application that calls it. For example, you could run both a Ruby server and IIS on the same machine, performing the image processing in IIS, but hosting the application in Ruby, Java, Python, or whichever modern language you prefer.
+ 
+* IIS 5
+* IIS 5.1
+* IIS 6
+* IIS 7 (both classic and integrated mode supported)
+* IIS 7.5
+* IIS Express
+* Cassini, the Visual Studio Web Development Server (WebDev.exe).
+
+## Supported .NET Framework versions
+
+* .NET 2.0 SP2
+* .NET 3.0
+* .NET 3.5
+* .NET 4.0
+* .NET 4.5
+
+## Plugins that require .NET 3.5
 
 * BatchZipper
 * PsdReader
 * S3Reader
 * Wic
-* ImageResizer.mvc
+* ImageResizer.Mvc
 
 
 ## Samples that use .NET 3.5 and 4.0
@@ -20,6 +46,7 @@ Unless listed below, everything runs under .NET 2.0 SP2 (although fully compatib
 * ConsoleApplication uses .NET 4.0
 * ComplexWebApplication uses .NET 3.5
 * ImageResizerGUI (WPF) uses .NET 4.0
+
 
 
 Visual Studio 2010 is suggested for opening the sample projects and source code, although you can use 2008 if you rebuild the project files.
