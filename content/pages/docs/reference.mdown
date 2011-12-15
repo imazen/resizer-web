@@ -27,7 +27,7 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 * **maxwidth, maxheight** – fit the image within the specified bounds, preserving aspect ratio.
 * **width, height** – force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.
 * **mode=max|pad|crop|carve|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight. (new in V3.1)
-* **align=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to align the image when padding or cropping. (new in V3.1)
+* **anchor=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to anchor the image when padding or cropping. (new in V3.1)
 * **scale=both|upscaleonly|downscaleonly|upscalecanvas** – By default, images are never upscaled. Use &scale=both to upscale images if they are smaller than width and height
 
 ## Border, padding, margins and background colors
