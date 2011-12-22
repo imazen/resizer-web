@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-If you're getting an error message, [see the troubleshooting page instead](/docs/troubelshoot).
+If you're getting an error message, [see the troubleshooting page instead](/docs/troubleshoot).
 
 <dl class="faq">
 	
