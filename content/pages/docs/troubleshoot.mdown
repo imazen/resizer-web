@@ -49,6 +49,7 @@ Potential causes:
 2. You are using IIS 6 (or earlier), or IIS7 Classic Pipeline, and are not using the .jpg.ashx syntax, and you have not [mapped all requests to the ASP.NET runtime](/docs/cleanurls). 
 3. You are using ASP.NET MVC (and have conflicting routes), but do not have the [MvcRoutingShim plugin](/plugins/mvcroutingshim) installed.
 4. You are mistyping the querystring commands. 
+5. The original image is smaller than the size you are requesting, and you are not using `&scale=both` (The default behavior is to never upscale images, [but this can be changed](/plugins/defaultsettings)).
 
 ## File not found only on images without a querystring
 
