@@ -1,7 +1,9 @@
 
 # WatermarkSettings.cs migration
 
-WatermarkSettings.cs was very limited, but useful. It has been replaced by the concept of plugins in V2.
+WatermarkSettings.cs was very limited, but useful. It has been replaced by the concept of [plugins](/plugins) in V2.
+If you're wanting do any kind of watermarking (whether text or image overlays), the [new watmark plugin](/plugins/watermark) can probably handle it. 
+
 
 Example plugin:
 
