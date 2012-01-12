@@ -1,6 +1,6 @@
 <div class="banner first-banner">
 	<div class="image-block">
-	  <img src="images/leaf-cropping.jpg" alt="cropping a leaf" width="350px"  style="padding: 9px 9px 15px 15px;" height="250px"/>
+	  <img src="images/leaf-cropping.jpg" alt="cropping a leaf" width="350"  style="padding: 9px 9px 15px 15px;" height="250"/>
 	</div>
 		
 	<div class="text-right">
@@ -22,7 +22,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/usage-sample.png" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/usage-sample.png" alt="featured" width="350" height="250"/>
 	</div>
 		
 	<div class="text-right">
@@ -36,7 +36,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/image-formats.png" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/image-formats.png" alt="featured" width="350" height="250"/>
 	</div>
 		
 	<div class="text-right">
@@ -57,13 +57,13 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/rocket.jpg" alt="Rocket. Fast. Like this module." width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/rocket.jpg" alt="Rocket. Fast. Like this module." width="350" height="250"/>
 	</div>
 		
 	<div class="text-right">
 		<h2>Highly tuned performance</h2>
 		<p>No memory leaks. Optimized data streaming. Scale to millions of images and millions of requests with smart caching plugins</p>
-		</p>
+		
 		<ul>
 			<li>Kiss high RAM/CPU/IO usage goodbye with our fifth-generation DiskCache plugin. <strong>Serve up to 100x more images per second.</strong></li>
 			<li>Get <strong>responsive edge caching</strong> and leverage the scalability of Amazon's CloudFront network with the CloudFront plugin.</li>
@@ -74,7 +74,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350" height="250"/>
 	</div>
 		
 	<div class="text-right">
@@ -94,12 +94,12 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/usage-sample.png" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/usage-sample.png" alt="featured" width="350" height="250"/>
 	</div>
 		
 	<div class="text-right">
 		<h2>Open Source</h2>
-		<p>Our simple <a href="/licenses/freedom">Freedom license</a> frees you from worry. Even paid plugins <a href="/licenses/pro">permit source modification and redistribution</a>. And source comes with everything.</a></p>
+		<p>Our simple <a href="/licenses/freedom">Freedom license</a> frees you from worry. Even paid plugins <a href="/licenses/pro">permit source modification and redistribution</a>. And source comes with everything.</p>
 		<p>stress = 0;</p>
 	</div>
 </div>
@@ -107,7 +107,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350px" height="250px"/>
+	  <img src="http://cf.imageresizing.net/images/img-featured.jpg" alt="featured" width="350" height="250"/>
 	</div>
 		
 	<div class="text-right">
@@ -133,7 +133,7 @@
 
 <div class="banner">
 	<div class="image-block">
-	  <img src="http://img.imageresizing.net/red-leaf.jpg;width=220;height=220;crop=auto;rotate=90;bgcolor=black;flip=h;borderWidth=5;borderColor=gray;paddingWidth=10" alt="featured" width="250px" height="250px"/>
+	  <img src="http://img.imageresizing.net/red-leaf.jpg;width=220;height=220;crop=auto;rotate=90;bgcolor=black;flip=h;borderWidth=5;borderColor=gray;paddingWidth=10" alt="featured" width="250" height="250"/>
 	</div>
 		
 	<div class="text-right">
