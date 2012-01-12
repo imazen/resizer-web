@@ -13,6 +13,7 @@ Development of this project is funded by people purchasing [Pro][pro] (<span cla
  * If it is part of ImageResizer.dll or ImageResizer.Mvc.dll, then it's under the [Freedom license][freedom].
  * If the dll is named ImageResizer.Plugins.something.dll, it's probably a [paid plugin](/plugins).
  * Except for ImageResizer.Plugins.Logging.dll, which is also under the [Freedom license][freedom].
+ * Except for ImageResizer.Plugins.PdfRenderer, which is [under the GPL v3 due to its use of Ghostscript](/plugins/pdfrenderer).
 
 # List of licenses available for paid bundles
 
