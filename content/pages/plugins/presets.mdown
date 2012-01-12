@@ -26,6 +26,14 @@ A named preset can specify default settings (these can be overridden in the URL)
 	...
 	</resizer>
 
+## onlyAllowPresets
+
+When onlyAllowPresets="true", all other querystring pairs will be stripped from the URL. 
+
+Naturally, this will break the RemoteReader plugin if you're using the signed URLs. 
+
+onlyAllowPresets does not apply to the managed API, only to the URL API.
+
 ## Usage syntax
 
 Use a default settings group, then overriding the width:
