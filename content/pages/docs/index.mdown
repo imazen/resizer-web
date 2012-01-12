@@ -38,6 +38,8 @@ Not finding what you're looking for? Try [searching the site](/search).
 
 * [Understanding processing and caching in the ImageResizer](/docs/process-and-cache)
 * [Extending the resizer (plugins and events)](/docs/extending)
+* [Full generated documentation for the core and all plugins, with graphs](http://nathanaeljones.github.com/resizer-docs/doxygen/namespaces.html)
+* [Simple generated documentation for the ImageResizer core](http://nathanaeljones.github.com/resizer-docs/docu/)
 
 ## Plugins
 
