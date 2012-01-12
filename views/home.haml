@@ -3,7 +3,7 @@
 		= erubis :banners_content, :layout => false, :views => Nesta::Path.local("content/pages")
 :plain
 	<div class="page-content t">
-		<div style="width:70px;padding-top:25px;float:right"><g:plusone></g:plusone></div>
+		<div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
 		#{@page.to_html(self)}
 		<div class="g-plusone"></div>
 	</div>
