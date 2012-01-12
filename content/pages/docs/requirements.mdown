@@ -12,6 +12,8 @@ Both 32 and 64-bit versions of the following operating systems are supported.
 * Windows Server 2008 (and R2)
 * Windows 7
 
+[WIC pipeline plugins](/plugins/wic) should only be used on Server 2008 R2 and Windows 7 or higher for optimal reliability.
+
 ## Supported web servers
 
 One of the following web servers is required to host the image resizing server, although you can use any web server to host the actual application that calls it. For example, you could run both a Ruby server and IIS on the same machine, performing the image processing in IIS, but hosting the application in Ruby, Java, Python, or whichever modern language you prefer.
@@ -37,8 +39,11 @@ One of the following web servers is required to host the image resizing server, 
 * BatchZipper
 * PsdReader
 * S3Reader
-* Wic
+* Wic plugins
 * ImageResizer.Mvc
+* PdfRenderer
+* PsdComposer
+* MvcRoutingShim
 
 
 ## Samples that use .NET 3.5 and 4.0

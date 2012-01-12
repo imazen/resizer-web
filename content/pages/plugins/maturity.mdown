@@ -1,7 +1,7 @@
 
 # Maturity chart
 
-Last updated Nov 10, 2011 regarding V3.1
+Last updated Jan 10, 2012 regarding V3.1.3
 
 This chart represents the author's honest opinion on the maturity of the various plugins. 
 
@@ -14,7 +14,7 @@ Meaning of the terms *stable*, *beta*, and *alpha* in the context of this projec
 You shouldn't worry about using alpha plugins on production servers; even alpha-rated plugins have undergone extensive security assessment and memory usage profiling. It's very unlikely an alpha plugin will cause external issues - at worst, it may simply not function properly in  certain usage scenarios. Also, remember... Free Support! Alpha plugins get the same level of support that the rest do.
 
 
-## Core 
+## Core & Free plugins
 
 * Core framework - *beta* (likely to have API refinements, but otherwise very stable)
 * DefaultEncoder - *stable*
@@ -27,14 +27,15 @@ You shouldn't worry about using alpha plugins on production servers; even alpha-
 * FolderResizeSyntax - *stable*
 * Image404 -  *beta*
 * VirtualFolder - *beta*
-* ImageHandlerSyntax - *beta*
-* MvcRoutingShim - *beta*
-* AutoRotate - *beta*
+* ImageHandlerSyntax - *stable*
+* MvcRoutingShim - *stable*
+* AutoRotate - *stable*
 * Presets - *beta* 
 * SpeedOrQuality - *alpha*
 * Logging - *alpha*
 * DefaultSettings - *alpha*
-
+* IEPngFix - *alpha*
+* PdfRenderer - *alpha* 
 
 ## Performance Bundle
 

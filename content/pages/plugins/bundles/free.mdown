@@ -4,9 +4,9 @@ Flags: bundle
 
 # Free bundle
 
-The following 17 plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
+The first 18 of the following plugins are included in the [free download](/download) and are under the [Freedom license](/licenses/freedom).
 
-The following 15 can be found in the ImageResizer.Plugins.Basic namespace
+The first 16 can be found in the ImageResizer.Plugins.Basic namespace
 
 * **[DefaultEncoder](/plugins/defaultencoder)** (default) - Adjustable jpeg compression, 24-bit PNG with transparency support, and standard .NET GIF encoding (which is very lousy).
 * **[Diagnostics](/plugins/diagnostics)** (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
@@ -23,10 +23,13 @@ The following 15 can be found in the ImageResizer.Plugins.Basic namespace
 * **[Presets](/plugins/presets)** - Created named settings groups and and reference them with ?preset=name instead of specifying them all in the URL
 * **[AutoRotate](/plugins/autorotate)** - Use the EXIF rotation data from the camera to auto-rotate your images.
 * **[DefaultSettings](/plugins/defaultsettings)** - Allows you to configure the default setting values when commands (like `scale`) are omitted
+* **[IEPngFix](/plugins/iepngfix)** - Automatically serve GIF versions of PNG files to IE6 and below clients. Opt-in or opt-out, very configurable.
 
-These plugins are in separate assemblies due to their dependencies
+These 3 plugins are in separate assemblies due to their dependencies
 
 * **[Logging](/plugins/logging)** - Allows logging through NLog
 * **[MvcRoutingShim](/plugins/mvcroutingshim)** - Prevent MVC Routes from taking over the ImageResizer's requests.
+* **[PdfRenderer](/plugins/pdfrenderer)** - Render PDFs to images dynamically, then crop or process them as an image. **[Under a different license](/licenses/pdfrenderer) due to its use of GPL components**.
+
 
 Check out the [maturity chart](/plugins/maturity) to see which plugins are the most stable.
