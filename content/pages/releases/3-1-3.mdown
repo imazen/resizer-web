@@ -1,0 +1,79 @@
+Date: January 14, 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-1-3-full-Jan-14-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-1-3-min-Jan-14-2012.zip
+Summary: 2 new free plugins, 7 bug fixes
+ShortVersion: 3.1.3
+Tags: releases
+Template: release
+
+# Resizer 3.1.3 - Jan 14 2012
+
+[Read the release notes for v3.1](/releases/3-1-alpha-2) if you're upgrading from 3.0.X. V3.1 included major changes to all plugins and the core, and included a long list of bug fixes. It also introduced 11 new plugins and 5 rewritten ones.
+
+This release fixes some bugs in V3.1, adds some new features, and introduces 2 new plugins, [PdfRenderer](/plugins/pdfrenderer) and [IEPngFix](/plugins/iepngfix). 
+
+## Bug fixes
+
+* Fixed a theoretical memory leak in the PrettyGifs plugin (undisposed Bitmap instance), inside the quantization algorithm I ported many years ago. I believe it's gone undiscovered this long because most GIF images are small, and of insufficient volume to stay ahead of the garbage collector. This bug hasn't been seen in practice; I discovered it during a routine self-code-review of the PrettyGifs source code. You should immediately update to 3.1.3 if you use the PrettyGifs plugin and generate a high volume of GIF or 8-bit PNG images.
+* Fixed 'black background when rotated odd angles' bug, which was introduced in version 3.1.2.
+* [RemoteReader](/plugins/remotereader) now works properly with the 404Plugin, instead of failing to redirect to the 404 image.
+* [S3Reader](/plugins/s3reader) no longer silently fails when there is a problem with the S3 bucket; the error is thrown properly, and is displayed if error display is enabled. Also, bucket names are now case-insensitive and whitespace is ignored.
+* [S3Reader](/plugins/s3reader) now supports non-US buckets when useSubdomains="true". The default is false for compatibility with legacy buckets.  
+* When an empty stream is passed to the ImageResizer, a more informative message is used in the exception. 
+* Null values assigned to querystring keys during the Rewrite event no longer block default values assigned in the RewriteDefaults event.
+
+## New destination path syntax
+
+Tired of doing path math? You can now do most renaming tasks with a simple syntax instead of writing your own string logic.
+
+Uploading a file with a GUID filename is now much simpler: 
+
+	ImageJob i = new ImageJob(file, "~/uploads/<guid>.<ext>", new ResizeSettings("width=200&height=200&format=jpg&crop=auto"));
+	i.CreateParentDirectory = true; //Auto-create the uploads directory.
+	i.Build();
+
+### List of variables
+
+* <guid> - lowercase hexadecimal GUID with no dashes or brackets
+* <ext> - the correct extension for the file based on how it will be encoded
+* <filename> - the original filename (minus folder and extension)
+* <path> - the original path (dir and filename) without the original extension.
+* <originalext> - the original extension
+* <width> - the final width of the written image
+* <height> - the final height of the written image
+* <settings.*> - any value from the settings used to resize it.
+
+### Filtering (alpha)
+
+You can also filter values
+
+* <filename:A-Za-z0-9_-> - Will keep only alphanumerics, dashes, and underscores from the filename.
+
+This can be useful, as uploaded filenames are usually unacceptable for use on the server, even when combined with a guid.
+
+
+## New plugins & cool features
+
+* Jason Morse brought us the [PdfRenderer plugin](/plugins/pdfrenderer), which I promptly reviewed and tested, and decided to include immediately due to its great code quality.
+* The extremely boring [IEPngFix plugin](/plugins/iepngfix), for those who still care about IE6. 
+* It's official, you can now use 'w' and 'h' instead of 'width' and 'height'. 9 less characters to type!
+* [Presets plugin](/plugins/presets) now works with managed API as well as URL API. (Managed API does not enforce the OnlyAllowPresets setting). 
+* The ImageResizer can now 'auto-create' the parent directory for an image it is writing. Use ImageJob and set `CreateParentDirectory` to true. Nice for uploads.
+
+## Boring new stuff
+
+* Added ResizeSettings.CropXUnits and ResizeSettings.CropYUnits
+* Added ResizeSetting constructor that accepts width, height, FitMode, and image format.
+* PrettyGifs: Added preservePalette setting.
+* ImageJob: added Stream->Stream constructor overload
+* ImageHandlerSyntax: Now &mode can be used even in the image handler syntax.
+* Diagnostics page now reports on trust level and incompatible assemblies.
+* Improved error reporting for plugins that subclass VirtualPathProvider on GoDaddy hosting.
+* PathUtils: Added GuessVirtualPath and GenerateImageUrl
+* Added Config.Current.Pipeline.ModuleInstalled variable.
+* PathUtils.MapPathIfAppRelative, ResolveVariablesInPath, and RemoveNonMatchingChars were added as supporting methods for the dest path syntax.
+* You can turn off the new destination path syntax with ImageJob.AllowDestinationPathVariables = false
+
+## Changes that may break your build.
+
+* ImageJob.DisposeSourceStream was renamed to DisposeSourceObject as the previous name was incorrect; both Bitmaps and Streams are disposed by it. It's unlikely many people use this property already as it was only recently introduced.
