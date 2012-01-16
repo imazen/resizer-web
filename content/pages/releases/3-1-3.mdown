@@ -34,14 +34,14 @@ Uploading a file with a GUID filename is now much simpler:
 
 ### List of variables
 
-* <guid> - lowercase hexadecimal GUID with no dashes or brackets
-* <ext> - the correct extension for the file based on how it will be encoded
-* <filename> - the original filename (minus folder and extension)
-* <path> - the original path (dir and filename) without the original extension.
-* <originalext> - the original extension
-* <width> - the final width of the written image
-* <height> - the final height of the written image
-* <settings.*> - any value from the settings used to resize it.
+* &lt;guid> - lowercase hexadecimal GUID with no dashes or brackets
+* &lt;ext> - the correct extension for the file based on how it will be encoded
+* &lt;filename> - the original filename (minus folder and extension)
+* &lt;path> - the original path (dir and filename) without the original extension.
+* &lt;originalext> - the original extension
+* &lt;width> - the final width of the written image
+* &lt;height> - the final height of the written image
+* &lt;settings.*> - any value from the settings used to resize it.
 
 ### Filtering (alpha)
 
