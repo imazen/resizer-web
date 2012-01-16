@@ -4,6 +4,9 @@ Summary: The last build of the version 2 line.
 
 # Resizer 2.8 - May 27 2011
 
+
+**Update (Jan 15, 2012): This version has an unpatched memory leak in the GIF and PNG quantization system (Quantizer.cs). The issue has been patched in V3, but V2 has been deprecated for 1 year now. [Upgrading is a simple process](/docs/2to3/), and there are currently no plans to make another maintenance release of V2.**
+
 This is probably the last update the V2 line will receive, as it was superseded by V3 on Apr. 24. Support for 2.8 will be ending June 15, 2011, **3 years** after V2 was first released.
 
 This is a **high-priority update** for all users, as it blocks a potential avenue for a DOS attack and fixes many important bugs. Users of v2.6 can simply replace the ImageResizer.DLL file or the ImageResizer folder of .cs files. See [the changelog](/docs/v2/changelog) if you have an version prior to 2.6, as configuration changes may be required..
