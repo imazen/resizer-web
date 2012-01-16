@@ -232,8 +232,8 @@ Also added complete XML configurability.
 * If a plugin throws an exception during GetIssues, it is now logged as an issue instead of crashing the resizer.debug page.
 * Earlier disposal of Pen and Brush instances used for rendering image padding, borders, and drop shadow.
 
-## Depreciated
+## Deprecated
 
-* ImageResizer.StretchMode and ImageResizer.CropMode are depreciated, and have been replaced by ImageResizer.FitMode
+* ImageResizer.StretchMode and ImageResizer.CropMode are deprecated, and have been replaced by ImageResizer.FitMode
 
 
