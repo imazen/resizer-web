@@ -32,7 +32,9 @@ Renderer:RubyPoweredMarkdown
 </div>
 
 
-[17 plugins](/plugins/bundles/free) are included in the free download, and 21 more are sold. The core project is supported by purchases of the paid plugin bundles. Please don't steal; I charge an average price of $15 per plugin and provide free support - this system works only if everyone is honest.
+[19 plugins](/plugins/bundles/free) are included in the free download, and 21 more are sold. The core project is supported by purchases of the paid plugin bundles. 
+
+[Please read my open letter to the .NET community about open-source software](/openletter). I'm desperately trying to prove that .NET developers are evolved and honest enough to make this work.
 
 The licenses are as MIT-like and unrestrictive as possible - even the <span class="price">$99</span> Pro license [allows modification, redistribution, and sub-licensing](/licenses/pro). This 'download fee' allows me to provide support to everyone, develop new features, fix bugs, and write documentation. Enterprise-wide licenses [are available for $250 per bundle](/plugins/enterprise).
 
@@ -40,7 +42,7 @@ By purchasing 1 or more of the bundles below, you will get
 
  * Full source code and binaries for **everything** offered on the site, in a single .zip file. I'm trusting you to purchase licenses for the bundles you use.
  * **Free** upgrades for all minor releases (major releases occur every ~2 years). 
- * Priority support. 
+ * Priority support (includes phone, chat, and TeamViewer support)
 
 	
 

@@ -22,7 +22,7 @@ Then, open SmartGit and `Clone` `ssh://git@nathanael.repositoryhosting.com/natha
 
 I do, just not for this repository. There are a number of reasons for this.
 
-1. This repository has copyrighted image files in the history that can't be 'published'. In the next version I might start over with a fresh repository and rid myself of this problem.
+1. This repository has copyrighted image files in the history that can't legally be 'published'. In the next version I might start over with a fresh repository and rid myself of this problem.
 2. The repository structure is a bit confusing - The generated packages are greatly simplified and reduce the chance of errors.
 3. Each usable version gets a new release on NuGet and ImageResizing.Net immediately. The Git repo is not always in a consistent or building state, although I try to keep it that way. My build script creates and uploads new releases in minutes, so it's easier to email someone a hotfix link than direct them to the right git commit.
 
