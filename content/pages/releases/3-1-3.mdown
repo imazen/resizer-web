@@ -29,7 +29,7 @@ Tired of doing path math? You can now do most renaming tasks with a simple synta
 
 Uploading a file with a GUID filename is now much simpler: 
 
-	ImageJob i = new ImageJob(file, "~/uploads/<guid>.<ext>", new ResizeSettings("width=200&height=200&format=jpg&crop=auto"));
+	ImageJob i = new ImageJob(file, "~/uploads/<guid>.<ext>", new ResizeSettings("width=1600"));
 	i.CreateParentDirectory = true; //Auto-create the uploads directory.
 	i.Build();
 

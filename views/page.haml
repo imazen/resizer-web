@@ -1,7 +1,8 @@
-%div(class="page-content t no-banner")
-	-if @page and @page.lib("plusone")
-		<div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
-	~ @page.to_html(self)
-	-if @page and @page.lib("plusone")
-		<div class="g-plusone"></div>
+%div(class="page-content no-banner")
+	%div(class="t")
+		-if @page and @page.lib("plusone")
+			<div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
+		~ @page.to_html(self)
+		-if @page and @page.lib("plusone")
+			<div class="g-plusone"></div>
 	= haml :comments, :layout => false
