@@ -1,5 +1,5 @@
 Title: Support - Image Resizer
-Uservoice: true
+Libs: uservoice, -comments
 
 #Support
 

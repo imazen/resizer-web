@@ -1,6 +1,7 @@
 menu: download
 title: Download the Image Resizer Free
 Renderer: RubyPoweredMarkdown
+Libs: -comments
 
 
 #Download <%= latest_release.heading %>

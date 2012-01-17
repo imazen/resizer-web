@@ -1,4 +1,5 @@
 Renderer: RubyPoweredMarkdown
+Libs: -comments
 
 # Purchase complete!
 

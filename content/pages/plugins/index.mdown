@@ -1,5 +1,5 @@
 Title: Plugins - Image Resizer
-Libs: ejunkie, ejunkiecart, uservoice
+Libs: ejunkie, ejunkiecart, uservoice, -comments
 Template: plugin_page
 Renderer:RubyPoweredMarkdown
 
