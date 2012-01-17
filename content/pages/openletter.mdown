@@ -1,12 +1,13 @@
 Date: Jan 15, 2012
 Summary: I'm disappointed, but hopeful.
-Libs: -comments
+Libs: -comments, plusone
+Title: Open Letter to the .NET community
 
 ## Open Letter to the .NET community, Jan 15, 2012
 
-Going open-source for a niche .NET product is a very risky move. I did it with the optimistic view that *at least 1 in 15 developers* would be honest enough to buy licenses for the paid plugins they use. With 100% customer satisfaction rate across thousands of users, I expected more loyalty. 
+Going open-source for a niche .NET product is a very risky move. I did it with the optimistic view that *at least 1 in 10 developers* would be honest enough to buy licenses for the paid plugins they use. With 100% customer satisfaction rate across thousands of users, I expected more loyalty. 
 
-So far, only *1 in 35* have paid for the paid plugins they are using. I'm not even counting the much larger percentage of users that don't need any of the plugins, who don't have the traffic to justify disk caching, and don't need HQ GIF or advanced file format support.
+So far, only *1 in 25* have paid for the paid plugins they are using. I'm not even counting the much larger percentage of users that don't need any of the plugins, who don't have the traffic to justify disk caching, and don't need HQ GIF or advanced file format support.
 
 The .NET software community is notorious for its treatment of open-source projects, but I hoped (and still do) that they were slowly becoming more intelligent, and realizing how self-destructive that behavior was. Nearly very other community has realized how the open-source model produces better quality code, but extremist capitalism still seems to be the norm for .NET. No intelligent reasons for this behavior remain, but who will mend their habits and shed the FUD first? 
 
@@ -36,13 +37,13 @@ I believe open-source can survive in the .NET community. It may be a decade befo
 
 This project is a hybrid. It's half pure, MIT-style, open-source, and half 'licensed' MIT-wannabe open-source. Business aren't fond of spending money they aren't legally obligated to, so I've taken that into account while preserving as many of your freedoms and their freedoms as possible. I'm trying to show that open-source in .NET is possible for middle-size systems; those without big business sponsors, but yet too big to be a side job for a person.
 
-Some day, I hope to make this entire project 100% pure open-source, without licensing fees for any of the plugins. I look forward to when the community has shed its selfishness enough that it can maintain what it uses; fix what it finds broken. But that day seems far off from where I stand, seeing less than 0.28% of users contribute anything back to this project.
+Some day, I hope to make this entire project 100% pure open-source, without licensing fees for any of the plugins. I look forward to when the community has shed its selfishness enough that it can maintain what it uses; fix what it finds broken. But that day seems far off from where I stand, seeing less than 0.8% of users contribute anything back to this project.
 
-By making only the more specialized plugins 'paid', I made the software free for 90% of users. I need you, the 10% that uses these plugins, to be honest, if you can.
+By making only the more specialized plugins 'paid', I made the software free for 80% of users. I need you, the 20% that uses these plugins, to be honest, if you can.
 
 If using these without paying, contributing, or publicizing in return makes you feel a little guilty, then please clear your conscience by giving back in some way. If you don't feel any guilt, well, this letter wasn't written to you. 
 
-I believe that more than 2.8% of you are honest. If the number had been 15%, I would never have written this letter. But 2.8%? Really? 
+I believe that more than 4% of you are honest. If the number had been 15%, I would never have written this letter. But 4%? Really? 
 
 I hate DRM - I see it as being both destructive and very ineffective. But I now understand its attraction; and how anger and sadness can make it seem justified. 
 

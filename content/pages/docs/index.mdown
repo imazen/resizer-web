@@ -1,6 +1,6 @@
 Menu: Docs
 Title: Documentation - Image Resizer V3
-Libs: -comments
+Libs: -comments, plusone
 
 #Documentation
 
