@@ -26,6 +26,8 @@ This plugin is activated when any PDF url has one of the [resizer commands](/doc
 
 It uses the `width` and `height` commands to optimize the PDF rendering to the desired size. Any image processing commands may be used later, but it is not compatible with the WicBuilder or FreeImageBuilder pipelines. 
 
+Page 1 is rendered by default, but you can choose which page to render with the `&page=X` parameter.
+
 ### Performance characteristics
 
 PDF rendering can be an intensive operation, and is highly dependent on the PDF and server. Expect 250 to 1000 milliseconds. This plugin should be combined with the [DiskCache](/plugins/diskcache) plugin for best performance.
