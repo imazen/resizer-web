@@ -32,11 +32,6 @@
 
 		%link(href="/articles.xml" rel="alternate" type="application/atom+xml")
 		= haml :analytics, :layout => false
-		:plain
-			<script>
-			//<!--
-			var a=new Date,b=a.getHours()+a.getTimezoneOffset()/60;if(19==a.getDate()&&0==a.getMonth()&&2012==a.getFullYear()&&13<=b&&24>=b)window.location="http://sopastrike.com/strike";
-			//--></script>
 	%body
 		%div.site-container
 			= erubis :header, :layout => false
