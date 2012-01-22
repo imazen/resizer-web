@@ -1,0 +1,30 @@
+Date: January 22, 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-1-4-full-Jan-22-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-1-4-min-Jan-22-2012.zip
+Summary: 5 bug fixes, 2 minor new features
+ShortVersion: 3.1.4
+Tags: releases
+Template: release
+Libs: plusone
+
+# Resizer 3.1.4 - Jan 22 2012
+
+[Read the release notes for v3.1](/releases/3-1-alpha-2) and [V3.1.3](/releases/3-1-3) if you're upgrading from 3.0.X. V3.1 included major changes to all plugins and the core, and included a long list of bug fixes. It also introduced 11 new plugins and 5 rewritten ones. V3.1.3 introduced 2 new plugins and a new path syntax.
+
+This release adds minor new features and fixes some minor bugs. 
+
+## Major bug fixes
+
+* The setter for the ResizeSettings.Height property works again (it was broken in 3.1.3 due to a typo made while adding the w/h syntax).
+* ImageBuilder now throws a FileNotFoundException instead of a NullReferenceException when a ASP.NET virtual path like  "~/file.png" doesn't exist.
+
+## Minor new features
+
+* Added ImageJob.CreateDir() alias - a chainable way to set CreateParentDirectory to true.
+* Added /resizer.debug warning when running under IIS7 classic mode instead of integrated mode.
+
+## Minor bug fixes
+
+* Now compiles under Visual Studio 11 preview
+* Better error messages for empty or read-to-end streams from a (I)VirtualFile or HttpPostedFile source value.
+* ImageBuilder.Build, LoadImage, and GetStreamFromSource now throw an ArgumentNullException if parameter 'source' is null.
