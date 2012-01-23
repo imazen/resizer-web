@@ -1,16 +1,32 @@
 
 # Network BIOS limit reached
 
-Users of ASP.NET often receive the following error message when running an website from a network share or NAS device.
+Users of IIS and ASP.NET often receive the following error message when running an website from a network share or NAS device.
 
 	The network BIOS command limit has been reached
 	Failed to start monitoring changes
 
-There are three solutions
 
-1. Stop using a network share or NAS (recommended)
+There are two causes; one from IIS, and one from ASP.NET. Both problems are triggered by a large number of folders in the site, and the the protocol inefficiency of over-the-network storage.
+
+The easy solution is - don't host your content on a SAN. Go cloud; put the content on S3, your server on EC2, and use CloudFront to make that tiny server scale like mad. If that's not an option, keep reading.
+
+## Part 1: Stop IIS from continually checking every folder for a web.config file
+
+1. Go to IIS manager. 
+2. Click the server name in the left panel (not the site name)
+3. Scroll down and open Configuration Manager. 
+4. Choose system.applicationHost/sites in the Section: field.
+5. Click (collection) to bring up the Collection Editor, select the web site you wish to modify
+6. In the bottom panel, expand the virtualDirectoryDefaults item. 
+7. Change allowSubDirConfig to False instead of True
+
+## Part 2: Stop ASP.NET from spinning up an individual watcher for every single folder on the website.
+
+There are two solutions (other than not using a SAN)
+
 2. Disable FCN (File change notifications) completely for ASP.NET. (Has side effects - no restart on web.config change, output cache gets dirty)
-3. Raise the command limit (has a ceiling that you will hit if you have over 40,000 folders in sites on your server)
+3. Raise the command limit (has a ceiling that you will hit if you have over 40,000 folders in sites on your server). To reiterate, this is a server-wide limit, not a site-specific limit. Each watcher also consumes I/O and CPU resources, so simply raising the limit will have an impact.
 
 
 ## Disabling FCN
@@ -23,13 +39,19 @@ There are three solutions
 
 4. HKLM\SOFTWARE\Wow6432Node\Microsoft\ASP.NET\FCNMode
 
-Microsoft also documents a value '2' that is supposed to use recursive monitoring and only create one FileSystemWatcher/DirectoryChangeNotification object. Unfortunately, we haven't been able to get this to work - it behaves as if the value is '0' (default functionality, one watcher per folder).
+Microsoft also documents a value '2' that is supposed to use recursive monitoring and only create one FileSystemWatcher/DirectoryChangeNotification object. 
+
+Our testing of '2' was unfortunately hindered by a simultaneous problem with IIS, so we don't know if '2' will work, or if its failure was actually IIS's web.config watcher.
+
+This registry setting was introduced through updates, not a major release, so make sure your system is fully patched to get the best results. And share your experience and results so we have more data to draw from. 
+
+Many companies are successfully running over 20TB of imagery through IIS and ASP.NET, so although it can be challenging, it's possible. I've helped several companies solve their IIS/ASP.NET scaling problems, so feel free to contact me at support@imageresizing.net if you have any questions.
 
 [More information](http://blogs.iis.net/hosterposter/archive/2006/10/30/Hosting-IIS-with-UNC-content-_2D00_-Network-BIOS-commands-and-other-errors.aspx)
 
 [Microsoft KB article](http://support.microsoft.com/?id=911272)
 
-## Raise the number of commands
+## Raise the command/watcher limit
 
 Alternatively, if there is a small number of folders on the site, you can simply raise the number of commands
 
