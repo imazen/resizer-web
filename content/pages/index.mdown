@@ -1,6 +1,6 @@
 Template: home
 Menu: home
-Title: ASP.NET Image Resizing & Cropping Module for IIS
+Title: ASP.NET Image Resizing & Cropping Module for IIS - Free & Open Source
 Renderer: RubyPoweredMarkdown
 Libs: uservoice, plusone, bxSlider, -comments
 
