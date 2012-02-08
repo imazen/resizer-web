@@ -36,12 +36,23 @@ Either run `Install-Package ImageResizer.Plugins.RemoteReader` in the NuGet pack
 
 	<configuration>
 	  <resizer>
-			<remotereader signingKey="ag383ht23sag#laf#lafF#oyfafqewt;2twfqw" allowAllSignedRequests="true" />
+			<remotereader signingKey="ag383ht23sag#laf#lafF#oyfafqewt;2twfqw" allowAllSignedRequests="true" allowRedirects="5" />
 			<plugins>
 				<add name="RemoteReader" />
 			</plugins>
 		</resizer>
 	</configuration>
+
+### AllowRedirects (V3.1.5+)
+
+In V3.1.5 and higher, redirects are supported, but the default is to throw a 500 error if more than 5 are used. You can configure the number of followed redirects with the allowRedirects setting, or set it to 0 to disable following redirects.
+
+## Exceptions
+
+404 errors are turned into FileNotFoundExceptions, which are turned back into 404 errors in the URL API. 
+403 errors are turned into 403 HttpExceptions.
+
+All other exceptions are WebExceptions
 
 ## Example event handler for whitelisting part of a website for relay
 
