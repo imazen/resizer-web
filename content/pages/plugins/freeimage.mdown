@@ -3,17 +3,15 @@ Bundle: 2
 
 # FreeImage Plugins
 
-`ImageResizer.Plugins.FreeImage.dll` contains several plugins, all based around the abilities offered by the C/C++ FreeImage library. These plugins are very, very alpha. Use at your own risk. 
-
-Has not been tested with 64-bit operating systems, but should be compatible. Make sure you get the 64-bit version of FreeImage.dll from `Plugins\Libs\FreeImage\x64ReleaseDll\`
+`ImageResizer.Plugins.FreeImage.dll` contains several plugins, all based around the abilities offered by the C/C++ FreeImage library. These plugins are alpha-quality. 
 
 ## Required files
 
 3 dlls must be placed in the /bin folder of the application for the plugins to work. 
 
-`ImageResizer.Plugins.FreeImage.dll` (dlls\release)
-`FreeImageNET.dll` (dlls\release)
-`FreeImage.dll` from `Plugins\Libs\FreeImage\x86ReleaseDll\` or `Plugins\Libs\FreeImage\x64ReleaseDll\`  **NOTE - you must copy the right DLL bitness for your system!**
+* `ImageResizer.Plugins.FreeImage.dll` (dlls\release)
+* `FreeImageNET.dll` (dlls\release)
+* `FreeImage.dll` from `Plugins\Libs\FreeImage\x86ReleaseDll\` or `Plugins\Libs\FreeImage\x64ReleaseDll\`  **NOTE - you must copy the right DLL bitness for your system!**
 
 ## FreeImageDecoder
 
