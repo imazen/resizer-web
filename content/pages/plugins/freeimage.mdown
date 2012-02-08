@@ -35,6 +35,8 @@ No support for transparency - so only use it on PNG and GIF files that don't nee
 
 Provides an alternate resizing pipeline that never touches GDI. Only supports width/maxwidth/height/maxheight/scale/marginWidth/paddingWidth/fi.scale settings.
 
+Install by adding `<add name="FreeImageBuilder">` to the plugins section of Web.config. And make sure you've added the 3 required dlls.
+
 Not always faster, as FreeImage is slower at scaling images than GDI, even it if has faster encoding/decoding.
 
 Defaults to box scaling
