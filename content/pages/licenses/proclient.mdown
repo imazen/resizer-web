@@ -2,15 +2,19 @@
 
 ##License summary
 
-The holder of a Pro or Enterprise license may grant a client this license, which allows the Client to use the Software as part of a larger piece of software.
+The holder of a [Pro][pro] or [Enterprise][enterprise] license may grant a client this license to a paying Client, which allows the Client to use the Software as part of a *larger* piece of software.
 
 This permits a developer or business to integrate the Software on behalf of a Client, without the need for the client to purchase an additional license. The developer may provide both source code and binaries to the Client.
 
+The Provider must include [a plain-text copy of this license](/attachments/client-license.txt) with the Project provided to the client, and should also communicate to the client the restrictions inherent in this license.
+
+This license is very restrictive, but the Client can always purchase a full license at http://imageresizing.net/ for a very reasonable fee if the Client needs to perform in-house development with the Software.
+
 ##License Terms
 
-A holder of a Professional/Enterprise license (the Provider) may grant another individual/business (the Client) the Professional Client license, which allows the Client to use the Software as part of a larger piece of software (the Project) provided by the Provider. This license is only valid if the Project does not compete with any previously existing product offerings of the original author of the Software.
+A holder of a [Professional][pro]/[Enterprise][enterprise] license (the Provider) may grant another individual/business (the Client) the Professional Client license, which allows the Client to use the Software as part of a larger piece of software (the Project) provided by the Provider. This license is only valid if the Project does not compete with any previously existing product offerings of the original author of the Software (see [the pro license for details][pro]).
 
-The "Software" is the plugin which is being sub-licensed by a Provider to a Client.
+The "Software" is the plugin(s) which are being sub-licensed by a Provider to a Client.
 
 The "Client" may not be anonymous to the Provider - their must exist proof that the Client has purchased the Project from the Provider.
 
@@ -31,7 +35,7 @@ The Client is prohibited from:
 All of the above restrictions are lifted with a Professional or Enterprise license, which can be purchased for a reasonable fee.
 If the Client purchases a Professional or Enterprise license, they will be subject to those terms instead, and this license will become null and void.
 
-All rights are reserved unless explicitly specified. This license is only valid when and if the Provider holds a valid, qualifying license.
+All rights are reserved unless explicitly specified. This license is only valid when and if the Provider holds a valid, qualifying license for *all* plugins provided to the Client.
 
 Limitation of liability
 
