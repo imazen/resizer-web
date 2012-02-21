@@ -67,6 +67,7 @@ You shouldn't worry about using alpha plugins on production servers; even alpha-
 * CloudFront - *stable*
 * RemoteReader - *beta*
 * AzureReader - *alpha*
+* MongoReader - *alpha*
 
 ## Intense Bundle
 
