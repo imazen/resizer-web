@@ -73,7 +73,7 @@ Like the old version, you can also specify watermark images by name, which will 
 
 
 * **path** - A virtual path (i.e, ~/folder/image or /app/folder/image) to the watermark image. 
-* **imageQuery** - Allows pre-processing of the image. For example, use "stretch=fill" to distort the watermark to fit the aspect ratio of the layer. Multiple commands can be separated with ; or &
+* **imageQuery** - Allows pre-processing of the image. For example, use "stretch=fill" to distort the watermark to fit the aspect ratio of the layer. Multiple commands can be separated with ;
 
 ## TextLayer specific attributes
 
@@ -85,9 +85,9 @@ Like the old version, you can also specify watermark images by name, which will 
 * **angle** - the degrees clockwise to rotate the text.
 * **fontSize** the height in pixels of the text. May not be very accurate, GDI isn't great at font heights. Will definitely vary with your font choice.
 * **outlineColor** - The color for the outline of the text. Only rendered if outlineWidth >0
-* **outlineWidth** - How many pixels wide to draw the outline
+* **outlineWidth** - How many pixels wide to draw the outline. As the outline is under the text, start with 3 for a 1px outline, and increase by adding 2.
 * **glowColor** - The color for the glow effect
-* **glowWidth** - The width of the glow effect
+* **glowWidth** - The width of the glow effect.  As the glow is under the text, start with 3 for a 1px outline, and increase by adding 2.
 * **rendering** - (3.1.5+) The rendering algorithm for the text. Valid values are SystemDefault, SingleBitPerPixelGridFit, SingleBitPerPixel, AntiAliasGridFit, AntiAlias, and ClearTypeGridFit. The default before 3.1.5 was ClearTypeGridFit, afterwards the default was AntiAliasGridFit.
 
 # Original watermark plugin (Versions 3.0.13 and older)
