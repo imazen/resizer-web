@@ -1,5 +1,6 @@
 Renderer: RubyPoweredMarkdown
 Libs: -comments
+Title: Image Resizer Purchase Complete!
 
 # Purchase complete!
 

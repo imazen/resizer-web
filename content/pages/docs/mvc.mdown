@@ -4,3 +4,11 @@
 The ImageResizer is fully MVC (1-4) compatible, however, some routes may conflict with the ImageResizer URLs. 
 
 To resolve these conflicts, simply install the [MvcRoutingShim](/plugins/mvcroutingshim) plugin. The MvcRoutingShim plugin prevents routes from messing with a request that is already being processed by the ImageResizer. 
+
+## Using the ImageResizer efficiently
+
+An unfortunate limitation of ASP.NET MVC is that it doesn't allow efficient disk caching. Actions are executed too late to allow continuation on a native IIS thread. This isn't a fault in the ImageResizer, it's a flaw in ASP.NET MVC. The ImageResizer is implemented as an MVC-friendly HttpModule, so it isn't affected. But if you write your own routes and Action(s) to wrap the managed API instead of using the URL API, you're not going to see optimal performance, and you won't be able to do disk caching.
+
+The ImageResizer avoids the problem by handling processing during the PostAuthorizeRequest stage. To take advantage of this, though, you need to use the `Config.Current.Pipeline.Rewrite` event if you want to use your 'own' URL syntax. The `Rewrite` event is much more capable than an ASP.NET route, so anything you can do with a route you can do with the `Rewrite` event. It can also be simpler.
+
+The ImageResizer offers URL-based access to S3 (with [S3Reader](/plugins/s3reader)), MS SQL (with [SqlReader](/plugins/sqlreader)), physical files, virtual files , or HTTP-accessible files (through [RemoteReader](/plugins/remotereader)). If you need to access files through a different system, you'll need to make a [plugin with 4 methods](/docs/virtualimageprovider). 

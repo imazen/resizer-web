@@ -49,3 +49,19 @@ If you want to access non-public bucket items, you will need to specify an acces
 * accessKeyId, secretAccessKey - Use these if you need to access non-public files in your amazon buckets.
 * vpp - Set to false to only serve image URLs that have a querystring.
 * useSubdomains - Set to true to use the newer Amazon S3 bucket syntax, which is required for non-US bucket support. Defaults to false for compatibility reasons.
+
+
+
+## Notes on bucket naming
+
+When creating a bucket, you should avoid certain characters to ensure that DNS works properly. While Amazon will let you create buckets that violate some of these rules, you may have trouble accessing them using the subdomain syntax or over HTTPS. Make sure every bucket is also a valid DNS address. [Read more](http://wiki.ohnosequences.com/cloud_computing/aws/s3/bucket).
+
+* Bucket names should not contain upper case letters
+* Bucket names should not contain underscores (_)
+* Bucket names should not end with a dash
+* Bucket names should be between 3 and 63 characters long
+* Bucket names cannot contain dashes next to periods (e.g., "my-.bucket.com" and "my.-bucket" are invalid)
+* Bucket names cannot contain periods - Amazon states this is not supported for SSL-secured access, due to DNS complications. Your mileage may vary.
+
+
+
