@@ -9,11 +9,11 @@ There are no known CMSes that are incompatible with the image resizer HttpModule
 The following have been reported to work successfully.
 
 * DotNetNuke
-* Umbraco
+* Umbraco ([Example by heltBlank](http://heltblank.wordpress.com/2012/02/13/imageresizing-net-and-umbraco-5-jupiter/))
 * Sitefinity CMS
-* Orchard
+* Orchard (Multi-tenant support pending)
 * Sitecore (Blocks .ashx - either use a different extension or switch to IIS7+ Integrated Mode )
-* Wordpress
+* Wordpress (Requires IIS or Mono and a bit of extra work)
 
 In addition, the ImageResizer has been directly integrated into 20-30 lesser-known CMSes.
 
