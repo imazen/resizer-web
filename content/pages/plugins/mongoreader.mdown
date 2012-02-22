@@ -2,7 +2,9 @@
 
 Allows files stored on MongoDB GridFS to be resized and processed as if they were local.
 
-Requires .NET 3.5
+Requires .NET 3.5. 
+
+In version 3.1.5, you will need to build ImageResizer.Plugins.MongoReader.csproj yourself, as precompiled binaries and nuget packages won't be included until 3.1.6.
 
 ### Example URLs
 

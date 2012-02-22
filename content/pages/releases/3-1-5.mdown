@@ -1,0 +1,93 @@
+Date: February 22, 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-1-5-full-Feb-22-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-1-5-min-Feb-22-2012.zip
+Summary: 19 bug fixes, 8 new features, 2 potentially breaking changes
+ShortVersion: 3.1.5
+Tags: releases
+Template: release
+Libs: plusone
+
+
+
+# Resizer 3.1.5 - Feb 22 2012
+
+[Read the release notes for v3.1](/releases/3-1-alpha-2), [V3.1.3](/releases/3-1-3), and [V3.1.4](/releases/3-1-4) if you're upgrading from 3.0. V3.1 included major changes to all plugins and the core, and included a long list of bug fixes. It also introduced 11 new plugins and 5 rewritten ones. V3.1.3 introduced 2 new plugins and a new path syntax, while V3.1.4 fixed several bugs
+
+This release fixes 19 bugs and adds 8 minor features. Experimental mono support is added, as is a new experimental [MongoReader plugin for accessing GridFS files](http://imageresizing.net/plugins/mongoreader). 
+
+### Potentially breaking changes
+
+* Plugins are now loaded at a different time.
+* All querystring and config values are now culture invariant, so if you've been using commas instead of periods for the decimal symbol, since your server was non-English, it's time to switch them back.
+* Watermark plugin now renders text better, using a better algorithm. Make sure your watermarks aren't somehow messed up by the clearer text.
+
+## Changes in ImageResizer.dll
+
+* For ASP.NET, plugins are now loaded on first request instead of at application start. For non-ASP.NET apps, plugins are now loaded at application start instead of ... never. This bug was caused by a typo introduced in V3.0.7 during a simple refactoring.
+
+* Experimental Mono support!
+
+* &mode=crop now correctly respects &scale=upscaleonly, &scale=downscaleonly, and &scale=upscalecanvas restrictions. Previously, it would cause distortion on images by incorrectly cropping even when the image was being 'left alone' due to the &scale setting. This problem would only occur when specifying both width, height, and &mode=crop and when the original image size was smaller than width/height. Bug introduced in V3.1.1 while adding support for double cropping (combined manual and automatic cropping).
+
+* The ImageResizer now uses culture-invariant number and date handling for all configuration and querystring data. This means that the ImageResizer should now behave the same on an english-language server as a non-english language server. Although only detected as a problem with the PsdComposer plugin, it's possible that this has caused non-integer values for &rotate, &margin, &padding, &crop, &cropxunits, and &cropyunits to be interpreted incorrectly on severs whose culture settings have the inverse meanings for "." and "," than en-US. Other plugins this may have affected would be SimpleFilters, SeamCarving, and WhitespaceTrimmer. This behavior has existed since V1. Please e-mail support@imageresizing.net if this change would be unexpected to you. 
+
+* Fixed bug: &flip=y&rotate=180 and &flip=y&rotate=270 would produce the wrong result by 90 degrees. Only those two combinations of settings were affected.
+
+
+## Bug fixes by plugin
+
+### PrettyGifs changes
+
+* PrettyGifs no longer throws an exception when &dither=4pass is used. This typo was introduced with V3.1.3. 
+
+### PsdComposer changes
+
+* Psd Parser: Culture-invariant, and now BinaryReverseReader explicitly uses code page ISO-8859-1 instead of the system default. 
+* PsdCommandBuilder: Added support for null and empty string values in string dictionaries. Made color parsing culture invariant. Made all layer name comparisons OrdinalIgnoreCase instead of CurrentCultureIgnoreCase
+* MemCachedFile now throws FileNotFoundException when the PSD files is missing, which turns into an HTTP 404 error and allows Image404 to work.
+* Now supports virtual source files, anything IVirtualFile (must be registered before those plugins, however).
+* No longer inherits from VirtualPathProvider - just implements IVirtualImageProvider. No longer supports IVirtualFileWithModifiedDate due to caching without dependencies.
+* When strict mode is disabled, ignores missing fonts and uses generic sans serif instead.
+* When PsdReader and PsdComposer are used together, only bundle 4 is reporting being used.
+
+### CloudFront changes
+
+* New redirectThrough feature now works properly on querystrings with more than one command.
+* Now compatible with Amazon S3 buckets that contain periods.
+* Now compatible with extensionless urls.
+
+### RemoteReader changes
+
+* Added support for redirects (default limited to 5, configurable with remotereader.allowRedirects), added 403 error pass through (404 already implemented).
+* Added support for extension-less remote URLs, even using the human-friendly syntax.
+* Added support for spaces and many url-encoded characters in the human-friendly syntax.
+
+### PdfRenderer changes
+
+* Fixed version number by including shared version file
+* Added support for PDF files with rotated pages
+* Added pdfwidth and pdfheight querystring settings to allow overriding the ghostscript rendering size for higher quality thumbnails.
+
+
+### Watermark plugin changes
+
+* Fixed: font style attribute was being ignored.
+* Changed the default text rendering algorithm to one better suited to image compositing.
+* Fixed bug in OtherImages configuration; was previously throwing an exception for querystring-specified filenames.
+* Added Rendering property/attribute for text layers to allow adjustment of rendering algorithm. Changed the default from ClearType to AntiAliasGridFit (better for images).
+
+### DiskCache changes 
+
+* Now logs an issue if cleanup strategy values are modified.
+* Fixed flaw in file lookup algorithm which caused a subset of files to 'miss the cache', always regenerating instead of using the existing version. This flaw affected virtual files without modified dates; specifically RemoteReader provided files, Gradient plugin files, and S3Reader files when fastMode was enabled.
+* DiskCache: Fixed bug where a 0-byte file would get cached when an exception occurred during the e.ResizeImageToStream method. For optimistic IVirtualImageProviders (Like S3Reader in fastMode, RemoteReader, and MongoReader, but not VirtualFolder, SqlReader, Gradient, or S3Reader with fastMode=false), this would cause the second request for the missing file to return a 0-byte result instead of a 404. This behavior would be noticed most easily with the 404Plugin installed, as it would only redirect the first request, and not during subsequent ones. 
+
+
+### ImageHandlerSyntax changes
+
+* Removed legacy w->width and h->height conversion, as 'w' and 'h' are now supported by the core, and it didn't support mixing the conventions properly.
+
+### Image404 changes
+
+* Now normalizes both the original querystring and the 404 image's querystring before merging them to prevent duplicates like ?width=200&w=400.
+
