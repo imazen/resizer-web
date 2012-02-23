@@ -20,7 +20,24 @@ We need 25 people or more to pledge support for a region to get started. The bas
 
 Find out when the hosted version is arriving, ask questions, and give feedback.
 
-The mailing list for the hosted ImageResizing project lives at librelist.com. To subscribe, send a blank email to `hostedresizing@librelist.com`. Click the confirmation link, and you're done. 
+<table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
+  <tr><td>
+  <img src="http://groups.google.com/intl/en/images/logos/groups_logo_sm.gif"
+         height=30 width=140 alt="Google Groups">
+  </td></tr>
+  <tr><td style="padding-left: 5px">
+  <b>Subscribe to Hosted Image Processing</b>
+  </td></tr>
+  <form action="http://groups.google.com/group/hosted-imageresizing/boxsubscribe">
+  <tr><td style="padding-left: 5px;">
+  Email: <input type=text name=email>
+  <input type=submit name="sub" value="Subscribe">
+  </td></tr>
+</form>
+<tr><td align=right>
+  <a href="http://groups.google.com/group/hosted-imageresizing">Visit this group</a>
+</td></tr>
+</table>
 
 Once you're subscribed, send an e-mail to the group pledging you'll sign up for 1 year or more, and listing which AWS Region you're pledging for. If over 25 people pledge for a region, we'll offer support in that region.
 
