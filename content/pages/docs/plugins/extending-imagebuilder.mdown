@@ -1,9 +1,12 @@
+Aliases: /docs/extending-imagebuilder
+
 #Extending ImageBuilder
 
 
 ImageBuilder can be extended in two ways.
- * (1) By writing a subclass of ImageBuilderExtension, and registering it with Config.ImageBuilderExtensions (It is suggested you implement IPlugin also)
- * (2) By implementing IEncoder and registering it with Config.ImageEncoders
+
+1. By writing a subclass of ImageBuilderExtension, and registering it with Config.ImageBuilderExtensions (It is suggested you implement IPlugin also)
+2. By implementing IEncoder and registering it with Config.ImageEncoders
 
 
 # Public methods
@@ -12,6 +15,7 @@ The primary method. Accepts VirtualFiles, physical paths, Bitmap objects, etc. E
 `void Build(object source, object dest, ResizeSettingsCollection settings);`
 
 ## Lifecycle of Build()
+
 1. Calls LoadImage(source) to acquire a source bitmap
 2. Calls PreAcquireStream
 3. If destination is a string, stream, acquires an output stream from `dest`
