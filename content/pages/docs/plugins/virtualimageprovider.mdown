@@ -9,7 +9,8 @@ Before getting scared, [look at the Gradient plugin documentation and source cod
 IVirtualImageProvider is an easy interface to implement, with only 2 methods
 
 	public bool FileExists(string virtualPath, System.Collections.Specialized.NameValueCollection queryString) {
-	    //TODO: return true if the specified path (with the specified querystring) is a virtual file under the jurisdiction of this plugin - usually you compare the path to the plugins 'prefix' here.
+	    //TODO: return true if the specified path (with the specified querystring) is a virtual file under the 
+			//jurisdiction of this plugin - usually you compare the path to the plugins 'prefix' here.
 	}
 
 	public IVirtualFile GetFile(string virtualPath, System.Collections.Specialized.NameValueCollection queryString) {
@@ -20,12 +21,14 @@ Usually, VirtualImageProviders use a configurable 'prefix' to separate their dom
 
 	private string _virtualFilesystemPrefix = null;
 	/// <summary>
-	/// Requests starting with this path will be handled by this virtual path provider. Should be in app-relative form: "~/s3/". Will be converted to root-relative form upon assigment. Trailing slash required, auto-added.
+	/// Requests starting with this path will be handled by this virtual path provider. Should be in app-relative 
+	/// form: "~/s3/". Will be converted to root-relative form upon assigment. Trailing slash required, auto-added.
 	/// </summary>
 	public string VirtualFilesystemPrefix
 	{
 	    get { return _virtualFilesystemPrefix; }
-	    set { if (!value.EndsWith("/")) value += "/";  _virtualFilesystemPrefix = PathUtils.ResolveAppRelativeAssumeAppRelative(value); }
+	    set { if (!value.EndsWith("/")) value += "/";  
+						_virtualFilesystemPrefix = PathUtils.ResolveAppRelativeAssumeAppRelative(value); }
 	}
 
 Here's how S3Reader implements those methods:
@@ -78,7 +81,8 @@ public class BasicVirtualFile : IVirtualFile {
     protected ResizeSettings query;
 
     public System.IO.Stream Open() {
-        //TODO: Query your data store and open a Stream that can read the data (or copy it into a MemoryStream), then return the still-open stream. It will be closed for you later.
+        //TODO: Query your data store and open a Stream that can read the data (or copy it into a MemoryStream), 
+				//then return the still-open stream. It will be closed for you later.
     }
 
 }
