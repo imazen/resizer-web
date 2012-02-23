@@ -67,25 +67,25 @@ The VirtualPath is needed so the ImageResizer can make optimizations about choos
 Here's an example to base your virtual class off. It's common to modify the constructor to accept a reference to the parent IVirtualImageProvider, and only make the Open() method a wrapper for an implementation located in the parent IVirtualImageProvider class.
 
 
-public class BasicVirtualFile : IVirtualFile {
+	public class BasicVirtualFile : IVirtualFile {
 	
-    public BasicVirtualFile(string virtualPath, NameValueCollection query) { 
-			this._virtualPath = virtualPath;
-			this.query = new ResizeSettings(query); 
-		}
+	    public BasicVirtualFile(string virtualPath, NameValueCollection query) { 
+				this._virtualPath = virtualPath;
+				this.query = new ResizeSettings(query); 
+			}
 		
-		protected string _virtualPath;
-    public string VirtualPath {
-        get { return _virtualPath; }
-    }
-    protected ResizeSettings query;
+			protected string _virtualPath;
+	    public string VirtualPath {
+	        get { return _virtualPath; }
+	    }
+	    protected ResizeSettings query;
 
-    public System.IO.Stream Open() {
-        //TODO: Query your data store and open a Stream that can read the data (or copy it into a MemoryStream), 
-				//then return the still-open stream. It will be closed for you later.
-    }
+	    public System.IO.Stream Open() {
+	        //TODO: Query your data store and open a Stream that can read the data (or copy it into a MemoryStream), 
+					//then return the still-open stream. It will be closed for you later.
+	    }
 
-}
+	}
 
 
 
