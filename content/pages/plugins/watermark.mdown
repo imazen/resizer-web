@@ -90,6 +90,43 @@ Like the old version, you can also specify watermark images by name, which will 
 * **glowWidth** - The width of the glow effect.  As the glow is under the text, start with 3 for a 1px outline, and increase by adding 2.
 * **rendering** - (3.1.5+) The rendering algorithm for the text. Valid values are SystemDefault, SingleBitPerPixelGridFit, SingleBitPerPixel, AntiAliasGridFit, AntiAlias, and ClearTypeGridFit. The default before 3.1.5 was ClearTypeGridFit, afterwards the default was AntiAliasGridFit.
 
+## Managed API
+
+Referencing a watermark already configured in XML is easy: 
+
+	ImageBuilder.Current.Build(source,dest,new ResizeSettings("watermark=name"));
+
+If you want to build a custom watermark from code, that's also easy, but needs to happen during Application\_Start if you're modifying Config.Current. 
+Installing plugins on a shared Config instance on different threads can result in warnings on /resizer.debug, although the threading is handled correctly.
+
+	//You can have multiple configurations. Config.Current contains web.config settings, but you can use new Config(); to get a clean slate.
+	Config c = Config.Current; 
+	
+	//Get a reference to the instance we added previously
+	WatermarkPlugin wp = c.Plugins.Get<WatermarkPlugin>();
+	if (wp == null) { //Install it if it's missing
+		wp = new WatermarkPlugin();
+		wp.Install(c);
+	}
+	//Re-query in case another thread beat us to installation.
+	wp = c.Plugins.Get<WatermarkPlugin>();
+	
+	//Let's make some layers
+	TextLayer t = new TextLayer();
+	t.Text = "Hello #{name}";
+	t.Fill = true; //Fill the image with the text
+	ImageLayer i = new ImageLayer(c); //ImageLayer needs a Config instance so it knows where to locate images
+	i.Path = "~/image.png";
+	
+	//Let's register them with the watermark plugin. Note a layer name can have multiple layers
+  wp.NamedWatermarks["img"] = new Layer[]{ i };
+  wp.NamedWatermarks["text"] = new Layer[] { t };
+
+	
+	//Let's build an image
+	c.CurrentImageBuilder.Build(source,dest,new ResizeSettings("watermark=text,img;name=John Doe"));
+	
+
 # Original watermark plugin (Versions 3.0.13 and older)
 
 The original version of the Watermark plugin did not support XML configuration, and only allowed one set of layout directions, which were applied to all watermark files. 
