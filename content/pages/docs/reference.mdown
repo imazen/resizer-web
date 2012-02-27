@@ -31,6 +31,7 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 * **mode=max|pad|crop|carve|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight. (new in V3.1)
 * **anchor=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to anchor the image when padding or cropping. (new in V3.1)
 * **scale=both|upscaleonly|downscaleonly|upscalecanvas** – By default, images are never upscaled. Use &scale=both to upscale images if they are smaller than width and height
+* **zoom=0..infinity** - Scale the image by a multiplier. Useful for mobile devices and situations where you need to retain all the existing width/height/crop settings, but scale the result up or down. Defaults to 1. 0.5 produces a half-size image, 2 produces a double-size image.
 
 ## Border, padding, margins and background colors
 
