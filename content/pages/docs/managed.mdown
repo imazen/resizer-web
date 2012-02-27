@@ -13,7 +13,7 @@ Most tasks with the managed API only require one line:
 
 May be a physical path (C:\..), an app-relative virtual path (~/folder/image.jpg), an Image, Bitmap, Stream, VirtualFile, or HttpPostedFile instance. 
 
-###object dest
+### object dest
 
 May be a Stream instance, a physical path, or an app-relative virtual path.
 
@@ -49,6 +49,19 @@ You can create one like so:
 	ImageBuilder.Current.Build("~/images/photo.jpg","~/images/photo.jpg", 
 														 new ResizeSettings("width=100&height=200&crop=auto"));
 	
+## Using variables in the destination path (3.1.3+)
 
 
-More to come...
+Variables include the correct extension <ext>, random GUID <guid>, source path <path>, source filename <filename>, <width>, <height>, and any settings value <settings.*>. 
+
+This makes many scenarios much easier to code, and reduces room for error. Many users make critical errors in their upload code, like not sanitizing filenames, or using the original extension (immediate server highjacking, here we go). 
+
+With the new feature, a proper upload system is 3 lines:
+
+ImageJob i = new ImageJob(file, 
+"~/uploads/<guid>.<ext>", 
+new ResizeSettings("width=1600")); 
+i.CreateParentDirectory = true;
+i.Build();
+
+You can also filter values. <filename:A-Za-z0-9> keeps only the alphanumeric characters from the original filename.
