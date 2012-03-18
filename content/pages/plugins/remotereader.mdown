@@ -69,7 +69,7 @@ All other exceptions are WebExceptions
 	}
 	
 	
-## Example code for generating as signed URL
+## Example code for generating a signed URL
 
 	using ImageResizer.Plugins.RemoteReader;
 	

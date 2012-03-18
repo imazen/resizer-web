@@ -55,6 +55,10 @@ Like the old version, you can also specify watermark images by name, which will 
 
 	image.jpg?watermark=image.png
 	
+## Common errors
+
+* Make sure that the production server has all the fonts you are using installed. Servers, by default, don't have very many fonts installed.
+	
 ## Layer attribute reference
 
 * **name** - The key to use in the URL to invoke the application of the layer or group
