@@ -13,8 +13,8 @@ Implement the IOverlayProvider interface to provide your own querystring parsing
 
 The plugin includes two implementations:
 
-1. QuerystringOverlayProvider - Understands `&amp;customoverlay.coords=x1,y2,x2,y2,x3,y3,x4,y4&amp;customoverlay.align=topright&amp;customoverlay.image=alphanumeric.png` Points must be in clockwise order, top-left is x1,y1. 
-2. A CachedOverlayProvider implementation that is database-specific and uses the `&amp;designid=504&amp;mastid=8540&amp;colorid=9633` syntax.
+1. QuerystringOverlayProvider - Understands `&customoverlay.coords=x1,y2,x2,y2,x3,y3,x4,y4 &customoverlay.align=topright &customoverlay.image=alphanumeric.png` Points must be in clockwise order, top-left is x1,y1. 
+2. A CachedOverlayProvider implementation that is database-specific and uses the `&designid=504&mastid=8540&colorid=9633` syntax.
 
 See Samples\CustomOverlaySample for an example
 
