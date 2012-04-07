@@ -54,3 +54,8 @@ Libs: uservoice, plusone, bxSlider, -comments
 
 
 Using version 2? Read [why you should upgrade](/docs/2to3/) and check out [the migration guide](/docs/2to3/guide).
+
+Can't afford any mistakes? Ensure your content architecture is scalable and secure by having a **30-minute Q&A session with the author for just $70**.
+Add aided installation of 1 server or workstation for +$60, or 2 servers or workstations for +$120. [Find out more](/support/consult).
+
+
