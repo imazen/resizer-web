@@ -13,16 +13,41 @@ You can search the forums, wish list, and knowledge base (as well as create tick
 
 ## Hours
 
-Free e-mail support is provided on a best-effort basis Monday-Friday. 60% of e-mails are answered within 1 hour. For the quickest response, please contact support during the following times.
+Free e-mail support is provided on a best-effort basis Monday-Friday. 60% of e-mails are answered within 1 hour. 
 
-* 2pm to 2am GMT
-* 9am to 9pm EST
-* 6am to 6pm PST
+<script language="javascript">
+function isDstInEffect(off){
+	var d = new Date();
+	//get the start and end dates for dst:(these rules are US only)
+	var     y= d.getUTCFullYear(), countstart= 8, countend= 1,
+	dstart= new Date(Date.UTC(y, 2, 8, 2, 0, 0, 0)),
+	dend= new Date(Date.UTC(y, 10, 1, 2, 0, 0, 0));
+	while(dstart.getUTCDay()!== 0) dstart.setUTCDate(++countstart);
+	while(dend.getUTCDay()!== 0) dend.setUTCDate(++countend);
+
+	//get the GMT time for the localized dst start and end times:
+	//dstart.setUTCMinutes(off);
+	//dend.setUTCMinutes(off);
+
+	// if the date passed in is between dst start and dst end, adjust the offset and label:
+	return (dstart<= d && dend>= d);
+}
+var now = new Date();
+
+
+var edtOffset = isDstInEffect(-5 * 60) ? -4: -5;//-4, -5
+var localOffset = now.getTimezoneOffset() / -60;
+
+var a = localOffset - edtOffset + 9;
+var b = localOffset - edtOffset + 21;
+
+document.write("For the quickest response, please contact support between <strong>" + a + ":00 and " + b + ":00</strong> based on your estimated local time of " + now.getHours() + ":" + now.getMinutes() + ". This is 9am to 9pm EDT (my time zone).");
+</script>
 
 
 ## Telephone support
 
-Telephone support costs $100/incident for a business, $50/incident for an independent software developer. 
+Telephone support costs $100/incident for a business, $50/incident for an independent software developer. A [30-minute Q&A session costs $70](/support/consult).
 
 It is suggested that you download and install [Team Viewer](http://teamviewer.com) on the computer in question, as remote desktop access may be required to resolve your issue.
 
