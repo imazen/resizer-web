@@ -5,6 +5,10 @@ The ImageResizing.Net project welcomes developers, contributors, documentation w
 
 If you have changes or patches to the project, please share them! The best way to share code is to connect to the Git repository. Just e-mail `support@imageresizing.net` and request commit access. To give you an account, I'll need your preferred e-mail address, your full name, and your preferred username. If you aren't familiar with Git, I accept .zip files, but it may take longer for them to be merged into a future release.
 
+Have you written a few pages of javascript for your gallery or product viewer? Share it! The [StudioJS project](https://github.com/nathanaeljones/studiojs) is on GitHub, and welcoming pull requests. Or .zip files, if you'd rather use email. 
+
+Have you made a CMS-specific module or plugin to make the ImageResizer easier to use from within the admin pages? Share it! E-mail `support@imageresizing.net`.
+
 If you're not sharing code, simply use the NuGet packages to get the latest binaries automatically, and [configure Visual Studio to download sources and symbols](http://www.symbolsource.org/Public/Home/VisualStudio) automatically for debugging.
 
 

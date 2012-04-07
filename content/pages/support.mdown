@@ -13,27 +13,38 @@ You can search the forums, wish list, and knowledge base (as well as create tick
 
 ## Hours
 
-Support is provided on a best-effort basis every day of the week. 60% of e-mails are answered within 1 hour. For the quickest response, please contact support during the following times.
+Free e-mail support is provided on a best-effort basis Monday-Friday. 60% of e-mails are answered within 1 hour. For the quickest response, please contact support during the following times.
 
 * 2pm to 2am GMT
 * 9am to 9pm EST
 * 6am to 6pm PST
 
 
-## Emergency telephone support
+## Telephone support
 
-Emergency support costs $99 per incident. To initiate, send an e-mail to support indicating it is an emergency situation, providing your telephone number(s).
-You will receive a phone call as soon as your e-mail is received.
+Telephone support costs $100/incident for a business, $50/incident for an independent software developer. 
 
 It is suggested that you download and install [Team Viewer](http://teamviewer.com) on the computer in question, as remote desktop access may be required to resolve your issue.
 
-We will make our best effort to respond as quickly as possible, but may not be available due to internet connection problems, sick days, etc.
+Credit cards, PayPal, and Google Checkout are accepted.
 
+<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=939690&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+Support Type<br/>
+<select name="o1">
+<option value="30 Minute QA">30 Minute QA ($70)</option>
+<option value="1 Aided install + 30 Minute QA">1 Aided install + 30 Minute QA ($130)</option>
+<option value="2 Aided installs + 30 Minute Q&amp;A">2 Aided installs + 30 Minute Q&amp;A ($190)</option>
+<option value="Support Incident (Individual)">Support Incident (Individual) ($50)</option>
+<option value="Support Incident (Business)">Support Incident (Business) ($100)</option>
+</select>
 
-### Credit card, PayPal, and Google Checkout accepted
+<input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
+<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
+</form>
 
-Click the first link for credit card or PayPal checkout, the second for Google checkout. Price: $99.
-
-<a href="https://www.e-junkie.com/ecom/gb.php?i=939690&amp;c=single&amp;cl=41912" target="ejejcsingle"><img src="http://www.e-junkie.com/ej/x-click-butcc.gif" border="0" alt="Buy Now"/></a>
-
-<a href="https://www.e-junkie.com/ecom/gb.php?i=939690&amp;c=gc&amp;cl=41912&amp;ejc=4"><img src="https://checkout.google.com/buttons/checkout.gif?merchant_id=458177065889728&amp;w=160&amp;h=43&amp;style=trans&amp;variant=text&amp;loc=en_US" border="0" alt="Buy Now"/></a>
+<script language="javascript" type="text/javascript">
+<!--
+function EJEJC_lc(th) { return false; }
+// -->
+</script>
+<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
