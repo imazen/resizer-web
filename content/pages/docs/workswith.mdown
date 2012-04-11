@@ -11,7 +11,7 @@ The following have been reported to work successfully.
 * DotNetNuke
 * Umbraco ([Example by heltBlank](http://heltblank.wordpress.com/2012/02/13/imageresizing-net-and-umbraco-5-jupiter/))
 * Sitefinity CMS
-* Orchard (Multi-tenant support pending)
+* [Orchard (see notes and examples)](/docs/workswith/orchard)
 * Sitecore (Blocks .ashx - either use a different extension or switch to IIS7+ Integrated Mode )
 * Wordpress (Requires IIS or Mono and a bit of extra work)
 
