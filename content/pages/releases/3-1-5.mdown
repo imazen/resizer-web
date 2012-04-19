@@ -15,6 +15,19 @@ Libs: plusone
 
 This release fixes 19 bugs and adds 8 minor features. Experimental mono support is added, as is a new experimental [MongoReader plugin for accessing GridFS files](http://imageresizing.net/plugins/mongoreader). 
 
+
+### Known bugs (as of April 19)
+
+These bugs were discovered several weeks after release. Please contact support@imageresizing.net if you are using any of the affected plugins to get a hotfix. These fixes will be part of the official V3.2 release, which has been slightly delayed due to [financial issues with the project](http://icont.ac/101KI). I apologize for this deviation from the normal release schedule. 
+
+* [Fixed in hotfix] - The WIC plugins are exhibiting a garbage collection bug causing some image requests to fail.
+* [Fixed in hotfix] - Watermark plugin: InvalidOperationException: Object is currently in use elsewhere.
+* [Fixed in hotfix] - Fixed reliability issues with WhitespaceTrimmer by eliminating use of AForge.UnamangedImage.
+* [Fixed in hotfix] - False alarm on /resizer.debug page: System.ArgumentException: Virtual path outside of the current application is not supported.
+* [Fixed in hotfix] - IMultiInstancePlugin wasn't applied to SqlReader, S3Reader, AzureReader, or MongoReader, preventing them from having multiple instances.
+* [Fixed in hotfix] - SqlReader plugin now assumes datas are UTC instead of server-local. Fixes ArgumentOutOfRangeException in certain time zones for recently-updated images.
+* [Not yet fixed] - S3Reader experiences failed requests when using encrypted mode. Due to a bug in LitS3, multithreaded use of a single-threaded .NET crypto library. 
+
 ### Potentially breaking changes
 
 * Plugins are now loaded at a different time.
