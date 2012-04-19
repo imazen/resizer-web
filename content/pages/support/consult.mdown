@@ -4,6 +4,8 @@ Developing a future-proof image management system isn't easy. A multitude of pit
 
 I've helped hundreds of enterprises achieve their scalability and performance goals, and it's much less expensive to avoid architectural errors before they're implemented.
 
+For tech details about some of the challenges, [listen to my podcast with Scott Hanselman](http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na).
+
 Let me help your business ensure your design is scalable and secure with a 30-minute Q&A phone session. Payment by PayPal, Google Checkout, or credit card is accepted.
 
 * $70 USD - 30 minute Q&A phone conference
@@ -63,7 +65,9 @@ var localOffset = now.getTimezoneOffset() / -60;
 
 var a = localOffset - edtOffset + 9;
 var b = localOffset - edtOffset + 21;
+var mins =  now.getMinutes().toString(); 
+if (mins.length == 1) mins = mins + '0';
 
-document.write("Mon-Fri <strong>" + a + ":00 to " + b + ":00</strong> based on your estimated local time of " + now.getHours() + ":" + now.getMinutes() + ". This is 9am to 9pm EDT (my time zone).");
+document.write("Mon-Fri <strong>" + a + ":00 to " + b + ":00</strong> based on your estimated local time of " + now.getHours() + ":" + mins + ". This is 9am to 9pm EDT (my time zone).");
 </script>
 
