@@ -5,7 +5,6 @@ Resizing and processing images as they are uploaded is very straightforward. Mos
 
 The following sample code generates a GUID filename for each upload, determines the appropriate file extension that is needed, then resizes/crops/formats the image according to the specified ResizeSettings.
 
-
 	//Loop through each uploaded file
 	foreach (string fileKey in HttpContext.Current.Request.Files.Keys) 
 	{
@@ -20,7 +19,7 @@ The following sample code generates a GUID filename for each upload, determines 
 		i.CreateParentDirectory = true; //Auto-create the uploads directory.
 		i.Build();
 	}
-	
+
 
 
 ## For VB.NET users
