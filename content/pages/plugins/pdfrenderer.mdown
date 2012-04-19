@@ -36,6 +36,8 @@ It uses the `width` and `height` commands to optimize the PDF rendering to the d
 
 Ghostscript does not provide size information for individual pages. As a result, every page in a PDF will be rendered on a canvas which has the size of the largest page in the document. It is possible to compensate for this behavior by using [the WhitespaceTrimmer](/plugins/whitespacetrimmer) plugin, using `&trim.threshold=100`. 
 
+**Ghostscript does not support multiple instances per process. This means your application needs a dedicated application pool or you're going to get intermittent errors and failed requests.**
+
 ### Performance characteristics
 
 PDF rendering can be an intensive operation, and is highly dependent on the PDF and server. Expect 250 to 1000 milliseconds. This plugin should be combined with the [DiskCache](/plugins/diskcache) plugin for best performance.
