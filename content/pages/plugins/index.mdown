@@ -43,9 +43,7 @@ By purchasing 1 or more of the bundles below, you will get
 
  * Full source code and binaries for **everything** offered on the site, in a single .zip file. I'm trusting you to purchase licenses for the bundles you use.
  * **Free** upgrades for all minor releases (major releases occur every ~2 years). 
- * Priority support (includes phone, chat, and TeamViewer support)
-
-	
+ * Priority e-mail support (includes 1 phone/TeamViewer support incident)
 
 ## [Performance Bundle](/plugins/bundles/1) (3 plugins)- <span class="price">$99</span>
 
@@ -58,7 +56,7 @@ By purchasing 1 or more of the bundles below, you will get
 <%= Nesta::Page.find_by_path("/plugins/bundles/2").body %>
 
 
-## [Cloud Bundle](/plugins/bundles/3) (5 plugins)- <span class="price">$99</span>
+## [Cloud Bundle](/plugins/bundles/3) (6 plugins)- <span class="price">$99</span>
 
 <%= Nesta::Page.find_by_path("/plugins/bundles/3").body %>
 
