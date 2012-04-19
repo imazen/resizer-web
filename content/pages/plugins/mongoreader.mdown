@@ -7,7 +7,7 @@ Allows files stored on MongoDB GridFS to be resized and processed as if they wer
 
 Requires .NET 3.5. 
 
-In version 3.1.5, you will need to build ImageResizer.Plugins.MongoReader.csproj yourself, as precompiled binaries and nuget packages won't be included until 3.1.6.
+In version 3.1.5, you will need to build ImageResizer.Plugins.MongoReader.csproj yourself, as precompiled binaries and nuget packages won't be included until V3.2
 
 This plugin is alpha, but supported.
 

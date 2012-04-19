@@ -3,7 +3,7 @@ Bundle: 2
 
 # FreeImage Plugins
 
-`ImageResizer.Plugins.FreeImage.dll` contains several plugins, all based around the abilities offered by the C/C++ FreeImage library. These plugins are alpha-quality. 
+`ImageResizer.Plugins.FreeImage.dll` contains several plugins, all based around the abilities offered by the C/C++ FreeImage library. These plugins are alpha-level. 
 
 ## Required files
 
@@ -11,7 +11,7 @@ Bundle: 2
 
 * `ImageResizer.Plugins.FreeImage.dll` (dlls\release)
 * `FreeImageNET.dll` (dlls\release)
-* `FreeImage.dll` from `Plugins\Libs\FreeImage\x86ReleaseDll\` or `Plugins\Libs\FreeImage\x64ReleaseDll\`  **NOTE - you must copy the right DLL bitness for your system!**
+* `FreeImage.dll` ([download x86 here](http://dyn.imageresizing.net/freeimage/3.15.1/x86/FreeImage.dll) or [the 64-bit version here](http://dyn.imageresizing.net/freeimage/3.15.1/x64/FreeImage.dll))  **NOTE - you must copy the right bitness for your application pool!** In V3.2 and higher, you can use the downloadNativeDependencies="true" attribute on any of the FreeImage plugins instead of manually downloading those images.
 
 ## FreeImageDecoder
 
