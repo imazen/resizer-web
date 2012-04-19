@@ -67,7 +67,7 @@
 		<ul>
 			<li>Kiss high RAM/CPU/IO usage goodbye with our fifth-generation DiskCache plugin. <strong>Serve up to 100x more images per second.</strong></li>
 			<li>Get <strong>responsive edge caching</strong> and leverage the scalability of Amazon's CloudFront network with the CloudFront plugin.</li>
-			<li><strong>Process images 2-4x faster</strong> with the WicBuilder plugin and achieve <strong>19ms response times</strong> (uncached). Requires Windows 7 or Server 2008 R2. </li>
+			<li>On Windows 7 or Server 2008 R2, you can <strong>process images 2-4x faster</strong> with the WicBuilder plugin and achieve <strong>19ms response times</strong> (uncached!).</li>
 		</ul>
 	</div>
 </div>
@@ -81,12 +81,12 @@
 		<h2>Free</h2>
 		<p>The most popular features are free and open-source:</p>
 		<ul>
-			<li>Resizing, cropping, rotating, flipping</li>
-			<li>Borders, drop-shadows, padding, background colors</li>
-			<li>Adjustable Jpeg compression. Multi-page tiff viewing. </li>
-			<li>Animated GIF frame selection. Comprehensive, real-time diagnostics.</li>
-			<li>Basic GIF and PNG encoding</li>
-			<li>Gradient generation</li>
+			<li>Resize, crop, zoom, rotate, convert, and flip</li>
+			<li>Add borders, shadows, padding, margins, and matte.</li>
+			<li>Render tiff pages, pdf pages or gif frames to jpeg/png. </li>
+			<li>View real-time diagnostics and get (optional) logging.</li>
+			<li>Define presets, 404 fallbacks, and custom URL syntaxes.</li>
+			<li>Generate gradients. Support ASP.NET MVC 1-4.</li>
 		</ul>
 		
 	</div>
@@ -100,6 +100,7 @@
 	<div class="text-right">
 		<h2>Open Source</h2>
 		<p>Our simple <a href="/licenses/freedom">Freedom license</a> frees you from worry. Even paid plugins <a href="/licenses/pro">permit source modification and redistribution</a>. And source comes with everything.</p>
+		<p>Our licenses are way less restrictive than the GPL, and are all based on the MIT license.</p>
 		<p>stress = 0;</p>
 	</div>
 </div>
