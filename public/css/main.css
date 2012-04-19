@@ -5,8 +5,10 @@
 .tclose:hover {background-position:0 -30px}
 .tcontent{height:100%}
 
-
-
+.t tr, .t td {border-bottom: 1px solid #d0d0d0;}
+.t td {padding-left:5px;padding-right:5px;}
+.t table {border-collapse:collapse;}
+.t th {border-bottom: 1px solid #d0d0d0;}
 
 .page-content{
   background-color: #FEFEFE;
