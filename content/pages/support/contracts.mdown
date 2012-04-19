@@ -5,6 +5,8 @@ Libs: -comments
 
 Save money with a support contract. All contracts include permanent licenses to the latest version of all plugins offered when the contract expires. And even better - you get a direct line to the author.
 
+If you already purchased an Enterprise license, you can apply 50% of the purchase cost to a new support contract.
+
 ### Go Bronze
 
 * The Bronze 6-month contract is $100 cheaper than buying all 4 plugin bundles. It also includes 6 support incidents (limited to 1 per month) (normally $135 each), 2 assisted installs, 1 30-minute Q & A session (normally $190), and 1 hour of coding assistance (normally $195). That's $1195 in support savings, plus $100 savings on licensing. 
