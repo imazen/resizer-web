@@ -1,7 +1,7 @@
 
 # Contribute to the project!
 
-The ImageResizing.Net project welcomes developers, contributors, documentation writers, translators, and any help it can find. I work on the project nearly full-time, but I can't do everything.
+The ImageResizing.Net project welcomes developers, contributors, documentation writers, translators, and any help it can find. I work 50-70 hours per week on the project, but I still can't do everything.
 
 If you have changes or patches to the project, please share them! The best way to share code is to connect to the Git repository. Just e-mail `support@imageresizing.net` and request commit access. To give you an account, I'll need your preferred e-mail address, your full name, and your preferred username. If you aren't familiar with Git, I accept .zip files, but it may take longer for them to be merged into a future release.
 
