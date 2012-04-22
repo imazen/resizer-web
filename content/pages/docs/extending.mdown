@@ -16,28 +16,30 @@ It also introduces a dedicated configuration section for the Resizer and its plu
 6.  Add support for new image formats
 7.  Add support for new image output formats (IEncoder)
 8.  Apply advanced security rules
-
+9.  Provider virtualized access to images on a abnormal data source (See [Making an IVirtualImageProvider](/docs/virtualimageprovider)).
 
 ## Interfaces
 
-* IPlugin - Implement this to allow addition and removal of the plugin via web.config
+* IPlugin - Implement this to allow addition and removal of the plugin via web.config. 
 * ICache - Implement this to create an alternate caching system
 * IEncoder - Implement this to modify how images are encoded into binary streams. (For example, adding or improving an output format)
 * IQuerystringPlugin - Always implement this if your plugin accepts querystring arguments
 * IFileExtensionPlugin - Implement this if your plugin adds support for new file types
+* IMultiInstancePlugin - Indicates your plugin supports multiple instances
+* ISettingsModifier - Allows a plugin to modify settings specified by either the managed or URL API.
+* IVirtualImageProvider - Implement to provide virtualized image access or tie into an alternate data store. [more...](/docs/virtualimageprovider)
+* IVirtualFile - Your IVirtualImageProvider returns instances of this.
 * IVirtualBitmapFile - Implement this if you are building a VirtualPathProvider that produces bitmap files. (No need unless your VPP modifies or generates images)
 * IVirtualFileWithModifiedDate - Your VirtualFile instances should implement this so the caching system can detect changes to source files.
 
 ## BuilderExtension
 
-Inherit from this class for everything else. Includes 40+ override-able methods for modifying every part of the processing pipeline.
+Inherit from this class if you want to interact with image layout and rendering. Includes 40+ override-able methods for modifying every part of the processing pipeline.
 (You'll also need to implement IPlugin (and possibly IQuerystringPlugin).
 
 * Support new source image formats by overriding PreLoadImage and/or LoadImageFailed
 * Add new effects with LayoutEffect and RenderEffect
 * Do custom watermarking with RenderOverlays
-
-
 
 ## Events
 

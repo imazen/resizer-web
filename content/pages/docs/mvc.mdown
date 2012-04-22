@@ -7,7 +7,7 @@ To resolve these conflicts, simply install the [MvcRoutingShim](/plugins/mvcrout
 
 ## Using the ImageResizer efficiently
 
-An unfortunate limitation of ASP.NET MVC is that it doesn't allow efficient disk caching. Actions are executed too late to allow continuation on a native IIS thread. This isn't a fault in the ImageResizer, it's a flaw in ASP.NET MVC. The ImageResizer is implemented as an MVC-friendly HttpModule, so it isn't affected. But if you write your own routes and Action(s) to wrap the managed API instead of using the URL API, you're not going to see optimal performance, and you won't be able to do disk caching.
+An unfortunate limitation of ASP.NET MVC is that it doesn't allow efficient disk caching. Actions are executed too late to allow continuation on a native IIS thread. This isn't a fault in the ImageResizer, it's a flaw in ASP.NET MVC. The ImageResizer is implemented as an MVC-friendly HttpModule, so it isn't affected. But if you write your own routes and Action(s) to wrap the managed API instead of using the URL API, you're not going to see optimal performance, and you won't be able to do disk caching. For more detailed information, listed [to the podcast with Scott Hansleman and I](http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na).
 
 The ImageResizer avoids the problem by handling processing during the PostAuthorizeRequest stage. To take advantage of this, though, you need to use the `Config.Current.Pipeline.Rewrite` event if you want to use your 'own' URL syntax. The `Rewrite` event is much more capable than an ASP.NET route, so anything you can do with a route you can do with the `Rewrite` event. It can also be simpler.
 

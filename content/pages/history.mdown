@@ -36,7 +36,7 @@ Some V3 plugins are under a [slightly more restrictive license](/licenses), but 
 
 * From Feb 2011 to December 2011, 889 commits were made to the project, an average of 3 per day. Each commit contains between 1 and 5 improvements to the project.
 * In 2011, 70% of support e-mails were answered in under 1 hour. Please note that roughly 30% of support e-mails arrive between 12am and 7am in my timezone. 
-* V3.0 was download 3,150 times between June 2011 and December 2011
+* V3.0 was downloaded 3,150 times between June 2011 and December 2011
 * Between June and December, 24 nuget packages for the ImageResizer were published. Nearly all plugins are nuget compatible. 
 * The ImageResizer handles image processing for (several) photo album sites each containing 10-20TB of images.
 * Has been integrated into nearly every popular ASP.NET CMS with a CMS-specific plugin, yet doesn't actually need a CMS-specific plugin to be compatible with any of the CMSes..

@@ -19,11 +19,12 @@ In addition, the ImageResizer has been directly integrated into 20-30 lesser-kno
 
 ## Datastores
 
-* Microsoft SQL (via SQLReader plugin)
-* Microsoft Azure Blob storage (via AzureReader plugin)
-* Amazon S3 (Via S3Reader plugin)
-* Rackspace Cloud Files (Via RemoteReader plugin)
-* Anything with a HTTP interface (Via RemoteReader plugin)
+* Amazon S3 (Via [S3Reader plugin](/plugins/s3reader))
+* MongoDB GridFS (Via [MongoReader plugin](/plugins/mongoreader))
+* Microsoft SQL (via [SQLReader plugin](/plugins/sqlreader))
+* Microsoft Azure Blob storage (via [AzureReader plugin](/plugins/azurereader))
+* Rackspace Cloud Files (Via [RemoteReader plugin](/plugins/remotereader))
+* Anything accessible over HTTP  (Via  [RemoteReader plugin](/plugins/remotereader))
 
 At this time, there are no known datastores that are incompatible with the image resizer, although some may require a plugin to access. If you have a datastore not listed here, [read about custom plugin development](/plugins/custom)
 
@@ -33,7 +34,7 @@ At this time, there are no known datastores that are incompatible with the image
 * Amazon CloudFront (with the CloudFront plugin)
 * Any CDN that supports custom-origin. The CloudFront plugin may be required for any CDN that strips off querystrings
 
-Any pull-based CDN should work perfectly with the image resizer. Push-based CDNs like RackSpace will require additional coding.
+Any pull-based CDN should work perfectly with the image resizer. Push-based CDNs like RackSpace work contrary to the on-demand nature of the ImageResizer. While you can use them, it will require additional coding and you'll have to decide which sizes will be available up-front.
 
 ## Hosting providers
 
