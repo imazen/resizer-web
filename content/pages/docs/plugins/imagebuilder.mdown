@@ -5,7 +5,7 @@ RemoteReader, SqlReader, S3Reader, Gradient, and Image404 all finish their work 
 
 1. &ignoreicc=true/false: (During LoadImage) controls if the ICC profile is applied to the image.
 2  &page= and &frame=: Page selection (TIFF) or frame selection (Animated gif): 
-2. &sourceFlip= : Flips source image
+2. &sFlip= and &sRotate : Flips/rotates source image
 3. &bgcolor= 		: Sets the background of image. If &format doesn't support transparency, &bgcolor defaults to white.
 4. &shadowColor and &shadowWidth draw a drop shadow behind the image
 5. &paddingColor= is drawn over the shadow, around where the image. will be
