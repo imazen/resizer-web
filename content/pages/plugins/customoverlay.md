@@ -3,7 +3,7 @@ Bundle: free
 
 # Custom Overlay plugin
 
-New in V3.1.6
+New in V3.2
 
 This is an example plugin. It is useful as a starting point, but is not subject to the same standards of maintenance and backwards-compatibility that normal plugins are. It does not have a NuGet package or precompiled binaries.
 
@@ -24,7 +24,13 @@ See Samples\CustomOverlaySample for an example
 2. In the plugins section, add the following
 		<add name="CustomOverlay" 
 			provider="MyNamespace.MyOverlayProviderClass, MyAssembly" 
-			arg1="value1" arg2="value2.." />`
+			arg1="value1" arg2="value2.." ignoreMissingFiles="false" />`
+			
+## Generic settings
+
+* ignoreMissingFiles (defaults to false). If set, a missing overlay will just result in the base image appearing without the overlay instead of an exception.
+* smoothing - The [smoothing quality setting](http://msdn.microsoft.com/en-us/library/z714w2y9.aspx) to use. 
+* compositing - The [compositing quality setting](http://msdn.microsoft.com/en-us/library/system.drawing.drawing2d.compositingquality.aspx) to use.
 
 ## Installation using QuerystringOverlayProvider
 
@@ -32,7 +38,7 @@ See Samples\CustomOverlaySample for an example
 2. In the plugins section, add the following
 		<add name="CustomOverlay" 
 			provider="ImageResizer.Plugins.CustomOverlay.QuerystringOverlayProvider, ImageResizer.Plugins.CustomOverlay"
-			overlayFolder="~/images/overlays/" />
+			overlayFolder="~/images/overlays/" ignoreMissingFiles="false"  />
 
 
 ## Installation using CachedOverlayProvider
@@ -41,7 +47,8 @@ See Samples\CustomOverlaySample for an example
 2. In the plugins section, add the following
 		<add name="CustomOverlay" 
 			provider="ImageResizer.Plugins.CustomOverlay.CachedOverlayProvider, ImageResizer.Plugins.CustomOverlay" 
-			connectionStringName="database" sqlDependencyName="dpdb" overlayBasePath="~/images/foldertooverlays" />`
+			connectionStringName="database" sqlDependencyName="dpdb" overlayBasePath="~/images/foldertooverlays"
+			ignoreMissingFiles="false" />`
 
 3. Ensure you have a connection string by the name of 'database' in Web.config.
 4. Ensure overlayBasePath points to the folder containing the overlay images.
