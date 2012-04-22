@@ -41,8 +41,9 @@ Email:  **support@imageresizing.net**. If you do not immediately get an automate
 
 Both online tickets and this e-mail address are immediately forwarded to my personal e-mail account, so please use them! It helps me track support requests in a more organized manner. If you e-mail me at my personal e-mail address (nathanael.jones@gmail.com), your request may get lost!
 
-You can [submit new plugin or feature ideas and vote for existing ones at the uservoice site](http://resizer.uservoice.com/forums/108373-image-resizer-v3).
+[Submit new ideas or vote for existing ones at the uservoice site](http://resizer.uservoice.com/forums/108373-image-resizer-v3).
 
+If you post a question on StackOverflow, please [tag it 'imageresizer'](http://stackoverflow.com/questions/tagged/imageresizer).
 
 ## Buy a support incident
 
@@ -86,9 +87,12 @@ If you're not in one of the above categories, you'll need to buy a support incid
 
 ## Eligible for free basic e-mail support?
 
-* Use only the URL API **OR** use the Managed API [in a prescribed manner](/docs/howto/upload-and-resize). 
+If you
 
-If you've decided to implement your own naive disk caching system, SQL interface, custom HttpHandler, or ActionResult instead of using the URL API, you do not get free support. I do not have time to help you do things the wrong way, or explain to you the countless pitfalls involved in your approach. Use the [plugins I have written already to do those things](/plugins). Those are designed correctly and will be supported.
+* Use only the URL API
+* Or use the Managed API [in a prescribed manner](/docs/howto/upload-and-resize). 
+
+If you've decided to implement your own naive disk caching system, SQL interface, custom HttpHandler, or ActionResult instead of using the URL API, you do not get free support. I no longer have time to help you do things the wrong way, or explain to you the countless pitfalls involved in your approach. Please use the [plugins I have written already to do those things](/plugins). Those are designed correctly and will be supported.
 
 Free e-mail support is provided on a best-effort basis. Expect a response within 1 week of submitting your question. 
 
