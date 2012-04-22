@@ -3,9 +3,9 @@ Libs: -comments
 
 # Support contracts
 
-Save money with a support contract. All contracts include permanent licenses to the latest version of all plugins offered when the contract expires. And even better - you get a direct line to the author.
+Save money with a support contract. All contracts include permanent licenses to the latest version of all plugins offered when the contract expires. And even better - you get a direct line to the author. Don't hesitate to email `sales@imageresizing.net` about a customized support contract!
 
-If you already purchased an Enterprise license, you can apply 50% of the purchase cost to a new support contract.
+If you already purchased an Enterprise license, you can apply 50% of the purchase cost to a new support contract. 
 
 ### Go Bronze ($1000/yr)
 
