@@ -9,7 +9,7 @@ To get support or use this guide, [make sure you get the detailed error message 
 Potential causes:
 
 1. You didn't copy ImageResizer.dll into the /bin folder (unlikely).
-2. Your website has  a 'sub-site' (Application Folder) inside it. Application Folders inherit all Web.config settings from their parent sites, yet expect to have their own copies of all the dlls referenced by those settings in their own /bin folder. You can resolve this problem by (a) changing the app folder to a virtual folder, (b) adding a copy of ImageResizer.dll and plugins into the /bin folder inside that application also, or (c) using <remove /> statements in the child Web.config to cancel out the inherited <add /> statements from the parent Web.config. Option (c) will disable image resizing within the sub-application.
+2. Your website has  a 'sub-site' (Application Folder) inside it. Application Folders inherit all Web.config settings from their parent sites, yet expect to have their own copies of all the dlls referenced by those settings in their own /bin folder. You can resolve this problem by (a) changing the app folder to a virtual folder, (b) adding a copy of ImageResizer.dll and plugins into the /bin folder inside that application also, or (c) using `<remove />` statements in the child Web.config to cancel out the inherited `<add />` statements from the parent Web.config. Option (c) will disable image resizing within the sub-application.
 
 ## Blank page, invalid image error in browser, or Page cannot be displayed on image URL.
 
@@ -28,7 +28,7 @@ Keep reading if it's a `404: File Not Found error`
 
 When using the ImageResizer from a .NET project that is not a web project you may get the following build error:
 
-	The type or namespace name "ImageResizer" could not be found (are you missing a using directive or assembly reference?)
+> The type or namespace name "ImageResizer" could not be found (are you missing a using directive or assembly reference?)
 
 This is caused by using a Client Profile version of .NET instead of the Full version. You can change this in Project Properties -> Application -> Target Framework. The ImageResizer requires the full version, as it is also designed to support ASP.NET usage and references the System.Web assembly (which is not part of the client profile version of .NET).
 
@@ -106,9 +106,5 @@ This can occur in certain medium or low trust environments. To correct, set `req
 			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" />
 		</configSections>
 		...
-
-## SecurityException on GIF images when using the PrettyGifs plugin	
-
-The PrettyGifs plugin works on any (non-customized) trust level, but in rare cases, hosting providers have disabled access to the Marshal class, which PrettyGifs depends on to perform its magic.
 
 
