@@ -1,3 +1,8 @@
+-if @page and @page.metadata('banner')
+	%div(class="banners-wrap t")
+		%div.banners
+			= auto @page.metadata('banner').to_sym, :layout => false, :views => Nesta::Path.local("content/pages" + (@page.metadata('banner path') || ""))
+
 %div(class="page-content no-banner")
 	%div(class="t")
 		-if @page and @page.lib("plusone")
