@@ -63,8 +63,9 @@ var now = new Date();
 var edtOffset = isDstInEffect(-5 * 60) ? -4: -5;//-4, -5
 var localOffset = now.getTimezoneOffset() / -60;
 
-var a = localOffset - edtOffset + 9;
-var b = localOffset - edtOffset + 21;
+
+var a = (localOffset - edtOffset + 9) % 24;
+var b = (localOffset - edtOffset + 21) % 24;
 var mins =  now.getMinutes().toString(); 
 if (mins.length == 1) mins = mins + '0';
 
