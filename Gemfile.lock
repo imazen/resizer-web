@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/nathanaeljones/nesta-plugin-aliases.git
-  revision: ca36ffeaf78cbd2fb999fd2c0d96526a3fd3532d
+  revision: 19af42b4d426fb681792b8b28285a6b6715d82ec
   specs:
-    nesta-plugin-aliases (0.0.2)
+    nesta-plugin-aliases (0.0.3)
       nesta (>= 0.9.11)
 
 GIT
@@ -14,14 +14,14 @@ GIT
 
 GIT
   remote: git://github.com/nathanaeljones/nesta-plugin-tags.git
-  revision: 893ed9d58caa902926ce6f1ec61ecb9a80109e80
+  revision: f853e1a1e77c0f32f790c4fc0c5cba1648a20c08
   specs:
-    nesta-plugin-tags (0.0.1)
+    nesta-plugin-tags (0.0.2)
       nesta (>= 0.9.11)
 
 GIT
   remote: git://github.com/nathanaeljones/nesta.git
-  revision: 2a08636bf6b62ad217a33bdc7477280af2c49ec6
+  revision: ac1687620637fb3dda601f786af6b3ccf31bb0d0
   specs:
     nesta (0.9.11)
       RedCloth (~> 4.2)
@@ -35,20 +35,20 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    backports (2.3.0)
+    backports (2.5.3)
     erubis (2.7.0)
-    haml (3.1.4)
+    haml (3.1.5)
     haml-edge (3.1.79)
     monkey-lib (0.5.4)
       backports
-    rack (1.3.5)
+    rack (1.4.1)
     rdiscount (1.6.8)
-    sass (3.1.11)
+    sass (3.1.17)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.2.6)
       rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
+      tilt (>= 1.2.2, < 2.0)
     sinatra-advanced-routes (0.5.1)
       monkey-lib (~> 0.5.0)
       sinatra (~> 1.0)
