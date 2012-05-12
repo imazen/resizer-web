@@ -2,7 +2,7 @@ title: Resizer Enterprise License
 
 # Resizer Enterprise license
 
-The [paid plugin bundles](/plugins) can be purchased under this license. An enterprise license for a bundle costs <span class="price">$250</span>.
+The [paid plugin bundles](/plugins) can be [purchased](/plugins) under this license. An enterprise license for a bundle costs <span class="price">$250</span>.
 
 ## License summary
 
