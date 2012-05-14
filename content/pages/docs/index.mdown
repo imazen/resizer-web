@@ -18,9 +18,9 @@ Not finding what you're looking for? Try [searching the site](/search).
 
 ## Basic usage
 
-* [Usage examples](/docs/examples)
+* [Basic commands](/docs/basics)
+* [Full command reference](/docs/reference)
 * [Managed API examples](/docs/managed)
-* [URL command reference](/docs/reference)
 * [Configuration reference](/docs/configuration)
 * [Frequently asked questions](/docs/faq)
 * [Troubleshooting](/docs/troubleshoot)
@@ -38,11 +38,11 @@ Not finding what you're looking for? Try [searching the site](/search).
 ## In Depth
 
 * [Understanding processing and caching in the ImageResizer](/docs/process-and-cache)
-* [Customizing the resizer with events)](/docs/events)
-* [Extending the resizer with plugins)](/docs/plugins/extending)
-* [Making a basic plugin)](/docs/plugins/basics)
-* [Making an IVirtualImageProvider](/docs/plugins/virtualimageprovider)
-* [InterceptModule action-by-action](/docs/interceptmodule)
+* [Customizing the resizer with events](/docs/events) 
+* [Extending the resizer with plugins](/docs/plugins/extending) 
+* [Making a basic plugin](/docs/plugins/basics) 
+* [Making an IVirtualImageProvider](/docs/plugins/virtualimageprovider) 
+* [InterceptModule action-by-action](/docs/interceptmodule) 
 * [ImageBuilder action-by-action](/docs/plugins/imagebuilder)
 * [Full generated documentation for the core and all plugins, with graphs](http://nathanaeljones.github.com/resizer-docs/doxygen/namespaces.html)
 * [Simple generated documentation for the ImageResizer core](http://nathanaeljones.github.com/resizer-docs/docu/)

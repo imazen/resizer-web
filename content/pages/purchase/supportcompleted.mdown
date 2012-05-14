@@ -5,7 +5,7 @@ Title: Purchase Complete!
 
 Thank you. Please send an e-mail to support@imageresizing.net with scheduling information. 
 
-To being your session:
+To begin your session:
 
 1. Download and run [TeamViewer](http://s.ndj7.com).
 2. Email the following information to support@imageresizing.net
