@@ -7,16 +7,16 @@ Save money with a support contract. All contracts include permanent licenses to 
 
 If you already purchased an Enterprise license, you can apply 50% of the purchase cost to a new support contract. 
 
-### Go Bronze ($1000/yr)
+### Go Bronze ($1000/yr with 2YR plan)
 
 * The Bronze 6-month contract is $100 cheaper than buying all 4 plugin bundles. It also includes 6 support incidents (limited to 1 per month) (normally $135 each), 2 assisted installs, 1 30-minute Q & A session (normally $190), and 1 hour of coding assistance (normally $195). That's $1195 in support savings, plus $100 savings on licensing. 
 * The Bronze 1-year contract will save you $500 if V4 arrives within 1 year (which is likely), because it includes major version upgrades. It also includes $2,005 in support savings, and potentially $500 over the licensing model.
 
-### Go Silver ($4000/yr)
+### Go Silver ($4000/yr with 2YR plan)
 
 The Silver plans (unlike Bronze) allow *any* employee of the business to get direct, unlimited phone & TeamViewer support. No need to funnel all questions through the designated employee. Also, you get a special e-mail address to contact support, with 2 business-hour response times guaranteed. Hot-fixes are guaranteed within seven days for blocking bugs. In addition, two hours of architecture planning with the author is included, as well as 3 hours of his coding time if you need some custom work. 5 assisted installs per year are included.
 
-### Go Gold  ($8500/yr)
+### Go Gold  ($8500/yr with 2YR plan)
 
 The Gold plans are ideal for mission-critical scenarios and large enterprises. Hot-fixes are provided within 2 business days. 10 hours of custom coding per year is included, as well as 5 hours of architecture planning and 10 assisted installations. 
 
@@ -78,7 +78,7 @@ You may request an invoice by e-mailing **support@imageresizing.net** with your 
 Support contract type:<br/>
 <select name="o1">
 <option value="Bronze Tier 6 Month Contract">Bronze Tier 6 Month Contract</option>
-<option value="Bronze Tier 21Year Contract">Bronze Tier 1 Year Contract</option>
+<option value="Bronze Tier 1 Year Contract">Bronze Tier 1 Year Contract</option>
 <option value="Bronze Tier 2 Year Contract">Bronze Tier 2 Year Contract</option>
 <option value="Silver Tier 6 Month Contract">Silver Tier 6 Month Contract</option>
 <option value="Silver Tier 1 Year Contract">Silver Tier 1 Year Contract</option>

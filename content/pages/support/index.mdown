@@ -104,7 +104,7 @@ Here's a list of *Really Bad Ideas*:
 * **Re-using the original filename (or extension) of an image upload when saving it to disk. That's instant root access for any elementary school kid who notices.** 
 * **Building your own SQL/S3/Azure/GridFS/RemoteURL -> Managed API bridge instead of using the existing datastore plugins**. Nothing is simple when you're dealing with images of arbitrary size and format, not even a basic SQL call. 
 
-I've made [a plugin](/plugin) for nearly every situation, and they're [easy to make yourself](/docs/plugins/basics) as well. 
+I've made [a plugin](/plugins) for nearly every situation, and they're [easy to make yourself](/docs/plugins/basics) as well. 
 
 And, if all else fails, [try reading the docs](/docs) or [searching the site](/search).
 
