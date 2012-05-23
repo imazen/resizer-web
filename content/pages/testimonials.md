@@ -7,7 +7,7 @@ From Scott Hanselman, Principal Program Manager at [Microsoft](http://microsoft.
 > ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've [talked about it before on the blog](
 http://www.hanselman.com/blog/NuGetPackageOfWeek11ImageResizerEnablesCleanClearImageResizingInASPNET.aspx). He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. He's got a really, really great license for both open source and commercial. And you can even talk to Nathanael and have him look at your architecture for a very reasonable fee. And you can check out all his content at imageresizing.net.
 
-From Craig Boal at [Sierra Trading Post](sierratradingpost.com)
+From Craig Boal at [Sierra Trading Post](http://sierratradingpost.com)
 
 >We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez.  ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable.  I highly recommend ImageResizer for any dynamic imaging needs.
  
@@ -51,6 +51,12 @@ From Jonathan Awotwi
 >A major modification made on our behalf was the ability to handle files located on Amazon's S3 cloud server. Overall Nathan is one of the most professional people I've worked with, beating his own delivery estimates at a time when he had a lot of other stuff going on, not to mention his component is flawlessly executed. 
 
 >-Jonathan.
+
+
+Here's a few sites you may recognize:
+
+3news.co.nz
+www.four.co.nz/
 
 Had a great experience with the ImageResizer? Share it in the comments below!
 
