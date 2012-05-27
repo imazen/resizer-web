@@ -1,30 +1,58 @@
 
 # Contribute to the project!
 
-The ImageResizing.Net project welcomes developers, contributors, documentation writers, translators, and any help it can find. I work 50-70 hours per week on the project, but I still can't do everything.
+The ImageResizing.NET project isn't just about resizing. We're Photoshop as a web-service, but with a plugin mode so things don't get bloated. I typically spend between 65 and 90 hours per week on the project, so any help you can provide is greatly appreciated.
 
-If you have changes or patches to the project, please share them! The best way to share code is to connect to the Git repository. Just e-mail `support@imageresizing.net` and request commit access. To give you an account, I'll need your preferred e-mail address, your full name, and your preferred username. If you aren't familiar with Git, I accept .zip files, but it may take longer for them to be merged into a future release.
+## Sharing code
 
-Have you written a few pages of javascript for your gallery or product viewer? Share it! The [StudioJS project](https://github.com/nathanaeljones/studiojs) is on GitHub, and welcoming pull requests. Or .zip files, if you'd rather use email. 
+We happily accept (and use!) most contributions and patches we receive. We accept .zip files, but it's better if you send a pull request through GitHub.
 
-Have you made a CMS-specific module or plugin to make the ImageResizer easier to use from within the admin pages? Share it! E-mail `support@imageresizing.net`.
+### Connecting to the Git repository
+
+1. If you don't have Git installed, download "Git-1.7.6.Preview" or later from [the msysgit website](http://code.google.com/p/msysgit/downloads/list). Install it.
+2.  [Download the SmartGit GUI](http://www.shareit.com/affiliate.html?affiliateid=200142144&publisherid=200020344&target=http%3A%2F%2Fwww.syntevo.com%2Fsmartgit%2Findex.html) and install it.
+3. Sign up for a GitHub account, and enter your public key. If you don't know what your public key is, [download and run this tool](http://windowsgit.com/keytool) to find or generate it for you.
+4. E-mail your GitHub username to `support@imageresizing.net`
+5. Then, open SmartGit and `Clone` `git@github.com:imazen/resizer.git`
 
 If you're not sharing code, simply use the NuGet packages to get the latest binaries automatically, and [configure Visual Studio to download sources and symbols](http://www.symbolsource.org/Public/Home/VisualStudio) automatically for debugging.
 
 
+## What we need
 
-## Connecting to the Git repository
+### Website & community
 
-If you don't have Git installed, download "Git-1.7.6.Preview" or later from [the msysgit website](http://code.google.com/p/msysgit/downloads/list). Install it, then [download the SmartGit GUI](http://www.shareit.com/affiliate.html?affiliateid=200142144&publisherid=200020344&target=http%3A%2F%2Fwww.syntevo.com%2Fsmartgit%2Findex.html) and install it.
+1. Writers - We need more how-to articles, in more .NET languages! We can post them here, or link to your blog - doesn't matter. Show people how to do zoomable product images, image galleries, slideshows, lightbox, etc..
 
-Log into your account at [nathanael.repositoryhosting.com](http://nathanael.repositoryhosting.com) using the credentials I sent you, then click My Profile, Public Keys, New Key, and paste in your public key. If you don't know what your public key is, [download and run this tool](http://windowsgit.com/keytool) to find or generate it for you.
+2. Designers - This website is a bit... uh... boring. That's what happens when I try my hand at design. A better sales pitch could really help the project, maybe even allow me to hire some badly needed help. I get a lot of traffic, so this could help both of us.
 
-Then, open SmartGit and `Clone` `ssh://git@nathanael.repositoryhosting.com/nathanael/resizer.git`. If the ssh port is blocked, you can access a read-only copy at `https://nathanael.repositoryhosting.com/git/nathanael/resizer.git`.
+3. Webmasters - This website is mostly written in Markdown & HAML, and runs on the awesome micro-CMS [Nesta](http://nestacms.com). It's a lot of fun to work with, and quite flexible. It's in a Git repository, and easy to collaborate on. Any time you can spare to help with the todo list is appreciated!
 
+4. Translators - Less than half of paying customers speak English as a first language. Why not help bring the project to your native tongue?
 
-### Why don't you use GitHub?
+### Core project development
 
-I do, just not for this repository. There are a number of reasons for this.
+1. MVC support is very minimal right now. I've been working on a url generation system for a few months, but I need more feedback before I publish an API. After that, I can get back to ActionResult support. If you're an MVC expert with a little bit of free time, I'd love to have your assistance.
+
+### Plugin development
+
+See something on the [ideas forum](http://resizer.uservoice.com) that interests you? The plugin model means you can implement it independently. If it's general-purpose enough, I might put it in the standard download. 
+
+### Wrappers
+
+We try to make the URL API human-friendly, but most people prefer wrappers. We don't have very many. 
+
+The [fledgling StudioJS project](https://github.com/nathanaeljones/studiojs) is an attempt to rectify this, but we need MVC and WebForms wrappers for the jQuery libraries. [CropImage.NET](http://cropimgae.net) is a WebForms control wrapping jCrop and ImageResizing.NET, but was designed to be compatible with the legacy WebCropImage control by Cem Sisman. 
+
+If you're interested in making WebForms or MVC wrappers for the web service, we're interested in promoting them and helping you.
+
+### CMS Integration
+
+Our goal is to support every CMS. And, we do, generally. But there's a lot of value in having deeper integration, so you don't have to manually add the querystring.
+
+Dozens of CMSes have integrated the Core library natively, and we encourage that. Plugins have to be separately purchased, but they're quite affordable, and aren't usually needed for intranet or private installations.
+
+## Why is the repository private?
 
 1. This repository has copyrighted image files in the history that can't legally be 'published'. In the next version I might start over with a fresh repository and rid myself of this problem.
 2. The repository structure is a bit confusing - The generated packages are greatly simplified and reduce the chance of errors.
