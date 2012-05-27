@@ -8,7 +8,7 @@
 
 You can set bounds for an image with the `width` and/or `height` commands. How those bounds are interpreted is determined by the `mode` command. If only `width` *or* `height` is specified, aspect ratio is maintained.
 
-![Resizing modes](/attachments/resizing-modes.png)
+![Resizing modes](http://cf.imageresizing.net/attachments/resizing-modes.png)
 
 Note:  `mode=carve` requires the [SeamCarving plugin](/plugins/seamcarving). 
 
@@ -21,15 +21,15 @@ To allow both reduction and enlargement, use `scale=both`. Image enlargement cau
 
 Here we attempt to upscale an image using `scale=down`, `scale=both`, and `scale=canvas` respectively.
 
-<img src="http://img.imageresizing.net/clock.gif;width=100;frame=1" style="border: 1px solid gray" />
-<img src="http://img.imageresizing.net/clock.gif;width=100;scale=both;frame=1" style="border: 1px solid gray"  />
-<img src="http://img.imageresizing.net/clock.gif;width=100;scale=canvas;frame=1" style="border: 1px solid gray"  />
+<img src="http://img.imageresizing.net/tractor-tiny.jpg;width=150;scale=down" style="border: 1px solid gray" />
+<img src="http://img.imageresizing.net/tractor-tiny.jpg;width=150;scale=both" style="border: 1px solid gray"  />
+<img src="http://img.imageresizing.net/tractor-tiny.jpg;width=150;scale=canvas" style="border: 1px solid gray"  />
 
 You can [change the default behavior from `scale=down` to something else with the DefaultSettings plugin](/plugins/defaultsettings).
 
 ## Alignment
 
-So, you don't like images being centered when you use `mode=crop`, `mode=pad`, or `scale=canvas`? You can pick the alignment type with the `anchor` command. 
+So, you don't like images being centered when you use `mode=crop`, `mode=pad`, or `scale=canvas`; You can pick the alignment type with the `anchor` command. 
 
 Valid values are `topleft`, `topcenter`, `topright`, `middleleft`, `middlecenter`, `middleright`, `bottomleft`, `bottomcenter`, and `bottomright`.
 
@@ -39,6 +39,7 @@ Anchor=bottomright: ![](http://img.imageresizing.net/zermatt.jpg;w=100;h=100;mod
 Mode=Pad, Bgcolor=gray, Anchor=Topleft: ![](http://img.imageresizing.net/zermatt.jpg;w=100;h=100;bgcolor=gray;anchor=topleft)
  Anchor=bottomright: ![](http://img.imageresizing.net/zermatt.jpg;w=100;h=100;bgcolor=gray;anchor=bottomright)
 
+Scale=canvas, bgcolor=gray, Anchor=Topleft: ![](http://img.imageresizing.net/tractor-tiny.jpg;w=150;bgcolor=gray;scale=canvas;anchor=topleft)
 
 ## Formats & compression
 
@@ -80,11 +81,11 @@ With dithering: 16: ![](http://img.imageresizing.net/tulip-leaf.jpg;width=100;co
 64: ![](http://img.imageresizing.net/tulip-leaf.jpg;width=100;colors=64;format=gif;dither=true)
 256: ![](http://img.imageresizing.net/tulip-leaf.jpg;width=100;colors=256;format=gif;dither=true)
 
-### Default Windows Encoder (Server 2008 and above)
+### Without PrettyGifs, on Server 2008 and above
 
 256 colors (You cannot adjust compression): ![](http://img.imageresizing.net/tulip-leaf.jpg;width=100;colors=256;format=gif;encoder=gdi)
 
-### Default Windows Encoder (Server 2003 and below)
+### Without PrettyGifs, on Server 2003 and below
 
 256 colors (You cannot adjust compression): ![](http://img.imageresizing.net/tulip-leaf-ws2003.gif)
 
@@ -144,12 +145,5 @@ The following examples use NTSC/Y/True, RY, BT709, and Flat respectively
 
 ![s.invert=true](http://img.imageresizing.net/utah2.jpg;width=200;s.invert=true)
 
-
-### Adjust contrast, brightness, saturation, and opacity
-
-* &s.alpha= 0..1 (note - for true opacity, use with `format=png`)
-* &s.brightness=-1..1
-* &s.contrast=-1..1
-* &s.saturation=-1..1
 
 These are just a few of the available commands. To learn more, see the [full command reference](/docs/reference)
