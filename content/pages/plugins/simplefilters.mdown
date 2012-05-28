@@ -28,6 +28,7 @@ Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet pac
 * &s.contrast=-1..1
 * &s.saturation=-1..1
 * &s.invert=true
+* &s.roundcornders=radius|topleft,topright,bottomright,bottomleft - 'radius' is a percentage between 0 and 100 of 1/2 the smaller of width and height. You can crop to a circle with `width=x&height=x&mode=crop&s.roundcorners=100`. New in V3.2+
 
 ## Usage (Before v3.1)
 
