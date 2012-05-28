@@ -30,14 +30,17 @@ Either run `Install-Package ImageResizer.Plugins.RemoteReader` in the NuGet pack
 
 1. Add ImageResizer.Plugins.RemoteReader.dll to your project
 2. Add `<add name="RemoteReader" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
-3. Add `<remotereader signingKey="put a long and very secure key here" />` inside `<resizer></resizer>`. Make sure the key is kept safe, and is the same across all servers in the web farm (if you're using one). This key can contain any xml-safe characters, and should be as long as possible. URLs generated with one key will not work with another.
+3. Add `<remotereader signingKey="put a long and very secure key here"></remotereader>` inside `<resizer></resizer>`. Make sure the key is kept safe, and is the same across all servers in the web farm (if you're using one). This key can contain any xml-safe characters, and should be as long as possible. URLs generated with one key will not work with another.
 
 
 ## Configuration reference
 
 	<configuration>
 	  <resizer>
-			<remotereader signingKey="ag383ht23sag#laf#lafF#oyfafqewt;2twfqw" allowAllSignedRequests="true" allowRedirects="5" />
+			<remotereader signingKey="ag383ht23sag#laf#lafF#oyfafqewt;2twfqw" allowAllSignedRequests="false" allowRedirects="5">
+				<allow domain="imageresizing.net" /> <!-- XML whitelisting requires V3.2 or higher -->
+				<allow domain="*.imageresizing.net" onlyWhenSigned="true"/> 
+			</remotereader>
 			<plugins>
 				<add name="RemoteReader" />
 			</plugins>
