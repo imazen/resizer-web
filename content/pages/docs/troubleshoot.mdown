@@ -62,6 +62,19 @@ Possible causes
 3. Alternatively, you may have a URL rewriting event that is affecting the path names.
 
 
+## This type of page is not served. (HTTP 403 error)
+
+	Description: The type of page you have requested is not served because it has been explicitly forbidden.  The extension '.jpg' may be incorrect.   Please review the URL below and make sure that it is spelled correctly. 
+
+Possible causes
+
+1. You aren't logged in. ImageResizer obeys your URL Authorization rules, so don't expect to view images where you can't visit .aspx pages. 
+2. You are trying to access a S3 bucket or Remote URL that is not authorized.
+
+This generic error message often hides a more descriptive message, but that message is always guaranteed to be a "Not Authorized To View this Content" kind of error.
+
+
+
 ## Method Not Found (System.MissingMethodException)
 
 	Server Error in '/' Application. 
