@@ -107,4 +107,14 @@ This can occur in certain medium or low trust environments. To correct, set `req
 		</configSections>
 		...
 
+## Quality loss when resizing 8-bit Grayscale Jpeg images
 
+This is a known bug in GDI+. GDI+ opens 8-bit grayscale Jpeg images as 4-bit images. Here's the [bug report at Microsoft Connect](http://connect.microsoft.com/VisualStudio/feedback/details/649605/gdi-and-wic-opening-an-8bpp-grayscale-jpeg-results-in-quality-loss).
+
+The workaround is to use WIC or FreeImage for these requests. Any of the following plugins will solve the problem
+
+1. WicDecoder - Install, then add `&decoder=wic` to affected URLs. (best quality)
+2. WicBuilder - Install, then add `&builder=wic` to affected URLs. Faster, but slightly lower quality than #1 (nearly imperceptible)
+3. FreeImageDecoder - Install, then add `&decoder=freeimage`
+4. FreeImageBuilder - Install, then add '&builder=freeimage`. Slowest, but highest quality.
+ with `builder=freeimage` or `builder=wic`
