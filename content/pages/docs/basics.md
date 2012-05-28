@@ -29,7 +29,7 @@ You can [change the default behavior from `scale=down` to something else with th
 
 ## Alignment
 
-So, you don't like images being centered when you use `mode=crop`, `mode=pad`, or `scale=canvas`; You can pick the alignment type with the `anchor` command. 
+So, you don't like images being centered when you use `mode=crop`, `mode=pad`, or `scale=canvas`? You can pick the alignment type with the `anchor` command. 
 
 Valid values are `topleft`, `topcenter`, `topright`, `middleleft`, `middlecenter`, `middleright`, `bottomleft`, `bottomcenter`, and `bottomright`.
 
@@ -146,4 +146,71 @@ The following examples use NTSC/Y/True, RY, BT709, and Flat respectively
 ![s.invert=true](http://img.imageresizing.net/utah2.jpg;width=200;s.invert=true)
 
 
+### Adjust opacity/alpha
+
+`s.alpha`= `0..1`
+
+For true transparency, combine with `format=png`. Otherwise, the image will be blended against `bgcolor`.
+
+![s.alpha=0.25](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=0.25)
+![s.alpha=0.75](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=0.75)
+![s.alpha=0.85](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=0.85)
+![s.alpha=1](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=1)
+
+### Adjust contrast
+
+
+`s.contrast`= `-1..1`
+
+
+![s.contrast=-0.80](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.99)
+![s.contrast=-0.80](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.80)
+![s.contrast=-0.40](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.40)
+![s.contrast=-0.20](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.20)
+
+![s.contrast=0](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0)
+
+
+![s.contrast=0.20](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.20)
+![s.contrast=0.40](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.40)
+![s.contrast=0.80](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.80)
+![s.contrast=0.99](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.99)
+
+
+
+### Adjust brightness
+
+
+`s.brightness`= `-1..1`
+
+
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-1)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-0.7)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-0.5)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-0.2)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0.2)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0.5)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0.7)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=1)
+
+### Adjust saturation
+
+
+`s.saturation`= `-1..1`
+
+
+
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-1)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-0.9)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-0.5)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-0.2)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0.2)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0.5)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0.9)
+![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=1)
+
 These are just a few of the available commands. To learn more, see the [full command reference](/docs/reference)
+
+Not covered here: cropping, zooming, rotating, padding, margins, borders, shadows, watermarks, 404s, auto-trim, and alternate pipelines.
