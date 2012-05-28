@@ -1,5 +1,6 @@
 Bundle: 4
 Flags: bundle
+Cost: The Extras bundle costs $249 for an enterprise-wide license, or $99 for a freelancer license. 
 
 # Extras Bundle
 

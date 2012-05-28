@@ -6,6 +6,9 @@
 					This plugin (#{@page.heading}) is part of the 
 					%a{href:@page.bundle.abspath}
 						= @page.bundle.heading
+				%p
+					~ @page.bundle.metadata('Cost')
+					
 			:markdown
 				### Where is the plugins section?
 				The `<plugins>` section is located in Web.config, and is nested inside the `<resizer>` element, which is nested inside `<configuration>`. For examples, see [this sample Web.config file](/docs/configuration).

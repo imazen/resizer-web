@@ -1,6 +1,8 @@
 Aliases: /plugins/free
 Bundle: free
 Flags: bundle
+Cost: This bundle is 100% free. All bundles include source code.
+
 
 # Free bundle
 

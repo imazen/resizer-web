@@ -1,5 +1,7 @@
 Bundle: 2
 Flags: bundle
+Cost: Th Design bundle costs $249 for an enterprise-wide license, or $99 for a freelancer license. 
+
 
 #Design bundle
 

@@ -1,5 +1,6 @@
 Bundle: 3
 Flags: bundle
+Cost: The Cloud bundle costs $249 for an enterprise-wide license, or $99 for a freelancer license. 
 
 
 # Cloud Bundle
