@@ -1,12 +1,13 @@
-Date: May 30, 2012
-FullFile: http://downloads.imageresizing.net/Resizer3-2-0-full-hotfix-6pm-May-28-2012.zip
-MinFile: http://downloads.imageresizing.net/Resizer3-2-0-min-hotfix-6pm-May-28-2012.zip
-Summary: 11 bug fixes, heavy refactoring, 5 new draft plugins
+Date: June 3 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-2-alpha-0-full-Jun-3-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-2-alpha-0-min-Jun-3-2012.zip
+Summary: 11 bug fixes (reliability improvements in WicBuilder, Watermark, WhitespaceTrimmer, SqlReader), heavy refactoring, 5 new draft plugins
 ShortVersion: 3.2.0
 Template: release
 Libs: plusone
+Tags: releases
 
-# Resizer 3.2 alpha 0 - May 30 2012
+# Resizer 3.2 alpha 0 - June 3 2012
 
 This is an **alpha** release containing heavy refactoring. Hundreds of changes were made to more than 258 code files. While the changes were quadruple-checked, there may still be some bugs. 
 
@@ -21,10 +22,10 @@ Be the first to report a given bug to support@imageresizing.net and claim the bo
 
 * S3Reader has concurrency issues when accessing S3 buckets over SSL. This issue existed in previous releases. The temporary workaround is to only use public buckets with SSL disabled. The next release will migrate from LitS3 to AWSSDK to avoid this and potentially other undiscovered issues.
 
-## What didn't make the cut
+## What didn't make the cut, but was expected to
 
 * URL Builder API & MVC URL/HTML helpers; I need more users to volunteer for private beta testing before I can publish this kind of API. Please e-mail your Github username to `support@imageresizing.net` if you can volunteer.
-* GetCurrentConfig - multi-tenanting support for Umbraco & Orchard.
+* GetCurrentConfig - multi-tenanting support for Umbraco & Orchard. 
 
 
 ## Bug fixes in Core (ImageResizer.dll)
@@ -36,12 +37,11 @@ Be the first to report a given bug to support@imageresizing.net and claim the bo
 
 ## Bug fixes in plugins
 
-
+* Watermark: Fixed `InvalidOperationException: Object is currently in use elsewhere.` issue.
+* WhitespaceTrimmer: Upgraded to hotfix release of AForge, fixes AccessViolationException
+* WIC: Fixed GC bug (underlying bytes were being disposed before WIC had finished reading them).
 * SqlReader now assumes SQL modified dates are UTC instead of server-local. Bug effects: items with a modified date don't get cached until they are X hours old, where X is the time zone offset.
 * SqlReader: Changed behavior - If UntrustedData is set, RequireImageExtension automatically becomes false to prevent recoding circumvention.
-* Watermark: Fixed `InvalidOperationException: Object is currently in use elsewhere.` issue.
-* WhitespaceTrimmer: Eliminated use of AForge.UnamangedImage, which seems to have solved some random memory consistency-related exceptions.
-* WIC: Fixed GC bug (underlying bytes were being disposed before WIC had finished reading them).
 * All datasource plugins now support multiple instances
 * SeamCarving: now triggered by just &mode=carve, both &mode=carve and &carve=true are not required.
 
@@ -167,6 +167,7 @@ These plugins are not yet alpha, and will be changing before their final release
 ## WhitespaceTrimmer
 
 * Eliminated use of AForge.UnamangedImage, which seems to have solved some memory consistency issues.
+* Got hotfix from AForge author to solve AccessViolationExceptions.
 
 ### PdfRenderer
 
