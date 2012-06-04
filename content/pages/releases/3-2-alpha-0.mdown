@@ -9,6 +9,8 @@ Tags: releases
 
 # Resizer 3.2 alpha 0 - June 3 2012
 
+**Note: this release has a compatibility issue with .NET 4 and VB.NET. Use [3.2.1 instead](/releases/3-2-alpha-1).**
+
 This is an **alpha** release containing heavy refactoring. Hundreds of changes were made to more than 258 code files. While the changes were quadruple-checked, there may still be some bugs. 
 
 Be the first to report a given bug to support@imageresizing.net and claim the bounty! The best place to look for bugs is probably in querystring parsing, or the newly added Instructions class.
