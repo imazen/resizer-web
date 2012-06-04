@@ -45,9 +45,9 @@ PDF rendering can be an intensive operation, and is highly dependent on the PDF 
 
 ## Installation
 
-1. Place gsdll32.dll and gsdll64.dll in the /bin directory. 
-2. Add ImageResizer.Plugins.PdfRenderer.dll to your project or run `Install-Package ImageResizer.Plugins.PdfRenderer` in the NuGet package manager.
-3. Add `<add name="PdfRenderer" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+1. Add ImageResizer.Plugins.PdfRenderer.dll to your project or run `Install-Package ImageResizer.Plugins.PdfRenderer` in the NuGet package manager.
+2. Add `<add name="PdfRenderer" downloadNativeDependencies="true" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+3. If you set `downloadNativeDependencies="false"` or you're running < V3.2, place gsdll32.dll and gsdll64.dll in the /bin directory.
 
 ## Where do I get gsdll32 and gsdll64?
 
