@@ -16,11 +16,11 @@ A holder of a [Professional][pro]/[Enterprise][enterprise] license (the Provider
 
 The "Software" is the plugin(s) which are being sub-licensed by a Provider to a Client.
 
-The "Client" may not be anonymous to the Provider - their must exist proof that the Client has purchased the Project from the Provider.
+The "Client" may not be anonymous to the Provider - their must exist proof that the Client has purchased the Project from the Provider as part of a bespoke (custom software) contract.
 
 The Client is granted the following rights:
 
- * Usage on an unlimited number of virtual or physical machines machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers.
+ * Usage on an unlimited number of virtual or physical machines machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers. **Usage means use, not installation!**. This does not grant a hosting provider license to install the software for use by all customers, nor provide the ability to *resell* usage of the software (I.E, a SaaS offering). Custom contracts for SaaS offerings, hosting providers, and CMSes are available, however - just email support@imageresizing.net.
  * Modification of configuration settings related to the Software.
 
 The Client is prohibited from:

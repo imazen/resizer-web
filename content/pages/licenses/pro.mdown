@@ -23,7 +23,7 @@ The licensee may may grant his employing business or client a ["Professional Cli
 
 This license grants the purchaser of the software the following rights:
 
- * Unlimited usage. Usage is permitted on an unlimited number of physical or virtual machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers.
+ * Unlimited usage. Usage is permitted on an unlimited number of physical or virtual machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers. **Usage means use, not installation!**. This does not grant a hosting provider license to install the software for use by all customers, nor provide the ability to *resell* usage of the software (I.E, a SaaS offering). Custom contracts for SaaS offerings, hosting providers, and CMSes are available, however - just email support@imageresizing.net.
  * Unlimited modification
  * Unlimited integration with an unlimited number of projects
  * Unlimited redistribution under the [Professional Client license][proclient].
