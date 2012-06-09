@@ -24,6 +24,10 @@ Be the first to report a given bug to support@imageresizing.net and claim the bo
 
 * Eliminated ExtensionAttribute-related compile-time warnings (C#) and errors (VB) for most users. 
 
-If you still experience any ExtensionAttribute-related problems, please e-mail a .zip file of the project it happens with to `support@imageresizing.net`, and include your VisualStudio/.NET version numbers (Go to Visual Studio, Help, About, and click `Copy Info`, then paste it into the e-mail). 
+If you still experience any ExtensionAttribute-related problems, it is likely due to a incorrect System.Core reference.
+
+Switch your project to target the .NET 2.0 framework, then back to .NET 3.5 or .NET 4.
+
+If that doesn't resolve the problem, please e-mail a .zip file of the project to `support@imageresizing.net`, and include your VisualStudio/.NET version numbers (Go to Visual Studio, Help, About, and click `Copy Info`, then paste it into the e-mail). 
 
 [Continue reading changes made in alpha 0 release](/releases/3-2-alpha-0).
