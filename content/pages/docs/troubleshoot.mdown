@@ -4,6 +4,13 @@ The image resizer is self-diagnosing for the majority of issues. Visit `/resizer
 
 To get support or use this guide, [make sure you get the detailed error message from visiting the image URL directly](/docs/geterror). This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far to generic to be useful.
 
+
+## Error 5 Missing compiler required member 'System.Runtime.CompilerServices.ExtensionAttribute..ctor'
+
+This indicates your project is 'preferring' ImageResizer defined types over those in System.Core. 
+
+[Visit my StackOverflow answer to see a list of workarounds](http://stackoverflow.com/a/10996336/166893).
+
 ## Could not load type 'ImageResizer.InterceptModule'
 
 Potential causes:
