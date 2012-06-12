@@ -26,7 +26,7 @@ Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet pac
 * &s.contrast=-1..1
 * &s.saturation=-1..1
 * &s.invert=true
-* &s.roundcornders=radius|topleft,topright,bottomright,bottomleft - 'radius' is a percentage between 0 and 100 of 1/2 the smaller of width and height. You can crop to a circle with `width=x&height=x&mode=crop&s.roundcorners=100`. New in V3.2+
+* &s.roundcorners=radius|topleft,topright,bottomright,bottomleft - 'radius' is a percentage between 0 and 100 of 1/2 the smaller of width and height. You can crop to a circle with `width=x&height=x&mode=crop&s.roundcorners=100`. New in V3.2+
 
 ## Examples
 
@@ -38,13 +38,13 @@ Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet pac
 
 `s.roundcornders=30`
 
-![s.roundcornders=30](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=30)
+![s.roundcorners=30](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=30)
 
 ### Specify individual radii
 
 `s.roundcornders=45,0,45,0`
 
-![s.roundcornders=45,0,45,0](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=45,0,45,0)
+![s.roundcorners=45,0,45,0](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=45,0,45,0)
 
 
 ### 4 ways to grayscale

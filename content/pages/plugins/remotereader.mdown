@@ -94,7 +94,7 @@ In 3.1.5 and higher, spaces are supported in URLs, but to support '+' characters
 	    </security>
 	</system.webServer>
 
-## Proxy auto-dection
+## Proxy auto-detection
 
 .NET automatically attempts to detect the proxy configuration each time the application starts. To prevent this (often) unnecessary 2-10 second delay, you can disable proxy detection in web.config (below).
 
