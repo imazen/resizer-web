@@ -1,5 +1,5 @@
 Menu: home
-Title: ASP.NET Image Resizing & Cropping Module for IIS - Free & Open Source
+Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open Source
 Renderer: RubyPoweredMarkdown
 Libs: uservoice, plusone, bxSlider, -comments
 Banner: banners_content
