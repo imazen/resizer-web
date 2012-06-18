@@ -16,9 +16,9 @@ Aliases: /pl..
 	<option value="Cloud Bundle">Cloud Bundle</option>
 	<option value="Extras Bundle">Extras Bundle</option>
 	</select>
-	<h3>Owned by developer or by business?</h3>
+	<h3>Personal or business?</h3>
 	<select name="o2">
-	<option value="Pro License">Professional ($99)</option>
+	<option value="Pro License">Personal/Professional ($99)</option>
 	<option value="Enterprise License">Enterprise-wide ($250)</option>
 	</select>
 	<div style="padding-top:15px;"> </div>

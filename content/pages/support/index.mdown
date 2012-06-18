@@ -43,7 +43,7 @@ Both online tickets and this e-mail address are immediately forwarded to my pers
 
 [Submit new ideas or vote for existing ones at the uservoice site](http://resizer.uservoice.com/forums/108373-image-resizer-v3).
 
-If you post a question on StackOverflow, please [tag it 'imageresizer'](http://stackoverflow.com/questions/tagged/imageresizer). Please send a link to support@imageresizing.net, as we're often interested in providing an official answer.
+If you post a question on StackOverflow, please [tag it 'imageresizer'](http://stackoverflow.com/questions/tagged/imageresizer). Please send a link to support@imageresizing.net, as we're often interested in providing an official answer. And if we take the time to provide a good answer to your question, please be courteous; mark it as the answer and vote it up.
 
 ## Buy a support incident
 
