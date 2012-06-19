@@ -51,6 +51,8 @@ Banner: banners_content
 
 7. Ready to go live? Make sure you get the [disk caching plugin](/plugins/diskcache)! If your visitors are distributed across the globe, you should also consider signing up for Amazon CloudFront edge-caching, and installing the [cloud front plugin](/plugins/cloudfront). This project requires 50-70 hours of work per week, so make sure you support it by purchasing [a plugin bundle](/plugins) or [an all-inclusive support contract](/support/contracts). Buy purchasing a license, you'll also get a priority phone/TeamViewer support incident.
 
+8. Go high-level with [wrappers](/docs/wrappers). Wrap the URL API in a [jQuery studio plugin](https://github.com/nathanaeljones/studiojs) or an [ASP.NET cropping control](http://webcropimage.com).
+
 Can't afford any mistakes? Ensure your content architecture is scalable and secure by having a **30-minute Q&A session with the author for just $70**.
 Add aided installation of 1 server or workstation for +$60, or 2 servers or workstations for +$120. [Find out more](/support/consult). Or, get [a support contract](/support/contracts) that includes all of the above *and* licenses for everything. 
 
