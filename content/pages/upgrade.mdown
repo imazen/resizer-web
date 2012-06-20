@@ -1,7 +1,0 @@
-Libs: -comments
-
-#Upgrade from Version 2
-
-Users of Version 2 may upgrade to version 3 for 60% off.
-
-Enter "60OFFLOYALTY" in the shopping cart to receive your discount.
