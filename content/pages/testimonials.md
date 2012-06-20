@@ -53,10 +53,20 @@ From Jonathan Awotwi
 >-Jonathan.
 
 
-Here's a few sites you may recognize:
+And a few websites you may recognize
 
-3news.co.nz
-www.four.co.nz/
+* [3news.co.nz](http://3news.co.nz)
+* [four.co.nz](http://www.four.co.nz)
+
+
+## Mentioned in...
+
+* [Episode 75 of *Talking Shop Down Under*, from 2:00 to 3:20](http://www.talkingshopdownunder.com/2011/11/episode-75-sailing-with-this-ship-of.html)
+* [Scott Hanselman, Nuget Package of the Week #11](http://www.hanselman.com/blog/NuGetPackageOfWeek11ImageResizerEnablesCleanClearImageResizingInASPNET.aspx)
+* [Channel 9 MSDN, Funny, you look bigger in real life... ](http://channel9.msdn.com/coding4fun/blog/Funny-you-look-bigger-in-real-life-Server-side-image-resizing-with-the-free-and-open-source-ImageRes)
+* [Eric Polerecky](http://eric.polerecky.com/asp-net-image-resizing/)
+* [Bertrand Le Roy, long time critic turned positive](http://weblogs.asp.net/bleroy/archive/2011/10/22/state-of-net-image-resizing-how-does-imageresizer-do.aspx)
+
 
 Had a great experience with the ImageResizer? Share it in the comments below!
 
