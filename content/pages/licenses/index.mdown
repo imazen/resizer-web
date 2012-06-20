@@ -4,7 +4,7 @@ title: Licenses - Image Resizer
 
 The core and [18 plugins](/plugins/free) are free and open-source. No strings attached. They are under [a modified MIT license called the Freedom license][freedom]. No restrictions, no money.
 
-Development of this project is funded by people purchasing [Pro][pro] (<span class="price">$99</span>) and [Enterprise][enterprise] (<span class="price">$250</span>) licenses to the [4 paid plugin bundles](/plugins). Both Pro and Enterprise licenses are as MIT-like as possible, allowing redistribution, modification, and sub-licensing. Go the the [plugins page to purchase](/plugins).
+Development of this project is funded by people purchasing [Pro/Personal][pro] (<span class="price">$99</span>) and [Enterprise][enterprise] (<span class="price">$249</span>) licenses to the [4 paid plugin bundles](/plugins). Both Pro and Enterprise licenses are as MIT-like as possible, allowing redistribution, modification, and sub-licensing. Go the the [plugins page to purchase](/plugins).
 
 ### Easy rules
 
@@ -18,7 +18,7 @@ Development of this project is funded by people purchasing [Pro][pro] (<span cla
 # List of licenses available for paid bundles
 
  * [Resizer Trial][trial]: You get this for free. Allows unlimited development and testing.
- * [Resizer Professional][pro]: You buy this if you are an individual. $99 per bundle.
+ * [Resizer Professional][pro]: You buy this if you are self-employed or for personal use $99 per bundle.
  * [Resizer Enterprise][enterprise]: You buy this for business-wide use. $250 per bundle.
  * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] or [Enterprise][enterprise] licenses, for use as part of a delivered project.
 

@@ -12,6 +12,8 @@ This license is very restrictive, but the Client can always purchase a full lice
 
 ##License Terms
 
+Copyright (c) 2012 Nathanael Jones
+
 A holder of a [Professional][pro]/[Enterprise][enterprise] license (the Provider) may grant another individual/business (the Client) the Professional Client license, which allows the Client to use the Software as part of a larger piece of software (the Project) provided by the Provider. This license is only valid if the Project does not compete with any previously existing product offerings of the original author of the Software (see [the pro license for details][pro]).
 
 The "Software" is the plugin(s) which are being sub-licensed by a Provider to a Client.
