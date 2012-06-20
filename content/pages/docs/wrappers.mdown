@@ -10,3 +10,4 @@ Here are a few we know about (leave a comment if we've missed one!)
 * ImageStudio (found in /Contrib folder) by Zan Kavtaskin; upload & crop
 * [jQuery NailThumb by Garralabs](http://www.garralab.com/nailthumb-serverside-demo.php)
 * [ImageResizing.FluentExtensions by Ben Foster](https://github.com/benfoster/ImageResizer.FluentExtensions)
+* [My example of how to use JCrop with ImageResizer in 11 lines of code](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
