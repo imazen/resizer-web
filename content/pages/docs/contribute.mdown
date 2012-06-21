@@ -46,11 +46,15 @@ The [fledgling StudioJS project](https://github.com/nathanaeljones/studiojs) is 
 
 If you're interested in making WebForms or MVC wrappers for the web service, we're interested in promoting them and helping you.
 
+See the [wrappers page for a current list](/dosc/wrappers).
+
 ### CMS Integration
 
 Our goal is to support every CMS. And, we do, generally. But there's a lot of value in having deeper integration, so you don't have to manually add the querystring.
 
 Dozens of CMSes have integrated the Core library natively, and we encourage that. Plugins have to be separately purchased, but they're quite affordable, and aren't usually needed for intranet or private installations.
+
+Provide an open-source module that provides stronger integration between a CMS and ImageResizer, and you could be eligible for a free enterprise license or a 2YR Bronze support contract.
 
 ## Why is the repository private?
 
