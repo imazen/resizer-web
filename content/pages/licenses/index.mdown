@@ -18,7 +18,7 @@ Development of this project is funded by people purchasing [Pro/Personal][pro] (
 # List of licenses available for paid bundles
 
  * [Resizer Trial][trial]: You get this for free. Allows unlimited development and testing.
- * [Resizer Professional][pro]: You buy this if you are self-employed or for personal use $99 per bundle.
+ * [Resizer Professional][pro]: You buy this if you are self-employed or for personal use. $99 per bundle.
  * [Resizer Enterprise][enterprise]: You buy this for business-wide use. $250 per bundle.
  * [Resizer Professional Client][proclient]: This is the license you can be given by a holder of the [Professional][pro] or [Enterprise][enterprise] licenses, for use as part of a delivered project.
 
