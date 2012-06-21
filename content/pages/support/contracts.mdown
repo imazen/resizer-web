@@ -35,7 +35,8 @@ Best value for... |   | Freelance Developer | 1-2 developers | 2 - 10 developers
  &nbsp; |
 **Licenses and upgrades** |
 All upgrades included | | | X | X | X 
-*All* plugins included | | | X | X | X
+*All* plugins included (bundles only include a subset) | | | X | X | X
+Early access to new plugins and releases | | | X | X | X
  &nbsp;| 
 **Email Support**  |
 Answers within 1 week | X | X | X | X | X
