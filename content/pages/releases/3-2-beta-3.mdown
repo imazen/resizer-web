@@ -1,6 +1,6 @@
 Date: June 30 2012
-FullFile: http://downloads.imageresizing.net/Resizer3-2-beta-2-full-Jun-20-2012.zip
-MinFile: http://downloads.imageresizing.net/Resizer3-2-beta-2-min-Jun-20-2012.zip
+FullFile: http://downloads.imageresizing.net/Resizer3-2-beta-3-min-Jun-30-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-2-beta-3-full-Jun-30-2012.zip
 Summary: 4 bug fixes
 ShortVersion: 3.2.3
 Template: release
@@ -21,7 +21,7 @@ Be the first to report a given bug to support@imageresizing.net and claim the bo
 
 * Fixed false positive warning "An external process indicates it is managing cleanup..." on diagnostics page
 * Added support for multi-page .TIFF files that have pages of different dimensions.
-* VirtualFolder now works when vpp="false".
+* VirtualFolder now works when vpp="false" and for UNC paths.
 * Improved support for Rackspace Cloud (eliminated NativeDependencyManager-related issues).
 
 # Improvements in 3.2.3
