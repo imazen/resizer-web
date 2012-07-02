@@ -5,6 +5,8 @@ Bundle: free
 
 Installed by default. Sets cache-control, expires (if configured), and last-modified HTTP headers.
 
+IIS-level configuration (even in Web.config) can override the values set by ClientCache. Keep this in mind when troubleshooting issues.
+
 # Configuration
 
 1. Add `<clientcache minutes="1440" />` to the `<resizer />` section. This controls how many minutes in the future the Expires header will be set to.
