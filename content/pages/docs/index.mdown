@@ -27,6 +27,7 @@ Not finding what you're looking for? Try [searching the site](/search).
 
 ## Advanced techniques
 
+* [Cloud Basics](/docs/cloud)
 * [Use jCrop to create a cropping UI in 11 lines](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
 * [Watermark images based on folder name or display size](/docs/howto/watermark-by-folder-or-size)
 * [Convert and resize images as they are uploaded](/docs/howto/upload-and-resize)
