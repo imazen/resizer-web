@@ -7,9 +7,7 @@ To get support or use this guide, [make sure you get the detailed error message 
 
 ## Error 5 Missing compiler required member 'System.Runtime.CompilerServices.ExtensionAttribute..ctor'
 
-This indicates your project is 'preferring' ImageResizer defined types over those in System.Core. 
-
-[Visit my StackOverflow answer to see a list of workarounds](http://stackoverflow.com/a/10996336/166893).
+Please update to V3.2.2 or later; Extension methods were temporarily introduced in V3.2.0 but [support proved untenable](http://stackoverflow.com/a/10996336/166893), and they will be delayed until V4.
 
 ## Could not load type 'ImageResizer.InterceptModule'
 
