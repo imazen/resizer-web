@@ -3,28 +3,28 @@ Bundle: 3
 
 # CloudFront plugin
 
-Makes the ImageResizer work nicely with Amazon CloudFront. I use this extensively for my own site, as edge-caching makes things much more responsive, and is not expensive.
+Makes the ImageResizer work nicely with CDNs that strip off query strings by default, such as Amazon CloudFront and Azure CDN. When you create a 'distribution' or 'endpoint', you often have the chance to enable querystring support. If you can do that, you don't need this plugin.
 
 ## Installation
 
-Either run `Install-Package ImageResizer.Plugins.AdvancedFilters` in the NuGet package manager, or:
+Either run `Install-Package ImageResizer.Plugins.CloudFront` in the NuGet package manager, or:
 
 1. Add a reference to ImageResizer.Plugins.CloudFront.dll in your project.
 2. Add `<add name="CloudFront" />` in the `<plugins>` section of Web.Config
 
 ## Details
 
-Amazon CloudFront strips off all querystring data before passing the request on to the origin server (the Image Resizer). To avoid this limitation, we've devised an alternate syntax using semicolons.
+Many CDNs strip off all querystring data before passing the request on to the origin server (the Image Resizer). To avoid this limitation, we've devised an alternate syntax using semicolons.
 
 	image.jpg;width=100;height=100;crop=auto
 
-This allows us to reference a CloudFront server, but still dynamically process and edge-cache images.
+This allows us to reference a CDN server, but still dynamically process and edge-cache images.
 
 Here's a URL directly to my origin server
 
 	http://images.imageresizing.net/red-leaf.jpg;width=100
 
-Here's a URL pointing to CloudFront (I've set up a CNAME to mask the distribution name). CloudFront sends the request on to the origin server, caches the response, and sends it back to the current (and any future) clients.
+Here's a URL pointing to the CDN (I've set up a CNAME to mask the distribution name). The CDN sends the request on to the origin server, caches the response, and sends it back to the current (and any future) clients.
 
 	http://img.imageresizing.net/red-leaf.jpg;width=100
 
@@ -36,9 +36,9 @@ Feel free to play around with my URLs and experiment.
 
 ##Caching duration notes
 
-CloudFront caches all requests for a minimum of 24 hours (1440 minutes).
+By default, CloudFront caches all requests for a minimum of 24 hours (1440 minutes), but you can now configure this limit when you create a new distribution.
 
-To set a longer caching time, increase `<clientcache minutes="1441" />` in the `<resizer>` section of Web.config. 
+To set the caching time at the server instead of at CloudFront, set `<clientcache minutes="1441" />` in the `<resizer>` section of Web.config. 
 
 If you need to invalidate a cached file sooner than 24 hours, you must either change the url (ex. by adding ";invalidate=1" to it), or by using [Amazon's invalidation request feature](http://docs.amazonwebservices.com/AmazonCloudFront/latest/DeveloperGuide/index.html?Invalidation.html).
 
