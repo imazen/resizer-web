@@ -61,7 +61,7 @@ Support Type<br/>
 <option value="30 Minute QA">30 Minute QA ($70)</option>
 <option value="1 Aided install + 30 Minute QA">1 Aided install + 30 Minute QA ($130)</option>
 <option value="2 Aided installs + 30 Minute Q&amp;A">2 Aided installs + 30 Minute Q&amp;A ($190)</option>
-<option value="Support Incident (Individual)">Support Incident (Individual) ($50)</option>
+<option value="Support Incident (Individual)">Support Incident (Personal/non-profit) ($50)</option>
 <option value="Support Incident (Business)">Support Incident (Business) ($135)</option>
 </select>
 
