@@ -37,7 +37,6 @@ Subject to the following restrictions:
  * When redistributing a modified copy of the Software, a notice that the Software has been modified must be included.
  * This license cannot be transferred.
  * This license is only valid for current employees or contract workers of the business.
- * This license does not 
 
 Suggestions:
 
