@@ -7,7 +7,7 @@ For the best performance, pick a cloud that offers all 3 services within the sam
 
 1. High-speed blob storage (like Amazon S3 or Azure Blob Storage)
 2. ASP.NET hosting (IIS or mono). AppHarbor is the easiest and least expensive I've found, and is also AWS hosted for fast S3 access.
-3. A CDN/edge caching solution that acts as a reverse proxy. This means *pull* **not** *push*. Rackspace does not offer this. Their CDN cannot pull from a server, only from CloudFiles.
+3. A CDN/edge caching solution that acts as a reverse proxy. This means *pull* **not** *push*. _Rackspace does not offer this._ Their CDN cannot pull from a server, only from CloudFiles. They proudly state they use Akami hardware, but they do NOT support custom-origin as the *real* Akami and CloudFront CDNs do. I personally use CloudFront and pay $2-$3/mo.
 
 Once you've selected a cloud, you'll need to follow this general outline of steps:
 
