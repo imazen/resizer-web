@@ -1,0 +1,46 @@
+Date: August 6 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-2-4-full-Aug-6-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-2-4-min-Aug-6-2012.zip
+Summary: 7 bug fixes, S3Reader changes, 2 new alpha plugins
+ShortVersion: 3.2.4
+Template: release
+Libs: plusone
+Tags: releases
+
+# Resizer 3.2.4 - August 6 2012
+
+**NuGet users: The latest ImageResizer.WebConfig package may insert a duplicate element in Web.config when you upgrade. Simply delete the one that doesn't include `requirePermission="false"`.**
+
+	<section name="resizer" type="ImageResizer.ResizerSection"/>
+	<section name="resizer" type="ImageResizer.ResizerSection" requirePermission="false"/>
+
+# Bug fixes in 3.2.4
+
+* Fixed S3Reader CryptographicException concurrency bug with accessing private buckets. 
+* Fixed loophole permitting requests to execute while plugin loading is taking place. Should fix failed S3/Azure/Remote requests during a cold start.
+* Fixed bug with [Guassian Sharpen for large kernel values](http://code.google.com/p/aforge/issues/detail?id=307&q=GaussianSharpen&colspec=ID%20Stars%20Type%20Status%20Priority%20Project%20Milestone%20Owner%20Summary).
+* Fixed NullReferenceExcpetion in RemoteReader when no URLs are whitelisted.
+* Fixed bug in ImageBuilder.TranslatePoints() that causes incorrect result coordiantes when the image is being cropped. This method is infrequently used, and this bug would not affect image results.
+* Fixed potential bug in ImageBuilder.Build - underlyingStream.Dispose() is called after bitmap.Dispose() now. No known effects reported, but this should ensure there are no issues if bitmap.Dispose() (for any reason) requires access to the underlying stream.
+* YARSMTF (Yet Another RackSpace Medium Trust fix): Diagnostics page no longer crashes while trying to report OS bitness - if RackSpace prevents access, it will skip the test.
+
+# Improvements in 3.2.4
+
+* Diagnostics: Added warning for IIS6 and lower to remind them to use .ashx.
+* Added Faces plugin
+* Added CropAround plugin
+* RedEye plugin now requires .NET 3.5 and depends on the Faces plugin.
+* Improved ImageHandler syntax support to permit overriding mode=stretch and stretch=fill. Added support for DAMP syntax (Umbraco Digibiz Advanced Media Picker)
+* Plugins now redact any sensitive information from the /resizer.debug diagnostics page, to proctect users who have set CustomErrors=Off.
+
+## Breaking changes in S3Reader
+
+* The S3Reader plugin now depends on AWSSDK.dll instead of LitS3.dll
+* S3Reader.S3config is now S3Client, and an instance of AmazonS3Client instead of S3Service
+* S3VirtualPathProvider.Service is now S3Client, and an instance of AmazonS3Client instead of S3Service.
+* The useSubdomains setting is no longer used (or relevant). 
+
+
+
+
+
