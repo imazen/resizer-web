@@ -16,7 +16,7 @@ Permits use only for development and testing purposes.
 
 ##License Terms
 
-Copyright (c) 2012 Nathanael Jones
+Copyright (c) 2012 Imazen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to 

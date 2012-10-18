@@ -17,7 +17,7 @@ This license allows:
 
 ## License terms
 
-Copyright (c) 2012 Nathanael Jones
+Copyright (c) 2012 Imazen
 
 This license is to a Business entity. For personal or freelancer use, see the [Professional license][pro]
 

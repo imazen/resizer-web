@@ -16,14 +16,14 @@ This license grants an individual these rights:
 
 ## License terms
 
-Copyright (c) 2012 Nathanael Jones
+Copyright (c) 2012 Imazen
 
 This license is to a individual, not a business entity.  For a business-wide license, upgrade to the [Enterprise license][enterprise].
 The licensee may may grant his employing business or client a ["Professional Client" license][proclient], but we kindly request that you convince your employer to purchase the very affordable business license instead. 
 
 This license grants the purchaser of the software the following rights:
 
- * Unlimited usage. Usage is permitted on an unlimited number of physical or virtual machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers. **Usage means use, not installation!**. This does not grant a hosting provider license to install the software for use by all customers, nor provide the ability to *resell* usage of the software (I.E, a SaaS offering). Custom contracts for SaaS offerings, hosting providers, and CMSes are available, however - just email support@imageresizing.net.
+ * Unlimited usage. Usage is permitted on an unlimited number of physical or virtual machines operated and either owned, rented, or licensed by the license holder. For example, this includes qualifying shared hosting plans, EC2 instances, dedicated co-located servers, development machines, or test servers. **Usage means use, not installation!** This does not grant a hosting provider license to install the software for use by all customers, nor provide the ability to *resell* usage of the software (I.E, a SaaS offering). Custom contracts for SaaS offerings, hosting providers, and CMSes are available, however - just email support@imageresizing.net.
  * Unlimited modification
  * Unlimited integration with an unlimited number of projects
  * Unlimited redistribution under the [Professional Client license][proclient].
@@ -51,8 +51,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+
 [freedom]: /licenses/freedom  "Resizer Freedom License"
 [trial]: /licenses/trial  "Resizer Trial License"
 [pro]: /licenses/pro  "Resizer Professional License"
 [proclient]: /licenses/proclient  "Resizer Professional Client License"
 [enterprise]: /licenses/enterprise  "Resizer Enterprise License"
+[oem]: /licenses/oem  "Resizer OEM License"
