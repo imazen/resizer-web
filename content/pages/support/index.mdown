@@ -47,7 +47,7 @@ If you post a question on StackOverflow, please [tag it 'imageresizer'](http://s
 
 ## Buy a support incident
 
-Priority email, phone and TeamViewer support costs $135/incident for a business, $50/incident for an independent software developer. A [30-minute Q&A session costs $70](/support/consult).
+Priority email, phone and TeamViewer support costs $135/incident. A [30-minute Q&A session costs $70](/support/consult), but (unlike) a support incident, is time-limited and only reccomended for consulting/introduction purposes.
 
 If you work for a business, please [look at the support contract options](/support/contracts) - they can provide significant savings. 
 
