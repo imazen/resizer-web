@@ -1,6 +1,8 @@
-Bundle: 4
+Bundle: contract
 
 # RedEye plugin
+
+`You can find a sample project for this plugin in \Samples\ImageStudio within the full download` 
 
 Provides automatic and manual red-eye detection and correction. For automatic face and eye detection, OpenCV is required. Requires V3.2 or higher.
 
@@ -13,8 +15,10 @@ You **must** disable overlapped recycling on the application pool running this p
 ## Usage
 
 * r.autoeyes=true
-* r.eyes
+* r.eyes=x1,y1,x2,y2,a,x1,y1,x2,y2,a,... (groups of 5 coordinates, the fifth of which is the accuracy value)
 * r.filter=2
+* r.detecteyes=true - Responds with a JSON result. See [the Faces plugin documentation for details](/plugins/faces).
+* r.getlayout=true - Responds with image layout info in JSON. See [the Faces plugin documentation for details](/plugins/faces).
 
 ## Installation. 
 
@@ -29,6 +33,7 @@ You **must** disable overlapped recycling on the application pool running this p
 ## Managed Dependencies
 
 * ImageResizer.dll
+* ImageResizer.Plugin.Faces.dll
 * AForge.dll
 * AForge.Math.dll
 * AForge.Imaging.dll
