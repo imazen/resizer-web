@@ -32,6 +32,12 @@ The V3 core is under [an MIT-like license](/licenses/freedom). This license is m
 
 Some V3 plugins are under a [slightly more restrictive license](/licenses), but even those give you redistribution and sub-licensing rights. If your project needs a different license, [contact me](/support). I'm flexible about licensing, and I can probably get you what you need.
 
+# Imazen
+
+When [Support Contracts](/support/contracts) were introduced on May 1st, I knew that if the offering reached the quota, I would have to open a separate bank account to ensure the contract funds were used evenly over time. Imazen LLC was formed on May 18th, and is now the official business entity behind ImageResizer and all related support contracts, offerings, and products, as well as [WindowsGit](http://windowsgit.com). By separating the finances I will be able to track income and expenses more carefully and avoid any surprises. 
+
+I also am now hiring a significant number of part-time contract workers to help with the workload, and eventually I will be forced to add a full-time employee. 
+
 # Interesting statistics
 
 * From Feb 2011 to December 2011, 889 commits were made to the project, an average of 3 per day. Each commit contains between 1 and 5 improvements to the project.
