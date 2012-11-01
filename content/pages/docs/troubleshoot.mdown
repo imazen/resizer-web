@@ -13,8 +13,9 @@ Please update to V3.2.2 or later; Extension methods were temporarily introduced 
 
 Potential causes:
 
-1. You didn't copy ImageResizer.dll into the /bin folder (unlikely).
-2. Your website has  a 'sub-site' (Application Folder) inside it. Application Folders inherit all Web.config settings from their parent sites, yet expect to have their own copies of all the dlls referenced by those settings in their own /bin folder. You can resolve this problem by (a) changing the app folder to a virtual folder, (b) adding a copy of ImageResizer.dll and plugins into the /bin folder inside that application also, or (c) using `<remove />` statements in the child Web.config to cancel out the inherited `<add />` statements from the parent Web.config. Option (c) will disable image resizing within the sub-application.
+1. Your website has  a 'sub-site' (Application Folder) inside it. Application Folders inherit all Web.config settings from their parent sites, yet expect to have their own copies of all the dlls referenced by those settings in their own /bin folder. You can resolve this problem by (a) changing the app folder to a virtual folder, (b) adding a copy of ImageResizer.dll and plugins into the /bin folder inside that application also, or (c) using `<remove />` statements in the child Web.config to cancel out the inherited `<add />` statements from the parent Web.config. Option (c) will disable image resizing within the sub-application.
+2. You didn't copy ImageResizer.dll into the /bin folder.
+3. The ImageResizer.dll file in /bin is corrupt. Verify it has the correct file size and version number, or re-copy it from the download. 
 
 ## Blank page, invalid image error in browser, or Page cannot be displayed on image URL.
 
@@ -45,6 +46,7 @@ Potential causes:
 1. You are using the .jpg.ashx syntax, and you did not register the HttpModule properly in both places of your Web.config file.
 2. You are using the .jpg.ashx syntax, but you're not using a query string. You should drop the '.ashx' unless you actually want to process the file.
 3. You are using ASP.NET MVC, but do not have the [MvcRoutingShim plugin](/plugins/mvcroutingshim) installed.
+4. You are using AppHarbor and have Precompilation enabled.
 
 ## Image appears original size
 
