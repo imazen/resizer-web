@@ -267,3 +267,24 @@ html>body .t{
 .t input[type='text']:hover{
 	border: 1px solid #555;
 }
+
+
+/** Add-on stlyes **/
+
+html>body .legal {
+	font-family: Helvetica, Arial;
+	font-size: 10pt;
+}
+
+.legal  h1, .legal h2, .legal h3, .legal h4{
+	color:#333;
+}
+.legal h3, .legal h4{ font-weight:bold;}
+
+.legal ul li{
+	margin:0;
+	padding:0;
+	list-style: disc inside none;
+background:none;
+}
+
