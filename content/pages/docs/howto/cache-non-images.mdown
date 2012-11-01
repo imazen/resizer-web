@@ -37,3 +37,10 @@ On IIS7, you need to place the following settings inside web.config.
 	     </staticContent>
 	    </system.webServer>
 	</configuration> 
+
+## I'm getting failed requests with a status code of 200 or 206 for PDF files
+
+IIS 7.5 cannot handle certain kinds of range requests, such as the ones made by most PDF reader plugins. 
+
+There's a hotfix for that: http://support.microsoft.com/kb/979543
+
