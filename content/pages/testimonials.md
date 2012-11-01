@@ -55,12 +55,14 @@ From Jonathan Awotwi
 
 And a few websites you may recognize
 
+* [VEVO](http://vevo.com)
 * [3news.co.nz](http://3news.co.nz)
 * [four.co.nz](http://www.four.co.nz)
 
 
 ## Mentioned in...
 
+* [How we built the 2012 MSN Olympics site (london.msn.co.uk)](http://www.netmagazine.com/features/how-we-built-msn-uks-responsive-olympics-site)
 * [Episode 75 of *Talking Shop Down Under*, from 2:00 to 3:20](http://www.talkingshopdownunder.com/2011/11/episode-75-sailing-with-this-ship-of.html)
 * [Scott Hanselman, Nuget Package of the Week #11](http://www.hanselman.com/blog/NuGetPackageOfWeek11ImageResizerEnablesCleanClearImageResizingInASPNET.aspx)
 * [Channel 9 MSDN, Funny, you look bigger in real life... ](http://channel9.msdn.com/coding4fun/blog/Funny-you-look-bigger-in-real-life-Server-side-image-resizing-with-the-free-and-open-source-ImageRes)
