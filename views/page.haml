@@ -1,13 +1,22 @@
 -if @page and @page.metadata('banner')
-	%div(class="banners-wrap t")
-		%div.banners
-			= auto @page.metadata('banner').to_sym, :layout => false, :views => Nesta::Path.local("content/pages" + (@page.metadata('banner path') || ""))
+  %div(class="banners-wrap t")
+    %div.banners
+      = auto @page.metadata('banner').to_sym, :layout => false, :views => Nesta::Path.local("content/pages" + (@page.metadata('banner path') || ""))
 
 %div(class="page-content no-banner")
-	%div(class="t")
-		-if @page and @page.lib("plusone")
-			<div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
-		~ @page.to_html(self)
-		-if @page and @page.lib("plusone")
-			<div class="g-plusone"></div>
-	= haml :comments, :layout => false
+  -if @page and @page.metadata("textclass")
+    :plain
+      <div class="#{@page.metadata("textclass")}">
+  -else
+    :plain
+      <div class="t">
+
+
+  -if @page and @page.lib("plusone")
+    <div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
+  ~ @page.to_html(self)
+  -if @page and @page.lib("plusone")
+    <div class="g-plusone"></div>
+  :plain
+    </div>
+  = haml :comments, :layout => false
