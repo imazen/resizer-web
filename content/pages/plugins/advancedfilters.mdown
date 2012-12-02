@@ -37,6 +37,23 @@ Hint: Start with values between -0.1 and 0.1. Values have a big effect.
 * &a.saturation=-1..1
 * &a.brightness=-1..1
 
+### Automatic white balance (alpha feature of 3.3.0)
+
+Automatically corrects the white balance of the photo with 1 of 3 algorithms.
+
+* `area` - Threshold is applied based on cumulative area at the lower and upper ends of the histogram. Much larger thresholds are required for this than SimpleThreshold.
+* `simple` - Simple upper and lower usage thresholds are applied to the values in each channel's histogram to determine the input start/stop points for each individual channel. The start/stop points are used to calcualte the scale factor and offset for the channel.
+* `gimp` - Threshold is applied based on strangely skewed cumulative area, identical to the process used by GIMP.
+
+The default (and reccomended) algorithm is 'area'.
+
+*  &a.balancewhite=true|area|simple|gimp
+*  &a.balancethreshold=0.6|0.06 (simple white balance requires a smaller threshold.)
+
+For the `area` and `gimp` algorithms, the default threshold is 0.6. For `simple`, 0.06 is used (as it is not compared against cumulative area, but an indivudual value's usage)
+
+
+
 ### Automatic histogram adjustment (Good for daylight photos)
 
 Adjusts contrast, saturation, and brightness with curves based on the histogram. Good for adjusting slightly foggy or dark daytime photos. 
