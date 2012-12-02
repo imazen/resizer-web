@@ -32,6 +32,7 @@ At this time, there are no known datastores that are incompatible with the image
 ## CDN
 
 * Amazon CloudFront (with the CloudFront plugin)
+* Azure CDN (no plugin needed if you configure it to preserve querystrings)
 * Any CDN that supports custom-origin. The CloudFront plugin may be required for any CDN that strips off querystrings
 
 Any pull-based CDN should work perfectly with the image resizer. Push-based CDNs like RackSpace work contrary to the on-demand nature of the ImageResizer. While you can use them, it will require additional coding and you'll have to decide which sizes will be available up-front.
