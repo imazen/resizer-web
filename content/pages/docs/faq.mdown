@@ -3,6 +3,8 @@
 If you're getting an error message, [see the troubleshooting page instead](/docs/troubleshoot).
 
 <dl class="faq">
+
+  <dt>Q: How can I ensure only images with a command querystring incur additional processing?</dt><dd>A: You don't need to do anything; that's the default behavior.</dd>
 	
 	 <dt>Q: Is it possible to specify the width and height, and have your image resized and cropped to fit the aspect ratio, losing as little image area as possible? </dt> <dd>A: Yes, and it is easy. Use ?width=x&amp;height=y&amp;mode=crop.
 
