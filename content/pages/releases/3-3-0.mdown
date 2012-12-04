@@ -1,0 +1,78 @@
+Date: November 29 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-2-4-full-Aug-6-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-2-4-min-Aug-6-2012.zip
+Summary: 10 bug fixes, 2 new filters, 2 new alpha plugins
+ShortVersion: 3.3.0
+Template: release
+Libs: plusone
+Tags: releases
+Flags: hidden
+
+# Resizer 3.3.0 -  November 29 2012
+
+
+
+## Known bugs
+
+The following bugs were not discovered in time to be fixed for this release. These bugs are not regressions; they have existed for 8-9 months, but due to rarity were not encountered or reported.
+
+
+* When using auto-cropping (mode=crop), scale=down may sometimes be ignored, acting as if scale=both was set.
+* Attempting to use `srotate` on CMYK Jpegs on *Server 2008 R2 or higher* will cause a "ArgumentException: Parameter is not valid.". 
+* Under concurrent traffic, ASP.NET may lock partially-downloaded assemblies (for plugins with `downalodNativeDependencies=true` set) when running the application the first time on a new server. Call `Config.Current.Plugins.LoadPlugins()` from `App_Start` in `Global.asax.cs` to ensure this doesn't occur.
+* Changes to watermark settings in Web.config may require cache-breaking (or clearing) to take effect.
+
+## Bug fixes in Core
+
+* Plugin loading now blocks all requests until complete to prevent early image requests from failing.
+* Fixed bug in SizeLimits, where the totalHeight setting was never being read, instead reverting to 3200.
+* HTTP Headers: Changed default cache-control to ServerAndPrivate instead of just Private. Increased support for customizing HTTP headers under IIS Classic Mode.
+* Fixed KendoUI compatibility issue with MvcRoutingShim
+* InterceptModule now respects HttpContext.SkipAuthorization when re-applying URL auth checks: http://stackoverflow.com/questions/13594729/correct-way-to-skip-authorization-with-imageresizer
+
+
+## Bug fixes in plugins
+
+* S3Reader: Fixed 500 error for underlying 404 and 403s.
+* RemoteReader: Added support for remote URLs with non-image extensions (defaults to fake extension used, or format setting if specified)
+* Xml:Node  Added beta support for parsing/serializing element text/whitespace/entity contents. 
+* FreeImage: Fixed error message "Attempted to read or write protected memory. This is often an indication that other memory is corrupt." exception caused by trying to dispose an image twice.
+* FreeImage now supports 48 and 64-bit raw images, and automatically reads RAW files in display mode.
+* Faces & RedEye now dispose of loaded cascade files immediately instead of waiting on gc.
+
+
+## New features in plugins
+
+
+* FreeImage: Added `&usepreview=true` to read the embedded jpeg in raw files instead of decoding and processing them.
+* FreeImage: Added (alpha!) support for multi-page tiff, gif, and ico files to FreeImageDecoder and FreeImageBuilder. 
+* AdvancedFilters: Added alpha support for edge feathering:  &a.featheredges=100&a.featherin=.96&featherout=0.3
+* AdvancedFilters: Added [automatic white balancing support](/plugins/advancedfilters): &a.balancewhite=true
+
+* Faces: Added 1-line APIs FacesPlugin.GetFacesFromImage() and FacesPlugin.GetFacesFromImageAsString()
+* Faces & RedEye plugins have been fully refactored.
+* AdvancedFilters: Implemented support for prerender filters
+* SourceMemCache now uses LockProvider to optimize concurrency and prevent duplication of effort.
+* WicEncoder: Added PNG interlace support via &interlace=true
+
+
+## Behavioral changes (alpha plugins only)
+
+* RedEye: Changed json schema slightly - rectangles now have .Accuracy instead of .accuracy, in order to match case of other members, and that of Faces.
+* Faces: Now automatically looks for 1-8 faces instead of just 1 by default.
+* FreeImage: Now decodes RAW files in display mode; this should produce might better results, but may change their appearance.
+
+
+## New plugins
+
+* Added WebP Plugin for decoding and encoding WebP files (alpha). ImageResizer.Plugins.WebP.dll
+* Added MemCache plugin - Like SourceMemCache, but for output instead of input. Part of ImageResizer.Plugins.DiskCache.dll
+
+## Sample projects
+
+Added Samples/ImageStudio to replace Samples/RedEyeRemoval
+Removed ComplexWebApplication, replaced it with PluginTests
+
+
+* CustomOverlayPlugin: Now invalidates when overlay files have a modification date change - but only for physically present files (virtual files not supported).
+
