@@ -1,11 +1,11 @@
 # Imazen Contributor Agreement V1.0
 
-*This contribution agreement grants us non-exclusive copyright and patent licenses to your contributions, and absolves you of warranty obligations. It is based on the Apache Contributor Agreement.*
+*This contribution agreement grants us non-exclusive copyright and patent licenses to your contributions, and absolves you of warranty obligations. It is based on the Apache Individual Contributor License Agreement.*
 
 When contributing source code to any Imazen project, your contributions must be accompanied by the following statement:
 
-    I release these contributions under the terms of the Imazen Contributor Agreement V1.0 (http://imageresizing.net/licenses/contribute), 
-    the terms if which I accept and agree.
+    I release these contributions under the terms of the Imazen Contributor Agreement V1.0 
+    (http://imageresizing.net/licenses/contribute), the terms of which I accept and agree.
     - [Name] [Date]
 
 
@@ -40,7 +40,7 @@ Except for the license granted herein to the Managing Organization and recipient
 software distributed by the Managing Organization, You reserve all right, title,
 and interest in and to Your Contributions.
 
-### License Text
+### License
 
 1. Definitions.
 
@@ -134,21 +134,21 @@ and interest in and to Your Contributions.
    which you become aware that would make these representations
    inaccurate in any respect.
 
-The following fields should be completed for scanned copies of this agreement:
+**The following fields should be completed for scanned copies of this agreement:**
 
-  Please sign: __________________________________ Date: ________________
 
-  Full name: ______________________________________________________
+    Full name: ______________________________________________________
 
-  (optional) Public name: _________________________________________
+    (optional) Public name: _________________________________________
 
-  Mailing Address: ________________________________________________
+    Mailing Address: ________________________________________________
 
-                   ________________________________________________
+                     ________________________________________________
 
-  Country:   ______________________________________________________
+    Country:   ______________________________________________________
 
-  Telephone: ______________________________________________________
+    Telephone: ______________________________________________________
 
-  E-Mail:    ______________________________________________________
+    E-Mail:    ______________________________________________________
 
+    Please sign: __________________________________ Date: ___________
