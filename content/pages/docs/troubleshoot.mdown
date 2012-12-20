@@ -48,6 +48,10 @@ Potential causes:
 3. You are using ASP.NET MVC, but do not have the [MvcRoutingShim plugin](/plugins/mvcroutingshim) installed.
 4. You are using AppHarbor and have Precompilation enabled.
 
+## File not found for JSON requests (Faces, RedEye plugins)
+
+1. You have not copied Newtonsoft.Json.dll into the /bin folder, and are using .NET 4.0.
+
 ## Image appears original size
 
 Potential causes: 
@@ -126,6 +130,13 @@ This can occur in certain medium or low trust environments. To correct, set `req
 			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" />
 		</configSections>
 		...
+
+## Error parsing Web.Config
+
+If you are using NuGet and recently upraded from an older release, there may be duplicate XML elements in Web.Config. Delete the one lacking the requirePermission="false" attribute.
+
+	<section name="resizer" type="ImageResizer.ResizerSection"/>
+	<section name="resizer" type="ImageResizer.ResizerSection" requirePermission="false"/>
 
 ## Quality loss when resizing 8-bit Grayscale Jpeg images
 
