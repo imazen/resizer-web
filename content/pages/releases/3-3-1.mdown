@@ -1,0 +1,39 @@
+Date: December 19 2012
+FullFile: http://downloads.imageresizing.net/Resizer3-3-1-full-Dec-20-2012.zip
+MinFile: http://downloads.imageresizing.net/Resizer3-3-1-min-Dec-20-2012.zip
+Summary: 8 bug fixes, 1 new plugin
+ShortVersion: 3.3.1
+Template: release
+Libs: plusone
+Tags: releases
+
+
+# Resizer 3.3.1 -  December 19 2012
+
+This is a `beta` quality release. The latest stable release is [3.2.4](/releases/3-2-4).
+
+## Notice for users of downalodNativeDependencies=true
+
+To ensure all dependencies get downloaded before ASP.NET starts locking them, call `Config.Current.Plugins.LoadPlugins()` from `Application_Start` in `Global.asax.cs` 
+
+
+## Bugs that could not be fixed in this release
+
+* When using auto-cropping (mode=crop), scale=down may sometimes be ignored, acting as if scale=both was set.
+
+
+## Bug fixes in Core
+
+* Core: Fixed incorrect parsing of 'process' command in ResizeSettings - always returned Default, regardless of setting. **Bug was introduced in 3.2.0, and may have security implications for users with untrusted content, as re-encoding was NOT being enforced**.
+* Fixed "ArgumentException: Parameter is not valid." when using  `srotate` on **CMYK**(not RGB) Jpegs on *Server 2008 R2 or higher*.
+* Fixed &srotate side effects on 'source' object for managed API. 
+
+
+## Bug fixes in plugins
+
+* AzureReader2 supports Azure Storage Client 2.0
+* SourceMemCache: Changed the default cache size from 1GB to 10MB, as documention specifies.
+* Faces & RedEye now use the same directory calculation algorithm used by NativeDependencyManager to provide XML files. ImageProcessingExceptions are thrown instead of FileNotFoundExceptions for missing .xml files (FNFs are auto-converted to 404s).
+* Watermark: Added cache-breaking system
+* S3Reader has been rebuilt against the latest version of AWSSDK.dll.
+
