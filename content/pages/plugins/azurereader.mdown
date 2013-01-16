@@ -3,6 +3,8 @@ Bundle: 3
 
 # AzureReader plugin
 
+[See AzureReader2 if you're using the Azure SDK 2.0](/plugins/azurereader2).
+
 Allows images located in an Azure Blobstore to be read, processed, resized, and served. Requests for unmodified images get redirected to the blobstore itself.
 
 This plugin was developed by Wouter Alberts with a bit of help and consultation from me. He's graciously donated it to the project, and you can find it in the /Contrib folder along with some sample projects.
