@@ -19,7 +19,7 @@ image.jpg?width=100&crop=10,10,300,300&rotate=30&scale=both&mode=pad&margin=100
 
 * Much cleaner URL syntax. `http://localhost/ImageGen.ashx?image=beautiful.jpg&width=320` vs `http://localhost/beautiful.jpg?width=320`
 
-* Simpler and more permissive licensing. Enterprise-wide licensing is $250 per plugin bundle, $99 for a personal license. If you have more than 1 domain, you'll save a lot of money.
+* DRM-free licensing available.
 
 * A larger community, with 40+ plugins. Easy to extend and customize. 
 
