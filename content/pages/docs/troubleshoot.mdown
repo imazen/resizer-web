@@ -149,3 +149,7 @@ The workaround is to use WIC or FreeImage for these requests. Any of the followi
 3. FreeImageDecoder - Install, then add `&decoder=freeimage`
 4. FreeImageBuilder - Install, then add '&builder=freeimage`. Slowest, but highest quality.
  with `builder=freeimage` or `builder=wic`
+
+## Performance issues or error messages when using a SAN.
+
+This is tricky to get right - [read the full article here](http://imageresizing.net/docs/howto/avoid-network-limit).
