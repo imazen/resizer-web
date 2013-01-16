@@ -2,7 +2,7 @@
 
 *This contribution agreement grants us non-exclusive copyright and patent licenses to your contributions, and absolves you of warranty obligations. It is based on the Apache Individual Contributor License Agreement.*
 
-When contributing source code to any Imazen project, your contributions must be accompanied by the following statement:
+When contributing source code to any Imazen project, your contributions must be accompanied by the following statement (either via e-mail or (preferably) in the commit message):
 
     I release these contributions under the terms of the Imazen Contributor Agreement V1.0 
     (http://imageresizing.net/licenses/contribute), the terms of which I accept and agree.
@@ -12,7 +12,7 @@ When contributing source code to any Imazen project, your contributions must be 
 This contribution agreement is identical to the *Apache Individual Contributor License Agreement ("Agreement") V2.0* found at [apache.org/licenses](http://www.apache.org/licenses/), except for the following changes:
 
 1. Your agreement is with Imazen LLC, not the Apache Software Foundation, and the term "the Foundation" has been replaced with "the Managing Organziation".
-2. The license preface has been shortened and the requirement for a physical signature has been lifted.
+2. The license preface has been shortened and the requirement for a physical signature has been removed.
 3. The fields for a physical copy have been moved to the bottom of the page.
 4. You may opt-out of this agreement for future contributions through an explicit statement, although your contributions will not be accepted.
 
@@ -34,7 +34,7 @@ change your rights to use your own Contributions for any other purpose.
 You accept and agree to the following terms and conditions for Your
 present and future Contributions submitted to the Managing Organization, 
 UNLESS you explicitly state otherwise when making future contributions.  You ackowledge, however,
-that we will be unable to accept your contributions if they are not provided under this agreement.
+that we will be unable to accept your Contributions if they are not provided under this agreement.
 
 Except for the license granted herein to the Managing Organization and recipients of
 software distributed by the Managing Organization, You reserve all right, title,
@@ -134,7 +134,7 @@ and interest in and to Your Contributions.
    which you become aware that would make these representations
    inaccurate in any respect.
 
-**The following fields should be completed for scanned copies of this agreement:**
+** A digital statement in a commit message or e-mail is sufficient for our purposes. However, if you have decided to submit a scanned copy instead, please complete the following fields. **
 
 
     Full name: ______________________________________________________
