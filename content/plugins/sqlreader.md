@@ -1,4 +1,4 @@
-uservoice:true
+uservoice: true
 Bundle: 3
 
 
