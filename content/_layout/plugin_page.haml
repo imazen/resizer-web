@@ -1,3 +1,5 @@
+Layout: layout
+
 %div(class="page-content no-banner")
 	%div(class="t")
 		%div(class="plugins_sidebar")
@@ -29,8 +31,8 @@
 		
 		-if @page and @page.lib("plusone")
 			<div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
-		~ @page.to_html(self)
+		= yield
 		-if @page and @page.lib("plusone")
 			<div class="g-plusone"></div>
 		%div(style="clear:both;")
-	= haml :comments, :layout => false
+	= partial :comments

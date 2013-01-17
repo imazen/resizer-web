@@ -1,8 +1,6 @@
-# Title and subheading for your site. Used on the home page and in page
-# titles.
-#
 title: "ASP.NET Image resizing for IIS"
 subtitle: "URL-based image resizing has arrived, and it works with every language imaginable"
+url: http://www.imageresizing.net/
 
 # If you want to set the descrition or keywords meta tags on your site's
 # home page, do it here.
@@ -19,55 +17,25 @@ subtitle: "URL-based image resizing has arrived, and it works with every languag
 author:
    name: Nathanael Jones
    uri: http://nathanaeljones.com
-   email: computer.linguist@gmail.com
+   email: n@imazen.io
+   google_profile: "http://google.com/profiles/104429865496810073908"
+   linkedin_profile: "http://www.linkedin.com/in/nathanaeljones"
+   twitter_profile: "https://twitter.com/nathanaeljones"
+   github_profile: "https://github.com/nathanaeljones"
 
-# You can stick with the default look and feel, or use a theme. Themes are
-# easy to create or install, and live inside the themes directory. You
-# can also use scripts/theme to install them.
-#
-# theme: name-of-theme
-#theme:
 
-# If you want to use the Disqus service (http://disqus.com) to display
-# comments on your site, register a Disqus account and then specify your
-# site's short name here. A comment form will automatically be added to
-# the bottom of your pages.
-#
 disqus_short_name: resizer
 
-# cache
-#     Set it to true if you'd like Nesta to cache your pages in ./public.
-#     Useful if you're deploying Nesta with a proxy server such as Nginx,
-#     but not in the least bit helpful if your pages are dynamic, or you're
-#     deploying Nesta to Heroku.
-#
-cache: false
 
-# content
-#     The root directory where nesta will look for your article files.
-#     Should contain "pages" and "attachments" subdirectories that contain
-#     your actual content and the (optional) menu.txt file that links to your
-#     main category pages.
-#
-#content: content
 content: content
 
-# google_analytics_code
-#     Set this if you want Google Analytics to track traffic on your site.
-#     Probably best not to set a default value, but to set it in production.
-#
-#     The production settings are used if you're deploying to Heroku, so
-#     scroll down a bit to set it in production even if you're not deploying
-#     to your own server.
-#
-google_analytics_code: "UA-5218175-5"
+production: 
+  google_analytics_code: "UA-5218175-5"
+  google_analytics_domain: "imageresizing.net" #Override domain for multiple subdomain support
 
-# Overriding "cache" and "content" in production is recommended if you're
-# deploying Nesta to your own server (but see the deployment documentation
-# on the Nesta site). Setting google_analytics_code in production is
-# recommended regardless of how you're deploying (if you have a GA account!).
-#
-# Don't forget to uncomment the "production:" line too...
+# Google Webmaster and Analytics usually require a 'google[code].html' file be placed on the domain
+# Use this feature to do this without polluting your directory structure
+google_verify: [344a8f78fa8143f6, b4f699bd08907a51]
 
-production:
-   google_analytics_code: "UA-5218175-5"
+
+

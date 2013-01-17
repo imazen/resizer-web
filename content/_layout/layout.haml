@@ -28,16 +28,15 @@
 		- if @page and @page.lib("jqueryui")
 			:plain
 				<link rel="stylesheet" href="/css/jquery.Jcrop.css" />
-		= local_stylesheet_link_tag('local')
 
 		%link(href="/articles.xml" rel="alternate" type="application/atom+xml")
-		= haml :analytics, :layout => false
-	%body
+		= partial :analytics
+		
 		%div.site-container
-			= erubis :header, :layout => false
+			= partial :header
 			%div.main
 				= yield
-			= erubis :footer, :layout => false
+			= partial :footer
 		:plain
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 			<script>!window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.6.2.min.js"%3E%3C/script%3E'))</script>

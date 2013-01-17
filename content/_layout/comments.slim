@@ -1,0 +1,15 @@
+- if config.disqus_short_name and not page.lib?('-comments')
+  #disqus_thread
+  - if dev?
+    javascript:
+      var disqus_developer = true;
+  javascript:
+    var disqus_shortname = '#{config.disqus_short_name}';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  noscript
+    | Enable Javascript or
+    a(href="http://disqus.com/?ref_noscript") click here to view the comments.

@@ -1,3 +1,5 @@
+Layout: layout
+
 %div(class="page-content no-banner")
 	%div(class="t")
 		-if @page and @page.lib("plusone")
@@ -11,7 +13,7 @@
 			#{@page.body(self)}
 		-if @page and @page.lib("plusone")
 			<div class="g-plusone"></div>
-	= haml :comments, :layout => false
+	= partial :comments
 	
 	
 
