@@ -4,7 +4,5 @@ Cost: The Extras bundle costs $249 for an enterprise-wide license, or $99 for a 
 
 # Extras Bundle
 
-The Extras Bundle is not yet available through the checkout system. Please email support@imageresizing.net to purchase a license.
-
 * [BatchZipper](/plugins/batchzipper) - Asynchronously generated .zip archives of files and resized images. Great for providing customized downloads to customers.
 * [PsdComposer](/plugins/psdcomposer) - Dynamically edit and render PSD files - turn layers on and off, edit text layer contents, and apply certain effects.
