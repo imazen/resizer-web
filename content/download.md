@@ -23,7 +23,7 @@ Libs: -comments, plusone
 <a href="<%= latest_release.metadata('FullFile') %>" class="awesome black">Download V<%= latest_release.metadata('ShortVersion') %> source, binaries, plugins, and sample code (15MB)</a> 
 </p>
 <p style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0">
-This version includes <a href="<%= latest_release.abspath %>"><%= latest_release.inline_summary %>. Click for release notes.</a>
+This version includes <a href="<%= latest_release.path %>"><%= latest_release.meta_summary %>. Click for release notes.</a>
 </p>
 
 [Show previous releases](/releases).
