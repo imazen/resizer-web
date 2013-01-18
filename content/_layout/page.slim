@@ -1,0 +1,18 @@
+Layout: layout
+
+- if page.meta.banner
+  .banners-wrap.t
+    .banners
+      == partial page.meta.banner
+
+.page-content.no-banner
+  div class="#{page.meta.textclass || 't'}"
+    - if page.lib?('plusone')
+      div style="width:70px;padding-top:25px;float:right"
+        .g-plusone
+  
+    == yield
+
+  - if page.lib?('plusone')
+    .g-plusone
+  == partial :comments

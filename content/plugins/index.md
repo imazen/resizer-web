@@ -51,21 +51,21 @@ By purchasing 1 or more of the bundles below, you will get
 ## [Performance Bundle](/plugins/bundles/1) (3 plugins)- <span class="price">$99/$249</span>
 
 
-<%= Nesta::Page.find_by_path("/plugins/bundles/1").body(self) %>
+<%= index["/plugins/bundles/1"].body(self) %>
 
 
 ## [Design Bundle](/plugins/bundles/2) (13 plugins)- <span class="price">$99/$249</span>
 
-<%= Nesta::Page.find_by_path("/plugins/bundles/2").body(self) %>
+<%= index["/plugins/bundles/2"].body(self) %>
 
 
 ## [Cloud Bundle](/plugins/bundles/3) (6 plugins)- <span class="price">$99/$249</span>
 
-<%= Nesta::Page.find_by_path("/plugins/bundles/3").body(self) %>
+<%= index["/plugins/bundles/3"].body(self) %>
 
 ## [Extras Bundle](/plugins/bundles/4) (2 plugins)- <span class="price">$99/$249</span>
 
-<%= Nesta::Page.find_by_path("/plugins/bundles/4").body(self) %>
+<%= index["/plugins/bundles/4"].body(self) %>
 
 
 Trial versions of these plugins are available in the [free download](/download). You may use them for development and testing purpose without time limits, but you 
@@ -75,7 +75,7 @@ Are you using version 2? [Upgrading is easy and will increase your site's perfor
 
 ## [Free bundle](/plugins/bundles/free) (17+ plugins)
 
-<%= Nesta::Page.find_by_path("/plugins/bundles/free").body(self) %>
+<%= index["/plugins/bundles/free"].body(self) %>
 
 
 **Don't see the plugin or feature you need?** I offer 40% off my standard rate for [custom plugin development](/plugins/custom).

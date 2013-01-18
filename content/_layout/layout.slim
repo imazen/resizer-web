@@ -1,0 +1,105 @@
+layout: false
+
+doctype html
+html(lang="en" class="no-js")
+  head
+    meta(charset="utf-8")
+    
+    - if page.meta.description
+      meta name="description" content=page.meta.description
+    - if page.meta.keywords
+      meta name="keywords" content=page.meta.keywords
+    - if page.meta.author || config.author.name
+      meta name="author" content=(page.meta.author || config.author.name)
+
+    - if config.author.google_profile
+      link rel="me" type="text/html" href=config.author.google_profile
+
+    title
+      = page.title
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+     
+    
+    link rel="stylesheet" href="/css/1-reset.css?v=2" 
+    link rel="stylesheet" href="/css/2-site.css?v=2" 
+    link rel="stylesheet" href="/css/3-banners.css?v=2" 
+    link rel="stylesheet" href="/css/main.css?v=2" 
+    link rel="stylesheet" href="/js/highlight/styles/vs.css" 
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    - if page.lib?("jqueryui")
+      link rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.16.custom.css"
+    - if page.lib?("jqueryui")
+      link rel="stylesheet" href="/css/jquery.Jcrop.css"
+
+    link href="/atom.xml" rel="alternate" type="application/atom+xml"
+    == partial :analytics
+
+    .site-container
+      == partial :header
+      .main
+        == yield
+      == partial :footer
+
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    javascript:
+      !window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.6.2.min.js"%3E%3C/script%3E'))//'
+
+    script src="/js/jquery.tools.min.js"
+    script src="/js/highlight/highlight.pack.js"
+
+    - if page.lib?("bxSlider")
+      <script src="/js/jquery.bxSlider.min.js"></script>
+    - if page.lib?("jtools")
+      <script src="http://cdn.jquerytools.org/1.2.6/tiny/jquery.tools.min.js"></script>
+    - if page.lib?("jqueryui")
+      <script src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+    - if page.lib?("jcrop")
+      <script src="/js/jquery.Jcrop.min.js"></script>
+    - if page.lib?("tinybox")
+      <script src="/js/tinybox.js"></script>
+    - if page.lib?("demo")
+      <script src="/js/demo.js"></script>
+
+    - if page.lib?("uservoice")
+      javascript:
+        (function() {
+          var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+          uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+        })();
+    -if page.lib?("ejunkie")
+      <script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+    -if page.lib?("search")
+      <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+      javascript:
+        google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "#{@google_analytics_code}\""]);
+        function _trackQuery(control, searcher, query) {
+          var gaQueryParamName = "q";
+          var loc = document.location;
+          var url = [
+            loc.pathname,
+            loc.search,
+            loc.search ? '&' : '?',
+            gaQueryParamName == '' ? 'q' : encodeURIComponent(gaQueryParamName),
+            '=',
+            encodeURIComponent(query)
+          ].join('');
+          _gaq.push(["_trackPageview", url]);
+        }
+        google.setOnLoadCallback(function() {
+          var customSearchControl = new google.search.CustomSearchControl('005556834036073640702:ds3gmqyjham');
+          customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+          customSearchControl.setSearchStartingCallback(null, _trackQuery);
+          customSearchControl.draw('cse');
+        }, true);
+
+    -if page.lib?("plusone")
+      <!-- Place this tag in your head or just before your close body tag -->
+      <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script src="/js/script.js"></script>
+    
+
