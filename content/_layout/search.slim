@@ -1,0 +1,31 @@
+h1 Hey
+
+p Random text
+
+- if page.lib? "search"
+
+  script src="http://www.google.com/jsapi"
+
+  javascript:
+    google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
+    var _gaq = _gaq || [];
+    _gaq.push(["_setAccount", "#{config.google_analytics_code}"]);
+    function _trackQuery(control, searcher, query) {
+      var gaQueryParamName = "q";
+      var loc = document.location;
+      var url = [
+        loc.pathname,
+        loc.search,
+        loc.search ? '&' : '?',
+        gaQueryParamName == '' ? 'q' : encodeURIComponent(gaQueryParamName),
+        '=',
+        encodeURIComponent(query)
+      ].join('');
+      _gaq.push(["_trackPageview", url]);
+    }
+    google.setOnLoadCallback(function() {
+      var customSearchControl = new google.search.CustomSearchControl('#{config.google_custom_search}');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.setSearchStartingCallback(null, _trackQuery);
+      customSearchControl.draw('cse');
+    }, true);

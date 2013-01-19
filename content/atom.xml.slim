@@ -12,7 +12,7 @@ feed xmlns='http://www.w3.org/2005/Atom'
   - if config.subtitle
     subtitle type='text' = config.subtitle
   - if index.posts.first
-    updated= index.posts.first.date(:xmlschema)
+    updated= index.posts.first.date.xmlschema
   - if config.author
     author
       - if config.author.name
@@ -27,7 +27,7 @@ feed xmlns='http://www.w3.org/2005/Atom'
       link href=url_for(p) type='text/html' rel='alternate'
       id= p.atom_id
       content type='text/html' src=url_for(p)
-      summary = p.summary(self,200)
-      published= p.date(:xmlschema)
-      updated= p.date(:xmlschema)
+      summary= p.summary(self,200)
+      published= p.date.xmlschema
+      updated= p.date.xmlschema
 

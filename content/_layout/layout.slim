@@ -42,25 +42,34 @@ html(lang="en" class="no-js")
         == yield
       == partial :footer
 
+    == partial :search
+
+
     script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
     javascript:
       !window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.6.2.min.js"%3E%3C/script%3E'))//'
 
     script src="/js/jquery.tools.min.js"
+
     script src="/js/highlight/highlight.pack.js"
 
     - if page.lib?("bxSlider")
-      <script src="/js/jquery.bxSlider.min.js"></script>
+      script src="/js/jquery.bxSlider.min.js"
+
     - if page.lib?("jtools")
-      <script src="http://cdn.jquerytools.org/1.2.6/tiny/jquery.tools.min.js"></script>
+      script src="http://cdn.jquerytools.org/1.2.6/tiny/jquery.tools.min.js"
+
     - if page.lib?("jqueryui")
-      <script src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+      script src="/js/jquery-ui-1.8.16.custom.min.js"
+
     - if page.lib?("jcrop")
-      <script src="/js/jquery.Jcrop.min.js"></script>
+      script src="/js/jquery.Jcrop.min.js"
+
     - if page.lib?("tinybox")
-      <script src="/js/tinybox.js"></script>
+      script src="/js/tinybox.js"
+
     - if page.lib?("demo")
-      <script src="/js/demo.js"></script>
+      script src="/js/demo.js"
 
     - if page.lib?("uservoice")
       javascript:
@@ -69,37 +78,15 @@ html(lang="en" class="no-js")
           uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
         })();
-    -if page.lib?("ejunkie")
-      <script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
-    -if page.lib?("search")
-      <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-      javascript:
-        google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
-        var _gaq = _gaq || [];
-        _gaq.push(["_setAccount", "#{@google_analytics_code}\""]);
-        function _trackQuery(control, searcher, query) {
-          var gaQueryParamName = "q";
-          var loc = document.location;
-          var url = [
-            loc.pathname,
-            loc.search,
-            loc.search ? '&' : '?',
-            gaQueryParamName == '' ? 'q' : encodeURIComponent(gaQueryParamName),
-            '=',
-            encodeURIComponent(query)
-          ].join('');
-          _gaq.push(["_trackPageview", url]);
-        }
-        google.setOnLoadCallback(function() {
-          var customSearchControl = new google.search.CustomSearchControl('005556834036073640702:ds3gmqyjham');
-          customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-          customSearchControl.setSearchStartingCallback(null, _trackQuery);
-          customSearchControl.draw('cse');
-        }, true);
 
-    -if page.lib?("plusone")
-      <!-- Place this tag in your head or just before your close body tag -->
-      <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <script src="/js/script.js"></script>
-    
+    - if page.lib?("ejunkie")
+      script src='http://www.e-junkie.com/ecom/box.js' 
+
+
+    - if page.lib?("plusone")
+      / Place this tag in your head or just before your close body tag 
+      script src="https://apis.google.com/js/plusone.js"
+
+    script src="/js/script.js"
+
 

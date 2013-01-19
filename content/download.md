@@ -4,13 +4,13 @@ Renderer: RubyPoweredMarkdown
 Libs: -comments, plusone
 
 
-#Download <%= latest_release.heading %>
+#Download <%= releases.first.heading %>
 
 <form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();" >
-<input type="hidden" name="redirect" value="<%= latest_release.metadata('FullFile') %>" />
+<input type="hidden" name="redirect" value="<%= latest_release.meta.fullfile %>" />
 <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
 <h3 style="margin-bottom:0"> Notify me when important updates are available</h3>
-<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <button type="submit" name="Submit" class="awesome black" >Subscribe and Download V<%= latest_release.metadata('ShortVersion') %> (avg 8 per year)</button></p>
+<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <button type="submit" name="Submit" class="awesome black" >Subscribe and Download V<%= latest_release.meta.shortversion %> (avg 8 per year)</button></p>
 <input type="hidden" name="listid" value="29803"/><input type="hidden" name="specialid:29803" value="LH6H"/><input type="hidden" name="clientid" value="905228"/><input type="hidden" name="formid" value="2612"/><input type="hidden" name="reallistid" value="1"/><input type="hidden" name="doubleopt" value="0"/> 
 </form>
 
@@ -20,10 +20,10 @@ Libs: -comments, plusone
 </p>
 <p style="margin:0">
 
-<a href="<%= latest_release.metadata('FullFile') %>" class="awesome black">Download V<%= latest_release.metadata('ShortVersion') %> source, binaries, plugins, and sample code (15MB)</a> 
+<a href="<%= latest_release.meta.fullfile %>" class="awesome black">Download V<%= latest_release.meta.shortversion %> source, binaries, plugins, and sample code (15MB)</a> 
 </p>
 <p style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0">
-This version includes <a href="<%= latest_release.path %>"><%= latest_release.meta_summary %>. Click for release notes.</a>
+This version includes <a href="<%= releases.first.path %>"><%= latest_release.meta_summary %>. Click for release notes.</a>
 </p>
 
 [Show previous releases](/releases).

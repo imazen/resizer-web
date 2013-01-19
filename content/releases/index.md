@@ -5,7 +5,7 @@ Renderer: RubyPoweredMarkdown
 #All releases
 
 <% releases.each do |p| %>
-* [<%= p.heading %>](<%= p.abspath %>) - <%= p.inline_summary ? p.inline_summary.strip : '' %>
+* [<%= p.heading %>](<%= p.path %>) - <%= p.meta_summary ? p.meta_summary.strip : '' %>
 <%- end %>
 
 
