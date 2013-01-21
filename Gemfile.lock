@@ -1,17 +1,15 @@
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: 474e59f05358ca8632461240124ce480f8b64f84
+  revision: 077a6c3be4c44b03486f59d545e1b4f62b398c50
   specs:
-    hardwired (0.3.0)
+    hardwired (0.3.1)
       nokogiri
       sinatra (>= 1.3.3)
-      sinatra-contrib
       tilt
 
 GEM
   remote: http://rubygems.org/
   specs:
-    backports (2.7.0)
     columnize (0.3.6)
     daemons (1.1.9)
     debugger (1.2.4)
@@ -31,8 +29,6 @@ GEM
       rack (>= 0.4)
     rack-protection (1.3.2)
       rack
-    rack-test (0.6.2)
-      rack (>= 1.0)
     rdiscount (1.6.8)
     rerun (0.7.1)
       listen
@@ -42,13 +38,6 @@ GEM
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
-    sinatra-contrib (1.3.2)
-      backports (>= 2.0)
-      eventmachine
-      rack-protection
-      rack-test
-      sinatra (~> 1.3.0)
-      tilt (~> 1.3)
     slim (1.3.6)
       temple (~> 0.5.5)
       tilt (~> 1.3.3)
