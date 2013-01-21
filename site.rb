@@ -47,6 +47,8 @@ class Site < Hardwired::Bootstrap
     add_alias('/rss.xml','atom.xml')
     add_alias('articles.xml','atom.xml')
     
+    Hardwired::Index.add_common_file('sitemap.xml.slim','sitemap.xml')
+
 
     #debugger
     helpers do
