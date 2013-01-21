@@ -2,7 +2,7 @@ Title: Plugins - Image Resizer
 Libs: ejunkie, ejunkiecart, uservoice, -comments
 Template: plugin_page
 Renderer: RubyPoweredMarkdown
-Aliases: /pl..
+Aliases: /pl.. /plugin
 
 #Plugins
 

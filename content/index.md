@@ -3,6 +3,7 @@ Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open S
 Renderer: RubyPoweredMarkdown
 Libs: uservoice, plusone, bxSlider, -comments
 Banner: banners_content
+Aliases: )
 
 #Quick start
 
