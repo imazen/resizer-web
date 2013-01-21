@@ -30,6 +30,9 @@ Layout: layout
     
     -if page.lib?('plusone')
       <div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
+    - if page.heading
+      h1.page-header
+        == page.heading
     == yield
     -if page.lib?('plusone')
       <div class="g-plusone"></div>

@@ -27,5 +27,7 @@ Layout: layout
       <br /> Processed by PayPal or Google Checkout
       </div>
     </div>
-  
+  - if page.heading
+    h1.page-header
+      == page.heading
   == yield
