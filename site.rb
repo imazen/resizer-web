@@ -24,7 +24,7 @@ class Site < Hardwired::Bootstrap
 
 
 
-    get '/blog/:year' do |year|
+    get %r{\A/blog/(\d\d\d\d)\Z} do |year|
       request[:year] = year
       select_menu = '/blog'
       render_file('/blog')
@@ -43,7 +43,10 @@ class Site < Hardwired::Bootstrap
       cache_for(dev? ? 30 : 60 * 60 * 24) #1 day
     end  
 
-  
+    Hardwired::Index.add_common_file('atom.xml.slim','atom.xml')
+    add_alias('/rss.xml','atom.xml')
+    add_alias('articles.xml','atom.xml')
+    
 
     #debugger
     helpers do
