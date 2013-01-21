@@ -46,7 +46,7 @@ The [fledgling StudioJS project](https://github.com/nathanaeljones/studiojs) is 
 
 If you're interested in making WebForms or MVC wrappers for the web service, we're interested in promoting them and helping you.
 
-See the [wrappers page for a current list](/dosc/wrappers).
+See the [wrappers page for a current list](/docs/wrappers).
 
 ### CMS Integration
 
