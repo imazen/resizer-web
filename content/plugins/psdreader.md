@@ -1,4 +1,4 @@
-Aliases: /plugins/psd /plugins /psdr..
+Aliases: /plugins/psd /plugins/psdr..
 Bundle: 2
 
 # PsdReader plugin
