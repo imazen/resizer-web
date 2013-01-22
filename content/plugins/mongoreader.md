@@ -1,5 +1,6 @@
 uservoice: true
 Bundle: 3
+Edition: elite
 
 # MongoReader plugin
 

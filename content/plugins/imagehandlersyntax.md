@@ -1,5 +1,6 @@
 Tags: plugin
 Bundle: free
+Edition: free
 Aliases: /plugins/imagehandlersyntax%20compatibility%20shim%20that%20mimics%20the%20URL%20syntax%20of%20Web%20Image%20Resize%20Handler
 
 

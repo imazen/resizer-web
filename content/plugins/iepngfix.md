@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # IEPngFix plugin (New in V3.1.3)
 

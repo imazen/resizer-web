@@ -1,5 +1,6 @@
 Tags: plugin
 Bundle: 2
+Edition: creative
 
 # FreeImage Plugins
 

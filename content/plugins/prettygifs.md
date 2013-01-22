@@ -1,4 +1,5 @@
 Bundle: 1
+Edition: performance
 
 # PrettyGifs plugin
 

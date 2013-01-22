@@ -1,5 +1,6 @@
 Aliases: /plugins/psd /plugins/psdr..
 Bundle: 2
+Edition: elite
 
 # PsdReader plugin
 

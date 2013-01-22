@@ -1,5 +1,6 @@
 Tags: plugin
 Bundle: free
+Edition: free
 
 # Image404 plugin
 

@@ -1,4 +1,5 @@
 Tags: plugin
+Edition: performance
 Bundle: 3
 
 # AzureReader plugin

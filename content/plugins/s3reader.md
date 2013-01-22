@@ -1,4 +1,5 @@
 Bundle: 3
+Edition: performance
 
 # S3Reader plugin
 

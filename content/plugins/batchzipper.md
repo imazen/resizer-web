@@ -1,4 +1,5 @@
 Tags: plugin
+Edition: elite
 Bundle: 4
 
 # BatchZipper plugin

@@ -1,4 +1,5 @@
 Bundle: 2
+Edition: creative
 
 # New Watermark plugin (v3.1+)
 

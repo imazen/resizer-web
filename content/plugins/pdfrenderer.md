@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # PdfRenderer (New in V3.1.3)
 

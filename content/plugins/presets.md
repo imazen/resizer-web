@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 #Presets plugin (v3.1+)
 

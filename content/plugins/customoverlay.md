@@ -1,4 +1,5 @@
 Tags: plugin
+Edition: free
 Bundle: free
 
 # Custom Overlay plugin

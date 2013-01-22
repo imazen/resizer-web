@@ -1,5 +1,6 @@
 Tags: plugin
 Bundle: 1
+Edition: performance
 
 # AnimatedGifs plugin
 

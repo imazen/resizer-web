@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # SizeLimiting plugin
 

@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # MvcRoutingShim plugin
 

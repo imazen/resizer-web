@@ -1,5 +1,6 @@
 Tags: plugin
 Bundle: free
+Edition: free
 
 # AutoRotate plugin (v3.1+)
 

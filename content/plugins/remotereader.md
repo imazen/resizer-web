@@ -1,5 +1,6 @@
 Bundle: 3
 Aliases: /plugins/remotetreader
+Edition: performance
 
 # RemoteReader plugin
 

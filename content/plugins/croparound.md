@@ -1,4 +1,5 @@
 Tags: plugin
+Edition: elite
 Bundle: contract
 
 # CropAround plugin

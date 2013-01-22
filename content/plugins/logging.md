@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # Logging plugin (v3.1+)
 

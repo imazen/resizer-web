@@ -1,4 +1,5 @@
 Bundle: 4
+Edition: elite
 
 # PsdComposer
 

@@ -1,4 +1,5 @@
 UserVoice: true
+Edition: performance
 Bundle: 3
 
 # CloudFront plugin

@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # VirtualFolder plugin
 
