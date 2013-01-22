@@ -32,6 +32,8 @@ html(lang="en" class="no-js")
       link rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.16.custom.css"
     - if page.lib?("jqueryui")
       link rel="stylesheet" href="/css/jquery.Jcrop.css"
+    - if page.lib? :pricer
+      link rel="stylesheet" href="/css/pricer.css"
 
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
     == partial :analytics

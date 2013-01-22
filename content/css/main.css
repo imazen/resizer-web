@@ -21,18 +21,34 @@
 	padding:20px;
 	padding-top:0px;
 	padding-bottom:20px;
-	text-shadow: -940px 0 16px white;
 }
 
-
+.pricer .col .details ul li{background: none;}
 .buySidebar{
   float: right;
   margin-top: 75px;
   padding: 10px;
   text-align: center;
-  width: 160px;
+  width: 190px;
 }
 
+.buy-page{
+  margin-left:-30px;
+  font-size:11pt;
+  color:#aaa;
+  font-family:'Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,Sans-Serif;
+}
+.buy-page a, .buy-page a:visited{
+  color:white;
+}
+.buy-page p.fineprint{
+  padding: 17px;
+
+}
+.buy-page h1{
+  text-align:center;
+  font-size:160%;
+}
 .buySidebar h3, .plugins_sidebar h3{
   color: #666666;
   font-size: inherit;
