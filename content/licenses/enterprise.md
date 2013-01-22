@@ -1,4 +1,5 @@
 title: Resizer Enterprise License
+Aliases: /plugins/enterprise
 
 # Resizer Enterprise license
 

@@ -1,5 +1,7 @@
 Tags: plugin
 Bundle: free
+Edition: free
+Aliases: /plugins/friendlyurls
 
 # FolderResizeSyntax plugin
 
