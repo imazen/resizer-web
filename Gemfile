@@ -13,5 +13,6 @@ gem "debugger", :group => :development
 gem "rerun", :group => :development
 gem "shotgun", :group => :development
 
+gem 'honeybadger'
 gem 'haml-edge'
 gem 'erubis'
