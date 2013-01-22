@@ -8,7 +8,7 @@ Please bookmark this page, as it will be updated each time a new version is rele
 
 Please note that *all* plugin bundles are included in this download, as well as the core. I'm trusting you to buy the correct licenses for the  [bundles](/plugins) you use. 
 
-<%= latest_release.heading %> ([changelog](<%= latest_release.abspath %>)): 
+<%= latest_release.heading %> ([changelog](<%= latest_release.path %>)): 
 
 <a href="<%= latest_release.metadata('FullFile') %>" class="awesome green">Download source, binaries, plugins, and sample code (~15MB)</a>
 
