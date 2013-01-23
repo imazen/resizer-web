@@ -1,5 +1,6 @@
 Bundle: contract
 Edition: elite
+Tags: plugin
 
 # Faces plugin
 

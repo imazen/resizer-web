@@ -1,4 +1,5 @@
 Bundle: free
+Edition: free
 
 # SpeedOrQuality (v3.1+)
 
