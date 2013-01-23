@@ -1,3 +1,5 @@
+Aliases: /purchase/testimonials 
+
 # Testimonials
 
 From Scott Hanselman, Principal Program Manager at [Microsoft](http://microsoft.com):
@@ -29,7 +31,7 @@ From Dorian Collier at [Deesea](http://deesea.com)
 > \- Dorian
 
 
-From Brice Long, owner of [Blue Fin Solutions](http://bluefinsol.com/)
+From Brice Long, owner of [Blue Fin Solutions](http://bluefinsol.com/) (the first person to purchase V3)
 
 >Nathanael,
 
@@ -52,7 +54,6 @@ From Jonathan Awotwi
 
 >-Jonathan.
 
-
 And a few websites you may recognize
 
 * [VEVO](http://vevo.com)
@@ -68,7 +69,7 @@ And a few websites you may recognize
 * [Channel 9 MSDN, Funny, you look bigger in real life... ](http://channel9.msdn.com/coding4fun/blog/Funny-you-look-bigger-in-real-life-Server-side-image-resizing-with-the-free-and-open-source-ImageRes)
 * [Eric Polerecky](http://eric.polerecky.com/asp-net-image-resizing/)
 * [Bertrand Le Roy, long time critic turned positive](http://weblogs.asp.net/bleroy/archive/2011/10/22/state-of-net-image-resizing-how-does-imageresizer-do.aspx)
-
+* [Add powerful resizing, cropping, and manipulation support to your EPiServer website](http://www.frederikvig.com/2013/01/add-powerful-image-resizing-cropping-and-manipulation-support-to-your-episerver-website/)
 
 Had a great experience with the ImageResizer? Share it in the comments below!
 
