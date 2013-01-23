@@ -77,7 +77,7 @@ function EJEJC_lc(th) { return false; }
 
 ## Eligible for priority e-mail, phone or TeamViewer support?
 
-* Own a license purchased before Apr. 20th, 2012. Licenses purchased after this date only include 1 incident.
+* Own a license purchased before Apr. 20th, 2012. Licenses purchased after this date, but prior to Feb. 1st 2013, include only 1 incident. 
 * Have a [valid support contract](/support/contracts).
 * Be an open-source developer leveraging the ImageResizing.NET project in another open-source project
 * Blog about the project and refer at least 300 visitors to the website.
