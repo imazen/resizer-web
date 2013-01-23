@@ -2,7 +2,11 @@ Libs: -comments
 
 # Signup
 
-Average volume was 4 e-mails per year in 2010. 2011 may have a higher average due to V3 updates.
+Average volume is less than 1 e-mail per month:
+
+* 2010: 4 e-mails sent
+* 2011: 8 e-mails sent
+* 2012: 11 e-mails sent
 
 You will only be e-mailed about important updates and notifications regarding the Image Resizer. I do not rent, share, or sell your info to anyone. I use iContact for managing the list, and they are very reliable.
 
