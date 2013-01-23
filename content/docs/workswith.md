@@ -14,6 +14,7 @@ The following have been reported to work successfully.
 * [Orchard (see notes and examples)](/docs/workswith/orchard)
 * Sitecore (Blocks .ashx - either use a different extension or switch to IIS7+ Integrated Mode )
 * Wordpress (Requires IIS or Mono and a bit of extra work)
+* [EPiServer](http://www.frederikvig.com/2013/01/add-powerful-image-resizing-cropping-and-manipulation-support-to-your-episerver-website/)
 
 In addition, the ImageResizer has been directly integrated into 20-30 lesser-known CMSes.
 
@@ -51,7 +52,7 @@ Here's a few I've worked with.
 
 I've also had success stories about dozens of other ISPs from hundreds of users. 
 
-If your provider doesn't allow Full Trust, you may not be able to run the PrettyGifs plugin or some of the advanced plugins in the Design bundle, but all the core functionality should work fine. The Watermark and SimpleFilters will even work in low trust, so the Design bundle can still be useful in that situation.
+If your provider doesn't allow Full Trust, you may not be able to run the PrettyGifs plugin or some of the advanced plugins in the Creative edition, but all the core functionality should work fine. The Watermark and SimpleFilters will even work in low trust, so the Creative edition can still be useful in that situation.
 
 So far, I've been able to resolve every ISP-related compatibility problem I've been notified of, with the exception of certain external plugins that intrinsically require full trust.
 
