@@ -5,11 +5,11 @@ Libs: -comments
 
 Save money with a support contract. All contracts include permanent licenses to the latest version of all plugins offered when the contract expires. And even better - you get a direct line to the author. Don't hesitate to email `sales@imageresizing.net` about a customized support contract!
 
-If you already purchased an Enterprise license, you can apply 50% of the purchase cost to a new support contract. 
+If you already purchased an Enterprise or Elite license, you can apply 50% of the purchase cost to a new support contract. 
 
 ### Go Bronze ($1000/yr with 2YR plan)
 
-* The Bronze 6-month contract is $100 cheaper than buying all 4 plugin bundles. It also includes 6 support incidents (limited to 1 per month) (normally $135 each), 2 assisted installs, 1 30-minute Q & A session (normally $190), and 1 hour of coding assistance (normally $195). That's $1195 in support savings, plus $100 savings on licensing. 
+* The Bronze 6-month contract only costs $100 more than purchasing the Elite edition, and includes everything offered by Elite. It also includes 6 support incidents (limited to 1 per month) (normally $135 each), 2 assisted installs, 1 30-minute Q & A session (normally $190), and 1 hour of coding assistance (normally $195). That's $1195 in support savings, plus $100 savings on licensing. 
 * The Bronze 1-year contract will save you $500 if V4 arrives within 1 year (which is likely), because it includes major version upgrades. It also includes $2,005 in support savings, and potentially $500 over the licensing model. 
 
 ### Go Silver ($4000/yr with 2YR plan)
@@ -26,16 +26,16 @@ The Gold plans are ideal for mission-critical scenarios and large enterprises. H
 
 All prices are in US Dollars.
 
-| Free&nbsp;&nbsp;&nbsp;&nbsp; | Bundle license | Bronze Level | Silver Level | Gold Level |
+| Free&nbsp;&nbsp;&nbsp;&nbsp; | Elite Edition | Bronze Level | Silver Level | Gold Level |
 ------- | ---- :| -------------- :| ------------ :| ------------ :| ---------- :|
-Best value for... |   | Freelance Developer | 1-2 developers | 2 - 10 developers | Mission-critical/Enterprise
-6 month |      |    $250-$1,000 |         $900 |       $3,000 |     $6,000
-1 year  |      |    $250-$1,000 |        $1500 |       $5,000 |    $10,000
-2 year  |      |    $250-$1,000 |        $2000 |       $8,000 |    $17,000
+Best value for... |   |  | 1-2 developers | 2 - 10 developers | Mission-critical/Enterprise
+6 month |      |    $849 |         $900 ($949 after Feb. 1 2013)|       $3,000 |     $6,000
+1 year  |      |     |        $1500 |       $5,000 |    $10,000
+2 year  |      |     |        $2000 |       $8,000 |    $17,000
  &nbsp; |
 **Licenses and upgrades** |
 All upgrades included | | | X | X | X 
-*All* plugins included (bundles only include a subset) | | | X | X | X
+*All* plugins included (domain licenses only include a subset) | | X | X | X | X
 Early access to new plugins and releases | | | X | X | X
  &nbsp;| 
 **Email Support**  |
