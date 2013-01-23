@@ -1,6 +1,6 @@
 # V2 to V3 migration guide
 
-1. [Purchase the v3 Performance bundle](/plugins/upgradefrom2). .
+1. [Purchase the v3 Performance Edition](/plugins/upgradefrom2). .
 2. Back up your project, or at least the Web.Config file, /bin, and /App_Code/ImageResizer folders.
 3. Delete your /imagecache/ folder.
 4. With version 2, did you customize [CustomFolders.cs](customfolders) or [WatermarkSettings.cs](watermarksettings)? Follow the links for instructions.

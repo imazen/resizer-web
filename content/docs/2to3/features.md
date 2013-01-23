@@ -1,7 +1,7 @@
 
 # New features in V3 core
 
-In addition to the [3 new plugin bundles](/plugins), [14 new plugins have been included in the core download](/plugins/free). 
+In addition to the [30 new paid plugins](/plugins), [14 new plugins have been included in the free core download](/plugins/free). 
 
 New features include
 
