@@ -21,7 +21,7 @@ With .NET, 85% of the support emails reporting a problem don't even include an e
 
 I've tried to make this project easy to use in all senses of the phrase. The core and half the plugins are free, the paid plugins only cost an average of $15 each, and I provide free e-mail support. I answer 70% of questions within 1 hour (that's 451 of the last 647). I always make sure every problem is resolved. I've made the licenses allow insane amounts of freedom, and they're as business-friendly as a license can be. Microsoft could buy a bundle for $250 and use it across the entire company, re-using it it both proprietary and open-source projects.
 
-I know that roughly 40% of my users live in a developing country, and have a very justifiable reason for any piracy they may commit. That's fine by me. If you have a hard time feeding your family, I certainly don't want your money. I feel the pinch of the grocery bills myself. But if you live in the USA or the UK, it's unlikely that you're in that situation. 
+I know that roughly 40% of my users live in a developing country, and have a very justifiable reason for any piracy they may commit. That's fine by me. If you have a hard time feeding your family, I certainly don't want your money. I feel the pinch of grocery bills myself. But if you live in the USA or the UK, it's unlikely that you're in that situation. 
 
 If you're a business employee and you don't bother buying a license because it's just too much paperwork or bureaucracy; well, I can't say I have much respect for you.
 
@@ -29,7 +29,7 @@ Businesses reap the largest gains from using open-source software, but because i
 
 That's self-destructive to the business. Business need software that sticks around and stays maintained. Open-source software is three times as likely to stay around and stay maintained as proprietary code libraries (based on my personal, painful experience), but yet some companies are still more willing to pay money to a proprietary library that figuratively locks them in a cell than to donate a quarter of the same amount to an open-source project they use to ensure it's continued existence and that their feature requests will be met.
 
-Open-source libraries are so much more efficient with money than dev software companies that comparison is absurd. You can get a change made to an open-source project for $100. Proprietary? You'll need a 10K partnership deal. Enterprise license? 100k plus royalties. And usually, the open-source project could be sustained for a fraction of the cost.
+Open-source libraries are so much more efficient with money than dev software companies that comparison is absurd. You can often get a change made to an open-source project for $100. Proprietary? You'll need a 10K partnership deal. Enterprise license? 100k plus royalties. And usually, the open-source project could be sustained for a fraction of the cost.
 
 Open-source .NET is, admittedly, a challenge. You need very expensive dev tools, servers, and profiling tools; there are constant costs associated with developing in it. And developing re-usable code for ASP.NET is a nonstop job. There's a new bunch of bugs delivered with every OS update, a newly broken API every release, and performance challenges built into the framework that keep you running ILSpy non-stop. Supporting every combination of IIS and .NET is something few people even attempt. But it can be done. 
 
