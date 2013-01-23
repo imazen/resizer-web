@@ -99,7 +99,7 @@ Add **bgcolor=name** or **bgcolor=33ddff** to set the background (matte) color. 
 
 ## Disk Caching - why you need it
 
-Every public-facing website needs disk caching for their dynamically resized images (no, ASP.NET's output cache won't work). This module is extremely fast, but decoding the original image requires a large amount of **contiguous** RAM (usually 50-100MB) to be available. Since it requires contiguous, non-paged, non-fragmented RAM, it can't be used a (D)DOS attack vector, but it does mean that there is a RAM-based limit on how many concurrent image processing requests can be handled. The [DiskCache plugin](/plugins/diskcache) improves the throughput 100-10,000X by delegating the serving of the cached files back to IIS and by utilizing a hash-tree disk structure. It easily scales to 100,000 variants and can be used with as many as a million images.   It is part of the [Performance bundle](/plugins/bundles/1), which costs $99 for a personal license or $249 for an enterprise-wide license. The DiskCache plugin requires you to use the URL API ([read why](/docs/mvc)).
+Every public-facing website needs disk caching for their dynamically resized images (no, ASP.NET's output cache won't work). This module is extremely fast, but decoding the original image requires a large amount of **contiguous** RAM (usually 50-100MB) to be available. Since it requires contiguous, non-paged, non-fragmented RAM, it can't be used a (D)DOS attack vector, but it does mean that there is a RAM-based limit on how many concurrent image processing requests can be handled. The [DiskCache plugin](/plugins/diskcache) improves the throughput 100-10,000X by delegating the serving of the cached files back to IIS and by utilizing a hash-tree disk structure. It easily scales to 100,000 variants and can be used with as many as a million images.   It is part of the [Performance edition](/plugins/editions/performance), which costs $249. The DiskCache plugin requires you to use the URL API ([read why](/docs/mvc)).
 
 ### Controlling disk caching of results
 
@@ -121,7 +121,7 @@ A CDN also helps your scalability. By reducing the static file load handled by y
 
 ## Back to cooler stuff...
 
-The following filters require the [SimpleFilters plugin](/plugins/simplefilters), part of the Design bundle.
+The following filters require the [SimpleFilters plugin](/plugins/simplefilters), part of the Creative edition.
 
 ![Original image](http://img.imageresizing.net/utah2.jpg;width=200)
 
