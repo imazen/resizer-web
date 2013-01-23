@@ -1,6 +1,8 @@
 
 # Configuration Reference
 
+`Please note - this page is nearly a year out of data, and very incomplete. It will be updated soon`
+
 This is a full reference showing how to use each setting. You should *not* copy this into your site. Only change the settings you need to, and only specify the settings you change.
 
 
@@ -74,7 +76,7 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				
 				<!-- The remaining plugins are not included in ImageResizer.dll - they have their own DLLs ->
 				
-				<!-- Performance Bundle starts here -->
+				<!-- Performance Edition starts here -->
 				
 				<!-- http://imageresizing.net/plugins/diskcache -->
 				<add name="DiskCache" />
@@ -86,7 +88,7 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<!-- Adds the /resize(w,h,f)/ folder syntax -->
 				<add name="FolderResizeSyntax" />
 				
-				<!-- Designer Bundle starts here -->
+				<!-- Designer Edition starts here -->
 				
 				<add name="AdvancedFilters" />
 				<add name="PsdReader" />
@@ -96,7 +98,7 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				     it doesn't have an xml representation yet -->
 				<add name="Watermark" />
 				
-				<!-- Cloud Bundle starts here -->
+				<!-- Cloud Edition starts here -->
 				<add name="CloudFront" />
 				<!-- S3Reader and SqlReader are best configured and added from C# code during App_Start -->
 				<add name="S3Reader" />
