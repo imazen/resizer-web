@@ -1,9 +1,9 @@
 title: Resizer Enterprise License
 Aliases: /plugins/enterprise
 
-# Resizer Enterprise license
+# Resizer Enterprise license V1.1
 
-The [paid plugin bundles](/plugins) can be [purchased](/plugins) under this license. An enterprise license for a bundle costs <span class="price">$249</span>.
+The [Elite Edition](/buy) can be [purchased](/buy) under this license. [Support contracts](/support/contracts) also use this license.
 
 ## License summary
 
@@ -20,7 +20,7 @@ This license allows:
 
 Copyright (c) 2012 Imazen
 
-This license is to a Business entity. For personal or freelancer use, see the [Professional license][pro]
+This license is to a Business entity. For personal or freelancer use, see the Professional license.
 
 All employees and contract workers of the Business are granted the following rights:
 

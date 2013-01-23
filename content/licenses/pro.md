@@ -2,7 +2,10 @@ title: Resizer Professional License
 
 # Resizer Personal (Professional) license
 
-The [paid plugin bundles](/plugins) can be [purchased](/plugins). under this license. An Pro license for a bundle costs <span class="price">$99</span>.
+<div class="deprecated-message">This license will be retired on Feb 1st, 2013.</div>
+
+
+The [paid plugin bundles](/plugins/bundles) can be purchased under this license. 
 
 ## License summary
 

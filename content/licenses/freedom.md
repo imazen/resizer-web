@@ -18,7 +18,7 @@ Permitted actions
 
 An exact copy of the [MIT license](http://www.opensource.org/licenses/mit-license.php), but with one extra condition (in bold).
 
-If you purchased a [Professional](/licenses/pro) or [Enterprise](/licenses/enterprise) license, read those instead. If you comply with them, you're automatically complying with this license.
+If you purchased an [Enterprise](/licenses/enterprise) license read those terms instead. If you comply with them, you're automatically complying with this license.
 
 ##License Terms
 

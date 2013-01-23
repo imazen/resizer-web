@@ -2,7 +2,8 @@ title: Resizer Trial License
 
 #Resizer Trial
 
-Used by trial versions of some plugins. Can be upgraded to a [professional][pro] or [enterprise][enterprise] license [for an *extremely* reasonable price](/plugins).
+Used by trial versions of some plugins. Can be upgraded to a [domain][domain] or [enterprise][enterprise] license [for a very reasonable price](/buy).
+
 
 ##License summary
 
@@ -48,3 +49,4 @@ THE SOFTWARE.
 [pro]: /licenses/pro  "Resizer Professional License"
 [proclient]: /licenses/proclient  "Resizer Professional Client License"
 [enterprise]: /licenses/enterprise  "Resizer Enterprise License"
+[domain]: /licenses/domain  "Resizer Domain License"
