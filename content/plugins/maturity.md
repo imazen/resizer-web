@@ -1,7 +1,7 @@
 
 # Maturity chart
 
-Last updated Jan 10, 2012 regarding V3.1.3
+Last updated Jan 22, 2013 regarding V3.3.1
 
 This chart represents the author's honest opinion on the maturity of the various plugins. 
 
@@ -16,7 +16,7 @@ You shouldn't worry about using alpha plugins on production servers; even alpha-
 
 ## Core & Free plugins
 
-* Core framework - *beta* (likely to have API refinements, but otherwise very stable)
+* Core framework - *stable* (likely to have API refinements, but otherwise very stable)
 * DefaultEncoder - *stable*
 * NoCache - *stable*
 * Diagnostics - *stable*
@@ -26,14 +26,14 @@ You shouldn't worry about using alpha plugins on production servers; even alpha-
 * Gradient - *stable*
 * FolderResizeSyntax - *stable*
 * Image404 -  *beta*
-* VirtualFolder - *beta*
+* VirtualFolder - *stable*
 * ImageHandlerSyntax - *stable*
 * MvcRoutingShim - *stable*
 * AutoRotate - *stable*
-* Presets - *beta* 
-* SpeedOrQuality - *alpha*
+* Presets - *stable* 
+* SpeedOrQuality - *beta*
 * Logging - *alpha*
-* DefaultSettings - *alpha*
+* DefaultSettings - *stable*
 * IEPngFix - *alpha*
 * PdfRenderer - *alpha* 
 
@@ -48,16 +48,16 @@ You shouldn't worry about using alpha plugins on production servers; even alpha-
 * PsdReader - *beta*
 * Watermark - *beta*
 * AdvancedFilters - *beta*
-* SimpleFilters - *beta*
+* SimpleFilters - *stable*
 * SeamCarving - *beta* 
 * WhitespaceTrimmer - *beta*
-* FreeImageDecoder - *alpha*
-* FreeImageEncoder - *alpha*
-* FreeImageResizer - *alpha*
-* FreeImageBuilder - *alpha*
-* WicDecoder - *alpha*
-* WicEncoder - *alpha*
-* WicBuilder - *alpha*
+* FreeImageDecoder - *beta*
+* FreeImageEncoder - *beta*
+* FreeImageResizer - *beta*
+* FreeImageBuilder - *beta*
+* WicDecoder - *beta*
+* WicEncoder - *beta*
+* WicBuilder - *beta*
 
 ## Cloud Bundle
 
@@ -65,14 +65,14 @@ You shouldn't worry about using alpha plugins on production servers; even alpha-
 * S3Reader - *stable*
 * SQLReader - *stable* 
 * CloudFront - *stable*
-* RemoteReader - *beta*
-* AzureReader - *alpha*
+* RemoteReader - *stable*
+* AzureReader - *beta*
 * MongoReader - *alpha*
 
 ## Intense Bundle
 
 * BatchZipper - *alpha*
-* PsdComposer - *alpha*
+* PsdComposer - *beta*
 
 <script type="text/javascript">
 //<!--
