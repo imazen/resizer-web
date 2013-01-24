@@ -10,6 +10,22 @@
 .t table {border-collapse:collapse;}
 .t th {border-bottom: 1px solid #d0d0d0;}
 
+.tiny-news{
+  font-size:8pt;
+}
+.tiny-news ul, .tiny-news ul li{
+  background-image:none;
+  display:inline;
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+.tiny-news ul li{
+}
+.tiny-news ul li:after{
+  content: " | ";
+}
+
 .page-content{
   background-color: #FEFEFE;
   border: 7px solid #E0E0E0;
