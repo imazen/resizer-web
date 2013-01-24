@@ -3,7 +3,7 @@ FullFile: http://downloads.imageresizing.net/Resizer3-2-beta-3-full-Jun-30-2012.
 MinFile: http://downloads.imageresizing.net/Resizer3-2-beta-3-min-Jun-30-2012.zip
 Summary: 4 bug fixes
 ShortVersion: 3.2.3
-Template: release
+Layout: release
 Libs: plusone
 Tags: releases
 

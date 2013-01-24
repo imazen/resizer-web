@@ -1,8 +1,15 @@
 Layout: page
 
-a href=page.metadata.fullfile class="awesome green" Download source, binaries, plugins, and sample code (15MB)
-a href=page.metadata.minfile class="awesome black" Download core binary only (170K)
+a href=page.meta.fullfile class="awesome green" Download source, binaries, plugins, and sample code (15MB)
+a href=page.meta.minfile class="awesome black" Download core binary only (170K)
 
 == yield
 
-
+h3 All releases
+ul
+	- releases.each do |p|
+		li
+			a href=p.path
+				= p.heading 
+			|  - 
+			= p.meta_summary ? p.meta_summary.strip : ''
