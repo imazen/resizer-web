@@ -26,6 +26,14 @@
   content: " | ";
 }
 
+.warning-message{
+  border: 1px solid gray;
+  color:red;
+  padding:10px;
+  margin:10px;
+  margin-left:0px;
+}
+
 .page-content{
   background-color: #FEFEFE;
   border: 7px solid #E0E0E0;

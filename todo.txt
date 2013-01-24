@@ -5,6 +5,4 @@
 * Add breadcrumbs
 * Style /blog
 * Finish contest-2013
-
-* Finish /licenses/domain
-* Finish /plugins and /buy
+* add the +$100 '6-month upgrades' option in a few weeks.
