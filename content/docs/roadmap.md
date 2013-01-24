@@ -7,6 +7,7 @@ This roadmap is preliminary
 ## 3.X - early 2013
 
 * Add simple domain-based DRM.
+* ffmpeg thumbnailing
 
 ## 4.0 - mid 2013
 

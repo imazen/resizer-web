@@ -1,0 +1,5 @@
+* Update docs/configuration-all
+* Add support calendar schedule
+* Add support contract PDFs
+* Finish /licenses/domain
+* Finish /plugins/*, /blog/ and /buy /history
