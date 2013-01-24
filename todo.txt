@@ -1,5 +1,10 @@
 * Update docs/configuration-all
+* Update /history
 * Add support calendar schedule
 * Add support contract PDFs
+* Add breadcrumbs
+* Style /blog
+* Finish contest-2013
+
 * Finish /licenses/domain
-* Finish /plugins/*, /blog/ and /buy /history
+* Finish /plugins and /buy
