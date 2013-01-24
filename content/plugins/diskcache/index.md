@@ -1,4 +1,6 @@
 Tags: plugin
+Edition: performance
+Tagline: Makes dynamic image processing as responsive and scalable as static images - because they are! Suggested, nay, required for websites with significant traffic. Medium-trust compatible.
 Bundle: 1
 
 # DiskCache plugin
