@@ -50,7 +50,7 @@ Aliases: )
 
 6. Spread the word! Tell your friends and co-workers about this library. And click the +1 button to tell [Google Plus](http://plus.google.com/) that this is an awesome site. Have ideas or feedback? [share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
 
-7. Ready to go live? Make sure you get the [disk caching plugin](/plugins/diskcache)! If your visitors are distributed across the globe, you should also consider signing up for Amazon CloudFront edge-caching, and installing the [cloud front plugin](/plugins/cloudfront). This project requires 50-70 hours of work per week, so make sure you support it by purchasing [a plugin bundle](/plugins) or [an all-inclusive support contract](/support/contracts). By purchasing a license, you'll also get a priority phone/TeamViewer support incident.
+7. Ready to go live? Get the [Performance Edition](/plugins/editions/performance), which includes [disk caching](/plugins/diskcache) and several other invaluable plugins. This project requires my full-time attention (and part-time help from others), so please support it by purchasing [a paid edition](/buy) or [an all-inclusive support contract](/support/contracts). 
 
 8. Go high-level with [wrappers](/docs/wrappers). Wrap the URL API in a [jQuery studio plugin](https://github.com/nathanaeljones/studiojs) or an [ASP.NET cropping control](http://webcropimage.com).
 
