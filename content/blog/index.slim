@@ -1,0 +1,44 @@
+Layout: page
+
+
+h1 News
+
+- @y = request[:year].to_i
+- @y = nil if @y==0
+- @t = request[:tag]
+
+- @results = index.posts
+- @results = @results.select{|p| p.date.year == @y } unless @y.nil?
+- @results = @results.select{|p| p.tags.include?(@t) } unless @t.nil?
+
+- @ix = (request[:page] || 1).to_i
+- @per_page = 15
+- @results_page  =@results.each_slice(@per_page).to_a[@ix-1]
+
+.row
+  h3 #{@results ? @results.count : 0} posts found
+  - for post in @results_page do
+    article 
+      h4 
+        a href=post.path #{post.heading}
+      == post.summary(self,200)
+      p.read_more
+        a(href="#{post.path}") Read more...
+
+  .pagination
+    ul
+      - for page in 1..@results.count/@per_page do
+        li class=(page==@ix && 'active') 
+          a href="#{request.path_info}?page=#{page}" =page
+
+
+
+  ul.nav.nav-list
+    li.nav-header Articles by Year
+    - for year in index.posts.map { |p| p.date.year }.uniq
+      li
+        a href="/blog/#{year}" class={@y==year && 'active'} #{year}
+    li.nav-header Articles by Tag
+    - for tag in index.post_tags
+      li
+        a href="/blog/tags/#{tag}" class={@t==tag && 'active'} #{tag}
