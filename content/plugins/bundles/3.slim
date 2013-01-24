@@ -1,7 +1,7 @@
 Bundle: 3
 Flags: bundle
 Cost: The Cloud bundle costs $249 for an enterprise-wide license, or $99 for a personal license. 
-Layout: edition_page
+Warning: Bundles will be discontinued on Feb. 1 2013 in favor of a simplified product model.
 
 
 h1 Cloud Bundle
@@ -11,9 +11,4 @@ markdown:
 
   See [Cloud Basics](/docs/cloud) for the overview.
 
-ul
-  -page.bundle_plugins.each do |plugin|
-    li
-      a(href="#{plugin.path}")= plugin.heading
-      |  - 
-      = plugin.meta.tagline
+== partial :my_plugins

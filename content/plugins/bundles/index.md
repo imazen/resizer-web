@@ -3,6 +3,8 @@ Libs: ejunkie, ejunkiecart, uservoice, -comments
 Template: plugin_page
 Renderer: RubyPoweredMarkdown
 Aliases: /pl.. /plugin
+Warning: Bundles will be discontinued on Feb. 1 2013 in favor of a simplified product model.
+
 
 #Plugins
 

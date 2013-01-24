@@ -1,7 +1,7 @@
 Bundle: 2
 Flags: bundle
 Cost: The Design bundle costs $249 for an enterprise-wide license, or $99 for a personal license. 
-Layout: edition_page
+Warning: Bundles will be discontinued on Feb. 1 2013 in favor of a simplified product model.
 
 
 h1 Design bundle
@@ -14,9 +14,4 @@ markdown:
   - Overlay (or underlay) multiple text and image layers with the Watermark plugin - anything is possible.
   - Auto-trim your product photos with WhitespaceTrimmer, or use SeamCarving to magically change the aspect ratio of images by slicing seams of pixels from background (low-energy) areas of the image.
 
-ul
-  -page.bundle_plugins.each do |plugin|
-    li
-      a(href="#{plugin.path}")= plugin.heading
-      |  - 
-      = plugin.meta.tagline
+== partial :my_plugins

@@ -2,7 +2,6 @@ Aliases: /plugins/free
 Bundle: free
 Flags: bundle
 Cost: This bundle is 100% free. All bundles include source code.
-Layout: edition_page
 
 
 h1 Free bundle
@@ -17,9 +16,4 @@ markdown:
 
   Check out the [maturity chart](/plugins/maturity) to see which plugins are the most stable.
 
-ul
-  -page.bundle_plugins.each do |plugin|
-    li
-      a(href="#{plugin.path}")= plugin.heading
-      |  - 
-      = plugin.meta.tagline
+== partial :my_plugins

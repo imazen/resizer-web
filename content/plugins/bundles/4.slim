@@ -1,13 +1,8 @@
 Bundle: 4
 Flags: bundle
 Cost: The Extras bundle costs $249 for an enterprise-wide license, or $99 for a personal license. 
-Layout: edition_page
+Warning: Bundles will be discontinued on Feb. 1 2013 in favor of a simplified product model.
 
 h1 Extras Bundle
 
-ul
-  -page.bundle_plugins.each do |plugin|
-    li
-      a(href="#{plugin.path}")= plugin.heading
-      |  - 
-      = plugin.meta.tagline
+== partial :my_plugins
