@@ -1,20 +1,12 @@
-Layout: layout
+Layout: headless_page
 
-- if page.meta.banner
-  .banners-wrap.t
-    .banners
-      == partial page.meta.banner
-
-.page-content.no-banner
-  div class="#{page.meta.textclass || 't'}"
-    - if page.lib?('plusone')
-      div style="width:70px;padding-top:25px;float:right"
-        .g-plusone
-    - if page.heading
-      h1.page-header
-        == page.heading
-    == yield
-
-  - if page.lib?('plusone')
+- if page.lib?('plusone')
+  div style="width:70px;padding-top:25px;float:right"
     .g-plusone
-  == partial :comments
+- if page.meta.warning
+  .warning-message = page.meta.warning
+
+- if page.heading
+  h1.page-header
+    == page.heading
+== yield

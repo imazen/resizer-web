@@ -1,46 +1,45 @@
-Layout: layout
+Layout: headless_page
 
-.page-content.no-banner
-  .t
-    .plugins_sidebar
-      -if page.meta.edition and not page.flag?('edition')
-        p 
-          | This plugin (#{page.heading}) is part of the 
-          a href=page.edition.path =page.edition.heading
-        p =page.edition.meta.cost
 
-      -if page.meta.bundle and not page.flag?('bundle')
-        p 
-          | This plugin (#{page.heading}) was originally part of the 
-          a href=page.bundle.path =page.bundle.heading
-        p =page.bundle.meta.cost
+.plugins_sidebar
+  -if page.meta.edition and not page.flag?('edition')
+    p 
+      | This plugin (#{page.heading}) is part of the 
+      a href=page.edition.path =page.edition.heading
+    p =page.edition.meta.cost
 
- 
+  -if page.meta.bundle and not page.flag?('bundle')
+    p 
+      | This plugin (#{page.heading}) was originally part of the 
+      a href=page.bundle.path =page.bundle.heading
+    p =page.bundle.meta.cost
 
-      markdown:
-        ### Where is the plugins section?
-        The `<plugins>` section is located in Web.config, and is nested inside the `<resizer>` element, which is nested inside `<configuration>`. For examples, see [this sample Web.config file](/docs/configuration).
-        ### What is NuGet? 
-        NuGet is a better way to manage your project's libraries, and is [fully supported by the ImageResizer](/docs/nuget).  
-      - editions.each do |e|
-        h3
-          a(href="#{e.path}") =e.heading
-        ul
-          -e.edition_plugins.each do |plugin|
-            li
-              a(href="#{plugin.path}")= plugin.heading
-      p 
-        | Don't see the feature or plugin you're looking for? Get
-        a(href='/plugins/custom') custom plugin development  for 40% off.
-      
-    
-    -if page.lib?('plusone')
-      <div style="width:70px;padding-top:25px;float:right"><div class="g-plusone"></div></div>
-    - if page.heading
-      h1.page-header
-        == page.heading
-    == yield
-    -if page.lib?('plusone')
-      <div class="g-plusone"></div>
-    div style="clear:both;"
-  ==partial :comments
+
+
+  markdown:
+    ### Where is the plugins section?
+    The `<plugins>` section is located in Web.config, and is nested inside the `<resizer>` element, which is nested inside `<configuration>`. For examples, see [this sample Web.config file](/docs/configuration).
+    ### What is NuGet? 
+    NuGet is a better way to manage your project's libraries, and is [fully supported by the ImageResizer](/docs/nuget).  
+  - editions.each do |e|
+    h3
+      a(href="#{e.path}") =e.heading
+    ul
+      -e.edition_plugins.each do |plugin|
+        li
+          a(href="#{plugin.path}")= plugin.heading
+  p 
+    | Don't see the feature or plugin you're looking for? Get
+    a(href='/plugins/custom') custom plugin development  for 40% off.
+
+
+- if page.lib?('plusone')
+  div style="width:70px;padding-top:25px;float:right"
+    .g-plusone
+- if page.meta.warning
+  .warning-message = page.meta.warning
+- if page.heading
+  h1.page-header
+    == page.heading
+
+== yield
