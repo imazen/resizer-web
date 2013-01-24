@@ -1,6 +1,7 @@
 Tags: plugin
 Edition: free
 Bundle: free
+Tagline: (default) - Whenever you have an issue, go to localhost/resizer.debug and you'll probably be told what is wrong.
 
 #Diagnostics plugin
 

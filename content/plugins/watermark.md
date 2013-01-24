@@ -1,5 +1,6 @@
 Bundle: 2
 Edition: creative
+Tagline: Render multiple image & text overlays and background layers with incredible flexibility and great performance. 
 
 # New Watermark plugin (v3.1+)
 

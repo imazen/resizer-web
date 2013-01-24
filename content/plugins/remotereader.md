@@ -1,6 +1,7 @@
 Bundle: 3
 Aliases: /plugins/remotetreader
 Edition: performance
+Tagline: Allows images located on external servers to be securely resized and processed as if they existed locally.
 
 # RemoteReader plugin
 

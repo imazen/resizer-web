@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: Automatically serve GIF versions of PNG files to IE6 and below clients. Opt-in or opt-out, very configurable.
 
 # IEPngFix plugin (New in V3.1.3)
 

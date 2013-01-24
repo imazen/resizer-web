@@ -1,5 +1,6 @@
 Bundle: contract
 Edition: elite
+Tagline: Decode and encode .webp images
 
 # WebP plugins
 

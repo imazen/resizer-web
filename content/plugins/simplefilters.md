@@ -1,5 +1,6 @@
 Bundle: 2
 Edition: creative
+Tagline: Adjust photo transparency, brightness, and apply sepia and B&W filters through the querystring. Nearly zero performance overhead - matrix-based.
 
 # SimpleFilters plugin
 

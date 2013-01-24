@@ -1,6 +1,7 @@
 Tags: plugin
 Bundle: 1
 Edition: performance
+Tagline: Process and resize GIF animations like normal GIF images. Every frame is processed and re-encoded. 
 
 # AnimatedGifs plugin
 

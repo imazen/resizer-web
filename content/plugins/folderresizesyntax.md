@@ -2,6 +2,7 @@ Tags: plugin
 Bundle: free
 Edition: free
 Aliases: /plugins/friendlyurls
+Tagline: Resize images without using the query string.
 
 # FolderResizeSyntax plugin
 

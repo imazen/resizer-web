@@ -1,6 +1,7 @@
 Tags: plugin
 Bundle: 2
 Edition: creative
+Tagline: "Includes 4 plugins: FreeImageDecoder adds support for RAW & HDR source images - over 20 formats supported. FreeImageEcoder provides 2-4x Faster jpeg encoding. FreeImageResizer adds support for Lanczos3 and CatmullRom scaling. FreeImageBuilder provides an alternate imageing pipeline."
 
 # FreeImage Plugins
 

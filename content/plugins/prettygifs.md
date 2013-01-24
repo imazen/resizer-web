@@ -1,5 +1,6 @@
 Bundle: 1
 Edition: performance
+Tagline: Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
 
 # PrettyGifs plugin
 

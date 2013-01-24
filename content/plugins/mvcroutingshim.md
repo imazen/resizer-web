@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: Prevent MVC Routes from taking over the ImageResizer's requests.
 
 # MvcRoutingShim plugin
 

@@ -1,6 +1,7 @@
 Tags: plugin
 Edition: elite
 Bundle: 4
+Tagline: Asynchronously generated .zip archives of files and resized images. Great for providing customized downloads to customers.
 
 # BatchZipper plugin
 

@@ -1,6 +1,7 @@
 Tags: plugin
 Edition: performance
 Bundle: 3
+Tagline: Allows blobstore images to be resized and served. (Azure 2.0 compatible)
 
 # AzureReader2 plugin
 

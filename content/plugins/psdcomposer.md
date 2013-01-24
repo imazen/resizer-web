@@ -1,5 +1,6 @@
 Bundle: 4
 Edition: elite
+Tagline: Dynamically edit and render PSD files - turn layers on and off, edit text layer contents, and apply certain effects.
 
 # PsdComposer
 

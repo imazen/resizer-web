@@ -1,6 +1,7 @@
 uservoice: true
 Bundle: 3
 Edition: performance
+Tagline: Process and resize images located in a MS SQL database. Extremely configurable, can work with nearly any database schema. A VirtualPathProvider.
 
 # SQLReader plugin
 

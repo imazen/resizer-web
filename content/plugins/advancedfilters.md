@@ -1,6 +1,7 @@
 Tags: plugin
 Bundle: 2
 Edition: creative
+Tagline: Blur, sharpen, remove noise, and perform automatic histogram adjustment. Plus several other cool effects. 
 
 # AdvancedFilters plugin
 

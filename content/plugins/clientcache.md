@@ -1,6 +1,7 @@
 Tags: plugin
 Edition: free
 Bundle: free
+Tagline: (default) - Sets Cache-control, Expires, and Last-modified headers for optimum performance.
 
 # ClientCache plugin
 

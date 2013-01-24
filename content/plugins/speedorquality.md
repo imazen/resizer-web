@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: Gain a 15-30% speed boost by sacrificing rendering quality.
 
 # SpeedOrQuality (v3.1+)
 

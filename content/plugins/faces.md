@@ -1,6 +1,7 @@
 Bundle: contract
 Edition: elite
 Tags: plugin
+Tagline: Provides face detection 
 
 # Faces plugin
 

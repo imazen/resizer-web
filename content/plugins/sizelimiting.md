@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: (default)- Limit maximum resolution of photos, or the total size of all processed images.
 
 # SizeLimiting plugin
 

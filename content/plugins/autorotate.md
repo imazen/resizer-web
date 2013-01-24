@@ -1,6 +1,7 @@
 Tags: plugin
 Bundle: free
 Edition: free
+Tagline: Use the EXIF rotation data from the camera to auto-rotate your images.
 
 # AutoRotate plugin (v3.1+)
 

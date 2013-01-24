@@ -1,5 +1,7 @@
 Bundle: 2
 Edition: creative
+Tagline: "3 plugins:  WicDecoder supports decoding images through WIC, supporting any image codecs installed on the computer. WicEncoder encodes jpeg, gif, and png images through WIC for better performance and more control. Adjust jpeg quality, subsampling, gif dithering, and palette size. WicBuilder provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than the default pipeline. Enable on a per-request bass."
+
 
 # WIC Plugins (V3.1+)
 

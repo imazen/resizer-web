@@ -1,5 +1,6 @@
 Bundle: 2
 Edition: creative
+Tagline: Automatically trims whitespace off an image using smart edge detection
 
 # WhitespaceTrimmer plugin
 

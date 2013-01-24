@@ -1,6 +1,7 @@
 Tags: plugin
 Bundle: free
 Edition: free
+Tagline: "Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90."
 
 # Gradient plugin
 

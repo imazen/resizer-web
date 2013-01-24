@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: Render PDFs to images dynamically, then crop or process them as an image.
 
 # PdfRenderer (New in V3.1.3)
 

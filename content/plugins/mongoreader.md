@@ -1,6 +1,7 @@
 uservoice: true
 Bundle: 3
 Edition: elite
+Tagline: Allows GridFS files to be resized and served
 
 # MongoReader plugin
 

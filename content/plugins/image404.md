@@ -1,6 +1,7 @@
 Tags: plugin
 Bundle: free
 Edition: free
+Tagline: Supply default images instead of a 404 when an image is missing. 
 
 # Image404 plugin
 

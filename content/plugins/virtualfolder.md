@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: Create an IIS-like virtual folder that works in Cassini as well as IIS, and doesn't require IIS configuration.
 
 # VirtualFolder plugin
 

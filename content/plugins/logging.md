@@ -1,5 +1,6 @@
 Bundle: free
 Edition: free
+Tagline: Allows logging through NLog
 
 # Logging plugin (v3.1+)
 

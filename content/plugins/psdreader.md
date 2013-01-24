@@ -1,6 +1,7 @@
 Aliases: /plugins/psd /plugins/psdr..
 Bundle: 2
 Edition: elite
+Tagline: Adds support for PSD source files.
 
 # PsdReader plugin
 

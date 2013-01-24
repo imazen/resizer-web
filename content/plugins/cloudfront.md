@@ -1,6 +1,7 @@
 UserVoice: true
 Edition: performance
 Bundle: 3
+Tagline: Allows you to use Amazon CloudFront with the resizer. Highly recommended - offers inexpensive worldwide edge caching and great scalability.
 
 # CloudFront plugin
 
