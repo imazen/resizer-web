@@ -1,0 +1,28 @@
+- if page.flag? 'edition'
+  ul
+    - page.edition_plugins.each do |plugin|
+      li
+        a(href="#{plugin.path}")= plugin.heading
+        |  - 
+        = plugin.meta.tagline
+
+- if page.meta.includes_editions && !options[:hide_inherited_plugins]
+  - page.meta.includes_editions.split(',').map{ |id| index["plugins/editions/#{id.strip}"] }.to_a.sort_by {|i| i.meta.sort_field}.each do |e|
+    - if e
+      h3 
+        | Also includes plugins from the 
+        a href="#{e.path}" 
+          = e.heading
+        | : 
+      - e.edition_plugins.each do |plugin|
+        li
+          a(href="#{plugin.path}")= plugin.heading
+          |  - 
+          = plugin.meta.tagline
+- if page.flag? 'bundle'
+  ul
+    -page.bundle_plugins.each do |plugin|
+      li
+        a(href="#{plugin.path}")= plugin.heading
+        |  - 
+        = plugin.meta.tagline
