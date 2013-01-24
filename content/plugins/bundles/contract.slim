@@ -1,0 +1,15 @@
+Flags: bundle
+Bundle: contract
+Cost: Support contracts start at $900. Support expires, but licenses do not. 
+Layout: edition_page
+
+h1 Support Contract Plugins
+
+p Support contracts include licenses to a number of plugins that are not available in other bundles.
+
+ul
+  -page.bundle_plugins.each do |plugin|
+    li
+      a(href="#{plugin.path}")= plugin.heading
+      |  - 
+      = plugin.meta.tagline

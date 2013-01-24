@@ -1,0 +1,15 @@
+Flags: bundle
+Bundle: 1
+Cost: The Performance bundle costs $249 for an enterprise-wide license, or $99 for a personal license. 
+Layout: edition_page
+
+h1 Performance Bundle
+
+p This bundle gives you scalable performance, high-quality GIF, animated GIF, and 8-bit PNG support. 
+
+ul
+  -page.bundle_plugins.each do |plugin|
+    li
+      a(href="#{plugin.path}")= plugin.heading
+      |  - 
+      = plugin.meta.tagline

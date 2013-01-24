@@ -1,0 +1,22 @@
+Bundle: 2
+Flags: bundle
+Cost: The Design bundle costs $249 for an enterprise-wide license, or $99 for a personal license. 
+Layout: edition_page
+
+
+h1 Design bundle
+
+markdown: 
+  This bundle gives you tremendous flexibility for a very low price point. The Watermark and SimpleFilters plugins are medium-trust compatible.
+
+  - Get a 2-4x speed boost by using WIC instead of GDI (requires full trust)
+  - Go nuts with your RAW files, PSD files, and apply advanced filters you'd only expect from Photoshop.
+  - Overlay (or underlay) multiple text and image layers with the Watermark plugin - anything is possible.
+  - Auto-trim your product photos with WhitespaceTrimmer, or use SeamCarving to magically change the aspect ratio of images by slicing seams of pixels from background (low-energy) areas of the image.
+
+ul
+  -page.bundle_plugins.each do |plugin|
+    li
+      a(href="#{plugin.path}")= plugin.heading
+      |  - 
+      = plugin.meta.tagline
