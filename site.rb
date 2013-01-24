@@ -63,6 +63,9 @@ class Site < Hardwired::Bootstrap
       def bundles
         Hardwired::Index.enum_files { |p| p.flag?(:bundle)}
       end
+       def editions
+        Hardwired::Index.enum_files { |p| p.flag?(:edition)}.to_a.sort_by { |i| i.meta.sort_field || 0 }
+      end
     end
 end
 
@@ -81,9 +84,18 @@ module Hardwired
     end
        
     def bundle
-      Hardwired::Index["/plugins/bundles/#{bundle_name}"]
+      Hardwired::Index["/plugins/bundles/#{meta.bundle}"]
     end
-    
+
+    def edition
+      Hardwired::Index["/plugins/editions/#{meta.edition}"]
+    end
+
+    def edition_plugins
+      @edition_plugins ||= Hardwired::Index.enum_files { |p| p.is_page? && p.can_render? && !meta.edition.nil? && !p.meta.edition.nil? && meta.edition.casecmp(p.meta.edition) == 0 && !p.flag?('edition')}.to_a.sort { |x, y| y.meta.sort_field <=> x.meta.sort_field }
+    end
+
+
     def bundle_plugins
       @bundle_plugins ||= Hardwired::Index.enum_files { |p| p.is_page? && p.can_render? && p.bundle_name == bundle_name && !p.flag?('bundle')}.to_a
     end
