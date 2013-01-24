@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby "1.9.3"
 
 gem 'slim'
 gem 'rdiscount'
@@ -14,4 +15,5 @@ gem "rerun", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
 
+gem 'honeybadger'
 gem 'erubis'
