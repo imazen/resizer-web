@@ -14,7 +14,7 @@ To clarify - the software does not yet have license keys, but they will be intro
 
 See the [purchase page](/buy) for a cleaner overview.
 
-| Edition | Free | Performance | Creative | Elite 
+| Edition | Essential | Performance | Creative | Elite 
 | --- | --- | --- | --- | --- |
 | License Type | Freedom | 1 Wildcard domain (floating) | 1 Wildcard domain (floating) | Enterprise-wide  DRM-free
 | Price | free | $249 USD | $499 USD | $849 USD 
@@ -46,7 +46,7 @@ See the [purchase page](/buy) for a cleaner overview.
 3. We're introducing the *Elite Edition*, which includes absolutely all plugins currently offered, for $849/enterprise (versus $1,000/enterprise for all 4 bundles). 
 4. Due to excessive business abuse of the Personal tier, it will be retired on Feb. 1 2013.
 5. The Bronze 6-month will increase $49 from $900 to $949.
-6. Only the *Performance* and *Creative* Editions will eventually require registration keys. We're trying to make this experience as painless as possible, and even implementing OpenID so you won't need a separate username and password for license management. 
+6. Only the *Performance* and *Creative* Editions will eventually require registration keys. We will make this experience as painless as possible. OpenID will be available, so you won't need a separate username and password for license management. 
 7. None of the editions will include priority telephone or team-viewer support incidents, as they were not used effectively by customers when they were included with the Bundles. 
 8. Bug-related support is still free, as always.
 9. We will continue to include source code for everything, permit modification, accept patches, and allow limited redistribution to other license holders.

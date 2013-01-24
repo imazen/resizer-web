@@ -35,18 +35,18 @@ Aliases: /pl.. /plugin
 [Please read my open letter to the .NET community about open-source software](/openletter). I'm desperately trying to prove that .NET developers are evolved and honest enough to make this work.
 
 
-## [Performance Edition](/plugins/editions/performance) (11 plugins)- <span class="price">$249 per domain (wildcard, floating)</span>
+## [Performance Edition](/plugins/editions/performance) (11 plugins)- <span class="price">$249/domain</span>
 
 
 <%= index["/plugins/editions/performance"].body(self, {:hide_inherited_plugins => true}) %>
 
 
-## [Creative Edition](/plugins/editions/created) (11 + 13 plugins)- <span class="price">$499 per domain (wildcard, floating)</span>
+## [Creative Edition](/plugins/editions/created) (11 + 13 plugins)- <span class="price">$499/domain</span>
 
 <%= index["/plugins/editions/creative"].body(self, {:hide_inherited_plugins => true}) %>
 
 
-## [Elite Edition](/plugins/editions/elite) (11 + 13 + 6 plugins)- <span class="price">$849 per enterprise</span>
+## [Elite Edition](/plugins/editions/elite) (11 + 13 + 6 plugins)- <span class="price">$849/enterprise</span>
 
 <%= index["/plugins/editions/elite"].body(self, {:hide_inherited_plugins => true}) %>
 
@@ -57,7 +57,7 @@ are required to purchase them for production/live use.
 
 Are you using version 2? [Upgrading is easy and will increase your site's performance](/docs/2to3/)!
 
-## [Free bundle](/plugins/bundles/free) (17+ plugins)
+## [Essential Edition](/plugins/bundles/free) (17+ plugins)- <span class="price">free</span>
 
 <%= index["/plugins/bundles/free"].body(self, {:hide_inherited_plugins => true}) %>
 
