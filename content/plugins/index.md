@@ -32,9 +32,6 @@ Aliases: /pl.. /plugin
 
 [19 plugins](/plugins/bundles/free) are included in the free download, and 30 more are sold. The core project is supported by purchases of the paid editions.
 
-[Please read my open letter to the .NET community about open-source software](/openletter). I'm desperately trying to prove that .NET developers are evolved and honest enough to make this work.
-
-
 ## [Performance Edition](/plugins/editions/performance) (11 plugins)- <span class="price">$249/domain</span>
 
 

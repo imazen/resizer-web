@@ -42,8 +42,6 @@ Warning: Bundles will be discontinued on Feb. 1 2013 in favor of a simplified pr
 
 [19 plugins](/plugins/bundles/free) are included in the free download, and 21 more are sold. The core project is supported by purchases of the paid plugin bundles. 
 
-[Please read my open letter to the .NET community about open-source software](/openletter). I'm desperately trying to prove that .NET developers are evolved and honest enough to make this work.
-
 The licenses are as MIT-like and unrestrictive as possible - even the <span class="price">$99</span> Personal license [allows modification, redistribution, and sub-licensing](/licenses/pro). This 'download fee' allows me to provide support to everyone, develop new features, fix bugs, and write documentation. 
 
 For business use, please get an enterprise-wide license ($249), not a personal ($99) license, even if only one developer is using the software. Continued abuse of the current pricing structure will ensure it gets changed.
