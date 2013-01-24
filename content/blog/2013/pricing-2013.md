@@ -7,7 +7,7 @@ On 1 February 2013, we will be discontinuing the sale of [plugin bundles](/plugi
 
 The old system of 'Bundles' was very confusing to many customers, and we hope to fix that. We've also gotten an overwhelming number of e-mails suggesting we implement license keys, so everyone pays their fair share. We are working on a solution that will be as painless as possible. 
 
-To clarify - there is not yet any DRM in the software, but it will be introduced within a few months for Performance and Creative Edition customers. Elite and Support Contract customers will be able to access DRM-free DLLs.
+To clarify - the software does not yet have license keys, but they will be introduced within a few months for Performance and Creative Edition customers. Elite and Support Contract customers will be able to download DRM-free dlls. Also, the software will remain open-source, meaning you're welcome to remove the licensing calls with each release if you so desire.
 
 ## Overview of new structure
 
@@ -46,6 +46,6 @@ To clarify - there is not yet any DRM in the software, but it will be introduced
 3. We're introducing the *Elite Edition*, which includes absolutely all plugins currently offered, for $849/enterprise (versus $1,000/enterprise for all 4 bundles). 
 4. The Bronze 6-month will go from $900 to $949.
 5. The Performance and Creative Editions will not include telephone or team-viewer support incidents. In the past, these incidents were primarily used by customers who wished to have the documentation read to them over the phone. Support related to bugs in the product has always been free, and is still free.
-6. The domain-based licenses will eventually require registration keys. An overwhelming number of customers asked that we implement DRM so everyone pays their fair share. We're working on making this as painless as possible, and we think you'll be impressed by our design. The paid editions will remain open-source, and we will continue to permit modification, accept patches, and allow limited redistribution of the paid plugins.
+6. The domain-based licenses will eventually require registration keys. An overwhelming number of customers asked that we implement license keys so everyone pays their fair share. We're working on making this as painless as possible, and we think you'll be impressed by our design. The paid editions will remain open-source, and we will continue to permit modification, accept patches, and allow limited redistribution of the paid plugins.
 7. Due to excessive business abuse of the Personal tier, it will be discontinued.
 
