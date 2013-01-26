@@ -2,11 +2,11 @@ Date: Monday, January 24 2013
 
 # Introducing ImageResizer Editions
 
-After Feb. 1st, 2013, you will only be able to purchase plugins as part of an [ImageResizer edition](/buy); we will be retiring the [plugin bundles](/plugins/bundles). We are not discontinuing any plugins, just changing the way they are packaged to reduce confusion and lower the barrier to entry.
+After Feb. 1st, 2013, you will only be able to purchase plugins as part of an [ImageResizer edition](/buy); we will be retiring the [plugin bundles](/plugins/bundles). We are not discontinuing any plugins, just changing the way they are packaged to reduce confusion and lower the barrier to entry. Existing bundle licenses are still valid, and
 
 License keys will be introduced this year, but only once we have made them as painless as possible.
 
-To clarify - the software does not yet have license keys, but they will be introduced within a few months for Performance and Creative Edition customers. Elite and Support Contract customers will be able to download DRM-free dlls. Also, the software *will* remain open-source, meaning you're welcome to remove the licensing code if you so desire.
+To clarify - the software does not yet have license keys, but they will be introduced within a few months for Performance and Creative Edition customers. Existing owners of a 'bundle' license, Elite, and Support Contract customers will be able to download DRM-free dlls. Also, the software *will* remain open-source, meaning you're welcome to remove the licensing code if you so desire.
 
 ## Overview of new ImageResizer editions
 
