@@ -16,6 +16,6 @@ You can unsubscribe at any time.
 <input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou" />
 <input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html" />
 <h3 style="margin-bottom:0"> Notify me when important updates are available</h3>
-<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <input type="submit" name="Submit" value="Get notified (avg 8 per year)"/></p>
+<p style="margin-top:10px">Email: <input type="text" name="fields_email"/> &nbsp; <button class="btn btn-primary" type="submit" name="Submit">Get notified (avg 8 per year)"</button></p>
 <input type="hidden" name="listid" value="29803"/><input type="hidden" name="specialid:29803" value="LH6H"/><input type="hidden" name="clientid" value="905228"/><input type="hidden" name="formid" value="2612"/><input type="hidden" name="reallistid" value="1"/><input type="hidden" name="doubleopt" value="0"/> 
 </form>

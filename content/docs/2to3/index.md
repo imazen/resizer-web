@@ -9,6 +9,6 @@
 6. Simple, intuitive configuration. No more polluting `<appSettings>`. Go from 2 complex pages to 6 easy lines.
 
 
-<a class="large awesome green" href="/docs/2to3/upgrade">Upgrade now</a> &nbsp; 
-<a class="large awesome black" href="/docs/2to3/diff">V2 and V3 differences</a>  &nbsp; 
-<a class="large awesome black" href="/docs/2to3/guide">Migration guide</a>  &nbsp; 
+<a class="btn-primary" href="/docs/2to3/upgrade">Upgrade now</a> &nbsp; 
+<a class="btn" href="/docs/2to3/diff">V2 and V3 differences</a>  &nbsp; 
+<a class="btn" href="/docs/2to3/guide">Migration guide</a>  &nbsp; 
