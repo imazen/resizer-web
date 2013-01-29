@@ -1,14 +1,11 @@
 Date: June 8 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-9-full-Jun-8-2011.zip
+minfile: http://downloads.imageresizing.net/Resizer3-alpha-9-min-Jun-8-2011.zip
 Tags: releases
 Summary: 8 bug fixes and 8 new features
+Layout: release
 
 # Resizer 3 alpha 9 - Jun 8 2011
-
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-9-full-Jun-8-2011.zip" class="awesome green">Download source, binaries, and sample code (6MB)</a>
-
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-9-min-Jun-8-2011.zip" class="awesome black">Download core binary only (100K)</a>
-
 
 ### Changes since [alpha 8 (Jun 2)](/releases/3-alpha-8)
 

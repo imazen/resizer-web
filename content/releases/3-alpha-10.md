@@ -1,12 +1,10 @@
 Date: June 16 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-10-full-Jun-16-2011.zip
+minfile: http://downloads.imageresizing.net/Resizer3-alpha-10-min-Jun-16-2011.zip
 Tags: releases
+Layout: release
 
 # Resizer 3 alpha 10 - Jun 16 2011
-
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-10-full-Jun-16-2011.zip" class="awesome green">Download source, binaries, and sample code (7MB)</a>
-
-<a href="http://downloads.imageresizing.net/Resizer3-alpha-10-min-Jun-16-2011.zip" class="awesome black">Download core binary only (100K)</a>
 
 
 ### Changes since [alpha 9 (Jun 8)](/releases/3-alpha-9)

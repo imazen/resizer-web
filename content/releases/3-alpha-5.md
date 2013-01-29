@@ -1,13 +1,11 @@
 Date: May 15 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip
+Minfile: http://downloads.imageresizing.net/Resizer3-alpha-5-min-May-15-2011.zip
 Tags: releases
-Summary: 7 bug fixes, 5 API changes, and 3 new plu
+Summary: 7 bug fixes, 5 API changes, and 3 new plugins
+Layout: release
 
 # Resizer 3 alpha 5 - May 15 2011
-
-* Version 3 alpha 5 - May 15 2011 
-* * [Download everything: source, binaries, and samples](http://downloads.imageresizing.net/Resizer3-alpha-5-full-May-15-2011.zip) 
-* * [Download core binary only](http://downloads.imageresizing.net/Resizer3-alpha-5-min-May-15-2011.zip)
 
 ## Changes since alpha 3 (May 2)
 
