@@ -1,0 +1,159 @@
+.tbox {position:absolute; display:none; padding:14px 17px; z-index:900}
+.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(/images/preload.gif) no-repeat 50% 50%; border-right:1px solid #333; border-bottom:1px solid #333}
+.tmask {position:absolute; display:none; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:800}
+.tclose {position:absolute; top:0px; right:0px; width:30px; height:30px; cursor:pointer; background:url(/images/close.png) no-repeat}
+.tclose:hover {background-position:0 -30px}
+.tcontent{height:100%}
+
+
+.no-banner code{
+  color: #0066a1;
+}
+.no-banner pre code{
+  color: inherit;
+}
+
+
+
+
+.buySidebar{
+  float: right;
+  margin-top: 75px;
+  padding: 10px;
+  text-align: center;
+  width: 190px;
+}
+
+
+.buySidebar h3, .plugins_sidebar h3{
+  color: #666666;
+  font-size: inherit;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+.buySidebar p{
+	line-height:1em;
+}
+
+
+
+
+
+/*.banners-wrap {
+  margin: 0;
+}
+.banners {
+  position: relative;
+  width: 930px;
+  height: 340px;
+}
+
+/* So only the first banner is visible until the javascript loads */
+div.banner{ display:none;
+  height:320px;
+  }
+.bx-wrapper div.banner, div.first-banner{ display:block;}
+
+
+div.banner {/*  width: 930px;*/
+  color: #dfdfdf;
+}
+
+.t .banner h1,.t .banner h2,.t .banner h3{
+  margin-top:0;
+}
+
+
+.t .banner a, .t .banner a:active, .t .banner a:hover{
+  color:inherit;
+  text-decoration:underline;
+}
+div.banner .image-block, div.banner .text-left {
+    float: left;
+    width: 400px;
+    display: inline; 
+    padding-top:16px;
+}
+div.banner .image-block img, div.banner .text-left img {
+      background-color: #1c130e;
+      border: 1px solid #251a15;
+      padding: 12px; 
+}
+  div.banner .text-block, div.banner .text-right {
+    float: right;
+    width: 512px;
+    display: inline; 
+    /*text-shadow: 564px 0 32px white;*/
+    
+}
+
+
+div.banner a.more-link {
+  float: left;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: 1px solid #c96111;
+  background: #e2721b url(../images/button-bg.png) repeat-x;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+  color: white;
+  display: block; }
+  div.banner a.more-link:hover {
+    border: 1px solid #2f4c13;
+    background: #4a781d url(../images/button-hover-bg.png) repeat-x; }
+
+
+/*bxSlider */
+
+
+
+/*start / stop*/
+.bx-auto {
+    text-align: center; 
+}
+
+/*pager*/
+.bx-pager {
+    text-align: center;
+    margin-bottom:10px;
+}
+
+.bx-pager a {
+    font-size: 16px;
+    color: #838383;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.bx-pager .pager-active,
+.bx-pager a:hover {
+    color: white;
+    text-decoration: none;
+}
+/*
+
+a.pager-link{
+  background-color: transparent;
+  border: 1px solid #222222;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  color: #AAAAAA;
+  
+  padding: 5px 7px 5px;
+  margin: 0px;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+  line-height: 12px; }
+
+a.pager-link:hover, a.pager-active{
+    background-color: #222;
+    color: #aaa; 
+    text-decoration:none;
+}
+*/
