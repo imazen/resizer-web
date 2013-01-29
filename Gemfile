@@ -5,6 +5,8 @@ gem 'slim'
 gem 'rdiscount'
 gem 'rack-cache'
 
+gem 'sass'
+
 #gem 'hardwired', :path => "../hardwired"
 gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git"
 
