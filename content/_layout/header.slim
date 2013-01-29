@@ -1,25 +1,30 @@
-a name="top"
 header
-  .menu-wrap
-    ul.menu
-      == menu_tag_current 'current','li' do
-        li
-          a href="/" Home 
-        li
-          a href="/download" download
-        li
-          a href="/buy" Buy Plugins
-        li
-          a href="/docs" Docs
-        li
-          a href="/support" Support
-        li
-          a href="/licenses" Licenses
-
-  h1
-    a href="/" title=""
-      | Image<span style="display:none"> </span>Resizer <span style="display:none">- </span>
-      span.tech the IIS/ASP.NET module for everyone
+  .navbar.navbar-inverse.navbar-static-top
+    .navbar-inner
+      .container
+        a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand href="/" title=""
+          | Image<span style="display:none"> </span>Resizer <span style="display:none">- </span>
+        span.brand.brand-subtitle
+          | RESTful imaging from imazen
+        .nav-collapse.collapse
+          ul.nav.pull-right
+            == menu_tag_current 'active','li' do
+              li
+                a href="/" Home 
+              li
+                a href="/download" Download
+              li
+                a href="/buy" Buy Plugins
+              li
+                a href="/docs" Docs
+              li
+                a href="/support" Support
+              li
+                a href="/licenses" Licenses
 
   .site-subheader
     p.slogan
