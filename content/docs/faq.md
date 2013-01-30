@@ -45,4 +45,7 @@ Visit mysite.com/trace.axd. If the JPG URL isn't in here, it is impossible that 
 A 15MB JPG uncompresses to about 80MB in bitmap form (depending upon the compression level). If you are resizing to a 2MB jpeg (15MB BMP), memory requirements for the
 operation are roughly 110MB (15 + 80 + 15). If you plan on using the resizer for very high-resolution photos (above 8MP), I suggest making sure you have ample amounts of RAM. 400MB to 1GB is usually plenty for the average web site with disk caching enabled.
 </dd>
+<dt>How do I auto-crop a certain distance or percentage away from an edge, instead of centering?</dt>
+<dd>Manual cropping is applied before automatic cropping, so you can use that to crop the image before auto-cropping takes effect. To auto-crop against 10% away from the top of the image, use this: `crop=0,10,0,0&cropxunits=100&cropyunits=100&mode=crop&width=570&height=1500&anchor=topcenter`.</dd>
+
 </dl>
