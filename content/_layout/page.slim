@@ -1,13 +1,22 @@
 Layout: headless_page
 
-- if page.lib?('plusone')
-  div style="width:70px;padding-top:25px;float:right"
-    .g-plusone
-- if page.meta.warning
-  .warning-message = page.meta.warning
 
-section
-  == yield
+.row
+  .span12
+    - if page.lib?('plusone')
+      div style="width:70px;padding-top:25px;float:right"
+        .g-plusone
+    - if page.meta.warning
+      .warning-message = page.meta.warning
 
+    - if page.heading
+      .title
+        h2
+          == page.heading
 
-== partial :heading_banner
+    == yield
+
+    - if page.lib?('plusone')
+      .g-plusone
+    == partial :comments
+

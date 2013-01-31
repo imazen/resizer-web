@@ -1,103 +1,35 @@
 layout: false
 
-p#back-top
-  a href="#top"
-    span.icon-chevron-up
-
-/[if lte IE 7]
-  p.chromeframe
-    | Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.
 
 
-/ Top Header
-.pageTopCon
-  .pageTop.row-fluid
-    .span6
-      p
-        span 
-          | E: support@imageresizing.net
-        | &emsp;
-        span 
-          | T: + (502) 509 1177
-
-    .span6
-      p.pull-right.socialIcons
-        <a href="#" class="twitter" title="Twitter">Twitter</a>
-        <a href="#" class="facebook" title="Facebook">Facebook</a>
-        <a href="#" class="gplus" title="Gplus">G+</a>
-        <a href="#" class="linkedin" title="linkedin">Linked In</a>
-        <a href="#" class="dribble" title="Dribble">Dribble</a>
-        <a href="#" class="flickr" title="Flickr">Flickr</a>
-        <a href="#" class="vimeo" title="Vimeo">vimeo</a>
-        <a href="#" class="rss" title="Rss">Rss</a>
-  
-/ Page Header
-header#pageHeader.clearfix
-  #logo
-    a href="/" ImageResizer
-  /
-    .site-subheader
-      p.slogan
-        | Resize, watermark, crop, rotate and filter from the image URL. <br />
-        | Usable from javascript, css, html, php, ruby, python, asp, asp.net, anything!
-
-  nav#mainNav
-    ul.menu
-      == menu_tag_current 'active','li' do
-        li.mainMenu
-          a href="/"Home
-          span.taline start here
-        li.mainMenu
-          a href="/download" Download
-          span.taline free download
-        li.mainMenu
-          a href="/buy" Buy plugins
-          span.taline Increase performance
-        li.mainMenu.parent
-          a href="/docs" Docs
-          span.taline
-            | Read them
-            ul
-              li.arrow
-              li: a href="/plugins" Plugin reference
-              li.border
-        li.mainMenu
-          a href="/support" Support
-          span.taline Get support 
-      /
-        li.mainMenu
-          a href="/licenses" Licenses
-          span.taline Boring legalise
-
-
-
-
-/ header
-    .navbar.navbar-inverse.navbar-static-top
+header
+  .container
+    .navbar.navbar-inverse
       .navbar-inner
-        .container
-          a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.brand href="/" title=""
-            | Image<span style="display:none"> </span>Resizer <span style="display:none">- </span>
-          span.brand.brand-subtitle
-            | RESTful imaging from imazen
-          .nav-collapse.collapse
-            ul.nav.pull-right
-              == menu_tag_current 'active','li' do
-                li
-                  a href="/" Home 
-                li
-                  a href="/download" Download
-                li
-                  a href="/buy" Buy Plugins
-                li
-                  a href="/docs" Docs
-                li
-                  a href="/support" Support
-                li
-                  a href="/licenses" Licenses
+        a.btn.btn-navbar  data-toggle="collapse" data-target=".nav-collapse"
+          span class="icon-bar"
+          span class="icon-bar"
+          span class="icon-bar"
+        a class="brand" href="/"
+          i class="ico-charts circle"
+          | Sma<span>rt</span>.
 
 
+        .nav-collapse.collapse
+          ul.nav
+            == menu_tag_current 'active','li' do
+              li
+                a href="/" Home 
+              li
+                a href="/download" Download
+              li
+                a href="/buy" Buy Plugins
+              li
+                a href="/docs" Docs
+              li
+                a href="/support" Support
+              li
+                a href="/licenses" Licenses
+
+
+           

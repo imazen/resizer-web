@@ -1,11 +1,5 @@
 Layout: layout
 
-== yield_content(:banner)
+== yield
 
-/ Page Content
-div role="main" id="mainContent" class="center clearfix row-fluid #{page.meta.mainclass || 'noPaddingTop'}"
-  == yield
 
-  - if page.lib?('plusone')
-    .g-plusone
-  == partial :comments

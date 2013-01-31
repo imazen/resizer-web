@@ -1,45 +1,197 @@
 Flags: visible
 Layout: false
 
+erb: 
+  <div id="footer-menu" class="hidden-tablet hidden-phone">
 
-footer#pageFooterCon
-  #pageFooter.center.row-fluid
-    erb:
-        <!-- widgets -->
-        <div class="widgets clearfix">
-            <!-- About -->
-            <div class="col3">
-                  <h3>About Us</h3>
-                  <p>Competently communicate team building e-tailers whereas installed base collaboration and idea sharing. Interactively revolutionize go forward scenarios before worldwide internal or organic sources. Professionally evisculate compelling benefits after orthogonal web readiness. Synergistically recaptiualize accurate markets without reliable action items.</p>
-              </div>
-              
-              <!-- Services -->
-              <div class="col3">
-                  <h3>Services</h3>
-                  <ul>
-                    <li><a href="#">Web design and Development</a></li>
-                      <li><a href="#">Wordpress</a></li>
-                      <li><a href="#">Web Application Development</a></li>
-                      <li><a href="#">Durpal</a></li>
-                      <li><a href="#">Mobile Apps Design</a></li>
-                </ul>
-              </div>
-              
-              <!-- Recent Tweets -->
-              <div class="col3 noBorderRight">
-                  <h3>Recent Tweets</h3>
-                  <ul id="twitter_update_list" class="tweets"></ul>  
-              </div>
-              
-          </div><!-- widgets -->
-  .sep &nbsp; 
-  .copyright.center.row-fluid 
-    .span6
-      | Copyright &copy; 2013 
-      a href="http://imazen.io" Imazen
-      |   &amp; 
-      a href="http://nathanaeljones.com" Nathanael Jones
-    .span6
-      p.pull-right
-        a href="/privay" Privacy Policy
+      <!-- start: Container -->
+      <div class="container">
+        
+        <!-- start: Row -->
+        <div class="row">
 
+          <!-- start: Footer Menu Logo -->
+          <div class="span2">
+            <div id="footer-menu-logo">
+              <div id="logo-chart"></div><a class="brand" href="#">Sma<span>rt</span>.</a>
+            </div>
+          </div>
+          <!-- end: Footer Menu Logo -->
+
+          <!-- start: Footer Menu Links-->
+          <div class="span9">
+            
+            <div id="footer-menu-links">
+
+              <ul id="footer-nav">
+
+                <li><a href="index.html">Start</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="services.html">Services</a></li>
+
+                <li><a href="pricing.html">Pricing</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+
+              </ul>
+
+            </div>
+            
+          </div>
+          <!-- end: Footer Menu Links-->
+
+          <!-- start: Footer Menu Back To Top -->
+          <div class="span1">
+              
+            <div id="footer-menu-back-to-top">
+              <a href="#"></a>
+            </div>
+          
+          </div>
+          <!-- end: Footer Menu Back To Top -->
+        
+        </div>
+        <!-- end: Row -->
+        
+      </div>
+      <!-- end: Container  -->  
+
+    </div>  
+    <!-- end: Footer Menu -->
+
+    <!-- start: Footer -->
+    <div id="footer">
+      
+      <!-- start: Container -->
+      <div class="container">
+        
+        <!-- start: Row -->
+        <div class="row">
+
+          <!-- start: About -->
+          <div class="span3">
+            
+            <h3>About Us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </p>
+              
+          </div>
+          <!-- end: About -->
+
+          <!-- start: Photo Stream -->
+          <div class="span3">
+            
+            <h3>Photo Stream</h3>
+            <div class="flickr-widget">
+                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08"></script>
+              <div class="clear"></div>
+            </div>
+            
+          </div>
+          <!-- end: Photo Stream -->
+
+          <div class="span6">
+          
+            <!-- start: Follow Us -->
+            <h3>Follow Us!</h3>
+            <ul class="social-grid">
+              <li>
+                <div class="social-item">       
+                  <div class="social-info-wrap">
+                    <div class="social-info">
+                      <div class="social-info-front social-twitter">
+                        <a href="http://twitter.com"></a>
+                      </div>
+                      <div class="social-info-back social-twitter-hover">
+                        <a href="http://twitter.com"></a>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="social-item">       
+                  <div class="social-info-wrap">
+                    <div class="social-info">
+                      <div class="social-info-front social-facebook">
+                        <a href="http://facebook.com"></a>
+                      </div>
+                      <div class="social-info-back social-facebook-hover">
+                        <a href="http://facebook.com"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="social-item">       
+                  <div class="social-info-wrap">
+                    <div class="social-info">
+                      <div class="social-info-front social-dribbble">
+                        <a href="http://dribbble.com"></a>
+                      </div>
+                      <div class="social-info-back social-dribbble-hover">
+                        <a href="http://dribbble.com"></a>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="social-item">       
+                  <div class="social-info-wrap">
+                    <div class="social-info">
+                      <div class="social-info-front social-flickr">
+                        <a href="http://flickr.com"></a>
+                      </div>
+                      <div class="social-info-back social-flickr-hover">
+                        <a href="http://flickr.com"></a>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- end: Follow Us -->
+          
+            <!-- start: Newsletter -->
+            <form id="newsletter">
+              <h3>Newsletter</h3>
+              <p>Please leave us your email</p>
+              <label for="newsletter_input">@:</label>
+              <input type="text" id="newsletter_input"/>
+              <input type="submit" id="newsletter_submit" value="submit">
+            </form>
+            <!-- end: Newsletter -->
+          
+          </div>
+          
+        </div>
+        <!-- end: Row --> 
+        
+      </div>
+      <!-- end: Container  -->
+
+    </div>
+    <!-- end: Footer -->
+
+    <!-- start: Copyright -->
+    <div id="copyright">
+    
+      <!-- start: Container -->
+      <div class="container">
+      
+        <div class="span12">
+          <p>
+            &copy; 2012, <a href="http://clabs.co">creativeLabs</a>. Designed by <a href="http://clabs.co">creativeLabs</a> in Poland <img src="img/poland2.png" alt="Poland" style="margin-top:-4px">
+          </p>
+        </div>
+    
+      </div>
+      <!-- end: Container  -->
+      
+    </div>  
+    <!-- end: Copyright -->
