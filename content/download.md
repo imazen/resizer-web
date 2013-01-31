@@ -2,6 +2,7 @@ menu: download
 title: Download the Image Resizer Free
 Renderer: RubyPoweredMarkdown
 Libs: -comments, plusone
+Icon: download-alt
 
 # Download ImageResizer
 

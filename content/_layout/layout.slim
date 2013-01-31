@@ -51,7 +51,7 @@ html(lang="en" class="no-js")
         #page-title-inner
           .container
             h2
-              i.ico-stats.icon-white
+              i class="ico-white ico-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "pen"}"
               == page.heading
 
     #wrapper
