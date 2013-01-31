@@ -1,4 +1,4 @@
-Layout: headless_page
+Layout: layout
 
 
 .row
@@ -9,10 +9,11 @@ Layout: headless_page
     - if page.meta.warning
       .warning-message = page.meta.warning
 
-    - if page.heading
-      .title
-        h2
-          == page.heading
+    /
+      - if page.heading
+        .title
+          h2
+            == page.heading
 
     == yield
 

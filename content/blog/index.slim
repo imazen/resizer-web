@@ -1,4 +1,4 @@
-Layout: page
+Layout: layout
 
 
 h1 News
@@ -16,29 +16,53 @@ h1 News
 - @results_page  =@results.each_slice(@per_page).to_a[@ix-1]
 
 .row
-  h3 #{@results ? @results.count : 0} posts found
-  - for post in @results_page do
-    article 
-      h4 
-        a href=post.path #{post.heading}
-      == post.summary(self,200)
-      p.read_more
-        a(href="#{post.path}") Read more...
-
-  .pagination
-    ul
+  .span9
+    h3 #{@results ? @results.count : 0} posts found
+    - for post in @results_page do
+      .post
+        span.post-icon.standard
+          i.ico-pen.circle
+        .post-content
+          .post-title: h2: a href=post.path #{post.heading}
+          .post-description
+            p
+              == post.summary(self,200)
+          a.post-entry href="#{post.path}" Read more...
+          .post-meta
+            span
+              i.mini-ico-calendar
+              = post.date.strftime("%d %B %Y")
+            span
+              i.mini-ico-user
+              = post.meta.author || config.author.name
+            span
+              i.mini-ico-comments
+    
+    ul.pagination
       - for page in 1..@results.count/@per_page do
         li class=(page==@ix && 'active') 
           a href="#{request.path_info}?page=#{page}" =page
 
 
+  .span3.hidden-phone
+    .widget-first
+      .title
+        h3 Articles by Year
+      ul.links-list-alt
+        - for year in index.posts.map { |p| p.date.year }.uniq
+          li class={@y==year && 'active' || ''}
+            a href="/blog/#{year}"  #{year}
+    .widget
+      .title
+        h3 Articles by Tag
+      ul.links-list-alt
+        - for tag in index.post_tags
+          li
+            a href="/blog/tags/#{tag}" class={@t==tag && 'active' || ''} #{tag}
+    .widget
+      .title
+        h3 Tags
+      .tags
+        - for tag in index.post_tags
+          a href="/blog/tags/#{tag}" class={@t==tag && 'active' || ''} #{tag}
 
-  ul.nav.nav-list
-    li.nav-header Articles by Year
-    - for year in index.posts.map { |p| p.date.year }.uniq
-      li
-        a href="/blog/#{year}" class={@y==year && 'active'} #{year}
-    li.nav-header Articles by Tag
-    - for tag in index.post_tags
-      li
-        a href="/blog/tags/#{tag}" class={@t==tag && 'active'} #{tag}

@@ -3,7 +3,7 @@ title: Download the Image Resizer Free
 Renderer: RubyPoweredMarkdown
 Libs: -comments, plusone
 
-#
+# Download ImageResizer
 
 #Download <%= releases.first.heading %>
 
