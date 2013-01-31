@@ -1,4 +1,3 @@
-
 #Set the root directory
 Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 
@@ -6,6 +5,9 @@ Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 class Site < Hardwired::Bootstrap
     require 'debugger' if development?
     #Debugger.start(:post_mortem => true) if development?
+
+
+    helpers Hardwired::ContentFor
 
     #Load config.yml from the root
     config_file 'config.yml'
