@@ -38,7 +38,7 @@ Aliases: /pl.. /plugin
 <%= index["/plugins/editions/performance"].body(self, {:hide_inherited_plugins => true}) %>
 
 
-## [Creative Edition](/plugins/editions/created) (11 + 13 plugins)- <span class="price">$499/domain</span>
+## [Creative Edition](/plugins/editions/creative) (11 + 13 plugins)- <span class="price">$499/domain</span>
 
 <%= index["/plugins/editions/creative"].body(self, {:hide_inherited_plugins => true}) %>
 
