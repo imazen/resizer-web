@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: 8b9a5945058ac5f79e2f57c11c08f1e9b98729ee
+  revision: b16739d09c69d87e91236cd6b09a30ea9958e5e0
   specs:
-    hardwired (0.3.1)
+    hardwired (0.3.2)
       nokogiri
       sinatra (>= 1.3.3)
       tilt
@@ -14,6 +14,7 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     columnize (0.3.6)
+    commonjs (0.2.6)
     daemons (1.1.9)
     debugger (1.3.0)
       columnize (>= 0.3.1)
@@ -29,6 +30,9 @@ GEM
       json
     i18n (0.6.1)
     json (1.7.6)
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+    libv8 (3.11.8.13)
     listen (0.7.2)
     multi_json (1.5.0)
     nokogiri (1.5.6)
@@ -39,6 +43,7 @@ GEM
       rack
     rb-fsevent (0.9.3)
     rdiscount (1.6.8)
+    ref (1.0.2)
     rerun (0.7.1)
       listen
     sass (3.2.5)
@@ -52,6 +57,9 @@ GEM
       temple (~> 0.5.5)
       tilt (~> 1.3.3)
     temple (0.5.5)
+    therubyracer (0.11.3)
+      libv8 (~> 3.11.8.12)
+      ref
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -66,6 +74,7 @@ DEPENDENCIES
   erubis
   hardwired!
   honeybadger
+  less
   rack-cache
   rb-fsevent
   rdiscount
@@ -73,4 +82,5 @@ DEPENDENCIES
   sass
   shotgun
   slim
+  therubyracer
   thin
