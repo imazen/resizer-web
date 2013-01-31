@@ -1,12 +1,4 @@
 
-@import "bootstrap/bootstrap-custom";
-@import "bootstrap/responsive-custom";
-
-@import "highlight/styles/vs.css";
-
-
-@import "toremove.css";
-
 /* Hide 'SEO blurb (only works for yahoo/bing'*/
 div.site-subheader{
   display:none;
@@ -103,5 +95,3 @@ div.site-subheader{
 .plugins_sidebar li{
   background:none !important;
 }
-
-

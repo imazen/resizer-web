@@ -1,0 +1,194 @@
+//
+// Responsive: Large desktop and up
+// --------------------------------------------------
+
+	@import "mixins.less";
+@media (min-width: 1200px) {
+	
+
+	// Fixed grid
+	#grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+	
+	// Fluid grid
+	#grid > .fluid(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+	
+	// Input grid
+	#grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
+	
+	// Thumbnails
+	.thumbnails {
+	margin-left: -@gridGutterWidth1200;
+	}
+	.thumbnails > li {
+	margin-left: @gridGutterWidth1200;
+	}
+	.row-fluid .thumbnails {
+		margin-left: 0;
+	}
+	
+	/********************************************
+	 ***           1. Global Rules           ****
+	 ********************************************/
+	.width1200{
+		width: 100%;
+		max-width: 1100px;
+	}
+	.introBox.homePage{
+		  border-radius: 0;
+	}
+	.introBox .center{
+		  max-width: 1100px;
+	}
+	
+	.row-fluid{
+		.width1200;
+	}
+	
+	/* SLIDER */
+	.carousel-item {
+		margin-right: 32px;
+	}
+	
+						
+	.col3 .carousel-item, .span4.featuredWork{
+		width: 345px;
+		height: 250px;	
+	}
+	
+	.col4 .carousel-item, .span3.featuredWork{
+		width: 251px;	
+		height: 182px;
+	}
+	
+	.col4{
+		.featuredWork{
+			.header{
+				padding-top: 9%;
+			}
+		}
+	}
+	
+	/* Page Top Bar */	
+	.pageTopCon{
+		.pageTop{
+			.width1200;
+		}
+	}
+
+	/* Page Header */
+	#pageHeader{
+		.width1200;
+	}
+	
+	/* banner */
+	#banner{
+		.width1200;
+	}
+	
+	/* Sub Banner */
+    #bannerCon{    
+	    &.sub{
+            .width1200;
+	    }
+    }
+	.subBanner{
+		.center{
+			.width1200;
+		}
+	}
+	
+	/* Main Content & Common Page Styles*/
+	#mainContent{
+		.width1200;
+	}
+	
+	.authorDetails{
+		.authorImage{
+			width: 80px;
+			height: 80px;	
+		}
+		.details{
+			width: 88%;	
+		}
+	}
+	
+	/* Flickr */
+	.sidebar{
+		.flickr{
+			img{
+				margin-right: 17px;
+				margin-bottom: 20px;
+				width: 70px;
+				height: 63px;
+			}
+		}		
+	}
+	
+	/* Clients */
+	.ourClients{
+		.width1200;
+	}
+	
+	/*footer*/
+	#pageFooterCon{
+		.copyright{
+			.width1200;
+		}
+	}
+	
+	#pageFooter{
+		.width1200;
+	}
+	
+	/* Pricing Table*/
+	.priceTable{
+		&.bestPlan{
+			&.span3{
+				margin-top: -13px;
+				width: (@fluidGridColumnWidth1200 * 3) + (@fluidGridGutterWidth1200 * 3);
+				margin-left: @fluidGridGutterWidth1200/2;
+				margin-right: -(@fluidGridGutterWidth1200/2);
+			}
+			&.span4{
+				margin-top: -13px;
+				width: (@fluidGridColumnWidth1200 * 4) + (@fluidGridGutterWidth1200 * 4);
+				margin-left: @fluidGridGutterWidth1200/2;
+				margin-right: -(@fluidGridGutterWidth1200/2);			
+			}
+		}
+	}
+	
+	/* Contact Page Map*/
+	.google-maps{
+		height: 350px;
+	}
+	
+	
+	/*****************************************************
+	 ****                 Hover Effects              *****
+	 *****************************************************/
+	.span6.featuredWork{
+		min-height: 375px;
+	}
+	
+	/* Hover Effect 1 */	
+	.featuredWork{
+		.header{
+			padding-top: 12%;
+		}
+		.category {
+			margin-bottom: 5px;
+			margin-top: 20px;
+			small{
+				margin-bottom: 6px;	
+			}
+		}		
+	}
+	
+	.member .featuredWork .header{
+		padding-top: 8%;
+	}
+	
+	/* Portfolio Items */
+	.portfolio .item { margin-bottom: 3em; }
+}

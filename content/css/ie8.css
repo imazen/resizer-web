@@ -1,0 +1,66 @@
+/* IE8 Specific CSS Rules */
+.it-ie9 #mainContent .singleService .sepCenter .outerCircle.rotate1,
+.it-ie9 #mainContent .singleService .sepCenter .outerCircle.rotate2,
+.it-ie9 #mainContent .singleService .sepCenter .outerCircle.rotate3{
+	filter: none;	
+}
+
+
+/* 18 Hover Effects */
+.lt-ie9 #mainContent .featuredWorks .content .front, .lt-ie9 #mainContent .hover-effect2 .content .back{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.lt-ie9 #mainContent .featuredWorks .content .front{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.lt-ie9 #mainContent .featuredWorks .content .back{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.lt-ie9 #mainContent .featuredWorks .featuredWork:hover .content .back{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+#mainContent .singleService .sepCenter .outerCircle, #mainContent .singleService.simple .sepCenter .outerCircle {
+	border-radius: 500px;
+	behavior:url(\PIE.htc);
+}
+#mainContent .singleService .icon190, #mainContent .singleService icon100, 
+#mainContent .singleService.simple .sepCenter .outerCircle .icon190,
+#mainContent .singleService.simple .sepCenter .outerCircle .icon100,.icon100{
+	margin-bottom: 0px;
+	border-radius: 500px;
+	behavior:url(\PIE.htc);		
+}
+
+#mainContent .singleService.simple .sepCenter .outerCircle{
+	background: #ffffff;
+	border-radius: 500px;
+	position: relative;
+	z-index: 1;
+	behavior:url(\PIE.htc);				
+}
+.progress{
+	behavior:url(\PIE.htc);				
+}
+
+.progress .bar{
+	border-radius: 3px 0px 0px 3px;
+	behavior:url(\PIE.htc);				
+}
+
+p#back-top a span{
+	border-radius: 80px;
+	behavior:url(\PIE.htc);	
+}
+
+.messageBox .alert p{
+	margin-bottom: 0px;	
+}
+
+.dropcaps3, .icon50, .icon80{
+	behavior:url(\PIE.htc);	
+}
