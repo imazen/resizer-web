@@ -1,0 +1,19 @@
+.navbar a.brand{
+  padding-top:0px;
+}
+
+#footer-menu-logo a.brand, #footer-menu-logo img{
+  padding:0;
+  margin:0;
+    display:block;
+}
+#footer-menu-logo a.brand{
+
+  padding-top:7px;
+}
+
+
+#page-title {
+  background-image: none;
+  background-color: #999;
+}
