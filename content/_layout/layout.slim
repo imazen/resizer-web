@@ -20,8 +20,14 @@ html(lang="en" class="no-js")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
      
 
-    link href="/css/site.css" rel="stylesheet"
+    link href="/css/less/site.css" rel="stylesheet"
     
+    /[if IE 8]
+      link rel="stylesheet" type="text/css" href="/css/ie8.css"
+    
+    
+    script src="/js/libs/modernizr-2.5.3.min.js"
+
     /[if lt IE 9]
       script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"
 
@@ -32,8 +38,7 @@ html(lang="en" class="no-js")
     == partial :analytics
   body
     == partial :header
-    .container
-      == yield
+    == yield
     == partial :footer
 
     == partial :search
@@ -43,11 +48,7 @@ html(lang="en" class="no-js")
     javascript:
       !window.jQuery && document.write(unescape('%3Cscript src="/js/jquery-1.9.0.min.js"%3E%3C/script%3E'))//'
 
-
     script src="/js/bootstrap.min.js"
-
-    script src="/js/jquery.tools.min.js"
-
 
     script src="/js/highlight/highlight.pack.js"
 

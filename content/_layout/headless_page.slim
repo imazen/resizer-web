@@ -1,13 +1,10 @@
 Layout: layout
 
-- if page.meta.banner
-  .banners-wrap.t
-    .banners
-      == partial page.meta.banner
+== yield_content(:banner)
 
-div class="page-content #{page.meta.banner ? "" : "no-banner"}"
-  div class="#{page.meta.textclass || 't'}"
-    == yield
+/ Page Content
+div role="main" id="mainContent" class="center clearfix row-fluid #{page.meta.mainclass || 'noPaddingTop'}"
+  == yield
 
   - if page.lib?('plusone')
     .g-plusone

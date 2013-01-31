@@ -1,7 +1,22 @@
 Layout: headless_page
 
+== partial :heading_banner
 
-.plugins_sidebar
+article.span9
+  
+  - if page.lib?('plusone')
+    div style="width:70px;padding-top:25px;float:right"
+      .g-plusone
+  - if page.meta.warning
+    .warning-message = page.meta.warning
+  - if page.heading
+    h1.page-header
+      == page.heading
+
+  == yield
+
+
+aside.span3.sidebar.plugins_sidebar
   -if page.meta.edition and not page.flag?('edition')
     p 
       | This plugin (#{page.heading}) is part of the 
@@ -29,17 +44,6 @@ Layout: headless_page
         li
           a(href="#{plugin.path}")= plugin.heading
   p 
-    | Don't see the feature or plugin you're looking for? Get
+    | Don't see the feature or plugin you're looking for? Get 
     a(href='/plugins/custom') custom plugin development  for 40% off.
 
-
-- if page.lib?('plusone')
-  div style="width:70px;padding-top:25px;float:right"
-    .g-plusone
-- if page.meta.warning
-  .warning-message = page.meta.warning
-- if page.heading
-  h1.page-header
-    == page.heading
-
-== yield

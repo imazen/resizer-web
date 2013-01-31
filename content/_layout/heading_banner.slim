@@ -1,0 +1,15 @@
+= content_for :banner do
+  - if page.heading
+    #bannerCon.sub.clear
+      #banner.row-fluid
+        header.bannerHeader.span8
+          h2
+            == page.heading
+        .span4
+          ul.breadcrumb
+            li
+              a href="/" Home
+              span.divider 
+                | /
+            li.active
+              == page.heading

@@ -1,9 +1,45 @@
 Flags: visible
 Layout: false
 
-footer.footer
-  .container      
-    | Copyright 2013 
-    a href="http://imazen.io" Imazen LLC 
-    | &amp; 
-    a href="http://nathanaeljones.com" Nathanael Jones 
+
+footer#pageFooterCon
+  #pageFooter.center.row-fluid
+    erb:
+        <!-- widgets -->
+        <div class="widgets clearfix">
+            <!-- About -->
+            <div class="col3">
+                  <h3>About Us</h3>
+                  <p>Competently communicate team building e-tailers whereas installed base collaboration and idea sharing. Interactively revolutionize go forward scenarios before worldwide internal or organic sources. Professionally evisculate compelling benefits after orthogonal web readiness. Synergistically recaptiualize accurate markets without reliable action items.</p>
+              </div>
+              
+              <!-- Services -->
+              <div class="col3">
+                  <h3>Services</h3>
+                  <ul>
+                    <li><a href="#">Web design and Development</a></li>
+                      <li><a href="#">Wordpress</a></li>
+                      <li><a href="#">Web Application Development</a></li>
+                      <li><a href="#">Durpal</a></li>
+                      <li><a href="#">Mobile Apps Design</a></li>
+                </ul>
+              </div>
+              
+              <!-- Recent Tweets -->
+              <div class="col3 noBorderRight">
+                  <h3>Recent Tweets</h3>
+                  <ul id="twitter_update_list" class="tweets"></ul>  
+              </div>
+              
+          </div><!-- widgets -->
+  .sep &nbsp; 
+  .copyright.center.row-fluid 
+    .span6
+      | Copyright &copy; 2013 
+      a href="http://imazen.io" Imazen
+      |   &amp; 
+      a href="http://nathanaeljones.com" Nathanael Jones
+    .span6
+      p.pull-right
+        a href="/privay" Privacy Policy
+
