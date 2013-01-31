@@ -7,7 +7,7 @@ Layout: headless_page
       div style="width:70px;padding-top:25px;float:right"
         .g-plusone
     - if page.meta.warning
-      .warning-message = page.meta.warning
+      .alert = page.meta.warning
     - if page.heading
       h1.page-header
         == page.heading
@@ -36,6 +36,7 @@ Layout: headless_page
       ### What is NuGet? 
       NuGet is a better way to manage your project's libraries, and is [fully supported by the ImageResizer](/docs/nuget).  
     - editions.each do |e|
+      .widget
       h3
         a(href="#{e.path}") =e.heading
       ul

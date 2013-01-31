@@ -1,8 +1,7 @@
 title: Resizer Professional License
+warning: This license will be retired on Feb. 1st, 2013
 
 # Resizer Personal (Professional) license
-
-<div class="deprecated-message">This license will be retired on Feb 1st, 2013.</div>
 
 
 The [paid plugin bundles](/plugins/bundles) can be purchased under this license. 
