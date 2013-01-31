@@ -5,6 +5,9 @@ html(lang="en" class="no-js")
   head
     meta(charset="utf-8")
     
+    title
+      = page.title
+
     - if page.meta.description
       meta name="description" content=page.meta.description
     - if page.meta.keywords
@@ -15,18 +18,16 @@ html(lang="en" class="no-js")
     - if config.author.google_profile
       link rel="me" type="text/html" href=config.author.google_profile
 
-    title
-      = page.title
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
   
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/parallax-slider.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+    link href="/css/bootstrap.css" rel="stylesheet"
+    link href="/css/bootstrap-responsive.css" rel="stylesheet"
+    link href="/css/style.css" rel="stylesheet"
+    link href="/css/parallax-slider.css" rel="stylesheet"
+    link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700"
+    link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif"
+    link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo"
+    link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic"
     
     /[if lt IE 9]
       script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
