@@ -9,18 +9,18 @@
 		<?xml version="1.0" encoding="utf-8" ?>
 		<configuration>
 			<configSections>
-				<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" />
+				<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer"  requirePermission="false"  />
 			</configSections>
 
 			<resizer>
 				<!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
-				     you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 -->
+						 you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 -->
 				<pipeline fakeExtensions=".ashx" />
 
 				<plugins>
 					<!-- <add name="DiskCache" /> -->
 					<!-- <add name="PrettyGifs" /> -->
-				</plugins>	
+				</plugins>  
 			</resizer>
 
 			<system.web>
@@ -39,4 +39,18 @@
 			</system.webServer>
 		</configuration>
 	
-4. Start your web site, then visit [/resizer.debug.ashx](/plugins/diagnostics) to verify you've done everything correctly. If you ever encounter issues, simply revisit that page to access the self-diagnostics. If you need help, [just ask](/support)! ASP.NET MVC is fully supported, [although you may have to add 2 IgnoreRoute statements](/docs/mvc), depending upon your route table.
+4. Start your web site, then visit [/resizer.debug.ashx](/plugins/diagnostics) to verify you've done everything correctly. If you ever encounter issues, simply revisit that page to access the self-diagnostics. If you need help, [just ask](/support)! ASP.NET MVC is fully supported, [just install the MvcRoutingShim plugin](/docs/mvc).
+
+5. Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of the project](/history). Unlike all the sample code you find on the internet, it avoids [the 29 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Over 10K websites use the ImageResizer; why not read a few [recent testimonials from some of the more well-known people & companies?](/testimonials).
+
+6. Spread the word! Tell your friends and co-workers about this library. And click the +1 button to tell [Google Plus](http://plus.google.com/) that this is an awesome site. Have ideas or feedback? [share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
+
+7. Ready to go live? Get the [Performance Edition](/plugins/editions/performance), which includes [disk caching](/plugins/diskcache) and several other invaluable plugins. This project requires my full-time attention (and part-time help from others), so please support it by purchasing [a paid edition](/buy) or [an all-inclusive support contract](/support/contracts). 
+
+8. Add [third-pary plugins](/docs/wrappers) and contribute your own:
+	* Use [Ben Foster's Fluent API](https://github.com/benfoster/ImageResizer.FluentExtensions) instead of building query strings with the `Instructions` class
+	* Want a UI for ImageResizer? [Try StudioJS](https://github.com/nathanaeljones/studiojs)
+	* Responsive web design requires responsive images. [Check out the ResponsivePresets system](https://github.com/mindrevolution/ImageResizer-ResponsivePresets) from [marc303](https://github.com/marc303).
+
+Can't afford any mistakes? Ensure your content architecture is scalable and secure by having a **30-minute Q&A session with the author for just $70**.
+Add aided installation of 1 server or workstation for +$60, or 2 servers or workstations for +$120. [Find out more](/support/consult). Or, get [a support contract](/support/contracts) that includes all of the above *and* licenses for everything. 
