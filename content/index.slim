@@ -11,6 +11,15 @@ h1 RESTful image processing
 	.slider-wrapper
 		#da-slider.da-slider
 			.da-slide
+				h2 Comprehensive image processing 
+				p
+					| Facial detection, redeye correction, RAW file development. World-class resizing is just the tip of the iceberg. 
+
+				a.da-link href="/" Read More
+				.da-img
+					img src="img/parallax-slider/resonsive.png" alt="image01"
+			
+			.da-slide
 				h2 The future is dynamic
 				p Small businesses and large corprorations alike have have been trusting dynamic imaging software to simplify their image management for the last decade. Perhaps it's time you got on board.
 
@@ -41,7 +50,7 @@ h1 RESTful image processing
 			.da-slide
 				h2 Extreme scalability
 				p
-					| A single server running ImageResizer Performance Edition can efficiently cache and serve up to a million images. Many of our clients use it will up to 10 million, but at that point we suggest a Varnish cache.
+					| A single server running ImageResizer Performance Edition can efficiently cache and serve up to a million unique images. Many of our clients use it with up to 10 million, but at that point we suggest a CDN, Varnish, or nginx cache.
 
 
 
@@ -56,17 +65,13 @@ hr
 	.span8
 		.hero-unit
 			h3
-				p Easy install with NuGet
-					code
-						| PM> Install-Package ImageResizer.MvcWebConfig
-					| or
-					code
-						| PM> Install-Package ImageResizer.WebConfig
-				
-				a.btn.btn-primary.btn-large Or download
-				|  and follow the 
-				a href="/docs/install/aspnet"
-					| manual installation steps.
+				p Install with NuGet
+				code PM> Install-Package ImageResizer.MvcWebConfig
+				p
+					a.btn.btn-primary.btn-large href="/download" Or download
+					|  and follow the 
+					a href="/docs/install/aspnet"
+						| manual installation steps.
 	.span4
 		.tiny-news
 		| News: 
@@ -185,9 +190,6 @@ hr
 			
 	
 markdown:
-	5. Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of the project](/history). Unlike all the sample code you find on the internet, it avoids [the 29 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Over 10K websites use the ImageResizer; why not read a few [recent testimonials from some of the more well-known people & companies?](/testimonials).
-
-	6. Spread the word! Tell your friends and co-workers about this library. And click the +1 button to tell [Google Plus](http://plus.google.com/) that this is an awesome site. Have ideas or feedback? [share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
 
 	7. Ready to go live? Get the [Performance Edition](/plugins/editions/performance), which includes [disk caching](/plugins/diskcache) and several other invaluable plugins. This project requires my full-time attention (and part-time help from others), so please support it by purchasing [a paid edition](/buy) or [an all-inclusive support contract](/support/contracts). 
 
