@@ -4,41 +4,35 @@ Icon: envelope
 
 h1 Support
 
+.well
+	== partial :support_times
+
 .row
-	.span4
+	.span6
 		h2 Before you contact us
+		.well
+			markdown:
+
+				1. Visit the [self-diagnostics page](/plugins/diagnostics) on your server: `/resizer.debug.ashx`
+				2. Enable [detailed error messages, and visit the image URL directly](/docs/geterror)
+				3. Skim the comprehensive [troubleshooting guide](/docs/troubleshoot) and [faq](/docs/faq). If it's a *how-to* question, [try reading the documentation](/docs), [searching this site](/search), and [searching StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer).
+				
+			hr
+			markdown:
+				When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). **Without this information, we cannot diagnose the problem**. 
+
 		markdown:
+			### Helpful Links
 
-			1. Visit the [self-diagnostics page](/plugins/diagnostics) on your server: `/resizer.debug.ashx`
-			2. Enable [detailed error messages, and visit the image URL directly](/docs/geterror)
-			3. Skim the comprehensive [troubleshooting guide](/docs/troubleshoot) and [faq](/docs/faq). If it's a *how-to* question, [try reading the documentation](/docs) or [searching this site](/search) and [StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer).
-			
-			When contacting support about a problem, *please* include (a) the [diagnostics page output](/plugins/diagnostics), and (b) [the precise error message you get when you put the image URL directly into the address bar](/docs/geterror). Without this information, **we cannot diagnose the problem**. It's also a good idea to skim the [troubleshooting page](/docs/troubleshoot), as there's a good chance it covers your issue.
-	
-	.span4
-		h2 Free support
-		markdown:
-			Free support is provided for [questions posted on StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer), *if they meet the following criteria*:
+			* [Troubleshooting Guide](/docs/troubleshoot)
+			* [Frequently Asked Questions](/docs/faq)
+			* [StackOverflow: ImageResizer](http://stackoverflow.com/questions/tagged/imageresizer)
+			* [UserVoice: ImageResizer](http://resizer.uservoice.com/forums/108373-image-resizer-v3)
+			* [How to view the diagnostics page](/plugins/diagnostics)
+			* [How to enable detailed error messages](/docs/geterror)
+			* [Documentation - Index](/docs)
+			* [Documentation - Search](/search)
 
-			1. The question is [tagged 'imageresizer'](http://stackoverflow.com/questions/tagged/imageresizer) so we can find it.
-			2. The question includes a [gist](https://gist.github.com/) with the diagnostics page output.
-			3. The question is detailed enough to answer, shows some diagnostic effort, and doesn't [involve a really bad idea](/docs/bad).
-			5. The question is about the URL API (If you have a *smart* questions about the Managed API, we *may* help you...)
-
-			We typically answer StackOverflow questions within 1-2 weeks. E-mail your question URL to **support@imageresizing.net** for a faster response. 
-
-			If we take the time to provide a good answer to your question, please be courteous; both mark it as the answer and vote it up. We prioritize questions posted by registered StackOverflow users who have a good reputation.
-
-
-	.span4
-		h2 Bugs & Features
-		markdown: 
-			We offer free support for all bug-related inquires, both through e-mail (**support@imageresizing.net**) and [StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer).
-
-			To encourage everyone to actively look for bugs and report them, we're offering a $5-$50 reward via PayPal for each bug you report (if you're the first to report it). Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $50 each. Payments sent via PayPal. All Imazen-provided class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`. Only the latest version of the product is eligible.
-
-			We welcome feature requests, and everyone may [sumbit new ideas or vote for existing ones at the uservoice site](http://resizer.uservoice.com/forums/108373-image-resizer-v3).
-.row
 	.span6
 		h2 Priority Support
 		markdown:
@@ -69,30 +63,42 @@ h1 Support
 			// -->
 			</script>
 			<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
-
-
-
-	.span6
-		h2 Do I already have priority support?
+		
+		h2 You may already qualify for Priority Support if you..
 
 		markdown:
-			YES, if you 
-
 			* Have [an active support contract](/support/contracts)
 			* Purchased your license before Apr. 20th, 2012
-			* Purchased your license before Feb. 1st, 2013, and have never used the included incident.
+			* Purchased your license before Feb. 1st, 2013, and have never used the one (1) included incident.
 			* Are an open-source developer leveraging the ImageResizing.NET project in another open-source project
 			* Have blogged about the project and referred at least 300 visitors
+		
+hr
+.row
+	.span6
 
-			If you don't meet the above criteria, you'll need to purchase a support incident.
+		h2 Bug bounty program
+		markdown: 
+			We offer free support for all *bug-related* inquires, both through e-mail (**support@imageresizing.net**) and [StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer).
 
+			We will also PayPal you between $5 and $50 for each bug you report - if you're the first to report it, and if it's in the latest version of one of our ImageResizer.* assemblies.
 
+			The average bug reward is $15; only security holes and memory leaks are elgibile for the $50 level. 
 
+			We welcome feature requests, and everyone may [sumbit new ideas or vote for existing ones at the uservoice site](http://resizer.uservoice.com/forums/108373-image-resizer-v3).
+	.span6
+		h2 Free support on StackOverflow
+		markdown:
+			Free support is provided for [questions posted on StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer), *if they meet the following criteria*:
 
+			1. The question is [tagged 'imageresizer'](http://stackoverflow.com/questions/tagged/imageresizer) so we can find it.
+			2. The question [includes a gist](https://gist.github.com/) with the diagnostics page output.
+			3. The question is about the URL API, and doesn't [involve a really bad idea](/docs/bad) (If you have a *smart* questions about the Managed API, we *may* help you).
+			4. The question is detailed enough to answer, shows some diagnostic effort.
 
+			We typically answer StackOverflow questions within 1-2 weeks. E-mail your question URL to **support@imageresizing.net** for a faster response. 
 
-
-Both online tickets and this e-mail address are immediately forwarded to my personal e-mail account, so please use them! It helps me track support requests in a more organized manner. If you e-mail me at my personal e-mail address (nathanael.jones@gmail.com), your request may get lost!
+			If we take the time to provide a good answer to your question, please be courteous; both mark it as the answer and vote it up. We prioritize questions from StackOverflow users with a good reputation.
 
 
 
