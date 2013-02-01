@@ -17,3 +17,9 @@
   background-image: none;
   background-color: #999;
 }
+
+
+form#newsletter{
+  padding-left:0;
+  margin-left:0;
+}

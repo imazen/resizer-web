@@ -33,87 +33,78 @@ Layout: false
   .container
     .row
       .span3
-        h3 About ImageResizer
+        h3 About
         markdown:
-          This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of the project](/history). 
+          ImageResizer is the result of [6 years of continual refinement](/history), with a focus on security, stability, and image quality. Thousands of popular websites rely on ImageResizer; some with millions of pageviews each day, like [Sierra Trading Post, MSN, and eBay](/testimonials).
 
-          Unlike all the sample code you find on the internet, it avoids [the 29 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). 
+          It provides far more than image resizing; [with our 40+ plugins](/plugins), it becomes a **comprehensive media processing suite**.
 
-          Over 10K websites use the ImageResizer; why not read a few [recent testimonials from some of the more well-known people & companies?](/testimonials)
+          Don't doom your site to inevitable instabiliy by [using flawed code from the internet](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Our core library is compact, free, and well-tested. `Install-Package ImageResizer`.
+
       .span3
         h3 Photo Stream
 
         .flickr-widget
           script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08"
           .clear
-
       .span6
-        h3 Follow Us!
+        h3 Tell your friends and co-workers
+        p Clicking the Google Plus icon will help more people find us, which is good for everyone. 
         ul.social-grid
-          erb:
-            <li>
-              <div class="social-item">       
-                <div class="social-info-wrap">
-                  <div class="social-info">
-                    <div class="social-info-front social-twitter">
-                      <a href="http://twitter.com"></a>
-                    </div>
-                    <div class="social-info-back social-twitter-hover">
-                      <a href="http://twitter.com"></a>
-                    </div>  
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="social-item">       
-                <div class="social-info-wrap">
-                  <div class="social-info">
-                    <div class="social-info-front social-facebook">
-                      <a href="http://facebook.com"></a>
-                    </div>
-                    <div class="social-info-back social-facebook-hover">
-                      <a href="http://facebook.com"></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="social-item">       
-                <div class="social-info-wrap">
-                  <div class="social-info">
-                    <div class="social-info-front social-dribbble">
-                      <a href="http://dribbble.com"></a>
-                    </div>
-                    <div class="social-info-back social-dribbble-hover">
-                      <a href="http://dribbble.com"></a>
-                    </div>  
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="social-item">       
-                <div class="social-info-wrap">
-                  <div class="social-info">
-                    <div class="social-info-front social-flickr">
-                      <a href="http://flickr.com"></a>
-                    </div>
-                    <div class="social-info-back social-flickr-hover">
-                      <a href="http://flickr.com"></a>
-                    </div>  
-                  </div>
-                </div>
-              </div>
-            </li>
+          li
+            .social-item
+              .social-info-wrap
+                .social-info
+                  .social-info-front.social-twitter
+                    a href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank"
+                  .social-info-back.social-twitter-hover
+                    a href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank"
+          li
+            .social-item
+              .social-info-wrap
+                .social-info
+                  .social-info-front.social-facebook
+                    a href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank"
+                  .social-info-back.social-facebook-hover
+                    a href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank"
+          li
+            .social-item
+              .social-info-wrap
+                .social-info
+                  .social-info-front.social-googleplus
+                    a href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"
+                  .social-info-back.social-googleplus-hover
+                    a href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"
+          li
+            .social-item
+              .social-info-wrap
+                .social-info
+                  .social-info-front.social-linkedin
+                    a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank"
+                  .social-info-back.social-linkedin-hover
+                    a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank"                        
+     
+        markdown: 
+          Have ideas or feedback? [Share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
 
-        form#newsletter
-          h3 Newsletter
-          p Please leave us your email
-          label for="newsletter_input" @:
-          input type="text" id="newsletter_input"
-          input type="submit" id="newsletter_submit" value="submit"
+        
+        
+        form#newsletter method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" class="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired('newsletter');"
+          input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou"
+          input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html"
+          input type="hidden" name="listid" value="29803"
+          input type="hidden" name="specialid:29803" value="LH6H"
+          input type="hidden" name="clientid" value="905228"
+          input type="hidden" name="formid" value="2612"
+          input type="hidden" name="reallistid" value="1"
+          input type="hidden" name="doubleopt" value="0"
+
+          h3 Get e-mailed when an important upgrade is released
+          p Average frequency 8 per year - we don't share.
+
+          label for="fields_email" @:
+          input type="text" name="fields_email"
+          input type="submit" name="submit" value="submit"
 
 #copyright
   .container

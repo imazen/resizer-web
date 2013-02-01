@@ -43,14 +43,14 @@ if (typeof(EJEJC_lc) !== undefined) var EJEJC_lc = function (th) { return false;
 
 /* Handles signup forms */
 
-var icpForm2612 = document.getElementById('icpsignup2612');
 
-if (document.location.protocol === "https:")
-	icpForm2612.action = "https://app.icontact.com/icp/signup.php";
-	
-function verifyRequired2612() {
-  if (icpForm2612["fields_email"].value == "") {
-    icpForm2612["fields_email"].focus();
+function verifyRequired(id) {
+  var f = document.getElementById(id);
+  if (document.location.protocol === "https:")
+  f.action = "https://app.icontact.com/icp/signup.php";
+  
+  if (f["fields_email"].value == "") {
+    f["fields_email"].focus();
     alert("The Email field is required.");
     return false;
   }
