@@ -1,6 +1,9 @@
 title: Licenses - Image Resizer
 Layout: layout
 Icon: notes
+Libs: pricer, -comments, ejunkie, ejunkiecart, uservoice
+Heading: Choose your edition
+Aliases: /pricing /prices /buy
 
 h1 Licenses
 
@@ -12,15 +15,14 @@ h1 Licenses
 
       Development of this project is funded by people purchasing [the enhanced editions (which include additional plugins)](/buy) and [support contracts](/support/contracts). 
 
-      The enhanced editions are also *nearly* open-source. They all include source code, encourage modification, and accept patches. Redistribution and sub-licensing rights vary by license, however. 
+      The enhanced editions are also *nearly* open-source. They all include source code, encourage modification, and patches are accepted through GitHub. Redistribution and sub-licensing rights vary by license, however. 
 
-      I have written every license to provide maximum freedom, minimum restrictions, and maximum simplicity. 99% of use cases should be covered, I hope. 
-
-      If for some reason the above licenses do not meet your needs, I am willing to provide even less restrictive licenses on a case-by-case basis. E-mail **sales@imageresizing.net** for details.
+      I have written every license to provide maximum freedom, minimum restrictions, and maximum simplicity. 99% of use cases should be covered. If yours is not, e-mail **sales@imageresizing.net**.
   .span4
     markdown:
       ## List of licenses
 
+       * [Freedom][freedom] The [core and 18 free plugins](/plugins/free) are provided under this license.
        * [Resizer Trial][trial]: You get this for free. Allows unlimited development and local testing of the software, without time-limits.
        * [Resizer Domain][domain]: The [Performance](/plugins/editions/performance) and [Creative](/plugins/editions/creative) editions are provided under this license.
        * [Resizer Enterprise][enterprise]: The [Elite edition](/plugins/editions/performance) and [support contracts](/support/contracts) use this license.
@@ -47,3 +49,169 @@ h1 Licenses
        * If the dll is named `ImageResizer.Plugins.something.dll`, it's probably a [paid plugin](/plugins).
        * Except for `ImageResizer.Plugins.Logging.dll`, which is also under the [Freedom license](/licenses/freedom).
        * Except for `ImageResizer.Plugins.PdfRenderer`, which is [under the GPL v3 due to its use of Ghostscript](/plugins/pdfrenderer).
+
+.buy-page style="position:relative"
+  span style="position:absolute; top:0px; right:0px;" 
+    <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" onClick="javascript:return EJEJC_lc(this);">View shopping cart</a>
+  span style="position:absolute; top:0px; left:18px;"
+    a href="/plugins" View full plugin list
+  p.fineprint style="text-align:center"
+    | All editions include modifiable source code. 100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>. All major credit cards accepted.
+  .pricer.p5cols
+    .col.grey
+      .header
+        .product Essential
+        .price
+          | free
+        .payment open-source
+      .details
+        ul
+          li.tooltop-container
+            .tooltip
+              span
+              | Leverage a highly-refined, standardized URL API. See riapi.org for standardization effort status.
+            | RESTful URL-based Imaging API
+          li Mirrored URL and Managed APIs
+          li Intuitively crop, resize, rotate, flip, constrain, and encode.
+          li.tooltop-container
+            .tooltip
+              span
+              | The PdfRenderer plugin is GPL licensed, which may be a problem for some users.
+            | Render PDFs into images*
+
+          li.last 19 plugins cover most common tasks
+      .signup
+        a href="/download"
+          span
+          | Download Now
+      .signup
+        a href="/plugins/editions/free" Details
+    .col.green
+      .header
+        .product Performance
+        .price
+          span $
+          | 249
+          span 00
+        .payment per domain
+      .details
+        ul
+          li
+            strong Everything from Free, plus:
+          li Free minor version upgrades
+          li.tooltop-container
+            .tooltip
+              span
+              | With included plugins: DiskCache, DiskSourceCache, MemOutputCache, and MemSourceCache
+            | Disk + Memory input/output caching
+          li.tooltop-container
+            .tooltip
+              span
+              | With includedplugins: SqlReader, AzureReader, and S3Reader
+            | SQL, Azure, and Amazon S3 support
+          li Amazon CloudFront & Azure CDN compatible
+          li 8-bit PNG/GIF & animated GIF processing
+          li Secure remote image processing
+          li.tooltop-container
+            .tooltip
+              span
+              | A floating license can be used on several different domains - but not at the same time.
+              p A wildcard domain, such as *.example.com, allows you to use the software on multiple subdomains without extra fees. *.example.com would allow the software to run on 'img.example.com' and 'www.example.com' at the same time.
+              p See licenses -> Resizer Domain License for details
+            | Floating wildcard domain license.
+      .signup
+        form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1197635&amp;cl=41912&amp;ejc=2&amp;o1=Performance%20Edition%20(1%20domain)" target="ej_ejc" method="POST" accept-charset="UTF-8"
+          a href="#" onClick="javascript:return EJEJC_lc(this.parentNode);" 
+            span
+            | Add to cart
+      .signup
+        a href="/plugins/editions/performance" Details
+    .col.yellow
+      .header
+        .product Creative
+        .price
+          span $
+          | 499
+          span 00
+        .payment per domain
+        .pricer-label Most popular
+      .details
+        ul
+          li 
+            strong Everything from Performance, plus:
+          li Flexible text & image overlay support
+          li Image filtering suite
+          li Content-aware image resizing
+          li Advanced file format support (PSD, CR2, DNG, etc)
+          li Optional WIC processing pipeline (2-8x performance increase)
+          li Smart whitespace removal (great for product photos!)
+      .signup
+        form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1197635&amp;cl=41912&amp;ejc=2&amp;o1=Creative%20Edition%20(1%20domain)" target="ej_ejc" method="POST" accept-charset="UTF-8"
+          a href="#" onClick="javascript:return EJEJC_lc(this.parentNode);" 
+            span
+            | Add to cart
+      .signup
+        a href="/plugins/editions/creative" Details
+    .col.red
+      .header
+        .product Elite
+        .price
+          span $
+          | 849
+          span 00
+        .payment 
+          | per 
+          strong enterprise
+        .pricer-label All-inclusive
+      .details
+        ul
+          li 
+            strong Everything from Creative, plus:
+          li DRM-free Enterprise-level license
+          li Automatic and manual red-eye detection and removal
+          li Facial detection and smart cropping
+          li PSD editing and rendering
+          li Batch processing and .zip file creation
+      .signup
+        form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1197635&amp;cl=41912&amp;ejc=2&amp;o1=Elite%20Edition%20(1%20enterprise)" target="ej_ejc" method="POST" accept-charset="UTF-8"
+          a href="#" onClick="javascript:return EJEJC_lc(this.parentNode);" 
+            span
+            | Add to cart
+      .signup
+        a href="/plugins/editions/elite" Details
+    .col.bronze
+      .header
+        .product Bronze 6 MO
+        .price
+          span $
+          | 949
+          span 00
+        .payment 
+          | per 
+          strong enterprise
+        .pricer-label Best Value
+      .details
+        ul
+          li 
+            strong Everything from Elite, plus:
+          li 6 months of free major version upgrades
+          li Same business day priority support
+          li Best-effort hotfix delivery
+          li 1 support incident per month
+          li 1 free assisted installation
+          li 30 minute free consultation with author
+          li 1 hour coding assistance
+          li Support is limited to 1 designated employee
+      .signup
+        a href="/support/contracts"
+          span
+          | View Contracts
+
+
+
+
+
+  div style="clear:both"
+
+
+
