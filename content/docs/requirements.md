@@ -2,7 +2,7 @@
 
 ## Supported operating systems
 
-Both 32 and 64-bit versions of Windows are supported. OS X and Linux can be used under the latest version of Mono and Image Resizer 3.1.5, but individual plugin support may vary.
+Both 32 and 64-bit versions of Windows are supported. OS X and Linux can be used under the latest version of Mono, but individual plugin support may vary.
 
 * Windows 2000
 * Windows Server 2000
@@ -12,7 +12,7 @@ Both 32 and 64-bit versions of Windows are supported. OS X and Linux can be used
 * Windows Server 2008 (and R2)
 * Windows 7
 
-[WIC pipeline plugins](/plugins/wic) should only be used on Server 2008 R2 and Windows 7 or higher for optimal reliability. This restriction only applies to server-side ASP.NET applications - a few-threaded GUI or console app can use the WIC plugins on XP and higher with impunity.
+[WIC pipeline plugins](/plugins/wic) should only be used on Server 2008 R2 and Windows 7 or higher for optimal reliability. This restriction only applies to server-side ASP.NET applications - GUI or console applications can use the WIC plugins on XP and higher with impunity.
 
 ## Supported Windows web servers
 
