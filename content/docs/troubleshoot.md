@@ -153,3 +153,7 @@ The workaround is to use WIC or FreeImage for these requests. Any of the followi
 ## Performance issues or error messages when using a SAN.
 
 This is tricky to get right - [read the full article here](http://imageresizing.net/docs/howto/avoid-network-limit).
+
+## Losing transparency when working with GIF images
+
+You must have the [PrettyGifs](/plugins/prettygifs) plugin installed to get high-quality, transparent GIF and 8-bit PNG results. You may also want the [AnimatedGifs](/plugins/animatedgifs) plugin.
