@@ -77,12 +77,13 @@ hr
         h3 
           | Download ImageResizer V#{latest_release.meta.shortversion}
         input type="text" name="fields_email"
+        |  &nbsp; 
         button type="submit" name="Submit" class="btn btn-primary"
           | Download &amp; subscribe
         p 
           | We send an average of 8 newsletters per year, and you can unsubscribe at any time. 
-          |  V#{latest_release.meta.shortversion} includes 
           a href=releases.first.path
+            | V#{latest_release.meta.shortversion} includes 
             = latest_release.meta_summary
             |  (see release notes and download page).
 
@@ -96,9 +97,8 @@ hr
 
     a href="/docs" 
       | more...
-  .span3
-    .tiny-news
-    | News: 
+  .span3.tiny-news
+    h3 News: 
     ul.arrow_list
       - for p in index.posts[0..5]
         li
@@ -107,30 +107,17 @@ hr
     a href="/blog" 
       | more...
 
-hr
-
-
 
 .row
   .icons-box-vert-container
     .span4
       .icons-box-vert
-        i.ico-white.circle-color-full.ico-electrical-socket-us
+        i.ico-white.circle-color-full.ico-link
         .icons-box-vert-info
           h3 Compatible with your CMS
           markdown:
             If your CMS doesn't already include ImageResizer, you can add it in minutes. Standard drop-in installation works with nearly every CMS, and [we have notes for the rest](/docs/workswith).
             
-        .clear
-    .span4
-      .icons-box-vert
-        i.ico-white.circle-color-full.ico-roundabout
-        .icons-box-vert-info
-          h3 Browser &gt; Photo Editor
-          markdown:
-             Stop the endless photoshop-upload-test cycle. With our simple API, images can be the easiest part of your job. 
-
-             Tweak in your browser, not your desktop photo-editor.
         .clear
     .span4
       .icons-box-vert
@@ -142,11 +129,6 @@ hr
 
             Manual version management leads to medical bills.
         .clear
-  .clear
-
-.row
-  .icons-box-vert-container
-
     .span4
       .icons-box-vert
         i.ico-white.circle-color-full.ico-shield
@@ -155,21 +137,24 @@ hr
           markdown:
             Secure by default, ImageResizer protects againsts DDOS and XSS attacks and minimizes attack surface with a plugin model.
 
-            Unlike most imaging libraries, ImageResizer was designed for server-side use since day 1. Memory leaks are never acceptable &mdash; we design for multi-year uptimes. 
+            Unlike most imaging libraries, ImageResizer was designed for server-side use and multi-year uptimes since day 1.
           
         .clear
+  .clear
+
+.row
+  .icons-box-vert-container
     .span4
       .icons-box-vert
-        i.ico-white.circle-color-full.ico-picture
+        i.ico-white.circle-color-full.ico-roundabout
         .icons-box-vert-info
-          h3 Amazing image quality
+          h3 Achieve agility
           markdown:
-            We challenge you to produce better quality results in a dedicated photo editor. We couldn't. 
+             Stop the endless photoshop-upload-test cycle. With our simple API, images can be the easiest part of your job. 
 
-            Did you know that each time you save a JPEG image, you permanently reduce its quality? ImageResizer offers non-destructive editing &mdash; get rid of those artifacts.
-
-
+             Tweak in your browser, not your desktop photo-editor.
         .clear
+
     .span4
       .icons-box-vert
         i.ico-white.circle-color-full.ico-stats
@@ -181,7 +166,16 @@ hr
             Beyond that? We support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
 
         .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-tint
+        .icons-box-vert-info
+          h3 Full imaging suite
+          markdown:
+            With the [Creative Edition](/plugins/editions/creative), you can unlock a comprehensive imaging suite. 
 
+            Bring clarity to your photos with the unsharp mask, white balance adjustment, noise removal, contrast, saturation, and brightness tools. Design text and image overlays, and apply sophisticated filters.
+        .clear
   .clear
 
 .row
@@ -192,7 +186,7 @@ hr
         .icons-box-vert-info
           h3 Helpful community
           markdown:
-            ImageResizer boasts a sizeable collection of community plugins, and there are always people around to give you a hand at [StackOverflow:ImageResizer](http://stackoverflow.com/questions/tagged/imageresizer)
+            ImageResizer boasts a sizeable collection of community plugins, and there are always people around to give you a hand at [StackOverflow:ImageResizer](http://stackoverflow.com/questions/tagged/imageresizer) when the [self-diagnostics](/plugins/diagnostics) can't help.
         .clear
     .span4
       .icons-box-vert
@@ -205,50 +199,17 @@ hr
         .clear
     .span4
       .icons-box-vert
-        i.ico-white.circle-color-full.ico-settings
-        .icons-box-vert-info
-          h3 Extend with over 50 plugins
-          markdown:
-            The most extensive plugin set available.
-          
-        .clear
-  .clear
-.row
-  .icons-box-vert-container
-    .span4
-      .icons-box-vert
         i.ico-cup.ico-white.circle-color-full
         .icons-box-vert-info
           h3 Open source
           markdown:
             Core functionality is free and open source under the [Freedom license](/licenses/freedom). 
             
-            Everything we offer includes source code and permits modification.
-
-            We reward pull requests.
+            Everything we offer includes source code and permits modification; **we reward pull requests**.
           
-        .clear
-    .span4
-      .icons-box-vert
-        i.ico-white.circle-color-full.ico-hospital
-        .icons-box-vert-info
-          h3 Self-diagnostic
-          markdown:
-            ImageResizer sports a protected self-diagnostics page at `/resizer.debug`. If you're having issues, this page will tell you how to fix them.
-          
-        .clear
-    .span4
-      .icons-box-vert
-        i.ico-white.circle-color-full.ico-phone
-        .icons-box-vert-info
-          h3 Affordable advice
-          markdown:
-            [We're happy to help you optimize your content architecture](/consult) or assist with installation.  
-
-            We also offer hotfix delivery and support guarantees with our all-inclusive [support contracts](/support/contracts). Support contracts come with free upgrades and include an enterprise-wide license to all plugins.
-
         .clear
   .clear
+
 
 
 hr
