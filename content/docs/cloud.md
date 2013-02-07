@@ -1,6 +1,8 @@
 
 # Cloud basics
 
+![ImageResizer Cloud](https://s3.amazonaws.com/resizer-web/Resizer-Cloud.png)
+
 ImageResizer is compatible with every cloud offering, but some self-proclaimed CDNs do not support origin servers. Stay away from them! Real CDNs can pull, not only accept pushes.
 
 For the best performance, pick a cloud that offers all 3 services within the same datacenter. Low latency between blob storage and the server(s) hosting ImageResizer is very important.
