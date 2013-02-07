@@ -8,288 +8,310 @@ Layout: layout
 h1 RESTful image processing
 
 == content_for :banner do
-	.slider-wrapper
-		#da-slider.da-slider
-			.da-slide
-				h2 Comprehensive image processing 
-				p
-					| Facial detection, redeye correction, RAW file development. World-class resizing is just the tip of the iceberg. 
+  .slider-wrapper
+    #da-slider.da-slider
+      .da-slide
+        h2 Comprehensive image processing 
+        p
+          | Facial detection, redeye correction, RAW file development. World-class resizing is just the tip of the iceberg. 
 
-				a.da-link href="/" Read More
-				.da-img
-					img src="img/parallax-slider/resonsive.png" alt="image01"
-			
-			.da-slide
-				h2 The future is dynamic
-				p Small businesses and large corprorations alike have have been trusting dynamic imaging software to simplify their image management for the last decade. Perhaps it's time you got on board.
+        a.da-link href="/" Read More
+        .da-img
+          img src="img/studiojs.png" alt="image01"
+      
+      .da-slide
+        h2 The future is dynamic
+        p Small businesses and large corprorations alike have have been trusting dynamic imaging software to simplify their image management for the last decade. Perhaps it's time you got on board.
 
-				a.da-link href="/" Read More
-				.da-img
-					img src="img/parallax-slider/5twitter.png" alt="image01"
-			.da-slide
-				h2 Prevent memory leaks
-				p
-					| Engineering the simplest image resizing system is error-prone, and even highly experienced developers invariably miss a memory-leak or two, which is catastrophic for a server. We try to maintain a <a href="http://nathanaeljones.com/163/20-image-resizing-pitfalls/">list of all the common pitfalls</a>, but it grows on a monthly basis.
+        a.da-link href="/" Read More
+        .da-img
+          img src="img/parallax-slider/5twitter.png" alt="image01"
+      .da-slide
+        h2 Prevent memory leaks
+        p
+          | Engineering the simplest image resizing system is error-prone, and even highly experienced developers invariably miss a memory-leak or two, which is catastrophic for a server. We try to maintain a <a href="http://nathanaeljones.com/163/20-image-resizing-pitfalls/">list of all the common pitfalls</a>, but it grows on a monthly basis.
 
-				a.da-link href="/" Read More
-				.da-img
-					img src="img/parallax-slider/resonsive.png" alt="image01"
-			.da-slide
-				h2 Affordable support
-				p
-					| Can't afford any mistakes? Ensure your content architecture is scalable and secure by having a 
-					strong 30-minute Q&A session with a engineer for just $70
-					|	Get hotfixes within 3 business days  
-					a href="/support/contracts" with a support contract.
-
-
-				a.da-link href="/" Read More
-				.da-img
-					img src="img/parallax-slider/resonsive.png" alt="image01"
-			
-			.da-slide
-				h2 Extreme scalability
-				p
-					| A single server running ImageResizer Performance Edition can efficiently cache and serve up to a million unique images. Many of our clients use it with up to 10 million, but at that point we suggest a CDN, Varnish, or nginx cache.
+        a.da-link href="/" Read More
+        .da-img
+          img src="img/parallax-slider/resonsive.png" alt="image01"
+      .da-slide
+        h2 Affordable support
+        p
+          | Can't afford any mistakes? Ensure your content architecture is scalable and secure by having a 
+          strong 30-minute Q&A session with a engineer for just $70
+          | Get hotfixes within 3 business days  
+          a href="/support/contracts" with a support contract.
 
 
-
-				a.da-link href="/" Read More
-				.da-img
-					img src="img/parallax-slider/resonsive.png" alt="image01"
-			
-
-hr
-
-.row
-	.span8
-		.hero-unit
-			h3
-				p 
-					| Install with NuGet 
-					a href="http://nuget.org/packages?q=%20Imazen" (see 27 other packages)
-				code PM> Install-Package ImageResizer.MvcWebConfig
-				p
-					a.btn.btn-primary.btn-large href="/download" Or download
-					|  and follow the 
-					a href="/docs/install/aspnet"
-						| manual installation steps.
-	.span4
-		.tiny-news
-		| News: 
-		ul.arrow_list
-			- for p in index.posts[0..5]
-				li
-					a href=p.path 
-						= p.meta.short_heading || p.heading
-		a href="/blog" 
-			| more...
-
-hr
+        a.da-link href="/" Read More
+        .da-img
+          img src="img/parallax-slider/resonsive.png" alt="image01"
+      
+      .da-slide
+        h2 Extreme scalability
+        p
+          | A single server running ImageResizer Performance Edition can efficiently cache and serve up to a million unique images. Many of our clients use it with up to 10 million, but at that point we suggest a CDN, Varnish, or nginx cache.
 
 
 
-.row
-	.icons-box-vert-container
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-electrical-socket-us
-				.icons-box-vert-info
-					h3 Compatible with your CMS
-					markdown:
-						If your CMS doesn't already include ImageResizer, you can add it in minutes. Standard drop-in installation works with nearly every CMS, and [we have notes for the rest](/docs/workswith).
-						
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-ok.ico-white.circle-color-full
-				.icons-box-vert-info
-					h3 Stop wasting time
-					p Stop managing multiple versions. Stop the endless photoshop-upload-test cycle. With our simple API, images can be the easiest part of your job. 
-
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-roundabout
-				.icons-box-vert-info
-					h3 Single-source imaging
-					markdown:
-						Single-source imaging used to be the only future-proof solution. For mobile-friendly and response web sites, it's the *only* solution. 
-
-						End resolution madness and get your media under control.
-
-
-				.clear
-	.clear
-
-.row
-	.icons-box-vert-container
-
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-shield
-				.icons-box-vert-info
-					h3 Secure and stable
-					markdown:
-						Secure by default, ImageResizer protects againsts DDOS and XSS attacks and minimizes attack surface with a plugin model.
-
-						Unlike most imaging libraries, ImageResizer was designed for server-side use since day 1. Memory leaks are never acceptable &mdash; we design for multi-year uptimes. 
-					
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-picture
-				.icons-box-vert-info
-					h3 Amazing image quality
-					markdown:
-						We challenge you to produce better quality results in a dedicated photo editor. We couldn't. 
-
-						Did you know that each time you save a JPEG image, you permanently reduce its quality? ImageResizer offers non-destructive editing &mdash; get rid of those artifacts.
-
-
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-stats
-				.icons-box-vert-info
-					h3 High performance
-					markdown:
-						Upgrade to the [Performance Edition](/plugins/editions/performance) and scale to millions of images and users. 
-
-						Beyond that? We support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
-
-				.clear
-
-	.clear
-
-.row
-	.icons-box-vert-container
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-group
-				.icons-box-vert-info
-					h3 Helpful community
-					markdown:
-						ImageResizer boasts a sizeable collection of community plugins, and there are always people around to give you a hand at [StackOverflow:ImageResizer](http://stackoverflow.com/questions/tagged/imageresizer)
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-file-export
-				.icons-box-vert-info
-					h3 Standardized
-					markdown:
-						Vendor lock-in is evil. We're working with others in the industry to standardize the RESTful Image API. [Read more at riapi.org](http://riapi.org)
-					
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-settings
-				.icons-box-vert-info
-					h3 Extend with over 50 plugins
-					markdown:
-						The most extensive plugin set available.
-					
-				.clear
-	.clear
-.row
-	.icons-box-vert-container
-		.span4
-			.icons-box-vert
-				i.ico-cup.ico-white.circle-color-full
-				.icons-box-vert-info
-					h3 Open source
-					markdown:
-						Core functionality is free and open source under the [Freedom license](/licenses/freedom). 
-						
-						Everything we offer includes source code and permits modification.
-
-						We reward pull requests.
-					
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-hospital
-				.icons-box-vert-info
-					h3 Self-diagnostic
-					markdown:
-						ImageResizer sports a protected self-diagnostics page at `/resizer.debug`. If you're having issues, this page will tell you how to fix them.
-					
-				.clear
-		.span4
-			.icons-box-vert
-				i.ico-white.circle-color-full.ico-phone
-				.icons-box-vert-info
-					h3 Affordable advice
-					markdown:
-						[We're happy to help you optimize your content architecture](/consult) or assist with installation.  
-
-						We also offer hotfix delivery and support guarantees with our all-inclusive [support contracts](/support/contracts). Support contracts come with free upgrades and include an enterprise-wide license to all plugins.
-
-				.clear
-	.clear
-
+        a.da-link href="/" Read More
+        .da-img
+          img src="img/parallax-slider/resonsive.png" alt="image01"
+      
 
 hr
 
 .row
-	.span9
-		.title
-			h3 Community Plugins
-		.row
-			.span3
-				.picture
-					a href="http://placehold.it/270x180" rel="image" title="example goes here"
-						img src="http://placehold.it/270x180"
-						.image-overlay-zoom
-				.item-description
-					h4: a(href="#"): ResponsivePresets
-					p Description of demo site
-			.span3
-				.picture
-					a href="http://placehold.it/270x180" rel="image" title="example goes here"
-						img src="http://placehold.it/270x180"
-						.image-overlay-zoom
-				.item-description
-					h4: a(href="#"): FluentExtensions
-					p Description of demo site
-			.span3
-				.picture
-					a href="http://placehold.it/270x180" rel="image" title="example goes here"
-						img src="http://placehold.it/270x180"
-						.image-overlay-zoom
-				.item-description
-					h4: a(href="#"): StudioJS
-					p Description of demo site
-	.span3
-		.testimonial-container
-			.title
-				h3 Testimonials
-			.testimonials-carousel data-autorotate="3000"
-				ul.carousel
-					li.testimonial
-						.testimonials
-							| ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. - 
-							a href="http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" Hanselminutes #313
-						.testimonials-bg
-						.testimonials-author
-							a href="http://hanselman.com"
-								| Scott Hanselman  
-							span
-								| , Web Platform Team, Microsoft
+  .span6
+    .hero-unit
+      form#homesignup method="post" action="https://app.icontact.com/icp/signup.php" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
+        input type="hidden" name="redirect" value=latest_release.meta.fullfile
+        input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html"
+        input type="hidden" name="listid" value="29803"
+        input type="hidden" name="specialid:29803" value="LH6H"
+        input type="hidden" name="clientid" value="905228"
+        input type="hidden" name="formid" value="2612"
+        input type="hidden" name="reallistid" value="1"
+        input type="hidden" name="doubleopt" value="0"
+        
+        h3 
+          | Download ImageResizer V#{latest_release.meta.shortversion}
+        input type="text" name="fields_email"
+        button type="submit" name="Submit" class="btn btn-primary"
+          | Download &amp; subscribe
+        p 
+          | We send an average of 8 newsletters per year, and you can unsubscribe at any time. 
+          |  V#{latest_release.meta.shortversion} includes 
+          a href=releases.first.path
+            = latest_release.meta_summary
+            |  (see release notes and download page).
 
-					li.testimonial
-						.testimonials
-							| We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez. ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable. I highly recommend ImageResizer for any dynamic imaging needs.
-						.testimonials-bg
-						.testimonials-author
-							| Craig Boal, 
-							span Web Development Manager
-					li.testimonial
-						.testimonials
-							p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years. 
-							p Thanks Nathanael for creating such a wonderful product.
-						.testimonials-bg
-						.testimonials-author
-							| Dorian Collier, 
-							span Deesea
+  .span3
+    h3 How to...
+    ul.arrow_list
+      li: a href="/docs/install/aspnet" Installation Guide for ASP.NET
+      li: a href="/docs/basics" Use the URL API
+      li: a href="/docs/nuget" Install with NuGet
+      li: a href="/docs/troubleshoote" Troubleshoot common issues
+
+    a href="/docs" 
+      | more...
+  .span3
+    .tiny-news
+    | News: 
+    ul.arrow_list
+      - for p in index.posts[0..5]
+        li
+          a href=p.path 
+            = p.meta.short_heading || p.heading
+    a href="/blog" 
+      | more...
+
+hr
+
+
+
+.row
+  .icons-box-vert-container
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-electrical-socket-us
+        .icons-box-vert-info
+          h3 Compatible with your CMS
+          markdown:
+            If your CMS doesn't already include ImageResizer, you can add it in minutes. Standard drop-in installation works with nearly every CMS, and [we have notes for the rest](/docs/workswith).
+            
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-roundabout
+        .icons-box-vert-info
+          h3 Browser &gt; Photo Editor
+          markdown:
+             Stop the endless photoshop-upload-test cycle. With our simple API, images can be the easiest part of your job. 
+
+             Tweak in your browser, not your desktop photo-editor.
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-roundabout
+        .icons-box-vert-info
+          h3 Single-source imaging
+          markdown:
+            Single-source imaging is the only manageable solution for mobile and responsive websites.
+
+            Manual version management leads to medical bills.
+        .clear
+  .clear
+
+.row
+  .icons-box-vert-container
+
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-shield
+        .icons-box-vert-info
+          h3 Secure and stable
+          markdown:
+            Secure by default, ImageResizer protects againsts DDOS and XSS attacks and minimizes attack surface with a plugin model.
+
+            Unlike most imaging libraries, ImageResizer was designed for server-side use since day 1. Memory leaks are never acceptable &mdash; we design for multi-year uptimes. 
+          
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-picture
+        .icons-box-vert-info
+          h3 Amazing image quality
+          markdown:
+            We challenge you to produce better quality results in a dedicated photo editor. We couldn't. 
+
+            Did you know that each time you save a JPEG image, you permanently reduce its quality? ImageResizer offers non-destructive editing &mdash; get rid of those artifacts.
+
+
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-stats
+        .icons-box-vert-info
+          h3 High performance
+          markdown:
+            Upgrade to the [Performance Edition](/plugins/editions/performance) and scale to millions of images and users. 
+
+            Beyond that? We support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
+
+        .clear
+
+  .clear
+
+.row
+  .icons-box-vert-container
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-group
+        .icons-box-vert-info
+          h3 Helpful community
+          markdown:
+            ImageResizer boasts a sizeable collection of community plugins, and there are always people around to give you a hand at [StackOverflow:ImageResizer](http://stackoverflow.com/questions/tagged/imageresizer)
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-file-export
+        .icons-box-vert-info
+          h3 Standardized
+          markdown:
+            Vendor lock-in is evil. We're working with others in the industry to standardize the RESTful Image API. [Read more at riapi.org](http://riapi.org)
+          
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-settings
+        .icons-box-vert-info
+          h3 Extend with over 50 plugins
+          markdown:
+            The most extensive plugin set available.
+          
+        .clear
+  .clear
+.row
+  .icons-box-vert-container
+    .span4
+      .icons-box-vert
+        i.ico-cup.ico-white.circle-color-full
+        .icons-box-vert-info
+          h3 Open source
+          markdown:
+            Core functionality is free and open source under the [Freedom license](/licenses/freedom). 
+            
+            Everything we offer includes source code and permits modification.
+
+            We reward pull requests.
+          
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-hospital
+        .icons-box-vert-info
+          h3 Self-diagnostic
+          markdown:
+            ImageResizer sports a protected self-diagnostics page at `/resizer.debug`. If you're having issues, this page will tell you how to fix them.
+          
+        .clear
+    .span4
+      .icons-box-vert
+        i.ico-white.circle-color-full.ico-phone
+        .icons-box-vert-info
+          h3 Affordable advice
+          markdown:
+            [We're happy to help you optimize your content architecture](/consult) or assist with installation.  
+
+            We also offer hotfix delivery and support guarantees with our all-inclusive [support contracts](/support/contracts). Support contracts come with free upgrades and include an enterprise-wide license to all plugins.
+
+        .clear
+  .clear
+
+
+hr
+
+.row
+  .span9
+    .title
+      h3 Community Plugins
+    .row
+      .span3
+        .picture
+          a href="http://placehold.it/270x180" rel="image" title="example goes here"
+            img src="http://placehold.it/270x180"
+            .image-overlay-zoom
+        .item-description
+          h4: a(href="#"): ResponsivePresets
+          p Description of demo site
+      .span3
+        .picture
+          a href="http://placehold.it/270x180" rel="image" title="example goes here"
+            img src="http://placehold.it/270x180"
+            .image-overlay-zoom
+        .item-description
+          h4: a(href="#"): FluentExtensions
+          p Description of demo site
+      .span3
+        .picture
+          a href="http://placehold.it/270x180" rel="image" title="example goes here"
+            img src="http://placehold.it/270x180"
+            .image-overlay-zoom
+        .item-description
+          h4: a(href="#"): StudioJS
+          p Description of demo site
+  .span3
+    .testimonial-container
+      .title
+        h3 Testimonials
+      .testimonials-carousel data-autorotate="3000"
+        ul.carousel
+          li.testimonial
+            .testimonials
+              | ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. - 
+              a href="http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" Hanselminutes #313
+            .testimonials-bg
+            .testimonials-author
+              a href="http://hanselman.com"
+                | Scott Hanselman  
+              span
+                | , Web Platform Team, Microsoft
+
+          li.testimonial
+            .testimonials
+              | We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez. ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable. I highly recommend ImageResizer for any dynamic imaging needs.
+            .testimonials-bg
+            .testimonials-author
+              | Craig Boal, 
+              span Web Development Manager
+          li.testimonial
+            .testimonials
+              p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years. 
+              p Thanks Nathanael for creating such a wonderful product.
+            .testimonials-bg
+            .testimonials-author
+              | Dorian Collier, 
+              span Deesea
 
