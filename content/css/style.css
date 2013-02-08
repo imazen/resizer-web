@@ -1123,7 +1123,7 @@ input[type="button"] {
 	overflow: hidden;
 	border-right: 1px solid #f6f6f6;
 	margin-left: 1px;
-	
+	line-height:144px;
 }
 
 .clients-carousel ul.clients {

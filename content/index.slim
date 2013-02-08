@@ -62,7 +62,7 @@ h1 RESTful image processing
 hr
 
 .row
-  .span6
+  .span5
     .hero-unit
       form#homesignup method="post" action="https://app.icontact.com/icp/signup.php" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
         input type="hidden" name="redirect" value=latest_release.meta.fullfile
@@ -87,12 +87,19 @@ hr
             = latest_release.meta_summary
             |  (see release notes and download page).
 
-  .span3
-    h3 How to...
+  .span2
+    h3 Installation
     ul.arrow_list
       li: a href="/docs/install/aspnet" Installation Guide for ASP.NET
-      li: a href="/docs/basics" Use the URL API
       li: a href="/docs/nuget" Install with NuGet
+      li: a href="/docs/troubleshoote" Troubleshoot common issues
+
+    a href="/docs" 
+      | more...
+  .span2
+    h3 How to...
+    ul.arrow_list
+      li: a href="/docs/basics" Use the URL API
       li: a href="/docs/troubleshoote" Troubleshoot common issues
 
     a href="/docs" 
@@ -217,16 +224,17 @@ hr
 .row
   .span9
     .title
-      h3 Community Plugins
+      h3 Showcase
     .row
       .span3
         .picture
-          a href="http://placehold.it/270x180" rel="image" title="example goes here"
+          a href="http://london.msn.co.uk/" rel="image" title="MSN London Olympic Games 2012"
             img src="http://placehold.it/270x180"
             .image-overlay-zoom
         .item-description
-          h4: a(href="#"): ResponsivePresets
+          h4: a(href="#"): MSN Olympic Games 2012 Responsive
           p Description of demo site
+          a href="http://www.netmagazine.com/features/how-we-built-msn-uks-responsive-olympics-site" How it was built
       .span3
         .picture
           a href="http://placehold.it/270x180" rel="image" title="example goes here"
@@ -275,4 +283,20 @@ hr
             .testimonials-author
               | Dorian Collier, 
               span Deesea
+
+hr
+h3 Who uses ImageResizer?
+.clients-carousel
+  ul.slides.clients
+    li: img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Microsoft.svg/200px-Microsoft.svg.png"
+    li: img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/EBay_logo.png/320px-EBay_logo.png"
+    li: img src="http://mindrevolution.com/css/mindrevolution-logo.png"
+    li: img src="http://s.stpost.com/img/sierra-logo.gif"
+    li: img src="http://www.eksponent.com/Content/images/logo.png"
+    li: img src="/img/logos/repzio-logo-144.gif"
+    li: img src="/img/logos/publishgreen.png"
+    li: img src="/img/logos/flavorplate.png"
+    li: img src="/img/logos/MizuniLogoR_933x216.png"
+    li: img src="/img/logos/SoulRebornLogo.png"
+
 
