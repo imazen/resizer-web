@@ -1,11 +1,35 @@
 GIT
+  remote: git://github.com/alexch/rerun.git
+  revision: 31d6a11b5269006d2bbb868af0271e3538ac6dd6
+  specs:
+    rerun (0.8.0)
+      listen
+
+GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: b16739d09c69d87e91236cd6b09a30ea9958e5e0
+  revision: 3e5af05fc70525db9e4604c172719b18d6029d4f
   specs:
     hardwired (0.3.2)
       nokogiri
       sinatra (>= 1.3.3)
       tilt
+
+GIT
+  remote: git://github.com/populr/less.rb.git
+  revision: f50c28b9faba94f195e0a0c6484967a96a9b325e
+  branch: v2.2.2-less1.3.3
+  submodules: true
+  specs:
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+
+GIT
+  remote: git://github.com/slim-template/slim.git
+  revision: 4b4ecd56d6a335786f5c9f99efe12f54dbe24162
+  specs:
+    slim (2.0.0.pre.5)
+      temple (~> 0.6.2)
+      tilt (~> 1.3.3)
 
 GEM
   remote: http://rubygems.org/
@@ -16,13 +40,13 @@ GEM
     columnize (0.3.6)
     commonjs (0.2.6)
     daemons (1.1.9)
-    debugger (1.3.0)
+    debugger (1.3.1)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
-      debugger-ruby_core_source (~> 1.1.7)
+      debugger-ruby_core_source (~> 1.1.8)
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
-    debugger-ruby_core_source (1.1.7)
+    debugger-ruby_core_source (1.1.8)
     erubis (2.7.0)
     eventmachine (1.0.0)
     honeybadger (1.5.0)
@@ -30,22 +54,18 @@ GEM
       json
     i18n (0.6.1)
     json (1.7.6)
-    less (2.2.2)
-      commonjs (~> 0.2.6)
     libv8 (3.11.8.13)
     listen (0.7.2)
     multi_json (1.5.0)
     nokogiri (1.5.6)
-    rack (1.5.1)
+    rack (1.5.2)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-protection (1.3.2)
       rack
     rb-fsevent (0.9.3)
-    rdiscount (1.6.8)
+    rdiscount (2.0.7)
     ref (1.0.2)
-    rerun (0.7.1)
-      listen
     sass (3.2.5)
     shotgun (0.9)
       rack (>= 1.0)
@@ -53,10 +73,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
-    slim (1.3.6)
-      temple (~> 0.5.5)
-      tilt (~> 1.3.3)
-    temple (0.5.5)
+    temple (0.6.2)
     therubyracer (0.11.3)
       libv8 (~> 3.11.8.12)
       ref
@@ -74,13 +91,13 @@ DEPENDENCIES
   erubis
   hardwired!
   honeybadger
-  less
+  less!
   rack-cache
   rb-fsevent
   rdiscount
-  rerun
+  rerun!
   sass
   shotgun
-  slim
+  slim!
   therubyracer
   thin

@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 ruby "1.9.3"
 
-gem 'slim'
+gem 'slim', :git => "git://github.com/slim-template/slim.git"
 gem 'rdiscount'
 gem 'rack-cache'
 
 gem 'therubyracer' # jS V8 engine - Required for 'less'
-gem 'less'
+gem 'less', :git => "git://github.com/populr/less.rb.git", :submodules => true, :branch => "v2.2.2-less1.3.3"
 
 gem 'sass'
 gem 'erubis'
@@ -16,11 +16,11 @@ gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git"
 
 gem 'thin' #we use this for both development and production
 
-gem 'honeybadger'
+gem 'honeybadger', :group => :production
 
 
 gem "debugger", :group => :development
-gem "rerun", :group => :development
+gem "rerun", :git => "git://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
 
