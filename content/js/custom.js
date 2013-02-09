@@ -12,16 +12,14 @@ jQuery(document).ready(function($){
 	
 	$('.clients-carousel').flexslider({
 	    animation: "slide",
-		easing: "swing",
+			easing: "swing",
 	    animationLoop: true,
-	    itemWidth: 1,
-	    itemMargin: 1,
-	    minItems: 1,
-	    maxItems: 8,
-		controlNav: false,
-		directionNav: false,
-		move: 2
-      });
+	    maxItems: 7,
+	    itemWidth:164,
+			controlNav: false,
+			directionNav: false,
+			move: 2
+     });
 
 });
 

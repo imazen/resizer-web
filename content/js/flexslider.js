@@ -366,6 +366,9 @@
         }
         
         function onTouchEnd(e) {
+          // finish the touch by undoing the touch session
+          el.removeEventListener('touchmove', onTouchMove, false);
+          
           if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
             var updateDx = (reverse) ? -dx : dx,
                 target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
@@ -373,11 +376,9 @@
             if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
               slider.flexAnimate(target, vars.pauseOnAction);
             } else {
-              slider.flexAnimate(slider.currentSlide, vars.pauseOnAction, true);
+              if (!fade) slider.flexAnimate(slider.currentSlide, vars.pauseOnAction, true);
             }
           }
-          // finish the touch by undoing the touch session
-          el.removeEventListener('touchmove', onTouchMove, false);
           el.removeEventListener('touchend', onTouchEnd, false);
           startX = null;
           startY = null;
@@ -429,7 +430,7 @@
     // public methods
     slider.flexAnimate = function(target, pause, override, withSync, fromNav) {
       if (asNav && slider.pagingCount === 1) slider.direction = (slider.currentItem < target) ? "next" : "prev";
-
+      
       if (!slider.animating && (slider.canAdvance(target, fromNav) || override) && slider.is(":visible")) {
         if (asNav && withSync) {
           var master = $(vars.asNavFor).data('flexslider');
@@ -514,8 +515,22 @@
             });
           }
         } else { // FADE:
-          slider.slides.eq(slider.currentSlide).fadeOut(vars.animationSpeed, vars.easing);
-          slider.slides.eq(target).fadeIn(vars.animationSpeed, vars.easing, slider.wrapup);
+          if (!touch) {
+            slider.slides.eq(slider.currentSlide).fadeOut(vars.animationSpeed, vars.easing);
+            slider.slides.eq(target).fadeIn(vars.animationSpeed, vars.easing, slider.wrapup);
+          } else {
+            slider.slides.eq(slider.currentSlide).css({ "opacity": 0, "zIndex": 1 });
+            slider.slides.eq(target).css({ "opacity": 1, "zIndex": 2 });
+            
+            slider.slides.unbind("webkitTransitionEnd transitionend");
+            slider.slides.eq(slider.currentSlide).bind("webkitTransitionEnd transitionend", function() {
+              // API: after() animation Callback
+              vars.after(slider);
+            });
+            
+            slider.animating = false;
+            slider.currentSlide = slider.animatingTo;
+          }
         }
         // SMOOTH HEIGHT:
         if (vars.smoothHeight) methods.smoothHeight(vars.animationSpeed);
@@ -661,7 +676,13 @@
         }
       } else { // FADE: 
         slider.slides.css({"width": "100%", "float": "left", "marginRight": "-100%", "position": "relative"});
-        if (type === "init") slider.slides.eq(slider.currentSlide).fadeIn(vars.animationSpeed, vars.easing);
+        if (type === "init") {
+          if (!touch) {
+            slider.slides.eq(slider.currentSlide).fadeIn(vars.animationSpeed, vars.easing);
+          } else {
+            slider.slides.css({ "opacity": 0, "display": "block", "webkitTransition": "opacity " + vars.animationSpeed / 1000 + "s ease", "zIndex": 1 }).eq(slider.currentSlide).css({ "opacity": 1, "zIndex": 2});
+          }
+        }
         // SMOOTH HEIGHT:
         if (vars.smoothHeight) methods.smoothHeight();
       }
@@ -812,7 +833,7 @@
     video: false,                   //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
     
     // Primary Controls
-    controlNav: false,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+    controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
     directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
     prevText: "Previous",           //String: Set the text for the "previous" directionNav item
     nextText: "Next",               //String: Set the text for the "next" directionNav item
@@ -861,7 +882,7 @@
         if ($slides.length === 1) {
           $slides.fadeIn(400);
           if (options.start) options.start($this);
-        } else if ($this.data('flexslider') === undefined) {
+        } else if ($this.data('flexslider') == undefined) {
           new $.flexslider(this, options);
         }
       });
