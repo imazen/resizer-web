@@ -1,3 +1,6 @@
+require 'base64'
+require 'time'
+
 #Set the root directory
 Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 
@@ -68,8 +71,87 @@ class Site < Hardwired::Bootstrap
        def editions
         Hardwired::Index.enum_files { |p| p.flag?(:edition)}.to_a.sort_by { |i| i.meta.sort_field || 0 }
       end
+
+
+      def optimize_js(options, &block)
+        Hardwired::JsOptimize.filter_includes(options,block.call)
+      end 
+
+
     end
+
+
+    get '/alljs/:scripts' do |scripts|
+      scripts = scripts.split(',').map{|s| Base64.urlsafe_decode64(s)}
+
+ 
+
+      session = Rack::Test::Session.new(Site)
+      combined = scripts.map { |path|
+        result = session.get(path)
+        if result.body.respond_to?(:force_encoding)
+          response_encoding = result.content_type.split(/;\s*charset\s*=\s*/).last.upcase rescue 'ASCII-8BIT'
+          result.body.force_encoding(response_encoding).encode(Encoding.default_external || 'ASCII-8BIT')  if result.status == 200
+        else
+          result.body  if result.status == 200
+        end
+      }.join("\n")
+
+      content_type "text/javascript"
+      last_modified Time.new(request["m"])
+      cache_for 60 * 60 * 24 * 30 #1 month
+      combined
+
+    end 
 end
+
+module Hardwired
+  class JsOptimize
+    def self.filter_includes(options = {:defer => true}, fragment)
+      require 'nokogiri'
+      dom = Nokogiri::HTML::fragment(fragment)
+      scripts = []
+      mod_dates = []
+      dom.css('script').each do |i|
+        url = i["src"]
+        next if url.start_with?("http") || url.start_with?("//")
+        try_urls = [url.sub(/(?<!min)\.js\Z/i,".min.js"),url.sub(/(?<!min)\.js\Z/i,"-min.js"), url]
+        mod_date = nil 
+        try_urls.each do |u|
+          begin 
+            mod_date = File.mtime(Hardwired::Paths.content_path(u))
+            url = u
+            p url
+            p mod_date
+            break
+          rescue
+            next
+          end
+        end
+        next if mod_date == nil 
+
+        mod_dates << mod_date
+        scripts << url
+        i.remove
+      end 
+
+      avg_mod_date = mod_dates.map{|d| d.to_f}.reduce(:+).to_f / mod_dates.size
+
+      sNode = Nokogiri::XML::Node.new('script',dom)
+      sNode['defer'] = "defer" if options[:defer]
+      sNode['async'] = "true" if options[:async]
+      sNode['src'] = "/alljs/" + scripts.map{|s| Base64.urlsafe_encode64(s)}.join(',') + "?m=" + Time.at(avg_mod_date).to_s
+
+
+      sNode.to_html + dom.to_html
+
+
+
+    end 
+
+
+  end
+end 
 
 module Hardwired
   class Template
@@ -78,7 +160,7 @@ module Hardwired
     end
 
     def default_layout
-      Paths.layout_subfolder +  (meta.bundle ? '/plugin_page' : '/page')
+      Paths.layout_subfolder +  ((meta.edition || meta.bundle) ? '/plugin_page' : '/page')
     end
 
     def bundle_name
