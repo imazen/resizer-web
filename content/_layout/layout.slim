@@ -26,7 +26,10 @@ html(lang="en" class="no-js")
     link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Economica:700,400italic|Droid+Serif|Boogaloo' 
 
     /[if IE 9]
-      link href="css/styleie9.css" rel="stylesheet"
+      link href="/css/styleie9.css" rel="stylesheet"
+
+    /[if IE 7]
+      link href="/css/less/font-awesome-ie7.css"
 
     - if page.lib? :pricer
       link rel="stylesheet" href="/css/pricer.css"
@@ -48,7 +51,7 @@ html(lang="en" class="no-js")
         #page-title-inner
           .container
             h2
-              i class="ico-white ico-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "pen"}"
+              i class="icon-white icon-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "file-alt"}"
               == page.heading
 
     #wrapper
@@ -58,46 +61,42 @@ html(lang="en" class="no-js")
 
     == partial :search
 
+    == optimize_js :defer => true do
+      script src="/js/jquery-1.9.1.js"
+      script src="/js/jquery-migrate-1.1.0.js"
 
-    <script src="/js/jquery-1.8.2.js"></script>
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/isotope.js"></script>
-    <script src="/js/jquery.imagesloaded.js"></script>
-    <script src="/js/flexslider.js"></script>
-    <script src="/js/carousel.js"></script>
-    <script src="/js/jquery.cslider.js"></script>
-    <script src="/js/slider.js"></script>
-    <script src="/js/fancybox.js"></script>
-    <script defer="defer" src="/js/script.js"></script>
-    <script defer="defer" src="/js/custom.js"></script>
+      script src="/js/bootstrap.js"
+      script src="/js/isotope.js"
+      script src="/js/jquery.imagesloaded.js"
+      script src="/js/flexslider.js"
+      script src="/js/carousel.js"
+      script src="/js/jquery.cslider.js"
+      script src="/js/slider.js"
+      script src="/js/fancybox.js"
+      script src="/js/script.js"
+      script src="/js/custom.js"
 
-    script src="/js/highlight/highlight.pack.js"
+      script src="/js/highlight/highlight.pack.js"
 
-    - if page.lib?("bxSlider")
-      script src="/js/jquery.bxSlider.min.js"
+      - if page.lib?("bxSlider")
+        script src="/js/jquery.bxSlider.min.js"
 
-    - if page.lib?("jtools")
-      script src="http://cdn.jquerytools.org/1.2.6/tiny/jquery.tools.min.js"
+      - if page.lib?("jtools")
+        script src="http://cdn.jquerytools.org/1.2.6/tiny/jquery.tools.min.js"
 
-    - if page.lib?("tinybox")
-      script src="/js/tinybox.js"
+      - if page.lib?("tinybox")
+        script src="/js/tinybox.js"
 
-    - if page.lib?("demo")
-      script src="/js/demo.js"
+      - if page.lib?("demo")
+        script src="/js/demo.js"
+
+      - if page.lib?("ejunkie")
+        script src='http://www.e-junkie.com/ecom/box.js' 
 
     - if page.lib?("uservoice")
-      javascript:
-        (function() {
-          var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-          uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-        })();
-
-    - if page.lib?("ejunkie")
-      script src='http://www.e-junkie.com/ecom/box.js' 
+      script async="true" defer="defer" src="//widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js"
 
     - if page.lib?("plusone")
-      / Place this tag in your head or just before your close body tag 
-      script src="https://apis.google.com/js/plusone.js"
+      script async="true" defer="defer" src="https://apis.google.com/js/plusone.js"
 
 
