@@ -30,7 +30,7 @@ Layout: false
 #footer
   .container
     .row
-      .span3
+      .span4
         h3 About
         markdown:
           ImageResizer is the result of [6 years of continual refinement](/history), with a focus on security, stability, and image quality. Thousands of popular websites rely on ImageResizer; some with millions of pageviews each day, like [Sierra Trading Post, MSN, and eBay](/testimonials).
@@ -39,70 +39,41 @@ Layout: false
 
           Don't doom your site to inevitable instabiliy by [using flawed code from the internet](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Our core library is compact, free, and well-tested. `Install-Package ImageResizer`.
 
-      .span3.hidden-tablet.hidden-phone
-        h3 Photo Stream
-
-        .flickr-widget
-          script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08"
-          .clear
-      .span6
+      .span4
         h3 Tell your friends and co-workers
-        p Clicking the Google Plus icon will help more people find us, which is good for everyone. 
-        ul.social-grid
-          li
-            .social-item
-              .social-info-wrap
-                .social-info
-                  .social-info-front.social-twitter
-                    a href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank"
-                  .social-info-back.social-twitter-hover
-                    a href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank"
-          li
-            .social-item
-              .social-info-wrap
-                .social-info
-                  .social-info-front.social-facebook
-                    a href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank"
-                  .social-info-back.social-facebook-hover
-                    a href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank"
-          li
-            .social-item
-              .social-info-wrap
-                .social-info
-                  .social-info-front.social-googleplus
-                    a href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"
-                  .social-info-back.social-googleplus-hover
-                    a href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"
-          li
-            .social-item
-              .social-info-wrap
-                .social-info
-                  .social-info-front.social-linkedin
-                    a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank"
-                  .social-info-back.social-linkedin-hover
-                    a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank"                        
+        - if page.lib?('plusone')
+          p Help more people find us; click the Google Plus icon.
+          .g-plusone  data-href="http://imageresizing.net/"
+        - else
+          p
+            a href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank" Click here to like us on Google Plus
+            | - this makes it easier for other people to find us.
+
+        h3 Share
+        #social-r.tooltips
+          a.facebook href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank" rel="tooltop" Facebook
+          a.googleplus href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"  rel="tooltop" Google+
+          a.linkedin href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank" rel="tooltop" LinkedIn
+          a.twitter href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank" rel="tooltop" Twitter
+          a.stumbleupon href="http://www.stumbleupon.com/submit?url=http://imageresizing.net&amp;title=RESTful Image Processing" target="_blank" rel="tooltop" StumbleUpon
+          .clear
+        h3 Follow
+        #social.tooltips
+          a.twitter href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank" rel="tooltop" Twitter
+
+      .span4
+        h3 Contact
+        markdown:
+          [We encourage feedback and feature requests on our UserVoice site, where others can vote on your proposals](http://resizer.uservoice.com/forums/108373-image-resizer).
+
+          [For support requests, visit our support page, which explains how to generate a diagnostics page and get free support on StackOverflow](/support). 
+
+          We provide free support for all bug-related requests, and [**offer a $5-$50 reward** for discovering a bug (details)](/support). 
+
+          *Please* reserve on-page comments for questions and clarifications *related to to the current page*; in most cases, it's *not* the appropriate place to ask for support.
+
+                
      
-        markdown: 
-          Have ideas or feedback? [Share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
-
-        
-        
-        form#newsletter.hidden-tablet.hidden-phone method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" accept-charset="UTF-8" onsubmit="return verifyRequired('newsletter');"
-          input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou"
-          input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html"
-          input type="hidden" name="listid" value="29803"
-          input type="hidden" name="specialid:29803" value="LH6H"
-          input type="hidden" name="clientid" value="905228"
-          input type="hidden" name="formid" value="2612"
-          input type="hidden" name="reallistid" value="1"
-          input type="hidden" name="doubleopt" value="0"
-
-          h3 Get e-mailed when an important upgrade is released
-          p Average frequency 8 per year - we don't share.
-
-          label for="fields_email" @:
-          input type="text" name="fields_email"
-          input type="submit" name="submit" value="submit"
 
 #copyright
   .container
