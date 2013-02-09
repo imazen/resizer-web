@@ -1,8 +1,14 @@
 require 'bundler/setup'
 Bundler.require(:default)
 
+if defined?(Rack::PerftoolsProfiler)
+  require 'rack/perftools_profiler'
+  use ::Rack::PerftoolsProfiler, :default_printer => 'gif'
+end 
+
 use Rack::Cache
 use Rack::ETag
+
 
 require 'hardwired/rack_deflater'
 use Hardwired::Deflater
