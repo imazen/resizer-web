@@ -49,8 +49,8 @@ h1 News
       .title
         h3 Articles by Year
       ul.links-list-alt
-        - for year in index.posts.map { |p| p.date.year }.uniq
-          li class={@y==year && 'active' || ''}
+        - for year in index.posts.map{ |p| p.date.year }.uniq
+          li class=(@y==year && 'active' || '')
             a href="/blog/#{year}"  #{year}
     .widget
       .title
@@ -58,11 +58,11 @@ h1 News
       ul.links-list-alt
         - for tag in index.post_tags
           li
-            a href="/blog/tags/#{tag}" class={@t==tag && 'active' || ''} #{tag}
+            a href="/blog/tags/#{tag}" class=(@t==tag && 'active' || '') #{tag}
     .widget
       .title
         h3 Tags
       .tags
         - for tag in index.post_tags
-          a href="/blog/tags/#{tag}" class={@t==tag && 'active' || ''} #{tag}
+          a href="/blog/tags/#{tag}" class=(@t==tag && 'active' || '') #{tag}
 
