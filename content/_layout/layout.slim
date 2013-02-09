@@ -25,8 +25,6 @@ html(lang="en" class="no-js")
 
     link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Economica:700,400italic|Droid+Serif|Boogaloo' 
 
-    /[if lt IE 9]
-      script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
     /[if IE 9]
       link href="css/styleie9.css" rel="stylesheet"
 
@@ -34,6 +32,11 @@ html(lang="en" class="no-js")
       link rel="stylesheet" href="/css/pricer.css"
 
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
+
+
+    /[if lt IE 9]
+      script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
+      
     == partial :analytics
   body
     == partial :header
