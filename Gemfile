@@ -21,7 +21,7 @@ gem 'rack-test'
 
 gem 'honeybadger', :group => :production
 
-
+gem 'yui-compressor'
 
 gem 'perftools.rb', :group => :development
 gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler', :group => :development
