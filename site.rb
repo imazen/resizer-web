@@ -86,28 +86,35 @@ class Site < Hardwired::Bootstrap
 
  
 
+      compressor = defined?(YUI) && defined?(YUI::JavaScriptCompressor) && YUI::JavaScriptCompressor.new :munge => false
+
       session = Rack::Test::Session.new(Site)
       combined = scripts.map { |path|
+        content = nil
         result = session.get(path)
         if result.body.respond_to?(:force_encoding)
           response_encoding = result.content_type.split(/;\s*charset\s*=\s*/).last.upcase rescue 'ASCII-8BIT'
-          result.body.force_encoding(response_encoding).encode(Encoding.default_external || 'ASCII-8BIT')  if result.status == 200
+          content = result.body.force_encoding(response_encoding).encode(Encoding.default_external || 'ASCII-8BIT')  if result.status == 200
         else
-          result.body  if result.status == 200
+          content = result.body  if result.status == 200
         end
+        path.end_with?("min.js") || dev? ? content : compressor ? compressor.compress(content) : content
+
       }.join("\n")
 
       content_type "text/javascript"
       last_modified Time.new(request["m"])
       cache_for 60 * 60 * 24 * 30 #1 month
       combined
-
     end 
 end
 
 module Hardwired
   class JsOptimize
+    @@include_cache = {}
     def self.filter_includes(options = {:defer => true}, fragment)
+
+      return @@include_cache[fragment] if @@include_cache[fragment]
       require 'nokogiri'
       dom = Nokogiri::HTML::fragment(fragment)
       scripts = []
@@ -143,8 +150,10 @@ module Hardwired
       sNode['src'] = "/alljs/" + scripts.map{|s| Base64.urlsafe_encode64(s)}.join(',') + "?m=" + Time.at(avg_mod_date).to_s
 
 
-      sNode.to_html + dom.to_html
+      result = sNode.to_html + dom.to_html
 
+      @@include_cache[fragment] = result
+      result
 
 
     end 
