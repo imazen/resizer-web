@@ -131,7 +131,7 @@ jQuery(document).ready(function($){
 	
 	$('#da-slider').cslider({
 		autoplay	: true,
-		bgincrement	: 12.5
+		bgincrement	: 14.285
 	});
 
 });
