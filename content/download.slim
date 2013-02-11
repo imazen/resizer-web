@@ -9,43 +9,47 @@ h1
   | Download 
   = releases.first.heading
 
-form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();"
-  input type="hidden" name="redirect" value=latest_release.meta.fullfile
-  input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html"
-  h3 style="margin-bottom:0" Notify me when important updates are available
-  p style="margin-top:10px"
-    | Email: 
-    input type="text" name="fields_email"
-    |  &nbsp; 
-    button type="submit" name="Submit" class="btn btn-primary"
-      | Subscribe and Download V#{latest_release.meta.shortversion} (avg 8 per year)
-  
-  input type="hidden" name="listid" value="29803"
-  input type="hidden" name="specialid:29803" value="LH6H"
-  input type="hidden" name="clientid" value="905228"
-  input type="hidden" name="formid" value="2612"
-  input type="hidden" name="reallistid" value="1"
-  input type="hidden" name="doubleopt" value="0"
+.row
+  .span8
+
+    form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2612" accept-charset="UTF-8" onsubmit="return verifyRequired2612();"
+      input type="hidden" name="redirect" value=latest_release.meta.fullfile
+      input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html"
+      h3 style="margin-bottom:0" Notify me when important updates are available
+      p style="margin-top:10px"
+        | Email: 
+        input type="text" name="fields_email"
+        |  &nbsp; 
+        button type="submit" name="Submit" class="btn btn-primary"
+          | Subscribe and Download V#{latest_release.meta.shortversion} (avg 8 per year)
+      
+      input type="hidden" name="listid" value="29803"
+      input type="hidden" name="specialid:29803" value="LH6H"
+      input type="hidden" name="clientid" value="905228"
+      input type="hidden" name="formid" value="2612"
+      input type="hidden" name="reallistid" value="1"
+      input type="hidden" name="doubleopt" value="0"
 
 
-p style="margin-top:10px;font-size:10px; color:gray;margin-bottom:0"
-	| If you've already subscribed, use this link instead:
-p style="margin:0"
-  a href=latest_release.meta.fullfile class="btn"
-    | Download V#{latest_release.meta.shortversion} source, binaries, plugins, and sample code (15MB)
+    p style="margin-top:10px;font-size:10px; color:gray;margin-bottom:0"
+    	| If you've already subscribed, use this link instead:
+    p style="margin:0"
+      a href=latest_release.meta.fullfile class="btn"
+        | Download V#{latest_release.meta.shortversion} source, binaries, plugins, and sample code (15MB)
 
-p style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0"
-  | This version includes 
-  a href=releases.first.path
-    == latest_release.meta_summary
-    | . Click for release notes.
+    p style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0"
+      | This version includes 
+      a href=releases.first.path
+        == latest_release.meta_summary
+        | . Click for release notes.
 
-markdown:
-  [Show previous releases](/releases).
+    markdown:
+      [Show previous releases](/releases).
+  .span4
+    markdown:
+      It's only happened once (a long time ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
 
-  It's only happened once (a long time ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
-
-  To encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$50 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $50 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`. Only the latest version of the product is eligible.
+      To encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$50 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $50 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`. Only the latest version of the product is eligible.
 
 
 / Google Code for View download page Conversion Page
