@@ -71,7 +71,7 @@ hr
     ul.arrow_list
       li: a href="/docs/install/aspnet" Installation Guide for ASP.NET
       li: a href="/docs/nuget" Install with NuGet
-      li: a href="/docs/troubleshoote" Troubleshoot common issues
+      li: a href="/docs/troubleshoot" Troubleshooting guide
 
     a href="/docs" 
       | more...
@@ -79,7 +79,7 @@ hr
     h3 Learn
     ul.arrow_list
       li: a href="/docs/basics" Use the URL API
-      li: a href="/docs/troubleshoote" Troubleshoot common issues
+      li: a href="/docs/troubleshoot" Troubleshooting guide
 
     a href="/docs" 
       | more...
@@ -93,6 +93,74 @@ hr
     a href="/blog" 
       | more...
 
+
+
+.row
+  .span9
+    .title
+      h3 Showcase
+    .row
+      .span3
+        .picture
+          a href="http://collective.li" rel="image" title="collective.li"
+            img src="/img/logos/Banner270.jpg"
+            .image-overlay-zoom
+        .item-description
+          h4: a(href="http://collective.li") collective.li
+          p 
+            | Collective.li: Share your life magazine.
+      .span3
+        .picture
+           a href="http://london.msn.co.uk/" rel="image" title="MSN London Olympic Games 2012"
+            img src="/img/logos/olympics-270.jpg"
+            .image-overlay-zoom
+        .item-description
+          h4: a(href="http://london.msn.co.uk/") MSN London Olympic Games 2012 
+          p ImageResizer is an integral part of MSN UK's responsive website for the Olympic Games. 
+
+          a href="http://www.netmagazine.com/features/how-we-built-msn-uks-responsive-olympics-site" How the site was built
+      .span3
+        .picture
+          a href="http://www.bilbasen.dk" rel="image" title="example goes here"
+            img src="/img/logos/ebay_dk_270.jpg"
+            .image-overlay-zoom
+        .item-description
+          h4
+            a(href="http://www.bilbasen.dk")
+              | eBay Denmark: bilbasen.dk
+          p eBay Denmark's car division receives over 20 million requests per day - all dynamically handled by ImageResizer 
+  .span3
+    .testimonial-container
+      .title
+        h3 Testimonials
+      .testimonials-carousel data-autorotate="3000"
+        ul.carousel
+          li.testimonial
+            .testimonials
+              | ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. - 
+              a href="http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" Hanselminutes #313
+            .testimonials-bg
+            .testimonials-author
+              a href="http://hanselman.com"
+                | Scott Hanselman  
+              span
+                | , Web Platform Team, Microsoft
+
+          li.testimonial
+            .testimonials
+              | We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez. ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable. I highly recommend ImageResizer for any dynamic imaging needs.
+            .testimonials-bg
+            .testimonials-author
+              | Craig Boal, 
+              span Web Development Manager
+          li.testimonial
+            .testimonials
+              p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years. 
+              p Thanks Nathanael for creating such a wonderful product.
+            .testimonials-bg
+            .testimonials-author
+              | Dorian Collier, 
+              span Deesea
 
 .row
   .icons-box-vert-container
@@ -127,6 +195,8 @@ hr
           
         .clear
   .clear
+
+
 
 .row
   .icons-box-vert-container
@@ -164,6 +234,23 @@ hr
         .clear
   .clear
 
+h3 Who uses ImageResizer?
+.clients-carousel
+  ul.slides.clients
+    li: img src="/img/logos/collectiveli_256.png"
+    li: img src="/img/logos/logo_mindrevolution_black.png"
+    li: img src="http://s.stpost.com/img/sierra-logo.gif"
+    li: img src="http://www.eksponent.com/Content/images/logo.png"
+    li: img src="/img/logos/pmg-austin.png"
+    li: img src="/img/logos/repzio-logo-144.gif"
+    li: img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Microsoft.svg/200px-Microsoft.svg.png"
+    li: img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/EBay_logo.png/320px-EBay_logo.png"
+    li: img src="/img/logos/publishgreen.png"
+    li: img src="/img/logos/flavorplate.png"
+    li: img src="/img/logos/MizuniLogoR_933x216.png"
+    li: img src="/img/logos/SoulRebornLogo.png"
+hr
+
 .row
   .icons-box-vert-container
     .span4
@@ -197,87 +284,5 @@ hr
   .clear
 
 
-
-hr
-
-.row
-  .span9
-    .title
-      h3 Showcase
-    .row
-      .span3
-        .picture
-          a href="/img/logos/Banner780.jpg" rel="image" title="MSN London Olympic Games 2012"
-            img src="/img/logos/Banner270.jpg"
-            .image-overlay-zoom
-        .item-description
-          h4: a(href="#"): MSN Olympic Games 2012 Responsive
-          p Description of demo site
-          a href="http://www.netmagazine.com/features/how-we-built-msn-uks-responsive-olympics-site" How it was built
-      .span3
-        .picture
-           a href="/img/logos/Banner780.jpg" rel="image" title="MSN London Olympic Games 2012"
-            img src="/img/logos/Banner270.jpg"
-            .image-overlay-zoom
-        .item-description
-          h4: a(href="#"): FluentExtensions
-          p Description of demo site
-      .span3
-        .picture
-          a href="http://placehold.it/270x180" rel="image" title="example goes here"
-            img src="/img/logos/Banner270.jpg"
-            .image-overlay-zoom
-        .item-description
-          h4: a(href="#"): StudioJS
-          p Description of demo site
-  .span3
-    .testimonial-container
-      .title
-        h3 Testimonials
-      .testimonials-carousel data-autorotate="3000"
-        ul.carousel
-          li.testimonial
-            .testimonials
-              | ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. - 
-              a href="http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" Hanselminutes #313
-            .testimonials-bg
-            .testimonials-author
-              a href="http://hanselman.com"
-                | Scott Hanselman  
-              span
-                | , Web Platform Team, Microsoft
-
-          li.testimonial
-            .testimonials
-              | We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez. ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable. I highly recommend ImageResizer for any dynamic imaging needs.
-            .testimonials-bg
-            .testimonials-author
-              | Craig Boal, 
-              span Web Development Manager
-          li.testimonial
-            .testimonials
-              p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years. 
-              p Thanks Nathanael for creating such a wonderful product.
-            .testimonials-bg
-            .testimonials-author
-              | Dorian Collier, 
-              span Deesea
-
-hr
-h3 Who uses ImageResizer?
-.clients-carousel
-  ul.slides.clients
-    li: img src="/img/logos/collectiveli_256.png"
-    li: img src="/img/logos/logo_mindrevolution_black.png"
-    li: img src="http://s.stpost.com/img/sierra-logo.gif"
-    li: img src="http://www.eksponent.com/Content/images/logo.png"
-    li: img src="/img/logos/pmg-austin.png"
-    li: img src="/img/logos/repzio-logo-144.gif"
-    li: img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Microsoft.svg/200px-Microsoft.svg.png"
-    li: img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/EBay_logo.png/320px-EBay_logo.png"
-    li: img src="/img/logos/publishgreen.png"
-    li: img src="/img/logos/flavorplate.png"
-    li: img src="/img/logos/MizuniLogoR_933x216.png"
-    li: img src="/img/logos/SoulRebornLogo.png"
 
 
