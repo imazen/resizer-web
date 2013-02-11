@@ -2,6 +2,7 @@ Menu: Docs
 Title: Documentation - Image Resizer V3
 Libs: -comments, plusone
 Layout: plugin_page
+Icon: book
 
 #Documentation
 
