@@ -86,7 +86,7 @@ class Site < Hardwired::Bootstrap
 
  
 
-      compressor = defined?(YUI) && defined?(YUI::JavaScriptCompressor) && YUI::JavaScriptCompressor.new :munge => false
+      compressor = defined?(YUI) && defined?(YUI::JavaScriptCompressor) && YUI::JavaScriptCompressor.new(:munge => false)
 
       session = Rack::Test::Session.new(Site)
       combined = scripts.map { |path|
