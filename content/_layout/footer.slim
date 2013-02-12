@@ -39,34 +39,36 @@ Layout: false
 
           Don't doom your site to inevitable instabiliy by [using flawed code from the internet](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Our core library is compact, free, and well-tested. `Install-Package ImageResizer`.
 
-      .span4
-        h3 Tell your friends and co-workers
-        - if page.lib?('plusone')
-          p Help more people find us; click the Google Plus icon.
-          .g-plusone  data-href="http://imageresizing.net/"
-        - else
-          p
-            a href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank" Click here to like us on Google Plus
-            | - this makes it easier for other people to find us.
 
-        h3 Share
+      .span4
+        h3 We're on GitHub
+        ul.star_list
+          li: a href="https://github.com/imazen/" github.com/ Imazen
+          li: a href="https://github.com/nathanaeljones/" github.com/ Nathanael Jones
+
+
+        h3 You're our sales team
+        p We don't advertise, and we don't have sales staff. We rely on word-of-mouth and personal reccomendation. 
+        p Tell your friends; preferably in person, but we've got some clichè social icons for you to click as well.
+
+
+        - if page.lib?('plusone')
+          .g-plusone  data-href="http://imageresizing.net/"
+
         #social-r.tooltips
-          a.facebook href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank" rel="tooltop" Facebook
           a.googleplus href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"  rel="tooltop" Google+
-          a.linkedin href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank" rel="tooltop" LinkedIn
           a.twitter href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank" rel="tooltop" Twitter
+          a.facebook href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank" rel="tooltop" Facebook
+          a.linkedin href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank" rel="tooltop" LinkedIn
           a.stumbleupon href="http://www.stumbleupon.com/submit?url=http://imageresizing.net&amp;title=RESTful Image Processing" target="_blank" rel="tooltop" StumbleUpon
           .clear
-        h3 Follow
-        #social.tooltips
-          a.twitter href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple image processing from the URL" target="_blank" rel="tooltop" Twitter
-
+      
       .span4
         h3 Contact
         markdown:
-          [We encourage feedback and feature requests on our UserVoice site, where others can vote on your proposals](http://resizer.uservoice.com/forums/108373-image-resizer).
+          We [encourage feedback and feature requests on our UserVoice site](http://resizer.uservoice.com/forums/108373-image-resizer), where others can vote on your proposals.
 
-          [For support requests, visit our support page, which explains how to generate a diagnostics page and get free support on StackOverflow](/support). 
+          For support requests, [visit our support page, which explains how to generate a diagnostics page and get free support on StackOverflow](/support). 
 
           We provide free support for all bug-related requests, and [**offer a $5-$50 reward** for discovering a bug (details)](/support). 
 
