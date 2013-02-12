@@ -1,0 +1,20 @@
+content_type: html
+layout: false
+flags: -sitemap
+
+doctype html
+html
+  head
+  body
+    table
+      - index.pages.select{ |p| !p.flag?('-sitemap') }.each do |p|
+        tr
+          td 
+            a href==url_for(p) 
+              == p.path
+          td style="width:300px"
+            a href==url_for(p) 
+              == p.heading
+          td 
+            div
+              == p.summary(self, 50)
