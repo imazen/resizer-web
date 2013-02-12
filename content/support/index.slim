@@ -44,25 +44,23 @@ h1 Support
 
 			Credit cards, PayPal, and Google Checkout are accepted.
 
-			<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=939690&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
-			Support Type<br/>
-			<select name="o1">
-			<option value="30 Minute QA">30 Minute QA ($70)</option>
-			<option value="1 Aided install + 30 Minute QA">1 Aided install + 30 Minute QA ($130)</option>
-			<option value="2 Aided installs + 30 Minute Q&amp;A">2 Aided installs + 30 Minute Q&amp;A ($190)</option>
-			<option value="Support Incident (Business)">Support Incident ($135)</option>
-			</select>
+		form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=939690&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8"
+			| Support Type
+			br
+			select name="o1"
+				option value="30 Minute QA" 30 Minute QA ($70)
+				option value="1 Aided install + 30 Minute QA" 1 Aided install + 30 Minute QA ($130)
+				option value="2 Aided installs + 30 Minute Q&amp;A" 2 Aided installs + 30 Minute Q&amp;A ($190)
+				option value="Support Incident (Business)" Support Incident ($135)
+			br
+			input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"
 
-			<input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
-			<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
-			</form>
+			a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"
+				img src="http://www.e-junkie.com/ej/ej_view_cart.gif" alt="View Cart"
 
-			<script language="javascript" type="text/javascript">
-			<!--
+		javascript: 
 			function EJEJC_lc(th) { return false; }
-			// -->
-			</script>
-			<script src='http://www.e-junkie.com/ecom/box.js' type='text/javascript'></script>
+		script src='http://www.e-junkie.com/ecom/box.js'
 		
 		h2 You may already qualify for Priority Support if you..
 
@@ -77,7 +75,7 @@ hr
 .row
 	.span6
 
-		h2 Bug bounty program
+		h2 id="bugbounty" Bug bounty program
 		markdown: 
 			We offer free support for all *bug-related* inquires, both through e-mail (**support@imageresizing.net**) and [StackOverflow](http://stackoverflow.com/questions/tagged/imageresizer).
 
