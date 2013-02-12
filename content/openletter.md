@@ -3,7 +3,7 @@ Summary: I'm disappointed, but hopeful.
 Libs: -comments, plusone
 Title: Open Letter to the .NET community
 
-## Open Letter to the .NET community, Jan 15, 2012
+# Open Letter to the .NET community, Jan 15, 2012
 
 Going open-source for a niche .NET product is a very risky move. I did it with the optimistic view that *at least 1 in 10 developers* would be honest enough to buy licenses for the paid plugins they use. With 100% customer satisfaction rate across thousands of users, I expected more loyalty. 
 
