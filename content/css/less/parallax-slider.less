@@ -718,13 +718,29 @@
 /* Media Queries
 ====================================================================== */
 
-/* Higher than 960 (desktop devices)
-====================================================================== */
-@media only screen and (min-width: 960px) {
 
+@media only screen and (min-width: 1200px)  {
 
+  .da-slide{
+    width:1404px;
+    margin-left:-702px;
+    left: 50%;
+    height:100%;
+  }
 
 }
+/* Higher than 960 (desktop devices)
+====================================================================== */
+@media only screen and (min-width: 960px) and (max-width: 1119px) {
+
+  .da-slide{
+    width:1152px;
+    margin-left:-576px;
+    left: 50%;
+    height:100%;
+  }
+}
+
 
 /* Tablet Portrait (devices and browsers)
 ====================================================================== */
@@ -739,7 +755,7 @@
   }
   
   .da-slide h2{
-    font-size: 56px;
+    font-size: 36px;
     width: 50%;
   } 
 }
