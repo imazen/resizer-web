@@ -20,8 +20,13 @@ jQuery(document).ready(function($){
 			directionNav: false,
 			move: 2
      });
+	
+	$('.testimonials-carousel').carousel({ 
+			namespace: "mr-rotato" // Defaults to “carousel”.
+	})
 
 });
+
 
 
 jQuery(document).ready(function($){
@@ -131,7 +136,8 @@ jQuery(document).ready(function($){
 	
 	$('#da-slider').cslider({
 		autoplay	: true,
-		bgincrement	: 14.285
+		bgincrement	: 14.285, 
+		interval: 5000
 	});
 
 });
