@@ -10,7 +10,7 @@ The image URL is **not** the same as the page URL. Screenshots of IE's broken im
 
 If you do not get a specific error message, you must enable detailed error messages on your ASP.NET site.
 
-If you have local access to the server, you can set the [customErrors mode](http://msdn.microsoft.com/en-us/library/h0hfz6fc.aspx) to RemoteOnly and access the URLs using 'localhost'.
+If you have local access to the server, you can set the [customErrors mode](http://msdn.microsoft.com/en-us/library/h0hfz6fc%28v=vs.100%29.aspx) to RemoteOnly and access the URLs using 'localhost'.
 
 Otherwise, you may need to temporarily set customErrors to Off, so you can get error messages from a remote location. Temporarily is a key word! Detailed error messages are considered a security risk and have enabled certain types of attacks to function. They should not be enabled for more than a few hours at most on a publicly accessible server.
 
