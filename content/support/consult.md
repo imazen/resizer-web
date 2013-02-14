@@ -1,4 +1,4 @@
-## Architecture advice and assisted installation
+# Architecture advice and assisted installation
 
 Developing a future-proof image management system isn't easy. A multitude of pitfalls and hidden costs exist, and nearly all the sample code and articles you'll find online will lead you straight into them. 
 
@@ -35,39 +35,4 @@ function EJEJC_lc(th) { return false; }
 It's best to purchase the session a day before you'd like to schedule it, so we can choose a time that is optimal for everyone. 
 
 Please download [TeamViewer light](http://s.ndj7.com) and have your ID and passcode ready when you call. 
-
-## Typical availability
-
-
-<script language="javascript">
-function isDstInEffect(off){
-	var d = new Date();
-	//get the start and end dates for dst:(these rules are US only)
-	var     y= d.getUTCFullYear(), countstart= 8, countend= 1,
-	dstart= new Date(Date.UTC(y, 2, 8, 2, 0, 0, 0)),
-	dend= new Date(Date.UTC(y, 10, 1, 2, 0, 0, 0));
-	while(dstart.getUTCDay()!== 0) dstart.setUTCDate(++countstart);
-	while(dend.getUTCDay()!== 0) dend.setUTCDate(++countend);
-
-	//get the GMT time for the localized dst start and end times:
-	//dstart.setUTCMinutes(off);
-	//dend.setUTCMinutes(off);
-
-	// if the date passed in is between dst start and dst end, adjust the offset and label:
-	return (dstart<= d && dend>= d);
-}
-var now = new Date();
-
-
-var edtOffset = isDstInEffect(-5 * 60) ? -4: -5;//-4, -5
-var localOffset = now.getTimezoneOffset() / -60;
-
-
-var a = (localOffset - edtOffset + 9) % 24;
-var b = (localOffset - edtOffset + 21) % 24;
-var mins =  now.getMinutes().toString(); 
-if (mins.length == 1) mins = mins + '0';
-
-document.write("Mon-Fri <strong>" + a + ":00 to " + b + ":00</strong> based on your estimated local time of " + now.getHours() + ":" + mins + ". This is 9am to 9pm EDT (my time zone).");
-</script>
 
