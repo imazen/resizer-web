@@ -65,7 +65,7 @@ You may reproduce and distribute copies of the Work or Derivative Works thereof 
 
 Examples of abuse:
 
-* Using a shared 'static assets domain' for the majority of images across more than 3 customer-facing domains, in order to escape additional licensing costs.
+* Using a shared 'static assets domain' for multiple unrelated customer-facing domains, in order to escape additional licensing costs.
 * Redistributing modifications that have a negative impact on the users, community, or Imazen. 
 
 ### 5. Marketing.
