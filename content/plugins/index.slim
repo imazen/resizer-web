@@ -1,0 +1,61 @@
+Title: Plugins - Image Resizer
+Libs: ejunkie, ejunkiecart, uservoice, -comments
+Template: plugin_page
+Aliases: /pl.. /plugin
+
+h1 Plugin Index
+
+.well 
+  a href="/plugins/editions/free" ImageResizer Essential Edition is free
+  | , and includes 19 plugins. Development of Essential edition is supported by purchases of the paid editions. 
+  | You can evaluate the paid editions locally, without time-limits, as they are included in the 
+  a href="/download" free download
+  | . You are required to purchase a license before deploying them publicly.
+
+
+.row
+  .span9
+    h2
+      a href="/plugins/editions/performance" Performance Edition 
+      | (11 plugins) - $249/domain
+    == index["/plugins/editions/performance"].body(self, {:hide_inherited_plugins => true})
+
+    h2
+      a href="/plugins/editions/creative" Creative Edition 
+      | (11 + 13 plugins) - $499/domain
+    == index["/plugins/editions/creative"].body(self, {:hide_inherited_plugins => true})
+
+    h2
+      a href="/plugins/editions/elite" Elite Edition 
+      | (11 + 13 + 6 plugins) - $849/enterprise
+    == index["/plugins/editions/elite"].body(self, {:hide_inherited_plugins => true})
+
+    h2
+      a href="/plugins/editions/free" Essential Edition 
+      | (17 plugins) - free
+    == index["/plugins/bundles/free"].body(self, {:hide_inherited_plugins => true})
+  .span3
+    form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1197635&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8"
+      h3 Which Edition?
+      select name="o1"
+        option value="Performance Edition (1 domain)" Performance Edition (1 domain)
+        option value="Creative Edition (1 domain)" Creative Edition (1 domain)
+        option value="Elite Edition (1 enterprise)" Elite Edition (1 enterprise)
+      br
+      input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"
+
+    
+
+    a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"
+      img src="http://www.e-junkie.com/ej/ej_view_cart.gif" alt="View Cart"
+
+    .info style="font-size:10px; color:#888888;line-height:1.3em"
+      | 100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>.
+      br
+      | All major credit cards accepted. 
+      br
+      | Processed by PayPal or Google Checkout
+
+.well
+  markdown: 
+    **Don't see the plugin or feature you need?** I offer 40% off my standard rate for [custom plugin development](/plugins/custom).
