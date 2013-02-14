@@ -14,7 +14,7 @@ For each &lt;element> in the following XML, look for the corresponding element i
 	<?xml version="1.0" encoding="utf-8" ?>
 	<configuration>
 		<configSections>
-			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" />
+			<section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" />
 		</configSections>
 
 		<resizer>
