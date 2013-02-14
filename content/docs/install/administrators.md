@@ -1,6 +1,6 @@
 # Guide for Server Administrators
 
-The Image Resizer IIS Module **requires no coding skills to install or use**. If you run into a problem installing it, [just email us for (free) help](/support)!
+The Image Resizer IIS Module **requires no coding skills to install or use**. 
 
 # Installing the HttpModule into an empty web site
 
