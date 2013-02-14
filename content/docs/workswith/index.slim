@@ -1,0 +1,146 @@
+Aliases: /docs/compatible
+
+h1 Blissfully compatible with practically everything
+
+.well
+  markdown:
+    Remember, ImageResizer is a web service, which means you can always [run it in standalone mode](/docs/workswith/standalone) if embedded mode isn't an option. Embedded mode means running in-process, inside an existing ASP.NET application, which is what we're referring to on this page.
+.row
+  .span3
+    h2 Image Storage Backends
+    ul.star_list
+      li Local files
+      li: a href="/plugins/s3reader": Amazon S3 - S3Reader plugin
+      li: a href="/plugins/azurereader2": Microsoft Azure Blob Storage
+      li: a href="/plugins/sqlreader": Microsoft SQL
+      li: a href="/plugins/mongoreader": MongoDB GridFS
+      li: a href="/plugins/remotereader": Anything accessible over HTTP (including Rackspace Cloud Files)
+      
+      markdown:
+        ImageResizer offers a simple API for connecting to arbitrary datastores based on virtual paths. 
+
+        At this time, there are no known datastores that are incompatible with the image resizer, although some may require a plugin to access. If you have a datastore not listed here, [read about custom plugin development](/plugins/custom)
+
+
+  .span3
+    h2 Content Delivery Networks
+    ul.star_list
+      li Amazon CloudFront
+      li Azure CDN
+      li CDNConnect
+      li Turbobytes
+      li Akami
+      li MaxCDN
+      li NetDNA
+      li BitGravity
+      li Level3
+      li Limelight
+      li Voxel
+    markdown:
+      Any true CDN (true CDNs support origin-pull) is compatible with ImageResizer. Ensure you enable querystring preservation, or use ImageResizer's semicolon syntax instead.
+
+      Rackspace Cloud Files is *not* a CDN. If you'd like them to *become* one, you [can vote for custom origin support here](http://feedback.rackspace.com/forums/71021-product-feedback/suggestions/1105435-add-the-origin-pull-feature-to-cloud-files).
+  .span3
+    h2 Content Management Systems
+    p All known ASP.NET content management systems support ImageResizer in embedded mode. Ruby, Python, or PHP content management systems (such as Wordpress) should use Standalone mode.
+    ul.star_list
+      li: a href="/docs/workswith/umbraco" Umbraco
+      li: a href="/docs/workswith/dotnetnuke" DotNetNuke
+      li: a href="/docs/workswith/orchard" Orchard
+      li: a href="/docs/workswith/ektron" Ektron (includes ImageResizer)
+      li: a href="/docs/workswith/episerver" EPiServer
+      li: a href="/docs/workswith/sitecore" Sitecore
+      li: a href="/docs/workswith/sitefinity" Sitefinity
+    p: strong You're CMS isn't here? That means you can follow the vanilla ASP.NET installation instructions.
+    p Over 30 CMSes include ImageResizer Essential edition - don't be suprised if your CMS already has it installed.
+
+  .span3
+    h2 Supported output formats
+    ul.star_list
+      li 24-bit JPEG
+      li 32-bit PNG
+      li 8-bit PNG (with PrettyGifs plugin)
+      li GIF (still and animated)
+      li 24 and 32-bit WebP, both lossy and lossless
+
+  .span3
+    h2 Supported input formats
+    ul.star_list
+      li JPEG (24-bit, 48-bit, and grayscale)
+      li PNG (24, 32, and 8-bit)
+      li GIF (still and animated)
+      li BMP
+      li WMF
+      li EMF
+      li WebP (with WebP plugin)
+      li RAW, CR2, NEF, RAF, DNG, MOS, KDC, DCR (These and following formats require FreeImageDecoder)
+      li XBM, XPM, TARGA, SGI, Sun RAS, PSD, PICT, PNG, PFM, PBM, PGM, PPM, PCX, MNG, Kodak PhotoCD, KOALA, JPEG-2000, JIF, JNG, IFF, ICO, Raw Fax G3, EXR, DDS, and Dr. Halo CUT
+      li With WicDecoder, any image supported by the operating system's installed codecs can be loaded
+  .span3
+    h2 Hosting providers
+    p 
+      | If possible, look for hosting that allows full trust. 
+      a href="/docs/workswith/mediumtrust" Medium Trust is support for most functionality, but not all
+    ul.star_list
+      li AppHarbor
+      li Azure
+      li Amazon EC2
+      li MaximumASP
+      li RackSpace (Full-trust only - they have a bad medium trust configuration)
+
+  .span3
+    h2 Host Operating Systems
+    ul.star_list
+      ul Windows Server 2003 SP1 or higher
+      ul Windows Server 2003 R2
+      ul Windows Server 2008
+      ul Windows Server 2012
+      ul Windows XP SP2 or higher
+      ul Windows Vista
+      ul Windows 7
+      ul Windows 8
+      ul Any version of linux (with Mono)*
+      ul Mac OS X 10.3 or higher (with Mono)*
+    p 
+      | *Not all plugins operate correctly within Mono, but we are constantly improving in this area.
+  .span3
+    h2 Web servers
+    ul.star_list
+      li IIS 5
+      li IIS 5.1
+      li IIS 6
+      li IIS 7
+      li IIS 7.5
+      li IIS 8
+      li Visual Studio Web Server (Cassini)
+      li 
+        | Nginx 
+        a href="http://www.mono-project.com/FastCGI_Nginx" (with FastCGI)
+      li LightHttpd
+      li Apache (with mod_mono)
+      li xsp
+
+
+
+markdown: 
+
+
+  ## Hosting providers
+
+  Any hosting provider will work, but many restrict ASP.NET permissions to the point where some external plugins can't run. Others just restrict (or don't provide enough) bandwidth, making image serving unbearably slow. 
+
+  Here's a few I've worked with.
+
+  * DiscountASP (100% compatible, but limited download bandwidth speed)
+  * MaximumASP (100% compatible, great company, great support)
+  * WebHost4Life (100% compatible,  but *very* limited download bandwidth speed. You must make support enable wildcard mapping, you can't do it through the control panel)
+  * RackSpace (RackSpace enforces very strict and highly erratic customized trust levels that can disable most plugins. However, some plans allow for full trust or allow you to fix their medium trust configuration. If you're getting a dedicated or virtual server, you'll probably be fine). If you're already stuck with RackSpace, I can still help you make the best of the situation, just contact support@imageresizing.net.
+  * Amazon EC2 (100% compatible, my personal choice)
+
+  I've also had success stories about dozens of other ISPs from hundreds of users. 
+
+  If your provider doesn't allow Full Trust, you may not be able to run the PrettyGifs plugin or some of the advanced plugins in the Creative edition, but all the core functionality should work fine. The Watermark and SimpleFilters will even work in low trust, so the Creative edition can still be useful in that situation.
+
+  So far, I've been able to resolve every ISP-related compatibility problem I've been notified of, with the exception of certain external plugins that intrinsically require full trust.
+
+
