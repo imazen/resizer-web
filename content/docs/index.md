@@ -10,7 +10,7 @@ Not finding what you're looking for? Try [searching the site](/search).
 
 ## Installation
 
-* [Getting started (home)](/)
+* [Installation Guide](/docs/install)
 * [Using the NuGet packages](/docs/nuget)
 * [ASP.NET MVC notes](/docs/mvc)
 * [Use the Resizer without ASP.NET](/docs/howto/use-without-asp-net)
