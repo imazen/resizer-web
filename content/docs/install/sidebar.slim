@@ -1,0 +1,27 @@
+layout: false
+Flags: hidden
+
+h2 Installation Guides
+ul.arrow_list
+  lii: a href="/docs/install" Installation Guide
+
+  li: a href="/docs/install/administrators" IIS Administrator Installation Guide
+  li: a href="/docs/install/aspnet" ASP.NET Installation Guide
+  li: a href="/docs/install/web-config" Web.config modification guide
+
+
+  li: a href="/docs/install/nuget" NuGet Notes
+  li: a href="/docs/install/classicmode" IIS6 and Classic Mode Notes
+
+  li: a href="/docs/install/com" COM Installation Guide
+
+  li: a href="/docs/workswith/mediumtrust" Medium Trust Notes
+
+
+  li: a href="/docs/troubleshoot" Troubleshooting Guide
+
+h2 CMS Notes
+ul.star_list
+  - index.pages_tagged("cms").each do |e|
+    li
+      a(href="#{e.path}")= e.heading
