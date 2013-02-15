@@ -1,7 +1,7 @@
-Append: /docs/install/generic
+Layout: install_page
+Tags: cms
 
-
-# ImageResizer and Umbraco
+# Umbraco and ImageResizer
 
 Umbraco 4.X, 5.X, and 6.0 are compatible with ImageResizer, and can use the standard installation steps
 

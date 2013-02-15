@@ -1,3 +1,5 @@
+Layout: install_page
+
 
 # Editing Web.Config
 

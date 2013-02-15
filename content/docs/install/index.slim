@@ -1,4 +1,4 @@
-append: /docs/install/generic
+Layout: install_page
 
 
 h1 Install ImageResizer in 2 easy steps (generally)
@@ -6,35 +6,35 @@ h1 Install ImageResizer in 2 easy steps (generally)
 
 
 .row
-  .span4
+  .span3
     h2 For NuGet users
 
     code Install-Package ImageResizer.MvcWebConfig
     p For more details, click "NuGet Installation Guide" below
 
-  .span4
+  .span3
     h2 For IIS Administrators
     markdown:
       We've prepared a [targeted guide for IIS administrators](/docs/install/administrators).
 
-  .span4
+  .span3
     h2 For Visual Studio
     markdown:
       Most Visual Studio users can take advantage of the *NuGet Installation Guide*. If you don't have NuGet, you can follow the *Manual Installation Guide* instead.
 
 .row
-  .span4
+  .span3
     h2 For Classic ASP users
     markdown:
       If you're using the URL API, standard installation is fine, and you can [follow the IIS administrator guide](/docs/install/administrators).
       If you want to use the COM API (boo!), [see the COM Installation Guide](/docs/install/com).
 
-  .span4
+  .span3
     h2 For PHP, Ruby, and Python users
     markdown:
       ImageResizer is a web service, so it works just as well from a separate web site - there's no need to run it in embedded mode.
       Create a standalone IIS (or mono) website and follow the XCopy installation steps.
-  .span4
+  .span3
     h2 For ASP.NET MVC users
     markdown:
       Standard installation steps can be used, although you should double-check that the `MvcRoutingShim` is installed.

@@ -1,3 +1,5 @@
+Layout: install_page
+
 
 # Installation guide for ASP.NET developers
 

@@ -1,4 +1,6 @@
-Append: /docs/install/generic
+Layout: install_page
+Tags: cms
+
 
 # Orchard and ImageResizer
 

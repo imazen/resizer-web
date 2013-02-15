@@ -1,6 +1,7 @@
-Append: /docs/install/generic
+Layout: install_page
+Tags: cms
 
-# ImageResizer and DotNetNuke
+# DotNetNuke and ImageResizer
 
 
 DotNetNuke users can follow the standard installation instructions; no special steps are required.

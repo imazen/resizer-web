@@ -1,5 +1,5 @@
-Append: /docs/install/generic
-
+Layout: install_page
+Tags: cms
 
 # Sitecore and ImageResizer
 
