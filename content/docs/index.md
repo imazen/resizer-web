@@ -46,6 +46,7 @@ Not finding what you're looking for? Try [searching the site](/search).
 * [Making a basic plugin](/docs/plugins/basics) 
 * [Making an IVirtualImageProvider](/docs/plugins/virtualimageprovider) 
 * [InterceptModule action-by-action](/docs/interceptmodule) 
+* [Multi-tenating](/docs/howto/multi-tenanting) 
 * [ImageBuilder action-by-action](/docs/plugins/imagebuilder)
 * [Full generated documentation for the core and all plugins, with graphs](http://documentation.imageresizing.net/doxygen/namespaces.html)
 * [Simple generated documentation for the ImageResizer core](http://documentation.imageresizing.net/docu/)
