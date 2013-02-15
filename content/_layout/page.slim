@@ -17,6 +17,9 @@ Layout: layout
 
     == yield
 
+    - if page.meta.append
+      == partial page.meta.append.to_sym
+
     - if page.lib?('plusone')
       .g-plusone
     == partial :comments

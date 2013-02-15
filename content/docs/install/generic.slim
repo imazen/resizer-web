@@ -1,0 +1,80 @@
+Layout: false
+
+hr
+
+.tabbable
+  ul.nav.nav-tabs
+    li.active: a href="#nuget" data-toggle="tab" NuGet Installation Guide
+    li: a href="#xcopy" data-toggle="tab" XCopy Installation Guide
+    li: a href="#manual" data-toggle="tab" Manual installation Guide
+  .tab-content
+    .tab-pane.active#nuget
+      h3 Package Manager Console
+      p The Package Manage Console can be opened in Visual Studio through `Tools`>`Library Package Manager`>`Package Manager Console`
+      pre: code 
+        | PM> Install-Package ImageResizer.MvcWebConfig
+          PM> Install-Package ImageResizer.Plugins.DiskCache
+          PM> Install-Package ImageResizer.Plugins.PrettyGifs
+          PM> Install-Package ImageResizer.Plugins.SimpleFilters
+      h3 NuGet GUI (Visual Studio)
+      ol
+        li Right-click on your project and click "Manage NuGet Packages". 
+        li Select "NuGet Offical Package Source"
+        li Search for "Imazen", using the search bar at the top right
+        li Select "ImageResizer Web.config Installation (with MVC support)" and choose Install
+        li Repeat for each desired plugin
+      p: a href="http://nuget.org/packages?q=Imazen" View available packages on NuGet
+      p: a href="/docs/install/nuget" More details about NuGet installation
+
+
+    .tab-pane#xcopy
+      markdown:
+        1. Make a backup of `Web.config`, if the file already exists in the target website or application.
+        2. Copy the contents of the `Samples\BasicIISSite\` folder of [the download](/download) into the new website.
+        3. Browse to the web site and type '/resizer.debug.ashx' directly after the domain or IP address. You should get a page of diagnostic information if everything is working. If you need help, [just ask](/support)!
+        4. Copy `ImageResizer.Plugins.DiskCache.dll` from `\dlls\release\` in the download to `\bin` in the target application, and un-comment the DiskCache line in Web.config. Repeat for all desired plugins.
+
+    .tab-pane#manual
+      markdown:
+        1. Add `ImageResizer.dll`, `ImageResizer.Mvc.dll`, and any plugins dlls you wish to use to the `/bin` folder of the website. If you're using Visual Studio, right click your project and choose "Add reference" for each of these files instead.
+
+        2. Modify or create the /Web.Config file for your site. Make sure all these elements are added correctly.
+
+                <?xml version="1.0" encoding="utf-8" ?>
+                <configuration>
+                  <configSections>
+                    <section name="resizer" type="ImageResizer.ResizerSection,ImageResizer"  requirePermission="false"  />
+                  </configSections>
+
+                  <resizer>
+                    <!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
+                         you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 -->
+                    <pipeline fakeExtensions=".ashx" />
+
+                    <plugins>
+                      <add name="MvcRoutingShim" />
+                      <!-- <add name="DiskCache" /> -->
+                      <!-- <add name="PrettyGifs" /> -->
+                      <!-- <add name="SimpleFilters" /> -->
+                    </plugins>  
+                  </resizer>
+
+                  <system.web>
+                    <httpModules>
+                      <!-- This is for IIS5, IIS6, and IIS7 Classic, and Cassini/VS Web Server-->
+                      <add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+                    </httpModules>
+                  </system.web>
+
+                  <system.webServer>
+                    <validation validateIntegratedModeConfiguration="false"/>
+                    <modules>
+                      <!-- This is for IIS7+ Integrated mode -->
+                      <add name="ImageResizingModule" type="ImageResizer.InterceptModule"/>
+                    </modules>
+                  </system.webServer>
+                </configuration>
+          
+        3. Start your web site, then visit [/resizer.debug.ashx](/plugins/diagnostics) to verify you've done everything correctly. If you ever encounter issues, simply revisit that page to access the self-diagnostics. If you need help, [just ask](/support)!
+
+        4. Ready to go live? Get the [Performance Edition](/plugins/editions/performance), which includes [disk caching](/plugins/diskcache) and several other invaluable plugins. 
