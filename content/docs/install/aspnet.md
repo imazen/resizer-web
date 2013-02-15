@@ -18,6 +18,7 @@
 				<pipeline fakeExtensions=".ashx" />
 
 				<plugins>
+					<add name="MvcRoutingShim" />
 					<!-- <add name="DiskCache" /> -->
 					<!-- <add name="PrettyGifs" /> -->
 				</plugins>  
