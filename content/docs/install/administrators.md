@@ -36,21 +36,4 @@ If you're not hosting your website on a Windows server, consider having a second
 
 ## Notes on existing ASP.NET MVC websites
 
-Sometimes an ASP.NET MVC website can be configured to block the Image Resizer from working. This can be fixed by adding 2 lines of code in the Global.asax.cs file of the website.
-
-In Global.asax.cs, search for RegisterRoutes
-
-You should see either
-
-	public static void RegisterRoutes(RouteCollection routes) {
-
-or
-
-	Public Static Sub RegisterRoutes(routes as RouteCollection)
-
-Directly after, insert the following to lines:
-
-		routes.IgnoreRoute("resizer\\debug(\\.ashx)?");
-		routes.IgnoreRoute("[^?]+\\.(psd|bmp|gif|exif|png|tif|tiff|tff|jpg|jpeg|jpe|jif|jfif|jfi)(\\.ashx)?");
-
-If the line started with "Public Static Sub", then remove the semicolon (;) from the end of the two lines of code.
+If you're installing ImageResizer into an existing ASP.NET MVC application, you need to add the `MvcRoutingShim` plugin in Web.Config.
