@@ -1,8 +1,13 @@
-# Orchard Compatibility
+Append: /docs/install/generic
 
-# Multi-tenanting
+# Orchard and ImageResizer
 
-While the ImageResizer architecture is designed to make multi-tenanting support easy to implement, there don't seem to be many people that are gurus on Orchard's multi-tenanting architecture. If you are one, why not help us out a little? 
+Standard installation steps are sufficent for the Essential Edition, but an additional Web.config file must be changed for DiskCache to work properly.
+
+## Multi-tenanting
+
+While the [ImageResizer architecture is designed to make multi-tenanting support easy to implement](/docs/how/multi-tenanting), no Orchard guru has yet stepped forward to implement the `glue`. 
+
 
 ## Building a gallery module for Orchard using ImageResizer
 
