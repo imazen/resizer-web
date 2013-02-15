@@ -1,10 +1,10 @@
 layout: false
 Flags: hidden
 
-h2 Installation Guides
+h2 Installation Notes
 ul.arrow_list
-  lii: a href="/docs/install" Installation Guide
-
+  li: a href="/docs/install" Installation Guide
+  li: a href="/docs/cloude" Cloud Architecture Guide
   li: a href="/docs/install/administrators" IIS Administrator Installation Guide
   li: a href="/docs/install/aspnet" ASP.NET Installation Guide
   li: a href="/docs/install/web-config" Web.config modification guide
@@ -17,11 +17,13 @@ ul.arrow_list
 
   li: a href="/docs/workswith/mediumtrust" Medium Trust Notes
 
+  li: a href="/docs/install/standalone" Standalone / Without ASP.NET Notes
 
   li: a href="/docs/troubleshoot" Troubleshooting Guide
 
 h2 CMS Notes
 ul.star_list
+  li: a href="/docs/workswith" Compatibility Reference
   - index.pages_tagged("cms").each do |e|
     li
       a(href="#{e.path}")= e.heading

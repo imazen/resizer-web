@@ -1,3 +1,5 @@
+Layout: install_page
+
 # Troubleshooting guide
 
 The image resizer is self-diagnosing for the majority of issues. Visit `/resizer.debug.ashx` on your website to check for any issues, and to verify that you are using the latest version of all the ImageResizer dlls. If `/resizer.debug.ashx` is not available, you can check the version of the dlls by right-clicking on each and choosing "Properties".
