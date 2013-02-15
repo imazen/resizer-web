@@ -9,12 +9,6 @@ Layout: layout
     - if page.meta.warning
       .alert = page.meta.warning
 
-    /
-      - if page.heading
-        .title
-          h2
-            == page.heading
-
     == yield
 
     - if page.meta.append
