@@ -1,3 +1,4 @@
+Aliases: /docs/cleanurls
 
 # How to get clean URLs on IIS5, IIS6, and IIS7 Classic Mode
 
