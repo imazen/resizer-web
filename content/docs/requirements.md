@@ -34,7 +34,7 @@ One of the following web servers is required to host the image resizing server, 
 * .NET 4.0
 * .NET 4.5
 
-## Plugins that require .NET 3.5
+## Plugins that require .NET 3.5 (these will not work in Windows 2000 or Windows Server 2000)
 
 * BatchZipper
 * PsdReader
