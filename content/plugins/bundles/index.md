@@ -83,4 +83,4 @@ Are you using version 2? [Upgrading is easy and will increase your site's perfor
 <%= index["/plugins/bundles/free"].body(self) %>
 
 
-**Don't see the plugin or feature you need?** I offer 40% off my standard rate for [custom plugin development](/plugins/custom).
+**Don't see the plugin or feature you need?** Imazen offers [custom plugin development](/plugins/custom).

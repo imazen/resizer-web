@@ -1,29 +1,35 @@
 Template: plugin_page
 
-# Custom plugin development
+# Custom plugin development - Imazen
 
-I can create custom plugins or enhance an existing plugin to meet your needs for as *little as $300*.
+## Overview
 
-Nearly all plugins funded in this way are integrated into the public version of the ImageResizer. This means (a) **I take care of maintaining them**, (b) you can keep using NuGet packages, and (c) **Others can benefit** from your donation to the community.
+Imazen offers custom plugin development services to all open source, Elite, and Support Contract customers.
 
-I've made it easy for users to develop plugins and I have provided extensive XML documentation, however, **it's always cheaper to have the author write a plugin than to develop it yourself**. 
-
-* I can create a new plugin to meet your requirements for as little as $300.
-* I can add new functionality to an existing plugin for as little as $150. 
-
-My normal hourly rate is $95/hr. I'm charging a fraction of that for plugin creation and customization, because it helps the community.
-
-If you can't afford $300, you can either (a) post your plugin/enhancement idea on [the UserVoice site](https://resizer.uservoice.com/forums/108373-image-resizer-v3) and wait for enough votes for it to be implemented, or (b) develop it yourself, and [contribute it back to the community](/docs/contribute). Or not contribute it back, if you want to maintain it yourself ;)
+As the authors of the library we have unique in-depth knowlege, and can create future-proof, scalable solutions you won't get elsewhere. We're extremely cost-effective; our code is high quality and we never waste your time.
 
 
-## Payment information
 
-For all jobs under $500, I require payment in full before beginning work. I accept PayPal, credit card, and debit card [through this link](http://nathanaeljones.com/contact/donate).
+## Pricing
 
-Unless otherwise specified, the delivery period is two weeks from the day payment clears.
+Support contracts [include between 1 and 10 hours of custom coding per year](/support/contracts). While a tiny change can sometimes be implemented, documented, tested, and released in a single hour, the average improvement requires 3 hours, and the average custom plugin requires 8 hours.
+
+* A standard rate of $145/hr is applied, unless you have an existing agreement at a different rate.
+* A $850 job minimum is required for customers without a support contract.
+* Pre-payment of the estimated amount is required for all customers prior to beginning work.
+* We cannot reserve your time slot until we receive payment; it serves as a retainer to ensure both parties are available during the agreed time period to communicate and complete the project.
+
 
 ## Licensing 
 
-Custom software developed at the 40% off rate above is released to you under the [Enterprise license](/licenses/enterprise) if the requesting entity is a business, or the [Professional license](/licenses/pro) if the requesting entity is an individual. 
+All custom plugins developed are released to you under the [Enterprise license](/licenses/enterprise); we retain all rights except those provided by the aforementioned license.
 
-In addition, the software may also be licensed to you (and the public) under the [Freedom license](/licenses/freedom) if the custom software is deemed appropriately generic to be included in the [free plugins](/plugins/free).
+Many custom plugins are selected for redistribution and indefinite maintance as part of an ImageResizer edition, meaning you can generally look forward to new features and improved performance in your custom plugin over time, perhaps even getting updates through NuGet.
+
+In addition, the software may also be licensed to you (and the public) under the [Freedom license](/licenses/freedom) if the custom software is deemed appropriately generic to be included in the [Essential Edition](/plugins/editions/free).
+
+
+## Alternatives
+
+1. Post your plugin/enhancement idea on [the UserVoice site](https://resizer.uservoice.com/forums/108373-image-resizer-v3) and encourage others to vote for it. This can take months to years, but won't cost you anything.
+2. Develop it yourself, using our extensive documentation, and [contribute it back to the community](/docs/contribute). We assist contributors with maintenance, documentation, and retaining compatibility.

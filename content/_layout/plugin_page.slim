@@ -13,13 +13,13 @@ Layout: layout
 
 
   aside.span3.sidebar.plugins_sidebar
-    -if page.meta.edition and not page.flag?('edition')
+    - if page.meta.edition and not page.flag?('edition')
       p 
         | This plugin (#{page.heading}) is part of the 
         a href=page.edition.path =page.edition.heading
       p =page.edition.meta.cost
 
-    -if page.meta.bundle and not page.flag?('bundle')
+    - if page.meta.bundle and not page.flag?('bundle')
       p 
         | This plugin (#{page.heading}) was originally part of the 
         a href=page.bundle.path =page.bundle.heading
@@ -41,6 +41,6 @@ Layout: layout
           li
             a(href="#{plugin.path}")= plugin.heading
     p 
-      | Don't see the feature or plugin you're looking for? Get 
-      a(href='/plugins/custom') custom plugin development  for 40% off.
+      | Don't see the feature or plugin you're looking for? Imazen offers 
+      a(href='/plugins/custom') custom plugin development.
 
