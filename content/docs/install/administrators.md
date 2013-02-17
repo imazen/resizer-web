@@ -1,3 +1,5 @@
+Layout: install_page
+
 # Guide for Server Administrators
 
 The Image Resizer IIS Module **requires no coding skills to install or use**. 
