@@ -2,7 +2,8 @@ Date: Monday, January 24 2013
 
 # Introducing ImageResizer Editions
 
-After Feb. 1st, 2013, you will only be able to purchase plugins as part of an [ImageResizer edition](/buy); we will be retiring the [plugin bundles](/plugins/bundles). We are not discontinuing any plugins, just changing the way they are packaged to reduce confusion and lower the barrier to entry. Existing bundle licenses are still valid, and
+
+After Feb. 1st, 2013, you will only be able to purchase plugins as part of an [ImageResizer edition](/buy); we will be retiring the [plugin bundles](/plugins/bundles). We are not discontinuing any plugins, just changing the way they are packaged to reduce confusion and lower the barrier to entry. Existing bundle licenses are still valid, and you can [continue to purchase ImageResizer under the old pricing model until Feb. 1st, 2013](/plugins/budles).
 
 License keys will be introduced this year, but only once we have made them as painless as possible.
 
