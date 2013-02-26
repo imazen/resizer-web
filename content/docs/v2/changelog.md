@@ -4,7 +4,7 @@
 * v2.8 May 27, 2011 ([Upgrade notes from V2.6 to v2.8](/releases/2-8))
 
   * <span style="color:red;">Fixed serious limitation of ImageResizerMaxWidth/Height settings.</span>  
-    These settings only control the size of the photo portion of the image. They do not limit the dimensions of the resulting bitmap. By using paddingWidth=100000, **an attacker could perform a denial-of-service attack against the server to deprive it of RAM.**
+    These settings only control the size of the photo portion of the image. They do not limit the dimensions of the resulting bitmap. 
     
     **New behavior**: When the final dimensions of an image would exceed 2x the configured max width and height, the request will be ignored with the following message: "The specified image will be more the 2x the permitted size. Request terminated."
   * Fixed bug: Mime-type: image/x-png was being sent instead of image/png. **Causes Chrome to download images instead of displaying them.**
