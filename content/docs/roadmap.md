@@ -2,7 +2,7 @@ Flags: hidden
 
 # Roadmap
 
-This is a preliminary, private roadmap
+This is a preliminary, private roadmap.
 
 ## 3.X
 
@@ -18,9 +18,9 @@ This is a preliminary, private roadmap
 * Release ImageResizer V3.4 with passive licensing, connected to KeyHub
 * Add DRM-free build branch
 
-#### March 21st
+#### March 21st, 2013
 
-* ffmpeg thumbnailing (alpha only) 
+* Implement ffmpeg thumbnailing
 
 #### April 1st, 2013
 
@@ -53,27 +53,22 @@ Launching V4 without license keys, then adding them later, would cause unnacepta
 
 ## 4.X
 
-* Add metadata support
+* Add complete metadata support
 * Add ImageRules plugin
 * Integrate FluentExtensions and add MVC URL and HTML helpers
-* 
+* Integrate ResponsivePresets 
 
-## 5.0  - 2014
+## 5.0 - 2014?
 
 * Require .NET 4.5
 * Use .NET 4 & WebActivator so the HttpModule doesn't have to be registered in Web.config anymore.
 * Support async/await
 
-
-
-
 ## Backlog
 
 * Support for ActionResults (although they can never be as fast as the HttpModule itself)
 * Make extensible system for determining if the background color needs to be applied
-
 * ImageResizer.Util Assembly Attribute classes will be moved to ImageResizer.Configuration
-
 * No APIs will directly reference System.Drawing. A wrapper class will permit System.Drawing, WIC, WPF, FreeImage, or byte array images instead.
 * ImageResizer.Encoding namespace will move to ImageResizer.Plugins.Encoding or ImageResizer.Configuration.Encoding
 * All ImageResizer.Util classes will be reorganized or moved elsewhere
