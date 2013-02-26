@@ -11,7 +11,7 @@ image.jpg?width=100&crop=10,10,300,300&rotate=30&scale=both&mode=pad&margin=100
 
 ## Advantages of ImageResizing.NET
 
-* Implemented as an HttpModule instead of an HttpHandler, allowing far better performance (see [my podcast with Scott Hanselman](http://hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na) for more info).
+* Implemented as an HttpModule instead of an HttpHandler, allowing far better performance and more reliable disk caching(see [my podcast with Scott Hanselman](http://hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na) for more info).
 
 * Supports medium trust. Advanced features which require full trust are implemented as optional plugins.
 
