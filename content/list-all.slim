@@ -6,6 +6,9 @@ doctype html
 html
   head
   body
+    h3
+      = index.pages.select{ |p| !p.flag?('-sitemap') }.count
+      |  pages found
     table
       - index.pages.select{ |p| !p.flag?('-sitemap') }.each do |p|
         tr
