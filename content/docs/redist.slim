@@ -1,0 +1,82 @@
+Icon: link
+
+h1 Redistribution and CMS Integration guide
+
+.title: h2 Bundling ImageResizer Essential Edition with your CMS, module, or library
+
+.well
+  h3
+    | We encourage content management systems, modules, and other libraries to freely include and redistribute ImageResizer Essential Edition. Email your project URL to `support@imageresizing.net` and  
+    a href="/docs/community" we will list you on the Community page. 
+    | With advance notice, we can also verify you are integrating ImageResizer properly. 
+
+.row
+  .span3
+
+    h2 Flexible licensing
+    markdown:
+      We understand many component developers wish to avoid having multiple licenses for different parts of their system. We are always willing to work with developers and vendors to eliminate licensing mismatch, and we're generally open to sublicensing parts of Essential Edition or [relicesning under any OSI-approved license](http://opensource.org/licenses), including the GPL, LGPL, AGPL, MIT, MSD, Apache, CDDL, MPL, or EPL. 
+      
+      Please email `support@imageresizing.net` for assistance in figuring out the best licensing solution. If in doubt, you can always redistribute them under the [Freedom license](/licenses/freedom), which is based on the MIT license, but adds an additional restriction.
+  .span3
+    h2 What about caching? 
+
+    markdown:
+      Disk caching is very important; it's also a conundrum, as we can't offer the DiskCache plugin for free without eliminating our revenue stream. 
+
+
+      TinyCache is an experimental plugin we're testing that offers a fixed-size, disk-persisted memory cache. TinyCache is not yet a part of ImageResizer Essential Edition, but we're looking for partners willing to experiment with it. 
+
+      TinyCache is limited to 30MB, which is sufficient for many small and medium-size websites that aren't particularly photo-heavy. The average size of a resized image is 30KB, so TinyCache generally stores the 1,000 most popular image variations.
+
+  .span3
+    h2 Play nice with others
+    ul.star_list
+      li Ensure other plugins can still be installed, used, and activated. 
+      li Don't break RIAPI compliance (riapi.org). Content portability is important, and standardization is a good thing. Feel free to add new features and commands, but please leave existing functionality under the existing URL syntax.
+      li Tell your users that you use ImageResizer, and that performance and functionality upgrades are available at http://imageresizing.net/licenses
+  .span3
+    h2 Things to avoid
+    ul.cross_list
+      li Replacing the URL API with your own syntax, so other plugins can't be used.
+      li Inventing your own caching system that doesn't scale or handle threading and file access properly.
+      li Using MVC, WebAPI, or a HttpHandler to serve dynamic images instead of the HttpHandler (uploads are fine).
+      li Redistributing a custom version of the core ImageResizer.dll library, so users can't upgrade.
+      li Resigning the ImageResizer dlls and not providing binding redirects for new releases (signing is bad, OK?).
+
+hr
+
+
+
+.title: h2 Bundling ImageResizer Performance, Creative, or Elite Edition
+.row
+
+  .span3
+    h2 Royalty-free OEM
+    markdown:
+      We offer royalty-free OEM licenses to component vendors who meet our criteria, for a very affordable yearly rate.
+
+      These [OEM licenses generally permit use of ImageResizer plugins by all paying customers of the vendor](/licenses/oem).
+
+      Please contact us for more details at `sales@imageresizing.net`.
+
+  .span3
+    h2 Distributing trials
+    markdown:
+      We allow vendors to distribute trial versions of the Performance and Creative edition plugins. This allows vendors to demonstrate the abilities of their product and the integration, and permits users to upgrade with a single license key.
+
+      Email `sales@imageresizing.net` for details.
+  .span3
+    h2 Per-sale bundling
+    markdown:
+      We offer an IPN-compatible transaction API, allowing you to resell ImageResizer editions as part of a larger product offering. Clients will receive the same license, license keys, and licensing portal as they would if they were purchasing directly from us.
+
+      E-mail `sales@imageresizing.net` for details.
+  .span3
+    h2 Bespoke Software
+    markdown:
+      The [ImageResizer Elite Edition](/plugins/editions/elite) and all [Support Contracts](/support/contracts) allow you to issue a [Professional Client](/licenses/proclient) license for a bespoke software project that you are both providing and maintaining. 
+
+      Thus, if you are only providing your system as part of customized projects that you maintain, you do not need any special licensing.
+
+      Please note, however, that the Professional Client license is only valid while the primary license holder is responsible for development and maintenance.
