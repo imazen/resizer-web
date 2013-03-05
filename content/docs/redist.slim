@@ -80,3 +80,36 @@ hr
       Thus, if you are only providing your system as part of customized projects that you maintain, you do not need any special licensing.
 
       Please note, however, that the Professional Client license is only valid while the primary license holder is responsible for development and maintenance.
+
+.title: h2 CMS Integration Notes
+
+markdown:
+  ### File delivery
+
+  While most CMSes offer customized systems for file delivery, those systems are not optimized for dynamic image processing or disk caching. To achieve scalability and good performance, you should install the ImageResizer HttpModule in Web.Config and use it in the reccomended fashion. URL rewriting, caching configuration, and authorization systems are all accessible through events exposed by the Config.Pipeline class.
+
+
+  ### File storage
+
+  ImageResizer offers plugins for every kind of blob, file, and database storage location. If an existing plugin doesn't meet your needs, it's easy to implement IVirtualImageProvider and plug ImageResizer into your existing file provider system. In fact, if your CMS (like most) already supports the ASP.NET VirtualPathProvider system, ImageResizer will automatically connect.
+
+  ### Uploads
+
+  Uploads can be accepted in a variety of ways; postback, MVC, WebAPI, HttpHandler - ImageResizer doesn't care. We suggest ensuring whitelist-based character and extension sanitization, and reccomend GUID filenames to prevent concurrency bugs. 
+
+  You may also consider sending uploads directly to blob storage, using the appropriate blob storage API. This will take load off your application servers, and ImageResizer can process the images dynamically as requested.
+
+
+  ### URL API
+
+  ImageResizer offers a highly-refined URL API, developed over 6 years through thousands of customer interactions. If you wish to limit attack surface, we offer many ways to accomplish that without breaking API compatibility or reducing functionality.
+
+  ### Authentication
+
+  ImageResizer is compatible with any AuthorizeRequest level authentication and authorization logic, and is also UrlAuthorization compatible. 
+
+  ### User Interface
+
+  ImageResizer's standardized URL API means many jQuery plugins can take advantage of it. [StudioJS offers a in-browser image editing experience](https://github.com/nathanaeljones/studiojs), along with lower-level APIs for custom solutions. It's [possible to integrate ImageResizer and jCrop in 11 lines of javascript](http://www.nathanaeljones.com/blog/2011/combining-jcrop-and-server-side-image-resizing).
+
+  The [ImageResizer Community page](/docs/community) lists dozens of plugins, jQuery plugins, and CMS modules that you might find helpful.
