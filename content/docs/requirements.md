@@ -1,5 +1,7 @@
 # System Requirements
 
+Check [out the high-level compatibility page first](/docs/workswith).
+
 ## Supported operating systems
 
 Both 32 and 64-bit versions of Windows are supported. OS X and Linux can be used under the latest version of Mono, but individual plugin support may vary.
