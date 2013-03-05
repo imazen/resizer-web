@@ -6,6 +6,8 @@ Tags: cms
 
 Standard installation steps are sufficent for the Essential Edition, but an additional Web.config file must be changed for DiskCache to work properly.
 
+**Note that the Orchard.Contrib.Cache plugin has been reported to behave badly if any other HttpModules are installed. Only once customer has reported this issue, and we are investigating**
+
 ## Multi-tenanting
 
 While the [ImageResizer architecture is designed to make multi-tenanting support easy to implement](/docs/how/multi-tenanting), no Orchard guru has yet stepped forward to implement the `glue`. 
@@ -14,6 +16,9 @@ While the [ImageResizer architecture is designed to make multi-tenanting support
 ## Building a gallery module for Orchard using ImageResizer
 
 Dave Gardner [wrote a fantastic 7-part article on how to make a gallery module for Orchard using the ImageResizer](http://bigsitesdoneright.com/big-blog/orchard-cascade-gallery-tutorial-series).
+
+* [Bertrand Le Roy (Orchard author): State of .NET Image Resizing: how does imageresizer do?](http://weblogs.asp.net/bleroy/archive/2011/10/22/state-of-net-image-resizing-how-does-imageresizer-do.aspx) * Note the performance chart is bogus due to a mistake in the Bertrand's benchmark code. [The corrected chart](http://downloads.imageresizing.net/Oct29-2011-comparison.png) displays actual apples-to-apples data, instead of comparing low-quality and high-quality image resizing as the original benchmark does.
+
 
 ## Disk Cache Support
 
