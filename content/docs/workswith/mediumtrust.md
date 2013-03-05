@@ -1,16 +1,15 @@
 
 # Medium trust
 
-ImageResizer is designed to support medium trust (and low trust). Some plugins, however, require full trust due to their nature.
+### ImageResizer is designed to support medium trust (and low trust). Some plugins, however, require full trust due to their nature.
 
-## Tips
-
- * Insure you're using `requirePermission="false"` when registering the ImageResizer configSection in Web.config
+Note: Insure you're using `requirePermission="false"` when registering the ImageResizer configSection in Web.config
 
 
 ## Essential Edition - compatible plugins
 
 Except for PdfRenderer, all Essential Edition plugins are medium-trust compatible.
+
   * AutoRotate
   * ClientCache
   * CustomOverlay
