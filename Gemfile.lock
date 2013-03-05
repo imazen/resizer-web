@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: c94a7e28946f0e5a276e977f936a6074577c183f
+  revision: 558308661e67c00f35b89e2a914701d3e93e809c
   specs:
     hardwired (0.3.2)
       nokogiri
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/populr/less.rb.git
-  revision: f50c28b9faba94f195e0a0c6484967a96a9b325e
+  revision: 2e451e3d96eaf1361fd8f47ffe2adf67443debc8
   branch: v2.2.2-less1.3.3
   submodules: true
   specs:
@@ -25,9 +25,9 @@ GIT
 
 GIT
   remote: git://github.com/slim-template/slim.git
-  revision: 4b4ecd56d6a335786f5c9f99efe12f54dbe24162
+  revision: 08c124b925c7f764690fb16e98460a449ad16324
   specs:
-    slim (2.0.0.pre.5)
+    slim (2.0.0.pre.6)
       temple (~> 0.6.2)
       tilt (~> 1.3.3)
 
@@ -38,29 +38,29 @@ GEM
       Platform (>= 0.4.0)
       open4
     Platform (0.4.0)
-    activesupport (3.2.11)
+    activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
     columnize (0.3.6)
     commonjs (0.2.6)
     daemons (1.1.9)
-    debugger (1.3.1)
+    debugger (1.3.3)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
-      debugger-ruby_core_source (~> 1.1.8)
+      debugger-ruby_core_source (~> 1.2.0)
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
-    debugger-ruby_core_source (1.1.8)
+    debugger-ruby_core_source (1.2.0)
     erubis (2.7.0)
-    eventmachine (1.0.0)
+    eventmachine (1.0.1)
     honeybadger (1.5.0)
       activesupport
       json
-    i18n (0.6.1)
-    json (1.7.6)
+    i18n (0.6.4)
+    json (1.7.7)
     libv8 (3.11.8.13)
-    listen (0.7.2)
-    multi_json (1.5.0)
+    listen (0.7.3)
+    multi_json (1.6.1)
     nokogiri (1.5.6)
     open4 (1.3.0)
     perftools.rb (2.0.0)
@@ -71,29 +71,29 @@ GEM
       open4 (~> 1.0)
       perftools.rb (~> 2.0.0)
       rack (~> 1.0)
-    rack-protection (1.3.2)
+    rack-protection (1.4.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
-    rdiscount (2.0.7)
+    rdiscount (2.0.7.1)
     ref (1.0.2)
-    sass (3.2.5)
+    sass (3.2.6)
     shotgun (0.9)
       rack (>= 1.0)
-    sinatra (1.3.4)
+    sinatra (1.3.5)
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
     temple (0.6.2)
-    therubyracer (0.11.3)
+    therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    tilt (1.3.3)
+    tilt (1.3.4)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 

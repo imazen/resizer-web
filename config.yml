@@ -24,6 +24,10 @@ author:
    github_profile: "https://github.com/nathanaeljones"
 
 
+github:
+  editurl: https://github.com/imazen/resizer-web/edit/smart-theme-migration/content
+  showeditbutton: true
+
 disqus_short_name: resizer
 
 

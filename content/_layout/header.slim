@@ -28,5 +28,8 @@ header
                 a href="/support" Support
               li
                 a href="/licenses" Licenses
+              - if config.github.showeditbutton
+                li: a href=(config.github.editurl + index.make_almost_virtual(page.filename, false)) Edit page
+
 
 
