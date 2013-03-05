@@ -21,3 +21,22 @@ html
           td 
             div
               == p.summary(self, 50)
+
+    - if dev?
+      h3 Hidden and not-yet-relased pages
+      table
+        - index.enum_files { |p| p.is_page? && !p.can_render? }.to_a.each do |p|
+          tr
+            td 
+              a href==url_for(p) 
+                == p.path
+            td style="width:300px"
+              a href==url_for(p) 
+                == p.heading
+
+      h3 Layout files (non-indexed)
+      ul
+        - index.enum_files { |p| !p.is_page? && p.in_layout_dir? }.to_a.each do |p|
+          li == p.path
+
+
