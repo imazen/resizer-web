@@ -1,5 +1,6 @@
+Icon: download-alt
 
-# Contribute to the project!
+# Sync your source with Git
 
 
 ### Connecting to the Git repository
