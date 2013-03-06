@@ -43,7 +43,7 @@ Professional Client License v1.1 - Copyright (c) 2012 Imazen LLC
 
 A holder of a [Professional][pro], [Enterprise][enterprise], or [OEM][oem] license (the Provider) may grant the Client the Professional Client license (this license), which allows the Client to use the Software as part of a larger piece of software (the Project) provided by the Provider. This license cannot be transferred once granted.
 
-#### 3. Restrictions on license grant
+### 3. Restrictions on license grant
 
 * The "Client" may not be anonymous to the Provider - there must exist proof that the Client has purchased the Project from the Provider. 
 * Providers holding a Professional or Enterprise license may only grant this license to Clients as part of a bespoke (custom software) contract. 
