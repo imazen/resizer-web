@@ -1,3 +1,5 @@
+Aliases: /docs/examples
+
 # Basic commands
 
 <style type="text/css">
