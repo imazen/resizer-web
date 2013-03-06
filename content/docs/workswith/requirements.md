@@ -1,3 +1,5 @@
+Aliases: /docs/requirements
+
 # System Requirements
 
 Check [out the high-level compatibility page first](/docs/workswith).
