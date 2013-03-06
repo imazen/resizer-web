@@ -43,7 +43,7 @@ Multi-level caching is important. The CDNs ensures that only a fixed amount of r
 
 ### Scaling tips
 
-1. Use a load balancer or a managed service like AppHarbor to ensure you can scale quickly in response to changing traffic conditions. Point your CDN to this instead of to a single instance, so you can ramp up easily.
+1. Use a load balancer or a managed service like AppHarbor to ensure scaling quickly in response to changing traffic conditions. Point your CDN to this instead of to a single instance, so you can ramp up easily.
 2. Use Git & GitHub for your code, Web.config, and ImageResizer dlls, so you can auto-deploy to all your instances in seconds.
 3. Use GUIDs for filenames. Don't use custom time or counter-based IDs, you'll encounter duplicates any time you have simultaneous uploads
 
