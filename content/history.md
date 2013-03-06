@@ -1,11 +1,11 @@
 
 # History of the Image Resizer
 
-The ImageResizer was created in January 2007 to simplify the process of changing website layouts and slideshow sizes. Resizing images manually was taking hours each day, so I decided to fix the problem with an HttpHandler.
+The ImageResizer was created in January 2007 to simplify the process of changing website layouts and slideshow sizes. Resizing images manually was taking hours each day, so I decided to fix the problem.
 
-The image resizer was designed with security, stability, and performance in mind from day 1. It was never a hack. It has always used proper memory (and resource) management techniques, and has leveraged disk caching to provide ideal scalability. It has always used .NET 2.0, and worked properly on XP through Windows 7 (and Server 2000 through 2008).
+ImageResizer was designed with security, stability, and performance in mind from day 1. It was never a hack. It has always used proper memory (and resource) management techniques, and has leveraged disk caching to provide ideal scalability. Compatibility with XP through Windows 8 (and Server 2000 through Server 8) has always been maintained.
 
-It has always been open-source, although I charged a 'download fee' for V1 and V2, which was the best way I could think of to fund development without restricting developer rights. I've also always had a no-questions-asked refund policy... Which only 1 person (of 400+ V2 users) ever took advantage of - and only because their project was cancelled. No V3 user has requested a refund yet.
+It has always been source-included, although I charged a 'download fee' for V1 and V2, which was the best way I could think of to fund development without restricting developer rights. I've also always had a no-questions-asked refund policy... Which only 1 person (of 400+ V2 users) ever took advantage of - and only because their project was cancelled. No V3 user has requested a refund yet.
 
 I've always supported the product 100%, and I (believe) I have resolved every issue every user has sent me. Once I spent an entire week helping a user debug their application since they (incorrectly) suspected the ImageResizer of causing a memory leak. This issue ended up being caused by a different component.
 
@@ -19,7 +19,7 @@ Version 2 was a complete rewrite, and was released to users of v1 in January 200
 
 V2 introduced IIS7 support (HttpModule instead of HttpHandler design), and nice managed API, and support for Octree GIF quantization. And support for lots of other stuff. See [the V2 changelog if you want details](/docs/v2/changelog).
 
-V2 was used by over 400 developers, integrated into roughly a dozen content management systems, and used by a couple of hosting companies.
+V2 was used by hundreds of developers, integrated into roughly a dozen content management systems, and used by a couple of hosting companies.
 
 After two years of improving V2, I realized that another rewrite was needed. I decided to maintain full compatibility with the V2 URL syntax, but the managed API needed an overhaul..
 
@@ -34,7 +34,7 @@ Some V3 plugins are under a [slightly more restrictive license](/licenses), but 
 
 # Imazen
 
-When [Support Contracts](/support/contracts) were introduced on May 1st, I knew that if the offering reached the quota, I would have to open a separate bank account to ensure the contract funds were used evenly over time. Imazen LLC was formed on May 18th, and is now the official business entity behind ImageResizer and all related support contracts, offerings, and products, as well as [WindowsGit](http://windowsgit.com). By separating the finances I will be able to track income and expenses more carefully and avoid any surprises. 
+When [Support Contracts](/support/contracts) were introduced on May 1st 2012, I knew that if the offering reached the quota, I would have to open a separate bank account to ensure the contract funds were used evenly over time. Imazen LLC was formed on May 18th, and is now the official business entity behind ImageResizer and all related support contracts, offerings, and products, as well as [WindowsGit](http://windowsgit.com). By separating the finances I will be able to track income and expenses more carefully and avoid any surprises. 
 
 I also am now hiring a significant number of part-time contract workers to help with the workload, and eventually I will be forced to add a full-time employee. 
 
@@ -42,8 +42,7 @@ I also am now hiring a significant number of part-time contract workers to help 
 
 * From Feb 2011 to December 2011, 889 commits were made to the project, an average of 3 per day. Each commit contains between 1 and 5 improvements to the project.
 * In 2011, 70% of support e-mails were answered in under 1 hour. Please note that roughly 30% of support e-mails arrive between 12am and 7am in my timezone. 
-* V3.0 was downloaded 3,150 times between June 2011 and December 2011
-* Between June and December, 24 nuget packages for the ImageResizer were published. Nearly all plugins are nuget compatible. 
+* Between June and December 2011, 24 nuget packages for the ImageResizer were published. Nearly all plugins are nuget compatible. 
 * The ImageResizer handles image processing for (several) photo album sites each containing 10-20TB of images.
 * Has been integrated into nearly every popular ASP.NET CMS with a CMS-specific plugin, yet doesn't actually need a CMS-specific plugin to be compatible with any of the CMSes..
 * Over 650 support questions were answered between August and December 2011
