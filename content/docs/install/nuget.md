@@ -16,7 +16,7 @@ The WebConfig package never deletes anything from your Web.config file, but it m
 
 The WebConfig package is used by most of the sample packages.
 
-If you're using ASP.NET MVC, you can install **ImageResizer.MvcWebConfig** to get [everything working](/docs/mvc) in one step. 
+If you're using ASP.NET MVC, you can install **ImageResizer.MvcWebConfig** to get everything working in one step. 
 
 **Don't worry! All packages can be safely combined!** 
 

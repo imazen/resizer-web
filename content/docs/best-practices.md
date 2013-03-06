@@ -1,4 +1,4 @@
-Aliases: /docs/bad
+Aliases: /docs/bad /docs/mvc
 
 
 # Best practices for security, reliability, and performance
