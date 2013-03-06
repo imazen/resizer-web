@@ -26,9 +26,9 @@ Aliases: /docs/bad /docs/mvc
 
 ### Scaling 
 
-1. Use a load balancer or a managed service like AppHarbor or Azure to ensure you can scale quickly in response to changing traffic conditions. Point your CDN to this instead of to a single instance, so you can ramp up easily.
+1. Use a load balancer or a managed service like AppHarbor or Azure to ensure you can scale quickly in response to changing traffic conditions. Point your CDN to this instead of a single instance, so you can ramp up easily.
 2. Use Git & GitHub for your code, Web.config, and ImageResizer dlls, so you can auto-deploy to all your instances in seconds.
-3. Use GUIDs for filenames. Don't use custom time or counter-based IDs, you'll encounter duplicates any time you have simultaneous uploads (this happens very frequently).
+3. Use GUIDs for filenames. Don't use custom time or counter-based IDs, or you'll encounter duplicates any time you have simultaneous uploads (this happens very frequently).
 4. Use a true CDN that supports custom-origin servers. [See the Cloud Architecture Guide](/docs/cloud) for more info.
 
 ## ASP.NET Routing, MVC, and Web API best practices
