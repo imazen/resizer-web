@@ -1,4 +1,4 @@
-Aliases: /docs/plugins/basics
+Aliases: /docs/plugins/basics /docs/extend
 Layout: extend_page
 Tags: extend
 
