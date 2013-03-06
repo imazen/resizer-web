@@ -53,7 +53,7 @@ ImageResizer respects all Url Authorization rules and all ASP.NET Authentication
 
 Remember that ImageResizer is non-invasive; it doesn't touch requests unless they have image commands.
 
-This means that it's generally more appropriate to put authorization logic into the ASP.NET Application-level AuthorizeRequest event. ImageResizer offers a Pipeline.AuthorizeImage event, but it is not applied to requests outside ImageResizer's scope. Feel free to call your authentication logic routing from both events, however. ImageResizer's Pipeline.AuthorizeImage occurs after all URL rewriting, which may simplify authorization a bit.
+This means that it's generally more appropriate to put authorization logic into the ASP.NET Application-level AuthorizeRequest event. ImageResizer offers a Pipeline.AuthorizeImage event, but it is not applied to requests outside ImageResizer's scope. Feel free, however, to call your authentication logic routing from both events. ImageResizer's Pipeline.AuthorizeImage occurs after all URL rewriting, which may simplify authorization a bit.
 
 You can also decide to implement authorization at the data store level; SqlReader has a dedicated event that is applied to all requests through that provider, whether ImageResizer is involved or not.
 
