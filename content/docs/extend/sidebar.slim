@@ -1,0 +1,20 @@
+layout: false
+Flags: hidden
+
+h2 Extending ImageResizer
+ul.arrow_list
+  - index.pages_tagged("extend").each do |e|
+    li
+      a(href="#{e.path}")= e.heading
+
+
+h2 Useful references
+ul.star_list
+  li: a href="/docs/community" Community Plugins and Contributions
+  li: a href="/docs/redist" Redistribution and CMS Integration Guide
+  li: a href="/docs/cloud" Cloud Architecture Guide
+  li: a href="/docs/workswith" Compatibility Reference
+  li: a href="/docs/troubleshoot" Troubleshooting Guide
+  li: a href="http://documentation.imageresizing.net/doxygen/namespaces.html" Full generated documentation for the core and all plugins, with graphs
+  li: a href="http://documentation.imageresizing.net/docu/" Simple generated documentation for the ImageResizer core
+  li: a href="/docs/process-and-cache" Understanding processing and caching in the ImageResizer
