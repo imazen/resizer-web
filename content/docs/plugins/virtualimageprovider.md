@@ -1,3 +1,5 @@
+Aliases: /docs/plugins/virtualimageprovider
+
 # Virtual Image Providers
 
 If your images aren't stored on disk, you need a plugin. Read [plugin basics first, if you haven't already](/docs/plugins/basics) - it's very simple.

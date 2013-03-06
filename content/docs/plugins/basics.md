@@ -1,3 +1,5 @@
+Aliases: /docs/plugins/basics
+
 # Making a plugin
 
 Plugins are very easy to make and register. Here's a simple one that does nothing but support installation and uninstallation. All plugins need to do at least this much.

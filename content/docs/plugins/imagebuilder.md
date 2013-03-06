@@ -1,3 +1,4 @@
+Aliases: /docs/plugins/imagebuilder
 
 # Order of command execution
 

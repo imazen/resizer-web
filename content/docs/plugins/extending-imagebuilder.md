@@ -1,4 +1,4 @@
-Aliases: /docs/extending-imagebuilder
+Aliases: /docs/extending-imagebuilder /docs/plugins/extending-imagebuilder
 
 #Extending ImageBuilder
 
