@@ -6,8 +6,8 @@ hr
 .tabbable
   ul.nav.nav-tabs
     li.active: a href="#nuget" data-toggle="tab" NuGet Installation Guide
-    li: a href="#xcopy" data-toggle="tab" XCopy Installation Guide
     li: a href="#manual" data-toggle="tab" Manual installation Guide
+    li: a href="#xcopy" data-toggle="tab" XCopy Installation Guide
   .tab-content
     .tab-pane.active#nuget
       h3 Package Manager Console
@@ -26,20 +26,11 @@ hr
         li Repeat for each desired plugin
       p: a href="http://nuget.org/packages?q=Imazen" View available packages on NuGet
       p: a href="/docs/install/nuget" More details about NuGet installation
-
-
-    .tab-pane#xcopy
-      markdown:
-        1. Make a backup of `Web.config`, if the file already exists in the target website or application.
-        2. Copy the contents of the `Samples\BasicIISSite\` folder of [the download](/download) into the new website.
-        3. Browse to the web site and type '/resizer.debug.ashx' directly after the domain or IP address. You should get a page of diagnostic information if everything is working. If you need help, [just ask](/support)!
-        4. Copy `ImageResizer.Plugins.DiskCache.dll` from `\dlls\release\` in the download to `\bin` in the target application, and un-comment the DiskCache line in Web.config. Repeat for all desired plugins.
-
     .tab-pane#manual
       markdown:
-        1. Add `ImageResizer.dll`, `ImageResizer.Mvc.dll`, and any plugins dlls you wish to use to the `/bin` folder of the website. If you're using Visual Studio, right click your project and choose "Add reference" for each of these files instead.
+        1. Add `ImageResizer.dll`, `ImageResizer.Mvc.dll`, `ImageResizer.Plugins.DiskCache.dll`, and any other plugin dlls you wish to use to the `/bin` folder of the website. If you're using Visual Studio, right click your project and choose "Add Reference" for each of these files instead.
 
-        2. Modify or create the /Web.Config file for your site. Make sure all these elements are added correctly.
+        2. Modify or create the /Web.Config file for your site. Make sure all these elements are added correctly (You may wish to make a backup of Web.config first).
 
                 <?xml version="1.0" encoding="utf-8" ?>
                 <configuration>
@@ -54,9 +45,10 @@ hr
 
                     <plugins>
                       <add name="MvcRoutingShim" />
-                      <!-- <add name="DiskCache" /> -->
+                      <add name="DiskCache" />
                       <!-- <add name="PrettyGifs" /> -->
                       <!-- <add name="SimpleFilters" /> -->
+                      <!-- <add name="S3Reader" /> -->
                     </plugins>  
                   </resizer>
 
@@ -79,3 +71,10 @@ hr
         3. Start your web site, then visit [/resizer.debug.ashx](/plugins/diagnostics) to verify you've done everything correctly. If you ever encounter issues, simply revisit that page to access the self-diagnostics. If you need help, [just ask](/support)!
 
         4. Ready to go live? Get the [Performance Edition](/plugins/editions/performance), which includes [disk caching](/plugins/diskcache) and several other invaluable plugins. 
+    .tab-pane#xcopy
+      markdown:
+        1. If `Web.config` already exists in the target website or application, use the Manual Installation Method.
+        2. Copy the contents of the `Samples\BasicIISSite\` folder of [the download](/download) into the new website.
+        3. Browse to the web site and type '/resizer.debug.ashx' directly after the domain or IP address. You should get a page of diagnostic information if everything is working. If you need help, [just ask](/support)!
+        4. Copy `ImageResizer.Plugins.DiskCache.dll` from `\dlls\release\` in the download to `\bin` in the target application, and un-comment the DiskCache line in Web.config. Repeat for all desired plugins.
+
