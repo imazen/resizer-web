@@ -33,14 +33,6 @@ However, it's easy to [resize during upload](/docs/howto/upload-and-resize).
 
 </dd> <dt>Q: Is in necessary to wildcard map everything to ASP.NET when using IIS6? </dt> <dd>A: No - you can map .jpg, .png, and .gif individually, but <a href="http://support.microsoft.com/Default.aspx?kbid=909641">you need to follow this KB article</a> to prevent issues.
 
-
-</dd> <dt>Q: I asked my hosting company to add the wildcard mapping, but images don't resize when I add ?width=x; they appear in their original size. I've verified that the HttpModule entry is in Web.Config </dt> <dd>A: The tech support person didn't add the wildcard mapping correctly. If you can't access /resizer.debug, but you can get to /resizer.debug.ashx, it's not possible that wildcard mapping is enabled.
-image requests never reach asp.net.
-Add
-to your web.config temporarily (never leave it in long on a production site - slows things down).
-Visit mysite.com/anyimage.jpg
-Visit mysite.com/trace.axd. If the JPG URL isn't in here, it is impossible that the wildcard mapping is installed correctly.
-
 </dd> <dt>Q: I'm getting OutOfMemory exceptions when I try to resize certain large images for the first time (subsequent requests are fine). They're only 15MB in jpeg form, and I have 100MB of free RAM. </dt> <dd>A:
 A 15MB JPG uncompresses to about 80MB in bitmap form (depending upon the compression level). If you are resizing to a 2MB jpeg (15MB BMP), memory requirements for the
 operation are roughly 110MB (15 + 80 + 15). If you plan on using the resizer for very high-resolution photos (above 8MP), I suggest making sure you have ample amounts of RAM. 400MB to 1GB is usually plenty for the average web site with disk caching enabled.
