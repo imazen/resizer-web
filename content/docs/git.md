@@ -18,7 +18,7 @@ If you're not sharing code, simply use the NuGet packages to get the latest bina
 
 1. This repository has copyrighted image files (for unit tests) in the history that can't legally be 'published'. In the next major version I might start over with a fresh repository and rid myself of this problem.
 2. The repository structure is a bit confusing - The generated packages are greatly simplified and reduce the chance of errors.
-3. Each usable version gets a new release on NuGet and ImageResizing.Net immediately. The Git repo is not always in a consistent or building state, although I try to keep it that way. My build script creates and uploads new releases in minutes, so it's easier to email someone a hotfix link than direct them to the right git commit.
+3. Each usable version gets a new release on NuGet and ImageResizing.Net immediately. The Git repo is not always in a consistent or building state, although I try to keep it that way. My build script creates and uploads new releases in minutes, so it's easier to email someone a hotfix link than directs them to the right git commit.
 
 
 ## Using a private key instead
