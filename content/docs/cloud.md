@@ -38,7 +38,7 @@ The correct request flow is thus
 7. In the case of a cache miss at the output layer, the source file may still be cached locally with SourceMemCache or SourceDiskCache. 
 8. If there is a cache miss on the source file, an HTTP(s) request will be made to Azure/S3/Mongo/etc to download the source file into memory (and potentially cache it), process it, disk cache it (if installed), and send it back to the CDN, which will send it back to the browser.
 
-Multi-level caching is important. The CDNs ensures only a fixed amount of requests for each URL will hit the ImageResizer, but that number can still be high if your users are widely distributed across the globe. If you have 100+ CDN endpoints, that means you can still have (endpoints) requests per (expires-duration) duplicate requests hit the server. Also, CDNs often delete infrequently used files, so if CloudFront considers you a 'small time player', your files may not be cached for the entire duration of the 'expires' header.
+Multi-level caching is important. The CDNs ensures that only a fixed amount of requests for each URL will hit the ImageResizer, but that number can still be high if your users are widely distributed across the globe. If you have 100+ CDN endpoints, that means you can still have (endpoints) requests per (expires-duration) duplicate requests hit the server. Also, CDNs often delete infrequently used files, so if CloudFront considers you a 'small time player', your files may not be cached for the entire duration of the 'expires' header.
 
 
 ### Scaling tips
