@@ -1,4 +1,6 @@
 Aliases: /docs/plugins/basics
+Layout: extend_page
+Tags: extend
 
 # Making a plugin
 

@@ -1,4 +1,6 @@
 Aliases: /docs/extending /docs/plugins/extending
+Layout: extend_page
+Tags: extend
 
 # Extending the Image Resizer
 
