@@ -66,10 +66,10 @@ ImageResizer offers more granular control over the URL syntax than what ASP.NET 
 
 Here's an example `Rewrite` handler that forces all images within the "~/folder/" to be resized to a width of 100 pixels. Pretty straightforward.
 
-  Config.Current.Pipeline.Rewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
+    Config.Current.Pipeline.Rewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
       if (ev.VirtualPath.StartsWith(VirtualPathUtility.ToAbsolute("~/folder/"), StringComparison.OrdinalIgnoreCase))
           ev.QueryString["width"] = "100";
-  };
+    };
 
 
 ## When in doubt, consult the list of plugins or Google this site.
