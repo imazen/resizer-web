@@ -3,9 +3,9 @@ Tags: cms
 
 #Sitefinity and ImageResizer
 
-Sitefinity 3.X and earlier require no additional steps.
+Sitefinity 3.X and earlier versions require no additional steps.
 
-Sitefinity 4.X and later prevent external libraries and code from accessing uploaded files in a standardized manner (They no longer support ASP.NET's VirtualPathProvider system, nor do they provide an equivalent). 
+Sitefinity 4.X and later versions prevent external libraries and code from accessing uploaded files in a standardized manner (They no longer support ASP.NET's VirtualPathProvider system, nor do they provide an equivalent). 
 
 URIs are a good way to identify files, and we are disappointed that Sitefinity 4.X+ does not provide an API which accepts a virtual path.
 
