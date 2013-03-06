@@ -1,3 +1,4 @@
+Layout: install_page
 
 # Hosting Providers
 
