@@ -94,7 +94,23 @@ html(lang="en" class="no-js")
         script src='http://www.e-junkie.com/ecom/box.js' 
 
     - if page.lib?("uservoice")
-      script async="async" defer="defer" src="//widget.uservoice.com/9Io2T4xq0vy769kPEKmJ0w.js"
+      script async="async" defer="defer" src="//widget.uservoice.com/U5Ixzt3FEpsm5EkuCGrXEw.js"
+      javascript:
+        UserVoice = window.UserVoice || [];
+        UserVoice.push(['showTab', 'classic_widget', {
+          mode: 'full',
+          primary_color: '#cc6d00',
+          link_color: '#007dbf',
+          default_mode: 'support',
+          forum_id: 108373,
+          tab_label: 'Feedback & Support',
+          tab_color: '#00adc4',
+          tab_position: 'middle-right',
+          tab_inverted: false
+        }]);
+
+
+
 
     - if page.lib?("plusone")
       script async="async" defer="defer" src="https://apis.google.com/js/plusone.js"
