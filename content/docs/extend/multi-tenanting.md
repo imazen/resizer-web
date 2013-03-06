@@ -1,3 +1,6 @@
+Aliases: /docs/howto/multi-tenanting
+Layout: extend_page
+Tags: extend
 
 # Support multi-tenanting
 
