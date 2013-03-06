@@ -3,6 +3,8 @@ layout: install_page
 
 # ImageResizer - Standalone Installation or Without ASP.NET
 
+## Standalone Installation
+
 Many users opt to install ImageResizer in standalone mode (on a separate application or server). 
 
 Using ImageResizer in standalone mode and embedded mode is nearly identical - the URL API is usable from anywhere, and you can use an IIS Virtual Folder to make images accessible at the same virtual paths (for local imaages), or use one of the datastore plugins to connect to any file storage service.
