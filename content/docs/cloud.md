@@ -10,7 +10,7 @@ For the best performance, pick a cloud that offers all 3 services within the sam
 
 1. High-speed blob storage (like Amazon S3 or Azure Blob Storage)
 2. ASP.NET hosting (IIS or mono). AppHarbor is the easiest and least expensive I've found, and is also AWS hosted for fast S3 access.
-3. A CDN/edge caching solution that acts as a reverse proxy. This means *pull* **not** *push*. See [the compatibility page](/docs/workswith) for more details. Please note that Rackspace Cloud Files is not a CDN, and despite their affiliation with Akami, they are not offering a CDN nor CDN functionality. Imazen uses Amazon CloudFront happly, and gets a single-digit month bill.
+3. A CDN/edge caching solution that acts as a reverse proxy. This means *pull* **not** *push*. See [the compatibility page](/docs/workswith) for more details. Please note that Rackspace Cloud Files is not a CDN, and despite their affiliation with Akami, they are not offering a CDN nor CDN functionality. Imazen uses Amazon CloudFront happily, and gets a single-digit month bill.
 
 Once you've selected a cloud, you'll need to follow this general outline of steps:
 
