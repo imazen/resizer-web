@@ -1,3 +1,6 @@
+Aliases: /docs/events
+Layout: extend_page
+Tags: extend
 
 ## Events
 
