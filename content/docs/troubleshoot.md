@@ -4,7 +4,9 @@ Layout: install_page
 
 The image resizer is self-diagnosing for the majority of issues. Visit `/resizer.debug.ashx` on your website to check for any issues, and to verify that you are using the latest version of all the ImageResizer dlls. If `/resizer.debug.ashx` is not available, you can check the version of the dlls by right-clicking on each and choosing "Properties".
 
-To get support or use this guide, [make sure you get the detailed error message from visiting the image URL directly](/docs/geterror). This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far to generic to be useful.
+To get support or use this guide, [make sure you get the detailed error message from visiting the image URL directly](/docs/geterror). This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far to generic to be useful. 
+
+If this page doesn't resolve your isse, [visit the Support page](/support) for information about the bug bounty and free support requirements.
 
 
 ## Error 5 Missing compiler required member 'System.Runtime.CompilerServices.ExtensionAttribute..ctor'
