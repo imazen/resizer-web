@@ -10,11 +10,11 @@ h1 Blissfully compatible with practically everything
     h2 Image Storage Backends
     ul.star_list
       li Local files
-      li: a href="/plugins/s3reader": Amazon S3 - S3Reader plugin
-      li: a href="/plugins/azurereader2": Microsoft Azure Blob Storage
-      li: a href="/plugins/sqlreader": Microsoft SQL
-      li: a href="/plugins/mongoreader": MongoDB GridFS
-      li: a href="/plugins/remotereader": Anything accessible over HTTP (including Rackspace Cloud Files)
+      li: a href="/plugins/s3reader" Amazon S3 - S3Reader plugin
+      li: a href="/plugins/azurereader2" Microsoft Azure Blob Storage
+      li: a href="/plugins/sqlreader" Microsoft SQL
+      li: a href="/plugins/mongoreader" MongoDB GridFS
+      li: a href="/plugins/remotereader" Anything accessible over HTTP (including Rackspace Cloud Files)
       
       markdown:
         ImageResizer offers a simple API for connecting to arbitrary datastores based on virtual paths. 
@@ -69,24 +69,28 @@ h1 Blissfully compatible with practically everything
       li JPEG (24-bit, 48-bit, and grayscale)
       li PNG (24, 32, and 8-bit)
       li GIF (still and animated)
-      li BMP
-      li WMF
-      li EMF
+      li BMP, WMF, and EMF
+    h3 With additional plugins
+    ul.star_list
       li WebP (with WebP plugin)
-      li RAW, CR2, NEF, RAF, DNG, MOS, KDC, DCR (These and following formats require FreeImageDecoder)
+      li RAW, CR2, NEF, RAF, DNG, MOS, KDC, DCR (With FreeImageDecoder)
       li XBM, XPM, TARGA, SGI, Sun RAS, PSD, PICT, PNG, PFM, PBM, PGM, PPM, PCX, MNG, Kodak PhotoCD, KOALA, JPEG-2000, JIF, JNG, IFF, ICO, Raw Fax G3, EXR, DDS, and Dr. Halo CUT
       li With WicDecoder, any image supported by the operating system's installed codecs can be loaded
   .span3
     h2 Hosting providers
     p 
-      | If possible, look for hosting that allows full trust. 
-      a href="/docs/workswith/mediumtrust" Medium Trust is support for most functionality, but not all
+      | If possible, look for provider that allows full trust. 
+      a href="/docs/workswith/mediumtrust" Medium Trust is supported for most functionality
+      | , but not all. We've personally used the following hosting providers:
     ul.star_list
       li AppHarbor
       li Azure
       li Amazon EC2
       li MaximumASP
       li RackSpace (Full-trust only - they have a bad medium trust configuration)
+    p 
+      | By 2011, we successfully eliminated all hosting-provider related incompatibilities - at least we no longer get any complaints. If you encounter any issues, let us know! 
+      a href="/docs/workswith/hosting" Read more about hosting providers.
 
   .span3
     h2 Host Operating Systems
@@ -119,28 +123,17 @@ h1 Blissfully compatible with practically everything
       li LightHttpd
       li Apache (with mod_mono)
       li xsp
-
-
-
-markdown: 
-
-
-  ## Hosting providers
-
-  Any hosting provider will work, but many restrict ASP.NET permissions to the point where some external plugins can't run. Others just restrict (or don't provide enough) bandwidth, making image serving unbearably slow. 
-
-  Here's a few I've worked with.
-
-  * DiscountASP (100% compatible, but limited download bandwidth speed)
-  * MaximumASP (100% compatible, great company, great support)
-  * WebHost4Life (100% compatible,  but *very* limited download bandwidth speed. You must make support enable wildcard mapping, you can't do it through the control panel)
-  * RackSpace (RackSpace enforces very strict and highly erratic customized trust levels that can disable most plugins. However, some plans allow for full trust or allow you to fix their medium trust configuration. If you're getting a dedicated or virtual server, you'll probably be fine). If you're already stuck with RackSpace, I can still help you make the best of the situation, just contact support@imageresizing.net.
-  * Amazon EC2 (100% compatible, my personal choice)
-
-  I've also had success stories about dozens of other ISPs from hundreds of users. 
-
-  If your provider doesn't allow Full Trust, you may not be able to run the PrettyGifs plugin or some of the advanced plugins in the Creative edition, but all the core functionality should work fine. The Watermark and SimpleFilters will even work in low trust, so the Creative edition can still be useful in that situation.
-
-  So far, I've been able to resolve every ISP-related compatibility problem I've been notified of, with the exception of certain external plugins that intrinsically require full trust.
+  .span3
+    h2 .NET Framework Editions
+    ul.star_list
+      li .NET 2.0 SP2
+      li .NET 3.0
+      li .NET 3.5
+      li .NET 4.0
+      li .NET 4.5
+      li Mono 2.10.5 or higher
+    p 
+      | Many plugins require .NET 3.5 or higher to operate 
+      a href="/docs/requirements" (more details).
 
 
