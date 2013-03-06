@@ -11,7 +11,7 @@ When contributing source code to any Imazen project, your contributions must be 
 
 This contribution agreement is identical to the *Apache Individual Contributor License Agreement ("Agreement") V2.0* found at [apache.org/licenses](http://www.apache.org/licenses/), except for the following changes:
 
-1. Your agreement is with Imazen LLC, not the Apache Software Foundation, and the term "the Foundation" has been replaced with "the Managing Organziation".
+1. Your agreement is with Imazen LLC, not the Apache Software Foundation, and the term "the Foundation" has been replaced with "the Managing Organization".
 2. The license preface has been shortened and the requirement for a physical signature has been removed.
 3. The fields for a physical copy have been moved to the bottom of the page.
 4. You may opt-out of this agreement for future contributions through an explicit statement, although your contributions will not be accepted.
@@ -28,13 +28,13 @@ granted with Contributions from any person or entity, we must have digital
 or physical evidence that each Contributor has agreed to the license terms below.
 
 This license is for your protection as a Contributor as
-well as the protection of the Managing Organization and its users; it does not
+well as the protection of the Managing Organization and its users. It does not
 change your rights to use your own Contributions for any other purpose.
 
 You accept and agree to the following terms and conditions for Your
 present and future Contributions submitted to the Managing Organization, 
-UNLESS you explicitly state otherwise when making future contributions.  You ackowledge, however,
-that we will be unable to accept your Contributions if they are not provided under this agreement.
+UNLESS you explicitly state otherwise when making future contributions.  You acknowledge, however,
+that we will be unable to accept Your Contributions if they are not provided under this agreement.
 
 Except for the license granted herein to the Managing Organization and recipients of
 software distributed by the Managing Organization, You reserve all right, title,
