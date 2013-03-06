@@ -49,7 +49,7 @@ If you need to access files from some other kind of data store, you'll need to m
 
 ## Authentication and authorization for private images
 
-ImageResizer respects all Url Authorization rules and all ASP.NET Authentication mechanisims.
+ImageResizer respects all Url Authorization rules and all ASP.NET Authentication mechanisms.
 
 Remember that ImageResizer is non-invasive; it doesn't touch requests unless they have image commands.
 
