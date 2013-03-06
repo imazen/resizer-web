@@ -62,7 +62,7 @@ There is currently no way to use a CDN to cache private content.
 
 ## Customizing the URL syntax
 
-ImageResizer offers more granular control over the URL syntax than even ASP.NET Routing provides. As you remember, ASP.NET Routing occurs too late during the request lifetime to permit efficient delegation back to IIS. 
+ImageResizer offers more granular control over the URL syntax than what ASP.NET Routing provides. As you remember, ASP.NET Routing occurs too late during the request lifetime to permit efficient delegation back to IIS. 
 
 Here's an example `Rewrite` handler that forces all images within the "~/folder/" to be resized to a width of 100 pixels. Pretty straightforward.
 
