@@ -4,7 +4,7 @@ Tags: extend
 
 # Extending the Image Resizer
 
-The goal of the v3 rewrite was to make everything open and extensible. v2 was a monolithic design that, while elegant and very concise, was hard to extend except through source code modification.
+The goal of the v3 rewrite was to make everything open and extensible. V2 was a monolithic design that, while elegant and very concise, was hard to extend except through source code modification.
 
 V3 introduces the concept of Plugins, as well as adding an [array of Events](/docs/events) that can be used to customize the behavior of the pipeline.
 It also introduces a dedicated configuration section for the Resizer and its plugins, which is freeform and easily queried with a CSS-like syntax through the Config.Current class.
@@ -19,7 +19,7 @@ It also introduces a dedicated configuration section for the Resizer and its plu
 6.  Add support for new image formats
 7.  Add support for new image output formats (IEncoder)
 8.  Apply advanced security rules
-9.  Provider virtualized access to images on a abnormal data source (See [Making an IVirtualImageProvider](/docs/plugins/virtualimageprovider)).
+9.  Provide virtualized access to images on a abnormal data source (See [Making an IVirtualImageProvider](/docs/plugins/virtualimageprovider)).
 
 ## Interfaces
 

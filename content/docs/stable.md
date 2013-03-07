@@ -19,7 +19,7 @@ ImageResizer re-encodes images from untrusted domains. A bitmap image can also b
 
 ### RAM & CPU
 
-ImageResizer attempts memory allocation prior to any resource-intensive tasks. If there's not enough contigious space, the request is rejected - swap space in the pagefile is never used. In practice, this makes DDOS attacks extremely ineffective, as they cannot exhaust (or even severly limit) RAM in an effective fashion. 
+ImageResizer attempts memory allocation prior to any resource-intensive tasks. If there's not enough contiguous space, the request is rejected - swap space in the pagefile is never used. In practice, this makes DDOS attacks extremely ineffective, as they cannot exhaust (or even severely limit) RAM in an effective fashion. 
 
 
 ### Disk space
