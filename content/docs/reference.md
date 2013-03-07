@@ -12,8 +12,8 @@ Libs: plusone
 * **autorotate=true** Automatically rotates the image based on the EXIF info from the camera. (Requires the [AutoRotate plugin](/plugins/autorotate))
 * **sflip=none|x|y|xy** Flips the source image prior to processing (new in V3.1)
 * **srotate=0|90|180|270** Rotates the source image prior to processing (only 90 degree intervals) (new in V3.1)
-* **rotate=degrees** – Rotate the image any arbitrary angle (occurs after cropping)
-* **flip=none|x|y|xy** - Flip the image after everything is done
+* **rotate=degrees** – Rotates the image any arbitrary angle (occurs after cropping)
+* **flip=none|x|y|xy** - Flips the image after everything is done
 
 ## Manual cropping
 
@@ -48,8 +48,8 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 ## Misc
 
 * **ignoreicc** - true|false. If true, the ICC profile embedded in the source image will be ignored.
-* **cache** - always|no|default - Always forces the image to be cached even if it wasn't modified by the resizing module. No disables caching even if it was.
-* **process** - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. No prevents the image from being modified.
+* **cache** - always|no|default - Always forces the image to be cached even if it wasn't modified by the resizing module. Doesn't disable caching if it was modified.
+* **process** - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. Does not prevent the image from being modified.
 * **dpi=90|300|600** - The DPI at which the image should be printed. Ignored by all browsers, most operating systems, and most printers.
 
 ## [Watermark plugin](/plugins/watermark)
