@@ -12,7 +12,8 @@ header
           span class="icon-bar"
         a class="brand" href="/"
           img src="/img/ir-logos/imageresizer_400_00aec4.png" style="width:200px" alt="Image Resizer"
-
+        - if config.github.showeditbutton
+          a.editlink href=(config.github.editurl + index.make_almost_virtual(page.filename, false)) edit page on GitHub
         .nav-collapse.collapse
           ul.nav
             == menu_tag_current 'active','li' do
@@ -28,8 +29,7 @@ header
                 a href="/support" Support
               li
                 a href="/licenses" Licenses
-              - if config.github.showeditbutton
-                li: a href=(config.github.editurl + index.make_almost_virtual(page.filename, false)) Edit page
+              
 
 
 
