@@ -1,4 +1,3 @@
-
 # V2 release changelog
 
 * v2.8 May 27, 2011 ([Upgrade notes from V2.6 to v2.8](/releases/2-8))
@@ -6,7 +5,7 @@
   * <span style="color:red;">Fixed serious limitation of ImageResizerMaxWidth/Height settings.</span>  
     These settings only control the size of the photo portion of the image. They do not limit the dimensions of the resulting bitmap. 
     
-    **New behavior**: When the final dimensions of an image would exceed 2x the configured max width and height, the request will be ignored with the following message: "The specified image will be more the 2x the permitted size. Request terminated."
+    **New behavior**: When the final dimensions of an image would exceed 2x the configured max width and height, the request will be ignored with the following message: "The specified image will be more than 2x the permitted size. Request terminated."
   * Fixed bug: Mime-type: image/x-png was being sent instead of image/png. **Causes Chrome to download images instead of displaying them.**
   * Fixed bug in disk caching system: **Cached files modified by just one day or one hour don't get updated.**
   * Fixed bug where **specifying both width and maxheight would cause width to be ignored.**
@@ -20,13 +19,13 @@
   * Fixed border bug where border was drawn over top of padding.
   * Fixed threading bug with creating the web.config file. Two concurrent requests would cause an exception.
   * Fixed bug where no URL Authorization was occurring UNLESS DisableImageURLAuthorization=TRUE in web.config (This bug did not exist in v2.1b, only in custom versions sent to customers between Mar. 19 and Nov. 11)
-  * Fixed SecurityException errors occurring on GoDaddy and in other low-trust environments: changed the Animation plugin to use static methods insead of reflection. Users of the animation plugin, contact me for an updated version.
+  * Fixed SecurityException errors occurring on GoDaddy and in other low-trust environments: changed the Animation plugin to use static methods instead of reflection. Users of the animation plugin, contact me for an updated version.
   * Added support for splitting the image cache into subfolders, allowing scalability to millions of images:
   * Set "ImageCacheSubfolders" to the number of required folders.
   * Added support for resizing images from VirtualPathProviders.
     Set either <em>ImageResizerUseVirtualPathProvider </em>or <em>ImageResizerUseVirtualPathProviderAsFallback </em>to true to enable the functionality. In Fallback mode, the virtual path provider is only called if no physical file exists.
   * Added support for implementing cache-friendly database-driven image resizing using a VirtualPathProvider.
-  * Added IVirtualFileWithModified and IVirtualBitmapFile. Allows custom virtual path providers to be cache-friendly and even send bitmaps directly to the image resizer. Great for implementing new image formats.
+  * Added IVirtualFileWithModified and IVirtualBitmapFile. Allow custom virtual path providers to be cache-friendly and even send bitmaps directly to the image resizer. Great for implementing new image formats.
   * Added &scale=UpscaleCanvas mode. Instead of upscaling the image, the canvas expands to the specified Width and Height.
   * Added DisableImageURLAuthorization setting. Set to TRUE to disable additional URL authorization checking within the resizer (imagecache is still protected).
   * Added BuildImage overloads with VirtualFile support
@@ -46,7 +45,7 @@
   * Added: ImageManager.BuildImage now accepts an HttpPostedFile instance for resizing, making upload and resize simple. Sample project included.
 * v2.0rc2 Jun 3, 2009 (<a href="http://nathanaeljones.com/11181_Image_Resizer_2_0_Upgrade_notes">Upgrade notes from 1.2 to 2.0</a>)
   * Fixed: Extremely rare bug where rounding causes Bitmap to be initialized with a dimension of 0, and causes a Parameter exception.
-    Ocurred when resizing an image to < 2px in height or width (usually happens with 2x1000 size images, etc).
+    Occurred when resizing an image to < 2px in height or width (usually happens with 2x1000 size images, etc).
     Added regression test for 500x2 image resized to 100px wide.
   * Fixed: Typo (missing else) in SaveToNonSeekableStream. This method is for extensibility, and is not used by the Resizer directly.
     This method is now tested and part of the Regression tests (HandlerTest.ashx).
@@ -74,7 +73,7 @@ bypasses it.  Added protection in the HttpModule.
   * Fixed Maxwidth/maxheight not getting picked up.
   * Fixed: Custom crop coordinates at 0 were being applied in the negative coordinate zone. Fixed so x1,y1 weren't affected, but setting x2 and y2 to 0 is bottom-right relative.
   * Changed flip to be after all operations, and added sourceFlip to replace its behavior.
-  * Added -ignoreicc parameter and made ICC reading the default. ICC profiles are not written out - browser do not support them.
+  * Added -ignoreicc parameter and made ICC reading the default. ICC profiles are not written out - browser does not support them.
 
 * v2.0a Jan 30, 2009 (E-mail distribution)
 * v1.0 - August 6, 2008 (Initial release to the public.)
