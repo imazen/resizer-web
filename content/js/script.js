@@ -19,6 +19,13 @@ $(function(){
 		controls:false,
     pause: 6000
   });
+  $("ul.client-logo-carousel").bxSlider({
+    slideWidth: 160,
+    minSlides: 2,
+    maxSlides: 8,
+    slideMargin: 10,
+    auto: true
+  });
 	/*$('pre code').not('code[class]').each(function(i, e) {$(e).addClass('csharp c-sharp'); hljs.highlightBlock(e, '  ')});*/
 });
 
