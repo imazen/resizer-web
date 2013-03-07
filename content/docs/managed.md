@@ -1,4 +1,3 @@
-
 #Managed API usage
 
 Most tasks with the managed API only require one line:
@@ -54,7 +53,7 @@ You can create one like so:
 
 Variables include the correct extension <ext>, random GUID <guid>, source path <path>, source filename <filename>, <width>, <height>, and any settings value <settings.*>. 
 
-This makes many scenarios much easier to code, and reduces room for error. Many users make critical errors in their upload code, like not sanitizing filenames, or using the original extension (immediate server highjacking, here we go). 
+This makes many scenarios much easier to code, and reduces room for error. Many users make critical errors in their upload code, such as not sanitizing filenames, or using the original extension (immediate server highjacking, here we go). 
 
 With the new feature, a proper upload system is 3 lines:
 
