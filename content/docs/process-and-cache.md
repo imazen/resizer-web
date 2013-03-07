@@ -1,7 +1,6 @@
-
 # Independent processing and caching
 
-The ImageResizer HttpModule offers two independently controlled set of behaviors. Processing, and caching.
+The ImageResizer HttpModule offers two independently controlled sets of behaviors - processing, and caching.
 
 Caching can work with any file type, and is ideal if you have a VirtualPathProvider that gets its data from a high-latency source like S3, Azure, or SQL. The caching layer isn't (yet) designed for output caching aspx pages, but you can give it a delegate that writes a stream, so it's quite flexible and can be reused.
 
@@ -12,7 +11,7 @@ By default, processing occurs if (a) the URL uses a supported image extension an
 
 By default, caching occurs  only if processing occurs.
 
-If neither caching or processing will occur for a request, the request is left alone.
+If neither caching nor processing will occur for a request, the request is left alone.
 
 * You can set &process=always to force a request to be processed (say it doesn't have a valid extension, but is still an image, or you want it to be re-encoded even though nothing else is happening to it).
 * You can set &process=no to prevent a request from being treated as an image (instead, it will be treated as a binary stream).
