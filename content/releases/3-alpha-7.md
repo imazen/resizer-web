@@ -55,8 +55,8 @@ Bitmaps are now Tagged with a BitmapTag instance that references the underlying 
 * Fixed numerous bugs in the Watermark plugin (which may have resulted in Overflow errors or rendering anomalies.)
   * Now works outside ASP.NET
   * Now handles simulation layouts
-  * now supports physical paths
-  * now produces integer dimensions and position for the watermark 
+  * Now supports physical paths
+  * Now produces integer dimensions and position for the watermark 
   * No longer incorrectly upscales watermark to fill entire image when keepAspectRatio is true. 
   * No longer acts incorrectly when padding and size add up to > 1 and valuesPercentages=true.
 * ImageBuilder now uses the correct Config instance when selecting an encoder. Previously used Config.Current instead of the EncodeProvider passed in the constructor. Symptom: Plugin encoders were ignored by ImageBuilder unless present in Config.Current. 
