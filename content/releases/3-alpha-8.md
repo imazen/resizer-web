@@ -35,8 +35,8 @@ Layout: release
 ### AnimatedGif plugin
 - Was also just pretending to work before. I somehow missed the test failure (yes, I had a manual test for it).
 - Now properly extends BuilderExtension instead of AbstractImageProcessor - so it can actually resize GIFs.
-- uses c.CurrentImageBuilder.Build instead of this.buildToBitmap (so it actually encodes properly)
-- Now uses source.RawFormat to filter for GIF images instead of checking the output type. No longer swallows ExternalException, since we've found the cause, I think.
+- Uses c.CurrentImageBuilder.Build instead of this.buildToBitmap (so it actually encodes properly)
+- Now uses source.RawFormat to filter GIF images instead of checking the output type. No longer swallows ExternalException, since we've found the cause, I think.
  
 ### SqlReader plugin
 
@@ -46,7 +46,7 @@ Layout: release
 ## Samples and Documenation
 
 * Added JCropExample ([read the article](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/))
-* Added SqlReaderSample - Shows how to use the SqlReader plugin to resizing and upload images to SQL.
+* Added SqlReaderSample - Shows how to use the SqlReader plugin to resize and upload images to SQL.
 * Added ComplexWebApplication\CropExample showing how to use jCrop with the image resizer
 * ComplexWebApplication\UploadSample.aspx now works with multiple upload controls. Added commented-out code showing how to get a byte array for upload to SQL, etc.
 * Removed 800x600 limitation on ComplexWebApplication - was accidentally left in during last release.
