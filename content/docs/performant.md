@@ -13,7 +13,7 @@ ImageResizer is a RESTful Imaging API. It can scale up, scale out, and scale dow
 
 ImageResizer’s DiskCache is designed for high concurrency. Its low-overhead threading designs insure hundreds of concurrent imaging commands can run in parallel. 
 
-Two simultaneous requests for the same image modification won’t cause duplicate work - instead, both requests recieve a response simultaneously as soon as the image is ready, and the result is asynchronously flushed to the disk cache as soon as it’s efficient to do so. In the mean time, it’s served from a single memory block to all requestors
+Two simultaneous requests for the same image modification won’t cause duplicate work - instead, both requests receive a response simultaneously as soon as the image is ready, and the result is asynchronously flushed to the disk cache as soon as it’s efficient to do so. In the mean time, it’s served from a single memory block to all requestors
 
 ## Scalability - Traffic
 
