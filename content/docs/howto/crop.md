@@ -1,4 +1,3 @@
-
 # Cropping with the ImageResizer
 
 
@@ -10,4 +9,4 @@ If X2 or Y2 are 0 or less, they are relative to the bottom-right corner. This al
 For example, crop=0,0,0,0 leaves the image uncropped. crop=10,10,-10,-10 removes 10 pixels from all edges of the image.
 
 
-In addition, you can specify `cropxunits` and `cropyunits`. Setting them to 100 allows you to crop by percentage. Setting them to the width/height of the display image allows you to crop in display coordiantes, without needing to know the original size of the image.
+In addition, you can specify `cropxunits` and `cropyunits`. Setting them to 100 allows you to crop by percentage. Setting them to the width/height of the display image allows you to crop in display coordinates, without needing to know the original size of the image.
