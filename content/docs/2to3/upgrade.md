@@ -11,7 +11,7 @@ The V3 "Performance Edition" includes everything users of V2 expect, and more.
 * Animated Gif resizing (new!) (Used to be $150 extra!)
 * Gradient generation (new!) Generate gradients from CSS or HTML.
 * 404 defaults (new!)
-* live diagnostics (new!).
+* Live diagnostics (new!).
 * And more...
 
 [Continue to the purchase page](/buy)
