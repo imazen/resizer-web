@@ -29,7 +29,7 @@ You **must** disable overlapped recycling on the application pool running this p
 
 ## Managed API Usage
 
-The following convenince methods allow you pass a virtual or physcial image path (or stream) into them, along with a NameValueCollection of settings. 
+The following convenience methods allow you pass a virtual or physical image path (or stream) into them, along with a NameValueCollection of settings. 
 
 Returns a list of face objects for the given image (path, stream, Bitmap, etc).
 Note that the face coordinates are relative to the unrotated, unflipped source image.
@@ -44,13 +44,13 @@ ImageResizer.js can *keep* these coordinates synced during rotations/flipping if
 	Config.Current.Plugins.Get<FacesPlugin>().GetFacesFromImageAsString(object image,NameValueCollection settings); //Returns string
 
 
-All tuning paramters are identical between the URL and Managed API.
+All tuning parameters are identical between the URL and Managed API.
 
 ## Tuning
 
 * f.minsize=0..100 (defaults to 3). The smallest face to detect, as a percentage of the image size.
 * f.faces=min-count,maxcount Defaults to 1,8. The minimum and maximum number of faces to detect in the image. 
-* f.expand=percent|xpercent,ypercent Defaults to 0,0. The percent (0..100) to expand the face rectangels in each orientation. If ypercent is omitted, the value from xpercent will be used.
+* f.expand=percent|xpercent,ypercent Defaults to 0,0. The percent (0..100) to expand the face rectangles in each orientation. If ypercent is omitted, the value from xpercent will be used.
 * f.threshold=value|minvalue,value The confidence threshold required to consider a face detected. Defaults to 1,2. 'minvalue' is used if we have not reached the quote specified in `f.faces`.
 
 
@@ -77,7 +77,7 @@ All tuning paramters are identical between the URL and Managed API.
 
 ## JSON member reference (for both Faces and RedEye plugins)
 
-The JSON response contains image layout information so StudioJS or ImageResizer.js can translate between source coordiantes (in which all face and red-eye rectangles are stored) and destination coordinates (which are used for input and display).
+The JSON response contains image layout information so StudioJS or ImageResizer.js can translate between source coordinates (in which all face and red-eye rectangles are stored) and destination coordinates (which are used for input and display).
 
 
 * ow/oh - original image width/height
