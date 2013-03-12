@@ -65,7 +65,7 @@ Adjust jpeg compression with the `quality=0..100` command. The default is 90, an
 100: ![](http://img.imageresizing.net/tulip-leaf.jpg;width=100;quality=100)
 
 
-You need the [PrettyGifs plugin](/plugins/prettygifs) to get acceptable GIF quality, adjust compression, or even support transparency. Windows support for GIF files is terrible. You'll also need the [AnimatedGifs plugin](/plugins/animatedgifs) if you're using those. 
+You need the [PrettyGifs plugin](/plugins/prettygifs) to get acceptable GIF quality, adjust compression, or even support transparency. Windows support for GIF files isn't as efficient. You'll also need the [AnimatedGifs plugin](/plugins/animatedgifs) if you're using those. 
 
 If you want to generate 8-bit PNG files, you'll also need the PrettyGifs plugin. Only 32-bit PNG files are supported by default. 
 
@@ -113,7 +113,7 @@ Every public-facing website needs disk caching for their dynamically resized ima
 
 * Process=No - Prevents the requested image from being modified. Useful if you want to cache but not process an image
 * Process=Default - Processes the image only if one of the [defined querystring commands](/docs/reference) are being used.
-* Process=Always - Forces re-encoding of the image, even in no other operations are requested. Good for preventing XSS attacks from untrusted image sources.
+* Process=Always - Forces re-encoding of the image, even if no other operations are requested. Good for preventing XSS attacks from untrusted image sources.
 
 ## Edge Caching - why you need it
 
