@@ -2,62 +2,239 @@ layout: benefits_page
 
 h1 Comprehensive Imaging Suite
 
+h2 Superior image processing
+
+p Get the best out of your images with minimal effort. Our adjustments are designed to support both automatic an manual modes, so you can process millions of images without losing the ability to tweak. 
+p All commands are nondestuctive, giving you free reign to experiment endlessly and revert easily by removing your commands. Unlike other web-based editors, all commands are processed in a single stage, eliminating quality loss from repeated compression.
+
+h2 Transform
 .row
-  .span4
-    h2 Transform
-    ul
-      li Resize
-      li Crop
-      li Rotate
-      li Flip
-      li Resize Canvas
-  .span4
-    h2 Enhance
-    ul
-      li Remove noise
-      li Smart Sharpen (unsharp mask)
-      li Smooth skin (smart blur)
-      li Adjust white balance
-      li Adjust contrast, saturation, brightness
-  .span4
-    h2 Effects
-    ul
-      li Black & white (multiple evaluation modes)
-      li Sepia
-      li Warmify
-      li Cool
-      li Tint/overlay
-      li Tint/meld
-      li Adjust transparency
-      li Invert image
-      li Round corners (even individually)
+  .span3
+    h4 Scale with any fit mode
+    img src="http://z.zr.io/ri/2s.jpg?height=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/2s.jpg?width=50&height=50&mode=max"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/2s.jpg?width=50&height=50&mode=pad&bgcolor=eee"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/2s.jpg?width=50&height=50&mode=crop"
+    p Constrain, carve, pad, or crop to the perfect size with complete alignment control.
+  .span3
+    h4 Rotate & Flip
+    img src="http://z.zr.io/ri/3s.jpg?height=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/3s.jpg?height=50&srotate=90"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/3s.jpg?height=50&rotate=30&flip=h"
+    p Flip, rotate, or auto-rotate
+  .span3
+    h4 Modify canvas
+    img src="http://z.zr.io/ri/4s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/4s.jpg?height=30&margin=5&bgcolor=eee"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/4s.jpg?height=30&paddingWidth=5&paddingColor=ccc&borderWidth=5&borderColor=ddd&margin=5&bgcolor=eee"
+    p 
+      | Add padding, borders, and margins 
+      em within the image. 
+      | No more box-model nightmares.
 .row
-  .span4
-    h2 Encode & Compress
+  .span3
+    h4 Manual crop
+    img src="http://z.zr.io/ri/1s.jpg?width=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/1s.jpg?crop=18,40,40,60&cropxunits=100&cropyunits=100&width=100"
+    p Crop by percent, pixels, or resolution-independent units (works seamlessly with jCrop).
+
+  .span3
+    h4 Auto-remove whitespace
+
+    img src="http://z.zr.io/ri/18s.jpg?width=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/18s.jpg?width=50&trim.threshold=33&trim.percentpadding=5"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/18s.jpg?width=50&trim.threshold=80&trim.percentpadding=5"
+
+    p Product photos are painless with energy-based whitespace removal. 
+
+  .span3
+    h4 Face detection & auto-crop
+    img src="http://z.zr.io/ri/5s.jpg?height=60"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?width=60&height=60&mode=crop&c.focus=faces"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?width=60&height=60&mode=crop&c.focus=faces&c.zoom=true"
+    p Provide focus points or use automatic face detection to ensure everyone stays in the photo.
+hr
+h2 Enhance
+.row
+  .span3
+    h4 Unsharp Mask
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.sharpen=20&quality=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.sharpen=100&quality=100"
+    h4 Adjust contrast
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.contrast=0.3"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.contrast=0.8"
+  .span3
+    h4 Fix exposure
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.brightness=0.2"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.brightness=-0.2"
+    h4 Enhance saturation
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.saturation=0.3"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.saturation=0.8"
+  .span3
+    h4 Auto-white balance
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.balancewhite=true&a.balancethreshold=0.1"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.balancewhite=true&a.balancethreshold=0.6"
+    h4 Smart noise removal
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.removenoise=5"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.removenoise=10"
+hr
+h2 Filter
+.row
+  .span3
+    h4 Grayscale fixes everything
+    img src="http://z.zr.io/ri/utah2.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/utah2.jpg?height=50&s.grayscale=true"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/utah2.jpg?height=50&s.grayscale=ry"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/utah2.jpg?height=50&s.grayscale=bt709"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/utah2.jpg?height=50&s.grayscale=flat"
+  .span3
+    h4 Sepia, Warming and Cooling Filters
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.sepia=true"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.overlay=AC7A3320"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.shift=AC7A3320"
+    br
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.shift=EC8A0020"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.shift=EBB11320"
+    br
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.shift=005DFF20"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.shift=00C1B120"
+
+  .span3
+    h4 Paint, posterize, and blur 
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.oilpainting=0"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.oilpainting=15"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.oilpainting=30"
+    br
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.posterize=64"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.posterize=128"
+    br
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.blur=0"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.blur=5"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&a.blur=15"
+.row
+  .span3
+    h4 Round corners
+    img src="http://z.zr.io/ri/14s.jpg?width=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/14s.jpg?width=50&s.roundcorners=100,0,100,0"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/14s.jpg?width=50&s.roundcorners=40"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/14s.jpg?width=50&s.roundcorners=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/14s.jpg?width=25&height=25&mode=crop&s.roundcorners=100"
+  .span3
+    h4 Feather edges
+    img src="http://z.zr.io/ri/12s.jpg?width=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/12s.jpg?width=50&a.featheredges=200&a.featherout=0.2&bgcolor=black" 
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/12s.jpg?width=50&a.featheredges=200&bgcolor=black" 
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/12s.jpg?width=50&a.featheredges=200&bgcolor=white" 
+  .span3
+    h4 Make JPEGs transparent
+    img src="http://z.zr.io/ri/5s.jpg?height=50"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.alpha=0.8&format=png"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/5s.jpg?height=50&s.alpha=0.6&format=png"
+hr
+h2 Advanced
+.row
+  .span3
+    h4 Face & Eye detection
+    img src="http://z.zr.io/ri/2s.jpg?f.show=true&height=100"
+    |  
+    img src="http://z.zr.io/ri/5s.jpg?height=100&r.autoeyes=true"
+  .span3
+    h4 Red-eye repair
+    img src="http://z.zr.io/ri/5s.jpg?height=100&r.autoeyes=true"
+    p Our adaptive circle fill algorithm repairs red-eye while maintaining integrity.
+  .span3
+    h4 Change aspect ratio with seam carving
+
+    img src="http://z.zr.io/ri/3s.jpg?height=100"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/3s.jpg?width=100&height=100&mode=carve"
+.row
+
+  .span3
+    h4 Apply overlays and backgrounds
+    img src="http://z.zr.io/ri/23s.jpg?width=100&watermark=logo"
+    img src="http://z.zr.io/ri/23s.jpg?width=100&watermark=bg&s.alpha=0.7&s.roundcorners=100"
+    img src="http://z.zr.io/ri/23s.jpg?width=100&watermark=fill-text1&s.alpha=.5&text=hi"
+    img src="http://z.zr.io/ri/23s.jpg?width=100&watermark=fill-text1&s.alpha=.5&text=We have flexible layout"
+    p Overlay (or underlay) an unlimited number of text and image layers; exercise complete layout control.
+  .span3
+    h4 Upscale on your terms
+    img src="http://z.zr.io/ri/15tiny.jpg?width=80&height=80"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/15tiny.jpg?width=80&height=80&scale=canvas&bgcolor=ddd"
+    i.icon-arrow-right
+    img src="http://z.zr.io/ri/15tiny.jpg?width=80&height=80&scale=both&bgcolor=ddd&fi.scale=lanczos"
+    p Upscale only when you want to, the way you want to, with the upscale filter you want.
+  .span3
+    h4 Encode & Compress
     ul
-      li Produce JPEG, PNG, GIF, and WebP results
-      li Control Jpeg subsampling
-      li Encode progressive Jpegs
+      li Produce JPEG, PNG, GIF, and WebP results, with quality, progressive, and subsampling control.
       li Generate high-quality GIF, 8-bit PNG, and animated gif results
       li Set matte color
-
-  .span4
-    h2 Work with every file format
-    ul
-      li Render PDFs to images, page-by-page
-      li Develop RAW, CR2, NEF, and HDR files!
+      li Render PDFs and TIFF files to images, page-by-page
+      li Develop RAW, CR2, NEF, and HDR files directly.
       li Decode a variety of ancient formats
-      li 
-  .span4
-    h2 Face and Eye detection
-    ul 
-      li Automatically detect faces, eyes, and correct red-eye
-      li Allow smart crop based on face detection
-.row
-  .span4
-    h2 Automatic whitespace removal
-    ul
-      li Have whitespace automatically removed from your product photos
-  .span4
-    h2 
+  .span3
+
+
+
+
       
