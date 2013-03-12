@@ -67,7 +67,7 @@ true by default. False disables the plugin completely.
 
 ### subfolders
 
-Controls how many subfolders to use for disk caching. Rounded to the next power of to. (1->2, 3->4, 5->8, 9->16, 17->32, 33->64, 65->128,129->256,etc.)
+Controls how many subfolders to use for disk caching. Rounded to the next power of two. (1->2, 3->4, 5->8, 9->16, 17->32, 33->64, 65->128,129->256,etc.)
 
 NTFS does not handle more than 8,000 files per folder well. Larger folders also make cleanup more resource-intensive.
 

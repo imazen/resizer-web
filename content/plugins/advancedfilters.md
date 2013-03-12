@@ -7,7 +7,7 @@ Tagline: Blur, sharpen, remove noise, and perform automatic histogram adjustment
 
 Apply advanced effects to your images. Requires Full Trust.
 
-The plugin currently applies effects to the the image along with any background color, padding, or drop shadow that may be present. Future versions may simply apply the effect to the image, not the surrounding area. Note: does not affect borders or watermarks.
+The plugin currently applies effects to the image along with any background color, padding, or drop shadow that may be present. Future versions may simply apply the effect to the image, not the surrounding area. Note: does not affect borders or watermarks.
 
 ## Installation
 
@@ -44,15 +44,15 @@ Hint: Start with values between -0.1 and 0.1. Values have a big effect.
 Automatically corrects the white balance of the photo with 1 of 3 algorithms.
 
 * `area` - Threshold is applied based on cumulative area at the lower and upper ends of the histogram. Much larger thresholds are required for this than SimpleThreshold.
-* `simple` - Simple upper and lower usage thresholds are applied to the values in each channel's histogram to determine the input start/stop points for each individual channel. The start/stop points are used to calcualte the scale factor and offset for the channel.
+* `simple` - Simple upper and lower usage thresholds are applied to the values in each channel's histogram to determine the input start/stop points for each individual channel. The start/stop points are used to calculate the scale factor and offset for the channel.
 * `gimp` - Threshold is applied based on strangely skewed cumulative area, identical to the process used by GIMP.
 
-The default (and reccomended) algorithm is 'area'.
+The default (and reccommended) algorithm is 'area'.
 
 *  &a.balancewhite=true|area|simple|gimp
 *  &a.balancethreshold=0.6|0.06 (simple white balance requires a smaller threshold.)
 
-For the `area` and `gimp` algorithms, the default threshold is 0.6. For `simple`, 0.06 is used (as it is not compared against cumulative area, but an indivudual value's usage)
+For the `area` and `gimp` algorithms, the default threshold is 0.6. For `simple`, 0.06 is used (as it is not compared against cumulative area, but an individual value's usage)
 
 
 

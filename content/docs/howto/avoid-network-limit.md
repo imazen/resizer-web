@@ -1,13 +1,12 @@
-
 # Network BIOS limit reached
 
-Users of IIS and ASP.NET often receive the following error message when running an website from a network share or NAS device.
+Users of IIS and ASP.NET often receive the following error message when running a website from a network share or NAS device.
 
 	The network BIOS command limit has been reached
 	Failed to start monitoring changes
 
 
-There are two causes; one from IIS, and one from ASP.NET. Both problems are triggered by a large number of folders in the site, and the the protocol inefficiency of over-the-network storage.
+There are two causes; one from IIS, and one from ASP.NET. Both problems are triggered by a large number of folders in the site, and the protocol inefficiency of over-the-network storage.
 
 The easy solution is - don't host your content on a SAN. Go cloud; put the content on S3, your server on EC2, and use CloudFront to make that tiny server scale like mad. If that's not an option, keep reading.
 

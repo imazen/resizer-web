@@ -1,4 +1,3 @@
-
 # Generated resized versions of an image
 
 While the ImageResizer shines at on-the-fly image processing, you can also use it to drastically simplify pre-processing and ahead-of-time resizing as well.
@@ -11,7 +10,7 @@ Two different solutions are presented - 1 for processing images as they are uplo
 
 ## 1. During upload
 
-This method generates 3 versions of an image as it is uploaded, adding a \_thumb, \_medium, and \_large suffix to each filename. Uploaded files are named using a generated GUID, as uploaded file names are never safe for use as-is. Even with proper sanitization (alphanumeric filtering AND length limiting), you will encounter duplicates using an uploaded filenames on your server.
+This method generates 3 versions of an image as it is uploaded, adding a \_thumb, \_medium, and \_large suffix to each filename. Uploaded files are named using a generated GUID, as uploaded file names are never safe for use as-is. Even with proper sanitization (alphanumeric filtering AND length limiting), you will encounter duplicates using uploaded filenames on your server.
 
 	Dictionary<string, string> versions = new Dictionary<string, string>();
 	//Define the versions to generate
