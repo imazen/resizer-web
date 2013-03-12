@@ -4,7 +4,7 @@ Tags: cms
 
 # Orchard and ImageResizer
 
-Standard installation steps are sufficent for the Essential Edition, but an additional Web.config file must be changed for DiskCache to work properly.
+Standard installation steps are sufficient for the Essential Edition, but an additional Web.config file must be changed for DiskCache to work properly.
 
 **Note that the Orchard.Contrib.Cache plugin has been reported to behave badly if any other HttpModules are installed. Only once customer has reported this issue, and we are investigating**
 
