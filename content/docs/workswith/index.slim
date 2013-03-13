@@ -23,6 +23,23 @@ h1 Blissfully compatible with practically everything
 
 
   .span3
+    h2 Content Management Systems
+    p All known ASP.NET content management systems support ImageResizer in embedded mode. Ruby, Python, or PHP content management systems (such as Wordpress) should use Standalone mode.
+    ul.star_list
+      li: a href="/docs/workswith/umbraco" Umbraco
+      li: a href="/docs/workswith/dotnetnuke" DotNetNuke
+      li: a href="/docs/workswith/orchard" Orchard
+      li: a href="/docs/workswith/ektron" Ektron (includes ImageResizer)
+      li: a href="/docs/workswith/episerver" EPiServer
+      li: a href="/docs/workswith/sitecore" Sitecore
+      li: a href="/docs/workswith/sitefinity" Sitefinity
+    p: strong If your CMS isn't listed here, you can follow the vanilla ASP.NET installation instructions.
+    p Over 30 CMSes include ImageResizer Essential edition - don't be surprised if your CMS already has it installed.
+    p: strong 
+      | Want to redistribute ImageResizer with your product? Check out 
+      a href="/docs/redist" the Redistribution and CMS Integration Guide.
+
+  .span3
     h2 Content Delivery Networks
     ul.star_list
       li Amazon CloudFront
@@ -40,22 +57,7 @@ h1 Blissfully compatible with practically everything
       Any true CDN (true CDNs support origin-pull) is compatible with ImageResizer. Be sure to enable querystring preservation, or use ImageResizer's semicolon syntax instead.
 
       Rackspace Cloud Files is *not* a CDN. If you'd like them to *become* one, you [can vote for custom origin support here](http://feedback.rackspace.com/forums/71021-product-feedback/suggestions/1105435-add-the-origin-pull-feature-to-cloud-files).
-  .span3
-    h2 Content Management Systems
-    p All known ASP.NET content management systems support ImageResizer in embedded mode. Ruby, Python, or PHP content management systems (such as Wordpress) should use Standalone mode.
-    ul.star_list
-      li: a href="/docs/workswith/umbraco" Umbraco
-      li: a href="/docs/workswith/dotnetnuke" DotNetNuke
-      li: a href="/docs/workswith/orchard" Orchard
-      li: a href="/docs/workswith/ektron" Ektron (includes ImageResizer)
-      li: a href="/docs/workswith/episerver" EPiServer
-      li: a href="/docs/workswith/sitecore" Sitecore
-      li: a href="/docs/workswith/sitefinity" Sitefinity
-    p: strong If your CMS isn't listed here, you can follow the vanilla ASP.NET installation instructions.
-    p Over 30 CMSes include ImageResizer Essential edition - don't be surprised if your CMS already has it installed.
-    p: strong 
-      | Want to redistribute ImageResizer with your product? Check out 
-      a href="/docs/redist" the Redistribution and CMS Integration Guide.
+.row
   .span3
     h2 Supported output formats
     ul.star_list
@@ -93,7 +95,7 @@ h1 Blissfully compatible with practically everything
     p 
       | By 2011, we successfully eliminated all hosting-provider related incompatibilities - at least we no longer get any complaints. If you encounter any issues, let us know! 
       a href="/docs/workswith/hosting" Read more about hosting providers.
-
+.row
   .span3
     h2 Host Operating Systems
     ul.star_list
