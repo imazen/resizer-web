@@ -1,4 +1,3 @@
-Libs: ejunkie
 Aliases: /plugins/upgradefrom2
 
 # Upgrade from version 2
