@@ -1,4 +1,3 @@
-Layout: install_page
 Aliases: /docs/requirements
 
 # System Requirements

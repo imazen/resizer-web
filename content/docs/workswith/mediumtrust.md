@@ -1,4 +1,3 @@
-Layout: install_page
 
 # Medium trust
 

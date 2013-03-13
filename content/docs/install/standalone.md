@@ -1,5 +1,4 @@
 Aliases: /docs/howto/use-without-asp-net
-layout: install_page
 
 # ImageResizer - Standalone Installation or Without ASP.NET
 

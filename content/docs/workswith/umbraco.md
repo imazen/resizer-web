@@ -1,4 +1,3 @@
-Layout: install_page
 Tags: cms
 
 # Umbraco and ImageResizer

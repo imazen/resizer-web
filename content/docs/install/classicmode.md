@@ -1,5 +1,4 @@
 Aliases: /docs/cleanurls
-Layout: install_page
 
 # How to get clean URLs on IIS5, IIS6, and IIS7 Classic Mode
 

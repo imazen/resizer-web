@@ -1,5 +1,4 @@
 Aliases: /docs/nuget
-Layout: install_page
 
 
 # Installing the ImageResizer via NuGet

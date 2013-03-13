@@ -1,6 +1,4 @@
 Aliases: /docs/install/asp
-Layout: install_page
-
 
 # ImageResizer - Installing for COM applications
 

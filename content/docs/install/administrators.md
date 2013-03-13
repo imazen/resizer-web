@@ -1,4 +1,3 @@
-Layout: install_page
 
 # Guide for Server Administrators
 
