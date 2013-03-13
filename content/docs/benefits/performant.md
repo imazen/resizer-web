@@ -1,5 +1,3 @@
-layout: benefits_page
-
 
 # ImageResizer Performance
 

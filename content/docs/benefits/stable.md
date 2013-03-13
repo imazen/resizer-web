@@ -1,4 +1,4 @@
-layout: benefits_page
+Tag: benefits
 
 # Stable and Secure
 
