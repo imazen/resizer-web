@@ -1,4 +1,4 @@
-Layout: install_page
+Tag: install
 
 # Cloud basics
 

@@ -1,4 +1,5 @@
 Icon: download-alt
+Tag: extend
 
 # Sync your source with Git
 
