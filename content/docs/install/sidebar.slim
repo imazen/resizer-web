@@ -22,9 +22,17 @@ ul.arrow_list
   li: a href="/docs/troubleshoot" Troubleshooting Guide
   li: a href="/docs/redist" Redistribution and CMS Integration Guide
 
+  li: a href="/docs/workswith/requirements" System Requirements
+
+  li: a href="/docs/workswith/hosting" Hosting
 h2 CMS Notes
 ul.star_list
   li: a href="/docs/workswith" Compatibility Reference
   - index.pages_tagged("cms").each do |e|
+    li
+      a(href="#{e.path}")= e.heading
+h2 Migrating from V2 to V3
+ul.star_list
+  - index.pages.select { |p| p.path.start_with?('/docs/2to3')}.each do |e|
     li
       a(href="#{e.path}")= e.heading
