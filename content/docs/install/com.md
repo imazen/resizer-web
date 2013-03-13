@@ -9,10 +9,10 @@ No additional steps need to be taken for Classic ASP (or any other language) usi
 ### Installing ImageResizer for COM use
 
 1. [Download ImageResizer](/download) and extract it to a folder.
-2. Run `\dlls\release\COMInstaller.exe` within the extracted folder, *with Administrator priviledges*.
+2. Run `\dlls\release\COMInstaller.exe` within the extracted folder, *with Administrator privileges*.
 3. Click Install, and verify success.
 
-If you get an error when trying to use the COM API, see [the troubleshooitng page](/docs/troubleshoot).
+If you get an error when trying to use the COM API, see [the troubleshooting page](/docs/troubleshoot).
 
 ### Using the COM API
 
