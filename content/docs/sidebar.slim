@@ -1,0 +1,10 @@
+layout: false
+Flags: hidden
+
+
+
+h2: a href="/docs" Using ImageResizer
+ul.arrow_list
+  - index.pages_tagged("use").each do |e|
+    li
+      a(href="#{e.path}")= e.heading
