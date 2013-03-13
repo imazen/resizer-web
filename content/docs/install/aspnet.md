@@ -1,4 +1,3 @@
-
 # Installation guide for ASP.NET developers
 
 
@@ -44,7 +43,7 @@
 
 5. Relax and have fun! This software has been refined and improved since its creation in 2007, with a focus on security, stability, and performance. [Check out the history of the project](/history). Unlike all the sample code you find on the internet, it avoids [the 29 common image resizing pitfalls](http://nathanaeljones.com/163/20-image-resizing-pitfalls/). Over 10K websites use the ImageResizer; why not read a few [recent testimonials from some of the more well-known people & companies?](/testimonials).
 
-6. Spread the word! Tell your friends and co-workers about this library. And click the +1 button to tell [Google Plus](http://plus.google.com/) that this is an awesome site. Have ideas or feedback? [share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
+6. Spread the word! Tell your friends and co-workers about this library. And click the +1 button to tell [Google Plus](http://plus.google.com/) that this is an awesome site. Have ideas or feedback? [Share them on our UserVoice site, so others can vote up your proposals](http://resizer.uservoice.com).
 
 7. Ready to go live? Get the [Performance Edition](/plugins/editions/performance), which includes [disk caching](/plugins/diskcache) and several other invaluable plugins. This project requires my full-time attention (and part-time help from others), so please support it by purchasing [a paid edition](/buy) or [an all-inclusive support contract](/support/contracts). 
 
