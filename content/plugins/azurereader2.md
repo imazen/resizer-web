@@ -5,7 +5,7 @@ Tagline: Allows blobstore images to be resized and served. (Azure 2.0 compatible
 
 # AzureReader2 plugin
 
-`AzureReader2 supports the Azure SDK V2.0 and requires .NET 4.0 instead of .NET 3.5. Many thanks to Marcus Briggs for his invaluable help in getting this released quickly.`
+**AzureReader2 supports the Azure SDK V2.0 and requires .NET 4.0 instead of .NET 3.5. Many thanks to Marcus Briggs for his invaluable help in getting this released quickly.**
 
 Allows images located in an Azure Blobstore to be read, processed, resized, and served. Requests for unmodified images get redirected to the blobstore itself.
 
