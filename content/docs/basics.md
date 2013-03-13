@@ -10,7 +10,7 @@ Aliases: /docs/examples
 
 You can set bounds for an image with the `width` and/or `height` commands. How those bounds are interpreted is determined by the `mode` command. If only `width` *or* `height` is specified, aspect ratio is maintained.
 
-![Resizing modes](http://cf.imageresizing.net/attachments/resizing-modes.png)
+![Resizing modes](http://z.zr.io/rw/diagrams/resizing-modes.png)
 
 Note:  `mode=carve` requires the [SeamCarving plugin](/plugins/seamcarving). 
 
