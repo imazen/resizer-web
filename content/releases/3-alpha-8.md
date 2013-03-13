@@ -1,9 +1,7 @@
 Date: June 2 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-8-full-Jun-02-2011.zip
 minfile: http://downloads.imageresizing.net/Resizer3-alpha-8-min-Jun-02-2011.zip
-Tags: releases
 Summary: 4 core bug fixes, 2 new sample projects, and the important fixes to the DiskCache, SqlReader, and AnimatedGifs plugins
-Layout: release
 
 # Resizer 3 alpha 8 - Jun 2 2011
 

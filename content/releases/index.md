@@ -1,6 +1,7 @@
 title: All releases
 Renderer: RubyPoweredMarkdown
-
+Icon: download
+Layout: page
 
 #All releases
 

@@ -1,8 +1,6 @@
 Date: June 16 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-10-full-Jun-16-2011.zip
 minfile: http://downloads.imageresizing.net/Resizer3-alpha-10-min-Jun-16-2011.zip
-Tags: releases
-Layout: release
 
 # Resizer 3 alpha 10 - Jun 16 2011
 

@@ -1,9 +1,7 @@
 Date: May 26 2011
 FullFile: http://downloads.imageresizing.net/Resizer3-alpha-7-full-May-26-2011.zip
 minfile: http://downloads.imageresizing.net/Resizer3-alpha-7-min-May-26-2011.zip
-Tags: releases
 Summary: 3 stability fixes, jCrop support, COM support, better diagnostics.
-Layout: release
 
 # Resizer 3 alpha 7 - May 26 2011
 

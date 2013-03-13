@@ -3,9 +3,6 @@ FullFile: http://downloads.imageresizing.net/Resizer3-2-alpha-1-full-Jun-4-2012.
 MinFile: http://downloads.imageresizing.net/Resizer3-2-alpha-1-min-Jun-4-2012.zip
 Summary: 1 bug fix
 ShortVersion: 3.2.1
-Layout: release
-Libs: plusone
-Tags: releases
 
 # Resizer 3.2 alpha 1 - June 4 2012
 

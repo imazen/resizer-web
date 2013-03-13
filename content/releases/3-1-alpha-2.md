@@ -3,8 +3,6 @@ FullFile: http://downloads.imageresizing.net/Resizer3-1-alpha-2-full-Dec-7-2011.
 MinFile: http://downloads.imageresizing.net/Resizer3-1-alpha-2-min-Dec-7-2011.zip
 Summary: 5 new free plugins, 6 new bundle plugins, 5 rewritten plugins, and innumerable bug fixes
 ShortVersion: 3.1.2
-Tags: releases
-Layout: release
 
 # Resizer 3.1 alpha 2 - Dec 7 2011
 

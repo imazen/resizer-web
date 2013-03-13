@@ -3,9 +3,6 @@ FullFile: http://downloads.imageresizing.net/Resizer3-2-alpha-0-full-Jun-3-2012.
 MinFile: http://downloads.imageresizing.net/Resizer3-2-alpha-0-min-Jun-3-2012.zip
 Summary: 11 bug fixes (reliability improvements in WicBuilder, Watermark, WhitespaceTrimmer, SqlReader), heavy refactoring, 5 new draft plugins
 ShortVersion: 3.2.0
-Layout: release
-Libs: plusone
-Tags: releases
 
 # Resizer 3.2 alpha 0 - June 3 2012
 
