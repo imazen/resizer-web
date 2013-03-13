@@ -1,5 +1,4 @@
-Redirect To: /docs/basics
-
+Flags: hidden
 
 # Usage examples
 
