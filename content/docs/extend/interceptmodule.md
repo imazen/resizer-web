@@ -1,6 +1,4 @@
 Aliases: /docs/interceptmodule
-Layout: extend_page
-Tags: extend
 
 # InterceptModule 
 

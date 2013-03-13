@@ -1,6 +1,4 @@
 Aliases: /docs/plugins/virtualimageprovider
-Layout: extend_page
-Tags: extend
 
 # Virtual Image Providers
 

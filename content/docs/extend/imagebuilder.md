@@ -1,6 +1,4 @@
 Aliases: /docs/plugins/imagebuilder
-Layout: extend_page
-Tags: extend
 
 # Order of command execution
 

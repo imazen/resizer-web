@@ -1,6 +1,4 @@
 Aliases: /docs/extending-imagebuilder /docs/plugins/extending-imagebuilder
-Layout: extend_page
-Tags: extend
 
 #Extending ImageBuilder
 
