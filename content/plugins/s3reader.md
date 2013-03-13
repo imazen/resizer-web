@@ -6,7 +6,7 @@ Tagline: Process and resize images located on a remote Amazon S3 bucket. A Virtu
 
 Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk. Also serves files located on S3 - not restricted to images (unless vpp="false") is used.
 
-NOTE: For european bucket support, you must set useSubdomains="true" and use V3.1.3 or higher.
+NOTE: For European bucket support, you must set useSubdomains="true" and use V3.1.3 or higher.
 
 ### Example URLs
 
@@ -43,7 +43,7 @@ If you want to access non-public bucket items, you will need to specify an acces
 	<add name="S3Reader" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
 	 checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" useSubdomains="false" />
 
-* buckets (requrired) - Comma-delimited list of permitted bucket names that can be accessed.
+* buckets (required) - Comma-delimited list of permitted bucket names that can be accessed.
 * prefix - the virtual folder that all buckets can be accessed under. Defaults to ~/s3/
 * checkForModifiedFiles - If true, S3Reader which check for updated source files on S3 when a cached file is requested. The metadata is cached for an hour after it is last accessed (configurable by code).
 	If false, S3 will never be checked for newer versions of cached files, reducing latency costs by 50%. Defaults to false.
