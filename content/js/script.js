@@ -22,7 +22,14 @@ $(function(){
   $("ul.client-logo-carousel").bxSlider({
     slideWidth: 160,
     minSlides: 2,
-    maxSlides: 8,
+    maxSlides: 10,
+    slideMargin: 10,
+    auto: true
+  });
+    $("ul.website-carousel").bxSlider({
+    slideWidth: 400,
+    minSlides: 1,
+    maxSlides: 4,
     slideMargin: 10,
     auto: true
   });
