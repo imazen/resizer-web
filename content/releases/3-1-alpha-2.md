@@ -24,7 +24,7 @@ Version 3.1 adds the following *free* plugins:
 * [AutoRotate](/plugins/autorotate) - Automatically rotate the image based on the camera's gravity sensor data, with `&autorotate=true`
 * [Logging](/plugins/logging) - NLog wrapper to allow optional logging. Logging only implemented for DiskCache plugin at the moment.
 
-The Design bundle gets the these new plugins. If you've already bought the Design bundle, you get these for free!
+The Design bundle gets these new plugins. If you've already bought the Design bundle, you get these for free!
 
 * [WicEncoder](/plugins/wic) - Encode jpegs with adjustable quality and subsampling settings. Encode GIFs and 8-bit PNGs with adjustable palette size and bit depth.
 * [WicDecoder](/plugins/wic) - Decode images using any WIC-enabled codec installed on the computer
@@ -65,7 +65,7 @@ For a list of API changes that affect plugin developers, see the bottom of the p
 
 After 3 years of wrestling with the last GDI+ border bug (the 50% transparency white 1px border on resized images), it has finally been killed! 
 
-With the introduction of the WIC and FreeImage pipelines, I finally tried the border test on them as well, and guess what... All three had the the border artifact! Knowing that to be impossible, I checked the original photos, and it was there as well. Sometime in 2008, those photos were resized with V2.0, and acquired the border artifact. The last remaining GDI border bug was actually solved in V2.6, but since the border was already in the original images, it only showed up as a 25% reduction in brightness. 
+With the introduction of the WIC and FreeImage pipelines, I finally tried the border test on them as well, and guess what... All three had the border artifact! Knowing that to be impossible, I checked the original photos, and it was there as well. Sometime in 2008, those photos were resized with V2.0, and acquired the border artifact. The last remaining GDI border bug was actually solved in V2.6, but since the border was already in the original images, it only showed up as a 25% reduction in brightness. 
 
 Chagrin would be the word. How could I ever fix a non-existent bug? I sure spent a lot of time trying...
 
@@ -74,7 +74,7 @@ Chagrin would be the word. How could I ever fix a non-existent bug? I sure spent
 * Greatly reduced CPU usage when autoClean="true" (for certain rare situations).
 * Added beta support for async writes. Enable by setting `asyncWrites=true` on the `<diskcache>` element. The async buffer size defaults to a maximum of 10MB, but can be changed with the `asyncBufferSize` setting (which is in bytes). Async writes can greatly improve performance if you have a slow, overloaded, or high-latency hard disk/SAN.
 * Fixed bug in LockProvider where a failed image resizing request would cause the lock provider to fail to remove the lock object for the request from the dictionary. If you have millions of failed requests during a single app pool cycle, this could cause reduced performance an higher RAM usage.
-* Added support for cooperative cache cleanup, using a mutex to prevent more than one processes from cleaning the same folder at the same time. Should help support extended overlapped recycles and web garden scenarios.
+* Added support for cooperative cache cleanup, using a mutex to prevent more than one process from cleaning the same folder at the same time. Should help support extended overlapped recycles and web garden scenarios.
 * Added support for recovering from another process writing to the same cache file at the same time. Only works in `hashModifiedDate=true` mode.
 * Added optional logging support so you can see exactly what is happening with the cache in real-time
 * Handles insufficient permissions more gracefully, explains issue on the diagnostics page
@@ -226,7 +226,7 @@ Also added complete XML configurability.
 
 ## Minor bug fixes
 
-* Plugins missing a constructor don't crash the request, just log an issue.
+* Plugins missing a constructor don't crash the request; they just log an issue.
 * If a plugin throws an exception during GetIssues, it is now logged as an issue instead of crashing the resizer.debug page.
 * Earlier disposal of Pen and Brush instances used for rendering image padding, borders, and drop shadow.
 
