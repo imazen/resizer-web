@@ -78,6 +78,22 @@ class Site < Hardwired::Bootstrap
       end 
 
 
+      def store_hyperlinks_in(hash, varname, &block)
+        require 'nokogiri'
+        dom = Nokogiri::HTML::fragment(block.call)
+        list = []
+        dom.css('a').each do |a|
+          list << a['href']
+        end 
+        hash[varname] = list.uniq.reject { |v| v.nil? || v.empty? }
+        block.call
+      end
+
+      def nullify (&block)
+        block.call
+        ""
+      end 
+
     end
 
 
@@ -166,10 +182,6 @@ module Hardwired
   class Template
     def hidden?
       flag?('hidden') or draft?
-    end
-
-    def default_layout
-      Paths.layout_subfolder +  ((meta.edition || meta.bundle) ? '/plugin_page' : '/page')
     end
 
     def bundle_name
