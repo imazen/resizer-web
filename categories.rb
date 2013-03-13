@@ -22,9 +22,8 @@ module Hardwired
 
         c = @@cats_by_tag[meta.category]
 
-        #Set the default sidebar and appendix based on the primary category
-        meta.sidebar ||= c.sidebar
-        meta.append ||= c.append
+        #Clone all specified metadata, without overwriting anything
+        @meta = RecursiveOpenStruct.new(c.meta.to_hash.merge((meta || {}).to_hash)) unless c.meta.nil?
     
         p "Categorized #{path} as #{meta.categories * ','}  (primary #{meta.category})"
 
