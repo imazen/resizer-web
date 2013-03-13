@@ -7,12 +7,22 @@ GIT
 
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: 558308661e67c00f35b89e2a914701d3e93e809c
+  revision: 672218e25a6db898cdc64b99897039c0db70c682
   specs:
     hardwired (0.3.2)
       nokogiri
       sinatra (>= 1.3.3)
       tilt
+
+GIT
+  remote: git://github.com/nathanaeljones/link-checker.git
+  revision: 68417233c943d5ae985ce92a31cba09da9634c79
+  specs:
+    link-checker (0.7.2)
+      anemone (~> 0.7.2)
+      colorize (~> 0.5.8)
+      nokogiri (~> 1.5.5)
+      trollop (~> 2.0)
 
 GIT
   remote: git://github.com/populr/less.rb.git
@@ -38,13 +48,14 @@ GEM
       Platform (>= 0.4.0)
       open4
     Platform (0.4.0)
-    activesupport (3.2.12)
-      i18n (~> 0.6)
-      multi_json (~> 1.0)
+    anemone (0.7.2)
+      nokogiri (>= 1.3.0)
+      robotex (>= 1.0.0)
+    colorize (0.5.8)
     columnize (0.3.6)
     commonjs (0.2.6)
     daemons (1.1.9)
-    debugger (1.3.3)
+    debugger (1.4.0)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
       debugger-ruby_core_source (~> 1.2.0)
@@ -52,15 +63,12 @@ GEM
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.2.0)
     erubis (2.7.0)
-    eventmachine (1.0.1)
-    honeybadger (1.5.0)
-      activesupport
+    eventmachine (1.0.3)
+    honeybadger (1.6.0)
       json
-    i18n (0.6.4)
     json (1.7.7)
     libv8 (3.11.8.13)
     listen (0.7.3)
-    multi_json (1.6.1)
     nokogiri (1.5.6)
     open4 (1.3.0)
     perftools.rb (2.0.0)
@@ -71,14 +79,15 @@ GEM
       open4 (~> 1.0)
       perftools.rb (~> 2.0.0)
       rack (~> 1.0)
-    rack-protection (1.4.0)
+    rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
     rdiscount (2.0.7.1)
     ref (1.0.2)
-    sass (3.2.6)
+    robotex (1.0.0)
+    sass (3.2.7)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.3.5)
@@ -93,7 +102,8 @@ GEM
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    tilt (1.3.4)
+    tilt (1.3.5)
+    trollop (2.0)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 
@@ -106,6 +116,7 @@ DEPENDENCIES
   hardwired!
   honeybadger
   less!
+  link-checker!
   perftools.rb
   rack-cache
   rack-perftools_profiler

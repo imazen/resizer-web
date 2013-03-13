@@ -23,5 +23,6 @@ if defined?(Honeybadger)
   use Honeybadger::Rack
 end
 
+require './categories'
 require './site'
 run Site.new

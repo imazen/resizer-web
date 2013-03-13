@@ -43,3 +43,55 @@ google_verify: [344a8f78fa8143f6, b4f699bd08907a51]
 google_custom_search: "005556834036073640702:j3bnlceufnc"
 
 
+categories:
+  - tag: install
+    title: Install
+    include:
+      - /docs/install
+      - /docs/workswith
+      - /docs/migrating
+      - /docs/2to3
+    default: /docs/install
+    sidebar: /docs/install/sidebar
+    append: /docs/install/generic
+
+  - tag: extend
+    title: Extend
+    include:
+      - /docs/extend
+    default: /docs/extend
+    sidebar: /docs/extend/sidebar
+
+  - tag: benefits
+    title: Benefits
+    include: /docs/benefits
+    default: /docs/benefits
+    sidebar: /docs/benefits/sidebar
+
+  - tag: use
+    title: Use
+    include: /docs
+    default: /docs
+    sidebar: /docs/sidebar
+
+  - tag: plugins
+    title: Plugins
+    include: /plugins
+    default: /plugins
+    sidebar: /plugins/sidebar
+
+  - tag: licenses
+    title: Licenses
+    include: /licenses
+    default: /licenses
+
+  - tag: releases
+    title: Releases
+    include: /releases
+    default: /releases
+    sidebar: /releases/sidebar
+
+
+
+
+
