@@ -19,6 +19,12 @@ From Craig Boal at [Sierra Trading Post](http://sierratradingpost.com)
 >Top 100 Internet Retailer <br />
 >sierratradingpost.com <br />
 
+From Eilev Hagen at [InCreo](http://increo.no)
+
+>Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended. 
+
+>- Eilev Hagen, System developer, InCreo Interactive Creations
+
 
 From Dorian Collier at [Deesea](http://deesea.com)
 
