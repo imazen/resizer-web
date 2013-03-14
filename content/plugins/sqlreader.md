@@ -65,7 +65,7 @@ SqlReader is configurable via XML in v3.1 and higher - previous versions need to
 * extensionPartOfId - (defaults false) If you are using a string ID type for the image, and the file extension is part of that ID, set this to true. 
 * untrustedData -- (default: false) When true, all requests will be re-encoded before being served to the client. Invalid or malicious images will fail with an error if they cannot be read as images. This should prevent malicious files from being served to the client.
 * vpp=true|false. Defaults to true. When true, the SqlReader will be registered as a VirtualPathProvider with ASP.NET, which will
-  make this plugin's virtual files accessible from all code which depends on the VirtualPathProvider system. 
+  make this plugin's virtual files accessible from all code, which depends on the VirtualPathProvider system. 
   If trust levels don't allow that, it falls back to IVirtualImageProvider mode, which allows the image resizer to access the files, but not other systems, so you'll need to enable cacheUnmodifiedFiles if you want to access files without resizing them.
 * checkForModifiedFiles=true|false If true, will query the DB for each request to verify the image hasn't changed. Defaults to true; set false for improved performance.
 

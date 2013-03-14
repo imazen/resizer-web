@@ -42,7 +42,7 @@ By default, CloudFront caches all requests for a minimum of 24 hours (1440 minut
 
 To set the caching time at the server instead of at CloudFront, set `<clientcache minutes="1441" />` in the `<resizer>` section of Web.config. 
 
-If you need to invalidate a cached file sooner than 24 hours, you must either change the url (ex. by adding ";invalidate=1" to it), or by using [Amazon's invalidation request feature](http://docs.amazonwebservices.com/AmazonCloudFront/latest/DeveloperGuide/index.html?Invalidation.html).
+If you need to invalidate a cached file sooner than 24 hours, you must change the url (ex. by adding ";invalidate=1" to it), or by using [Amazon's invalidation request feature](http://docs.amazonwebservices.com/AmazonCloudFront/latest/DeveloperGuide/index.html?Invalidation.html).
 
 
 ## Automatic redirection of standard (`image.jpg?width=..`) URLs back to the CDN.
@@ -67,7 +67,7 @@ If you have configured a CNAME mask for your CloudFront distribution, and would 
 
 To remove the requirement of an extra request, yet keep the developer/webmaster load to a minimum, it is necessary to process all outgoing HTML and translate those URLs to cloudfront URLs dynamically. 
 
-This kind of behavior could be useful outside the scope of the image resizer, as it could be used to edge-cache a variety of files (such as javascript, css, audio files, etc) without having to manually modify the content. However, image URLs are the most easily changed without adverse affects.
+This kind of behavior could be useful outside the scope of the image resizer, as it could be used to edge-cache a variety of files (such as javascript, css, audio files, etc.) without having to manually modify the content. However, image URLs are the most easily changed without adverse affects.
 
 Two possible options for modifying image URLs in HTML output are Control Adapters and Html filters. 
 

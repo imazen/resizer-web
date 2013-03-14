@@ -18,6 +18,6 @@ IIS-level configuration (even in Web.config) can override the values set by Clie
 `Cache-control: public` is sent for all anonymous requests.
 `Cache-control: private` is sent for all authenticated requests.
 'Last-modified:` is sent based on the modified date of the source file.
-`Expires` is sent only if 'minutes' is configured in web.config. For 24 hour expiration, use 1440 (suggested value).
+`Expires` is sent only if 'minutes' is configured in web.config. For 24-hour expiration, use 1440 (suggested value).
 
 
