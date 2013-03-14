@@ -19,8 +19,8 @@ h1 Large user base
       w = parts * "-"; \
       vert = parts.last == "v"; parts.pop if vert; \
       ix = parts.pop; \
-      tld = ""; tld = parts.pop if parts.last =~ /^dk|com|ru|no|nl|org|pl|se|ie|io|hr|it|uk|nz|au$/; \
-      tld = "#{parts.pop}.#{tld}" if parts.last =~ /^ac|co|com$/; \
+      tld = ""; tld = parts.pop if parts.last =~ /^(dk|com|ru|no|nl|org|pl|se|ie|io|hr|it|uk|nz|au)$/; \
+      tld = "#{parts.pop}.#{tld}" if parts.last =~ /^(ac|co|com)$/; \
 
       domain = (parts * "-") + "." + tld; Hardwired::RecursiveOpenStruct.new({domain: domain, quote:testimonials.delete(domain), vertical:vert, tags: tags, index: ix, url: "http://z.zr.io/rw/showcase/#{w}.png"}) }
 - websites.sort! { |a,b| a.domain.downcase <=> b.domain.downcase }
