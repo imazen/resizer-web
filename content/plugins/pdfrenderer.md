@@ -37,7 +37,7 @@ It uses the `width` and `height` commands to optimize the PDF rendering to the d
 
 ### Limitations
 
-Ghostscript does not provide size information for individual pages. As a result, every page in a PDF will be rendered on a canvas which has the size of the largest page in the document. It is possible to compensate for this behavior by using [the WhitespaceTrimmer](/plugins/whitespacetrimmer) plugin, using `&trim.threshold=100`. 
+Ghostscript does not provide size information for individual pages. As a result, every page in a PDF will be rendered on a canvas, which has the size of the largest page in the document. It is possible to compensate for this behavior by using [the WhitespaceTrimmer](/plugins/whitespacetrimmer) plugin, using `&trim.threshold=100`. 
 
 **Ghostscript does not support multiple instances per process. This means your application needs a dedicated application pool, and you MUST disable overlapped recycles or you're going to get intermittent errors and failed requests. Once Ghostscript stops working, you usually have to restart the app pool to fix it.**
 
