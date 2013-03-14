@@ -1,4 +1,4 @@
-Aliases: /purchase/testimonials 
+Aliases: /purchase/testimonials  /testimonials
 
 # Testimonials
 
@@ -26,7 +26,7 @@ From Eilev Hagen at [InCreo](http://increo.no)
 >- Eilev Hagen, System developer, InCreo Interactive Creations
 
 
-From Dorian Collier at [Deesea](http://deesea.com)
+From Dorian Collier at [De/esea](http://deesea.com)
 
 >We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years.
 
