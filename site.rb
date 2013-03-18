@@ -21,6 +21,28 @@ class Site < Hardwired::Bootstrap
       def cache_for(time)
         response['Cache-Control'] = "public, max-age=#{time.to_i}"
       end
+
+      def parse_domain(filename)
+        w = filename
+        parts = w.split(/\-/)
+
+        tags = []
+        while parts.last =~ /^[a-z]+$/ && parts.last != "v" do 
+          tags << parts.pop
+        end
+        w = parts * "-"
+
+        vert = parts.last == "v"
+        parts.pop if vert
+
+        ix = parts.pop; 
+        tld = parts.last =~ /^(dk|com|ru|no|nl|org|pl|eu|se|ie|io|hr|it|uk|nz|au)$/ ? parts.pop : ""
+        tld = "#{parts.pop}.#{tld}" if parts.last =~ /^(ac|co|com)$/; 
+
+        domain = (parts * "-") + "." + tld
+
+        Hardwired::RecursiveOpenStruct.new({domain: domain, vertical:vert, tags: tags, index: ix, url: "http://z.zr.io/rw/showcase/#{w}.png"})
+      end 
     end
 
     before do

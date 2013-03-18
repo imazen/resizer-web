@@ -25,7 +25,7 @@ module Hardwired
         #Clone all specified metadata, without overwriting anything
         @meta = RecursiveOpenStruct.new(c.meta.to_hash.merge((meta || {}).to_hash)) unless c.meta.nil?
     
-        p "Categorized #{path} as #{meta.categories * ','}  (primary #{meta.category})"
+        #p "Categorized #{path} as #{meta.categories * ','}  (primary #{meta.category})"
 
         #Add the primary category to the tags
         meta.tags = tags | [meta.category]

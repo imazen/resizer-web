@@ -27,9 +27,9 @@ $(function(){
     auto: true
   });
     $("ul.website-carousel").bxSlider({
-    slideWidth: 400,
+    slideWidth: 200,
     minSlides: 1,
-    maxSlides: 4,
+    maxSlides: 10,
     slideMargin: 10,
     auto: true
   });
