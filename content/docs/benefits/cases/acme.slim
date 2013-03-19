@@ -1,0 +1,90 @@
+Libs: -comments
+
+h1 Acme Corporation
+
+
+== content_for :banner do
+
+  .container
+    .slider
+      #flex1.flexslider
+        ul.slides
+          li
+            img src="http://cdn4.f-cdn.com/contestentries/14312/7092528/5137361bdc16e_thumb900.jpg"
+          li
+            img src="http://cdn4.f-cdn.com/contestentries/14312/7092528/51375f862b3ff_thumb900.jpg"
+            .slide-caption.n.hidden-phone
+              h3 This is Acme Corporation
+              p This is the design and communications department of Acme Corporation. Due to the proprietary nature of our magic, we cannot show you our Hibiscus Monkey habitat.
+        ul.flex-direction-nav
+          li: a.flex-prev href="#" Previous
+          li: a.flex-next href="#" Next
+  hr
+
+
+
+
+.row
+  .span3
+    h2 Acme Corporation uses ImageResizer to reduce costs and improve agility
+  .span3
+    markdown:
+
+      ### What we do at Acme Corportation
+
+      Using incantations passed down to us from generation to generation, Acme Corporation enchants Hibiscus Monkeys to perform all technical aspects of our work, fully eliminating the chance for human error. To reach market audiences with authenticity, we use Humans for design and communication tasks. While some may consider the use of human assets a risky move, we feel it adds a touch of elegance to an otherwise mundane setting.
+  .span3
+    img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSArS9gRiBNKpIvtgbZp1qQ7iQHdjhvif9sshdboR3MaZz4JTO_"
+
+markdown:
+
+
+
+  ##Why we like ImageResizer
+
+  >We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years.
+
+  >Here's some of our work that uses it: http://homgroup.com, http://turbo140.com, and of course our own website http://deesea.com 
+
+  > Thanks Nathanael for creating such a wonderful product.
+
+  > \- John Doe
+
+
+== content_for :next_row do
+
+  - quotes = [ {quote:"Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended.",
+                author:"Eilev Hagen, System developer, InCreo Interactive Creations", 
+                domain:"increo.no"},
+              ]
+
+
+
+
+  - testimonials = Hash[*quotes.collect{|v| [v[:domain],v]}.flatten]
+
+  - websites = ["skybrud-dk-1","solidstockart-com-1","vevo-com-2","nextgenaero-com-1","msn-co-uk-1","airnewzealand-com-1","bilbasen-dk-3","bjarnhoff-com-1","strath-ac-uk-1","pilgrim-dk-1","yamaha-motor-eu-2","citrus-retail-com-1","homgroup-com-1","cloudnine-se-1","creuna-se-1","delabo-it-1","dotagency-co-uk-1","idea-hr-1","increo-no-3","tradera-com-1","unique-dk-1","valg.oim-dk-1","lewis-co-uk-1", "tradera-com-1","enferno-se-1"].map { |w| d = parse_domain(w); d.quote = testimonials.delete(d.domain); d }
+  h2 Some sites we've built with ImageResizer
+
+
+  #portfolio-wrapper.row
+    - websites.each do |w|
+      - unless w.quote.nil?
+        .span4.portfolio-item class="#{w.tags.empty? ? "un" : w.tags * " "}"
+          .quotes
+            .quote
+              =w.quote.quote
+            .author
+              =w.quote.author
+      .span4.portfolio-item class="#{w.tags.empty? ? "un" : w.tags * " "}"
+        .picture
+          a rel="image" href="#{w.url}?width=800" title="#{w.domain}"
+            img src="#{w.url}?width=362&format=jpg&quality=90" alt="#{w.domain}"
+            .image-overlay-zoom
+          .item-description.alt
+            h5
+              a href="http://#{w.domain}"
+                =w.domain
+            p
+              = "Photo ##{w.index} from #{w.domain}  #{w.tags.nil? ? "" : w.tags * ", "}"
+          .post-meta
