@@ -19,6 +19,7 @@ Layout: layout
 
     == yield
 
+
     - if page.meta.append
       == partial page.meta.append.to_sym
 
@@ -36,5 +37,6 @@ Layout: layout
 
       == partial page.meta.sidebar
 
+== yield_content(:next_row)
      
 
