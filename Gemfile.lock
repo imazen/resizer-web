@@ -15,16 +15,6 @@ GIT
       tilt
 
 GIT
-  remote: git://github.com/nathanaeljones/link-checker.git
-  revision: 68417233c943d5ae985ce92a31cba09da9634c79
-  specs:
-    link-checker (0.7.2)
-      anemone (~> 0.7.2)
-      colorize (~> 0.5.8)
-      nokogiri (~> 1.5.5)
-      trollop (~> 2.0)
-
-GIT
   remote: git://github.com/populr/less.rb.git
   revision: 2e451e3d96eaf1361fd8f47ffe2adf67443debc8
   branch: v2.2.2-less1.3.3
@@ -48,62 +38,50 @@ GEM
       Platform (>= 0.4.0)
       open4
     Platform (0.4.0)
-    anemone (0.7.2)
-      nokogiri (>= 1.3.0)
-      robotex (>= 1.0.0)
-    colorize (0.5.8)
     columnize (0.3.6)
     commonjs (0.2.6)
     daemons (1.1.9)
-    debugger (1.4.0)
+    debugger (1.5.0)
       columnize (>= 0.3.1)
-      debugger-linecache (~> 1.1.1)
+      debugger-linecache (~> 1.2.0)
       debugger-ruby_core_source (~> 1.2.0)
-    debugger-linecache (1.1.2)
-      debugger-ruby_core_source (>= 1.1.1)
+    debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    honeybadger (1.6.0)
+    honeybadger (1.6.1)
       json
     json (1.7.7)
     libv8 (3.11.8.13)
     listen (0.7.3)
-    nokogiri (1.5.6)
+    nokogiri (1.5.8)
     open4 (1.3.0)
-    perftools.rb (2.0.0)
     rack (1.5.2)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-perftools_profiler (0.6.0)
-      open4 (~> 1.0)
-      perftools.rb (~> 2.0.0)
-      rack (~> 1.0)
     rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
     rdiscount (2.0.7.1)
-    ref (1.0.2)
-    robotex (1.0.0)
+    ref (1.0.3)
     sass (3.2.7)
     shotgun (0.9)
       rack (>= 1.0)
-    sinatra (1.3.5)
-      rack (~> 1.4)
-      rack-protection (~> 1.3)
-      tilt (~> 1.3, >= 1.3.3)
+    sinatra (1.4.1)
+      rack (~> 1.5, >= 1.5.2)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     temple (0.6.2)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
-    thin (1.5.0)
+    thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    tilt (1.3.5)
-    trollop (2.0)
+    tilt (1.3.6)
     yui-compressor (0.9.6)
       POpen4 (>= 0.1.4)
 
@@ -116,10 +94,7 @@ DEPENDENCIES
   hardwired!
   honeybadger
   less!
-  link-checker!
-  perftools.rb
   rack-cache
-  rack-perftools_profiler
   rack-test
   rb-fsevent
   rdiscount
