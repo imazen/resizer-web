@@ -21,12 +21,14 @@ gem 'honeybadger', :group => :production
 
 gem 'yui-compressor'
 
+
+gem 'rack-test' #Warning, needed for production
+
 gem "debugger", :group => :development
 gem "rerun", :git => "git://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
 
-gem 'rack-test', :group => :development
 
 #gem 'perftools.rb', :group => :development
 #gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler', :group => :development
