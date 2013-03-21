@@ -8,7 +8,8 @@ p Get the best out of your images with minimal effort. Our adjustments are desig
 p All commands are nondestuctive, giving you free reign to experiment endlessly and revert easily by removing your commands. Unlike other web-based editors, all commands are processed in a single stage, eliminating quality loss from repeated compression.
 
 h2 Transform
-- def widths(*cols); cols.map{|w| (w / cols.inject(:+).to_f * (270 - 10 * (cols.count - 1))).round  } end;
+- def widths(*cols); cols.map{|w| (w / cols.inject(:+).to_f * (269 - 10 * (cols.count - 1))).round  } end;
+- def normal_width(count);  ((269 - 10 * (count - 1)) / count.to_f).round end;
 .row
   .span3
     - w = widths(1.5,1,1,1).map{ |v| v + 4}
@@ -48,7 +49,7 @@ h2 Transform
     h4 Manual crop
     img src="http://z.zr.io/ri/1s.jpg?width=#{w[0]}"
     i.icon-arrow-right
-    img src="http://z.zr.io/ri/1s.jpg?crop=18,40,40,60&cropxunits=100&cropyunits=100&width=#{w[1]}"
+    img src="http://z.zr.io/ri/1s.jpg?crop=18,26,60,70&cropxunits=100&cropyunits=100&width=#{w[1]}"
     p Crop by percent, pixels, or resolution-independent units (works seamlessly with jCrop).
 
   .span3
@@ -74,47 +75,60 @@ h2 Transform
 hr
 h2 Enhance
 .row
-  - w = widths(1,1,1)
-  .span3
-    h4 Unsharp Mask
-    img src="http://z.zr.io/ri/fix3.jpg?width=#{w[0]}"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix3.jpg?width=#{w[1]}&a.sharpen=20&quality=100"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix3.jpg?width=#{w[2]}&a.sharpen=100&quality=100"
-    h4 Adjust contrast
-    img src="http://z.zr.io/ri/fix1.jpg?width=#{w[0]}"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix1.jpg?width=#{w[1]}&s.contrast=0.3"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix1.jpg?width=#{w[2]}&s.contrast=0.5"
-  .span3
-    h4 Fix exposure
-    img src="http://z.zr.io/ri/fix1.jpg?width=#{w[0]}&s.brightness=-0.2"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix1.jpg?width=#{w[1]}"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix1.jpg?width=#{w[2]}&s.brightness=0.1"
-    h4 Enhance saturation
-    img src="http://z.zr.io/ri/11s.jpg?width=#{w[0]}&s.saturation=-0.2"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/11s.jpg?width=#{w[1]}&s.saturation=0"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/11s.jpg?width=#{w[2]}&s.saturation=0.4"
   .span3
     h4 Auto-white balance
-    img src="http://z.zr.io/ri/fix3.jpg?width=#{w[0]}"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix3.jpg?width=#{w[1]}&a.balancewhite=true&a.balancethreshold=0.1"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/fix3.jpg?width=#{w[2]}&a.balancewhite=true&a.balancethreshold=0.6"
-    h4 Smart noise removal
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&a.removenoise=5"
-    i.icon-arrow-right
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&a.removenoise=10"
+    - [12,18, 26, 23].each_with_index do |n,ix|
+      - ["","&a.balancewhite=true"].each_with_index do |q,ix|
+        - if ix > 0
+          i.icon-arrow-right
+        img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+      br
+  .span3
+    h4 Auto Histogram Equalization
+    - [19, 18, 26, 23].each_with_index do |n,ix|
+      - ["", "&a.equalize=true"].each_with_index do |q,ix|
+        - if ix > 0
+          i.icon-arrow-right
+        img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+      br
+  .span3
+    h4 +50% contrast
+    - [19, 22, 26, 23].each do |n|
+      - ["", "&s.contrast=0.5"].each_with_index do |q,ix|
+        - if ix > 0
+          i.icon-arrow-right
+        img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+      br
+.row
+  .span3
+    h4 Unsharp Mask (Smart Sharpen)
+    - [2,23,19,26].each_with_index do |n,i|
+      - ["","&a.sharpen=20&quality=100"].each_with_index do |q,ix|
+        - if ix > 0
+          i.icon-arrow-right
+        img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+      br
+  .span3
+    h4 +50% saturation
+    - [19, 18, 26, 23].each_with_index do |n,i|
+      - ["", "&s.saturation=0.5"].each_with_index do |q,ix|
+        - if ix > 0
+          i.icon-arrow-right
+        img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+      br
+  .span3
+    h4 +15% exposure
+    - [1,12,11].each_with_index do |n,i|
+      - ["", "&s.brightness=0.15"].each_with_index do |q,ix|
+        - if ix > 0
+          i.icon-arrow-right
+        img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+      br
+
 hr
+.row
+
+  
 h2 Filter
 .row
   - w = widths(1,1,1)
@@ -153,17 +167,17 @@ h2 Filter
 
   .span3
     h4 Paint, posterize, and blur 
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&a.oilpainting=0"
+    img src="http://z.zr.io/ri/fix/2s.jpg?width=#{w[0]}&a.oilpainting=0"
     i.icon-arrow-right
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&a.oilpainting=15"
+    img src="http://z.zr.io/ri/fix/2s.jpg?width=#{w[1]}&a.oilpainting=15"
     i.icon-arrow-right
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&a.oilpainting=30"
+    img src="http://z.zr.io/ri/fix/2s.jpg?width=#{w[2]}&a.oilpainting=30"
     br
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}"
+    img src="http://z.zr.io/ri/fix/26s.jpg?width=#{w[0]}"
     i.icon-arrow-right
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&a.posterize=64"
+    img src="http://z.zr.io/ri/fix/26s.jpg?width=#{w[1]}&a.posterize=64"
     i.icon-arrow-right
-    img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&a.posterize=128"
+    img src="http://z.zr.io/ri/fix/26s.jpg?width=#{w[2]}&a.posterize=128"
     br
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&a.blur=0"
     i.icon-arrow-right
@@ -255,6 +269,15 @@ h2 Advanced
   .span3
 
 
+
+/ - (1..27).each do |n|
+  .row
+    / a download="#{n}s.jpg" href="http://resizer.azurewebsites.net/rw/maddy/#{n}.jpg?width=3200&height=3200&mode=max" target="_blank" Download
+    - commands = [",","a.sharpen=100", "a.removenoise=10", "a.balancewhite=true","a.equalize=true", "a.oilpainting=30","a.posterize=150", "s.contrast=0.5", "s.brightness=0.3", "s.saturation=0.3"]
+    - width = 900 / commands.length
+    - commands.each do |c|
+      a rel="image" href="http://resizer.azurewebsites.net/rw/maddy/#{n}.jpg?width=900&#{c}"
+        img src="http://resizer.azurewebsites.net/ri/fix/#{n}s.jpg?width=#{width}&#{c}"
 
 
       
