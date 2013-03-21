@@ -179,7 +179,22 @@ span.imagespacer{
   display:inline-block;
   width:auto;
 }
-.flexslider .slides > li {
-  height:390px;
+@media (min-width: 1200px) {
+  .flexslider .slides > li {
+    min-height:390px;
+  }
 }
+
+@media (min-width: 980px) and (max-width: 1199px) {
+  .flexslider .slides .row img{
+    max-width:142px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .flexslider .slides .row img{
+    max-width:106px;
+  }
+}
+
 
