@@ -12,6 +12,8 @@ h1 RESTful image processing
     .slider
       #flex1.flexslider
         ul.slides
+          - def widths(*cols); cols.map{|w| (w / cols.inject(:+).to_f * (369 - 15 * (cols.count - 1))).round  } end;
+          - def normal_width(count);  ((369 - 15 * (count - 1)) / count.to_f).round end;
           li
             img src="http://z.zr.io/rw/clients/increo-1.jpg?width=1170"
             .slide-caption.n.hidden-phone
@@ -22,7 +24,165 @@ h1 RESTful image processing
             .slide-caption.n.hidden-phone
               h3 Eilev Hagen, System developer, InCreo Interactive Creations
               p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended. 
-          
+          li
+            .row  
+              .span4
+                h4 Auto-white balance
+                - [12,18, 26].each_with_index do |n,ix|
+                  - ["","&a.balancewhite=true"].each_with_index do |q,ix|
+                    - if ix > 0
+                      i.icon-arrow-right
+                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                  br
+              .span4
+                h4 Auto Histogram Equalization
+                - [19, 18, 26].each_with_index do |n,ix|
+                  - ["", "&a.equalize=true"].each_with_index do |q,ix|
+                    - if ix > 0
+                      i.icon-arrow-right
+                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                  br
+              .span4
+                h4 +50% contrast
+                - [19, 22, 26].each do |n|
+                  - ["", "&s.contrast=0.5"].each_with_index do |q,ix|
+                    - if ix > 0
+                      i.icon-arrow-right
+                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                  br
+          li
+            .row 
+              .span42
+                h4 Unsharp Mask (Smart Sharpen)
+                - [2,23,26].each_with_index do |n,i|
+                  - ["","&a.sharpen=20&quality=100"].each_with_index do |q,ix|
+                    - if ix > 0
+                      i.icon-arrow-right
+                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                  br
+              .span4
+                h4 +50% saturation
+                - [19, 26, 23].each_with_index do |n,i|
+                  - ["", "&s.saturation=0.5"].each_with_index do |q,ix|
+                    - if ix > 0
+                      i.icon-arrow-right
+                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                  br
+              .span4
+                h4 +15% exposure
+                - [1,12].each_with_index do |n,i|
+                  - ["", "&s.brightness=0.15"].each_with_index do |q,ix|
+                    - if ix > 0
+                      i.icon-arrow-right
+                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                  br
+          li
+            .row
+              .span4
+                - w = widths(1.1,1,1,1).map{ |v| v + 4}
+                h4 Scale with any fit mode
+                img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/2s.jpg?width=#{w[1]}&height=#{w[1]}&mode=max"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/2s.jpg?width=#{w[2]}&height=#{w[2]}&mode=pad&bgcolor=eee"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/2s.jpg?width=#{w[3]}&height=#{w[3]}&mode=crop"
+                p Constrain, carve, pad, or crop to the perfect size.
+              .span4
+                - w = widths(0.7,1,1)
+                h4 Rotate & Flip
+                img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&srotate=90"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/3s.jpg?width=#{(w[2] * 0.6).round}&rotate=30&flip=h"
+                p Flip, rotate, or auto-rotate.
+              .span4
+                - w = widths(1,1,1)
+                h4 Modify canvas
+                img src="http://z.zr.io/ri/4s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/4s.jpg?width=#{w[1] - 10}&margin=5&bgcolor=eee"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/4s.jpg?width=#{w[1] - 30}&paddingWidth=5&paddingColor=ccc&borderWidth=5&borderColor=ddd&margin=5&bgcolor=eee"
+                p 
+                  | Add padding, borders, and margins 
+                  em within the image. 
+                  | No more box-model nightmares.
+            .row
+              .span4
+                - w = widths(1,1)
+                h4 Manual crop
+                img src="http://z.zr.io/ri/1s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/1s.jpg?crop=18,26,60,70&cropxunits=100&cropyunits=100&width=#{w[1]}"
+                p Crop by percent, pixels, or resolution-independent units.
+
+              .span4
+                - w = widths(1.5,1,1)
+                h4 Auto-remove whitespace
+                img src="http://z.zr.io/ri/18s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/18s.jpg?width=#{w[1]}&trim.threshold=33&trim.percentpadding=5"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/18s.jpg?width=#{w[2]}&trim.threshold=80&trim.percentpadding=5"
+
+                p Product photos are painless with energy-based whitespace removal. 
+
+              .span4
+                - w = widths(1.3,1,1)
+                h4 Face detection & auto-crop
+                img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&height=#{w[1]}&mode=crop&c.focus=faces"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&height=#{w[2]}&mode=crop&c.focus=faces&c.zoom=true"
+                p Provide focus points or use automatic face detection to ensure everyone stays in the photo.
+          li
+            .row
+              .span4
+                - w = widths(1,1)
+                h4 Face & Eye detection
+                img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}&f.show=true"
+                span.imagespacer
+                img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&r.autoeyes=true"
+              .span4
+                - w = widths(1)
+                h4 Red-eye repair
+                img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&r.autoeyes=true"
+                p Our adaptive circle fill algorithm repairs red-eye while maintaining reflection integrity.
+              .span4
+                - w = widths(1,1)
+                h4 Change aspect ratio with seam carving
+                img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&height=#{w[1]}&mode=carve"
+          li
+            .row
+              .span4
+                - w = widths(1,1)
+                h4 Apply image overlays and backgrounds
+                img src="http://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=logo"
+                span.imagespacer
+                img src="http://z.zr.io/ri/23s.jpg?width=#{w[1]}&watermark=bg&s.alpha=0.7&s.roundcorners=100"
+                p Overlay (or underlay) an unlimited number of text and image layers; exercise complete layout control.
+              .span4
+                - w = widths(1,1)
+                h4 Apply flexible text overlays
+                img src="http://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=fill-text1&s.alpha=.5&text=hi"
+                span.imagespacer
+                img src="http://z.zr.io/ri/23s.jpg?width=#{w[1]}&watermark=fill-text1&s.alpha=.5&text=We have flexible layout"
+              .span4
+                - w = widths(0.5,1,1)
+                h4 Upscale on your terms
+                img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[0]}&height=#{w[0]}"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[1]}&height=#{w[1]}&scale=canvas&bgcolor=ddd"
+                i.icon-arrow-right
+                img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[2]}&height=#{w[2]}&scale=both&bgcolor=ddd&fi.scale=lanczos"
+                p Upscale only when you want to, the way you want to, with the upscale filter you want.
+
         ul.flex-direction-nav
           li: a.flex-prev href="#" Previous
           li: a.flex-next href="#" Next
@@ -109,6 +269,7 @@ h1 RESTful image processing
     ul.arrow_list
       li: a href="/docs/basics" Basic commands
       li: a href="/docs" Documentation 
+      li: a href="/docs/benefits/comprehensive" Overview of features
       li: a href="/docs/troubleshoot" Troubleshooting guide
 
     a href="/docs" 
@@ -195,7 +356,7 @@ h1 RESTful image processing
         Everything we offer includes source code and permits modification. **We reward pull requests**.
       .clear
 
-h3 Who uses ImageResizer?
+.title: h3 Who uses ImageResizer?
 .bx-transparent
   ul.client-logo-carousel
     li: img src="http://z.zr.io/rw/clientlogos/collectiveli_256.png?width=160&height=100" alt="collective.li"
@@ -215,34 +376,31 @@ h3 Who uses ImageResizer?
 .testimonials_home
   ul.quotations
     li
-      .customer_statement
+      blockquote
         | ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it  before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. - 
         a href="http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" Hanselminutes #313
-      .quote-bg
-      .quote-author
-        a href="http://hanselman.com"
-          | Scott Hanselman  
-        span
-          | , Web Platform Team, Microsoft
+        cite
+          a href="http://hanselman.com"
+            | Scott Hanselman  
+          span
+            | , Web Platform Team, Microsoft
     li
-      .customer_statement
+      blockquote
         | We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez. ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable. I highly recommend ImageResizer for any dynamic imaging needs.
-      .quote-bg
-      .quote-author
-        | Craig Boal, 
-        span Web Development Manager
+        cite
+          | Craig Boal, 
+          span Web Development Manager
     li
-      .customer_statement
+      blockquote
         p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years. 
         p Thanks Nathanael for creating such a wonderful product.
-      .quote-bg
-      .quote-author
-        | Dorian Collier, 
-        span Deesea
+        cite
+          | Dorian Collier, 
+          span Deesea
+p: a href="/docs/benefits/testimonials" Read more testimonials
 
-h3 A selection of sites using ImageResizer
-p
-  a href="/docs/benefits/customers" View more here
+.title: h3 A selection of sites using ImageResizer
+
 .bx-transparent
   ul.website-carousel
     - websites = ["skybrud-dk-1","solidstockart-com-1","vevo-com-2","nextgenaero-com-1","msn-co-uk-1","airnewzealand-com-1","bilbasen-dk-3","bjarnhoff-com-1","strath-ac-uk-1","pilgrim-dk-1","yamaha-motor-eu-2","citrus-retail-com-1","homgroup-com-1","cloudnine-se-1","creuna-se-1","delabo-it-1","dotagency-co-uk-1","idea-hr-1","increo-no-3","tradera-com-1","unique-dk-1","valg.oim-dk-1","lewis-co-uk-1", "tradera-com-1","enferno-se-1"].map { |w| parse_domain(w) }
@@ -251,6 +409,7 @@ p
         img src="#{w.url}?width=200"
         .screenshot-caption
           = "#{w.domain}"
-
+p
+  a href="/docs/benefits/customers" See more websites using ImageResizer
 
 
