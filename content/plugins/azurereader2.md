@@ -13,7 +13,7 @@ Allows images located in an Azure Blobstore to be read, processed, resized, and 
 
 1. Install the Azure SDK
 2. Add ImageResizer.Plugins.AzureReader2.dll to the project or /bin.
-3. In the `<plugins />` section, insert `<add name="AzureReader2" connectionString="ConnectionKeyName" endpoint="http://<account>.blob.core.windows.net/" />`
+3. In the `<plugins />` section, insert `<add name="AzureReader2" connectionString="DefaultEndpointsProtocol=http;AccountName=myAccountName;AccountKey=myAccountKey" endpoint="http://<account>.blob.core.windows.net/" />`
 
 
 
