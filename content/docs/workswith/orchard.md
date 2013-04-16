@@ -5,7 +5,11 @@ Tags: cms
 
 Standard installation steps are sufficient for the Essential Edition, but an additional Web.config file must be changed for DiskCache to work properly.
 
-**Note that the Orchard.Contrib.Cache plugin has been reported to behave badly if any other HttpModules are installed. Only once customer has reported this issue, and we are investigating**
+## Orchard Contrib.Cache duplicates content once for each handler for the HttpApplication.PreSendRequestHeaders event
+
+* [See bug report on CodePlex](http://stackoverflow.com/questions/14777337/imageresizer-net-with-cache-plugin-causing-duplicate-output-cache)
+
+This means that for now, you can't use ImageResizer and the Contrib.Cache Orchard plugin together.
 
 ## Multi-tenanting
 
