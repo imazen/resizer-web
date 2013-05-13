@@ -23,7 +23,7 @@ See Samples\CustomOverlaySample for an example
 
 1. Add a project reference to Samples/CustomOverlayPlugin. You may want to copy it to your directory.
 2. In the plugins section, add the following
-		<add name="CustomOverlay" 
+		`<add name="CustomOverlay" 
 			provider="MyNamespace.MyOverlayProviderClass, MyAssembly" 
 			arg1="value1" arg2="value2.." ignoreMissingFiles="false" />`
 			
