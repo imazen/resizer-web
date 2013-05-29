@@ -161,3 +161,7 @@ This is tricky to get right - [read the full article here](http://imageresizing.
 ## Losing transparency when working with GIF images
 
 You must have the [PrettyGifs](/plugins/prettygifs) plugin installed to get high-quality, transparent GIF and 8-bit PNG results. You may also want the [AnimatedGifs](/plugins/animatedgifs) plugin.
+
+## SizeLimitException - The dimensions of the output image (4800x2700) exceed the maximum permitted dimensions of 3200x3200.
+
+By default, ImageResizer limits the output size of images to 3200x3200. This can be changed [by configuring (or removing) the SizeLimiting plugin](/plugins/sizelimiting).

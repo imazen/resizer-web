@@ -4,6 +4,8 @@ If you're getting an error message, [see the troubleshooting page instead](/docs
 
 <dl class="faq">
 
+<dt>Q: ImageResizer won't generate images wider or taller than 3200 pixels.</dt>
+<dd>For your safety, we limit the output size by default - but this is easy to change. Visit <a href="/plugins/sizelimiting">the SizeLimiting plugin page for instructions on removing or changing the default size limits</a>.</dd>
   <dt>Q: How can I ensure only images with a command querystring incur additional processing?</dt><dd>A: You don't need to do anything; that's the default behavior.</dd>
 	
 	 <dt>Q: Is it possible to specify the width and height, and have your image resized and cropped to fit the aspect ratio, losing as little image area as possible? </dt> <dd>A: Yes, and it is easy. Use ?width=x&amp;height=y&amp;mode=crop.
