@@ -34,6 +34,9 @@ html(lang="en" class="no-js")
     - if page.lib? :pricer
       link rel="stylesheet" href="/css/less/pricer.css"
 
+    - if page.lib? :swipebox
+      link rel="stylesheet" href="/css/less/swipebox.css"
+
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
 
 
@@ -75,8 +78,11 @@ html(lang="en" class="no-js")
       script src="/js/jquery.fancybox.js"
 
       script src="/js/highlight/highlight.pack.js"
-      script src="/js/custom.js"
-      script src="/js/script.js"
+
+      - if page.lib? :swipebox
+        script src="/js/ios-orientationchange-fix.js"
+        script src="/js/jquery.swipebox.min.js"
+
 
       - if page.lib?("bxSlider")
         script src="/js/jquery.bxSlider.min.js"
@@ -92,6 +98,11 @@ html(lang="en" class="no-js")
 
       - if page.lib?("ejunkie")
         script src='http://www.e-junkie.com/ecom/box.js' 
+
+
+      script src="/js/custom.js"
+      script src="/js/script.js"
+
 
     - if page.lib?("uservoice")
       script async="async" defer="defer" src="//widget.uservoice.com/U5Ixzt3FEpsm5EkuCGrXEw.js"

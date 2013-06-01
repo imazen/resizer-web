@@ -12,28 +12,56 @@ hljs.tabReplace = '  ';
 hljs.initHighlightingOnLoad();
 }
 $(function(){
-	if (!$(".banners").bxSlider) return;
-	$(".banners").bxSlider({
-    auto: true,
-    pager: true,
-		controls:false,
-    pause: 6000
-  });
-  $("ul.client-logo-carousel").bxSlider({
-    slideWidth: 160,
-    minSlides: 2,
-    maxSlides: 10,
-    slideMargin: 10,
-    auto: true
-  });
-    $("ul.website-carousel").bxSlider({
-    slideWidth: 200,
-    minSlides: 1,
-    maxSlides: 10,
-    slideMargin: 10,
-    auto: true
-  });
+	if ($(".banners").bxSlider) {
+  	$(".banners").bxSlider({
+      auto: true,
+      pager: true,
+  		controls:false,
+      pause: 6000
+    });
+    $("ul.client-logo-carousel").bxSlider({
+      slideWidth: 160,
+      minSlides: 2,
+      maxSlides: 10,
+      slideMargin: 10,
+      auto: true
+    });
+      $("ul.website-carousel").bxSlider({
+      slideWidth: 200,
+      minSlides: 1,
+      maxSlides: 10,
+      slideMargin: 10,
+      auto: true
+    });
+  }
 	/*$('pre code').not('code[class]').each(function(i, e) {$(e).addClass('csharp c-sharp'); hljs.highlightBlock(e, '  ')});*/
+
+
+  if ($.fn.swipebox) {
+
+    //Let's find out the viewport size in device pixels
+    var vw = document.documentElement.clientWidth;
+    var vh = document.documentElement.clientHeight;
+    if (window.devicePixelRatio){
+      vw *= window.devicePixelRatio;
+      vh *= window.devicePixelRatio;
+    }
+
+    //We don't want to be orientation-specific
+    var maxSize = Math.max(vw,vh);
+
+    maxSize = Math.min(2048,maxSize); //Limit size to 2048.
+
+    //Minimize variants for caching improvements; round up to nearest multiple of 160
+    maxSize = maxSize - (maxSize % 160) + 160; //Will limit to 13 variations
+
+    //Set the width and height (if present) to maxSize
+    $("a.swipebox").each(function(i,e){
+        e.href = e.href.replace(/width=\d+/,"width=" + maxSize).replace(/height=\d+/,"height=" + maxSize);
+      });
+    //Launch swipebox
+    $(".swipebox").swipebox({useCSS:true, hideBarsDelay:0});
+  }
 });
 
 
