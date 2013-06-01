@@ -159,7 +159,7 @@ module Hardwired
       mod_dates = []
       dom.css('script').each do |i|
         url = i["src"]
-        next if url.start_with?("http") || url.start_with?("//")
+        next if url.nil? || url.start_with?("http") || url.start_with?("//")
         try_urls = [url.sub(/(?<!min)\.js\Z/i,".min.js"),url.sub(/(?<!min)\.js\Z/i,"-min.js"), url]
         mod_date = nil 
         try_urls.each do |u|
