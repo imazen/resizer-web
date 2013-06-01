@@ -2,7 +2,7 @@ Tag: install
 
 # Troubleshooting guide
 
-The image resizer is self-diagnosing for the majority of issues. Visit `/resizer.debug.ashx` on your website to check for any issues, and to verify that you are using the latest version of all the ImageResizer dlls. If `/resizer.debug.ashx` is not available, you can check the version of the dlls by right-clicking on each and choosing "Properties".
+ImageResizer is self-diagnosing for the majority of issues. Visit `/resizer.debug.ashx` on your website to check for any issues, and to verify that you are using the latest version of all the ImageResizer dlls. If `/resizer.debug.ashx` is not available, you can check the version of the dlls by right-clicking on each and choosing "Properties".
 
 To get support or use this guide, [make sure you get the detailed error message from visiting the image URL directly](/docs/geterror). This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far to generic to be useful. 
 
