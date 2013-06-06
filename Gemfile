@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 ruby "1.9.3"
 
 gem 'slim', :git => "git://github.com/slim-template/slim.git"
-gem 'rdiscount'
+gem 'kramdown'
 gem 'rack-cache'
 
 gem 'therubyracer' # jS V8 engine - Required for 'less'

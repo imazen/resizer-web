@@ -25,7 +25,7 @@ GIT
 
 GIT
   remote: git://github.com/slim-template/slim.git
-  revision: ae8d8a0e1ea7b81139611829d129b577ae2e81a6
+  revision: daf31673fbc83132c94af1c360bebb63ba115b9b
   specs:
     slim (2.0.0)
       temple (~> 0.6.5)
@@ -53,8 +53,9 @@ GEM
     honeybadger (1.6.2)
       json
     json (1.8.0)
+    kramdown (1.0.2)
     libv8 (3.11.8.17)
-    listen (1.1.4)
+    listen (1.1.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
@@ -72,7 +73,6 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
-    rdiscount (2.1.6)
     ref (1.0.5)
     sass (3.2.9)
     shotgun (0.9)
@@ -101,11 +101,11 @@ DEPENDENCIES
   erubis
   hardwired!
   honeybadger
+  kramdown
   less!
   rack-cache
   rack-test
   rb-fsevent
-  rdiscount
   rerun!
   sass
   shotgun
