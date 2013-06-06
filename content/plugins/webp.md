@@ -47,3 +47,19 @@ The first value is the jpeg quality, second is webp quality for same visual clar
 * 10->3
 * 5->0
 
+### HTTP Error 404.3 - Not Found
+
+> The page you are requesting cannot be served because of the extension configuration. If the page is a script, add a handler. If the file should be downloaded, add a MIME map.
+
+
+When you get this error, you'll need to add a mime-type mapping in web.config
+
+
+    <configuration>
+      <system.webServer>
+        <staticContent>
+         <mimeMap fileExtension=".webp" mimeType="image/webp" />
+      </staticContent>
+      </system.webServer>
+    </configuration>
+
