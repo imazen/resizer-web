@@ -23,7 +23,7 @@ window.location.href.replace(
     function($0, $1, $2, $3) { queryString[unescape($1)] = unescape($3); }
 );
 
-document.write(queryString['payer_email']); 
+document.write(queryString['payer_email'].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')); 
 //-->
 </script>
 
