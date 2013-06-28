@@ -1,0 +1,30 @@
+Libs: -comments
+
+h1 Signup
+
+
+markdown:
+  Average volume is less than 1 e-mail per month:
+
+  * 2010: 4 e-mails sent
+  * 2011: 8 e-mails sent
+  * 2012: 11 e-mails sent
+
+  You will only be e-mailed about important updates and notifications regarding the Image Resizer. I do not rent, share, or sell your info to anyone. I use iContact for managing the list, and they are very reliable.
+
+  You can unsubscribe at any time.
+
+
+form#signupform method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('signupform');"
+  input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou"
+  input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
+  h3 style="margin-bottom:0"
+    | Notify me when important updates are available
+
+  p style="margin-top:10px"
+    | Email: 
+    input type="text" name="email"
+    |  &nbsp;  
+    button class="btn btn-primary" type="submit" name="Submit"
+      | Get notified (avg 8 per year)
+

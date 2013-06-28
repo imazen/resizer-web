@@ -231,19 +231,13 @@ h1 RESTful image processing
 .row
   .span5
     .hero-unit
-      form#homesignup method="post" action="https://app.icontact.com/icp/signup.php" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
+      form#homesignup method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
         input type="hidden" name="redirect" value=latest_release.meta.fullfile
-        input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html"
-        input type="hidden" name="listid" value="29803"
-        input type="hidden" name="specialid:29803" value="LH6H"
-        input type="hidden" name="clientid" value="905228"
-        input type="hidden" name="formid" value="2612"
-        input type="hidden" name="reallistid" value="1"
-        input type="hidden" name="doubleopt" value="0"
+        input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
         
         h3 
           | Download ImageResizer V#{latest_release.meta.shortversion}
-        input type="text" name="fields_email"
+        input type="text" name="email"
         |  &nbsp; 
         button type="submit" name="Submit" class="btn btn-primary"
           | Download &amp; subscribe
