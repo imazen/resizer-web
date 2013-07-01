@@ -26,7 +26,7 @@ The Gold plans are ideal for mission-critical scenarios and large enterprises. H
 
 All prices are in US Dollars.
 
-| Free&nbsp;&nbsp;&nbsp;&nbsp; | Elite Edition | Bronze Level | Silver Level | Gold Level |
+| |  Free&nbsp;&nbsp;&nbsp;&nbsp; | Elite Edition | Bronze Level | Silver Level | Gold Level |
 ------- | ---- :| -------------- :| ------------ :| ------------ :| ---------- :|
 Best value for... |   |  | 1-2 developers | 2 - 10 developers | Mission-critical/Enterprise
 6 month |      |    $849 |         $900 ($949 after Feb. 1 2013)|       $3,000 |     $6,000
