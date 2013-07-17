@@ -35,7 +35,7 @@ The mime-type sent with non-image URLs is 'application/octet-stream'.
 
 # Images without correct extensions
 
-If the URL doesn't have a correct image extension, you should specify the output format in the querystring (&format=jpg|gif|png). This will allow the mime-type and cached extension to be set properly. You will also need to set Pipeline.SkipFileTypeCheck and &process=always in the PostAuthorizeRequestStart handler [see article](/docs/howto/cache-non-images).
+If the URL doesn't have a correct image extension, you should specify the output format in the querystring (&format=jpg\|gif\|png). This will allow the mime-type and cached extension to be set properly. You will also need to set Pipeline.SkipFileTypeCheck and &process=always in the PostAuthorizeRequestStart handler [see article](/docs/howto/cache-non-images).
 
 Alternatively, if you just have a handful of non-standard extensions that cleanly map to image types, you can call the following static method to add new mappings. (This method is subject to change)
 

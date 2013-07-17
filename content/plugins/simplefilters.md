@@ -38,13 +38,13 @@ Either run `Install-Package ImageResizer.Plugins.SimpleFilters` in the NuGet pac
 
 ### Evenly rounded
 
-`s.roundcornders=30`
+`s.roundcorners=30`
 
 ![s.roundcorners=30](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=30)
 
 ### Specify individual radii
 
-`s.roundcornders=45,0,45,0`
+`s.roundcorners=45,0,45,0`
 
 ![s.roundcorners=45,0,45,0](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=45,0,45,0)
 
