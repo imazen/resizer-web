@@ -50,7 +50,7 @@ Potential causes:
 1. You are using the .jpg.ashx syntax, and you did not register the HttpModule properly in both places of your Web.config file.
 2. You are using the .jpg.ashx syntax, but you're not using a query string. You should drop the '.ashx' unless you actually want to process the file.
 3. You are using ASP.NET MVC, but do not have the [MvcRoutingShim plugin](/plugins/mvcroutingshim) installed.
-4. You are using AppHarbor and have Precompilation enabled.
+4. You have Precompilation enabled, and are using an image provider. [This is caused by a long-standing bug in the .NET framework](http://stackoverflow.com/questions/12397/net-virtualpathproviders-and-pre-compilation).
 
 ## File not found for JSON requests (Faces, RedEye plugins)
 
