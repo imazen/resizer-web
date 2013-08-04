@@ -4,6 +4,10 @@ Tagline: Decode and encode .webp images
 
 # WebP plugins
 
+With [slimmage.js, you can use WebP for supporting browsers - without breaking the others](https://github.com/imazen/slimmage). Slimmage [makes responsive images easy to implement - both client *and* true image size is controlled with css `max-width` properties](https://github.com/imazen/slimmage). 
+
+We [have a guide for using Slimmage and ImageResizer together](http://imageresizing.net/blog/2013/effortless-responsive-images).
+
 ## Installation
 
 1. Either run `Install-Package ImageResizer.Plugins.WebP` in the NuGet package manager, or add `ImageResizer.Plugins.WebP.dll` to your project.
