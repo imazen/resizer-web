@@ -53,36 +53,31 @@ We're going to combine SwipeBox with ImageResizer, and serve device-tailored ful
       </a>
     </div>
 
-      <script src="lib/jquery-1.9.0.min.js"></script>
-      <script src="lib/ios-orientationchange-fix.js"></script>
-      <script src="source/jquery.swipebox.min.js"></script>
-      <script type="text/javascript">
-        if ($.fn.swipebox) {
+    <script src="lib/jquery-1.9.0.min.js"></script>
+    <script src="lib/ios-orientationchange-fix.js"></script>
+    <script src="source/jquery.swipebox.min.js"></script>
+    <script type="text/javascript">
+      if ($.fn.swipebox) {
 
-          //Let's find out the viewport size in device pixels
-          var vw = document.documentElement.clientWidth;
-          var vh = document.documentElement.clientHeight;
-          if (window.devicePixelRatio){
-            vw *= window.devicePixelRatio;
-            vh *= window.devicePixelRatio;
-          }
+        //Get largest dimension in viewport pixels
+        var maxSize = Math.max(document.documentElement.clientWidth, 
+                               document.documentElement.clientHeight);
+        maxSize *= window.devicePixelRatio ? window.devicePixelRatio : 1;
+        //Limit to 2048.
+        maxSize = Math.min(2048,maxSize); 
+        //Round up to multiple of 160 for cache efficiency (~13 variations)
+        maxSize = maxSize - (maxSize % 160) + 160;
 
-          //We don't want to be orientation-specific
-          var maxSize = Math.max(vw,vh);
+        //Set the width and height (if present) to maxSize
+        $("a.swipebox").each(function(i,e){
+            e.href = e.href.replace(/width=\d+/,"width=" + maxSize).replace(/height=\d+/,"height=" + maxSize);
+          });
+        //Launch swipebox
+        $(".swipebox").swipebox({useCSS:true, hideBarsDelay:0});
+      }
+    </script>
 
-          maxSize = Math.min(2048,maxSize); //Limit size to 2048.
 
-          //Minimize variants for caching improvements; round up to nearest multiple of 160
-          maxSize = maxSize - (maxSize % 160) + 160; //Will limit to 13 variations
-
-          //Set the width and height (if present) to maxSize
-          $("a.swipebox").each(function(i,e){
-              e.href = e.href.replace(/width=\d+/,"width=" + maxSize).replace(/height=\d+/,"height=" + maxSize);
-            });
-          //Launch swipebox
-          $(".swipebox").swipebox({useCSS:true, hideBarsDelay:0});
-        }
-      </script>
     </body>
     </html>
 
