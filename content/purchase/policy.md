@@ -15,8 +15,8 @@ Your information will not be rented or sold.
 
 The following companies are used by http://imageresizing.net/
 
-Heroku - for web hosting
-iContact.com - for secure upgrade notifications
+Heroku, AppHarbor, Microsoft Azure, Amazon S3 - for web hosting
+Amazon SES - Newsletter and update delivery
 e-junkie.com - for secure shopping cart management
 Google Checkout and Paypal - payment processing
 
