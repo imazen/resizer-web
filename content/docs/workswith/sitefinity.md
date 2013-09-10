@@ -9,3 +9,5 @@ Sitefinity 4.X and later versions prevent external libraries and code from acces
 URIs are a good way to identify files, and we are disappointed that Sitefinity 4.X+ does not provide an API which accepts a virtual path.
 
 While we are looking for a solution that supports all Sitefinity 'Providers' and 'Libraries' in an integrated way, you can use our existing plugins to access the data-stores behind the providers directly. SqlReader can be used if you're uploading files to SQL, and S3Reader, AzureReader, or RemoteReader if you're uploading to blob storage. If you're uploading to the local filesystem, you can use the VirtualFolder plugin to modify the path. 
+
+[One of our users has written an article on how to use ImageResizer and Sitefinity together via filesystem storage](http://blog.falafel.com/Blogs/guest-posts/2013/04/11/how-to-use-the-imageresizer-library-within-sitefinity).
