@@ -10,6 +10,8 @@ There are two causes; one from IIS, and one from ASP.NET. Both problems are trig
 
 The easy solution is - don't host your content on a SAN. Go cloud; put the content on S3, your server on EC2, and use CloudFront to make that tiny server scale like mad. If that's not an option, keep reading.
 
+If both your storage server and ASP.NET server are running Windows Server 2008, [it's possible this *may* not bite you](http://www.iis.net/learn/troubleshoot/performance-issues/troubleshooting-smb-netbios-fcn-limit-issues-with-remote-content). Still, you'll probably see improved performance by stopping IIS & ASP.NET's per-folder OCD behavior.
+
 ## Part 1: Stop IIS from continually checking every folder for a web.config file
 
 1. Go to IIS manager. 
@@ -39,6 +41,8 @@ There are two solutions (other than not using a SAN)
 
 4. HKLM\SOFTWARE\Wow6432Node\Microsoft\ASP.NET\FCNMode
 
+5. Reboot (iisreset may suffice, but some users have found a reboot neccessary)
+
 Microsoft also documents a value '2' that is supposed to use recursive monitoring and only create one FileSystemWatcher/DirectoryChangeNotification object. 
 
 Our testing of '2' was unfortunately hindered by a simultaneous problem with IIS, so we don't know if '2' will work, or if its failure was actually IIS's web.config watcher.
@@ -60,7 +64,7 @@ http://support.microsoft.com/kb/2523382).
 
 ## Raise the command/watcher limit
 
-Alternatively, if there is a small number of folders on the site, you can simply raise the number of commands
+Alternatively, if there is a *small* number of folders on the site, you can simply raise the number of commands
 
 [See Microsoft KB 810886](http://support.microsoft.com/kb/810886)
 
