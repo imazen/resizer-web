@@ -11,7 +11,7 @@ Imazen is hiring talented, experienced software engineers who have a history of 
 
 **Perks:** 20% time, MBP retina hardware, 100% remote, flexible hours, high-quality codebase.
 
-You can apply [at StackOverflow Careers (make sure you're logged in to StackOverflow first!)](http://careers.stackoverflow.com/jobs/32425/work-on-open-source-imaging-software-in-c-sharp-c-imazen)
+You can apply [at Stack Overflow Careers (make sure you're logged in to Stack Overflow first!)](http://careers.stackoverflow.com/jobs/32425/work-on-open-source-imaging-software-in-c-sharp-c-imazen)
 
 More details about [other Imazen job openings can be found at imazen.io/careers](http://www.imazen.io/careers).
 
