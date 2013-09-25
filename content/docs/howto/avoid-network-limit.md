@@ -19,6 +19,7 @@ The easy solution is - don't host your content on a SAN. Go cloud; put the conte
 5. Click (collection) to bring up the Collection Editor, select the web site you wish to modify
 6. In the bottom panel, expand the virtualDirectoryDefaults item. 
 7. Change allowSubDirConfig to False instead of True
+8. Click Apply in the right-hand panel to save your changes.
 
 ## Part 2: Stop ASP.NET from spinning up an individual watcher for every single folder on the website.
 
@@ -49,6 +50,13 @@ Many companies are successfully running over 20TB of imagery through IIS and ASP
 [More information](http://blogs.iis.net/hosterposter/archive/2006/10/30/Hosting-IIS-with-UNC-content-_2D00_-Network-BIOS-commands-and-other-errors.aspx)
 
 [Microsoft KB article](http://support.microsoft.com/?id=911272)
+
+## Monitoring the current command count
+
+On Windows Server 2003 and 2003 R2, you can view the number of SMB connections using Performance Monitor: Add the Current Commands counter in the "SMB Redirector" performance object to Performance Monitor.
+
+Please note that the performance counter [does not work on Vista, Windows 7, Server 2008, or Server 2008 R2](http://social.technet.microsoft.com/Forums/windowsserver/en-US/a36a297c-6fba-409c-af02-1878600138ef/redirector-current-commands-perfmon-counter-always-reads-zero), and [Microsoft has not issued a patch or hotfix](
+http://support.microsoft.com/kb/2523382).
 
 ## Raise the command/watcher limit
 
