@@ -33,13 +33,11 @@ There are two solutions (other than not using a SAN)
 
 ## Disabling FCN
 
-1. Open Regedit
+1. Open Regedit.exe (not RegEdt32!)
 
 2. Add a DWORD at HKLM\Software\Microsoft\ASP.NET\FCNMode, with a value of '1'
 
-3. If you are running a 32-bit process on an x64-based system, add the DWORD value at the following registry key:
-
-4. HKLM\SOFTWARE\Wow6432Node\Microsoft\ASP.NET\FCNMode
+2. Add a DWORD at HKLM\SOFTWARE\Wow6432Node\Microsoft\ASP.NET\FCNMode, with a value of '1' (on 64-bit systems, dual entry is required)
 
 5. Reboot (iisreset may suffice, but some users have found a reboot neccessary)
 
@@ -57,14 +55,14 @@ Many companies are successfully running over 20TB of imagery through IIS and ASP
 
 ## Monitoring the current command count
 
-On Windows Server 2003 and 2003 R2, you can view the number of SMB connections using Performance Monitor: Add the Current Commands counter in the "SMB Redirector" performance object to Performance Monitor.
+On Windows Server 2003 and 2003 R2, you can view the number of SMB connections using Performance Monitor. Add the `Current Commands` counter in the `SMB Redirector` performance object to Performance Monitor.
 
-Please note that the performance counter [does not work on Vista, Windows 7, Server 2008, or Server 2008 R2](http://social.technet.microsoft.com/Forums/windowsserver/en-US/a36a297c-6fba-409c-af02-1878600138ef/redirector-current-commands-perfmon-counter-always-reads-zero), and [Microsoft has not issued a patch or hotfix](
-http://support.microsoft.com/kb/2523382).
+Please note that the performance counter [always shows 0 on Vista, Windows 7, Server 2008, or Server 2008 R2](http://social.technet.microsoft.com/Forums/windowsserver/en-US/a36a297c-6fba-409c-af02-1878600138ef/redirector-current-commands-perfmon-counter-always-reads-zero), and [Microsoft has not issued a patch or hotfix](
+http://support.microsoft.com/kb/2523382). Current Commands should always be a positive value; if it's zero, it's lying.
 
 ## Raise the command/watcher limit
 
-Alternatively, if there is a *small* number of folders on the site, you can simply raise the number of commands
+Alternatively, if there is a *small* number of folders on the site, you can simply raise the number of commands. This approach doesn't tend to scale well, and still results in useless network congestion.
 
 [See Microsoft KB 810886](http://support.microsoft.com/kb/810886)
 
