@@ -55,7 +55,6 @@ Emergency phone support (outside business hours) | no | no | no | 1/yr | unlimit
 All employees get direct support | | | | **X** | **X** 
 Assisted installs |   |   | 2/yr | 5/yr | **10/yr** 
  &nbsp;| 
-
 **Architecture & Custom Development** | 
 **Q & A Session with author** | | | 30 minutes | **2 hours** | **5 hours**
 **Coding assistance** | | | **1 hour/year** | **3 hours/year** | **10 hours/year** 
