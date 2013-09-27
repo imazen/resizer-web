@@ -1,91 +1,363 @@
 Flags: -comments
-Libs: -comments
-
-# Support contracts
-
-Save money with a support contract. All contracts include permanent licenses to the latest version of all plugins offered when the contract expires. And even better - you get a direct line to the developers.
-
-### Go Bronze ($1000/yr with 2YR plan)
-
-For only $100 more, there's no reason to buy an Elite license instead of a 6 month Bronze support contract. Both include a lifetime license to the current  version - but only a support contract includes free upgrades to new major relases.
-
-In addition to free major version upgrades, a bronze support contract gives *1 person* at your company access to phone, e-mail, and TeamViewer support once per month. It also includes some free architecture consulting, assisted installations, and custom development.
-
-### Go Silver ($4000/yr with 2YR plan)
-
-The Silver plans (unlike Bronze) allow *any* employee of the business to get direct, unlimited phone & TeamViewer support. No need to funnel all communication through the designated employee. 
-
-Also, you get a special e-mail address to contact support, with 2 business-hour response times guaranteed. Hot-fixes are guaranteed within seven days for blocking bugs. In addition, two hours of architecture planning with the author is included, as well as 3 hours of custom development time if required. 5 assisted installs per year are included.
-
-### Go Gold  ($8500/yr with 2YR plan)
-
-The Gold plans are ideal for business that need access to emergency support, fast issue resolution, or extensive custom development. Hot-fixes are provided within 2 business days. 10 hours of custom coding per year is included, as well as 5 hours of architecture planning and 10 assisted installations. 
+Libs: -comments, bootstrap
 
 
-## Compare your options
+# Support Contracts
 
-| |  Free&nbsp;&nbsp;&nbsp;&nbsp; | Elite Edition | Bronze Level | Silver Level | Gold Level |
-------- | -:| -:| -:| -:| -:|
-Best value for... |   |  | Startup | Small Business | Enterprise
-6 months |      |    $849 USD |         $949 USD |       $3,000 USD |     $6,000 USD
-1 year  |      |     |        $1500 USD |       $5,000 USD |    $10,000
-2 year  |      |     |        $2000 USD |       $8,000 USD |    $17,000 USD
- &nbsp; |
-**Licenses and upgrades** |
----|
-Lifetime license included | X | X | X | X | X
-Major upgrades included during contract period | | | X | X | X 
-*All* ImageResizer plugins included | | X | X | X | X
-Early access to new plugins and releases | | | X | X | X
- &nbsp;| 
-**Email Support**  |
-Support via [StackOverflow #imageresizer](http://stackoverflow.com/questions/tagged/imageresizer) | X | X | X | X | X
-**Answers within 24 hours Mon-Fri** | |   | X | X | X
-**Answers within 2 business hours** | | | | X | X 
- &nbsp;| 
-**Hot-fix delivery** |
-Best-effort hot-fix delivery |   | X | X | X | X 
-Hot-fixes within 7 business days | | | | X | X
-Hot-fixes within 2 business days | | | | | X  
- &nbsp;| 
-**Phone/Teamviewer Support** | 
-Included business-hours support incidents |   | 1 | 1/month | **unlimited** | **unlimited**
-Emergency phone support (outside business hours) | no | no | no | 1/yr | unlimited |
-1 designated employee gets support |   |   | X | X | X 
-All employees get direct support | | | | **X** | **X** 
-Assisted installs |   |   | 2/yr | 5/yr | **10/yr** 
- &nbsp;| 
+<div class="row">
+	<div class="span4">
+		<div class="well">
+			<h2>Bronze</h2>
+			<p><span class="label">STARTUP</span></p>
+			<p>Includes all the features of the Elite Edition plus:</p>
+			<ul class="actual-bullets">
+				<li>Free Plugin Upgrades</li>
+				<li>1 Designated Contact per License</li>
+				<li>6 Support Incidents<a href="#note1"><sup>1</sup></a></li>
+				<li>2 Assisted Installs</li>
+				<li>30-minute Q & A Session</li>
+				<li>1 hour of Development Assistance</li>
+				<li>$1195 in value for only $100 more than the Elite Edition<a href="#note2"><sup>2</sup></a></li>
+	 		</ul>
+			<hr>
+        	<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        	<input type="hidden" name="o1" value="Bronze Tier 2 Year Contract">
+          	<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $1000/yr with 2 year plan »</a></p>
+          	</form>
+		</div>
+	</div>
+	<div class="span4">
+		<div class="well">
+			<h2>Silver</h2>
+			<p><span class="label">SMALL BUSINESS</span></p>
 
-**Architecture & Custom Development** | 
-**Q & A Session with author** | | | 30 minutes | **2 hours** | **5 hours**
-**Coding assistance** | | | **1 hour/year** | **3 hours/year** | **10 hours/year** 
+			<p>The Silver Plan is ideal for Small Business with larger development teams. Where the Bronze Plan gets you one point of contact, the Silver Plan provides support for any contact at your Company.</p>
 
-<script type="javascript">/*
-$(window).ready(function(){
-	('table td:contains("x"):not(:contains("i"))').empty().append($('<img src="http://www.easyvectors.com/assets/images/vectors/afbig/apply-checkmark-clip-art.jpg" width="20" height="20" alt="x" />'));
-});*/
-</script>
 
-## Purchase
+			<ul class="actual-bullets">
+				<li>Free Plugin Upgrades</li>
+				<li>Unlimited Designated Contacts</li>
+				<li>Custom e-mail to contact support</li>
+				<li>Guaranteed Support Response time in 2 hours<a href="#note3"><sup>3</sup></a></li>
+				<li>Guaranteed Hot-fixes for blocking bugs within 7 business days</li>
+				<li>2 hours Architecture Planning<sup><a href="#note4">4</a></sup></li>
+				<li>3 hours Custom Development<sup><a href="#note4">4</a></sup></li>
+				<li>5 Assisted Installations<sup><a href="#note4">4</a></sup></li>
+			</ul>          
+			<hr>
+        	<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        	<input type="hidden" name="o1" value="Silver Tier 2 Year Contract">
+          	<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $4000/yr with 2 year plan »</a></p>
+          	</form>
+		</div>
+	</div>
+	<div class="span4">
+		<div class="well">
+			<h2>Gold</h2>
+			<p><span class="label">ENTERPRISE</span></p>
+			<p>The Gold Plan is our premier Support Contract designed for exclusively for the enterprise. We understand mission critical applications required fast turn around and response times.</p>
+			<p>The Gold Plan provides priority support and guaranteed hot-fix turnaround in 2 business days. It also provides extensive Architecture Planning, Custom Development and Assisted Installations often needed for enterprise scale applications.</p>
+			<ul class="actual-bullets">
+				<li>Free Plugin Upgrades</li>
+				<li>Unlimited Designated Contacts</li>
+				<li>Custom e-mail to contact support</li>
+				<li>Guaranteed Support Response time in 2 hours<a href="#note3"><sup>3</sup></a></li>
+				<li>Priority Hot-fixes in 2 Business Days, Guaranteed</li>
+				<li>5 hours Architecture Planning<sup><a href="#note4">4</a></sup></li>
+				<li>10 hours Custom Development<sup><a href="#note4">4</a></sup></li>
+				<li>10 Assisted Installations<sup><a href="#note4">4</a></sup></li>
+			</ul>          
+			<hr>
+        	<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        	<input type="hidden" name="o1" value="Gold Tier 2 Year Contract">
+          	<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $8500/yr with 2 year plan »</a></p>
+          	</form>
+		</div>
+	</div>
+</div>
 
-You may request an invoice by e-mailing **support@imageresizing.net** with your company name and billing address, or pay with PayPal, Google Checkout, eCheck, or Credit card below.
 
-<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
-Support contract type:<br/>
-<select name="o1">
-<option value="Bronze Tier 6 Month Contract">Bronze Tier 6 Month Contract</option>
-<option value="Bronze Tier 1 Year Contract">Bronze Tier 1 Year Contract</option>
-<option value="Bronze Tier 2 Year Contract">Bronze Tier 2 Year Contract</option>
-<option value="Silver Tier 6 Month Contract">Silver Tier 6 Month Contract</option>
-<option value="Silver Tier 1 Year Contract">Silver Tier 1 Year Contract</option>
-<option value="Silver Tier 2 Year Contract">Silver Tier 2 Year Contract</option>
-<option value="Gold Tier 6 Month Contract">Gold Tier 6 Month Contract</option>
-<option value="Gold Tier 1 Year Contract">Gold Tier 1 Year Contract</option>
-<option value="Gold Tier 2 Year Contract">Gold Tier 2 Year Contract</option>
-</select>
-<input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
-<a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
-</form>
+
+
+<style type="text/css" media="screen">
+
+
+ </style>
+
+<div class="row">
+	<div class="span8 offset2 well">
+
+		<h2 align="center">Feature Comparison Chart</h2>
+		
+		<table class="table table-features table-condensed">
+			<thead>
+				<tr>
+					<th> </th>
+					<th class="features-masthead">Elite Edition</th>
+					<th class="features-masthead">Bronze</th>
+					<th class="features-masthead">Silver</th>
+					<th class="features-masthead">Gold</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="features-subhead"></td>
+					<td>Individual</td>
+					<td>Startup</td>
+					<td>Small Business</td>
+					<td>Enterprise</td>
+				</tr>
+				<tr>
+					<td class="features-subhead">6 Months</td>
+					<td>
+						<!-- this has to be handled differently -->						
+        				<a class="btn" href="/licenses"><i class="icon-info-sign icon-white"></i> $849 »</a>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Bronze Tier 6 Month Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $949 »</a>
+					</form>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Silver Tier 6 Month Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $3000 »</a>
+					</form>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Gold Tier 6 Month Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $6000 »</a>
+					</form>
+					</td>
+				</tr>
+				<tr>
+					<td class="features-subhead">1 Year</td>
+					<td> </td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Bronze Tier 1 Year Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $1500 »</a>
+					</form>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Silver Tier 1 Year Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $5000 »</a>
+					</form>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Gold Tier 1 Year Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $10000 »</a>
+					</form>
+					</td>
+				</tr>
+				<tr>
+					<td class="features-subhead">2 Year</td>
+					<td> </td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Bronze Tier 2 Year Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $2000 »</a>
+					</form>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Silver Tier 2 Year Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $8000 »</a>
+					</form>
+					</td>
+					<td>
+						<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
+        				<input type="hidden" name="o1" value="Gold Tier 2 Year Contract">
+        				<a class="btn" href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $17000 »</a>
+					</form>
+					</td>
+				</tr>
+ 				<tr>
+					<td class="features-subhead"> &nbsp; </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<th>Licenses and Upgrades</th>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Lifetime License</td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Major Upgrades<a href="#note5"><sup>5</sup></a></td>
+					<td></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+				<tr>
+					<td class="features-subhead">All ImageResizer Plugins</td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Early access to new plugins and releases</td>
+					<td></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+
+ 				<tr>
+					<td class="features-subhead"> &nbsp; </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<th>Email Support</th>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Support via StackOverflow</td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+				<tr>
+					<td class="features-subhead">24-hour Response Time<a href="#note6"><sup>6</sup></a></td>
+					<td></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Priority 2 hour Response Time<a href="#note3"><sup>3</sup></a></td>
+					<td></td>
+					<td></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+ 				<tr>
+					<td class="features-subhead"> &nbsp; </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<th>Hot-fix Response Time</th>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td class="features-subhead">7 Business Days</td>
+					<td></td>
+					<td></td>
+					<td><i class="icon-ok text-info"></i></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+				<tr>
+					<td class="features-subhead">2 Business Days</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><i class="icon-ok text-info"></i></td>
+				</tr>
+ 				<tr>
+					<td class="features-subhead"> &nbsp; </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<th>Phone/Teamviewer Support</th>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Business Hours Incidents</td>
+					<td>1</td>
+					<td>1/mo</td>
+					<td>unlimited</td>
+					<td>unlimited</td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Emergency<a href="#note7"><sup>7</sup></a></td>
+					<td></td>
+					<td></td>
+					<td>1/yr</td>
+					<td>unlimited</td>
+				</tr>
+				<tr>
+					<td class="features-subhead">Direct Support Employees</td>
+					<td></td>
+					<td>1</td>
+					<td>unlimited</td>
+					<td>unlimited</td>
+				</tr>
+ 				<tr>
+					<td class="features-subhead"> &nbsp; </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<th>Architecture Planning</th>
+					<td> </td>
+					<td>1/2-hour Q&A/yr</td>
+					<td>2 hours/yr</td>
+					<td>5 hours/yr</td>
+				</tr>
+				<tr>
+					<th>Custom Development</th>
+					<td> </td>
+					<td>1 hour/yr</td>
+					<td>3 hours/yr</td>
+					<td>10 hours/yr</td>
+				</tr>
+				<tr>
+					<th>Assisted Installs</th>
+					<td> </td>
+					<td>2/yr</td>
+					<td>5/yr</td>
+					<td>10/yr</td>
+				</tr>
+ 	
+
+			</tbody>
+		</table>
+ 
+	</div>
+</div>
+
+
+## Purchase Orders and Invoices
+
+You may request an invoice by e-mailing **support@imageresizing.net** with your company name and billing address.
+
 <script language="javascript" type="text/javascript">
 <!--
 function EJEJC_lc(th) { return false; }
@@ -95,5 +367,13 @@ function EJEJC_lc(th) { return false; }
 
 ### Medium-size print
 
-* Support contract services are not available until the payment clears.
+* Payment must clear before your Contract Services become available.
 * We reserve the right to cancel and pro-rata refund any support contract (we've never had to do this).
+* <a name="note1">[1]</a> Limited to 1 Support Incident per month.
+* <a name="note2">[2]</a> $100 less than the Elite Edition as compared to the Bronze 6 Month Subscription. $1895 value calculate as 6 Support Incidents a $135 each, 30-minute Q & A Session valued at $190 and 1 hour of Development Assistance valued at $195.</li>
+* <a name="note3">[3]</a> During business hours. For example, for same day response you must contact support at least 2 hours before the end of business hours for that same day.
+* <a name="note4">[4]</a> Per year renewing on the anniversary of your subscription.
+* <a name="note5">[5]</a> Major Upgrades are included during the subscription period.
+* <a name="note6">[6]</a> 24-hour response time available Monday - Friday.
+* <a name="note7">[7]</a> Emergency Support Incidents are those that fall outside of normal business hours.
+ 
