@@ -19,6 +19,19 @@ From Craig Boal at [Sierra Trading Post](http://sierratradingpost.com)
 >Top 100 Internet Retailer <br />
 >sierratradingpost.com <br />
 
+From Eric Stubbs at uGurus
+
+>Dynamic image manipulation in .NET is a complicated problem to solve. With 
+so many half-baked and incomplete solutions out there, it was very tempting 
+to roll our own. Thankfully we found Nathanael's ImageResizer first. It not 
+only eliminated our "Not Invented Here" syndrome and saved us 100s of 
+development hours, but we can use it with confidence that it was designed 
+and built correctly.
+
+>- Erick Stubbs, CTO, uGurus
+
+
+
 From Eilev Hagen at [InCreo](http://increo.no)
 
 >Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended. 
