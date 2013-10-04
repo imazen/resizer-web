@@ -22,7 +22,6 @@ javascript:
 
   var edtOffset = isDstInEffect(-5 * 60) ? -4: -5;//-4, -5
 
-  edtOffset = 1;
   var localOffset = now.getTimezoneOffset() / -60;
 
   var a = (localOffset - edtOffset + 10) % 24;
