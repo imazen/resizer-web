@@ -1,7 +1,6 @@
 Flags: -comments
 Libs: -comments
 
-
 # Support Contracts
 
 <ul class="nav nav-pills">
@@ -115,14 +114,3 @@ function EJEJC_lc(th) { return false; }
 * <a name="note6">[6]</a> 24-hour response time available Monday - Friday.
 * <a name="note7">[7]</a> Emergency Support Incidents are those that fall outside of normal business hours.
  
-
- <script type="text/javascript" charset="utf-8" async defer>
-// jQuery("document").ready(function() {
-// 	boxes = jQuery('.well');
-// 	maxHeight = Math.max.apply(
-// 	  Math, boxes.map(function() {
-// 	    return jQuery(this).height();
-// 	}).get());
-// 	boxes.height(maxHeight);
-// });
-</script>
