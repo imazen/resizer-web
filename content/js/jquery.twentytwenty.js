@@ -87,3 +87,8 @@
   };
 
 })(jQuery);
+// for default page load, to overcome script defer tag $ not defined error
+$(window).load(function(){
+  $(".twentytwenty-container").twentytwenty({default_offset_pct: 0.3});
+});
+
