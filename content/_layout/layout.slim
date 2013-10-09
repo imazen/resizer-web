@@ -103,7 +103,18 @@ html(lang="en" class="no-js")
 
       - if page.lib? :twentytwenty
         script src='/js/jquery.event.move.js' 
-        script src='/js/jquery.twentytwenty.js' 
+        script src='/js/jquery.twentytwenty.js'
+        javascript:
+          $(document).ready( function() {
+            $(".plugin-example-button").click(function() {
+              var image_before = $(this).attr('data-image-before');
+              var image_after = $(this).attr('data-image-after');
+              alert(image_before);
+              $("#plugin-example-before").attr("src", image_before);
+              $("#plugin-example-after").attr("src", image_after);
+            });
+          });
+
 
 
       script src="/js/custom.js"

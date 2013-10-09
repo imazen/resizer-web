@@ -8,19 +8,55 @@ h1 PrettyGifs plugin
 p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantization and dithering, and allows 8-bit PNG creation. Compatible with all plugins.
 
 
+- image_width = 900
+- image_scale = '&scale=both'
 
+.row-fluid
+  .span8.well
+    p
+      strong Before/Left:
+      | &nbsp; Simulated 216 Web Pallette
+      br
+      strong After/Right:
+      | &nbsp; PrettyGifs format = gif, colors = 216, dither = 4pass, preservePalette = false
+    p
+      .twentytwenty-container
+        img src="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
+        img src="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false" id="plugin-example-after"
 
-.twentytwenty-container
-  img src="http://z.zr.io/rw/pluginexamples/sunflower-websafe-ps.gif"
-  img src="http://z.zr.io/rw/pluginexamples/sunflower.jpg?format=gif&colors=216&dither=4pass&preservePalette=false"
+    .row-fluid.hidden-phone
+      .span2
+        p 
+          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+            img src="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+      .span2
+        p 
+          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-019-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-019.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+            img src="http://z.zr.io/rw/pluginexamples/example-019.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+      .span2
+        p 
+          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-022-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-022.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+            img src="http://z.zr.io/rw/pluginexamples/example-022.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+      .span2
+        p 
+          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-023-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-023.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+            img src="http://z.zr.io/rw/pluginexamples/example-023.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+      .span2
+        p 
+          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-028-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-028.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+            img src="http://z.zr.io/rw/pluginexamples/example-028.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+      .span2
+        p 
+          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-030-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-030.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+            img src="http://z.zr.io/rw/pluginexamples/example-030.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
 
+// preload images for fast swiching
 
-p
-  strong Before/Left:
-  | Simulated 216 Web Pallette
-p
-  strong After/Right:
-  | PrettyGifs format = gif, colors = 216, dither = 4pass, preservePalette = false
+img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-019-websafe.gif?width=#{image_width}#{image_scale}"
+img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-022-websafe.gif?width=#{image_width}#{image_scale}"
+img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-023-websafe.gif?width=#{image_width}#{image_scale}"
+img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-028-websafe.gif?width=#{image_width}#{image_scale}"
+img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-030-websafe.gif?width=#{image_width}#{image_scale}"
 
 h2 Installation
 p
@@ -56,7 +92,3 @@ p D) The nQuant implementation also makes excessive copies of the image, making 
 a href="http://pngnq.sourceforge.net/index.html"
 a href="http://members.ozemail.com.au/~dekker/NEUQUANT.HTML"
 
-/ link rel="stylesheet" src="/css/twentytwenty.css"
-/ script type="text/javascript" src="/js/jquery-1.9.1.js"
-/ script type="text/javascript" src="/js/jquery.event.move.js"
-/ script type="text/javascript" src="/js/jquery.twentytwenty.js"

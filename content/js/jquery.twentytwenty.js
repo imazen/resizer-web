@@ -92,3 +92,12 @@ $(window).load(function(){
   $(".twentytwenty-container").twentytwenty({default_offset_pct: 0.3});
 });
 
+// for buttons
+$(document).ready( function() {
+  $(".plugin-example-button").click(function() {
+    var image_before = $(this).attr('data-image-before');
+    var image_after = $(this).attr('data-image-after');
+    $("#plugin-example-before").attr("src", image_before);
+    $("#plugin-example-after").attr("src", image_after);
+  });
+});
