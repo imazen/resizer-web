@@ -2,6 +2,7 @@ Bundle: 1
 Edition: performance
 Tagline: Get rid of ugly .NET GIFs, and get photoshop-like results for GIFs and 8-bit PNG images. Uses tuned octree quantization and smart, adjustable dithering.
 Libs: twentytwenty
+Icon: cogs
 
 
 h1 PrettyGifs plugin
@@ -13,12 +14,18 @@ p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantiza
 
 .row-fluid
   .span8.well
-    p
-      strong Before/Left:
-      | &nbsp; Simulated 216 Web Pallette
-      br
-      strong After/Right:
-      | &nbsp; PrettyGifs format = gif, colors = 216, dither = 4pass, preservePalette = false
+    div style="position:relative; text-align:center; width:100%;"
+      span style="position:absolute; left:0"
+        | Default GIF
+        sup 
+          a href="#note1"
+            | 1
+      span style="position:absolute; right:0"
+        | PrettyGifs
+        sup 
+          a href="#note2"
+            | 2
+    br
     p
       .twentytwenty-container
         img src="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
@@ -92,3 +99,11 @@ p D) The nQuant implementation also makes excessive copies of the image, making 
 a href="http://pngnq.sourceforge.net/index.html"
 a href="http://members.ozemail.com.au/~dekker/NEUQUANT.HTML"
 
+p
+  a id="note1"
+    | [1]
+  | : Default GIF: .NET Default GIF behaviour simulated with the 216 color web pallette in Adobe PhotoShop
+p
+  a id="note2"
+    | [2]
+  | : PrettyGif settings: &nbsp; format = gif, colors = 216, dither = 4pass, preservePalette = false
