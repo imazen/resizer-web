@@ -2,7 +2,7 @@ Tag: install
 
 # Cloud basics
 
-![ImageResizer Cloud](https://s3.amazonaws.com/resizer-web/Resizer-Cloud.png)
+![ImageResizer Cloud](https://s3.amazonaws.com/resizer-web/Resizer-Cloud-Revised.png)
 
 ImageResizer is compatible with every cloud offering, but some self-proclaimed CDNs do not support origin servers. These are not true CDNs; true CDNs can pull content dynamically, not just accept pushes.
 
