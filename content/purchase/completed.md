@@ -6,7 +6,8 @@ Title: Image Resizer Purchase Complete!
 
 Please bookmark this page, as it will be updated each time a new version is released. The e-mailed link will expire after 9 visits, due to e-junkie restrictions.
 
-Please note that *all* plugin bundles are included in this download, as well as the core. I'm trusting you to buy the correct licenses for the  [plugins](/plugins) you use. 
+Please note that *all* plugin bundles are included in this download, as well as the core. We are still on the honor system, and do not yet require license keys. 
+Please buy the correct [license](/licenses) for the plugins you use.
 
 <%= latest_release.heading %> ([changelog](<%= latest_release.path %>)): 
 
