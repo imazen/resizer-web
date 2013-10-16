@@ -3,7 +3,7 @@ Title: Purchase Complete!
 
 # Purchase complete!
 
-Thank you. Please send an e-mail to support@imageresizing.net with scheduling information. 
+Thank you. Please send an e-mail to support@imageresizing.net with availabilty information for the next 10 business days so that your appointment can be scheduled.
 
 To begin your session:
 
