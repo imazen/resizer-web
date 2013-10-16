@@ -24,7 +24,43 @@ Either run `Install-Package ImageResizer.Plugins.DiskCache` in the NuGet package
 
 You're done. If you want to configure the cache directory, you can set `<diskcache dir="~/app-relative-path-here" />`. 
 
-## Configuration
+
+# Other plugins included with DiskCache
+
+The DiskCache assembly includes 3 additonal caching plugins
+
+## SourceMemCache (beta)
+
+Caches up to 10MB of original image files in memory. Files not accessed for more than 10 minutes are removed from the cache.
+
+Improves performance for real-time image editing (such as via StudioJS or jCrop).
+
+**Only images with `&scache=mem` are cached.**
+
+Install by adding `<add name="SourceMemCache" />`.
+
+
+## Output MemCache (alpha)
+
+Caches up to 10MB of output image files in memory. Files not accessed for more than 10 minutes are removed from the cache.
+
+Useful for few-time-use image processing, such as a live camera feed. 
+
+**Only images with `&mcache=true` are cached.**
+
+Install by adding `<add name="MemCache" />`.
+
+## SourceDiskCache (beta)
+
+Like DiskCache, but for source files. Not advisable if your source image collection is larger than available local storage.
+
+**Only images with `&scache=disk` are cached.**
+
+Install by adding `<add name="SourceDiskCache" />`.
+
+Default cache folder is `~/cache/sourceimages`. No configuration options avaiable through XML installation - only through code installation.
+
+## DiskCache Configuration
 
 The defaults are good - you don't actually need to specify any configuration. 
 
