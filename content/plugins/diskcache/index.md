@@ -15,6 +15,8 @@ Compatible with *all* plugins.
 
 This plugin only applies to the URL API, not the managed API. It integrates deeply with ASP.NET and IIS to provide ideal performance. In the future, it may offer an API for use from MVC actions or HttpHandlers, but it will be an API with reduced performance, as MVC actions and HttpHandlers are executed too late for IIS to handle the serving of the file. 
 
+When disabling DiskCache on a site that hosts protected images, it is best to use `<diskcache enabled="false" />` instead of removing `<add name="DiskCache" />`. The existing `/imagecache/` folder will otherwise become publicly accessible when the plugin is removed. Keep this in mind with sub-applications as well.
+
 ## Installation
 
 Either run `Install-Package ImageResizer.Plugins.DiskCache` in the NuGet package manager, or:
