@@ -1,0 +1,66 @@
+Libs: twentytwenty
+Icon: cogs
+
+
+
+h1 Scaling Quality Comparison
+
+- scaling_options = {"GDI default" => "", "WIC Fant" =>  "&builder=wic&w.filter=fant", "WIC Bicubic" =>  "&builder=wic&w.filter=bicubic", "FreeImage Bicubic" =>  "&builder=freeimage&fi.scale=bicubic", "FreeImage Lanczos" =>  "&builder=freeimage&fi.scale=lanczos", "FreeImage CatmullRom" =>  "&builder=freeimage&fi.scale=catmullrom", "FreeImage Bspline" =>  "&builder=freeimage&fi.scale=bspline"}
+
+- scaling_before_default = "GDI default"
+- scaling_after_default = "GDI default"
+
+- image_width          = 600
+- cache_buster         = 34
+- example_images       = ['rings2.gif', '1873-divers.png', 'bars.gif', 'rings.jpg', 'parrot-feather.jpg', 'space-needle.jpg']
+- image_url_prefix     = 'http://z.zr.io/rw/tutorials/resampling/'
+- image_options_before = scaling_options[scaling_before_default] + "&scale=both"
+- image_options_after  = scaling_options[scaling_after_default] + "&scale=both"
+
+h1 #{}
+
+.row-fluid
+  .span8.well
+    div style="position:relative; text-align:center; width:100%;"
+      span#desc-before style="position:absolute; left:0" #{scaling_before_default}
+      span#desc-after style="position:absolute; right:0" #{scaling_after_default}
+    br
+    p
+      .twentytwenty-container
+        img src="#{image_url_prefix}#{example_images[0]}?width=#{image_width}#{image_options_before}&random=#{cache_buster}" id="plugin-example-before"
+        img src="#{image_url_prefix}#{example_images[0]}?width=#{image_width}#{image_options_after}&random=#{cache_buster}" id="plugin-example-after"
+
+    .row-fluid.hidden-phone
+      - example_images.each do | img |
+        .span2
+          p 
+            a.plugin-example-button data-image-before="#{image_url_prefix}#{img}?width=#{image_width}#{image_options_before}&random=#{cache_buster}" data-image-after="#{image_url_prefix}#{img}?width=#{image_width}#{image_options_after}&random=#{cache_buster}"
+              img src="#{image_url_prefix}#{img}?width=128&height=128&random=#{cache_buster}"
+    .row-fluid.hidden-phone
+      .span4
+        h4 Before
+        form#compare-before
+        - scaling_options.each_with_index do | (key, value), index |
+          label.radio
+            - if key == scaling_before_default
+              input id="optionBefore#{index + 1}" name="compare-before" type="radio" value="width=#{image_width}&scale=both#{value}&random=#{cache_buster}" checked="" #{key}
+            - else
+              input id="optionBefore#{index + 1}" name="compare-before" type="radio" value="width=#{image_width}&scale=both#{value}&random=#{cache_buster}" #{key}
+      .span4.offset2
+        h4 After
+        form#compare-after
+        - scaling_options.each_with_index do | (key, value), index |
+          label.radio
+            - if key == scaling_after_default
+              input id="optionsAfter#{index + 1}" name="compare-after" type="radio" value="width=#{image_width}&scale=both#{value}&random=#{cache_buster}" checked="" #{key}
+            - else
+              input id="optionsAfter#{index + 1}" name="compare-after" type="radio" value="width=#{image_width}&scale=both#{value}&random=#{cache_buster}" #{key}
+
+
+h2#usage Usage
+- scaling_options.each do | key, value |
+  p
+  | #{key}
+  code #{value}
+
+
