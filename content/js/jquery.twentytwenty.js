@@ -100,4 +100,39 @@ $(document).ready( function() {
     $("#plugin-example-before").attr("src", image_before);
     $("#plugin-example-after").attr("src", image_after);
   });
+  // before
+  $("input[name=compare-before]").click(function() {
+    var newOptions = $(this).val();
+    $("#desc-before").text($(this).parent().text());
+    // change main image
+    var newMainImgSrc = $("#plugin-example-before").attr("src").split("?")[0]
+    var newMainImgFullPath = newMainImgSrc + "?" + newOptions
+    $("#plugin-example-before").attr("src", newMainImgFullPath);
+    // set data attributes for thumbnails
+    $(".plugin-example-button").each(function() {
+      var newImgSrc = $(this).attr("data-image-before").split("?")[0];
+      var newImgFullPath = newImgSrc + "?" + newOptions
+      $(this).attr("data-image-before" ,newImgFullPath);
+    });
+  });
+
+    // after
+  $("input[name=compare-after]").click(function() {
+    var newOptions = $(this).val();
+    $("#desc-after").text($(this).parent().text());
+    // change main image
+    var newMainImgSrc = $("#plugin-example-after").attr("src").split("?")[0]
+    var newMainImgFullPath = newMainImgSrc + "?" + newOptions
+    $("#plugin-example-after").attr("src", newMainImgFullPath);
+    // set data attributes for thumbnails
+    $(".plugin-example-button").each(function() {
+      var newImgSrc = $(this).attr("data-image-after").split("?")[0];
+      var newImgFullPath = newImgSrc + "?" + newOptions
+      $(this).attr("data-image-after" ,newImgFullPath);
+    });
+  });
+
+
 });
+
+
