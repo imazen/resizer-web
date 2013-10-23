@@ -97,8 +97,22 @@ $(document).ready( function() {
   $(".plugin-example-button").click(function() {
     var image_before = $(this).attr('data-image-before');
     var image_after = $(this).attr('data-image-after');
-    $("#plugin-example-before").attr("src", image_before);
-    $("#plugin-example-after").attr("src", image_after);
+    // prevent fade out if it is the same image
+    if ( $("#plugin-example-before").attr("src") !== image_before ) {
+      $("#plugin-example-before").fadeOut(50, function() { 
+        $(this).load(function() { 
+          $(this).delay(150);
+          $(this).fadeIn(700); 
+        }); 
+        $(this).attr("src", image_before); 
+      });
+      $("#plugin-example-after").fadeOut(50, function() { 
+        $(this).load(function() { 
+          $(this).delay(150);
+          $(this).fadeIn(700); }); 
+        $(this).attr("src", image_after); 
+      }); 
+    }
   });
   // before
   $("input[name=compare-before]").click(function() {
@@ -107,8 +121,16 @@ $(document).ready( function() {
     // change main image
     var newMainImgSrc = $("#plugin-example-before").attr("src").split("?")[0]
     var newMainImgFullPath = newMainImgSrc + "?" + newOptions
-    $("#plugin-example-before").attr("src", newMainImgFullPath);
-    // set data attributes for thumbnails
+    // prevent fade out if it is the same image
+    if ( $("#plugin-example-before").attr("src") !== newMainImgFullPath ) {
+      $("#plugin-example-before").fadeOut(50, function() { 
+        $(this).load(function() { 
+          $(this).delay(150);
+          $(this).fadeIn(700); }); 
+        $(this).attr("src", newMainImgFullPath); 
+      }); 
+    }
+
     $(".plugin-example-button").each(function() {
       var newImgSrc = $(this).attr("data-image-before").split("?")[0];
       var newImgFullPath = newImgSrc + "?" + newOptions
@@ -116,23 +138,30 @@ $(document).ready( function() {
     });
   });
 
-    // after
+  // after
   $("input[name=compare-after]").click(function() {
     var newOptions = $(this).val();
     $("#desc-after").text($(this).parent().text());
-    // change main image
-    var newMainImgSrc = $("#plugin-example-after").attr("src").split("?")[0]
-    var newMainImgFullPath = newMainImgSrc + "?" + newOptions
-    $("#plugin-example-after").attr("src", newMainImgFullPath);
-    // set data attributes for thumbnails
-    $(".plugin-example-button").each(function() {
-      var newImgSrc = $(this).attr("data-image-after").split("?")[0];
-      var newImgFullPath = newImgSrc + "?" + newOptions
-      $(this).attr("data-image-after" ,newImgFullPath);
-    });
+  // change main image
+  var newMainImgSrc = $("#plugin-example-after").attr("src").split("?")[0]
+  var newMainImgFullPath = newMainImgSrc + "?" + newOptions
+  // prevent fade out if it is the same image
+  if ( $("#plugin-example-after").attr("src") !== newMainImgFullPath ) {
+    $("#plugin-example-after").fadeOut(50, function() { 
+      $(this).load(function() { 
+        $(this).delay(150);
+        $(this).fadeIn(700); }); 
+      $(this).attr("src", newMainImgFullPath); 
+    }); 
+  }
+  $("#plugin-example-after").attr("src", newMainImgFullPath);
+  // set data attributes for thumbnails
+  $(".plugin-example-button").each(function() {
+    var newImgSrc = $(this).attr("data-image-after").split("?")[0];
+    var newImgFullPath = newImgSrc + "?" + newOptions
+    $(this).attr("data-image-after" ,newImgFullPath);
   });
-
-
+  });
 });
 
 

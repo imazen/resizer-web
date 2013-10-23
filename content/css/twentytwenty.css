@@ -144,3 +144,15 @@
   border-left: 6px solid white;
   right: 50%;
   margin-right: -17px; }
+
+  /*for custom image scaling*/
+
+.zoom-image-2x { 
+  height: 600px;
+  width: 600px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-speed;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
