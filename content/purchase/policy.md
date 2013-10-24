@@ -1,11 +1,12 @@
 Libs: -comments
 Aliases: /purchase/refunds
+Flags: -sitemap
 
 #Policies
 
 Your satisfaction is guaranteed, or your money back. 
 
-As of March 2013, we have *never* had a customer request a refund due to dissatisfaction with the product.
+We have *never* had a customer request a refund due to dissatisfaction with the product.
 
 If you wish to request a refund, e-mail `support@imageresizing.net`.
 

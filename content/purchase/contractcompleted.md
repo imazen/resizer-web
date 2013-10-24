@@ -1,4 +1,6 @@
 Libs: -comments
+Flags: -sitemap
+
 Title: Purchase Complete!
 
 # Purchase complete!
