@@ -14,11 +14,11 @@ h1 Scaling Quality Comparison
 
 - image_width          = 600
 - image_height         = 900
-- cache_buster         = 53
+- cache_buster         = 55
 - image_size           = "maxwidth=#{image_width}&maxheight=#{image_height}&mode=max&format=png&random=#{cache_buster}"
 - thumb_pixel_size     = 44
 - image_size_thumb     = "w=#{thumb_pixel_size}&h=#{thumb_pixel_size}&mode=crop&anchor=topright&format=jpg&random=#{cache_buster}"
-- example_images       = ['rings.jpg', 'rings-large.gif', '1873-divers.png',  'parrot-feather.jpg', 'space-needle.jpg', '../../../ri/8s.jpg']
+- example_images       = ['rings-with-text-imazen.gif', 'rings-large.gif', '1873-divers.png',  'parrot-feather.jpg', 'space-needle.jpg', '../../../ri/8s.jpg']
 - image_url_prefix     = 'http://z.zr.io/rw/tutorials/resampling/'
 - image_options_before = scaling_options[scaling_before_default]
 - image_options_after  = scaling_options[scaling_after_default]
@@ -31,7 +31,7 @@ h1 Scaling Quality Comparison
       span#desc-after style="position:absolute; right:0" #{scaling_after_default}
     br
     .row-fluid
-      .span6.offset3
+      .span12
         p
           .twentytwenty-container
             img src="#{image_url_prefix}#{example_images[0]}?#{image_size}#{image_options_before}" id="plugin-example-before"
