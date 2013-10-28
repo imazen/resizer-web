@@ -10,8 +10,8 @@ h1 AnimatedGifs plugin
 p Adds support for resizing animated gifs. Once added, animated gifs will be resized while maintaining all animated frames. By default, .NET only saves the first frame of the GIF image.
 p Best used with disk caching, as large animations can take a while to process (sometimes even over a second).
 
-- image_width = 900
-- cache_buster = 00026
+- image_width = 300
+- cache_buster = 38
 
 .row-fluid
   .span4.well
@@ -23,8 +23,8 @@ p Best used with disk caching, as large animations can take a while to process (
     br
     p
       .twentytwenty-container
-        img src="http://z.zr.io/rw/pluginexamples/example-animated-first-frame-sim.gif?width=300&random=#{cache_buster}" id="plugin-example-before"
-        img src="http://z.zr.io/rw/pluginexamples/example-animated.gif?width=300&random=#{cache_buster}" id="plugin-example-after"
+        img src="http://z.zr.io/rw/pluginexamples/example-animated.gif?format=jpeg&width=#{image_width}&random=#{cache_buster}" id="plugin-example-before"
+        img src="http://z.zr.io/rw/pluginexamples/example-animated.gif?width=#{image_width}&random=#{cache_buster}" id="plugin-example-after"
 
     p 
       | Settings: width = 300
