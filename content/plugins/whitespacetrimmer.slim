@@ -10,7 +10,8 @@ h1 WhitespaceTrimmer plugin
 p 
   | Trims whitespace (even smooth gradients) from around images automatically using edge detection filters. Requires Full Trust, uses unmanaged code.
 
-- image_width = 900
+- image_width = 600
+- image_thumb_width = 100
 - cache_buster = 00023
 - example_images = ['017','019','022','023','028','030-alt']
 
@@ -32,7 +33,12 @@ p
         .span2
           p 
             a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_width}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_width}&trim.threshold=80&trim.percentpadding=0.5&random=#{cache_buster}"
-              img src="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_width}&random=#{cache_buster}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_thumb_width}&random=#{cache_buster}"
+    .visible-phone
+      - example_images.each do | img |
+        a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_width}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_width}&trim.threshold=80&trim.percentpadding=0.5&random=#{cache_buster}"
+          img src="http://z.zr.io/rw/pluginexamples/example-#{img}-whitespace.jpg?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
+        | &nbsp;
     p 
       | Settings: &amp;trim.threshold = 80 ,  &amp;trim.percentpadding = 0.5
 

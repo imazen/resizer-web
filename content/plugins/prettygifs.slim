@@ -9,8 +9,12 @@ h1 PrettyGifs plugin
 p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantization and dithering, and allows 8-bit PNG creation. Compatible with all plugins.
 
 
-- image_width = 900
+- image_width = 600
+- image_thumb_width = 100
 - image_scale = '&scale=both'
+- cache_buster = 25
+- example_images = ['017','019','022','023','028','030']
+
 
 .row-fluid
   .span8.well
@@ -30,40 +34,19 @@ p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantiza
       .twentytwenty-container
         img src="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
         img src="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false" id="plugin-example-after"
-
+ 
     .row-fluid.hidden-phone
-      .span2
-        p 
-          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-            img src="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-      .span2
-        p 
-          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-019-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-019.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-            img src="http://z.zr.io/rw/pluginexamples/example-019.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-      .span2
-        p 
-          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-022-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-022.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-            img src="http://z.zr.io/rw/pluginexamples/example-022.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-      .span2
-        p 
-          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-023-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-023.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-            img src="http://z.zr.io/rw/pluginexamples/example-023.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-      .span2
-        p 
-          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-028-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-028.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-            img src="http://z.zr.io/rw/pluginexamples/example-028.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-      .span2
-        p 
-          a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-030-websafe.gif?width=#{image_width}#{image_scale}" data-image-after="http://z.zr.io/rw/pluginexamples/example-030.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
-            img src="http://z.zr.io/rw/pluginexamples/example-030.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false"
+      - example_images.each do | img |
+        .span2
+          p 
+            a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-websafe.gif?width=#{image_width}#{image_scale}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_width}#{image_scale}&colors=216&dither=4pass&preservePalette=false&random=#{cache_buster}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}"
+    .visible-phone
+      - example_images.each do | img |
+        a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-websafe.gif?width=#{image_width}#{image_scale}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_width}#{image_scale}&colors=216&dither=4pass&preservePalette=false&random=#{cache_buster}"
+          img src="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
+        | &nbsp;
 
-// preload images for fast swiching
-
-img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-019-websafe.gif?width=#{image_width}#{image_scale}"
-img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-022-websafe.gif?width=#{image_width}#{image_scale}"
-img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-023-websafe.gif?width=#{image_width}#{image_scale}"
-img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-028-websafe.gif?width=#{image_width}#{image_scale}"
-img style="display:none;" src="http://z.zr.io/rw/pluginexamples/example-030-websafe.gif?width=#{image_width}#{image_scale}"
 
 h2 Installation
 p
