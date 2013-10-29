@@ -1,0 +1,75 @@
+Flags: -comments
+Libs: -comments, slimmage
+Icon: medkit
+
+
+
+h1 Support Contracts
+ul.nav.nav-pills
+  li
+    a href="contracts"
+    	| Overview
+  li.active
+    a href="gold"
+    	| Gold
+  li
+    a href="bronze"
+    	| Bronze
+  li
+    a href="silver"
+    	| Silver
+  li
+    a href="comparison"
+    	| Product Comparison
+
+
+.row.hero-unit
+  .span8
+    h1 Gold
+    p The Gold Plan is our premier Support Contract designed for exclusively for the enterprise. We understand mission critical applications required fast turn around and response times.
+    p The Gold Plan provides priority support and guaranteed hot-fix turnaround in 2 business days. It also provides extensive Architecture Planning, Custom Development and Assisted Installations often needed for enterprise scale applications.
+  .span3
+    p
+      small &nbsp;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Gold Tier 6 Month Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $6000/6 months &raquo;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Gold Tier 1 Year Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $10000/yr &raquo;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Gold Tier 2 Year Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $8500/yr with 2 year plan &raquo;
+
+
+- data_pixel_width = 640
+- normal_width = 240
+- quality_high = 90
+- quality_low = 80
+- image_prefix = "http://z.zr.io/rw/contracts/"
+- feature = [["world-code.jpg", "Custom Development", "10 Hours Custom Development", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["touchscreen-gears.jpg", "5 Hours Architecture Planning", "5 Hours Architecture Planning", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["touchscreen-architecture.jpg", "5 hours Architecture Planning", "5 hours Architecture Planning", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["clock-tech-closeup.jpg", "10 Assisted Installations", "10 Assisted Installations", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["speedometer.jpg", "Guaranteed Support Response time in 2 hours", "Guaranteed Support Response time in 2 hours", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["data-center.jpg", "Priority Hot-fixes in 2 Business Days, Guaranteed", "Priority Hot-fixes in 2 Business Days, Guaranteed", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["support-button.jpg", "Unlimited Support Incidents", "Unlimited Support Incidents", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["email.jpg", "Unlimited Designated Contacts", "Unlimited Designated Contacts", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"], ["code-lock.jpg", "Custom e-mail to contact support", "Custom e-mail to contact support", "Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?"]]
+
+- feature.each_slice(4) do | f_b | 
+	.row
+		- f_b.each do | f | 
+			.span3
+				p
+					img alt="f[1]" data_pixel_width="#{data_pixel_width}" data-slimmage="true" data-src="#{image_prefix}#{f[0]}?width=#{normal_width}&format=jpg&quality=#{quality_high}" src="#{image_prefix}#{f[0]}?width=#{data_pixel_width}&format=jpg&quality=#{quality_low}"
+				h3 #{f[2]}
+				p #{f[3]}
+	.row
+		.span12
+			p &nbsp;
+
+/ inline this to slimmage.js 
+javascript:
+  | window.slimmage = {tryWebP:true, verbose:false};
