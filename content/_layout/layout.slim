@@ -105,7 +105,8 @@ html(lang="en" class="no-js")
         script src='/js/jquery.event.move.min.js' 
         script src='/js/jquery.twentytwenty.min.js'
 
-
+      - if page.lib? :slimmage
+        script src='/js/slimmage.js'
 
       script src="/js/custom.js"
       script src="/js/script.js"
