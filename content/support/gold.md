@@ -41,51 +41,51 @@ Icon: medkit
 
 <div class="row">
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/88008/88008,1260312816,1/stock-photo-digital-program-code-and-american-map-with-a-communication-concept-in-blue-and-green-42469126.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/world-code.jpg?w=240" alt=""></p>
 		<h3>10 hours Custom Development<sup><a href="#note4">4</a></sup></h3>
 		<p4>Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?</p4>
 	</div>
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/1198163/115683691/stock-photo-businessman-touch-gear-to-success-concept-115683691.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/touchscreen-gears.jpg?w=240" alt=""></p>
 		<h3>5 hours Architecture Planning<sup><a href="#note4">4</a></sup></h3>
 		<p4>Eligendi, nam earum laudantium rerum blanditiis sapiente molestias! Iusto, tenetur, quos, voluptatibus laudantium maxime animi quia quibusdam earum aliquam debitis ipsa voluptates reiciendis velit eum voluptate accusantium veniam mollitia sapiente.</p4>
 	</div>
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/1198163/128207006/stock-photo-businessman-working-with-a-cloud-computing-diagram-on-the-new-computer-interface-128207006.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/touchscreen-architecture.jpg?w=240" alt=""></p>
 		<h3>10 Assisted Installations<sup><a href="#note4">4</a></sup></h3>
 		<p4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, in, dolores, dolorum culpa autem quam enim natus rerum est quaerat nulla maxime ipsa vero quidem aliquid! Illum, vero tempore aliquam!</p4>
 	</div>
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/585532/159936467/stock-photo-luxury-watch-chronograph-closeup-159936467.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/clock-tech-closeup.jpg?w=240" alt=""></p>
 		<h3>Guaranteed Support Response time in 2 hours<a href="#note3"><sup>3</sup></a></h3>
 		<p4>Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?</p4>
 	</div>
 </div>
 <div class="row">
 		<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/664192/156041360/stock-vector-tech-circle-and-arrow-background-156041360.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/speedometer.jpg?w=240" alt=""></p>
 		<h3>Priority Hot-fixes in 2 Business Days, Guaranteed</h3>
 		<p4>Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?</p4>
 	</div>
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/348181/105784187/stock-photo-modern-interior-of-server-room-in-datacenter-105784187.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/data-center.jpg?w=240" alt=""></p>
 		<h3>Unlimited Support Incidents</h3>
 		<p4>Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?</p4>
 	</div>
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/717313/717313,1303481844,1/stock-photo-businessman-hand-pressing-support-button-on-a-touch-screen-interface-75837571.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/support-button.jpg?w=240" alt=""></p>
 		<h3>Unlimited Designated Contacts</h3>
 		<p4>Eligendi, nam earum laudantium rerum blanditiis sapiente molestias! Iusto, tenetur, quos, voluptatibus laudantium maxime animi quia quibusdam earum aliquam debitis ipsa voluptates reiciendis velit eum voluptate accusantium veniam mollitia sapiente.</p4>
 	</div>
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/1018532/152752442/stock-photo-lcd-circuit-email-address-on-blue-screen-152752442.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/email.jpg?w=240" alt=""></p>
 		<h3>Custom e-mail to contact support</h3>
 		<p4>Blanditiis, quas, cumque, neque ipsa atque commodi facere reiciendis eum labore sit iste officia. Sint, corporis quidem alias sequi quam atque quo dolores quis vitae excepturi fuga magni id quod?</p4>
 	</div>
 </div>
 <div class="row">
 	<div class="span3">
-		<p><img src="http://image.shutterstock.com/display_pic_with_logo/219154/104282045/stock-photo-source-code-technology-background-security-concept-104282045.jpg" alt=""></p>
+		<p><img src="http://z.zr.io/rw/contracts/code-lock.jpg?w=240" alt=""></p>
 		<h3>Free Plugin Upgrades</h3>
 		<p4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, in, dolores, dolorum culpa autem quam enim natus rerum est quaerat nulla maxime ipsa vero quidem aliquid! Illum, vero tempore aliquam!</p4>
 	</div>
