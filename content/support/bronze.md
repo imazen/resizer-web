@@ -23,15 +23,15 @@ Icon: medkit
 		<p><small>&nbsp;</small></p>
 		<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
 			<input type="hidden" name="o1" value="Bronze Tier 2 Year Contract">
-			<p><a href="#" class="btn btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $949/6 months »</a></p>
+			<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $949/6 months &raquo;</a></p>
 		</form>
 		<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
 			<input type="hidden" name="o1" value="Bronze Tier 2 Year Contract">
-			<p><a href="#" class="btn btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $1500/yr »</a></p>
+			<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $1500/yr &raquo;</a></p>
 		</form>
 		<form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
 			<input type="hidden" name="o1" value="Bronze Tier 2 Year Contract">
-			<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $1000/yr with 2 year plan »</a></p>
+			<p><a href="#" class="btn btn-success btn-large btn-block" onClick="javascript:return EJEJC_lc(this.parentNode);"><i class="icon-shopping-cart icon-white"></i> $1000/yr with 2 year plan &raquo;</a></p>
 		</form>
 	</div>
 </div>

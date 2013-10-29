@@ -31,108 +31,72 @@ Icon: medkit
 
 </style>
 
-<div class="row">
-	<div class="span4 fixed-height-col-top">
-		<div class="hero-unit fixed-height-col-hero">
-		  <div class="row-fluid">
-		  	<div class="span4">
-		  		<p><a href="bronze"><img src="/img/contracts/bronze@2x.png" alt="Bronze Plan"></a></p>
-		  	</div>
-		  	<div class="span8">		  
-		  		<h1>Bronze</h1>
-		  		<p><span class="label">STARTUP</span></p>
-		  	</div>
-		  </div>
-
-			<p>Get on track fast and avoid costly errors. Bronze Support includes a 30-minute architecture consulting call to help you make the most of ImageResizer. It also gives your designated point of contact 1 free priority support incident per month.</p>
-
-			<p>For only $100 more than an Elite license (which is included!), a 6 month Bronze plan is always a better choice than an Elite license alone.</p>
-
-		  <p class="visible-phone">
-		    <a class="btn btn-primary btn-large" href="bronze">
-		      Learn more
-		    </a>
-		  </p>
-
-
-		  
-		</div>
-	</div>
-	<div class="span4 fixed-height-col-top">
-		<div class="hero-unit fixed-height-col-hero">
-		  <div class="row-fluid">
-		  	<div class="span4">
-		  		<p><a href="silver"><img src="/img/contracts/silver@2x.png" alt="Silver Plan"></a></p>
-		  	</div>
-		  	<div class="span8">		  
-		  		<h1>Silver</h1>
-		  		<p><span class="label">SMALL BUSINESS</span></p>
-		  	</div>
-		  </div>
-
-			<p>Deploy to production with confidence, knowing we're only a phone call away if something goes wrong. Includes unlimited support incidents to your entire organization, with a 2 business-hour response time. Got a 3am disaster? 1 free emergency support incident is included per year.</p>
-
-			<p>We'll also give you serious preventative help - 2 free hours of architecture consulting and up to 6 free hours of custom development are included, to ensure that 3am call never happens.</p>
-
-		  <p class="visible-phone">
-		    <a class="btn btn-primary btn-large" href="silver">
-		      Learn more
-		    </a>
-		  </p>
-
-		  
-		</div>
-	</div>
-	<div class="span4 fixed-height-col-top">
-		<div class="hero-unit fixed-height-col-hero">
-		  <div class="row-fluid">
-		  	<div class="span4">
-		  		<p><a href="gold"><img src="/img/contracts/gold@2x.png" alt="Bronze Plan"></a></p>
-		  	</div>
-		  	<div class="span8">		  
-		  		<h1>Gold</h1>
-		  		<p><span class="label">ENTERPRISE</span></p>
-		  	</div>
-		  </div>
-
-			<p>Unlimited emergency support incidents across your organization. Hot-fixes delivered within 2 business days. Up to 20 free hours of custom development, and 5 hours of preventative consulting. We know how to scale to hundreds of terabytes of images and keep your sites running smooth.</p>
-
-					  <p class="visible-phone">
-		    <a class="btn btn-primary btn-large" href="gold">
-		      Learn more
-		    </a>
-		  </p>
-
-
-		</div>
-	</div>
-</div>
-<div class="row hidden-phone">
-	<div class="span4">
+<div class="row-fluid">
+	<div class="span8">
 		<div class="hero-unit">
-		  <p>
-		    <a class="btn btn-primary btn-large" href="bronze">
-		      Learn more
-		    </a>
-		  </p>
+			<div class="row-fluid">
+				<div class="span4">
+					<p><a href="gold"><img src="/img/contracts/gold@2x.png" alt="Bronze Plan"></a></p>
+				</div>
+				<div class="span8">		  
+					<h1>Gold</h1>
+					<p><span class="label">ENTERPRISE</span></p>
+				</div>
+			</div>
+
+			<h2>Unlimited emergency support incidents across your organization. Hot-fixes delivered within 2 business days. Up to 20 free hours of custom development, and 5 hours of preventative consulting. We know how to scale to hundreds of terabytes of images and keep your sites running smooth.</h2>
+
+			<p>&nbsp;</p>
+
+			<p>
+				<a class="btn btn-primary btn-large" href="gold">
+					Learn more about Gold &raquo;
+				</a>
+			</p>
+
+
 		</div>
 	</div>
 	<div class="span4">
 		<div class="hero-unit">
-		  <p>
-		    <a class="btn btn-primary btn-large" href="silver">
-		      Learn more
-		    </a>
-		  </p>
+			<div class="row-fluid">
+				<div class="span4">
+					<p><a href="silver"><img src="/img/contracts/silver@2x.png" alt="Silver Plan"></a></p>
+				</div>
+				<div class="span8">		  
+					<h1>Silver</h1>
+					<p><span class="label">SMALL BUSINESS</span></p>
+				</div>
+			</div>
+
+			<p>Deploy to production with confidence, knowing we're only a phone call away if something goes wrong.</p>
+
+			<p>
+				<a class="btn btn-primary btn-large" href="silver">
+					Learn more about Silver &raquo;
+				</a>
+			</p>
+
+
 		</div>
-	</div>
-	<div class="span4">
 		<div class="hero-unit">
-		  <p>
-		    <a class="btn btn-primary btn-large" href="gold">
-		      Learn more
-		    </a>
-		  </p>
+			<div class="row-fluid">
+				<div class="span4">
+					<p><a href="bronze"><img src="/img/contracts/bronze@2x.png" alt="Bronze Plan"></a></p>
+				</div>
+				<div class="span8">		  
+					<h1>Bronze</h1>
+					<p><span class="label">STARTUP</span></p>
+				</div>
+			</div>
+
+			<p>For only $100 more a 6 month Bronze plan is always a better choice than an Elite license alone.</p>
+
+			<p>
+				<a class="btn btn-primary btn-large" href="bronze">
+					Learn more about Bronze &raquo;
+				</a>
+			</p>
 		</div>
 	</div>
 </div>
