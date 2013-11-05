@@ -134,6 +134,6 @@ Controls how the background thread determines which files to 'clean up'. Not use
 
 Changing the 'cleanupStrategy' settings may void your warranty - it's tricky business.
 
-Times are parsed in the following format:  { s | d.hh:mm[:ss[.ff]] | hh:mm[:ss[.ff]] }. If you just enter a number, it's considered seconds.
+Times are parsed in the following format:  { s \| d.hh:mm[:ss[.ff]] \| hh:mm[:ss[.ff]] }. If you just enter a number, it's considered seconds.
 
 
