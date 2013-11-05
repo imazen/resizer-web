@@ -91,6 +91,20 @@ This is a full reference showing how to use each setting. You should *not* copy 
 
 			<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" optimalWorkSegmentLength="00:00:04" targetItemsPerFolder="400" maximumItemsPerFolder="1000"
 			  avoidRemovalIfCreatedWithin="24:00" avoidRemovalIfUsedWithin="4.00:00" prohibitRemovalIfUsedWithin="00:05" prohibitRemovalIfCreatedWithin="00:10" />
+			<!-- The Watermark plugin is fully XML configurable, and supports named watermark
+			     configurations, multiple image and text layers, layer groups, and background
+			     (as well as overlay) layers. The positioning system is per-layer, permits
+			     flexible pixel and percent layout, anchoring, and container selection.
+			  See http://imageresizing.net/plugins/watermark for details. -->
+			 <watermarks>
+			  <otherimages path="~/watermarks" right="20" bottom="20" width="20" height="20" />
+			  <image name="test1" path="~/watermarks/Sun_64.png" imageQuery="filter=alpha(0.5)&amp;rotate=45" top="0" left="0" />
+			  <text name="test2" text="Hello #{name}!" vertical="true" align="topright" />
+			  <image name="gradientbg" path="~/gradient.png" drawAs="background" imageQuery="color1=black&amp;color2=white&amp;angle=45" top="0" right="0" left="0" bottom="0" />
+			  <group name="storyBG">
+			    <image path="~/watermarks/Sun_64.png" align="topleft" width="100%" height="100%" relativeTo="canvas" drawAs="Background"></image >
+			  </group>
+			</watermarks>
 
 			<plugins>
 				<!-- These are installed by default. We're only removing and re-adding them to show an example. It's pointless -->
@@ -223,7 +237,7 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<!-- http://imageresizing.net/plugins/s3reader -->
 				<!-- <add name="S3Reader" buckets="my-bucket-1,my-bucket-2,my-bucket-3"/> -->
 				<add name="S3Reader" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
- checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" useSubdomains="false" />
+ 				checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" useSubdomains="false" />
 
 				<!-- Add SqlReader plugin -->
 				<!-- Allows you to access binary blobs in a SQL database using a URL. Accepts integer, GUID, and string identifiers for images. -->
@@ -276,15 +290,76 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<add name="PrettyGifs" />
 
 				<!---------------------------------->
+				<!-- Creative Edition starts here -->
+				<!---------------------------------->
+				<!-- WIC Plugins (V3.1+) -->
+				<!-- ImageResizer.Plugins.Wic.dll contains 3 plugins: WicImageDecoder, WicImageEncoder, and WicImageBuilder. -->
+				<!-- These plugins require Windows 7 or Windows Server 2008 R2 for best performance and correct behavior. -->
+				<!-- Vista or Windows Server 2008 with the Platform Update applied should also work. -->
+				<!-- http://imageresizing.net/plugins/wic -->
+				<add name="WicDecoder" />
+				<add name="WicEncoder" />
+				<add name="WicBuilder" />
+
+				<!-- New Watermark plugin (v3.1+) -->
+				<!-- The new watermark plugin is fully XML configurable, and supports named watermark configurations, multiple image and text layers, layer groups, and background (as well as overlay) layers. The positioning system is per-layer, permits flexible pixel and percent layout, anchoring, and container selection. -->
+				<!-- Actually, you add Watermark from C# code - configuration is rather comprehensive, and it doesn't have an xml representation yet -->
+				<!-- http://imageresizing.net/plugins/watermark -->
+				<add name="Watermark" />
+
+				<!-- SeamCarving plugin -->
+				<!-- Provides content-aware image resizing and 5 different algorithms. -->
+				<!-- http://imageresizing.net/plugins/seamcarving -->
+				<add name="SeamCarving" />
+
+				<!-- FreeImage Plugins -->
+				<!-- ImageResizer.Plugins.FreeImage.dll contains several plugins, all based around the abilities offered by the C/C++ FreeImage library. These plugins are alpha-level. -->
+				<!-- http://imageresizing.net/plugins/freeimage -->
+				<!-- FreeImageDecoder plugin -->
+				<!-- Introduces support for RAW & HDR image formats, such as CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc. Also introduced support for XBM, XPM, TARGA, SGI, Sun RAS, PSD, PICT, PNG, PFM, PBM, PGM, PPM, PCX, MNG, Kodak PhotoCD, KOALA, JPEG-2000, JIF, JNG, IFF, ICO, Raw Fax G3, EXR, DDS, and Dr. Halo CUT files. -->
+				<add name="FreeImageDecoder" />
+				<!-- FreeImageEncoder plugin -->
+				<!-- FreeImageEncoder can encode jpegs 2-3x as fast as GDI can, and offers more encoding options. -->
+				<add name="FreeImageEncoder" />
+				<!-- FreeImageBuilder plugin -->
+				<!-- Provides an alternate resizing pipeline that never touches GDI. Only supports width/maxwidth/height/maxheight/scale/marginWidth/paddingWidth/fi.scale settings. -->
+				<add name="FreeImageBuilder" />
+				<!-- FreeImageResizer plugin -->
+				<!-- Adds support for FreeImage resizing algorithms, which include CatmullRom, Lanczos3, bspline, box, bicubic, and bilinear filters. -->
+				<add name="FreeImageResizer" />
+
+				<!-- AdvancedFilters plugin -->
+				<!-- Apply advanced effects to your images. Requires Full Trust. -->
+				<!-- The plugin currently applies effects to the image along with any background color, padding, or drop shadow that may be present. Future versions may simply apply the effect to the image, not the surrounding area. Note: does not affect borders or watermarks. -->
+				<!-- http://www.imageresizing.net/plugins/advancedfilters -->
+				<add name="AdvancedFilters" />
+
+				<!-- SimpleFilters plugin -->
+				<!-- This plugin provides grayscale, sepia, brightness, saturation, contrast, inversion, and alpha filtering options. It also includes beta support for rounded corners. -->
+				<!-- http://imageresizing.net/plugins/simplefilters -->
+				<add name="SimpleFilters" />
+
+
+				<!-- WhitespaceTrimmer plugin -->
+				<!-- Trims whitespace (even smooth gradients) from around images automatically using edge detection filters. Requires Full Trust, uses unmanaged code. -->
+				<!-- http://imageresizing.net/plugins/whitespacetrimmer -->
+				<add name="WhitespaceTrimmer" />
+
+
+				<!---------------------------------->
+				<!-- Elite Edition starts here -->
+				<!---------------------------------->
+
+
+
+				<!---------------------------------->
 				<!-- Designer Edition starts here -->
 				<!---------------------------------->
 
 				<add name="AdvancedFilters" />
 				<add name="PsdReader" />
 				<add name="SimpleFilters" />
-				<!-- Actually, you add Watermark from C# code -
-				     configuration is rather comprehensive, and
-				     it doesn't have an xml representation yet -->
+				<!-- Actually, you add Watermark from C# code - configuration is rather comprehensive, and it doesn't have an xml representation yet -->
 				<add name="Watermark" />
 
 
