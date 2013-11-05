@@ -16,7 +16,7 @@ This is a full reference showing how to use each setting. You should *not* copy 
 		<!-- http://imageresizing.net/plugins/logging -->
 		<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
 		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-		  
+
 		  <targets  async="true" >
 		    <target name="resizer" xsi:type="File" fileName="${basedir}/Logs/Resizer.txt" />
 		    <target name="diskcache" xsi:type="File" fileName="${basedir}/Logs/Diskcache.txt" layout="${processid} ${pad:padCharacter= :padding=3:inner=${threadid}} ${time} ${message}"  />
@@ -30,54 +30,68 @@ This is a full reference showing how to use each setting. You should *not* copy 
 		</configSections>
 
 		<resizer>
-			<!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
-					 you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20 
+			<!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET,
+					 you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&height=20
 					 vppUsage defaults to 'Fallback', which means VirtualPathProviders are used if the physical file doesn't exist.
 					 Optional - these are the default settings -->
 			<pipeline fakeExtensions=".ashx" vppUsage="Always|Fallback|None"/>
-	
-			<!-- minutes specifies how far in the future to set the Expires: header. The Expires header 
-					 tells the browser to not even *check* for a newer version until the Expires header expires. 
-					 Defaults to 0 - header not sent. 1440 is 24 hours, a good value. 
+
+			<!-- minutes specifies how far in the future to set the Expires: header. The Expires header
+					 tells the browser to not even *check* for a newer version until the Expires header expires.
+					 Defaults to 0 - header not sent. 1440 is 24 hours, a good value.
 					 See http://imageresizing.net/plugins/clientcache for details.-->
 			<clientcache minutes="0|1440" />
-			
-			<!-- When onlyAllowPresets="true", all other querystring pairs will be stripped from the URL. 
-			     Naturally, this will break the RemoteReader plugin if you're using the signed URLs. 
-			     onlyAllowPresets does not apply to the managed API, only to the URL API 
+
+			<!-- When onlyAllowPresets="true", all other querystring pairs will be stripped from the URL.
+			     Naturally, this will break the RemoteReader plugin if you're using the signed URLs.
+			     onlyAllowPresets does not apply to the managed API, only to the URL API
 			     See http://imageresizing.net/plugins/presets for details.-->
 			<presets onlyAllowPresets="true|false">
 				<preset name="thumb-defs" defaults="width=100;height=100" />
 				<preset name="thumb" settings="width=100;height=100" />
 				<preset name="thumb-width" defaults="height=100" settings="width=100" /><!-- The height can be overriden, but not the width -->
 			</presets>
-	
-			<!-- Overrides the 'custom errors' setting. Enables the /resizer.debug page for the specified clients. 
-					 Defaults to the same behavior specified in customErrors, so it won't expose data. 
+
+			<!-- Overrides the 'custom errors' setting. Enables the /resizer.debug page for the specified clients.
+					 Defaults to the same behavior specified in customErrors, so it won't expose data.
 					 See http://imageresizing.net/plugins/diagnostics for details. -->
 			<diagnostics enableFor="Localhost|AllHosts|None" />
-	
+
 			<!-- The image404 plugin (when installed) lets you specify a 404 fallback in the querystring
-					 If the image doesn't exists. You can also reference 'presets'. 
-					 Ex. image.jpg?404=myPreset and image.jpg?404=404-whale.png would result in the same behavior 
+					 If the image doesn't exists. You can also reference 'presets'.
+					 Ex. image.jpg?404=myPreset and image.jpg?404=404-whale.png would result in the same behavior
 					 See http://imageresizing.net/plugins/image404 for details. -->
 			<image404 baseDir="~/Images/404Images/" myPreset="~/Images/404Images/404-whale.png" />
-			
 
-			<!-- The DefaultSettings plugin allows you to specify the default settings to use when certain 
-			     settings are omitted. Currently supports ScaleMode defaults. 
+
+			<!-- The DefaultSettings plugin allows you to specify the default settings to use when certain
+			     settings are omitted. Currently supports ScaleMode defaults.
 			     See http://imageresizing.net/plugins/defaultsettings for details. -->
 			<defaultsettings explicitSizeScaleMode="DownscaleOnly" maxSizeScaleMode="DownscaleOnly" />
-			
+
+			<!-- The RemoteReader plugin allows the ImageResizer to resize and display images that are
+			     located at any URL. Kind of like a resizing relay. Make sure the key is kept safe,
+			     and is the same across all servers in the web farm (if you're using one). This key
+			     can contain any xml-safe characters, and should be as long as possible. URLs generated
+			     with one key will not work with another.
+			     See http://imageresizing.net/plugins/remotereader for details. -->
+			<remotereader signingKey="put a long and very secure key here"></remotereader>
+
+			<!-- The CloudFront plugin makes ImageResizer work nicely with CDNs that strip off query
+			     strings by default, such as Amazon CloudFront and Azure CDN. Change
+			     d3urjqacv88oxz.cloudfront.net to match the distribution name you created in the AWS console.
+			     See http://imageresizing.net/plugins/cloudfront for details. -->
+			<cloudfront redirectThrough="http://d3urjqacv88oxz.cloudfront.net" redirectPermanent="false" />.
+
 			<!-- see http://imageresizing.net/plugins/sizelimiting for detailed docs -->
 			<sizelimits imageWidth="0" imageHeight="0" totalWidth="3200" totalHeight="3200" totalBehavior="throwexception" />
-			
+
 			<!-- See http://imageresizing.net/plugins/diskcache for details. Avoid changing these settings -->
 			<diskCache dir="~/imagecache" autoClean="false" hashModifiedDate="true" enabled="true" subfolders="32" cacheAccessTimeout="15000" />
 
-			<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" optimalWorkSegmentLength="00:00:04" targetItemsPerFolder="400" maximumItemsPerFolder="1000" 
+			<cleanupStrategy startupDelay="00:05" minDelay="00:00:20" maxDelay="00:05" optimalWorkSegmentLength="00:00:04" targetItemsPerFolder="400" maximumItemsPerFolder="1000"
 			  avoidRemovalIfCreatedWithin="24:00" avoidRemovalIfUsedWithin="4.00:00" prohibitRemovalIfUsedWithin="00:05" prohibitRemovalIfCreatedWithin="00:10" />
-			
+
 			<plugins>
 				<!-- These are installed by default. We're only removing and re-adding them to show an example. It's pointless -->
 				<remove name="DefaultEncoder" />
@@ -89,9 +103,9 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<add name="ClientCache" />
 				<add name="Diagnostics />
 
-				
+
 				<!-- Unless otherwise noted, the remaining plugins are not included in ImageResizer.dll - they have their own DLLs -->
-				
+
 
 				<!----------------------------------->
 				<!-- Essential Edition starts here -->
@@ -117,13 +131,13 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<!-- When catchAll=false, the behavior is opt-in. You must add &iefix=true to enable the browser detection and redirection behavior for the URL. -->
 				<!-- When catchAll=true, the behavior is opt-out. You must add &iefix=false to disable the browser detection and redirection behavior for the URL. -->
 				<add name="IEPngFix" redirect="true|false" catchAll="true|false" />
-				
+
 				<!-- Add SideLimiting plugin -->
 				<!-- This plugin is installed by default on ASP.NET sites (not for WinForms, Console, or WPF apps) -->
 				<!-- See Remove SizeLimiting Below -->
 				<!-- http://imageresizing.net/plugins/sizelimiting -->
 				<add name="SizeLimiting" />
-				
+
 				<!-- Remove SizeLimiting -->
 				<!-- http://imageresizing.net/plugins/sizelimiting -->
 				<!-- In rare cases, it may make sense to completely remove the plugin. -->
@@ -187,24 +201,89 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<!------------------------------------->
 				<!-- Performance Edition starts here -->
 				<!------------------------------------->
-				
-				<!-- http://imageresizing.net/plugins/diskcache -->
-				<add name="DiskCache" />
 
-				<add name="PrettyGifs" />
-				
+				<!-- Add AzureReader2 plugin -->
+				<!-- Allows images located in an Azure Blobstore to be read, processed, resized, and served. Requests for unmodified images get redirected to the blobstore itself. -->
+				<!-- AzureReader2 supports the Azure SDK V2.0 and requires .NET 4.0 instead of .NET 3.5. -->
+				<!-- http://imageresizing.net/plugins/azurereader2 -->
+				<add name="AzureReader2" connectionString="DefaultEndpointsProtocol=http;AccountName=myAccountName;AccountKey=myAccountKey" endpoint="http://<account>.blob.core.windows.net/" />
+
+				<!-- Add RemoteReader plugin -->
+				<!-- The RemoteReader plugin allows the ImageResizer to resize and display images that are located at any URL. Kind of like a resizing relay. -->
+				<!-- http://imageresizing.net/plugins/remotereader -->
+				<add name="RemoteReader" />
+
+				<!-- Add CloudFront plugin -->
+				<!-- Makes the ImageResizer work nicely with CDNs that strip off query strings by default, such as Amazon CloudFront and Azure CDN.  -->
+				<!-- http://imageresizing.net/plugins/cloudfront -->
+				<add name="CloudFront" />
+
+				<!-- Add S3Reader plugin -->
+				<!-- Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk. Also serves files located on S3 - not restricted to images (unless vpp="false") is used. -->
+				<!-- http://imageresizing.net/plugins/s3reader -->
+				<!-- <add name="S3Reader" buckets="my-bucket-1,my-bucket-2,my-bucket-3"/> -->
+				<add name="S3Reader" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
+ checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" useSubdomains="false" />
+
+				<!-- Add SqlReader plugin -->
+				<!-- Allows you to access binary blobs in a SQL database using a URL. Accepts integer, GUID, and string identifiers for images. -->
+				<!-- http://imageresizing.net/plugins/sqlreader -->
+			  <add name="SqlReader"
+			    prefix="~/databaseimages/"
+			    connectionString="database"
+			    idType="UniqueIdentifier"
+			    blobQuery="SELECT Content FROM Images WHERE ImageID=@id"
+			    modifiedQuery="Select ModifiedDate, CreatedDate From Images WHERE ImageID=@id"
+			    existsQuery="Select COUNT(ImageID) From Images WHERE ImageID=@id"
+			    requireImageExtension="false"
+			    cacheUnmodifiedFiles="true"
+			    extensionPartOfId="false"
+			    checkForModifiedFiles="true"
+			    vpp="true"
+			    untrustedData="false" />
+
+			  <!-- Add DiskCache plugin -->
+				<!-- When disabling DiskCache on a site that hosts protected images, it is best to use <diskcache enabled="false" /> instead of removing <add name="DiskCache" />.  -->
+				<!-- http://imageresizing.net/plugins/diskcache -->
+				<!-- <add name="DiskCache" /> -->
+				<diskcache enabled="false" />
+				<!-- Plugins below are included with DiskCache -->
+				<!-- SourceMemCache (beta) -->
+				<!-- Caches up to 10MB of original image files in memory. Files not accessed for more than 10 minutes are removed from the cache. -->
+				<!-- Improves performance for real-time image editing (such as via StudioJS or jCrop). -->
+				<add name="SourceMemCache" />
+				<!-- Output MemCache (alpha) -->
+				<!-- Caches up to 10MB of output image files in memory. Files not accessed for more than 10 minutes are removed from the cache. Useful for few-time-use image processing, such as a live camera feed. -->
+				<add name="MemCache" />
+				<!-- SourceDiskCache (beta) -->
+				<!-- Like DiskCache, but for source files. Not advisable if your source image collection is larger than available local storage. -->
+				<add name="SourceDiskCache" />
+
+				<!-- Add AzureReader plugin -->
+				<!-- NOTE: See AzureReader2 if you're using the Azure SDK 2.0. -->
+ 				<!-- Allows images located in an Azure Blobstore to be read, processed, resized, and served. Requests for unmodified images get redirected to the blobstore itself. -->
+ 				<!-- http://imageresizing.net/plugins/azurereader -->
+ 				<add name="AzureReader" connectionString="ConnectionKeyName" endpoint="http://<account>.blob.core.windows.net/" />
+
+				<!-- Add AnimatedGifs plugin -->
+				<!-- Adds support for resizing animated gifs. Once added, animated gifs will be resized while maintaining all animated frames. By default, .NET only saves the first frame of the GIF image. -->
+				<!-- http://imageresizing.net/plugins/animatedgifs -->
 				<add name="AnimatedGifs" />
 
-				
+				<!-- Add PrettyGifs plugin -->
+				<!-- Replaces .NET's disgusting default GIF encoding algorithm with Octree quantization and dithering, and allows 8-bit PNG creation. Compatible with all plugins. -->
+				<!-- http://imageresizing.net/plugins/prettygifs -->
+				<add name="PrettyGifs" />
+
 				<!---------------------------------->
 				<!-- Designer Edition starts here -->
 				<!---------------------------------->
-				
+
 				<add name="AdvancedFilters" />
 				<add name="PsdReader" />
 				<add name="SimpleFilters" />
-				<!-- Actually, you add Watermark from C# code - 
-				     configuration is rather comprehensive, and 
+				<!-- Actually, you add Watermark from C# code -
+				     configuration is rather comprehensive, and
 				     it doesn't have an xml representation yet -->
 				<add name="Watermark" />
 
@@ -217,8 +296,8 @@ This is a full reference showing how to use each setting. You should *not* copy 
 				<!-- S3Reader and SqlReader are best configured and added from C# code during App_Start -->
 				<add name="S3Reader" />
 				<add name="SqlReader" />
-				
-			</plugins>	
+
+			</plugins>
 		</resizer>
 
 		<system.web>
