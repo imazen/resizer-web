@@ -35,7 +35,7 @@ No support for transparency - so only use it on PNG and GIF files that don't nee
 
 ## FreeImageBuilder
 
-Provides an alternate resizing pipeline that never touches GDI. Only supports width/maxwidth/height/maxheight/scale/marginWidth/paddingWidth/fi.scale settings.
+Provides an alternate resizing pipeline that never touches GDI. Only supports width/maxwidth/height/maxheight/scale/marginWidth/paddingWidth/fi.scale settings. Only operates on requests specifying `builder=freeimage`
 
 Install by adding `<add name="FreeImageBuilder" />` to the plugins section of Web.config. And make sure you've added the 3 required dlls.
 
