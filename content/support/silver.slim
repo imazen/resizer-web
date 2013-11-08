@@ -1,0 +1,73 @@
+Flags: -comments
+Libs: -comments, bootstrap
+Icon: medkit
+
+
+h1 Support Contracts
+ul.nav.nav-pills
+  li
+    a href="contracts"
+    	| Overview
+  li
+    a href="bronze"
+      | Bronze
+  li.active
+    a href="silver"
+      | Silver
+  li
+    a href="gold"
+    	| Gold
+  li
+    a href="comparison"
+    	| Product Comparison
+
+
+.row.hero-unit
+  .span3
+    h1
+      img alt="ImageResizer Silver Plan" src="http://z.zr.io/rw/contracts/silver.png"
+  .span5
+	  p The Silver Plan is ideal for Small Business with larger development teams. Where the Bronze Plan gets you one point of contact, the Silver Plan provides support for any contact at your Company.
+  .span3
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Silver Tier 6 Month Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $3000/6 months &raquo;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Silver Tier 1 Year Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $5000/yr &raquo;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Silver Tier 2 Year Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $4000/yr with 2 year plan &raquo;
+
+
+- data_pixel_width = 640
+- normal_width = 240
+- quality_high = 90
+- quality_low = 80
+- image_prefix = "http://z.zr.io/rw/contracts/"
+- feature = [["world-code.jpg", "Custom Development", "3 Hours Custom Development", "Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you."], ["touchscreen-architecture.jpg", "Architecture Planning", "2 hours Architecture Planning", "Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront."], ["data-center.jpg", "Assisted Installations", "5 Assisted Installations", "Save time by allowing us to do up to 5 assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly."], ["clock-tech-closeup.jpg", "Guaranteed Support Response time in 2 hours", "Guaranteed Support Response time in 2 hours", "Our Silver Plan customers don't have to wait. Get a response from our support staff within two hours, guaranteed."], ["speedometer.jpg", "Priority Hot-fixes", "Priority Hot-fixes in 7 Business Days", "It critical that everything is running as expected. With our Silver Plan we guarantee priority hot-fixes wihtin sever business days."], ["support-button.jpg", "Unlimited Support Incidents", "Unlimited Support Incidents", "Where some support contracts limited you to one support incident during business hours, with the Silver Plan you get an unlimited number."], ["email.jpg", "Unlimited Designated Contacts", "Unlimited Designated Contacts", "Unlike the Bronze Plan you get an unlimited number of contacts at your organization. That means anyone from your company can contact us for support."], ["code-lock.jpg", "Custom e-mail to contact support", "Custom e-mail to contact support", "When you sign up for this support contract we will create a custom email address that you can use to get priority support."] , ["touchscreen-gears.jpg", "Free Plugin Upgrades", "Free Plugin Upgrades", "Keep your app secure and up to date with free plugin upgrades for the duration of your contract."]]
+
+- feature.each_slice(6) do | f_b |
+	.row
+		- f_b.each do | f |
+			.span2
+				p
+					img alt="f[1]" data_pixel_width="#{data_pixel_width}" data-slimmage="true" data-src="#{image_prefix}#{f[0]}?width=#{normal_width}&format=jpg&quality=#{quality_high}" src="#{image_prefix}#{f[0]}?width=#{data_pixel_width}&format=jpg&quality=#{quality_low}"
+				h3 #{f[2]}
+				p #{f[3]}
+	.row
+		.span12
+			p &nbsp;
+
+script src="http://www.e-junkie.com/ecom/box.js" type="text/javascript"
+javascript:
+  | window.slimmage = {tryWebP:true, verbose:false};
