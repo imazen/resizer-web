@@ -1,6 +1,6 @@
 Aliases: /docs/events
 
-## Events
+# Events
 
 Events let you perform URL rewriting, force processing and/or caching of arbitrary files, tie into database queries, and perform custom authorization. 
 

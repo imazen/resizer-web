@@ -10,10 +10,10 @@ Libs: plusone
 ## Rotation & flipping
 
 * **autorotate=true** Automatically rotates the image based on the EXIF info from the camera. (Requires the [AutoRotate plugin](/plugins/autorotate))
-* **sflip=none|x|y|xy** Flips the source image prior to processing (new in V3.1)
-* **srotate=0|90|180|270** Rotates the source image prior to processing (only 90 degree intervals) (new in V3.1)
+* **sflip=none\|x\|y\|xy** Flips the source image prior to processing (new in V3.1)
+* **srotate=0\|90\|180\|270** Rotates the source image prior to processing (only 90 degree intervals) (new in V3.1)
 * **rotate=degrees** – Rotates the image any arbitrary angle (occurs after cropping)
-* **flip=none|x|y|xy** - Flips the image after everything is done
+* **flip=none\|x\|y\|xy** - Flips the image after everything is done
 
 ## Manual cropping
 
@@ -28,20 +28,20 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 
 * **maxwidth, maxheight** – fit the image within the specified bounds, preserving aspect ratio.
 * **width, height** – force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.
-* **mode=max|pad|crop|carve|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight. (new in V3.1)
-* **anchor=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright** How to anchor the image when padding or cropping. (new in V3.1)
-* **scale=both|upscaleonly|downscaleonly|upscalecanvas** – By default, images are never upscaled. Use &scale=both to upscale images if they are smaller than width and height
+* **mode=max\|pad\|crop\|carve\|stretch** - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight. (new in V3.1)
+* **anchor=topleft\|topcenter\|topright\|middleleft\|middlecenter\|middleright\|bottomleft\|bottomcenter\|bottomright** How to anchor the image when padding or cropping. (new in V3.1)
+* **scale=both\|upscaleonly\|downscaleonly\|upscalecanvas** – By default, images are never upscaled. Use &scale=both to upscale images if they are smaller than width and height
 * **zoom=0..infinity** - Scale the image by a multiplier. Useful for mobile devices and situations where you need to retain all the existing width/height/crop settings, but scale the result up or down. Defaults to 1. 0.5 produces a half-size image, 2 produces a double-size image.
 
 ## Border, padding, margins and background colors
 
-* **bgcolor=color name | hex code (6-char).** Sets the background/whitespace color.
-* **paddingWidth=px & paddingColor=color|hex** paddingColor defaults to bgcolor, which defaults to white.
-* **borderWidth=px, borderColor=color|hex**
+* **bgcolor=color name \| hex code (6-char).** Sets the background/whitespace color.
+* **paddingWidth=px & paddingColor=color\|hex** paddingColor defaults to bgcolor, which defaults to white.
+* **borderWidth=px, borderColor=color\|hex**
 * **margin=3 or margin=5,5,10,10** Specify a universal margin or left,top,right,bottom widths. (new in V3.1)
 
 ## Output format
-* **format=jpg|png|gif** - The output format to use
+* **format=jpg\|png\|gif** - The output format to use
 * **quality** - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly
 * **colors=2-255** – Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit. ([PrettyGifs plugin](/plugins/prettygifs) required)
 
@@ -50,7 +50,7 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 * **ignoreicc** - true|false. If true, the ICC profile embedded in the source image will be ignored.
 * **cache** - always|no|default - Always forces the image to be cached even if it wasn't modified by the resizing module. Doesn't disable caching if it was modified.
 * **process** - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. Does not prevent the image from being modified.
-* **dpi=90|300|600** - The DPI at which the image should be printed. Ignored by all browsers, most operating systems, and most printers.
+* **dpi=90\|300\|600** - The DPI at which the image should be printed. Ignored by all browsers, most operating systems, and most printers.
 
 ## [Watermark plugin](/plugins/watermark)
 
@@ -114,13 +114,13 @@ Please note that width/height/maxwidth/maxheight do NOT include border, margin, 
 
 ## [WicBuilder](/plugins/wic) & [FreeImageBuilder](/plugins/freeimage)
 
-* **builder=freeimage|wic** - Enables the FreeImage or Wic pipeline instead of the default GDI pipeline. Special effect plugins not supported.
+* **builder=freeimage\|wic** - Enables the FreeImage or Wic pipeline instead of the default GDI pipeline. Special effect plugins not supported.
 
 ## [FreeImageDecoder](/plugins/freeimage), [WicDecoder](/plugins/wic)
 
 These act as fallback decoders, but you can tell them to try first by using 
 
-* **decoder=wic|freeimage**
+* **decoder=wic\|freeimage**
 
 ## [FreeImageEncoder](/plugins/freeimage), [WicEncoder](/plugins/wic)
 
