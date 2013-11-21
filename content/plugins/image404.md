@@ -31,7 +31,7 @@ This is why the querystring is used. See bottom of page for examples on applying
 
 Configuration: `<image404 baseDir="~/images/" />`
 
-URL: `/missingimage.jpg?width=200&height=400?404=404.png`
+URL: `/missingimage.jpg?width=200&height=400&404=404.png`
 
 302 redirected to: `/appfolder/images/404.png?width=200&height=400`
 
