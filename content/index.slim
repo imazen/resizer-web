@@ -18,14 +18,14 @@ h1 RESTful image processing
             img src="http://z.zr.io/rw/clients/increo-1.jpg?width=1170"
             .slide-caption.n.hidden-phone
               h3 Eilev Hagen, System developer, InCreo Interactive Creations
-              p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended. 
+              p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended.
           li
             img src="http://z.zr.io/rw/clients/increo-2.png?format=jpg&width=1170&height=390&mode=crop&anchor=topcenter"
             .slide-caption.n.hidden-phone
               h3 Eilev Hagen, System developer, InCreo Interactive Creations
-              p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended. 
+              p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended.
           li
-            .row  
+            .row
               .span4
                 h4 Auto-white balance
                 - [12,18, 26].each_with_index do |n,ix|
@@ -51,7 +51,7 @@ h1 RESTful image processing
                     img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
           li
-            .row 
+            .row
               .span4
                 h4 Unsharp Mask (Smart Sharpen)
                 - [2,23,26].each_with_index do |n,i|
@@ -106,9 +106,9 @@ h1 RESTful image processing
                 img src="http://z.zr.io/ri/4s.jpg?width=#{w[1] - 10}&margin=5&bgcolor=eee"
                 i.icon-arrow-right
                 img src="http://z.zr.io/ri/4s.jpg?width=#{w[1] - 30}&paddingWidth=5&paddingColor=ccc&borderWidth=5&borderColor=ddd&margin=5&bgcolor=eee"
-                p 
-                  | Add padding, borders, and margins 
-                  em within the image. 
+                p
+                  | Add padding, borders, and margins
+                  em within the image.
                   | No more box-model nightmares.
             .row
               .span4
@@ -128,7 +128,7 @@ h1 RESTful image processing
                 i.icon-arrow-right
                 img src="http://z.zr.io/ri/18s.jpg?width=#{w[2]}&trim.threshold=80&trim.percentpadding=5"
 
-                p Product photos are painless with energy-based whitespace removal. 
+                p Product photos are painless with energy-based whitespace removal.
 
               .span4
                 - w = widths(1.3,1,1)
@@ -139,25 +139,25 @@ h1 RESTful image processing
                 i.icon-arrow-right
                 img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&height=#{w[2]}&mode=crop&c.focus=faces&c.zoom=true"
                 p Provide focus points or use automatic face detection to ensure everyone stays in the photo.
-          li
-            .row
-              .span4
-                - w = widths(1,1)
-                h4 Face & Eye detection
-                img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}&f.show=true"
-                span.imagespacer
-                img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&r.autoeyes=true"
-              .span4
-                - w = widths(1)
-                h4 Red-eye repair
-                img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&r.autoeyes=true"
-                p Our adaptive circle fill algorithm repairs red-eye while maintaining reflection integrity.
-              .span4
-                - w = widths(1,1)
-                h4 Change aspect ratio with seam carving
-                img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
-                i.icon-arrow-right
-                img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&height=#{w[1]}&mode=carve"
+          / li
+          /   .row
+          /     .span4
+          /       - w = widths(1,1)
+          /       h4 Face & Eye detection
+          /       img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}&f.show=true"
+          /       span.imagespacer
+          /       img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&r.autoeyes=true"
+          /     .span4
+          /       - w = widths(1)
+          /       h4 Red-eye repair
+          /       img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&r.autoeyes=true"
+          /       p Our adaptive circle fill algorithm repairs red-eye while maintaining reflection integrity.
+          /     .span4
+          /       - w = widths(1,1)
+          /       h4 Change aspect ratio with seam carving
+          /       img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
+          /       i.icon-arrow-right
+          /       img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&height=#{w[1]}&mode=carve"
           li
             .row
               .span4
@@ -198,19 +198,19 @@ h1 RESTful image processing
             | Drop-in compatible with your existing website, CMS, servers, and dev tools. Accessible, stack-agnostic API.
         .da-slide.textual
           h2 Gratifying agility
-          p  
-            | Tweak size, cropping, and encoding in-page. Escape the endless edit-export-upload cycle! 
+          p
+            | Tweak size, cropping, and encoding in-page. Escape the endless edit-export-upload cycle!
             |  Conveniently mobile and retina-friendly.
         .da-slide.textual
           h2 Comprehensive and capable
           p
-            | ImageResizer offers facial detection, red-eye correction, RAW file development, seam carving, and object removal. 
-            | World-class resizing is just the tip of the iceberg. 
-    
+            | ImageResizer offers facial detection, red-eye correction, RAW file development, seam carving, and object removal.
+            | World-class resizing is just the tip of the iceberg.
+
         .da-slide.textual
           h2 Conveniently intuitive
           p
-            | No reference manual needed; add commands to the end of your image URL. Order and casing doesn't matter, and every combination of commands 'just works'. 
+            | No reference manual needed; add commands to the end of your image URL. Order and casing doesn't matter, and every combination of commands 'just works'.
         .da-slide.textual
           h2 Extreme scalability
           p
@@ -234,17 +234,17 @@ h1 RESTful image processing
       form#homesignup.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
         input type="hidden" name="redirect" value=latest_release.meta.fullfile
         input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
-        
-        h3 
+
+        h3
           | Download ImageResizer V#{latest_release.meta.shortversion}
         input type="text" name="email" placeholder="name@domain.com"
-        |  &nbsp; 
+        |  &nbsp;
         button type="submit" name="Submit" class="btn btn-primary"
           | Download &amp; subscribe &raquo;
-        p 
-          | We send an average of 4 newsletters per year, and you can unsubscribe at any time. 
+        p
+          | We send an average of 4 newsletters per year, and you can unsubscribe at any time.
           a href=releases.first.path
-            | V#{latest_release.meta.shortversion} includes 
+            | V#{latest_release.meta.shortversion} includes
             = latest_release.meta_summary
             |  (see release notes and download page).
   .span2
@@ -256,26 +256,26 @@ h1 RESTful image processing
       li: a href="/docs/troubleshoot" Troubleshooting guide
       li: a href="/docs/community" Community Plugins and Articles
 
-    a href="/docs" 
+    a href="/docs"
       | more...
   .span2
     h3 Tutorials
     ul.arrow_list
       li: a href="/docs/basics" Basic commands
-      li: a href="/docs" Documentation 
+      li: a href="/docs" Documentation
       li: a href="/docs/benefits/comprehensive" Overview of features
       li: a href="/docs/troubleshoot" Troubleshooting guide
 
-    a href="/docs" 
+    a href="/docs"
       | more...
   .span3.tiny-news
     h3 News
     ul.arrow_list
       - for p in index.posts[0..5]
         li
-          a href=p.path 
+          a href=p.path
             = p.meta.short_heading || p.heading
-    a href="/blog" 
+    a href="/blog"
       | more...
 
 .row
@@ -293,7 +293,7 @@ h1 RESTful image processing
         i.ico-white.circle-color-full.ico-tint
         h3 Full imaging suite
         markdown:
-          With the Creative Edition, you can unlock a comprehensive imaging suite. 
+          With the Creative Edition, you can unlock a comprehensive imaging suite.
           Bring clarity to your photos with the unsharp mask, white balance adjustment, noise removal, contrast, saturation, and brightness tools. Design text and image overlays, and apply sophisticated filters.
         .clear
   .span3
@@ -311,7 +311,7 @@ h1 RESTful image processing
         i.ico-white.circle-color-full.ico-stats
         h3 High performance
         markdown:
-          Upgrade to the Performance Edition and scale to millions of images and users. 
+          Upgrade to the Performance Edition and scale to millions of images and users.
           We also support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
         .clear
 
@@ -331,7 +331,7 @@ h1 RESTful image processing
         markdown:
           Single-source imaging is the only manageable solution for mobile and responsive websites.
 
-          Stop the endless photoshop-upload-test cycle. With our simple API, images can be the easiest part of your job. 
+          Stop the endless photoshop-upload-test cycle. With our simple API, images can be the easiest part of your job.
         .clear
   .span3
     .icons-box
@@ -339,14 +339,14 @@ h1 RESTful image processing
       h3 Standardized
       markdown:
         Vendor lock-in is evil. We're working with others in the industry to standardize the RESTful Image API. [Read more at riapi.org](http://riapi.org)
-      
+
       .clear
   .span3
     .icons-box
       i.ico-cup.ico-white.circle-color-full
       h3 Open source
       markdown:
-        Core functionality is free and open source under the [Freedom license](/licenses/freedom). 
+        Core functionality is free and open source under the [Freedom license](/licenses/freedom).
         Everything we offer includes source code and permits modification. **We reward pull requests**.
       .clear
 
@@ -367,25 +367,25 @@ p
   ul.quotations
     li
       blockquote
-        | ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it  before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. - 
+        | ... Just to be clear to the listener, I reached out to Nathanael, and I'm talking about his product because I think it's amazing and awesome, and I've talked about it  before on the blog. He's not an advertiser, this is me, Scott, saying that this is a rocking awesome library. -
         a href="http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" Hanselminutes #313
         cite
           a href="http://hanselman.com"
-            | Scott Hanselman  
+            | Scott Hanselman
           span
             | , Web Platform Team, Microsoft
     li
       blockquote
         | We have 8 years working knowledge of dynamic image resizing software, and the majority of that time was spent working with industry-leading products such as Adobe Scene7 and eRez. ImageResizer is what we’ve found to best serve our customers’ needs – installation was a breeze, support is impeccable, and the price tag much more reasonable. I highly recommend ImageResizer for any dynamic imaging needs.
         cite
-          | Craig Boal, 
+          | Craig Boal,
           span Web Development Manager
     li
       blockquote
-        p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years. 
+        p We've used Nathanael's Image Resizer on a variety of projects, both small and large. It's fast, reliable, robust, easy to use, and a HUGE time saver. I can easily say that we've gotten more bang-for-the-buck from it than anything else we've purchased in the past 5 years.
         p Thanks Nathanael for creating such a wonderful product.
         cite
-          | Dorian Collier, 
+          | Dorian Collier,
           span Deesea
 p: a href="/docs/benefits/testimonials" Read more testimonials
 
@@ -398,7 +398,7 @@ p: a href="/docs/benefits/testimonials" Read more testimonials
     li: img src="http://z.zr.io/rw/clientlogos/eksponent.png?width=160&height=100"  alt="Eksponent"
     li: img src="http://z.zr.io/rw/clientlogos/pmg_austin_logo.png?width=160&height=100"  alt="PMG Austin"
     li: img src="http://z.zr.io/rw/clientlogos/repzio.png?width=160&height=100"  alt="RepZio"
-    li: img src="http://z.zr.io/rw/clientlogos/Microsoft200px.png?width=160&height=100" alt="Microsoft" 
+    li: img src="http://z.zr.io/rw/clientlogos/Microsoft200px.png?width=160&height=100" alt="Microsoft"
     / http://www.microsoft.com/global/en-us/news/publishingimages/logos/MSFT_logo_Web.jpg
     / li: img src="http://z.zr.io/rw/clientlogos/ebay-300.png?width=160&height=100" alt="eBay"
     li: img src="http://z.zr.io/rw/clientlogos/publishgreen.png?width=160&height=100" alt="Publish Green"
