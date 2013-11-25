@@ -119,12 +119,32 @@ class Site < Hardwired::Bootstrap
     end
 
 
+    get '/alljs/jquery.min.map' do
+      status 404
+    end
+
+
     get '/alljs/:scripts' do |scripts|
       scripts = scripts.split(',').map{|s| Base64.urlsafe_decode64(s)}
 
  
 
       compressor = defined?(YUI) && defined?(YUI::JavaScriptCompressor) && YUI::JavaScriptCompressor.new(:munge => false)
+
+      no_minify = dev? 
+
+      compress_callback = lambda do |content, path|
+        begin
+            
+          (compressor ? compressor.compress(content) : content)
+        rescue Exception => e
+          #puts "Syntax error in #{path}"
+          #p e
+          content
+        end
+      end
+
+
 
       session = Rack::Test::Session.new(Site)
       combined = scripts.map { |path|
@@ -136,7 +156,8 @@ class Site < Hardwired::Bootstrap
         else
           content = result.body  if result.status == 200
         end
-        path.end_with?("min.js") || dev? ? content : compressor ? compressor.compress(content) : content
+
+        (path.end_with?("min.js") || path.end_with?("pack.js") || no_minify) ? content : compress_callback.call(content,path) 
 
       }.join("\n")
 
