@@ -40,7 +40,7 @@ You must specify a comma-delimited list of permitted bucket names that can be ac
 
 If you want to access non-public bucket items, you will need to specify an access ID and key.
 
-	<add name="S3Reader" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
+	<add name="S3Reader2" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
 	 checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" region="us-east-1" />
 
 * buckets (required) - Comma-delimited list of permitted bucket names that can be accessed.
