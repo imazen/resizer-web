@@ -2,13 +2,12 @@ Bundle: 3
 Edition: performance
 Tagline: Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider. Works best when combined with DiskCache.
 
-# S3Reader plugin
+# S3Reader2 plugin
 
-Use [S3Reader2 for compatibility with AWSSDK 2.0 and higher](/plugins/s3reader2)
+Compatible with AWSSDK 2.0+
 
 Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk. Also serves files located on S3 - not restricted to images (unless vpp="false") is used.
 
-NOTE: For European bucket support, you must set useSubdomains="true" and use V3.1.3 or higher.
 
 ### Example URLs
 
@@ -17,7 +16,6 @@ NOTE: For European bucket support, you must set useSubdomains="true" and use V3.
 
 
 See Samples/S3ReaderSample/ in the download for a sample project.
-
 
 ### Features
 
@@ -30,10 +28,10 @@ See Samples/S3ReaderSample/ in the download for a sample project.
 
 ## Installation
 
-Either run `Install-Package ImageResizer.Plugins.S3Reader` in the NuGet package manager, or:
+Either run `Install-Package ImageResizer.Plugins.S3Reader2` in the NuGet package manager, or:
 
-1. Add ImageResizer.Plugins.S3Reader.dll to your project
-2. Add `<add name="S3Reader" buckets="my-bucket-1,my-bucket-2,my-bucket-3"/>` inside `<plugins></plugins>` in Web.config.
+1. Add ImageResizer.Plugins.S3Reader2.dll to your project
+2. Add `<add name="S3Reader2" buckets="my-bucket-1,my-bucket-2,my-bucket-3" />` inside `<plugins></plugins>` in Web.config.
 
 
 ## Configuration
@@ -43,7 +41,7 @@ You must specify a comma-delimited list of permitted bucket names that can be ac
 If you want to access non-public bucket items, you will need to specify an access ID and key.
 
 	<add name="S3Reader" vpp="true" buckets="my-bucket-1,my-bucket-2,my-bucket-3" prefix="~/s3/"
-	 checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" useSubdomains="false" />
+	 checkForModifiedFiles="false" useSsl="false" accessKeyId="" secretAccessKey="" region="us-east-1" />
 
 * buckets (required) - Comma-delimited list of permitted bucket names that can be accessed.
 * prefix - the virtual folder that all buckets can be accessed under. Defaults to ~/s3/
@@ -52,7 +50,22 @@ If you want to access non-public bucket items, you will need to specify an acces
 * useSsl - Defaults to false. Set to true to transfer the image data over an encrypted connection. Slows things down significantly.
 * accessKeyId, secretAccessKey - Use these if you need to access non-public files in your amazon buckets.
 * vpp - Set to false to only serve image URLs that have a querystring.
-* useSubdomains - Set to true to use the newer Amazon S3 bucket syntax, which is required for non-US bucket support. Defaults to false for compatibility reasons.
+* region - Set to the region containing your buckets.
+
+## Region IDs
+
+The default region is 'us-east-1', which works for buckets in both 'us-east-1' and 'us-west-1', but not 'us-west-2' or any other buckets.
+Use multiple installations of S3Reader2 with different prefixes if you need to support multiple regions.
+
+				"us-east-1", "US East (Virginia)"
+				"us-west-1", "US West (N. California)"
+				"us-west-2", "US West (Oregon)"
+				"eu-west-1", "EU West (Ireland)"
+				"ap-northeast-1", "Asia Pacific (Tokyo)"
+				"ap-southeast-1", "Asia Pacific (Singapore)"
+				"ap-southeast-2", "Asia Pacific (Sydney)"
+				"sa-east-1", "South America (Sao Paulo)"
+				"us-gov-west-1", "US GovCloud West (Oregon)"
 
 
 
