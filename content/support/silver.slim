@@ -1,7 +1,6 @@
 Flags: -comments
 Libs: -comments, bootstrap
-Icon: medkit
-
+Icon: picture
 
 h1 Support Contracts
 ul.nav.nav-pills
@@ -21,52 +20,176 @@ ul.nav.nav-pills
     a href="comparison"
     	| Product Comparison
 
+.row: .span12: p &nbsp;
 
-.row.hero-unit
-  .span3
-    h1
-      img alt="ImageResizer Silver Plan" src="http://z.zr.io/rw/contracts/silver.png"
-  .span5
-	  p The Silver Plan is ideal for Small Business with larger development teams. Where the Bronze Plan gets you one point of contact, the Silver Plan provides support for any contact at your Company.
-  .span3
-    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-      input name="o1" type="hidden" value="Silver Tier 6 Month Contract"
+- contract_tier = "Silver"
+- hours_dev = 3
+- hours_planning = 2
+- assist_inst = 5
+- response_hours = 2
+- hotfix_days = 7
+
+.row
+  .span8
+    p: img src="/img/contracts/contract-hero-silver.png"
+
+    .row-fluid
+      .span4
+        form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+          input name="o1" type="hidden" value="Silver Tier 6 Month Contract"
+            p
+              a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+                i.icon-shopping-cart.icon-white
+                | &nbsp;$3000/6 months &raquo;
+      .span4
+        form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+          input name="o1" type="hidden" value="Silver Tier 1 Year Contract"
+            p
+              a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+                i.icon-shopping-cart.icon-white
+                | &nbsp;$5000/yr &raquo;
+      .span4
+        form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+          input name="o1" type="hidden" value="Silver Tier 2 Year Contract"
+            p
+              a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+                i.icon-shopping-cart.icon-white
+                | &nbsp;$4000/yr with 2 year plan &raquo;
+    .row-fluid
+      .span6
+        h3
+          ul.icons-ul
+            li
+              i.icon-li.icon-ok>
+              | #{hours_dev} Hours Custom Development
+            li
+              i.icon-li.icon-ok>
+              | #{hours_planning} hours Architecture Planning
+            li
+              i.icon-li.icon-ok>
+              | #{assist_inst} Assisted Installations
+            li
+              i.icon-li.icon-ok>
+              | Support Response time in #{response_hours} hours
+            li
+              i.icon-li.icon-ok>
+              | Hot-fixes in #{hotfix_days} Business Days
+      .span6
+        h3
+          ul.icons-ul
+            li
+              i.icon-li.icon-ok>
+              | Unlimited Support Incidents
+            li
+              i.icon-li.icon-ok>
+              | Unlimited Designated Contacts
+            li
+              i.icon-li.icon-ok>
+              | Custom e-mail to contact support
+            li
+              i.icon-li.icon-ok>
+              | Free Plugin Upgrades
+    p &nbsp;
+
+    p The Silver Plan is ideal for Small Business with larger development teams. Where the Bronze Plan gets you one point of contact, the Silver Plan provides support for any contact at your Company.
+
+    h2 ImageResizer Deployment Platforms
+
+    p (both on-premise and co-located solutions)
+
+    .row-fluid
+      .span3
+        h3
+          ul.icons-ul
+            li
+              i.icon-li.icon-cloud>
+              | Amazon Cloud
+            li
+              i.icon-li.icon-cloud>
+              | Azure Cloud
+      .span3
+        h3
+          ul.icons-ul
+            li
+              i.icon-li.icon-cloud>
+              | AppHarbor
+            li
+              i.icon-li.icon-cloud>
+              | Google Cloud
+
+      .span3
+        h3
+          ul.icons-ul
+            li
+              i.icon-li.icon-cloud>
+              | Heroku
+            li
+              i.icon-li.icon-cloud>
+              | AppFoc
+      .span3
+        h3
+          ul.icons-ul
+            li
+              i.icon-li.icon-cloud>
+              | Rackspace Cloud
+    br
+    p
+      | In addition to our imaging software expertise we also have extensive experience combining this with networking, authentication, load balancing, caching and web servers across Windows and UNIX based systems.
+
+    .well
+      markdown:
+        ## About Imazen
+
+        Imazen is the global leader in imaging software for the Windows Server Platform
+
+        Imazen partners with experts from the USA and abroad including the UK, Germany, Denmark, Norway, Netherlands, New Zealand and the Ukraine. This talent pool allows us to deliver unparalleled expertise and commitment on a project, regardless of size. Our agility allows us to provide three tiers of support from Enterprise level apps, to Mid-size Corporations, to even small startups. Our lowest cost plan starts at just $100 more than the Elite level license.
+
+        While many developers are fine with taking on every aspect of their ImageResizer installation, smart companies know that tapping into Imazen's over 15 years of engineering experience and 9 years of global distributed systems expertise places them in an unparalleled position. You can save hundreds of man hours by being able to directly interact with the people that know ImageResizer best.
+
+        Weather you are at the early planning stages, headlong into a critical sprint or nearing the final deployment stage of your project we are here to help. At all levels we provide unparalleled support and exclusive access to Imazen to provide assistance and consulting in the areas of architecture planning, assisted installation and custom development. For our enterprise level customers we guarantee support responses in 2 hours and hot fixes in 2 business days or less.
+
+        At Imazen we not only develop imaging software for the Microsoft Windows Platform but we understand the needs of highly available, distributed systems including deployment and distribution in the cloud. We provide architectural oversight and scalability guidance for extreme growth. Don't let the memory leaks or bugs of unsupported software render your imaging solution useless when you need it most. For huge traffic spikes, weather seasonal or from Digg, you can rest assured that you are using a best of class solution with world class support.
+
+    .row-fluid
+      .span8.offset2
+        h2: i.icon-asterisk
+          | &nbsp; #{hours_dev} Hours Custom Development
         p
-          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
-            i.icon-shopping-cart.icon-white
-            | $3000/6 months &raquo;
-    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-      input name="o1" type="hidden" value="Silver Tier 1 Year Contract"
+          | Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you.
+
+        h2: i.icon-road
+          | &nbsp; #{hours_planning} hours Architecture Planning
         p
-          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
-            i.icon-shopping-cart.icon-white
-            | $5000/yr &raquo;
-    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-      input name="o1" type="hidden" value="Silver Tier 2 Year Contract"
+          | Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront.
+        h2: i.icon-cloud-upload
+          | &nbsp; #{assist_inst} Assisted Installations
         p
-          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
-            i.icon-shopping-cart.icon-white
-            | $4000/yr with 2 year plan &raquo;
+          | Save time by allowing us to do up to #{assist_inst} assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly.
+        h2: i.icon-time
+          | &nbsp; Guaranteed Support Response time in #{response_hours} hours
+        p
+          | Our enterprise customers don't have to wait. Get a response from our support staff within #{response_hours} hours, guaranteed.
+        h2: i.icon-calendar
+          | &nbsp; Priority Hot-fixes in #{hotfix_days} Business Days, Guaranteed
+        p
+          | If you are running enterprise level applications it is critical that everything is running as expected. With our #{contract_tier} Plan we guarantee priority hot-fixes within two business days.
+        h2: i.icon-comments
+          | &nbsp; Unlimited Support Incidents
+        p
+          | Where some support contracts limited you to one support incident during business hours, with the #{contract_tier} Plan you get an unlimited number.
+        h2: i.icon-user
+          | &nbsp; Unlimited Designated Contacts
+        p
+          | Unlike the Bronze Plan you get an unlimited number of contacts at your organization. That means anyone from your company can contact us for support.
+        h2: i.icon-envelope-alt
+          | &nbsp; Custom e-mail to contact support
+        p
+          | When you sign up for this support contract we will create a custom email address that you can use to get priority support.
+        h2: i.icon-cloud-download
+          | &nbsp; Free Plugin Upgrades
+        p
+          | Keep your app secure and up to date with free plugin upgrades for the duration of your contract.
 
-
-- data_pixel_width = 640
-- normal_width = 240
-- quality_high = 90
-- quality_low = 80
-- image_prefix = "http://z.zr.io/rw/contracts/"
-- feature = [["world-code.jpg", "Custom Development", "3 Hours Custom Development", "Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you."], ["touchscreen-architecture.jpg", "Architecture Planning", "2 hours Architecture Planning", "Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront."], ["data-center.jpg", "Assisted Installations", "5 Assisted Installations", "Save time by allowing us to do up to 5 assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly."], ["clock-tech-closeup.jpg", "Guaranteed Support Response time in 2 hours", "Guaranteed Support Response time in 2 hours", "Our Silver Plan customers don't have to wait. Get a response from our support staff within two hours, guaranteed."], ["speedometer.jpg", "Priority Hot-fixes", "Priority Hot-fixes in 7 Business Days", "It critical that everything is running as expected. With our Silver Plan we guarantee priority hot-fixes wihtin sever business days."], ["support-button.jpg", "Unlimited Support Incidents", "Unlimited Support Incidents", "Where some support contracts limited you to one support incident during business hours, with the Silver Plan you get an unlimited number."], ["email.jpg", "Unlimited Designated Contacts", "Unlimited Designated Contacts", "Unlike the Bronze Plan you get an unlimited number of contacts at your organization. That means anyone from your company can contact us for support."], ["code-lock.jpg", "Custom e-mail to contact support", "Custom e-mail to contact support", "When you sign up for this support contract we will create a custom email address that you can use to get priority support."] , ["touchscreen-gears.jpg", "Free Plugin Upgrades", "Free Plugin Upgrades", "Keep your app secure and up to date with free plugin upgrades for the duration of your contract."]]
-
-- feature.each_slice(6) do | f_b |
-	.row
-		- f_b.each do | f |
-			.span2
-				p
-					img alt="f[1]" data_pixel_width="#{data_pixel_width}" data-slimmage="true" data-src="#{image_prefix}#{f[0]}?width=#{normal_width}&format=jpg&quality=#{quality_high}" src="#{image_prefix}#{f[0]}?width=#{data_pixel_width}&format=jpg&quality=#{quality_low}"
-				h3 #{f[2]}
-				p #{f[3]}
-	.row
-		.span12
-			p &nbsp;
 
 script src="http://www.e-junkie.com/ecom/box.js" type="text/javascript"
 javascript:
