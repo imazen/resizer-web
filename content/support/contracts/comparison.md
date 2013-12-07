@@ -1,18 +1,10 @@
 Flags: -comments
 Libs: -comments, bootstrap, ejunkie
 Icon: picture
-
+Layout: support_page
 
 
 # Support Contracts
-
-<ul class="nav nav-pills">
-  <li><a href="contracts">Overview</a></li>
-  <li><a href="bronze">Bronze</a></li>
-  <li><a href="silver">Silver</a></li>
-  <li><a href="gold">Gold</a></li>
-  <li class="active"><a href="comparison">Product Comparison</a></li>
-</ul>
 
 <div class="row">
 	<div class="span12">
