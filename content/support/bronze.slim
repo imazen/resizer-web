@@ -1,0 +1,74 @@
+Flags: -comments
+Libs: -comments, bootstrap
+Icon: medkit
+
+
+h1 Support Contracts
+ul.nav.nav-pills
+  li
+    a href="contracts"
+    	| Overview
+  li.active
+    a href="bronze"
+      | Bronze
+  li
+    a href="silver"
+      | Silver
+  li
+    a href="gold"
+    	| Gold
+  li
+    a href="comparison"
+    	| Product Comparison
+
+
+.row.hero-unit
+  .span3
+    h1
+      img alt="ImageResizer Bronze Plan" src="http://z.zr.io/rw/contracts/bronze.png"
+  .span5
+	  p Get on track fast and avoid costly errors. Bronze Support includes a 30-minute architecture consulting call to help you make the most of ImageResizer. It also gives your designated point of contact 1 free priority support incident per month.
+	  p For only $100 more than an Elite license (which is included!), a 6 month Bronze plan is always a better choice than an Elite license alone.
+  .span3
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Bronze Tier 6 Month Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $949/6 months &raquo;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Bronze Tier 1 Year Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $1500/yr &raquo;
+    form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
+      input name="o1" type="hidden" value="Bronze Tier 2 Year Contract"
+        p
+          a.btn.btn-success.btn-large.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
+            i.icon-shopping-cart.icon-white
+            | $1000/yr with 2 year plan &raquo;
+
+
+- data_pixel_width = 640
+- normal_width = 240
+- quality_high = 90
+- quality_low = 80
+- image_prefix = "http://z.zr.io/rw/contracts/"
+- feature = [["world-code.jpg", "Development Assistance", "1 Hour Development Assistance", "Development Assistance by the people that know ImageResizer best. We can inform you of the best performance, practices and security for ImageResizer."], ["touchscreen-architecture.jpg", "Q&A Session", "30-minute Q&A Session", "Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront."], ["data-center.jpg", "Assisted Installations", "2 Assisted Installations", "Save time by allowing us to do up to 2 assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly."], ["support-button.jpg", "Support Incidents", "6 Support Incidents", "You may have a support incident once per month."], ["email.jpg", "Single Designated Contact", "Single Designated Contact", "With the Broze Plan you will have one designated contact at your organization. If you need additional contacts please see the Silver and Gold Plans."] , ["touchscreen-gears.jpg", "Free Plugin Upgrades", "Free Plugin Upgrades", "Keep your app secure and up to date with free plugin upgrades for the duration of your contract."]]
+
+- feature.each_slice(6) do | f_b |
+	.row
+		- f_b.each do | f |
+			.span2
+				p
+					img alt="f[1]" data_pixel_width="#{data_pixel_width}" data-slimmage="true" data-src="#{image_prefix}#{f[0]}?width=#{normal_width}&format=jpg&quality=#{quality_high}" src="#{image_prefix}#{f[0]}?width=#{data_pixel_width}&format=jpg&quality=#{quality_low}"
+				h3 #{f[2]}
+				p #{f[3]}
+	.row
+		.span12
+			p &nbsp;
+
+script src="http://www.e-junkie.com/ecom/box.js" type="text/javascript"
+javascript:
+  | window.slimmage = {tryWebP:true, verbose:false};
