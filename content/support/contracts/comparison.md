@@ -1,5 +1,5 @@
 Flags: -comments
-Libs: -comments, bootstrap
+Libs: -comments, bootstrap, ejunkie
 Icon: picture
 
 
