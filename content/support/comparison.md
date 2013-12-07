@@ -1,6 +1,6 @@
 Flags: -comments
 Libs: -comments, bootstrap
-Icon: medkit
+Icon: picture
 
 
 
@@ -14,6 +14,11 @@ Icon: medkit
   <li class="active"><a href="comparison">Product Comparison</a></li>
 </ul>
 
+<div class="row">
+	<div class="span12">
+		<p>&nbsp;</p>
+	</div>
+</div>
 
 
 <div class="row">
