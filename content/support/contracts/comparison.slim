@@ -3,8 +3,9 @@ Libs: -comments, bootstrap, ejunkie
 Icon: picture
 Layout: support_page
 
-
 h1 Support Contracts
+
+- glyph_check = '<i class="icon-ok text-info"></i>'
 
 .row
   .span12
@@ -28,166 +29,92 @@ h1 Support Contracts
           td Enterprise
         tr
           td.features-subhead 6 Months
-          td
-            | $849
-          td
-            | $949
-          td
-            | $3000
-          td
-            | $6000
+          td $849
+          td $949
+          td $3000
+          td $6000
         tr
           td.features-subhead 1 Year
           td
-          td
-            | $1500
-          td
-            | $5000
-          td
-            | $10000
+          td $1500
+          td $5000
+          td $10000
         tr
           td.features-subhead 2 Year
           td
-          td
-            | $2000
-          td
-            | $8000
-          td
-            | $17000
+          td $2000
+          td $8000
+          td $17000
         tr
           td.features-subhead &nbsp;
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           th Licenses and Upgrades
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           td.features-subhead Lifetime License
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [true, true, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead Major Upgrades During Subscription
-          td
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-        tr
-          td.features-subhead All ImageResizer Plugins
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [false, true, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead Early access to new plugins and releases
-          td
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [false, true, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead &nbsp;
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           th Email Support
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           td.features-subhead Support via StackOverflow
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [true, true, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead
             | 24-hour Response Time
             a href="#note1"
               sup 1
-          td
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [false, true, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead
             | Priority 2 hour Response Time
             a href="#note2"
               sup 2
-          td
-          td
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [false, false, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead &nbsp;
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           th Hot-fix Response Time
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           td.features-subhead 7 Business Days
-          td
-          td
-          td
-            i.icon-ok.text-info
-          td
-            i.icon-ok.text-info
+          - [false, false, true, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead 2 Business Days
-          td
-          td
-          td
-          td
-            i.icon-ok.text-info
+          - [false, false, false, true].each do | c |
+            td
+              == glyph_check if c
         tr
           td.features-subhead &nbsp;
-          td
-          td
-           td
-          td
+          td colspan="4"
         tr
           th Phone/Teamviewer Support
-          td
-          td
-          td
-          td
+          td colspan="4"
         tr
           td.features-subhead Business Hours Incidents
           td 1
@@ -211,10 +138,7 @@ h1 Support Contracts
           td unlimited
         tr
           td.features-subhead &nbsp;
-          td           
-          td           
-          td           
-          td         
+          td colspan="4"
         tr
           th Architecture Planning
           td
