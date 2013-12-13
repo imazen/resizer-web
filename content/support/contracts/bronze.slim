@@ -14,57 +14,27 @@ h1 Support Contracts
 - support_incidents = 6
 - designated_contacts = 1
 
+
+- short_features = ["#{hours_dev} Hour Custom Development", "#{hours_planning} Hour Architecture Planning", "#{assist_inst} Assisted Installations", "#{support_incidents} Support Incidents", "#{designated_contacts} Designated Contacts", "Free Plugin Upgrades"]
+
+- long_features = [{:icon => "asterisk", :headline => "#{hours_dev} Hour Custom Development", :description => "Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you."}, {:icon => "road", :headline => "#{hours_planning} Hour Architecture Planning", :description => "Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront."}, {:icon => "cloud-upload", :headline => "#{assist_inst} Assisted Installations", :description => "Save time by allowing us to do up to #{assist_inst} assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly."}, {:icon => "comments", :headline => "#{support_incidents} Support Incidents", :description => "With the #{contract_tier} Plan you get an #{support_incidents} during the contract term."}, {:icon => "user", :headline => "1 Designated Contact", :description => "You will be able to assign one person as a designated contact for your company."}, {:icon => "cloud-download", :headline => "Free Plugin Upgrades", :description => "Keep your app secure and up to date with free plugin upgrades for the duration of your contract."} ]
+
+- purchase_options = [{:product_value => 'Bronze Tier 6 Month Contract', :button_text => '&nbsp;$949/6 months &raquo;'}, {:product_value => 'Bronze Tier 1 Year Contract', :button_text => '&nbsp;$1500/yr &raquo;'}, {:product_value => 'Bronze Tier 2 Year Contract', :button_text => '&nbsp;$1000/yr with 2 year plan &raquo;'}, ]
+
 .row
   .span8
     p: img src="/img/contracts/contract-hero-bronze.png"
-
     .row-fluid
-      .span4
-        form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-          input name="o1" type="hidden" value="Bronze Tier 6 Month Contract"
-            p
-              a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
-                i.icon-shopping-cart.icon-white
-                | &nbsp;$949/6 months &raquo;
-      .span4
-        form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-          input name="o1" type="hidden" value="Bronze Tier 1 Year Contract"
-            p
-              a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
-                i.icon-shopping-cart.icon-white
-                | &nbsp;$1500/yr &raquo;
-      .span4
-        form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-          input name="o1" type="hidden" value="Bronze Tier 2 Year Contract"
-            p
-              a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
-                i.icon-shopping-cart.icon-white
-                | &nbsp;$1000/yr with 2 year plan &raquo;
+      - purchase_options.flatten.each do | p |
+        .span4
+          == partial :purchase_button, p
     .row-fluid
-      .span6
-        h3
-          ul.icons-ul
+      - short_features.each_slice((short_features.length/2.0).ceil) do | c |
+        .span6: h3: ul.icons-ul
+          - c.each do | f |
             li
-              i.icon-li.icon-ok>
-              | #{hours_dev} Hour Custom Development
-            li
-              i.icon-li.icon-ok>
-              | #{hours_planning} Hour Architecture Planning
-            li
-              i.icon-li.icon-ok>
-              | #{assist_inst} Assisted Installations
-      .span6
-        h3
-          ul.icons-ul
-            li
-              i.icon-li.icon-ok>
-              | #{support_incidents} Support Incidents
-            li
-              i.icon-li.icon-ok>
-              | #{designated_contacts} Designated Contacts
-            li
-              i.icon-li.icon-ok>
-              | Free Plugin Upgrades
+              i.icon-li.icon-ok
+              | #{f.to_s}
     p &nbsp;
 
     p Get on track fast and avoid costly errors. Bronze Support includes a 30-minute architecture consulting call to help you make the most of ImageResizer. It also gives your designated point of contact 1 free priority support incident per month.
@@ -77,30 +47,9 @@ h1 Support Contracts
 
     .row-fluid
       .span8.offset2
-        h2: i.icon-asterisk
-          | &nbsp; #{hours_dev} Hour Custom Development
-        p
-          | Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you.
-
-        h2: i.icon-road
-          | &nbsp; #{hours_planning} Hour Architecture Planning
-        p
-          | Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront.
-        h2: i.icon-cloud-upload
-          | &nbsp; #{assist_inst} Assisted Installations
-        p
-          | Save time by allowing us to do up to #{assist_inst} assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly.
-        h2: i.icon-comments
-          | &nbsp; #{support_incidents} Support Incidents
-        p
-          | With the #{contract_tier} Plan you get an #{support_incidents} during the contract term.
-        h2: i.icon-user
-          | &nbsp; 1 Designated Contact
-        p
-          | You will be able to assign one person as a designated contact for your company.
-        h2: i.icon-cloud-download
-          | &nbsp; Free Plugin Upgrades
-        p
-          | Keep your app secure and up to date with free plugin upgrades for the duration of your contract.
-
+        - long_features.flatten.each do | f |
+          h2: i class="icon-#{f[:icon]}"
+            | &nbsp; #{f[:headline]}
+          p
+            | #{f[:description]}
 
