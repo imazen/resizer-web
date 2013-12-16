@@ -1,0 +1,84 @@
+Tags: plugin
+Edition: elite
+Bundle: contract
+Tagline: Automatic cropping based on a set of areas to preserve
+Libs: twentytwenty
+Icon: cogs
+
+
+h1 CropAround plugin
+
+p Provided a set of focus rectangles, will crop the image while preserving the specified areas.
+
+
+- image_width = 400
+- image_thumb_width = 100
+- cache_buster = 28
+- example_images = ['/ri/5s.jpg', '/rw/pluginexamples/girl-flowers.jpg', '/rw/pluginexamples/example-006.jpg', '/rw/pluginexamples/example-007.jpg', '/rw/pluginexamples/example-013.jpg', '/rw/pluginexamples/example-016.jpg']
+- image_options = ["c.zoom=true&c.focus=faces&mode=crop&f.faces=1", "c.zoom=true&c.focus=faces&mode=crop&f.faces=1", "c.zoom=true&focus=50,200,100,250&c.finalmode=crop&mode=crop", "c.zoom=true&focus=0,0,5,5&c.finalmode=pad&mode=crop", "c.zoom=true&focus=50,200,100,250&c.finalmode=pad&mode=crop", "c.zoom=true&focus=50,200,100,250&c.finalmode=pad&mode=crop"]
+
+/ c.focus=x1,y1,x2,y2
+/ &c.zoom=true&c.focus=faces
+
+
+
+.row-fluid
+  .span8.well
+    div style="position:relative; text-align:center; width:100%;"
+      span style="position:absolute; left:0"
+        | Original
+      span style="position:absolute; right:0"
+        | CropAround
+    br
+    p
+      .twentytwenty-container
+        img src="http://z.zr.io#{example_images[0]}?width=#{image_width}&height=#{image_width}&random=#{cache_buster}" id="plugin-example-before"
+        img src="http://z.zr.io#{example_images[0]}?width=#{image_width}&height=#{image_width}&#{image_options[0]}&random=#{cache_buster}" id="plugin-example-after"
+
+    .row-fluid.hidden-phone
+      - example_images.each_with_index do | img, i |
+        .span2
+          p
+            a.plugin-example-button data-image-before="http://z.zr.io#{img}?width=#{image_width}&height=#{image_width}&random=#{cache_buster}" data-image-after="http://z.zr.io#{img}?width=#{image_width}&height=#{image_width}&#{image_options[i]}&random=#{cache_buster}"
+              img src="http://z.zr.io#{img}?width=#{image_thumb_width}&random=#{cache_buster}"
+    / .visible-phone
+    /   - example_images.each do | img |
+    /     a.plugin-example-button data-image-before="http://z.zr.io#{img}?width=#{image_width}&height=#{image_width}&random=#{cache_buster}" data-image-after="http://z.zr.io#{img}?width=#{image_width}&height=#{image_width}&trim.threshold=80&trim.percentpadding=0.5&random=#{cache_buster}"
+    /       img src="http://z.zr.io#{img}?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
+    /     | &nbsp;
+    p
+      | Settings:
+      ol
+        - image_options.each do | opt |
+          li #{opt}
+
+/ - example_images.each do | img |
+/   img style="display:none;" src="http://z.zr.io#{img}?width=#{image_width}&height=#{image_width}&trim.threshold=80&trim.percentpadding=0.5&random=#{cache_buster}"
+
+
+
+
+
+
+markdown:
+
+  Coordinates must be in the source image coordinates.
+
+  Requires `mode=crop` and `width` and `height` to be specified to activate.
+
+  ## Installation
+
+  1. Reference ImageResizer.Plugins.Faces.dll
+  2. Add `<add name="CropAround" />` to the `<plugins />` section.
+
+  ## Syntax
+
+  * c.focus=x1,y1,x2,y2
+  * c.focus=x1,y1,x2,y2,x1,y2,x2,y2.....
+  * c.zoom=true (Crop as closely as possible to rectangles)
+  * c.zoom=false (Crop minimally to meet required aspect ratio)
+  * c.finalmode=crop|pad|max|stretch|carve (If we can't meet the desired aspect ratio given our constraints, what do we do next?)
+
+  ## Special ability when installed alongside the Faces plugin
+
+  * c.focus=faces - Perfoms on-the-fly face detection and uses those coordinates. Can be resource intensive, so disk caching is reccommended.
