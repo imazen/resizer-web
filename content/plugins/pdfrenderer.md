@@ -6,9 +6,13 @@ Tagline: Render PDFs to images dynamically, then crop or process them as an imag
 
 Note: The PdfRenderer plugin uses the Ghostscript library, **which is under the GPLv3**. As such, any binaries using that library **are also under the GPL v3**. [Click here for the full licensing details on this](/licenses/pdfrenderer). The PdfRenderer plugin was written by Jason Morse. I have reviewed, vetted, and tested his code.
 
+![PDFRenderer Example](http://z.zr.io/rw/pluginexamples/constitution.pdf?format=jpeg&width=300)
+
+options: `constitution.pdf?format=jpeg&width=300`
+
 The PdfRenderer plugin renders PDF files to the dimensions specified by the `width` and `height` commands. You may use the `mode` command to pad, crop, stretch, or seam carve the result to match your desired aspect ratio. All resizer commands can be used in combination with the plugin.
 
-To access, add `?format=png` or `format=jpg` after a PDF url. 
+To access, add `?format=png` or `format=jpg` after a PDF url.
 
 Ex. `/docs.pdf?format=png&width=400`.
 
@@ -25,9 +29,9 @@ The default render size is 800x600, and the maximum render size is 4000x4000. Th
 
 ### Syntax
 
-This plugin is activated when any PDF url has one of the [resizer commands](/docs/reference) in the querystring. 
+This plugin is activated when any PDF url has one of the [resizer commands](/docs/reference) in the querystring.
 
-It uses the `width` and `height` commands to optimize the PDF rendering to the desired size. Any image processing commands may be used later, but it is not compatible with the WicBuilder or FreeImageBuilder pipelines. 
+It uses the `width` and `height` commands to optimize the PDF rendering to the desired size. Any image processing commands may be used later, but it is not compatible with the WicBuilder or FreeImageBuilder pipelines.
 
 * Width/height - Choose the dimensions of the output image. The pdf will be rendered within the box, and padded to fit. You can use &mode=crop to crop the pdf to a specific aspect ratio, or &mode=max to just allow the output image to match the aspect ratio of the PDF.
 * Pdfwidth/pdfheight - You can use pdfwidth and pdfheight to specify alternate rendering dimensions for the PDF, causing it to be resized after it is generated. This is useful for making high-quality thumbnails, as rendering a PDF to an 80x80px square can be too aliased. Specifying &width=80&pdfwidth=240 can often provide much better results than &width=80 by itself. (3.1.5+)
@@ -37,7 +41,7 @@ It uses the `width` and `height` commands to optimize the PDF rendering to the d
 
 ### Limitations
 
-Ghostscript does not provide size information for individual pages. As a result, every page in a PDF will be rendered on a canvas, which has the size of the largest page in the document. It is possible to compensate for this behavior by using [the WhitespaceTrimmer](/plugins/whitespacetrimmer) plugin, using `&trim.threshold=100`. 
+Ghostscript does not provide size information for individual pages. As a result, every page in a PDF will be rendered on a canvas, which has the size of the largest page in the document. It is possible to compensate for this behavior by using [the WhitespaceTrimmer](/plugins/whitespacetrimmer) plugin, using `&trim.threshold=100`.
 
 **Ghostscript does not support multiple instances per process. This means your application needs a dedicated application pool, and you MUST disable overlapped recycles or you're going to get intermittent errors and failed requests. Once Ghostscript stops working, you usually have to restart the app pool to fix it.**
 
