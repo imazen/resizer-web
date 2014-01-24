@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-ruby "2.0.0"
 
 gem 'slim', :git => "git://github.com/slim-template/slim.git"
 gem 'kramdown'
