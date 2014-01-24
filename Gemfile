@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '2.1.0'
 
 gem 'slim', :git => "git://github.com/slim-template/slim.git"
 gem 'kramdown'
@@ -14,7 +15,6 @@ gem 'erubis'
 gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git"
 
 gem 'thin' #we use this for both development and production
-
 
 gem 'honeybadger', :group => :production
 
