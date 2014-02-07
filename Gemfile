@@ -27,6 +27,7 @@ gem "debugger", :group => :development
 gem "rerun", :git => "git://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
+gem "webrat", :group => :development
 
 
 #gem 'perftools.rb', :group => :development

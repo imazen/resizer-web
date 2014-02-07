@@ -187,8 +187,8 @@ module Hardwired
           begin 
             mod_date = File.mtime(Hardwired::Paths.content_path(u))
             url = u
-            p url
-            p mod_date
+            p url if dev?
+            p mod_date if dev?
             break
           rescue
             next
