@@ -165,3 +165,18 @@ You must have the [PrettyGifs](/plugins/prettygifs) plugin installed to get high
 ## SizeLimitException - The dimensions of the output image (4800x2700) exceed the maximum permitted dimensions of 3200x3200.
 
 By default, ImageResizer limits the output size of images to 3200x3200. This can be changed [by configuring (or removing) the SizeLimiting plugin](/plugins/sizelimiting).
+
+## 0-byte response with status 200 returned when DiskCache is enabled
+
+IIS 7+ gives you granular control over which IIS components can be installed. If the Static Content module is not installed, you will get empty responses for disk-cached content. 
+
+If you have enabled asyncWrites, the first request per URL will succeed, but all subsequent operations will fail.
+
+You need at minimum the following IIS modules installed for correct operation:
+
+* Static Content
+* HTTP Errors
+* HTTP Redirection
+* URL Authorization
+* .NET Extensibility 4.5
+* ASP.NET 4.5
