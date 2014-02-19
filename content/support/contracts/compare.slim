@@ -5,8 +5,40 @@ Layout: support_page
 
 h1 Support Contracts
 
-- glyph_check = '<i class="icon-ok text-info"></i>'
+ruby:
+  def render_prices(table, length)
+    table.map{|t|t[:lengths].find{|l| l[:months] == length}}.map do |prod|
+      price = prod && prod[:price_usd] ? "$%.0f USD" % prod[:price_usd] : nil
+      "<td>#{price}</td>"
+    end * "\n"
+  end
 
+  def render_values(table, subkey, &block)
+    table.map{|t|t[subkey]}.map do |value|
+      text = value ? ((value.respond_to?(:infinite?) && value.infinite?) ? 'unlimited' : block.call(value)) : nil
+      "<td>#{text}</td>"
+    end.join("\n")
+  end 
+
+  def render_checkmarks(table, subkey)
+    render_values(table, subkey) do |value|
+      '<i class="icon-ok text-info"></i>'
+    end
+  end
+
+   def render_hours(table, subkey, span)
+    render_values(table,subkey) do |value|
+      if value < 1
+        (value * 60).floor.to_s + " minutes"
+      elsif value == 1
+        "1 hour"
+      else
+        "#{value} hours"
+      end + " per #{span}"
+    end
+  end 
+
+- col = [SupportContracts.new.elite, SupportContracts.new.bronze, SupportContracts.new.silver, SupportContracts.new.gold]
 .row
   .span12
     p &nbsp;
@@ -16,35 +48,24 @@ h1 Support Contracts
       thead
         tr
           th
-          th.features-masthead Elite Edition
-          th.features-masthead Bronze
-          th.features-masthead Silver
-          th.features-masthead Gold
+          - col.each do |tier|
+            th.features-masthead 
+              == tier[:name]
       tbody
         tr
           td.features-subhead
-          td Individual
-          td Startup
-          td Small Business
-          td Enterprise
+          - col.each do |tier|
+            td
+              == tier[:target]
         tr
           td.features-subhead 6 Months
-          td $849
-          td $949
-          td $3000
-          td $6000
+          == render_prices(col, 6)
         tr
           td.features-subhead 1 Year
-          td
-          td $1500
-          td $5000
-          td $10000
+          == render_prices(col, 12)
         tr
           td.features-subhead 2 Year
-          td
-          td $2000
-          td $8000
-          td $17000
+          == render_prices(col, 24)
         tr
           td.features-subhead &nbsp;
           td colspan="4"
@@ -52,20 +73,14 @@ h1 Support Contracts
           th Licenses and Upgrades
           td colspan="4"
         tr
-          td.features-subhead Lifetime License
-          - [true, true, true, true].each do | c |
-            td
-              == glyph_check if c
+          td.features-subhead Permanent product license
+          == render_checkmarks(col, :lifetime_license)
         tr
-          td.features-subhead Major Upgrades During Subscription
-          - [false, true, true, true].each do | c |
-            td
-              == glyph_check if c
+          td.features-subhead Major upgrades during subscription
+          == render_checkmarks(col, :upgrades)
         tr
           td.features-subhead Early access to new plugins and releases
-          - [false, true, true, true].each do | c |
-            td
-              == glyph_check if c
+          == render_checkmarks(col, :early_access)
         tr
           td.features-subhead &nbsp;
           td colspan="4"
@@ -74,41 +89,31 @@ h1 Support Contracts
           td colspan="4"
         tr
           td.features-subhead Support via StackOverflow
-          - [true, true, true, true].each do | c |
-            td
-              == glyph_check if c
+          == render_checkmarks(col, :so_support)
         tr
           td.features-subhead
-            | 24-hour Response Time
+            | 24-hour response time
             a href="#note1"
               sup 1
-          - [false, true, true, true].each do | c |
-            td
-              == glyph_check if c
+          == render_checkmarks(col, :response_24)
         tr
           td.features-subhead
-            | Priority 2 hour Response Time
+            | Rapid 2 hour response time
             a href="#note2"
               sup 2
-          - [false, false, true, true].each do | c |
-            td
-              == glyph_check if c
+          == render_checkmarks(col, :response_2)
         tr
           td.features-subhead &nbsp;
           td colspan="4"
         tr
-          th Hot-fix Response Time
+          th Hot-fix response time
           td colspan="4"
         tr
           td.features-subhead 7 Business Days
-          - [false, false, true, true].each do | c |
-            td
-              == glyph_check if c
+          == render_checkmarks(col, :hotfix_7)
         tr
           td.features-subhead 2 Business Days
-          - [false, false, false, true].each do | c |
-            td
-              == glyph_check if c
+          == render_checkmarks(col, :hotfix_2)
         tr
           td.features-subhead &nbsp;
           td colspan="4"
@@ -116,57 +121,41 @@ h1 Support Contracts
           th Phone/Teamviewer Support
           td colspan="4"
         tr
+          td.features-subhead Employees Supported
+          == render_values(col, :contacts) {|v| v.to_s}
+        tr
           td.features-subhead Business Hours Incidents
-          td 1
-          td 1/mo
-          td unlimited
-          td unlimited
+          == render_values(col, :support_incidents_mo){|v|  "#{v} per month"}
         tr
           td.features-subhead
-            | Emergency
+            | Emergency Incidents
             a href="#note3"
               sup 3
-          td
-          td
-          td 1/yr
-          td unlimited
-        tr
-          td.features-subhead Direct Support Employees
-          td
-          td 1
-          td unlimited
-          td unlimited
+          == render_values(col, :emergency_incidents_yr) {|v|  "#{v} per year"}
+
         tr
           td.features-subhead &nbsp;
           td colspan="4"
         tr
-          th Architecture Planning
-          td
-          td 1/2-hour Q&A/yr
-          td 2 hours/yr
-          td 5 hours/yr
+          th Architecture Planning/Q&A
+          == render_hours(col, :architecture_hours_yr, "year")
         tr
           th Custom Development
-          td
-          td 1 hour/yr
-          td 3 hours/yr
-          td 10 hours/yr
+          == render_hours(col, :dev_hours_yr, "year")
         tr
           th Assisted Installs
-          td
-          td 2/yr
-          td 5/yr
-          td 10/yr
+          == render_values(col, :assisted_installs_yr) {|v|  "#{v} per year"}
 ul
   li
     a#note1
     	| [1]
-    |  24-hour response time available Monday - Friday.
+    |  24-hour response time available Monday - Friday. Support requests sent on a Friday may be answered the following Monday.
   li
     a#note2
       | [2]
-    |  During business hours. For example, for same day response you must contact support at least 2 hours before the end of business hours for that same day.
+    |  During business hours.
   li
     a#note3
       | [3]
-    |  Emergency Support Incidents are those that fall outside of normal business hours.
+    |  Emergency Support Incidents are those that require assistance outside normal business hours.
+
