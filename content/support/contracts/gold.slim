@@ -7,6 +7,7 @@ Layout: support_page
 h1 Support Contracts
 
 .row: .span12: p &nbsp;
+  
 
 - contract_tier = "Gold"
 - hours_dev = 10
@@ -26,7 +27,7 @@ h1 Support Contracts
     .row-fluid
       - purchase_options.flatten.each do | p |
         .span4
-          == partial :purchase_button, p
+          == partial(:purchase_button, {locals: p})
     .row-fluid
       - short_features.each_slice((short_features.length/2.0).ceil) do | c |
         .span6: h3: ul.icons-ul

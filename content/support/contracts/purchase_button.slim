@@ -3,8 +3,8 @@ Flags: hidden
 
 
 form accept-charset="UTF-8" action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=1087334&amp;cl=41912&amp;ejc=2" method="POST" target="ej_ejc"
-  input name="o1" type="hidden" value="#{options[:product_value]}"
+  input name="o1" type="hidden" value=product_value
     p
       a.btn.btn-success.btn-block href="#" onClick="javascript:return EJEJC_lc(this.parentNode);"
         i.icon-shopping-cart.icon-white
-        == options[:button_text]
+        == button_text
