@@ -7,6 +7,8 @@ h1 Support Contracts
 
 .row: .span12: p &nbsp;
 
+
+
 - contract_tier = "Silver"
 - hours_dev = 3
 - hours_planning = 2
@@ -45,7 +47,6 @@ h1 Support Contracts
 
  
 
-
     .well
       == partial :about
     .row-fluid
@@ -55,3 +56,5 @@ h1 Support Contracts
             | &nbsp; #{f[:headline]}
           p
             | #{f[:description]}
+
+== partial(:details, {locals: {contract: SupportContracts.new.silver}})

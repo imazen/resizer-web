@@ -48,4 +48,5 @@ h1 Support Contracts
           h2: i class="icon-#{f[:icon]}"
             | &nbsp; #{f[:headline]}
           p
-            | #{f[:description]}
+            | #{f[:description]} 
+    == partial(:details, {locals: {contract: SupportContracts.new.gold}})
