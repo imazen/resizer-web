@@ -24,5 +24,6 @@ if defined?(Honeybadger)
 end
 
 require './categories'
+require './support_contracts'
 require './site'
 run Site.new
