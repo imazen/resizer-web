@@ -21,25 +21,24 @@ h1 Support Contracts
 
 
 
-- short_features =  ["#{hours_dev} Hours Custom Development", "#{hours_planning} hours Architecture Planning", "#{assist_inst} Assisted Installations", "Support Response time in #{response_hours} hours", "Hot-fixes in #{hotfix_days} Business Days", "Unlimited Support Incidents", "Unlimited Designated Contacts", "Custom e-mail to contact support", "Free Plugin Upgrades",]
 
-- long_features = [{:icon => "asterisk", :headline => "#{hours_dev} Hours Custom Development", :description => "Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you."}, {:icon => "road", :headline => "#{hours_planning} hours Architecture Planning", :description => "Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront."}, {:icon => "cloud-upload", :headline => "#{assist_inst} Assisted Installations", :description => "Save time by allowing us to do up to #{assist_inst} assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly."}, {:icon => "time", :headline => "Guaranteed Support Response time in #{response_hours} hours", :description => "Our enterprise customers don't have to wait. Get a response from our support staff within #{response_hours} hours, guaranteed."}, {:icon => "calendar", :headline => "Priority Hot-fixes in #{hotfix_days} Business Days, Guaranteed", :description => "If you are running enterprise level applications it is critical that everything is running as expected. With our #{contract_tier} Plan we guarantee priority hot-fixes within two business days."}, {:icon => "comments", :headline => "Unlimited Support Incidents", :description => "Where some support contracts limited you to one support incident during business hours, with the #{contract_tier} Plan you get an unlimited number."}, {:icon => "user", :headline => "Unlimited Designated Contacts", :description => "Unlike the Bronze Plan you get an unlimited number of contacts at your organization. That means anyone from your company can contact us for support."}, {:icon => "envelope-alt", :headline => "Custom e-mail to contact support", :description => "When you sign up for this support contract we will create a custom email address that you can use to get priority support."}, {:icon => "cloud-download", :headline => "Free Plugin Upgrades", :description => "Keep your app secure and up to date with free plugin upgrades for the duration of your contract."}]
+- long_features = [{:icon => "asterisk", :headline => "#{hours_dev} Hours Custom Development", :description => "Custom Development by the people that know ImageResizer best. If you are looking for the best performance, practices and security for ImageResizer, this the service for you."}, 
+  {:icon => "road", :headline => "#{hours_planning} hours Architecture Planning", :description => "Whether you at the beginning stages of your project or updating an existing one, consult with the ImageResizer experts and resolve issues upfront."}, 
+  {:icon => "cloud-upload", :headline => "#{assist_inst} Assisted Installations", :description => "Save time by allowing us to do up to #{assist_inst} assisted installs per year. We know ImageResizer best and use our experience and best practices to ensure things are running smoothly."}, 
+  {:icon => "time", :headline => "Guaranteed Support Response time in #{response_hours} hours", :description => "Our enterprise customers don't have to wait. Get a response from our support staff within #{response_hours} hours, guaranteed."}, 
+  {:icon => "calendar", :headline => "Priority Hot-fixes in #{hotfix_days} Business Days, Guaranteed", :description => "If you are running enterprise level applications it is critical that everything is running as expected. With our #{contract_tier} Plan we guarantee priority hot-fixes within two business days."}, 
+  {:icon => "comments", :headline => "Unlimited Support Incidents", :description => "Where some support contracts limited you to one support incident during business hours, with the #{contract_tier} Plan you get an unlimited number."}, 
+  {:icon => "user", :headline => "Unlimited Designated Contacts", :description => "Unlike the Bronze Plan you get an unlimited number of contacts at your organization. That means anyone from your company can contact us for support."}, 
+  {:icon => "envelope-alt", :headline => "Custom e-mail to contact support", :description => "When you sign up for this support contract we will create a custom email address that you can use to get priority support."}, 
+  {:icon => "cloud-download", :headline => "Free Plugin Upgrades", :description => "Keep your app secure and up to date with free plugin upgrades for the duration of your contract."}]
 
 - purchase_options = [{:product_value => 'Silver Tier 6 Month Contract', :button_text => '&nbsp;$3000/6 months &raquo;'}, {:product_value => 'Silver Tier 1 Year Contract', :button_text => '&nbsp;$5000/yr &raquo;'}, {:product_value => 'Silver Tier 2 Year Contract', :button_text => '&nbsp;$4000/yr with 2 year plan &raquo;'}]
 .row
   .span8
     p: img src="/img/contracts/contract-hero-silver.png"
-    .row-fluid
-      - purchase_options.flatten.each do | p |
-        .span4
-          == partial(:purchase_button, {locals: p})
-    .row-fluid
-      - short_features.each_slice((short_features.length/2.0).ceil) do | c |
-        .span6: h3: ul.icons-ul
-          - c.each do | f |
-            li
-              i.icon-li.icon-ok
-              | #{f.to_s}
+    == partial(:details, {locals: {contract: SupportContracts.new.silver}})
+
+
     p &nbsp;
     p The Silver Plan is ideal for Small Business with larger development teams. Where the Bronze Plan gets you one point of contact, the Silver Plan provides support for any contact at your Company.
     p
@@ -47,14 +46,16 @@ h1 Support Contracts
 
  
 
-    .well
-      == partial :about
-    .row-fluid
-      .span8.offset2
-        - long_features.flatten.each do | f |
-          h2: i class="icon-#{f[:icon]}"
-            | &nbsp; #{f[:headline]}
-          p
-            | #{f[:description]}
-
-== partial(:details, {locals: {contract: SupportContracts.new.silver}})
+.row-fluid
+  .span4
+    - long_features.flatten[0..4].each do | f |
+      h2: i class="icon-#{f[:icon]}"
+        | &nbsp; #{f[:headline]}
+      p
+        | #{f[:description]}
+  .span4
+    - long_features.flatten[5..-1].each do | f |
+      h2: i class="icon-#{f[:icon]}"
+        | &nbsp; #{f[:headline]}
+      p
+        | #{f[:description]}
