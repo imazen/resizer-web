@@ -29,7 +29,7 @@ h1 Support Contracts
         .span4
           == partial(:purchase_button, {locals: p})
     .row-fluid
-      == partial(:details, {locals: {contract: SupportContracts.new.bronze}})
+      == partial(:details, {locals: {contract: SupportTier.bronze}})
   /
     .row-fluid
       - short_features.each_slice((short_features.length/2.0).ceil) do | c |

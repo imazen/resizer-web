@@ -3,14 +3,14 @@ Layout: false
 
 ruby:
   def render_prices(table, length)
-    table.map{|t|t[:lengths].find{|l| l[:months] == length}}.map do |prod|
-      price = prod && prod[:price_usd] ? "$%.2f USD" % prod[:price_usd] : nil
+    table.map{|t|t.lengths.find{|l| l.support_months == length}}.map do |prod|
+      price = prod && prod.price_usd ? "$%.2f USD" % prod.price_usd : nil
       "<td>#{price}</td>"
     end * "\n"
   end
 
   def render_values(table, subkey, &block)
-    table.map{|t|t[subkey]}.map do |value|
+    table.map{|t|t.send(subkey)}.map do |value|
       text = value ? ((value.respond_to?(:infinite?) && value.infinite?) ? 'unlimited' : block.call(value)) : nil
       "<td>#{text}</td>"
     end.join("\n")
@@ -31,14 +31,14 @@ ruby:
   end
 
   def render_total(contract, subkey, multiplier, &block)
-    render_cells(contract[:lengths]) do |l|
-      case contract[subkey]
+    render_cells(contract.lengths) do |l|
+      case contract.send(subkey)
       when nil
         'none'
       when Float::INFINITY
         'unlimited'
       when ::Numeric
-        val = contract[subkey].to_f * l[:months] / multiplier
+        val = contract.send(subkey).to_f * l.support_months / multiplier
         
         block.nil? ? val : block.call(val)
       else
@@ -68,33 +68,33 @@ ruby:
 .row
   .span8
     h1
-      = contract[:name]
+      = contract.name
 
-    - if contract[:lifetime_license] && contract[:upgrades]
+    - if contract.lifetime_license && contract.major_upgrades
       markdown:
        This support contract includes a permanent, [Enterprise-wide Elite license](/licenses/elite). You will be able to continue using the product after your subscription expires. While your support contract is active, you will receive free upgrades to all software included in your license. Major releases published *after* your contract expires are *not* included.
     
 
-    - if contract[:response_2]
+    - if contract.response_2
       markdown:
         Maximum response time: **2 business hours**
-    - elsif contract[:response_24]
+    - elsif contract.response_24
       markdown:
         Maximum response time: **24 business hours**
 
 
-    - if contract[:hotfix_2]
+    - if contract.hotfix_2
       markdown: 
         Hotfixes provided within 2 business days
-    - elsif contract[:hotifx_7]
+    - elsif contract.hotfix_7
       markdown:
         Hotfixes provided within 7 business days
 
 
-    - if contract[:contacts] == Float::INFINITY
+    - if contract.contacts == Float::INFINITY
       markdown:
         All employees within your organization have access to our development team via email, phone, TeamViewer, or StackOverflow. 
-    - elsif contract[:contacts] == 1
+    - elsif contract.contacts == 1
       markdown:
         1 designated point-of-contact has access to our development team via email, phone, TeamViewer, or StackOverflow.
 
@@ -108,12 +108,12 @@ ruby:
       tbody
         tr
           td.feature-subhead Price
-          == render_cells(contract[:lengths]){|prod| "$%.0f USD" % prod[:price_usd]}
+          == render_cells(contract.lengths){|prod| "$%.0f USD" % prod.price_usd}
         
         tr
           td.feature-subhead Discount
-          - base_price = contract[:lengths].first[:price_usd].to_f / contract[:lengths].first[:months].to_f
-          == render_cells(contract[:lengths]){|prod| "%.f percent off" % (100 - (prod[:price_usd].to_f / prod[:months].to_f / base_price * 100))}
+          - base_price = contract.lengths.first.price_usd.to_f / contract.lengths.first.support_months.to_f
+          == render_cells(contract.lengths){|prod| "%.f percent off" % (100 - (prod.price_usd.to_f / prod.support_months.to_f / base_price * 100))}
         tr
           td.features-subhead Business Hours Incidents
           == render_total(contract,:support_incidents_mo, 1){|v|v.to_i.to_s}
