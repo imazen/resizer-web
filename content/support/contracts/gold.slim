@@ -28,6 +28,8 @@ h1 Support Contracts
       - purchase_options.flatten.each do | p |
         .span4
           == partial(:purchase_button, {locals: p})
+    == partial(:details, {locals: {contract: SupportContracts.new.gold}})
+  /    
     .row-fluid
       - short_features.each_slice((short_features.length/2.0).ceil) do | c |
         .span6: h3: ul.icons-ul
@@ -40,13 +42,13 @@ h1 Support Contracts
     p The Gold Plan provides priority support and guaranteed hot-fix turnaround in 2 business days. It also provides extensive Architecture Planning, Custom Development and Assisted Installations often needed for enterprise scale applications.
     p
       | In addition to our imaging software expertise we also have extensive experience combining this with networking, authentication, load balancing, caching and web servers across Windows and UNIX based systems.
-    .well
-      == partial :about
     .row-fluid
       .span8.offset2
         - long_features.flatten.each do | f |
           h2: i class="icon-#{f[:icon]}"
             | &nbsp; #{f[:headline]}
           p
-            | #{f[:description]} 
+            | #{f[:description]}
+
+
     == partial(:details, {locals: {contract: SupportContracts.new.gold}})

@@ -36,9 +36,10 @@ h1 Support Contracts
 .row
   .span8
     p: img src="/img/contracts/contract-hero-silver.png"
-    == partial(:details, {locals: {contract: SupportContracts.new.silver}})
+    .row-fluid
+      == partial(:details, {locals: {contract: SupportContracts.new.silver}})
 
-
+/
     p &nbsp;
     p The Silver Plan is ideal for Small Business with larger development teams. Where the Bronze Plan gets you one point of contact, the Silver Plan provides support for any contact at your Company.
     p
@@ -46,7 +47,7 @@ h1 Support Contracts
 
  
 
-.row-fluid
+  .row-fluid
   .span4
     - long_features.flatten[0..4].each do | f |
       h2: i class="icon-#{f[:icon]}"
