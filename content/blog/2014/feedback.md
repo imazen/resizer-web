@@ -1,4 +1,4 @@
-Date: February 27, 2014
+Date: February 26 2014
 
 # Help us make ImageResizer better
 
@@ -10,4 +10,7 @@ That's right; we said *your* needs. In order to do that, however, we need *your*
 
 Not that we're trying to guilt you into it or anything. Although you did forget all of our birthdays last year. But it's no big deal, really. We're not upset (anymore).
 
-Survey can be found [here](link will go here).
+
+&mdash; Liz Certa
+
+<a class="btn btn-primary" href="https://docs.google.com/forms/d/16WE1AW7AtfYm14vJQoHsCDsDuG344O-K1xcqHZaxbvg/viewform">Describe how you use ImageResizer</a>
