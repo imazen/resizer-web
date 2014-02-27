@@ -24,12 +24,11 @@ h1 Support Contracts
 .row
   .span8
     p: img src="/img/contracts/contract-hero-bronze.png"
-    .row-fluid
+    /.row-fluid
       - purchase_options.flatten.each do | p |
         .span4
           == partial(:purchase_button, {locals: p})
-    .row-fluid
-      == partial(:details, {locals: {contract: SupportTier.bronze}})
+    == partial(:details, {locals: {contract: SupportTier.bronze}})
   /
     .row-fluid
       - short_features.each_slice((short_features.length/2.0).ceil) do | c |

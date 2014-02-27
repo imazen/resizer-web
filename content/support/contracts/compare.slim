@@ -6,12 +6,6 @@ Layout: support_page
 h1 Support Contracts
 
 ruby:
-  def render_prices(table, length)
-    table.map{|t|t.lengths.find{|l| l.support_months == length}}.map do |prod|
-      price = prod && prod.price_usd ? "$%.0f USD" % prod.price_usd : nil
-      "<td>#{price}</td>"
-    end * "\n"
-  end
 
   def render_values(table, subkey, &block)
     table.map{|t|t.send(subkey)}.map do |value|
@@ -57,15 +51,14 @@ ruby:
           - col.each do |tier|
             td
               == tier.target_customer
-        tr
-          td.features-subhead 6 Months
-          == render_prices(col, 6)
-        tr
-          td.features-subhead 1 Year
-          == render_prices(col, 12)
-        tr
-          td.features-subhead 2 Year
-          == render_prices(col, 24)
+
+        - {6 => '6 Months', 12 => '1 Year', 24 => '2 Year'}.each do |months, label|
+          tr
+            td.features-subhead 
+              = label
+            - col.map{|c| c.lengths.find{|prod| prod.support_months == months}}.each do |prod|
+              td
+                == partial(:shopping_cart_link, {locals: {button_text: prod.price_usd_str, product_value: prod.sku}})
         tr
           td.features-subhead &nbsp;
           td colspan="4"

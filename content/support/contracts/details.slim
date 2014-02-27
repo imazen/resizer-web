@@ -2,20 +2,6 @@ Layout: false
 
 
 ruby:
-  def render_prices(table, length)
-    table.map{|t|t.lengths.find{|l| l.support_months == length}}.map do |prod|
-      price = prod && prod.price_usd ? "$%.2f USD" % prod.price_usd : nil
-      "<td>#{price}</td>"
-    end * "\n"
-  end
-
-  def render_values(table, subkey, &block)
-    table.map{|t|t.send(subkey)}.map do |value|
-      text = value ? ((value.respond_to?(:infinite?) && value.infinite?) ? 'unlimited' : block.call(value)) : nil
-      "<td>#{text}</td>"
-    end.join("\n")
-  end 
-
   def render_cells(list, &block)
     list.map do |value|
       text = block.call(value)
@@ -23,23 +9,15 @@ ruby:
     end.join("\n")
   end 
 
-
-  def render_checkmarks(table, subkey)
-    render_values(table, subkey) do |value|
-      '<i class="icon-ok text-info"></i>'
-    end
-  end
-
-  def render_total(contract, subkey, multiplier, &block)
+  def render_numbers(contract, subkey, &block)
     render_cells(contract.lengths) do |l|
-      case contract.send(subkey)
+      val = l.send(subkey)
+      case val
       when nil
         'none'
       when Float::INFINITY
         'unlimited'
       when ::Numeric
-        val = contract.send(subkey).to_f * l.support_months / multiplier
-        
         block.nil? ? val : block.call(val)
       else
         'error'
@@ -48,8 +26,8 @@ ruby:
     end
   end 
 
-   def render_total_hours(contract,subkey, multiplier, span = nil)
-    render_total(contract,subkey, multiplier) do |value|
+   def render_hours(contract,subkey, span = nil)
+    render_numbers(contract,subkey) do |value|
       if value < 1
         (value * 60).floor.to_s + " minutes"
       elsif value == 1
@@ -60,6 +38,7 @@ ruby:
     end
   end 
 
+
   col = [contract,contract,contract]
 
 .row
@@ -67,8 +46,8 @@ ruby:
     p &nbsp;
 .row
   .span8
-    h1
-      = contract.name
+    /h1
+    /  = contract.name
 
     - if contract.lifetime_license && contract.major_upgrades
       markdown:
@@ -104,36 +83,42 @@ ruby:
 
     table.table.table-features.table-condensed
       thead
-      
+        th.features-subhead
+          = "#{contract.name} Tier"
       tbody
         tr
-          td.feature-subhead Price
-          == render_cells(contract.lengths){|prod| "$%.0f USD" % prod.price_usd}
+          td.feature-subhead Duration
+          == render_cells(contract.lengths){|prod| prod.support_months.to_s + " months"}
         
         tr
+          td.feature-subhead Price
+          - contract.lengths.each do |prod|
+            td
+              == partial(:shopping_cart_link, {locals: {button_text: prod.price_usd_str, product_value: prod.sku}})
+         
+        tr
           td.feature-subhead Discount
-          - base_price = contract.lengths.first.price_usd.to_f / contract.lengths.first.support_months.to_f
-          == render_cells(contract.lengths){|prod| "%.f percent off" % (100 - (prod.price_usd.to_f / prod.support_months.to_f / base_price * 100))}
+          == render_cells(contract.lengths){|prod| prod.percent_discount == 0 ? "" : "%.f\%" % prod.percent_discount}
         tr
           td.features-subhead Business Hours Incidents
-          == render_total(contract,:support_incidents_mo, 1){|v|v.to_i.to_s}
+          == render_numbers(contract,:total_support_incidents)
         tr
           td.features-subhead
             | Emergency Incidents
             a href="#note3"
               sup 3
-          == render_total(contract,:emergency_incidents_yr, 12){|v|v.to_i.to_s}
+          == render_numbers(contract,:total_emergency_incidents)
         tr
           td.features-subhead &nbsp;
           td colspan="4"
         tr
           th Architecture Planning/Q&A
-          == render_total_hours(contract,:architecture_hours_yr, 12)
+          == render_hours(contract,:total_architecture_hours)
         tr
           th Custom Development
-          == render_total_hours(contract,:dev_hours_yr, 12)
+          == render_hours(contract,:total_dev_hours)
         tr
           th Assisted Installs
-          == render_total_hours(contract,:assisted_installs_yr, 12)
+          == render_numbers(contract,:total_assisted_installs)
 
 

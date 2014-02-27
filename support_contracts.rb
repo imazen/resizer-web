@@ -9,10 +9,55 @@ class SupportTier
 
   attr_accessor :dev_hours_yr, :architecture_hours_yr, :assisted_installs_yr, :emergency_incidents_yr,  :support_incidents_mo
 
+  attr_accessor :min_dev_hours, :min_architecture_hours
+
   attr_accessor :lifetime_license, :all_plugins_included,  :early_access, :major_upgrades
 
   attr_accessor :response_time_hours
   attr_accessor :hotfix_time_days
+
+
+  def total_of(member, divisor = 1, ceil = false)
+    val = send(member)
+    return nil if val.nil? || support_months.nil?
+    return Float::INFINITY if val == Float::INFINITY
+    val = val.to_f * support_months.to_f / divisor.to_f
+    return ceil ? val.ceil.to_i : val
+  end 
+
+  def total_dev_hours
+    [min_dev_hours,total_of(:dev_hours_yr, 12)].max
+  end
+
+  def total_architecture_hours
+    [min_architecture_hours, total_of(:architecture_hours_yr, 12)].max
+  end
+
+  def total_assisted_installs
+    total_of(:assisted_installs_yr, 12, true)
+  end
+
+  def total_emergency_incidents
+    total_of(:emergency_incidents_yr, 12, true)
+  end
+
+  def total_support_incidents
+    total_of(:support_incidents_mo, 1, true)
+  end
+
+  def percent_discount
+    cheapest = lengths.first #min_by{|c| c.price_usd}
+    base_rate = cheapest.price_usd.to_f / cheapest.support_months.to_f
+    this_rate = price_usd.to_f / support_months.to_f
+    pct = (((base_rate - this_rate) / base_rate)) * 100.0
+
+    puts " #{base_rate} to #{this_rate} is #{pct}%"
+    pct
+  end 
+
+  def price_usd_str
+    "$%.0f USD" % price_usd
+  end 
 
   def hotfix_7
     hotfix_time_days && hotfix_time_days <= 7
@@ -43,15 +88,17 @@ class SupportTier
     @all_plugins_included = true
     @hotfix_time_days = Float::INFINITY
     @price_usd = 849
-    @lengths = [
-      create_support_sku(6,849,'Elite Edition (1 Enterprise)'),
-      create_support_sku(12,849,'Elite Edition (1 Enterprise)'),
-      create_support_sku(24,849,'Elite Edition (1 Enterprise)')
-    ]
+    @min_dev_hours = 0
+    @min_architecture_hours = 0
+    @lengths = []
+    @lengths << create_support_sku(6,849,'Elite Edition (1 Enterprise)')
+    @lengths << create_support_sku(12,849,'Elite Edition (1 Enterprise)')
+    @lengths << create_support_sku(24,849,'Elite Edition (1 Enterprise)')
+    
   end 
 
   def create_support_sku(months, price_usd, sku)
-    n = Marshal::load(Marshal.dump(self))
+    n = self.dup #Marshal::load(Marshal.dump(self))
     n.support_months = months
     n.price_usd = price_usd
     n.sku = sku
@@ -74,11 +121,12 @@ class SupportTier
     @major_upgrades = true
     @early_access = true
     @email_support = true
-    @lengths = [
-      create_support_sku(6,949,'Bronze Tier 6 Month Contract'),
-      create_support_sku(12,1500,'Bronze Tier 1 Year Contract'),
-      create_support_sku(24,2000,'Bronze Tier 2 Year Contract')
-    ]
+    @min_architecture_hours = 0.5
+    @lengths = [] #So the clones reference the same array and can access their siblings
+    @lengths << create_support_sku(6,949,'Bronze Tier 6 Month Contract')
+    @lengths << create_support_sku(12,1500,'Bronze Tier 1 Year Contract')
+    @lengths << create_support_sku(24,2000,'Bronze Tier 2 Year Contract')
+    
   end
 
   def set_silver_tier
@@ -93,11 +141,12 @@ class SupportTier
     @dev_hours_yr = 3
     @assisted_installs_yr = 5
     @architecture_hours_yr = 2
-    @lengths = [
-      create_support_sku(6,3000,'Silver Tier 6 Month Contract'),
-      create_support_sku(12,5000,'Silver Tier 1 Year Contract'),
-      create_support_sku(24,8000,'Silver Tier 2 Year Contract')
-    ]
+    @min_architecture_hours = 2
+    @lengths = []
+    @lengths << create_support_sku(6,3000,'Silver Tier 6 Month Contract')
+    @lengths << create_support_sku(12,5000,'Silver Tier 1 Year Contract')
+    @lengths << create_support_sku(24,8000,'Silver Tier 2 Year Contract')
+    
   end
 
   def set_gold_tier
@@ -107,13 +156,14 @@ class SupportTier
     @dev_hours_yr = 10
     @assisted_installs_yr = 10
     @architecture_hours_yr = 5
+    @min_architecture_hours = 5
     @emergency_incidents_yr = Float::INFINITY
     @hotfix_time_days = 2
-    @lengths = [
-      create_support_sku(6,6000,'Gold Tier 6 Month Contract'),
-      create_support_sku(12,10000,'Gold Tier 1 Year Contract'),
-      create_support_sku(24,17000,'Gold Tier 2 Year Contract')
-    ]
+    @lengths = []
+    @lengths << create_support_sku(6,6000,'Gold Tier 6 Month Contract')
+    @lengths << create_support_sku(12,10000,'Gold Tier 1 Year Contract')
+    @lengths << create_support_sku(24,17000,'Gold Tier 2 Year Contract')
+    
   end
 
   def self.elite
