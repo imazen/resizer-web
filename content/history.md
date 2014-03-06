@@ -6,7 +6,7 @@ ImageResizer was designed with security, stability, and performance in mind from
 
 ImageResizer has always included source code under a very permissive license, although users were charged a 'download fee' for V1 and V2. Despite offering no-questions-asked refunds for any reason, no user has ever asked for a refund due to dissatisfaction with the product.
 
-# Release History 
+### Release History 
 
 Version 1 was released to the public August 6, 2008 after 1.5 years of testing on several high-traffic sites.
 
@@ -21,14 +21,18 @@ After two years of improving V2, another rewrite was needed to allow future impr
 The goal of the V3 rewrite was to make everything open and extendable. V2 was a monolithic design that, while elegant and very concise, was hard to extend except through source code modification. V3 introduced the concept of Plugins and added an array of Events that can be used to customize the behavior of the pipeline.
 It also introduced a dedicated configuration section for the Resizer and its plugins.
 
-V3 was released [Apr. 24](/releases/3-alpha-2) after 4 months of coding and testing. [Alpha 7](/releases/3-alpha-7) was released May 26, and I back-ported many bug fixes to V2 with the [May 27, 2011 release of 2.8](/releases/2-8). A collection of pages on the V2 to V3 differences is [available here](/docs/2to3/).
+V3 was released [Apr. 24](/releases/3-alpha-2) after 4 months of coding and testing. [Alpha 7](/releases/3-alpha-7) was released May 26, and we back-ported many bug fixes to V2 with the [May 27, 2011 release of 2.8](/releases/2-8). A collection of pages on the V2 to V3 differences is [available here](/docs/2to3/).
 
 The V3 core is under [an MIT-like license](/licenses/freedom). This license is much clearer than the V2 license.
 
 Some V3 plugins are under a [slightly more restrictive license](/licenses), but even those give you redistribution and sub-licensing rights. If your project needs a different license, [contact us](/support). We offer OEM, open-source, and integration licenses to fit every need.
 
-# Imazen
+ImageResizer can be found on GitHub at [github.com/imazen/resizer](https://github.com/imazen/resizer). Our [release history for V3 may also help you locate changelog information](/releases).
+
+### Imazen
 
 Imazen was formed on May 18th 2012 to provide a better framework for ImageResizer's growth and support contract offerings, and is now the official business entity behind all things ImageResizer. 
+
+Our expanded software development team has enabled us to improve ImageResizer at a much faster rate and provide better support to our users. We encourage you [to review our support contract offerings](/support/contracts) and consider leveraging our extensive experience in image processing systems.
 
 
