@@ -2,12 +2,16 @@ Tag: install
 
 # Troubleshooting guide
 
-ImageResizer is self-diagnosing for the majority of issues. Visit `/resizer.debug.ashx` on your website to check for any issues, and to verify that you are using the latest version of all the ImageResizer dlls. If `/resizer.debug.ashx` is not available, you can check the version of the dlls by right-clicking on each and choosing "Properties".
+ImageResizer is self-diagnosing for the majority of issues. Visit `/resizer.debug.ashx` on your website to check for any issues, and to verify that you are using the latest version of all the ImageResizer dlls. If `/resizer.debug.ashx` is not available, you can check the version of the dlls by right-clicking on each and choosing "Properties."
 
 To get support or use this guide, [make sure you get the detailed error message from visiting the image URL directly](/docs/geterror). This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far to generic to be useful. 
 
-If this page doesn't resolve your isse, [visit the Support page](/support) for information about the bug bounty and free support requirements.
+If this page doesn't resolve your issue, [visit the Support page](/support) for information about the bug bounty and free support requirements.
 
+
+##Server Error in '/' Application. Out of memory.
+
+You might be trying to resize certain large images for the first time. Even a 15MB jpg, however, uncompresses to about 80MB in bitmap form (depending on the compression level). If you are resizing to a 2MB jpg (15MB BMP), memory requirements for the operation are roughly 110MB (15 + 80 + 15). If you plan on using the resizer for very high-resolution photos (above 8MP), we suggest making sure you have ample amounts of RAM. 400MB to 1GB is usually plenty for the average web site with disk caching enabled.
 
 ## Error 5 Missing compiler required member 'System.Runtime.CompilerServices.ExtensionAttribute..ctor'
 
