@@ -53,4 +53,4 @@
 	* Responsive web design requires responsive images. [Check out the ResponsivePresets system](https://github.com/mindrevolution/ImageResizer-ResponsivePresets) from [marc303](https://github.com/marc303).
 
 Can't afford any mistakes? Ensure your content architecture is scalable and secure by having a **30-minute Q&A session with the author for just $70**.
-Add aided installation of 1 server or workstation for +$60, or 2 servers or workstations for +$120. [Find out more](/support/consult). Or, get [a support contract](/support/contracts) that includes all of the above *and* licenses for everything. 
+Or, get [a support contract](/support/contracts) that includes all of the above *and* licenses for everything. 
