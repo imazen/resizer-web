@@ -1,0 +1,53 @@
+Flags: hidden
+Layout: false
+
+
+.row
+  .span5
+    .hero-unit
+      form#homesignup.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
+        input type="hidden" name="redirect" value=latest_release.meta.fullfile
+        input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
+
+        h3
+          | Download ImageResizer V#{latest_release.meta.shortversion}
+        input type="text" name="email" placeholder="name@domain.com"
+        |  &nbsp;
+        button type="submit" name="Submit" class="btn btn-primary"
+          | Download &amp; subscribe &raquo;
+        p
+          | We send an average of 4 newsletters per year, and you can unsubscribe at any time.
+          a href=releases.first.path
+            | V#{latest_release.meta.shortversion} includes
+            = latest_release.meta_summary
+            |  (see release notes and download page).
+  .span2
+    h3 Install
+    ul.arrow_list
+      li: a href="/docs/install" Installation Guide
+      li: a href="/docs/workswith" Compatibility Guide
+      li: a href="/docs/best-practices" Best Practices
+      li: a href="/docs/troubleshoot" Troubleshooting guide
+      li: a href="/docs/community" Community Plugins and Articles
+
+    a href="/docs"
+      | more...
+  .span2
+    h3 Tutorials
+    ul.arrow_list
+      li: a href="/docs/basics" Basic commands
+      li: a href="/docs" Documentation
+      li: a href="/docs/benefits/comprehensive" Overview of features
+      li: a href="/docs/troubleshoot" Troubleshooting guide
+
+    a href="/docs"
+      | more...
+  .span3.tiny-news
+    h3 News
+    ul.arrow_list
+      - for p in index.posts[0..5]
+        li
+          a href=p.path
+            = p.meta.short_heading || p.heading
+    a href="/blog"
+      | more...
