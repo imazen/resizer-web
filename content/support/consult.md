@@ -1,12 +1,12 @@
 # Architecture advice and assisted installation
 
-Developing a future-proof image management system isn't easy. A multitude of pitfalls and hidden costs exist, and nearly all the sample code and articles you'll find online will lead you straight into them. 
+Developing a future-proof image management system isn't easy. A multitude of pitfalls and hidden costs exist, and nearly all the sample code and articles you'll find online will lead your business straight into them. 
 
-I've helped hundreds of enterprises achieve their scalability and performance goals, and it's much less expensive to avoid architectural errors before they're implemented.
+We've helped hundreds of enterprises achieve their scalability and performance goals, and it's much less expensive to avoid architectural errors before they're implemented.
 
-For tech details about some of the challenges, [listen to my podcast with Scott Hanselman](http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na).
+For tech details about some of the challenges, check out [this podcast with Scott Hanselman](http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na).
 
-Let me help your business ensure your design is scalable and secure with a 30-minute Q&A phone session. Payment by PayPal, Google Checkout, or credit card is accepted.
+Let us ensure the design for your business is scalable and secure with a 30-minute Q&A phone session. Payment by PayPal, Google Checkout, or credit card is accepted.
 
 * $70 USD - 30 minute Q&A phone conference
 * $130 USD - 1 Aided install + 30 minute Q&A
