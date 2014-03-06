@@ -18,7 +18,7 @@ Version 2 was a complete rewrite, and was released to users of v1 in January 200
 
 V2 introduced IIS7 support (HttpModule instead of HttpHandler design), nice managed API, and support for Octree GIF quantization and lots of other stuff. See [the V2 changelog if you want details](/docs/v2/changelog).
 
-V2 was used by hundreds of developers, integrated into roughly a dozen content management systems, and utilizeded by a couple of hosting companies.
+V2 was used by hundreds of developers, integrated into roughly a dozen content management systems, and used by a couple of hosting companies.
 
 After two years of improving V2, I realized that another rewrite was needed. I decided to maintain full compatibility with the V2 URL syntax, but the managed API needed an overhaul.
 
