@@ -112,3 +112,18 @@ $(function(){
   ejGATracker = _gat._getTracker("UA-XXXXX-X");
 });
 	*/
+
+
+$(function(){
+  var noun = $(".ml_noun");
+  setInterval(function(){
+    options = ["one", "two", "three"];
+    newIndex = Math.floor(Math.random() * 3)
+
+    noun.text(options[newIndex]);
+  },1500);
+  $(".ml_noun").text()
+});
+
+
+
