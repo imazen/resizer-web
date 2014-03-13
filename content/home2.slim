@@ -1,6 +1,6 @@
 Menu: home
 Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open Source - MVC compatible
-Libs: uservoice, plusone, -comments, bxSlider
+Libs: uservoice, plusone, -comments, bxSlider, textillate
 Aliases: )
 Layout: layout
 
@@ -10,6 +10,29 @@ h1 RESTful image processing
 
 == content_for :banner do
   .container
+    .ourusersdo.textillate 
+      ul.texts
+        li Our users crop terabytes of photography on demand. 
+        li Transcode and compress millions of profile pictures during upload.
+        li Find out what you can do with ImageResizer.
+
+
+.whatisir
+  h1
+    | Create dynamic images that impress and inspire.
+  p
+    | ImageResizer provides a comprehensive set of photography tools, from powerfully simple one-command adjustments, such as white balance correction and noise removal, to cutting-edge advanced controls, such as red-eye correction, object removal, and seam carving. Have your server deliver final images to the browser in milliseconds.
+
+
+
+
+== partial :part_middle_links
+
+== partial :part_features
+
+.row
+  .span12
+    h2#whatdoyouneed What do you want to do with ImageResizer?
     .madlibs.inline-form.form-control.form-inline.form-horizontal
       | ImageResizer lets me
       select
@@ -84,25 +107,3 @@ h1 RESTful image processing
         option learning kung-fu
         option watching cat videos
       |.
-
-.whatisir
-  h1
-    | Create dynamic images that impress and inspire.
-  p
-    | ImageResizer provides a comprehensive set of photography tools, from powerfully simple one-command adjustments, such as white balance correction and noise removal, to cutting-edge advanced controls, such as red-eye correction, object removal, and seam carving. Have your server deliver final images to the browser in milliseconds.
-
-
-
-
-== partial :part_middle_links
-
-== partial :part_features
-
-== partial :part_sites_using_ir
-
-== partial :part_testimonials
-
-== partial :part_customer_logos
-
-
-
