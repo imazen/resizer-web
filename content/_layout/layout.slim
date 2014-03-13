@@ -39,6 +39,9 @@ html(lang="en" class="no-js")
     - if page.lib? :swipebox
       link rel="stylesheet" href="/css/less/swipebox.css"
 
+    - if page.lib? :textillate
+      link rel="stylesheet" href="/css/less/animate.css"
+
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
 
 
@@ -107,6 +110,10 @@ html(lang="en" class="no-js")
 
       - if page.lib? :slimmage
         script src='/js/slimmage.js'
+
+      - if page.lib? :textillate
+        script src="/js/jquery.lettering-0.6.1.min.js"
+        script src="/js/jquery.textillate.js"
 
       script src="/js/custom.js"
       script src="/js/script.js"
