@@ -54,4 +54,4 @@ Activated by adding &fi.scale=bicubic|bilinear|box|bspline|catmullrom|lanczos co
 
 ## License
 
-This set of plugins is part of the [Design](/plugins) bundle, and licensed accordingly.
+This set of plugins is part of the [Design](/plugins) bundle, and licensed accordingly. The underlying [native FreeImage dlls are licensed under the FreeImage License](http://freeimage.sourceforge.net/freeimage-license.txt).
