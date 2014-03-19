@@ -1,16 +1,20 @@
 Menu: home
 Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open Source - MVC compatible
 Libs: uservoice, plusone, -comments
+Flags: unwrap
 Layout: layout
 Icon: picture
 
 h1 ASP.NET library and image server
 
 
+
+/"Zebra" means there is placeholder or incomplete material nearby that needs to be removed before anything is uploaded. It's easer to Ctrl+F for than "placeholder," since that appears to be a legitimate thing.
+
 .container.home3
   .row
     h1 
-      | Your server can prepare images 5,000 times faster than you.
+      | Your server can prepare images 5,000 times faster than you
     .row
       .container.home3img
         img src="http://z.zr.io/ri/3s.jpg?height=200"
@@ -23,55 +27,127 @@ h1 ASP.NET library and image server
     | Add commands to image URLs to get altered versions in milliseconds. 
     em Save for Web
     |  is dead; welcome to the cutting edge.
+  /Find some way to contain the text within certain parameters.
 
   .row
-    .span12
+    .span12.home3img
       a href="download" class="btn btn-primary"
         | Download
-  / We need a bigger download button
-  /
-    .row
+      /This button needs to be bigger
+
+.home3
+  .row.statsbar
+    .span3
+      .icons-box
+          i.ico-white.circle-color-full.ico-shield
       p
-        | The stats bar will go here, just as soon as my order for adobe illustrator comes through and I can make it. Make sure it mentions "over 95,000 NuGet Downloads"
+        |Take a look at this graph above that shows how awesome we are!
+    .span3
+      p.statsnumber
+        |95,000+
+      p
+        |NuGet downloads of ImageResizer
+    .span3
+      p.statsnumber
+        |45
+      p
+        |Countries of our clientele
+
+    .span3
+      p.statsnumber
+        |Things!
+      p
+        |Whatever is above just convinced you to buy our product
+        /If there is a way to make this look like the header bar, that would be PERFECT. Also, zebra on the graph and the other content.
+
+.row
+  h1.home3
+    |What We Do
+  .span6
+    markdown:
+      ImageResizer provides a comprehensive set of photography tools, from powerfully simple one-command adjustments, such as white balance correction and noise removal, to cutting-edge advanced controls, such as red-eye correction, object removal, and seam carving. Have your server deliver final images to the browser in milliseconds. **Video will go to the right of this paragraph. Current video is a placeholder, to help figure out size.**
+    /Remove last sentence eventually, and replace side-video with the actual video. Zebra.
+  .span6.home3
+    iframe frameborder="0" height="189" src="//www.youtube.com/embed/FirWP0U3QMY" width="300"
 
 hr
+  .oddhomepageitem
+    .row.container.home3
+      h1 Benefits
+    .row
+      .span6
+        a.block.plaintext href="/docs/benefits/comprehensive"
+          .icons-box
+            i.ico-white.circle-color-full.ico-tint
+            h3 All the Editing Tools for Your Business Needs
+            markdown:
+              Crop, resize, remove red-eye, add overlays, trim whitespace, feather edges… ImageResizer has numerous capabilities to free you from the photoshop-upload-test cycle so you can get back to work. See what ImageResizer can do for your business. 
+            .clear
+      .span6
+        a.block.plaintext href=""
+          .icons-box
+            i.ico-white.circle-color-full.ico-cup
+            h3 Agile, Compatible, Standardized
+            markdown:
+              ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your user volume, your platform. (link) See how ImageResizer can connect with your business.
+            .clear
+            /The above link will go to a new page, that has, info about/links to /docs/workswith, /docs/benefits/performant, and /plugins. Zebra.
+    .row
+      .span6
+        a.block.plaintext href="/docs/benefits/stable"
+          .icons-box
+            i.ico-white.circle-color-full.ico-shield
+            h3 Secure and Stable
+            markdown:
+              Secure by default, ImageResizer protects against DDOS and XSS attacks, and minimizes attack surface with a plugin model. Unlike most imaging libraries, ImageResizer was designed for server-side use and multi-year uptimes since day one.
+            .clear
+      .span6
+        a.block.plaintext href=""
+          .icons-box
+            i.ico-white.circle-color-full.ico-group
+            h3 Open Source
+            markdown:
+              Core functionality is free and open source under the [Freedom license](/licenses/freedom). Everything we offer includes source code and permits modification. **We reward pull requests**.
+            .clear
+          /Get rid of the borders around each of the benefits, and find a way to expand the background color to each side.
 
-      /This looked better in my head, and it's not responsive. Breadcrumbs: Try making these like the boxes on the original homepage, 2x2, and see how that looks.
-  .row.oddhomepageitem
-    .span8
-      h2
-        |All the Editing Tools for Your Business Needs
-      p
-        |Crop, resize, remove red-eye, add overlays, trim whitespace, feather edges… ImageResizer has numerous capabilities to free you from the photoshop-upload-test cycle so you can get back to work. See what ImageResizer can do for your business.
-    .span3
-      .icons-box
-        i.ico-white.circle-color-full.ico-tint
-  .row
-    .span3
-      .icons-box
-        i.ico-white.circle-color-full.ico-cup
-    .container.alignright.span8
-      h2
-        | Agile, Compatible, Standardized
-      p
-        |ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your user volume, your platform. (link) See how ImageResizer can connect with your business.
-  .row.oddhomepageitem
-    .span8
-      h2
-        |Secure and Stable
-      p
-        |Secure by default, ImageResizer protects against DDOS and XSS attacks, and minimizes attack surface with a plugin model. Unlike most imaging libraries, ImageResizer was designed for server-side use and multi-year uptimes since day 1.
-    .span3
-      .icons-box
-        i.ico-white.circle-color-full.ico-shield
-  .row
-    .span3
-      .icons-box
-        i.ico-white.circle-color-full.ico-group
-    .container.alignright.span8
-      h2
-        | Don't Take Our Word for It
-      p
-        |ImageResizer is trusted by small businesses and Fortune 500 companies alike, and our customer satisfaction is through the roof. (link) Check out some of our clients, and what they have to say about us.
+  .container.home3
+    h1 Don't Believe Us?
+    p
+      |ImageResizer is trusted by small businesses and Fortune 500 companies alike. We're proud to let our customer satisfaction and our product speak for themselves.
+    .row
+      .span3
+        a.block.plaintext href="/docs/benefits/customers"
+          img src="http://z.zr.io/ri/3s.jpg?height=200"
+            h3 In the Field
+            markdown:
+              Our clients never cease to amaze us with the creative uses they have found for ImageResizer. Check out some of our customers' homepages and see for yourself.
+      .span3
+        a.block.plaintext href="/docs/benefits/testimonials"
+          img src="http://z.zr.io/ri/3s.jpg?height=200"
+            h3 Testimonials
+            markdown:
+              We don't like to toot our own horn. Fortunately, we have plenty of customers who'll do it for us. See what they're saying.
+      .span3
+        a.block.plaintext href="/docs/community"
+          img src="http://z.zr.io/ri/3s.jpg?height=200"
+            h3 Community
+            markdown:
+              We never stop working to make ImageResizer better, but we get a lot of help. Check out some of the work our awesome, dedicated, and expansive community has made.
+      .span3
+        a.block.plaintext href="/docs/community"
+          img src="http://z.zr.io/ri/3s.jpg?height=200"
+            h3 Tutorials
+            markdown:
+              Either watch a screencast or read a page to see ImageResizer in action.
+            /This will have to link to something new. Zebra.
+            /Also, change the pictures to something pertinent. Zebra.
+container.home3
+  .oddhomepageitem
+    h1 
+      |Explore our Site
+    p
+      |This is where we put anything else we decide will be on the homepage.
+    /Zebra
 
-  /Works in any context - CMS, language, data store.
+  /What I need to learn how to do: 1) Expand background colors and color bars to the edge of the page. 2) Put in different images. 3) Get the "Don't Believe Us?" section stuff to highlight as you hover over, and contain the text underneath the images to the width of the images. 4) Make the stats bar like the header. 5) LEARN HOW TO SPACE STUFF!
