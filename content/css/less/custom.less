@@ -237,9 +237,10 @@ span.imagespacer{
 }
 .oddhomepageitem{
   background-color: #EBFAFF;
+  padding-bottom: 20px;
 }
 .statsbar{
-  background-image: -moz-linear-gradient(center top , #00AEC4, #00AEC4);
+  background-color: #00aec4;
   color: #FFF;
   vertical-align: middle;
   font-size: 10pt;
@@ -255,4 +256,26 @@ span.imagespacer{
 .extrapadding{
   padding-top: 25px;
   padding-bottom: 30px;
+}
+.icons-box{
+  border: none;
+}
+.icons-box:hover{
+  border: none;
+}
+.sidespace{
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.btn-buynow {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+  padding: @paddingLarge;
+  font-size: @fontSizeLarge;
+  .border-radius(@borderRadiusLarge);
+}
+.bottompadding{
+  padding-bottom: 20px;
+}
+a.block.plaintext.color:hover{
+  background-color: #EBFAFF;
 }
