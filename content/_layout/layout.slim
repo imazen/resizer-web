@@ -61,10 +61,12 @@ html(lang="en" class="no-js")
             h2
               i class="icon-white icon-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "file-alt"}"
               == page.heading
-
-    #wrapper
-      .container
-        == yield
+    - if page.flag? :unwrap
+      == yield
+    - else
+      #wrapper
+        .container
+          == yield
     == partial :footer
 
     == partial :search
