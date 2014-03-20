@@ -1,0 +1,99 @@
+Bundle: contract
+Edition: elite
+Tagline: Decode and encode .webp images
+Libs: twentytwenty
+Icon: cogs
+
+
+
+h1 WebP plugins
+
+markdown:
+  Allows encoding and decoding of WEBP images which allow a greater quality and smaller file size than jpeg images at the same compression quality level and resolution. Supported natively by [recent versions](http://caniuse.com/webp) of Chrome and Opera. Polyfill and Slimmage support for other browsers.
+
+- image_width = 550
+- cache_buster = 39
+- image_quality = 10
+
+.row-fluid
+  .span8.well
+    div style="position:relative; text-align:center; width:100%;"
+      span style="position:absolute; left:0"
+        | JPEG 4.1k
+      span style="position:absolute; right:0"
+        | WEBP 2.7k
+    br
+    p
+      .twentytwenty-container
+        img src="http://z.zr.io/rw/pluginexamples/example-011.jpg?format=jpeg&quality=#{image_quality}&width=#{image_width}&random=#{cache_buster}" id="plugin-example-before"
+        img src="http://z.zr.io/rw/pluginexamples/example-011.jpg?format=webp&quality=#{image_quality}&width=#{image_width}&random=#{cache_buster}" id="plugin-example-after"
+
+    p
+      | Settings: &quality=#{image_quality}&width=#{image_width}
+
+
+markdown:
+
+  With [slimmage.js, you can use WebP for supporting browsers - without breaking the others](https://github.com/imazen/slimmage). Slimmage [makes responsive images easy to implement - both client *and* true image size is controlled with css `max-width` properties](https://github.com/imazen/slimmage).
+
+  We [have a guide for using Slimmage and ImageResizer together](http://imageresizing.net/blog/2013/effortless-responsive-images).
+
+  ## Installation
+
+  1. Either run `Install-Package ImageResizer.Plugins.WebP` in the NuGet package manager, or add `ImageResizer.Plugins.WebP.dll` to your project.
+
+  2. Add `<add name="WebPEncoder" />` and/or `<add name="WebPDecoder" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+  ## WebPDecoder
+
+  Simply reference a .webp file as you would a .jpg
+
+    image.webp?width=100&format=jpg
+
+  A 100px wide jpeg will be returned.
+
+  If the extension is not .webp, you can add `&decoder=webp` to force webp decoding first, instead of waiting for the fallback path.
+
+
+  ## WebPEncoder
+
+  Add `&format=webp` to any URL to encode the result in webp format instead of jpg/png
+
+  ### Parameters
+
+  * Quality=1..100
+  * Lossless=true/false (defaults false)
+  * NoAlpha=true/false (defaults false)
+
+
+  ### Rule of thumb for converting jpeg quality values to webp
+
+  In general, webp achieves the same visual quality with a much lower  `quality` parameter.
+
+  The first value is the jpeg quality, second is webp quality for same visual clarity.
+
+  * 90->78
+  * 80->65
+  * 70->55
+  * 50->40
+  * 40->30
+  * 20->10
+  * 10->3
+  * 5->0
+
+  ### HTTP Error 404.3 - Not Found
+
+  > The page you are requesting cannot be served because of the extension configuration. If the page is a script, add a handler. If the file should be downloaded, add a MIME map.
+
+
+  When you get this error, you'll need to add a mime-type mapping in web.config
+
+
+      <configuration>
+        <system.webServer>
+          <staticContent>
+           <mimeMap fileExtension=".webp" mimeType="image/webp" />
+        </staticContent>
+        </system.webServer>
+      </configuration>
+

@@ -1,12 +1,14 @@
 Bundle: 2
 Edition: creative
-Tagline: Render multiple image & text overlays and background layers with incredible flexibility and great performance. 
+Tagline: Render multiple image & text overlays and background layers with incredible flexibility and great performance.
 
 # New Watermark plugin (v3.1+)
 
 The new watermark plugin is fully XML configurable, and supports named watermark configurations, multiple image and text layers, layer groups, and background (as well as overlay) layers. The positioning system is per-layer, permits flexible pixel and percent layout, anchoring, and container selection.
 
 It is also binary compatible with the old plugin, so you can transition slowly (although the embarrassing legacy code will eventually be removed).
+
+![Image Resizer Watermark plugin example](http://z.zr.io/rw/pluginexamples/example-030.jpg?watermark=logo&width=400&random=25)
 
 ## Installation
 
@@ -17,13 +19,13 @@ Either run `Install-Package ImageResizer.Plugins.Watermark` in the NuGet package
 
 ## Configuration
 
-The `<watermarks/>` element allows you to define image layers, text layers, and layer groups. 
+The `<watermarks/>` element allows you to define image layers, text layers, and layer groups.
 
 By default all layers are overlays, but can be rendered as a background layer using `drawAs="background"`. This is effective when combined with padding or transparent source images.
 
 The name attribute defines the ID that will be used from the querystring to enable the watermark.
 
-Both image and text layers have a very flexible positioning system. You can use any combination of Left, Top, Right, Bottom, Width, and Height to get the layout desired. In rare instances where you still need to specify alignment, you can use the `align` [attribute to set it](http://msdn.microsoft.com/en-us/library/system.drawing.contentalignment.aspx). All values can be pixels (default) or percentages. Percentages are relative to the container width/height. `Right` and `Bottom` are relative to the right and bottom sides of the container.  The container is specified by `relativeTo`. Valid container names include 'image', 'imageArea', and 'canvas'. `image` is the photo itself, `imageArea` includes padding added to the image to keep aspect ratio, and `canvas` is the final dimensions of the file, including any borders, padding, or margins. 
+Both image and text layers have a very flexible positioning system. You can use any combination of Left, Top, Right, Bottom, Width, and Height to get the layout desired. In rare instances where you still need to specify alignment, you can use the `align` [attribute to set it](http://msdn.microsoft.com/en-us/library/system.drawing.contentalignment.aspx). All values can be pixels (default) or percentages. Percentages are relative to the container width/height. `Right` and `Bottom` are relative to the right and bottom sides of the container.  The container is specified by `relativeTo`. Valid container names include 'image', 'imageArea', and 'canvas'. `image` is the photo itself, `imageArea` includes padding added to the image to keep aspect ratio, and `canvas` is the final dimensions of the file, including any borders, padding, or margins.
 
 Image layers can pre-process the watermark itself using the `imageQuery` attribute.
 
@@ -56,11 +58,11 @@ You can specify multiple watermark layers and groups at the same time:
 Like the old version, you can also specify watermark images by name, which will all use the configuration specified in the `<otherimages/>` element.
 
 	image.jpg?watermark=image.png
-	
+
 ## Common errors
 
 * Make sure that the production server has all the fonts you are using installed. Servers, by default, don't have very many fonts installed.
-	
+
 ## Layer attribute reference
 
 * **name** - The key to use in the URL to invoke the application of the layer or group
@@ -71,14 +73,14 @@ Like the old version, you can also specify watermark images by name, which will 
 * **Bottom** - Pixel or percent value relative to the bottom of the container. "10px" would be 10 pixels upwards from the bottom side of the container. 3%. Percentages relative to container height.
 * **Width** - Pixel or percent value for the width of the layer
 * **Height** - Pixel or percent value for the width of the layer.
-* **relativeTo** - Name of the container, such as 'image', 'imageArea', or 'canvas'. `image` is the photo itself, `imageArea` includes padding added to the image to keep aspect ratio, and `canvas` is the final dimensions of the file, including any borders, padding, or margins. 
+* **relativeTo** - Name of the container, such as 'image', 'imageArea', or 'canvas'. `image` is the photo itself, `imageArea` includes padding added to the image to keep aspect ratio, and `canvas` is the final dimensions of the file, including any borders, padding, or margins.
 * **fill** - True/false (defaults to false). If true, the contents of the layer will attempt to fill the layer, even if they are normally smaller. Maintains aspect ratio, but may upscale text and images, potentially causing blurriness. If no width/height values are specified, this will also make the layer attempt to fill the container bounds.
 * **drawAs** - 'background' or 'overlay'. If 'background', the layer will be rendered over the background color, but underneath everything else. Combine with padding, alpha adjustment, or transparency on the original image to let it show through.
 
 ## ImageLayer specific attributes
 
 
-* **path** - A virtual path (i.e, ~/folder/image or /app/folder/image) to the watermark image. 
+* **path** - A virtual path (i.e, ~/folder/image or /app/folder/image) to the watermark image.
 * **imageQuery** - Allows pre-processing of the image. For example, use "stretch=fill" to distort the watermark to fit the aspect ratio of the layer. Multiple commands can be separated with ;
 
 ## TextLayer specific attributes
@@ -98,16 +100,16 @@ Like the old version, you can also specify watermark images by name, which will 
 
 ## Managed API
 
-Referencing a watermark already configured in XML is easy: 
+Referencing a watermark already configured in XML is easy:
 
 	ImageBuilder.Current.Build(source,dest,new ResizeSettings("watermark=name"));
 
-If you want to build a custom watermark from code, that's also easy, but needs to happen during Application\_Start if you're modifying Config.Current. 
+If you want to build a custom watermark from code, that's also easy, but needs to happen during Application\_Start if you're modifying Config.Current.
 Installing plugins on a shared Config instance on different threads can result in warnings on /resizer.debug, although the threading is handled correctly.
 
 	//You can have multiple configurations. Config.Current contains web.config settings, but you can use new Config(); to get a clean slate.
-	Config c = Config.Current; 
-	
+	Config c = Config.Current;
+
 	//Get a reference to the instance we added previously
 	WatermarkPlugin wp = c.Plugins.Get<WatermarkPlugin>();
 	if (wp == null) { //Install it if it's missing
@@ -116,26 +118,26 @@ Installing plugins on a shared Config instance on different threads can result i
 	}
 	//Re-query in case another thread beat us to installation.
 	wp = c.Plugins.Get<WatermarkPlugin>();
-	
+
 	//Let's make some layers
 	TextLayer t = new TextLayer();
 	t.Text = "Hello #{name}";
 	t.Fill = true; //Fill the image with the text
 	ImageLayer i = new ImageLayer(c); //ImageLayer needs a Config instance so it knows where to locate images
 	i.Path = "~/image.png";
-	
+
 	//Let's register them with the watermark plugin. Note a layer name can have multiple layers
   wp.NamedWatermarks["img"] = new Layer[]{ i };
   wp.NamedWatermarks["text"] = new Layer[] { t };
 
-	
+
 	//Let's build an image
 	c.CurrentImageBuilder.Build(source,dest,new ResizeSettings("watermark=text,img;name=John Doe"));
-	
+
 
 # Original watermark plugin (Versions 3.0.13 and older)
 
-The original version of the Watermark plugin did not support XML configuration, and only allowed one set of layout directions, which were applied to all watermark files. 
+The original version of the Watermark plugin did not support XML configuration, and only allowed one set of layout directions, which were applied to all watermark files.
 All watermark files were required to be located in the same folder. The &watermark=file.png command would select a file from that directory for use.
 
 To install and configure the plugin, you must place some code in the Application_Start event of Global.asax.cs.
@@ -149,11 +151,11 @@ Here is an example Global.asax.cs file
 	using System.Drawing;
 	using ImageResizer.Configuration;
 	using ImageResizer.Plugins.RemoteReader;
-	
+
 	namespace ComplexWebApplication {
 		public class Global : System.Web.HttpApplication {
 			protected void Application_Start(object sender, EventArgs e) {
-			
+
 				// Code that runs on application startup
 				ImageResizer.Plugins.Watermark.WatermarkPlugin w = new ImageResizer.Plugins.Watermark.WatermarkPlugin();
 				w.align = System.Drawing.ContentAlignment.BottomLeft; //Where to align the watermark within the bounds specified by bottomRightPadding and topLeftPadding
