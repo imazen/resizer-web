@@ -15,15 +15,6 @@ GIT
       tilt
 
 GIT
-  remote: git://github.com/populr/less.rb.git
-  revision: 2e451e3d96eaf1361fd8f47ffe2adf67443debc8
-  branch: v2.2.2-less1.3.3
-  submodules: true
-  specs:
-    less (2.2.2)
-      commonjs (~> 0.2.6)
-
-GIT
   remote: git://github.com/slim-template/slim.git
   revision: 5837e9bfb26aa9baeec013ec66504807a1c942ba
   specs:
@@ -51,10 +42,9 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     ffi (1.9.3)
-    honeybadger (1.11.2)
-      json
-    json (1.8.1)
     kramdown (1.3.3)
+    less (2.5.0)
+      commonjs (~> 0.2.7)
     libv8 (3.16.14.3)
     listen (2.7.1)
       celluloid (>= 0.15.2)
@@ -72,6 +62,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.1.1)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -106,11 +97,11 @@ DEPENDENCIES
   debugger
   erubis
   hardwired!
-  honeybadger
   kramdown
-  less!
+  less (~> 2.5.0)
   rack-cache
   rack-test
+  rake
   rb-fsevent
   rerun!
   sass

@@ -6,7 +6,7 @@ gem 'kramdown'
 gem 'rack-cache'
 
 gem 'therubyracer' # jS V8 engine - Required for 'less'
-gem 'less', :git => "git://github.com/populr/less.rb.git", :submodules => true, :branch => "v2.2.2-less1.3.3"
+gem "less", "~> 2.5.0"
 
 gem 'sass'
 gem 'erubis'
@@ -16,7 +16,7 @@ gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git"
 
 gem 'thin' #we use this for both development and production
 
-gem 'honeybadger', :group => :production
+#gem 'honeybadger', :group => :production
 
 gem 'yui-compressor'
 
@@ -28,7 +28,7 @@ gem "rerun", :git => "git://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
 gem "webrat", :group => :development
-
+gem "rake", :group => :development
 
 #gem 'perftools.rb', :group => :development
 #gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler', :group => :development
