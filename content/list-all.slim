@@ -1,16 +1,16 @@
 content_type: html
 layout: false
-flags: -sitemap
+flags: -sitemap,
 
 doctype html
 html
   head
   body
     h3
-      = index.pages.select{ |p| !p.flag?('-sitemap') }.count
+      = index.pages.select{ |p| !p.flag?('-sitemap') && !p.flag?('partial') }.count
       |  pages found
     table
-      - index.pages.select{ |p| !p.flag?('-sitemap') }.each do |p|
+      - index.pages.select{ |p| !p.flag?('-sitemap') && !p.flag?('partial') }.each do |p|
         tr
           td 
             a href==url_for(p) 
@@ -25,7 +25,7 @@ html
     - if dev?
       h3 Hidden and not-yet-relased pages
       table
-        - index.enum_files { |p| p.is_page? && !p.can_render? }.to_a.each do |p|
+        - index.enum_files { |p| p.is_page? && !p.can_render? && !p.flag?('partial') }.to_a.each do |p|
           tr
             td 
               a href==url_for(p) 

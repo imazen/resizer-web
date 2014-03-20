@@ -7,6 +7,7 @@ require 'test/unit'
 Bundler.require(:default)
 Bundler.require(:development)
 require_relative '../categories'
+require_relative '../support_contracts'
 require_relative '../site'
 
 
@@ -33,7 +34,7 @@ class TestAllPages < Test::Unit::TestCase
     define_method(("test_" + page.path).to_sym) do 
       visit page.path
       assert_contain "ImageResizer" 
-    end
+    end unless (page.flag?(:hidden) || page.path.end_with?("sitemap.xml"))
   end 
 
 end

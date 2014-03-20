@@ -51,7 +51,7 @@ class SupportTier
     this_rate = price_usd.to_f / support_months.to_f
     pct = (((base_rate - this_rate) / base_rate)) * 100.0
 
-    puts " #{base_rate} to #{this_rate} is #{pct}%"
+    #puts " #{base_rate} to #{this_rate} is #{pct}%"
     pct
   end 
 
