@@ -5,17 +5,20 @@ Icon: download-alt
 
 h1 Download ImageResizer
 
-h1
-  | Download 
-  = releases.first.heading
+.title
+  h1
+    | Step 1: Download 
+    = releases.first.heading
 
 .row
-  .span8
+  .span2
+  .span8.bottompadding
     form#signupform.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('signupform');"
       input type="hidden" name="redirect" value=latest_release.meta.fullfile
       input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
       h3 style="margin-bottom:0" 
-        | Notify me when important updates are available
+        strong Option 1: 
+        | Notify me when important updates are available.
         p style="margin-top:10px"
           | Email: 
           input type="text" name="email" placeholder="name@domain.com"
@@ -23,8 +26,9 @@ h1
           button type="submit" name="Submit" class="btn btn-primary"
             | Subscribe and Download V#{latest_release.meta.shortversion} (avg 4 per year) &raquo;
 
-    p style="margin-top:10px;font-size:10px; color:gray;margin-bottom:0"
-    	| If you've already subscribed, use this link instead:
+    h3 style="margin-bottom:0"
+      strong Option 2: 
+      |I've already subscribed.
     p style="margin:0"
       a href=latest_release.meta.fullfile class="btn"
         | Download V#{latest_release.meta.shortversion} source, binaries, plugins, and sample code (15MB)
@@ -37,13 +41,40 @@ h1
 
     markdown:
       [Show previous releases](/releases).
-    markdown:
-      **Have a moment?** [Take our five question survey](https://docs.google.com/forms/d/16WE1AW7AtfYm14vJQoHsCDsDuG344O-K1xcqHZaxbvg/viewform) and help us make ImageResizer even better.
-  .span4
+    h3 style="margin-bottom:0"
+      strong Option 3: 
+      |I want to download with Nuget.
+    p
+      a href="/docs/install/nuget" class="btn btn-primary"
+        |Nuget Installation Instructions     
+  .span2
+
+.title
+  h1
+   |Step 2: Get a License
+.row
+  .span2
+  .span8
+    p
+      |We have a wide variety of licenses to suit any developer's or company's needs.
+    a href="/licenses" class="btn btn-primary"
+      | Licenses Page
+    p style="padding-top: 5px"
+      |Not sure which license fits your needs?  
+      a href="/license-questions" Answer a few questions 
+      | and we'll find the license that's right for you.
+  .span2
+.title
+  h1
+    |Step 3: Read This Over
+.row
+  .span2
+  .span8
     markdown:
       It's only happened once (a long time ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
 
-      To encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$50 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $50 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`. Only the latest version of the product is eligible.
+      To encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$100 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $100 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`. Only the latest version of the product is eligible.
+  .span2
 
 
 / Google Code for View download page Conversion Page
