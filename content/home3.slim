@@ -7,8 +7,6 @@ Icon: picture
 
 h1 ASP.NET library and image server
 
-
-
 /"Zebra" means there is placeholder or incomplete material nearby that needs to be removed before anything is uploaded. It's easer to Ctrl+F for than "placeholder," since that appears to be a legitimate thing.
 
 .container.home3
@@ -16,51 +14,48 @@ h1 ASP.NET library and image server
     h1.sidespace
       | Your server can prepare images 5,000 times faster than you.
     .row
-      .container.home3img
+      .container style="padding:6px"
         img src="http://z.zr.io/ri/fix/12s.jpg?height=200"
     .row
       code
         | &lt;img src="img.jpg?height=200" />
-
-
     h2.sidespace 
       | Add commands to image URLs to get altered versions in milliseconds. 
       em Save for Web
-      |  is dead; welcome to the cutting edge.
-
-    .row.home3img
+      |  is dead; embrace the responsive web.
+    .row style="padding:6px"
       a href="download" class="btn btn-buynow"
         | Download
-      /This button needs to be bigger
 
 .home3.statsbar.row-fluid
   .span3
+
     p.statsnumber
-      |99.9%
-    p
-      |Customer satisfaction rate
-  .span3
-    p.statsnumber
-      |45
-    p
-      |Countries represented in our client base
-  .span3
-    p.statsnumber
-      |95,000+
+      i.icon-white.icon-cloud-download
+      |  340,000+
     p
       |NuGet downloads of ImageResizer
   .span3
     p.statsnumber
-      |$5-50
+      i.icon-white.icon-globe 
+      |  45
+    p
+      |Countries represented in our client base
+  .span3
+    p.statsnumber
+      i.icon-white.icon-github    
+      |  1,600+
+    p
+      |Commits on Github. $5-100 bug bounty
+  .span3
+    p.statsnumber
+      i.icon-white.icon-calendar
+      |  24/7
     p.rightside
-      |Bounty for
-      em any 
-      |bugs in our code
-
-    /If there is a way to make this look like the header bar, that would be PERFECT. Also, zebra on the graph and the other content.
+      |Support available
 
 .row-fluid
-  h1.home3.extrapadding
+  h1.home3 style="padding-top: 25px; padding-bottom: 30px"
     |What We Do
   .container
     .span6
@@ -68,8 +63,8 @@ h1 ASP.NET library and image server
         |ImageResizer provides a comprehensive set of photography tools, from powerfully simple one-command adjustments, such as white balance correction and noise removal, to cutting-edge advanced controls, such as red-eye correction, object removal, and seam carving. Have your server deliver final images to the browser in milliseconds. **Video will go to the right of this paragraph. Current video is a placeholder, to help figure out size.**
       p.sidespace
         |Here's a 
-        a href="/docs/basics" review of basic commands
-        | and here's a 
+        a href="/docs/basics" review of basic commands 
+        |and here's a 
         a href="/docs/benefits/comprehensive" more comprehensive rundown with advanced features
         |.
       /Remove last sentence eventually, and replace side-video with the actual video. Zebra.
@@ -86,20 +81,19 @@ hr
         .span6
           a.block.plaintext href="/docs/benefits/comprehensive"
             .icons-box
-              i.ico-white.circle-color-full.ico-tint
-              h3 All the Editing Tools for Your Business Needs
+              i.ico-white.circle-color-full.ico-link
+              h3 Compatible and Standardized
               p.sidespace
-                |Crop, resize, remove red-eye, add overlays, trim whitespace, feather edges… ImageResizer has numerous capabilities to free you from the photoshop-upload-test cycle so you can get back to work. See what ImageResizer can do for your business. 
+                |ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your platform, your software. See how ImageResizer can connect with your business
               .clear
         .span6
           a.block.plaintext href=""
             .icons-box
-              i.ico-white.circle-color-full.ico-cup
-              h3 Agile, Compatible, Standardized
+              i.ico-white.circle-color-full.ico-stats
+              h3 High Performance
               p.sidespace
-                |ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your user volume, your platform. (link) See how ImageResizer can connect with your business.
+                |Upgrade to the Performance Edition and scale to millions of images and users. We also support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
               .clear
-              /The above link will go to a new page, that has, info about/links to /docs/workswith, /docs/benefits/performant, and /plugins. Zebra.
       .row-fluid
         .span6
           a.block.plaintext href="/docs/benefits/stable"
@@ -110,15 +104,16 @@ hr
                 |Secure by default, ImageResizer protects against DDOS and XSS attacks, and minimizes attack surface with a plugin model. Unlike most imaging libraries, ImageResizer was designed for server-side use and multi-year uptimes since day one.
               .clear
         .span6
-          a.block.plaintext href=""
+          a.block.plaintext href="https://github.com/imazen/resizer"
             .icons-box
               i.ico-white.circle-color-full.ico-group
               h3 Open Source
               p.sidespace
-                |Core functionality is free and open source under the [Freedom license](/licenses/freedom). Everything we offer includes source code and permits modification. **We reward pull requests**.
+                |Core functionality is free and open source under the
+                a href="/licenses/freedom" Freedom license
+                |. Everything we offer includes source code and permits modification. 
+                strong We reward pull requests.
               .clear
-            /Get rid of the borders around each of the benefits, and find a way to expand the background color to each side.
-
   .container.home3
     h1.headerpadding
       | Don't Believe Us?
@@ -160,50 +155,106 @@ hr
       h1.headerpadding.home3
         |Explore Our Site
       .row-fluid.bottompadding
-        .span1
-        .span4
-          h2.sidespace
-            |Support Contracts
-          p.sidespace
-            |Need someone to call when everything breaks at 6 P.M. on Friday? We offer a variety of support contracts designed to meet every business's need, from architecture planning to hotfixes to the friendliest "try turning it off and turning it on again" in the industry.
-          .home3
-            a href="/support/contracts" class="btn btn-primary"
-              | Support Contracts Page
-            /might want to take that last bit out. zebra
         .span2
-        .span4
-          h2.sidespace
-            |Meet the Staff
+        .span4.tiny-news
+          h2.sidespace We Have a Blog!
+          - for p in index.posts[0..5]
+            h3.sidespace
+              a href=p.path
+                = p.meta.short_heading || p.heading
+            p.sidespace
+              == p.summary(self,100)
           p.sidespace
-            |The same small size that ensures personalized service for all of our clients also lets us to show you literally everyone in our company on one webpage. Come and see who'll answer that email you just sent our way.
-          .home3
-            a href="" class="btn btn-primary"
-              | Staff Page
+            a href="/blog" more...
+        .span4
+          .row-fluid
+            h2.sidespace
+              |Support Contracts
+            p.sidespace
+              |Need someone to call when everything breaks at 6 P.M. on Friday? We offer a variety of support contracts designed to meet every business's need, from architecture planning to hotfixes to installation support.
+            .home3
+              a href="/support/contracts" class="btn btn-primary"
+                | Support Contracts Page
+          .row-fluid
+            h2.sidespace
+              |Imazen
+            p.sidespace
+              |Imageresizer is a product of Imazen LLC. Imazen specializes in developing open source software targeted at developer needs.
+            .home3
+              a href="www.imazen.io" class="btn btn-primary"
+                | Imazen Homepage     
+          .row-fluid
+            h2.sidespace
+              |Meet the Staff
+            p.sidespace
+              |The same small size that ensures personalized service for all of our clients also lets us to show you literally everyone in our company on one webpage. Come and see who'll answer that email you sent us.
+            .home3
+              a href="/staff" class="btn btn-primary"
+                | Staff Page
+          .span2
             /We need to make a staff page zebra.
-        .span1
-      .row-fluid.bottompadding
-        .span1
-        .span4
-          h2.sidespace
-            |We're on Github
-          p.sidespace
-            |ImageResizing isn't all we do. Want to see some of our other projects, image-related and otherwise?
-          .home3
-            a href="https://github.com/imazen/" class="btn btn-primary"
-              | Imazen on Github
-        .span2
-        .span4
-          h2.sidespace
-            |We Blog Too!
-          p.sidespace
-            |Content ranges from measured, friendly tips about using our product (that's Nathanael) to whining about neglected Netflix queues (that would be Liz), but there's plenty of information we like to squeeze in here that can't fit on our website.
-          .home3
-            a href="blog" class="btn btn-primary"
-              | Blog
-        .span1
-        
+  .container.home3
+    h1.headerpadding.home3
+      |Other Products from Imazen
+    .row-fluid.bottompadding
+      .span4
+        h2.sidespace
+          a href="https://github.com/imazen/slimmage"
+            | Slimmage
+        p.sidespace
+          | Slimmage allows CSS, not HTML, to control which image size is downloaded. Creating responsive images has never been so easy.
+        .tech-labels
+          span.badge.badge-sucess JS
+          |   
+          span.badge.badge-sucess C#
+      .span4
+        h2.sidespace
+          a href="https://github.com/nathanaeljones/studiojs"
+            |Studio JS
+        p.sidespace
+          | Studo JS is a rapidly growing collection of jQuery plugins for image cropping, resizing, and editing. 
+          a href="http://studio.imageresizing.net/studio.html" Click here for a live demo.
+        .tech-labels
+          span.badge.badge-sucess JS
 
-    /Ideas: Meet The Staff, Check out our support contracts, Here's our blog, We're on Github, search bar
-    /Zebra
-
-  /What I need to learn how to do: 2) Put in different images. 3) Get the "Don't Believe Us?" section stuff to highlight as you hover over, and contain the text underneath the images to the width of the images. 5) LEARN HOW TO SPACE STUFF!
+      .span4
+        h2.sidespace
+          a href="https://github.com/imazen/keyhub"
+            |Keyhub
+        p.sidespace
+          | KeyHub is anopen source license key management system.
+        .techlabels
+          span.badge.badge-sucess C#
+          |    
+          span.badge.badge-sucess MVC5
+    .row-fluid.bottompadding
+      .span4
+        h2.sidespace
+          a href="http://repositext.org/"
+            |Repositext
+        p.sidespace
+          |Repositext is a collection of components and recipes to create your ideal large-scale publishing workflow.
+        .tech-labels
+          span.badge.badge-sucess Ruby
+          |   
+          span.badge.badge-sucess C
+      .span4
+        h2.sidespace
+          a href="https://github.com/nathanaeljones/hardwired"
+            |Hardwired CMS
+        p.sidespace
+          |Hardwired is the coder's ideal CMS. Tiny, unrestrictive, managed with Git and a text editor. Used by all Imazen sites.
+        .tech-labels
+          span.badge.badge-sucess Ruby
+          |   
+          span.badge.badge-sucess Sinatra
+      .span4
+        h2.sidespace
+          a href="https://github.com/imazen/reunion"
+            |Reunion
+        p.sidespace
+          |Reunion is both a library and a local webapp for repeatable accounting. Do your accounting in a single day.
+        .tech-labels
+          span.badge.badge-sucess Ruby
+          |   
+          span.badge.badge-sucess Sinatra     
