@@ -1,5 +1,6 @@
 Date: June 1 2013
 Libs: swipebox
+Summary: Combining the Swipebox jQuery plugin with ImageResizer can help make your website more responsive for mobile phones.
 
 # Responsive, touch-friendly lightboxes with ImageResizer and SwipeBox
 
