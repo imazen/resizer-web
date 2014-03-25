@@ -19,7 +19,7 @@ h1 Download ImageResizer
       h3 style="margin-bottom:0" 
         strong Option 1: 
         | Notify me when important updates are available.
-        p style="margin-top:10px"
+        p.home3
           | Email: 
           input type="text" name="email" placeholder="name@domain.com"
           |  &nbsp; 
@@ -29,22 +29,21 @@ h1 Download ImageResizer
     h3 style="margin-bottom:0"
       strong Option 2: 
       |I've already subscribed.
-    p style="margin:0"
+    p.home3 style="margin:0"
       a href=latest_release.meta.fullfile class="btn"
         | Download V#{latest_release.meta.shortversion} source, binaries, plugins, and sample code (15MB)
 
-    p style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0"
+    p.home3 style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0"
       | This version includes 
       a href=releases.first.path
         == latest_release.meta_summary
         | . Click for release notes.
-
-    markdown:
-      [Show previous releases](/releases).
+    p.home3
+      a href="/releases" Show previous releases
     h3 style="margin-bottom:0"
       strong Option 3: 
       |I want to download with Nuget.
-    p
+    p.home3
       a href="/docs/install/nuget" class="btn btn-primary"
         |Nuget Installation Instructions     
   .span2
@@ -55,10 +54,11 @@ h1 Download ImageResizer
 .row
   .span2
   .span8
-    p
-      |We have a wide variety of licenses to suit any developer's or company's needs.
-    a href="/licenses" class="btn btn-primary"
-      | Licenses Page
+    h3 style="margin-bottom:0"
+      |We have a variety of licenses to suit any developer's needs.
+    p.home3 style="margin:0"
+      a href="/licenses" class="btn btn-primary"
+        | Licenses Page
     p style="padding-top: 5px"
       |Not sure which license fits your needs?  
       a href="/license-questions" Answer a few questions 
@@ -66,16 +66,30 @@ h1 Download ImageResizer
   .span2
 .title
   h1
-    |Step 3: Read This Over
+    |Step 3: Enjoy ImageResizer
 .row
   .span2
   .span8
-    markdown:
-      It's only happened once (a long time ago), but if there is a security-related bug, we'll let you know - if [you've signed up for update notifications  (**extremely** low-volume)](/newsletter/signup)
-
-      To encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$100 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $100 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`. Only the latest version of the product is eligible.
+    h3
+      |We take our commitment to deliver high-quality, easy-to-use software very seriously. Here are some ways you can guarantee you're getting the most out of our product.
+    ul.arrow_list
+      li
+        a href="/docs/install" Set up an architecture planning session. 
+        |In thirty minutes, we will help you design the ideal architecture to ensure you meet your performance, quality, scalability, and cost goals.
+      li
+        a href="/docs/basics" Learn the basics. 
+        |Spend a few minutes learning the ropes before you get started making beautiful, functional, responsive websites in half the time.      
+      li
+        a href="/docs/benefits/comprehensive" Visit our Tutorials page. 
+        |We hear 
+        em all the time 
+        | from customers who never realized the sheer variety of ImageResizer's capabilities. Come and see some of ImageResizer's wide assortment of features.
+      li
+        a href="/newsleter/signup" Make sure you signed up for our newsletter. 
+        |It's only happened once (a long time ago), but if there is a security-related bug, this is how we let you know. 
+        strong Extremely low-volume.
   .span2
-
+/Find a way to make the architecture planning thing link to th uservoice email message thing. zebra.
 
 / Google Code for View download page Conversion Page
 javascript:
