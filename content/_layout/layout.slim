@@ -58,8 +58,9 @@ html(lang="en" class="no-js")
       #page-title
         #page-title-inner
           .container
-            h2
-              i class="icon-white icon-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "file-alt"}"
+            h2 class=(page.meta.icon == "none" ? "no-icon" : "")
+              - unless page.meta.icon == "none"
+                i class="icon-white icon-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "file-alt"}"
               == page.heading
     - if page.flag? :unwrap
       == yield

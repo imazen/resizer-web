@@ -3,7 +3,7 @@ Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open S
 Libs: uservoice, plusone, -comments
 Flags: unwrap
 Layout: layout
-Icon: picture
+Icon: none
 
 h1 ASP.NET library and image server
 
@@ -25,34 +25,36 @@ h1 ASP.NET library and image server
       |  is dead; embrace the responsive web.
     .row style="padding:6px"
       a href="download" class="btn btn-buynow"
-        | Download
+        | Add ImageResizer to your app in under 30 seconds
 
-.home3.statsbar.row-fluid
-  .span3
+.home3.statsbar
+  .container
+    .row-fluid
+      .span3
 
-    p.statsnumber
-      i.icon-white.icon-cloud-download
-      |  340,000+
-    p
-      |NuGet downloads of ImageResizer
-  .span3
-    p.statsnumber
-      i.icon-white.icon-globe 
-      |  45
-    p
-      |Countries represented in our client base
-  .span3
-    p.statsnumber
-      i.icon-white.icon-github    
-      |  1,600+
-    p
-      |Commits on Github. $5-100 bug bounty
-  .span3
-    p.statsnumber
-      i.icon-white.icon-calendar
-      |  24/7
-    p.rightside
-      |Support available
+        p.statsnumber
+          i.icon-white.icon-cloud-download
+          |  340,000+
+        p
+          |NuGet downloads of ImageResizer
+      .span3
+        p.statsnumber
+          i.icon-white.icon-globe 
+          |  45
+        p
+          |Countries represented in our client base
+      .span3
+        p.statsnumber
+          i.icon-white.icon-github    
+          |  1,600+
+        p
+          |Commits on Github. $5-100 bug bounty
+      .span3
+        p.statsnumber
+          i.icon-white.icon-calendar
+          |  24/7
+        p.rightside
+          |Support available
 
 .row-fluid
   h1.home3 style="padding-top: 25px; padding-bottom: 30px"
@@ -73,27 +75,28 @@ h1 ASP.NET library and image server
 
 hr
   .oddhomepageitem
-    .row-fluid.container.home3
-      .row
-        h1.headerpadding
-          | Benefits
-      .row-fluid
-        .span6
-          a.block.plaintext href="/docs/benefits/comprehensive"
-            .icons-box
-              i.ico-white.circle-color-full.ico-link
-              h3 Compatible and Standardized
-              p.sidespace
-                |ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your platform, your software. See how ImageResizer can connect with your business
-              .clear
-        .span6
-          a.block.plaintext href="/docs/benefits/performant"
-            .icons-box
-              i.ico-white.circle-color-full.ico-stats
-              h3 High Performance
-              p.sidespace.home3
-                |Upgrade to the Performance Edition and scale to millions of images and users. We also support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
-              .clear
+    .container
+      .row-fluid.home3
+        .row
+          h1.headerpadding
+            | Benefits
+        .row-fluid
+          .span6
+            a.block.plaintext href="/docs/benefits/comprehensive"
+              .icons-box
+                i.ico-white.circle-color-full.ico-link
+                h3 Compatible and Standardized
+                p.sidespace
+                  |ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your platform, your software. See how ImageResizer can connect with your business
+                .clear
+          .span6
+            a.block.plaintext href="/docs/benefits/performant"
+              .icons-box
+                i.ico-white.circle-color-full.ico-stats
+                h3 High Performance
+                p.sidespace.home3
+                  |Upgrade to the Performance Edition and scale to millions of images and users. We also support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
+                .clear
       .row-fluid
         .span6
           a.block.plaintext href="/docs/benefits/stable"
@@ -142,8 +145,9 @@ hr
             h3 Community
             p
               |We never stop working to make ImageResizer better, but we get a lot of help. Check out some of the work our awesome, dedicated, and expansive community has made.
-  container
-    .oddhomepageitem
+  
+  .oddhomepageitem
+    .container
       h1.headerpadding.home3
         |Explore Our Site
       .row-fluid.bottompadding
@@ -186,7 +190,7 @@ hr
           .span2
   .container.home3
     h1.headerpadding.home3
-      |Other Products from Imazen
+      |Other Open-Source Products from Imazen
     .row-fluid.bottompadding
       .span4
         h2.sidespace
@@ -203,7 +207,7 @@ hr
           a href="https://github.com/nathanaeljones/studiojs"
             |Studio JS
         p.sidespace
-          | Studo JS is a rapidly growing collection of jQuery plugins for image cropping, resizing, and editing. 
+          | Studio JS is a rapidly growing collection of jQuery plugins for image cropping, resizing, and editing. 
           a href="http://studio.imageresizing.net/studio.html" Click here for a live demo.
         .tech-labels
           span.badge.badge-sucess JS
@@ -213,7 +217,7 @@ hr
           a href="https://github.com/imazen/keyhub"
             |Keyhub
         p.sidespace
-          | KeyHub is anopen source license key management system.
+          | KeyHub is an open source license key management system. 
         .techlabels
           span.badge.badge-sucess C#
           |    
