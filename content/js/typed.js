@@ -49,6 +49,8 @@
 		// amount of time to wait before backspacing
 		this.backDelay = this.options.backDelay;
 
+    this.stringFinished = this.options.stringFinished;
+
 		// input strings of text
 		this.strings = this.options.strings;
 
@@ -147,6 +149,7 @@
 							// and if the current array position is less than the stopping point
 							// if so, backspace after backDelay setting
 							if (curStrPos > curString.length && self.arrayPos < self.stopArray){
+                if (self.stringFinished) self.stringFinished(curString);
 								clearTimeout(clear);
 								var clear = setTimeout(function(){
 									self.backspace(curString, curStrPos);
