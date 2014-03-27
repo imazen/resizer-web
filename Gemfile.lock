@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/alexch/rerun.git
-  revision: 7bced8266621404da24227e13e312a7f6f0b6219
+  revision: a7fd980db79b56e9e06bafe928e003562b7a48af
   specs:
-    rerun (0.8.2)
-      listen (~> 1.0.3)
+    rerun (0.9.0)
+      listen (~> 2.7)
 
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
@@ -14,48 +14,40 @@ GIT
       sinatra (>= 1.3.3)
       tilt
 
-GIT
-  remote: git://github.com/populr/less.rb.git
-  revision: 2e451e3d96eaf1361fd8f47ffe2adf67443debc8
-  branch: v2.2.2-less1.3.3
-  submodules: true
-  specs:
-    less (2.2.2)
-      commonjs (~> 0.2.6)
-
-GIT
-  remote: git://github.com/slim-template/slim.git
-  revision: 1e2fb0bb552e86eadbeffd199df53d30383a07c4
-  specs:
-    slim (2.0.2)
-      temple (~> 0.6.6)
-      tilt (>= 1.3.3, < 2.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    celluloid-io (0.15.0)
+      celluloid (>= 0.15.0)
+      nio4r (>= 0.5.0)
     columnize (0.3.6)
     commonjs (0.2.7)
     daemons (1.1.9)
-    debugger (1.6.5)
+    debugger (1.6.6)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.3.1)
+      debugger-ruby_core_source (~> 1.3.2)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.3.1)
+    debugger-ruby_core_source (1.3.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     ffi (1.9.3)
-    honeybadger (1.11.0)
+    honeybadger (1.11.2)
       json
     json (1.8.1)
-    kramdown (1.3.1)
+    kramdown (1.3.3)
+    less (2.5.0)
+      commonjs (~> 0.2.7)
     libv8 (3.16.14.3)
-    listen (1.0.3)
+    listen (2.7.1)
+      celluloid (>= 0.15.2)
+      celluloid-io (>= 0.15.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-      rb-kqueue (>= 0.2)
-    mini_portile (0.5.2)
+    mini_portile (0.5.3)
+    nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
@@ -68,25 +60,27 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
-    rb-kqueue (0.2.0)
-      ffi (>= 0.5.0)
     ref (1.0.5)
-    sass (3.2.14)
+    sass (3.3.4)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    slim (2.0.2)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
     temple (0.6.7)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
-    thin (1.6.1)
+    thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
     tilt (1.4.1)
+    timers (1.1.0)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
@@ -102,14 +96,14 @@ DEPENDENCIES
   hardwired!
   honeybadger
   kramdown
-  less!
+  less
   rack-cache
   rack-test
   rb-fsevent
   rerun!
   sass
   shotgun
-  slim!
+  slim
   therubyracer
   thin
   webrat

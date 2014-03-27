@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 ruby '2.0.0'
 
-gem 'slim', :git => "git://github.com/slim-template/slim.git"
+gem 'slim'
 gem 'kramdown'
 gem 'rack-cache'
 
 gem 'therubyracer' # jS V8 engine - Required for 'less'
-gem 'less', :git => "git://github.com/populr/less.rb.git", :submodules => true, :branch => "v2.2.2-less1.3.3"
+gem 'less'
 
 gem 'sass'
 gem 'erubis'
