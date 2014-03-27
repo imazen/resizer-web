@@ -1,6 +1,6 @@
 Menu: home
 Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open Source - MVC compatible
-Libs: uservoice, plusone, -comments
+Libs: uservoice, plusone, -comments, typed, -highlight
 Flags: unwrap
 Layout: layout
 Icon: none
@@ -9,23 +9,58 @@ h1 ASP.NET library and image server
 
 /"Zebra" means there is placeholder or incomplete material nearby that needs to be removed before anything is uploaded. It's easer to Ctrl+F for than "placeholder," since that appears to be a legitimate thing.
 
-.container.home3
-  .row
-    h1.sidespace
-      | Your server can prepare images 5,000 times faster than you.
-    .row
-      .container style="padding:6px"
-        img src="http://z.zr.io/ri/fix/12s.jpg?height=200"
-    .row
-      code
-        | &lt;img src="img.jpg?height=200" />
-    h2.sidespace 
-      | Add commands to image URLs to get altered versions in milliseconds. 
-      em Save for Web
-      |  is dead; embrace the responsive web.
-    .row style="padding:6px"
-      a href="download" class="btn btn-buynow"
-        | Add ImageResizer to your app in under 30 seconds
+.container-wrap
+  .container
+    h1.leftzero
+     | Your server can prepare images 5,000 times faster than you.
+
+    .hidden-phone
+      .row-fluid style="margin-top:1em; margin-bottom:1em;"
+        .span6.home-code-bg
+          .home-code-box    
+            ul.code
+              li 
+                span.tag &lt;div 
+                span.attrname class
+                span.attrval 
+                  | ="container"
+                span.tag >
+              li 
+                | &nbsp; 
+                span.tag
+                  | &lt;img 
+                span.attrname
+                  |  src
+                span.attrval
+                  | ="
+                span.attrval.image-name
+                  | img.jpg?
+                span.attrval.type-this
+                  | 
+                span.attrval
+                  | "
+                span.tag
+                  |  /&gt;
+              li 
+                span.tag &lt;/div>
+
+
+            
+        .span6.home-image-bg
+          .home-image-box
+            .home-image-inner
+              img.change-this-image src="http://z.zr.io/ri/u3.jpg?height=200"
+       
+    h2.leftzero
+        | Add commands to image URLs to get altered versions in milliseconds. 
+        em Save for Web
+        |  is dead; 
+        strong embrace the responsive web.
+
+    .home3
+      
+      a href="download" class="btn btn-buynow" style="margin:6px"
+        | Get ImageResizer Now
 
 .home3.statsbar
   .container
