@@ -6,38 +6,7 @@ Aliases: /pl.. /plugin
 Warning: Bundles were discontinued on Feb. 1 2013 in favor of a simplified product model.
 
 
-#Plugins
-
-
-<div class="buySidebar">
-
-    <form action="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;i=929356&amp;cl=41912&amp;ejc=2" target="ej_ejc" method="POST" accept-charset="UTF-8">
-    <h3>Personal use or business use?</h3>
-    <select name="o2">
-    <option value="Pro License">Personal use only ($99)</option>
-    <option value="Enterprise License">Enterprise-wide license ($249)</option>
-    </select>
-    <h3>Which bundle?</h3>
-    <select name="o1">
-    <option value="Performance Bundle">Performance Bundle</option>
-    <option value="Designer Bundle">Designer Bundle</option>
-    <option value="Cloud Bundle">Cloud Bundle</option>
-    <option value="Extras Bundle">Extras Bundle</option>
-    </select>
-    <div style="padding-top:15px;"> </div>
-    <input type="image" src="http://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0"  alt="Add to Cart" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this.parentNode);"/>
-    </form>
-
-
-
-  <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&amp;cl=41912&amp;ejc=2" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);"><img src="http://www.e-junkie.com/ej/ej_view_cart.gif" border="0" alt="View Cart"/></a>
-  <div class="info" style="font-size:10px; color:#888888;line-height:1.3em">
-  100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>.
-  <br /> All major credit cards accepted. 
-  <br /> Processed by PayPal or Google Checkout
-  </div>
-
-</div>
+#Plugin Bundles
 
 
 [19 plugins](/plugins/bundles/free) are included in the free download, and 21 more are sold. The core project is supported by purchases of the paid plugin bundles. 
