@@ -1,4 +1,5 @@
 Date: February 26 2014
+Summary: We need your help to develop the next version of ImageResizer. Take a minute to answer our 5-question survey so we can get to work making your work easier.
 
 # Help us make ImageResizer better
 

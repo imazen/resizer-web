@@ -10,7 +10,7 @@ window.slimmage = window.slimmage | {};
 window.slimmage.verbose = false;
 
 
-if (hljs){
+if (window.hljs !== undefined){
 hljs.tabReplace = '  '; 
 hljs.initHighlightingOnLoad();
 }
@@ -112,3 +112,46 @@ $(function(){
   ejGATracker = _gat._getTracker("UA-XXXXX-X");
 });
 	*/
+
+
+$(function(){
+  var noun = $(".ml_noun");
+  setInterval(function(){
+    options = ["one", "two", "three"];
+    newIndex = Math.floor(Math.random() * 3)
+
+    noun.text(options[newIndex]);
+  },1500);
+  $(".ml_noun").text()
+});
+
+
+  $(function(){
+      var queryStrings = ["height=150", 
+                          "w=170&h=170&mode=crop",
+                          "w=170&h=170&mode=pad",
+                          "w=170&h=170&mode=max",
+                          "h=200&s.grayscale=true",
+                          "crop=770,590,1170,790",
+                          "srotate=90&height=200",
+                          "h=200&s.sepia=true"
+                          ];
+      var img = $('.change-this-image');
+      var imgPath = "http://z.zr.io/ri/u3.jpg?"
+      $(".home-code-box .type-this").typed({
+        strings: queryStrings,
+        backDelay:2000,
+        loop:true,
+        typeSpeed: 50,
+        callback: function(){
+         
+        },
+        stringFinished: function(str){
+          img.prop('src', imgPath + str);
+          //console.log("completed " + imgPath + str)
+        }
+      });
+  });
+
+
+

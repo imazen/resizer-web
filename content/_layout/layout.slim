@@ -25,7 +25,7 @@ html(lang="en" class="no-js")
     /   link href="/css/twentytwenty.css" rel="stylesheet"
     / link href="/css/less/parallax-slider.css" rel="stylesheet"
 
-    link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Economica:700,400italic|Droid+Serif|Boogaloo'
+    link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Economica:700,400italic|Droid+Serif|Boogaloo|Source+Code+Pro:500'
 
     /[if IE 9]
       link href="/css/less/styleie9.css" rel="stylesheet"
@@ -38,6 +38,12 @@ html(lang="en" class="no-js")
 
     - if page.lib? :swipebox
       link rel="stylesheet" href="/css/less/swipebox.css"
+
+    - if page.lib? :textillate
+      link rel="stylesheet" href="/css/less/animate.css"
+
+    - if page.lib? :prism
+      link rel="stylesheet" href="/css/less/prism.css"
 
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
 
@@ -55,13 +61,16 @@ html(lang="en" class="no-js")
       #page-title
         #page-title-inner
           .container
-            h2
-              i class="icon-white icon-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "file-alt"}"
+            h2 class=(page.meta.icon == "none" ? "no-icon" : "")
+              - unless page.meta.icon == "none"
+                i class="icon-white icon-#{page.meta.icon || (page.parent && page.parent.meta.icon) || "file-alt"}"
               == page.heading
-
-    #wrapper
-      .container
-        == yield
+    - if page.flag? :unwrap
+      == yield
+    - else
+      #wrapper
+        .container
+          == yield
     == partial :footer
 
     == partial :search
@@ -79,7 +88,8 @@ html(lang="en" class="no-js")
       script src="/js/slider.js"
       script src="/js/jquery.fancybox.js"
 
-      script src="/js/highlight/highlight.pack.js"
+      - unless page.lib? :'-highlight'
+        script src="/js/highlight/highlight.pack.js"
 
       - if page.lib? :swipebox
         script src="/js/ios-orientationchange-fix.js"
@@ -107,6 +117,16 @@ html(lang="en" class="no-js")
 
       - if page.lib? :slimmage
         script src='/js/slimmage.js'
+
+      - if page.lib? :textillate
+        script src="/js/jquery.lettering-0.6.1.min.js"
+        script src="/js/jquery.textillate.js"
+
+      - if page.lib? :typed
+        script src="/js/typed.js"
+
+      - if page.lib? :prism
+        script src="/js/prism.js"
 
       script src="/js/custom.js"
       script src="/js/script.js"

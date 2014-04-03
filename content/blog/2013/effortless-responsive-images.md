@@ -1,4 +1,5 @@
 Date: June 7, 2013
+Summary: Here's how to use ImageResizer in conjunction with slimmage.js to create responsive images for your webpage.
 
 # Effortless responsive images
 

@@ -66,5 +66,8 @@ How can I get this feature covered in this lower-level license in my higher-leve
 I've previously purchased this license, but I would like to downgrade/upgrade to this other license. Do I have to buy the new one entirely, or can I get a discount?
 : Unfortunately, we cannot modify an existing license once it is issued, nor can we offer a discount on any new purchase of a higher or lower-level license.
 
+Is the fee annual or one-time?
+: Our license fee is a one-time payment. Buy it once and you have it for life. Our support contracts, however, are paid on a six-month or annual basis, depending on which you purchase.
+
 Is there some kind of trial license for ImageResizer?
 : Yes! Simply download ImageResizer on the download page. Until something is put into production, there's no need to pay or do anything else. You can find out more about it [here](/licenses/trial).
