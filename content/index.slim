@@ -1,33 +1,295 @@
 Menu: home
 Title: ASP.NET Image Resizing, Cropping, & Upload Module for IIS - Free & Open Source - MVC compatible
-Libs: uservoice, plusone, -comments, bxSlider
-Aliases: )
+Libs: uservoice, plusone, -comments, typed, -highlight
+Flags: unwrap
 Layout: layout
+Icon: none
 
-h1 RESTful image processing
+h1 ASP.NET library and image server
 
-== content_for :banner do
+.container-wrap
+  .container
+    h1.leftzero
+     | Your server can prepare images 5,000 times faster than you.
 
-  == partial :part_slider
+    .hidden-phone
+      .row-fluid style="margin-top:1em; margin-bottom:1em;"
+        .span6.home-code-bg
+          .home-code-box    
+            ul.code
+              li 
+                span.tag &lt;div 
+                span.attrname class
+                span.attrval 
+                  | ="container"
+                span.tag >
+              li 
+                | &nbsp; 
+                span.tag
+                  | &lt;img 
+                span.attrname
+                  |  src
+                span.attrval
+                  | ="
+                span.attrval.image-name
+                  | img.jpg?
+                span.attrval.type-this
+                  | 
+                span.attrval
+                  | "
+                span.tag
+                  |  /&gt;
+              li 
+                span.tag &lt;/div>
 
-.whatisir
-  h1
-    | Create dynamic images that impress and inspire.
-  p
-    | ImageResizer provides a comprehensive set of photography tools, from powerfully simple one-command adjustments, such as white balance correction and noise removal, to cutting-edge advanced controls, such as red-eye correction, object removal, and seam carving. Have your server deliver final images to the browser in milliseconds.
 
+            
+        .span6.home-image-bg
+          .home-image-box
+            .home-image-inner
+              img.change-this-image src="http://z.zr.io/ri/u3.jpg?height=200"
+       
+    h2.leftzero
+        | Add commands to image URLs to get altered versions in milliseconds. 
+        em Save for Web
+        |  is dead; 
+        strong embrace the responsive web.
 
+    .home3
+      
+      a href="download" class="btn btn-buynow" style="margin:6px"
+        | Get ImageResizer Now
 
+.statsbar.home3
+  .container 
+    .row-fluid
+      .span3
+        a.block.statsbar href="http://www.nuget.org/profiles/nathanaeljones/"
+          p
+            i.icon-white.icon-cloud-download.statsnumber
+             |  340,000
+          p
+            |NuGet downloads of ImageResizer
+          .clear
+      .span3
+        a.block.statsbar href="/docs/benefits/customers"
+          p
+            i.icon-white.icon-globe.statsnumber
+              |  45
+          p
+            |Countries represented in our client base
+          .clear
+      .span3
+        a.block.statsbar href="https://github.com/imazen/resizer"
+          p
+            i.icon-white.icon-github.statsnumber  
+              |  1,600
+          p
+            |Commits on Github. $5-100 bug bounty
+          .clear
+      .span3
+        a.block.statsbar href="/support"
+          p
+            i.icon-white.icon-calendar.statsnumber
+             |  24/7
+          p
+            |Support available
+          .clear
 
-== partial :part_middle_links
+.row-fluid
+  h1.home3 style="padding-top: 25px; padding-bottom: 30px"
+    |Create images that impress and inspire
+  .container
+    .span3.home3
+      iframe height="252" width="400"src="//www.youtube.com/embed/GEA3uduWylk"
+    .span3
+    .span6
+      p style= "margin-left: 60px; margin-right:30px"
+        |ImageResizer provides a comprehensive set of photography tools, from powerfully simple one-command adjustments, such as white balance correction and noise removal, to cutting-edge advanced controls, such as red-eye correction, object removal, and seam carving. Have your server deliver final images to the browser in milliseconds.
+      p style= "margin-left: 60px; margin-right:30px"
+        |Here's a 
+        a href="/docs/basics" review of basic commands 
+        |and here's a 
+        a href="/docs/benefits/comprehensive" more comprehensive rundown with advanced features
+        |.
 
-== partial :part_features
+hr
+  .oddhomepageitem
+    .container
+      .row-fluid.home3
+        .row
+          h1.headerpadding
+            | Benefits
+        .row-fluid
+          .span6
+            a.block.plaintext href="/docs/benefits/comprehensive"
+              .icons-box
+                i.ico-white.circle-color-full.ico-link
+                h3 Compatible and Standardized
+                p.sidespace
+                  |ImageResizer was designed from the beginning to suit our clients’ needs with as little adaptation as possible. That means working with your CMS, your platform, your software. See how ImageResizer can connect with your business
+                .clear
+          .span6
+            a.block.plaintext href="/docs/benefits/performant"
+              .icons-box
+                i.ico-white.circle-color-full.ico-stats
+                h3 High Performance
+                p.sidespace.home3
+                  |Upgrade to the Performance Edition and scale to millions of images and users. We also support Amazon CloudFront and Microsoft CDN, and you can use S3 or Azure for centralized image storage.
+                .clear
+      .row-fluid
+        .span6
+          a.block.plaintext href="/docs/benefits/stable"
+            .icons-box
+              i.ico-white.circle-color-full.ico-shield
+              h3 Secure and Stable
+              p.sidespace
+                |Secure by default, ImageResizer protects against DDOS and XSS attacks, and minimizes attack surface with a plugin model. Unlike most imaging libraries, ImageResizer was designed for server-side use and multi-year uptimes since day one.
+              .clear
+        .span6
+          a.block.plaintext href="https://github.com/imazen/resizer"
+            .icons-box
+              i.ico-white.circle-color-full.ico-group
+              h3 Open Source
+              p.sidespace.home3
+                |Core functionality is free and open source under the freedom license. Everything we offer includes source code and permits modification. 
+                strong We reward pull requests.
+              .clear
+  .container.home3
+    h1.headerpadding
+      | Don't Believe Us?
+    p.sidespace
+      |ImageResizer is trusted by small businesses and Fortune 500 companies alike. We're proud to let our customer satisfaction and our product speak for themselves.
+    .row
+      .span3
+        a.block.plaintext.color href="/docs/benefits/customers"
+          img src="http://img.imageresizing.net/s3/resizer-web/sampleimages/in-the-field.jpg?width=250"
+          h3 In the Field
+          p
+            |Our clients never cease to amaze us with the creative uses they have found for ImageResizer. Check out some of our customers' homepages and see for yourself.
+      .span3
+        a.block.plaintext.color href="/docs/tutorials"
+          img src="http://img.imageresizing.net/s3/resizer-web/sampleimages/tutorials2.png?width=250"
+            h3 Tutorials
+            p
+              |Either watch a screencast or read a page to see ImageResizer in action.
+      .span3
+        a.block.plaintext.color href="/docs/benefits/testimonials"
+          img src="http://img.imageresizing.net/s3/resizer-web/sampleimages/testimonials.png?width=250"
+            h3 Testimonials
+            p
+              |We don't like to toot our own horn. Fortunately, we have plenty of customers who'll do it for us. See what they're saying.
+      .span3
+        a.block.plaintext.color href="/docs/community"
+          img src="http://img.imageresizing.net/s3/resizer-web/sampleimages/cropped-community.jpg?width=250"
+            h3 Community
+            p
+              |We never stop working to make ImageResizer better, but we get a lot of help. Check out some of the work our awesome, dedicated, and expansive community has made.
+  
+  .oddhomepageitem
+    .container
+      h1.headerpadding.home3
+        |Explore Our Site
+      .row-fluid.bottompadding
+        .span2
+        .span4.tiny-news
+          h2.sidespace News
+          - for p in index.posts[0..5]
+            h3.sidespace
+              a href=p.path
+                = p.meta.short_heading || p.heading
+            p.sidespace
+              == p.summary(self,100)
+          p.sidespace
+            a href="/blog" more...
+        .span4
+          .row-fluid
+            h2.sidespace
+              |Support Contracts
+            p.sidespace
+              |Need someone to call when everything breaks at 6 P.M. on Friday? We offer a variety of support contracts designed to meet every business's need, from architecture planning to hotfixes to installation support.
+            .home3
+              a href="/support/contracts" class="btn btn-primary"
+                | Support Contracts Page
+          .row-fluid
+            h2.sidespace
+              |Imazen
+            p.sidespace
+              |Imageresizer is a product of Imazen LLC. Imazen specializes in developing open source software targeted at developer needs.
+            .home3
+              a href="http://www.imazen.io" class="btn btn-primary"
+                | Imazen Homepage     
+          .row-fluid
+            h2.sidespace
+              |Meet the Staff
+            p.sidespace
+              |The same small size that ensures personalized service for all of our clients also lets us to show you literally everyone in our company on one webpage. Come and see who'll answer that email you sent us.
+            .home3
+              a href="/staff" class="btn btn-primary"
+                | Staff Page
+          .span2
+  .container.home3
+    h1.headerpadding.home3
+      |More Open-Source Products from Imazen
+    .row-fluid.bottompadding
+      .span4
+        h2.sidespace
+          a href="https://github.com/imazen/slimmage"
+            | Slimmage
+        p.sidespace
+          | Slimmage allows CSS, not HTML, to control which image size is downloaded. Creating responsive images has never been so easy.
+        .tech-labels
+          span.badge.badge-sucess JS
+          |   
+          span.badge.badge-sucess C#
+      .span4
+        h2.sidespace
+          a href="https://github.com/nathanaeljones/studiojs"
+            |Studio JS
+        p.sidespace
+          | Studio JS is a rapidly growing collection of jQuery plugins for image cropping, resizing, and editing. 
+          a href="http://studio.imageresizing.net/studio.html" Click here for a live demo.
+        .tech-labels
+          span.badge.badge-sucess JS
 
-== partial :part_sites_using_ir
-
-== partial :part_testimonials
-
-== partial :part_customer_logos
-
-
-
+      .span4
+        h2.sidespace
+          a href="https://github.com/imazen/keyhub"
+            |Keyhub
+        p.sidespace
+          | KeyHub is an open source license key management system. 
+        .techlabels
+          span.badge.badge-sucess C#
+          |    
+          span.badge.badge-sucess MVC5
+    .row-fluid.bottompadding
+      .span4
+        h2.sidespace
+          a href="http://repositext.org/"
+            |Repositext
+        p.sidespace
+          |Repositext is a collection of components and recipes to create your ideal large-scale publishing workflow.
+        .tech-labels
+          span.badge.badge-sucess Ruby
+          |   
+          span.badge.badge-sucess C
+      .span4
+        h2.sidespace
+          a href="https://github.com/nathanaeljones/hardwired"
+            |Hardwired CMS
+        p.sidespace
+          |Hardwired is the coder's ideal CMS. Tiny, unrestrictive, managed with Git and a text editor. Used by all Imazen sites.
+        .tech-labels
+          span.badge.badge-sucess Ruby
+          |   
+          span.badge.badge-sucess Sinatra
+      .span4
+        h2.sidespace
+          a href="https://github.com/imazen/reunion"
+            |Reunion
+        p.sidespace
+          |Reunion is both a library and a local webapp for repeatable accounting. Do your accounting in a single day.
+        .tech-labels
+          span.badge.badge-sucess Ruby
+          |   
+          span.badge.badge-sucess Sinatra     

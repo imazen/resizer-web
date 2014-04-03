@@ -94,8 +94,8 @@ function verifyRequired(id) {
   if (document.location.protocol === "https:")
   f.action = "https://app.icontact.com/icp/signup.php";
   
-  if (f["fields_email"].value == "") {
-    f["fields_email"].focus();
+  if (f["email"].value == "") {
+    f["email"].focus();
     alert("The Email field is required.");
     return false;
   }
