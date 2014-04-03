@@ -55,19 +55,31 @@ Can I use this to resize images as users upload them?
 : Sure! I suggest keeping the original images around, and using the resizer normally (in case you later want larger images).
 However, it's easy to [resize during upload](/docs/howto/upload-and-resize).
 
-##Licensing and Payment
-
-My company designs websites for other companies, and I want a license plan that allows me to make ImageResizer a part of the package to my clients. Which license should I use?
-: The [Elite license](/licenses/enterprise) is probably best for your situation.
-
-How can I get this feature covered in this lower-level license in my higher-level license?
-: Every higher level of licensing includes all of the features of all previous licenses. So, everything in the performance license is included in the Creative, Elite, and Bronze 6 month licenses.
-
-I've previously purchased this license, but I would like to downgrade/upgrade to this other license. Do I have to buy the new one entirely, or can I get a discount?
-: Unfortunately, we cannot modify an existing license once it is issued, nor can we offer a discount on any new purchase of a higher or lower-level license.
+##Licensing and Payment {#licensing}
 
 Is the fee annual or one-time?
-: Our license fee is a one-time payment. Buy it once and you have it for life. Our support contracts, however, are paid on a six-month or annual basis, depending on which you purchase.
+: Our license fee is a one-time payment. Buy it once and you have that version for life. Our support contracts include permanent licenses as well, however, support benefits and free upgrades are limited to the contract duration.
 
 Is there some kind of trial license for ImageResizer?
 : Yes! Simply download ImageResizer on the download page. Until something is put into production, there's no need to pay or do anything else. You can find out more about it [here](/licenses/trial).
+
+Can I buy plugins individually?
+: No — they're designed to work together. We only sell plugins in 3 groups, each a superset of the last: Performance, Creative, and Elite.
+
+My company designs custom websites for other companies, and I want a license plan that allows me to make ImageResizer a part of the package to my clients. Which license should I use?
+: The [Elite license](/licenses/enterprise) is probably best for your situation. Your customers can get a free [Client license](http://imageresizing.net/licenses/proclient) with any bespoke software you develop for them.
+
+I want to redistribute ImageResizer Essential Edition as part of another project. Do I need to pay anything?
+: No - the [19 plugins in the Essential edition](http://imageresizing.net/plugins/editions/free) are provided under the [Freedom license](http://imageresizing.net/licenses/freedom), which permites redistribution similar to the MIT license. Check your diagnostics page to verify you're not using any paid plugins.
+
+I want to redistribute ImageResizer Performance, Creative, or Elite Edition plugins as part of another product or project. What license do I need?
+: You will need to contact us to get an [OEM license](http://imageresizing.net/licenses/oem) appropriate for your needs. 
+
+How can I get a feature covered in this lower-level license in my higher-level license?
+: Every higher level of licensing includes all of the features of all previous licenses. So, everything in the Performance license is included in the Creative, Elite, and Support Contracts.
+
+I've previously purchased a Performance Edition license, but I would like to upgrade to a Creative License. Do I have to buy the new one entirely, or can I get a discount?
+: Unfortunately, we cannot modify an existing offline license key once it is issued, nor can we offer a discount on any new purchase of a higher or lower-level license.
+
+
+
