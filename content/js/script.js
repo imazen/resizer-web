@@ -127,31 +127,72 @@ $(function(){
 
 
   $(function(){
-      var queryStrings = ["height=150", 
-                          "w=170&h=170&mode=crop",
-                          "w=170&h=170&mode=pad",
-                          "w=170&h=170&mode=max",
-                          "h=200&s.grayscale=true",
-                          "crop=770,590,1170,790",
-                          "srotate=90&height=200",
-                          "h=200&s.sepia=true"
-                          ];
-      var img = $('.change-this-image');
-      var imgPath = "http://z.zr.io/ri/u3.jpg?"
-      $(".home-code-box .type-this").typed({
-        strings: queryStrings,
-        backDelay:2000,
-        loop:true,
-        typeSpeed: 50,
-        callback: function(){
-         
-        },
-        stringFinished: function(str){
-          img.prop('src', imgPath + str);
-          //console.log("completed " + imgPath + str)
-        }
-      });
+      if ($.typed){
+        var queryStrings = ["height=150", 
+                            "w=170&h=170&mode=crop",
+                            "w=170&h=170&mode=pad",
+                            "w=170&h=170&mode=max",
+                            "h=200&s.grayscale=true",
+                            "crop=770,590,1170,790",
+                            "srotate=90&height=200",
+                            "h=200&s.sepia=true"
+                            ];
+        var img = $('.change-this-image');
+        var imgPath = "http://z.zr.io/ri/u3.jpg?"
+        $(".home-code-box .type-this").typed({
+          strings: queryStrings,
+          backDelay:2000,
+          loop:true,
+          typeSpeed: 50,
+          callback: function(){
+           
+          },
+          stringFinished: function(str){
+            img.prop('src', imgPath + str);
+            //console.log("completed " + imgPath + str)
+          }
+        });
+      }
   });
 
+$(function(){
 
+  var getOptionsFromString = function(str, options){
+    console.log(str);
+    if (str == "all" || str === undefined || str == null) {
+      return options;
+    }
+    var matches = [];
+    if (str.indexOf("contracts") != -1){
+      matches = matches.concat(["gold", "silver", "bronze"]);
+    }
+
+    for (var i =0; i < options.length; i++){
+      if (str.indexOf(options[i]) != -1){
+        matches.append(options[i]);
+      }
+     }
+    return matches;
+  };
+
+
+  $(".questions input").click(function(e){
+    var options = ["essential", "trial", "performance", "creative", "elite", "silver", "gold", "bronze", "oem"];
+
+    var limits = options.slice();
+
+    $(".questions input").each(function(index){
+      var input = $(this);
+      console.log(input);
+      var checked = input.prop('checked');
+      var results = getOptionsFromString(input.data('data-skus'), options);
+
+      limits = limits.filter(function(n) {
+          return results.indexOf(n) != -1
+      });
+      
+    });
+    alert("Allowed options: " + limits);   
+  });
+});
 
