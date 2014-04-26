@@ -19,12 +19,12 @@ p
 / possible error induced by call below
 / - painting_options = ["a.oilpainting=1", "a.oilpainting=50", "a.oilpainting=100"]
 - painting_options = []
-- balance_options = ["a.balancewhite=true","a.balancewhite=truearea","a.balancewhite=truesimple","a.balancewhite=truegimp", "a.balancethreshold=0.06", "a.balancethreshold=0.6"]
+- balance_options = ["a.balancewhite=true","a.balancewhite=area","a.balancewhite=simple","a.balancewhite=gimp", "a.balancethreshold=0.06", "a.balancethreshold=0.6"]
 - sepia_options = ["a.sepia=true"]
 - histogram_options = ["a.equalize=true"]
 - contrast_options = ["a.contrast=-0.1", "a.contrast=0.1"]
 - brightness_options = ["a.brightness=-0.1", "a.brightness=0.1"]
-- saturation_options = ["a.saturation=-0.1", "a.saturation=0.1"]
+- saturation_options = ["a.saturation=-0.2", "a.saturation=0.2"]
 
 - image_options =  canny_options + painting_options + sepia_options + histogram_options + balance_options + contrast_options + saturation_options
 
@@ -37,7 +37,7 @@ p
           - random_image = "%03d" % Random.new.rand(1..30)
           - image_options.each do | opt |
             li
-              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}?random=#{cache_buster}&#{opt}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&random=#{cache_buster}&#{opt}"
               .slide-caption.n.hidden-phone
                 - if canny_options.include? opt
                   h3 Canny Edge Detector
@@ -70,7 +70,9 @@ p
   code Install-Package ImageResizer.Plugins.AdvancedFilters
   | in the NuGet package manager, or:
 ol
-  li Add ImageResizer.Plugins.AdvancedFilters.dll to your project. Make sure AForge.dll, AForge.Math.dll, and AForge.Imaging.dll are copied also, although they do not need to be referenced directly.
+  li
+    markdown:
+      Add `ImageResizer.Plugins.AdvancedFilters.dll` to your project. Make sure `AForge.dll`, `AForge.Math.dll`, and `AForge.Imaging.dll` are copied also, although they do not need to be referenced directly.
   li
     | Add
     code &lt;add name="AdvancedFilters" /&gt;
@@ -80,7 +82,8 @@ ol
 h2#usage Usage
 p
   | If you want more effects,
-    a href="http://resizer.uservoice.com"
+  a href="http://resizer.uservoice.com"
+    | vote for them on UserVoice.
 ul
   li Gaussian blur with adjustable radius: &amp;blur=radius
   li Gaussian sharpen with adjustable radius: &amp;sharpen=radius
