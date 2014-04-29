@@ -9,11 +9,11 @@ Installed by default. Sets cache-control, expires (if configured), and last-modi
 
 IIS-level configuration (even in Web.config) can override the values set by ClientCache. Keep this in mind when troubleshooting issues.
 
-# Configuration
+## Configuration
 
 1. Add `<clientcache minutes="1440" />` to the `<resizer />` section. This controls how many minutes in the future the Expires header will be set to.
 
-# Default behavior
+## Default behavior
 
 `Cache-control: public` is sent for all anonymous requests.
 `Cache-control: private` is sent for all authenticated requests.

@@ -13,7 +13,7 @@ p These filters are implemented as adjustment matrices and are processed by nati
 - image_width = 400
 - cache_buster = 000002
 - round_options = ["s.roundcorners=30", "s.roundcorners=45,0,45,0"]
-- grey_options = ["s.grayscale=true","s.grayscale=y","s.grayscale=ry","s.grayscale=ntsc","s.grayscale=bt709","s.grayscale=flat"]
+- grey_options = ["s.grayscale=ry","s.grayscale=ntsc","s.grayscale=bt709","s.grayscale=flat"]
 - sepia_options = ["s.sepia=true"]
 - inversion_options = ["s.invert=true"]
 - opacity_options = ["s.alpha=0.2", "s.alpha=0.4", "s.alpha=0.6", "s.alpha=0.8"]
@@ -33,7 +33,7 @@ p These filters are implemented as adjustment matrices and are processed by nati
           - random_image = "%03d" % Random.new.rand(1..30)
           - image_options.each do | opt |
             li
-              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}?random=#{cache_buster}&#{opt}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&#{opt}"
               .slide-caption.n.hidden-phone
                 - if round_options.include? opt
                   h3 Rounded Corners

@@ -37,7 +37,7 @@ p
           - random_image = "%03d" % Random.new.rand(1..30)
           - image_options.each do | opt |
             li
-              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&random=#{cache_buster}&#{opt}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&#{opt}"
               .slide-caption.n.hidden-phone
                 - if canny_options.include? opt
                   h3 Canny Edge Detector

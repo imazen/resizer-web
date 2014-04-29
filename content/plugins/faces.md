@@ -5,7 +5,7 @@ Tagline: Provides face detection
 
 # Faces plugin
 
-`You can find a sample project for this plugin in \Samples\ImageStudio within the full download` 
+You can find a sample project for this plugin in `\Samples\ImageStudio` within the full download 
 
 Human face detection plugin. Provides automatic face detection, as well as the CropAround plugin, which can even be combined in a single request (using &c.focus=faces) to provide face-focused/face-preserving cropping.
 

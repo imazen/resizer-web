@@ -4,7 +4,7 @@ Tagline: Provides sophisticated eye detection and red eye correction
 
 # RedEye plugin
 
-`You can find a sample project for this plugin in \Samples\ImageStudio within the full download` 
+You can find a sample project for this plugin in `\Samples\ImageStudio` within the full download 
 
 Provides automatic and manual red-eye detection and correction. For automatic face and eye detection, OpenCV is required. Requires V3.2 or higher.
 
