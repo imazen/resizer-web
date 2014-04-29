@@ -1,4 +1,5 @@
 Tag: benefits
+Aliases: /docs/benefits/stable
 
 # Stable and Secure
 

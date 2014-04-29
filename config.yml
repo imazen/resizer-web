@@ -64,12 +64,6 @@ categories:
     meta:
       sidebar: /docs/extend/sidebar
 
-  - tag: benefits
-    title: Benefits
-    include: /docs/benefits
-    page: /docs/benefits
-    meta:
-      sidebar: /docs/benefits/sidebar
 
   - tag: use
     title: Using ImageResizer

@@ -1,4 +1,4 @@
-Aliases: /purchase/testimonials  /testimonials
+Aliases: /purchase/testimonials  /testimonials /docs/benefits/testimonials
 
 # Testimonials
 

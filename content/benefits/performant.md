@@ -1,3 +1,4 @@
+Aliases: /docs/benefits/performant
 
 # ImageResizer Performance
 
