@@ -1,0 +1,80 @@
+Libs: twentytwenty
+Icon: cogs
+Flags: -sitemap
+Aliases: /docs/benefits/scaling-quality
+
+
+h1 Scaling Quality Comparison
+
+
+- scaling_options = {"GDI default" => "", "WIC Fant" =>  "&builder=wic&w.filter=fant", "WIC Bicubic" =>  "&builder=wic&w.filter=bicubic", "FreeImage Bicubic" =>  "&builder=freeimage&fi.scale=bicubic", "FreeImage Lanczos" =>  "&builder=freeimage&fi.scale=lanczos", "FreeImage CatmullRom" =>  "&builder=freeimage&fi.scale=catmullrom", "FreeImage Bspline" =>  "&builder=freeimage&fi.scale=bspline"}
+
+- scaling_before_default = "GDI default"
+- scaling_after_default = "WIC Fant"
+
+
+- image_width          = 600
+- image_height         = 900
+- cache_buster         = 55
+- image_size           = "maxwidth=#{image_width}&maxheight=#{image_height}&mode=max&format=png&random=#{cache_buster}"
+- thumb_pixel_size     = 44
+- image_size_thumb     = "w=#{thumb_pixel_size}&h=#{thumb_pixel_size}&mode=crop&anchor=topright&format=jpg&random=#{cache_buster}"
+- example_images       = ['rings-with-text-imazen.gif', 'rings-large.gif', '1873-divers.png',  'parrot-feather.jpg', 'space-needle.jpg', '../../../ri/8s.jpg']
+- image_url_prefix     = 'http://z.zr.io/rw/tutorials/resampling/'
+- image_options_before = scaling_options[scaling_before_default]
+- image_options_after  = scaling_options[scaling_after_default]
+
+
+.row-fluid
+  .span8.well
+    div style="position:relative; text-align:center; width:100%;"
+      span#desc-before style="position:absolute; left:0" #{scaling_before_default}
+      span#desc-after style="position:absolute; right:0" #{scaling_after_default}
+    br
+    .row-fluid
+      .span12
+        p
+          .twentytwenty-container
+            img src="#{image_url_prefix}#{example_images[0]}?#{image_size}#{image_options_before}" id="plugin-example-before"
+            img src="#{image_url_prefix}#{example_images[0]}?#{image_size}#{image_options_after}" id="plugin-example-after"
+
+    p
+      .row-fluid.hidden-phone
+        - example_images.each do | img |
+          .span2
+            a.plugin-example-button.thumbnail data-image-before="#{image_url_prefix}#{img}?#{image_size}#{image_options_before}" data-image-after="#{image_url_prefix}#{img}?#{image_size}#{image_options_after}"
+              img src="#{image_url_prefix}#{img}?#{image_size_thumb}"
+      .visible-phone
+        - example_images.each do | img |
+          a.plugin-example-button data-image-before="#{image_url_prefix}#{img}?#{image_size}#{image_options_before}" data-image-after="#{image_url_prefix}#{img}?#{image_size}#{image_options_after}"
+              img src="#{image_url_prefix}#{img}?#{image_size_thumb}"
+          | &nbsp;
+    .row-fluid
+      .span4
+        h4.visible-phone Before / Left:
+        form#compare-before
+        - scaling_options.each_with_index do | (key, value), index |
+          label.radio
+            - if key == scaling_before_default
+              input id="optionBefore#{index + 1}" name="compare-before" type="radio" value="#{image_size}#{value}" checked="" #{key}
+            - else
+              input id="optionBefore#{index + 1}" name="compare-before" type="radio" value="#{image_size}#{value}" #{key}
+      .span4.offset2
+        h4.visible-phone After / Right:
+        form#compare-after
+        - scaling_options.each_with_index do | (key, value), index |
+          label.radio
+            - if key == scaling_after_default
+              input id="optionsAfter#{index + 1}" name="compare-after" type="radio" value="#{image_size}#{value}" checked=""  #{key}
+            - else
+              input id="optionsAfter#{index + 1}" name="compare-after" type="radio" value="#{image_size}#{value}" #{key}
+
+
+h2#usage Usage
+- scaling_options.each do | key, value |
+  p
+  | #{key}: 
+  - unless value.empty?
+    code #{value}
+
+
