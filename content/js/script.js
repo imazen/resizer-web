@@ -127,7 +127,7 @@ $(function(){
 
 
   $(function(){
-      if ($.typed){
+      if ($.fn.typed){
         var queryStrings = ["height=150", 
                             "w=170&h=170&mode=crop",
                             "w=170&h=170&mode=pad",
