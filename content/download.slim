@@ -7,58 +7,55 @@ h1 Download ImageResizer
 
 .titledownload
   h1
-    | Step 1: Download 
-    = releases.first.heading
+    | Step 1: Download V
+    = latest_release.meta.shortversion
 
 .row
-  .span2
-  .span8.bottompadding
-    form#signupform.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('signupform');"
-      input type="hidden" name="redirect" value=latest_release.meta.fullfile
-      input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
-      h3 style="margin-bottom:0" 
-        strong Option 1: 
-        | Notify me when important updates are available.
-        p.home3
-          | Email: 
-          input type="text" name="email" placeholder="name@domain.com"
-          |  &nbsp; 
-          button type="submit" name="Submit" class="btn btn-primary"
-            | Subscribe and Download V#{latest_release.meta.shortversion} (avg 4 per year) &raquo;
-
-    h3 style="margin-bottom:0"
-      strong Option 2: 
-      |I've already subscribed.
-    p.home3 style="margin:0"
-      a href=latest_release.meta.fullfile class="btn"
-        | Download V#{latest_release.meta.shortversion} source, binaries, plugins, and sample code (15MB)
-
-    p.home3 style="margin-top:5px;font-size:10px; color:gray;margin-bottom:0"
-      | This version includes 
+  .span1
+  .span9.bottompadding
+    p style="margin-top:30px; margin-bottom:10px"
+      a href=latest_release.meta.fullfile class="btn btn-buynow"
+        | Download Everything
+    p 
+      |  Includes source, binaries, plugins, and sample code (15MB)
+ 
+    p style="margin-top:5px;font-size:12px; color:gray;margin-bottom:0"
+       
       a href=releases.first.path
-        == latest_release.meta_summary
-        | . Click for release notes.
-    p.home3
-      a href="/releases" Show previous releases
-    h3 style="margin-bottom:0"
-      strong Option 3: 
-      |I want to download with Nuget.
-    p.home3
+        | Release notes: 
+        == latest_release.meta_summary    
+     
+    h3 style="margin-bottom:0; margin-top: 20px"
+      strong OR: 
+      |Install with Nuget.
+    div
+      code.nuget
+        | PM> Install-Package ImageResizer.MvcWebConfig
+        br
+        | PM> Install-Package ImageResizer.Plugins.DiskCache
+        br
+        | PM> Install-Package ImageResizer.Plugins.PrettyGifs
+    br
+    p
       a href="/docs/install/nuget" class="btn btn-primary"
-        |Nuget Installation Instructions     
+        strong Nuget Installation Instructions  
   .span2
 
 .titledownload
   h1
-   |Step 2: Get a License
+   |Step 2: Choose a License
 .row
-  .span2
-  .span8
+  .span1
+  .span9
     h3 style="margin-bottom:0"
-      |We have a variety of licenses to suit any developer's needs.
-    p.home3.bottompadding style="margin:0"
+      |We have a variety of licenses to suit any developer's needs, including 
+      strong trial licenses 
+      |for testing and 
+      strong free licenses 
+      |for basic capabilities.
+    p.bottompadding style="margin-top:10px"
       a href="/licenses" class="btn btn-primary"
-        | Licenses Page
+        strong Compare Licenses
     /p style="padding-top: 5px"
       |Not sure which license fits your needs?  
       a href="/license-questions" Answer a few questions 
@@ -68,8 +65,8 @@ h1 Download ImageResizer
   h1
     |Step 3: Enjoy ImageResizer
 .row
-  .span2
-  .span8
+  .span1
+  .span9
     h3
       |We take our commitment to deliver high-quality, easy-to-use software very seriously. Here are some ways you can guarantee you're getting the most out of our product.
     ul.arrow_list
@@ -88,6 +85,16 @@ h1 Download ImageResizer
         a href="/newsleter/signup" Make sure you signed up for our newsletter. 
         |It's only happened once (a long time ago), but if there is a security-related bug, this is how we let you know. 
         strong Extremely low-volume.
+    
+    p
+      form#signupform.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('signupform');"
+        input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou"
+        input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
+        | Email: 
+        input type="text" name="email" placeholder="name@domain.com"
+        |  &nbsp; 
+        button type="submit" name="Submit" class="btn btn-primary" style="margin-bottom:10px"
+         | Subscribe (avg 4 per year) &raquo;
   .span2
 
 / Google Code for View download page Conversion Page
