@@ -11,7 +11,7 @@ Thank you for supporting the ImageResizing.NET project. Your contract will ensur
 ## Our contact information
 
 * Email: support@imageresizing.net
-* Phone: +1 (502) 509-1177
+* Phone: +1 (812) 809-0605
 * Skype: nathanaeldjones
 * Google Talk: nathanael.jones@gmail.com
 
