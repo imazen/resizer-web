@@ -23,6 +23,9 @@ Is it necessary to wildcard map everything to ASP.NET when using IIS6?
 I'm getting OutOfMemory exceptions when I try to resize certain large images for the first time (subsequent requests are fine). They're only 15MB in jpeg form, and I have 100MB of free RAM.
 : A 15MB JPG uncompresses to about 80MB in bitmap form (depending upon the compression level). If you are resizing to a 2MB jpeg (15MB BMP), memory requirements for the operation are roughly 110MB (15 + 80 + 15). If you plan on using the resizer for very high-resolution photos (above 8MP), I suggest making sure you have ample amounts of RAM. 400MB to 1GB is usually plenty for the average web site with disk caching enabled.
 
+I have a bundle with ImageResizer, but I see it's no longer available for sale. What gives?
+: Bundles were discontinued in February 2013, although all bundle purchases are still valid. You can find out any information you need about bundles [here](/plugins/bundles).
+
 ##Resizing Tasks
 
 How do I auto-crop a certain distance or percentage away from an edge, instead of centering?
