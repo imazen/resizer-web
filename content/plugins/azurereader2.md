@@ -7,7 +7,7 @@ Tagline: Allows blobstore images to be resized and served. (Azure 2.0 compatible
 
 **AzureReader2 supports the Azure SDK V2.0 and requires .NET 4.0 instead of .NET 3.5. Many thanks to Marcus Briggs for his invaluable help in getting this released quickly.**
 
-Also, Chris Skardon has [posted a nice walkthrough on using AzureReader2](http://geekswithblogs.net/cskardon/archive/2013/02/26/imageresizer-azurereader2-and-wellhellip-azure-duh.aspx)
+Also, Chris Skardon has [posted a nice walkthrough on using AzureReader2](http://geekswithblogs.net/cskardon/archive/2013/02/26/imageresizer-azurereader2-and-wellhellip-azure-duh.aspx), and Ben Foster has [written a great article](http://benfoster.io/blog/high-performance-image-processing-with-image-resizer-and-azure) on getting the most out of ImageResizer and Azure together.
 
 Allows images located in an Azure Blobstore to be read, processed, resized, and served. Requests for unmodified images get redirected to the blobstore itself.
 
