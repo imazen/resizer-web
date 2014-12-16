@@ -6,7 +6,7 @@ Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 
 ##The location of the current file is used for calculating the default 'root' setting
 class Site < Hardwired::Bootstrap
-    require 'debugger' if development?
+    #require 'debugger' if development?
     #Debugger.start(:post_mortem => true) if development?
 
 

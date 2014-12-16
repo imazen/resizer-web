@@ -1,5 +1,5 @@
 Title: Plugin Bundles - Image Resizer
-Libs: ejunkie, ejunkiecart, uservoice, -comments
+Libs: uservoice, -comments
 Template: plugin_page
 Renderer: RubyPoweredMarkdown
 Aliases: /pl.. /plugin

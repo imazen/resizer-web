@@ -27,7 +27,7 @@ ruby:
     end
   end 
 
-   def render_hours(contract,subkey, span = nil)
+  def render_hours(contract,subkey, span = nil)
     render_numbers(contract,subkey) do |value|
       if value < 1
         (value * 60).floor.to_s + " minutes"

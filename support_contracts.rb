@@ -91,9 +91,9 @@ class SupportTier
     @min_dev_hours = 0
     @min_architecture_hours = 0
     @lengths = []
-    @lengths << create_support_sku(6,849,'Elite Edition (1 Enterprise)')
-    @lengths << create_support_sku(12,849,'Elite Edition (1 Enterprise)')
-    @lengths << create_support_sku(24,849,'Elite Edition (1 Enterprise)')
+    @lengths << create_support_sku(6,849,'R3Elite')
+    @lengths << create_support_sku(12,849,'R3Elite')
+    @lengths << create_support_sku(24,849,'R3Elite')
     
   end 
 
@@ -123,9 +123,9 @@ class SupportTier
     @email_support = true
     @min_architecture_hours = 0.5
     @lengths = [] #So the clones reference the same array and can access their siblings
-    @lengths << create_support_sku(6,949,'Bronze Tier 6 Month Contract')
-    @lengths << create_support_sku(12,1500,'Bronze Tier 1 Year Contract')
-    @lengths << create_support_sku(24,2000,'Bronze Tier 2 Year Contract')
+    @lengths << create_support_sku(6,949,'Bronze6MO')
+    @lengths << create_support_sku(12,1500,'Bronze1YR')
+    @lengths << create_support_sku(24,2000,'Bronze2YR')
     
   end
 
@@ -143,9 +143,9 @@ class SupportTier
     @architecture_hours_yr = 2
     @min_architecture_hours = 2
     @lengths = []
-    @lengths << create_support_sku(6,3000,'Silver Tier 6 Month Contract')
-    @lengths << create_support_sku(12,5000,'Silver Tier 1 Year Contract')
-    @lengths << create_support_sku(24,8000,'Silver Tier 2 Year Contract')
+    @lengths << create_support_sku(6,3000,'Silver6MO')
+    @lengths << create_support_sku(12,5000,'Silver1YR')
+    @lengths << create_support_sku(24,8000,'Silver2YR')
     
   end
 
@@ -160,9 +160,9 @@ class SupportTier
     @emergency_incidents_yr = Float::INFINITY
     @hotfix_time_days = 2
     @lengths = []
-    @lengths << create_support_sku(6,6000,'Gold Tier 6 Month Contract')
-    @lengths << create_support_sku(12,10000,'Gold Tier 1 Year Contract')
-    @lengths << create_support_sku(24,17000,'Gold Tier 2 Year Contract')
+    @lengths << create_support_sku(6,6000,'Gold6MO')
+    @lengths << create_support_sku(12,10000,'Gold1YR')
+    @lengths << create_support_sku(24,17000,'Gold2YR')
     
   end
 

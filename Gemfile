@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.5'
 
 gem 'slim'
 gem 'kramdown'
@@ -23,13 +23,14 @@ gem 'yui-compressor'
 
 gem 'rack-test' #Warning, needed for production
 
-gem "debugger", :group => :development
 gem "rerun", :git => "git://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
 gem "webrat", :group => :development
 gem "rake", :group => :development
+gem "pry", :group => :development
 
+#gem "debugger", :group => :development
 #gem 'perftools.rb', :group => :development
 #gem 'rack-perftools_profiler', :require => 'rack/perftools_profiler', :group => :development
 #gem 'link-checker', :git => "git://github.com/nathanaeljones/link-checker.git", :group => :development
