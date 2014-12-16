@@ -4,9 +4,8 @@ ruby:
   gold_skus = ["Gold1YR","Gold2YR","Gold6MO"]
   silver_skus = ["Silver1YR","Silver2YR" ,"Silver6MO"]
   bronze_skus = ["Bronze1YR" ,"Bronze2YR" , "Bronze6MO"]
+  elite_sku = "R3Elite"
   web = ""
-  #require 'pry'
-  #binding.pry
   if gold_skus.include? product_value
     web = "https://store.imazen.io/products/imageresizer-gold-support-contract-and-elite-license"
   end
@@ -15,6 +14,9 @@ ruby:
   end
   if bronze_skus.include? product_value
     web = "https://store.imazen.io/products/imageresizer-bronze-support-contract-and-elite-license"
+  end
+  if elite_sku == product_value
+    web = "https://store.imazen.io/products/imageresizer-elite-license"
   end
 
 
