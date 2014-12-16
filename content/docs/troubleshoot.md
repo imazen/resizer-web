@@ -155,7 +155,7 @@ The workaround is to use WIC or FreeImage for these requests. Any of the followi
 1. WicDecoder - Install, then add `&decoder=wic` to affected URLs. (best quality)
 2. WicBuilder - Install, then add `&builder=wic` to affected URLs. Faster, but slightly lower quality than #1 (nearly imperceptible)
 3. FreeImageDecoder - Install, then add `&decoder=freeimage`
-4. FreeImageBuilder - Install, then add '&builder=freeimage`. Slowest, but highest quality.
+4. FreeImageBuilder - Install, then add `&builder=freeimage`. Slowest, but highest quality.
  with `builder=freeimage` or `builder=wic`
 
 ## Performance issues or error messages when using a SAN.
