@@ -29,6 +29,7 @@ gem "rb-fsevent", :group => :development
 gem "webrat", :group => :development
 gem "rake", :group => :development
 gem "pry", :group => :development
+gem 'github-markdown', '~> 0.6.8'
 
 #gem "debugger", :group => :development
 #gem 'perftools.rb', :group => :development
