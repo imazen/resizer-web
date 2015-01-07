@@ -1,8 +1,0 @@
-* Update docs/configuration-all
-* Update /history
-* Add support calendar schedule
-* Add support contract PDFs
-* Add breadcrumbs
-* Style /blog
-* Finish contest-2013
-* add the +$100 '6-month upgrades' option in a few weeks.
