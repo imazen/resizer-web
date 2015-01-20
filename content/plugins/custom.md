@@ -14,8 +14,8 @@ As the authors of the library we have unique in-depth knowledge, and can create 
 
 Support contracts [include between 1 and 10 hours of custom coding per year](/support/contracts). While a tiny change can sometimes be implemented, documented, tested, and released in a single hour, the average improvement requires 3 hours, and the average custom plugin requires 8 hours.
 
-* A standard rate of $145/hr is applied, unless you have an existing agreement at a different rate.
-* An $850 job minimum is required for customers without a support contract.
+* An $980 job minimum and a standard rate of $245/hr is applied unless you have a support contract. 
+* Support contract customers receive a discounted hourly rate and are not subject to any job minimums.
 * Pre-payment of the estimated amount is required for all customers prior to beginning work.
 * We cannot reserve your time slot until we receive payment; it serves as a retainer to ensure both parties are available during the agreed time period to communicate and complete the project.
 
