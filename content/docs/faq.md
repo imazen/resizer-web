@@ -26,7 +26,7 @@ I'm getting OutOfMemory exceptions when I try to resize certain large images for
 I have a bundle with ImageResizer, but I see it's no longer available for sale. What gives?
 : Bundles were discontinued in February 2013, although all bundle purchases are still valid. You can find out any information you need about bundles [here](/plugins/bundles).
 
-I have a question about a license.
+I have a question about a license or payment.
 : Check out our store's own [faq page](https://store.imazen.io/faq) for questions on licenses.
 
 I just bought ImageResizer. When do I get my license key/special download link?
