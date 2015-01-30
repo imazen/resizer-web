@@ -13,7 +13,7 @@ This means that for now, you can't use ImageResizer and the Contrib.Cache Orchar
 
 ## Multi-tenanting
 
-While the [ImageResizer architecture is designed to make multi-tenanting support easy to implement](/docs/how/multi-tenanting), no Orchard guru has yet stepped forward to implement the `glue`. 
+While the [ImageResizer architecture is designed to make multi-tenanting support easy to implement](/docs/extend/multi-tenanting), no Orchard guru has yet stepped forward to implement the `glue`. 
 
 
 ## Building a gallery module for Orchard using ImageResizer
