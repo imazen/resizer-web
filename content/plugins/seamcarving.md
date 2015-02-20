@@ -32,3 +32,6 @@ Either run `Install-Package ImageResizer.Plugins.SeamCarving` in the NuGet packa
 
 1. Add ImageResizer.Plugins.SeamCarving.dll to your project
 2. Add `<add name="SeamCarving" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+
+Notice: This plugin is very resource intensive and requires a dedicated server to function in real time. Timeouts can occur when seam carving, as some images take longer to carve than others. For best results, use seam carving via the Managed API, and save the results to disk. The URL API can be used for providing real-time editing and object removal, but you will need powerful server hardware to make it responsive.
