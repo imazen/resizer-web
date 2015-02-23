@@ -2,6 +2,7 @@ Date: Jan 15, 2012
 Summary: I'm disappointed, but hopeful.
 Libs: -comments, plusone
 Title: Open Letter to the .NET community
+Flags: hidden
 
 # Open Letter to the .NET community, Jan 15, 2012
 

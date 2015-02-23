@@ -123,6 +123,10 @@ class Site < Hardwired::Bootstrap
       status 404
     end
 
+    get '/openletter' do 
+      redirect to ('http://www.nathanaeljones.com/openletter')
+    end
+
 
     get '/alljs/:scripts' do |scripts|
       scripts = scripts.split(',').map{|s| Base64.urlsafe_decode64(s)}
