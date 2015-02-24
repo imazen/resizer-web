@@ -1,4 +1,10 @@
 
+
+@media print { 
+ /* All your print styles go here */
+ .savetrees { display: none !important; } 
+}
+
 .slide-caption {
   max-width: 35%;
 }
@@ -21,6 +27,17 @@ ul.slides.clients li{
   padding-left:10px; 
   padding-right:10px;
   max-width:164px;
+}
+
+@media print {
+  .navbar {
+    .nav-collapse, .btn-navbar{
+      display:none;
+    }
+    a[href]:after {
+      content: none !important;
+    }
+  }
 }
 
 #page-title-inner {
