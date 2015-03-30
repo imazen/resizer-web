@@ -10,6 +10,7 @@ ImageResizer has always included source code under a very permissive license, al
 
 Version 1 was released to the public August 6, 2008 after 1.5 years of testing on several high-traffic sites.
 
+#### Version 2
 Version 2 was a complete rewrite, and was released to users of v1 in January 2009, and was published in May 2009. 
 
 V2 introduced IIS7 support (HttpModule instead of HttpHandler design), a nicer managed API, and support for Octree GIF quantization among other features. See [the V2 changelog for details](/docs/v2/changelog).
@@ -17,6 +18,8 @@ V2 introduced IIS7 support (HttpModule instead of HttpHandler design), a nicer m
 V2 was used by hundreds of developers, integrated into roughly a dozen content management systems, and used by hosting companies.
 
 After two years of improving V2, another rewrite was needed to allow future improvement. We maintained full compatibility with the V2 URL syntax, but overhauled the managed API.
+
+#### Version 3
 
 The goal of the V3 rewrite was to make everything open and extendable. V2 was a monolithic design that, while elegant and very concise, was hard to extend except through source code modification. V3 introduced the concept of Plugins and added an array of Events that can be used to customize the behavior of the pipeline.
 It also introduced a dedicated configuration section for the Resizer and its plugins.
@@ -28,6 +31,16 @@ The V3 core is under [an MIT-like license](/licenses/freedom). This license is m
 Some V3 plugins are under a [slightly more restrictive license](/licenses), but even those give you redistribution and sub-licensing rights. If your project needs a different license, [contact us](/support). We offer OEM, open-source, and integration licenses to fit every need.
 
 ImageResizer can be found on GitHub at [github.com/imazen/resizer](https://github.com/imazen/resizer). Our [release history for V3 may also help you locate changelog information](/releases).
+
+Due to the design of V3, we were able to maintain backwards compatibility through 4 years of steadily adding plugins, pipelines, and functionality. The v3 of 2014 resembles the v3 of 2011 little when it comes to capabilities; yet painless upgrades are possible.
+
+#### Version 4
+
+Version 4 is the first version of ImageResizer that is OSI-compliant. All software is available under the AGPL v3, and the ImageResizer Core and 18 plugins from the Essential edition are under the Apache 2 license.
+
+v4 introduces async support, requires .NET 4.5, and drops support for medium trust. It is highly backwards-compatible with v3, but does make some breaking changes to support new scenarios and functionality. 
+
+v4 also introduces a high-peroformance, high-quality image scaling component that can work side-by-side with GDI+, allowing up to 8x the throughput while retaining all the functionality and compatibility of the default pipeline.
 
 ### Imazen
 
