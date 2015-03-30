@@ -32,12 +32,12 @@ ruby:
     end
   end 
 
-- col = [SupportTier.elite, SupportTier.bronze, SupportTier.silver, SupportTier.gold]
+- col = [SupportTier.elite, SupportTier.bronze, SupportTier.silver, SupportTier.gold, SupportTier.oem]
 .row
   .span12
     p &nbsp;
 .row
-  .span8
+  .span9
     table.table.table-features.table-condensed
       thead
         tr
@@ -58,16 +58,25 @@ ruby:
               = label
             - col.map{|c| c.lengths.find{|prod| prod.support_months == months}}.each do |prod|
               td
-                == partial(:shopping_cart_link, {locals: {button_text: prod.price_usd_str, product_value: prod.sku}})
+                - if prod.nil?
+                  p Not Available
+                - else
+                  == partial(:shopping_cart_link, {locals: {button_text: prod.price_usd_str, product_value: prod.sku}})
         tr
           td.features-subhead &nbsp;
-          td colspan="4"
+          td colspan="5"
         tr
           th Licenses and Upgrades
-          td colspan="4"
+          td colspan="5"
         tr
-          td.features-subhead Permanent product license
+          td.features-subhead Permanent elite license
           == render_checkmarks(col, :lifetime_license)
+        tr
+          td.features-subhead 
+            | Includes OEM/SaaS license
+            a href="#note1"
+              sup 1
+          == render_checkmarks(col, :includes_oem)
         tr
           td.features-subhead Major upgrades during subscription
           == render_checkmarks(col, :major_upgrades)
@@ -76,7 +85,7 @@ ruby:
           == render_checkmarks(col, :early_access)
         tr
           td.features-subhead &nbsp;
-          td colspan="4"
+          td colspan="5"
         tr
           th Email Support
           == render_checkmarks(col, :email_support)
@@ -86,21 +95,21 @@ ruby:
         tr
           td.features-subhead
             | 24-hour response time
-            a href="#note1"
-              sup 1
+            a href="#note2"
+              sup 2
           == render_checkmarks(col, :response_24)
         tr
           td.features-subhead
             | Rapid 2 hour response time
-            a href="#note2"
-              sup 2
+            a href="#note3"
+              sup 3
           == render_checkmarks(col, :response_2)
         tr
           td.features-subhead &nbsp;
-          td colspan="4"
+          td colspan="5"
         tr
           th Hot-fix response time
-          td colspan="4"
+          td colspan="5"
         tr
           td.features-subhead 7 Business Days
           == render_checkmarks(col, :hotfix_7)
@@ -109,10 +118,10 @@ ruby:
           == render_checkmarks(col, :hotfix_2)
         tr
           td.features-subhead &nbsp;
-          td colspan="4"
+          td colspan="5"
         tr
           th Phone/Teamviewer Support
-          td colspan="4"
+          td colspan="5"
         tr
           td.features-subhead Employees Supported
           == render_values(col, :contacts) {|v| v.to_s}
@@ -122,13 +131,13 @@ ruby:
         tr
           td.features-subhead
             | Emergency Incidents
-            a href="#note3"
-              sup 3
+            a href="#note4"
+              sup 4
           == render_values(col, :emergency_incidents_yr) {|v|  "#{v} per year"}
 
         tr
           td.features-subhead &nbsp;
-          td colspan="4"
+          td colspan="5"
         tr
           th Architecture Planning/Q&A
           == render_hours(col, :architecture_hours_yr, "year")
@@ -142,13 +151,21 @@ ul
   li
     a#note1
     	| [1]
-    |  24-hour response time available Monday - Friday. Support requests sent on a Friday may be answered the following Monday.
+    |  The OEM/SaaS license is considered non-active until the user 
+    a href="mailto:support@imageresizing.net" contacts us 
+    | to agree on a scope for their project.
   li
     a#note2
       | [2]
-    |  During business hours.
+    |  24-hour response time available Monday - Friday. Support requests sent on a Friday may be answered the following Monday.
+
   li
     a#note3
       | [3]
-    |  Emergency Support Incidents are those that require assistance outside normal business hours.
+    |  During business hours.
+
+  li
+    a#note4
+      | [4]
+    | Emergency Support Incidents are those that require assistance outside normal business hours.
 

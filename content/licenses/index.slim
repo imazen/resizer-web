@@ -1,244 +1,225 @@
 title: Licenses - Image Resizer
-Layout: layout
 Icon: notes
-Libs: pricer, -comments, uservoice
+Libs: -comments, uservoice, license
 Aliases: /pricing /prices /buy
+Flags: unwrap
+Layout: layout
 
 h1 Licenses
 
 == content_for :banner do
-  #page-title
-    #page-title-inner
-      .container
-        .row
-          .span3
-            h2.without-icon
-              | Licenses
-          .span4
-            markdown: 
-              * [Resizer Freedom (**Essential**)](/licenses/freedom)
-              * [Resizer Domain (**Performance** and **Creative**)](/licenses/domain)
-              * [Resizer Enterprise (**Elite** and **Support Contracts**)](/licenses/enterprise)
+ 
+        
 
-          .span2
-            markdown:
-              * [PdfRenderer License](/licenses/pdfrenderer)
-              * [Resizer Trial License](/licenses/trial)
-              * [Resizer OEM License](/licenses/oem)
-               
-          .span3
-            markdown: 
-              * [Professional Client (redist EULA)](/licenses/proclient)
-              * [Resizer Professional (discontinued)](/licenses/pro)
-              * [Imazen Contributor Agreement](/licenses/contribute)
+.row.lrow.out style="padding-bottom: 50px; margin-right: 10px;"
+  h1.mainheader
+    a.header href="/support/contracts/compare"
+      | Support Contracts
 
+  .row-fluid
+    .lrow 
+      div.licensebox.span3 
+        div style="background-color: #CC7E00;"
+          h2.licensetitle Bronze
+          h3.licenseprice Starting at $949
+        ul.licensecontent
+          li 
+            strong Permanent Elite license
+          li Free major version upgrades while active
+          li 1 non-emergency support incident per month (business hours only)
+          li 24 hour response time (Mon-Fri)
+          li 1 point of contact supported
+          li 2 assisted installations per year
+          li 30 minutes architecture planning per year
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-bronze-support-contract-and-elite-license" class="btn btn-primary"
+            strong Buy Now
+          a href="/support/contracts/bronze" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span3 
+        div style="background-color: #999999;"
+          h2.licensetitle Silver
+          h3.licenseprice Starting at $3000
+        ul.licensecontent
+          strong Includes all Bronze features, plus:
+          li Fast 2 hour response time
+          li Hotfixes within 7 business days
+          li Unlimited employees supported
+          li Unlimited business-hours support incidents
+          li 1 emergency (24/7) incident per year
+          li 2 hours of architecture planning per year
+          li 3 hours of custom development per year
+          li Includes OEM/SaaS license
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-silver-support-contract-and-elite-license" class="btn btn-primary"
+            strong Buy Now
+          a href="/support/contracts/silver" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span3
+        div style="background-color: #D6B211;"
+          h2.licensetitle Gold
+          h3.licenseprice Starting at $6000
+        ul.licensecontent
+          strong Includes all Silver features, plus:
+          li Hotfixes within 2 business days
+          li Unlimited emergency support incidents
+          li 5 hours of architecture planning per year
+          li 10 hours of custom development per year
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-gold-support-contract-and-elite-license" class="btn btn-primary"
+            strong Buy Now
+          a href="/support/contracts/gold" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span3
+        div style="background-color: #2B8FE0;"
+          h2.licensetitle OEM
+          h3.licenseprice $2800
+        ul.licensecontent
+          strong This contract is intended for OEM (redistribution) or use in SaaS products. It includes:
+          li 24 hour response time (Mon-Fri)
+          li 1 designated point of contact
+          li 1 non-emergency support incident per month
+          li 4 hours of architecture planning
+          li 2 years of free major and minor upgrades
+          | See Silver or Gold options for a better tier of support.
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/oem-saas-support-contract" class="btn btn-primary"
+            strong Buy Now
+          a href="/support/contracts/oem" class="btn btn-primary"
+            strong Find Out More
 
-
-.buy-page style="position:relative"
-  span style="position:absolute; top:0px; right:0px;" 
-    <a href="http://store.imazen.io/">Go to store</a>
-  span style="position:absolute; top:0px; left:18px;"
-    a href="/plugins" View full plugin list
-  p.fineprint style="text-align:center"
-    | All editions include modifiable source code. 100% satisfaction guarantee, <a href="/purchase/refunds">or your money back</a>. All major credit cards accepted.
-  .pricer.p5cols
-    .col.grey
-      .header
-        .product Essential
-        .price
-          | free
-        .payment open-source
-      .details
-        ul
-          li.tooltop-container
-            .tooltip
-              span
-              | Leverage a highly-refined, standardized URL API. See riapi.org for standardization effort status.
-            | RESTful URL-based Imaging API
+.row.lrow.out style="margin-top: -20px; padding-bottom: 30px; margin-right: 10px;"
+  h1.mainheader.lic License Packages
+  .row-fluid
+    .lrow
+      div.licensebox.span3
+        div style="background-color: #C62AD4;"
+          h2.licensetitle Essential
+          h3.licenseprice Free
+        ul.licensecontent
+          li RESTful URL-based Imaging API
           li Mirrored URL and Managed APIs
-          li Intuitively crop, resize, rotate, flip, constrain, and encode.
-          li.tooltop-container
-            .tooltip
-              span
-              | The PdfRenderer plugin is GPL licensed, which may be a problem for some users.
-            | Render PDFs into images*
-
-          li.last 19 plugins cover most common tasks
-      .signup
-        a href="/download"
-          span
-          | Download Now
-      .signup
-        a href="/plugins/editions/free" Details
-    .col.green
-      .header
-        .product Performance
-        .price
-          span $
-          | 249
-          span 00
-        .payment per domain
-      .details
-        ul
-          li
-            strong Includes all Free features, plus:
+          li Intuitively crop, resize, rotate, flip, constrain and encode
+          li Render PDFs into images
+          li 19 plugins cover most common tasks
+          li Includes TinyCache for small websites
+        .buy-buttons
+          a href="/plugins/editions/free" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span3 
+        div style="background-color: #0FAD07;"
+          h2.licensetitle Performance
+          h3.licenseprice $249
+        ul.licensecontent
+          strong Includes all Essential Features, plus:
           li Free minor version upgrades
-          li.tooltop-container
-            .tooltip
-              span
-              | With included plugins: DiskCache, DiskSourceCache, MemOutputCache, and MemSourceCache
-            | Disk + Memory input/output caching
-          li.tooltop-container
-            .tooltip
-              span
-              | With includedplugins: SqlReader, AzureReader, and S3Reader
-            | SQL, Azure, and Amazon S3 support
+          li Disk + Memory input/output caching for terabytes of images
+          li SQL, Azure, and Amazon S3 support
           li Amazon CloudFront & Azure CDN compatible
           li 8-bit PNG/GIF & animated GIF processing
           li Secure remote image processing
-          li.tooltop-container
-            .tooltip
-              span
-              | A floating license can be used on several different domains - but not at the same time.
-              p A wildcard domain, such as *.example.com, allows you to use the software on multiple subdomains without extra fees. *.example.com would allow the software to run on 'img.example.com' and 'www.example.com' at the same time.
-              p See licenses -> Resizer Domain License for details
-            | Floating wildcard domain license.
-      .signup
-          a href="https://store.imazen.io/products/imageresizer-performance-license"
-            span
-            | Add to cart
-      .signup
-        a href="/plugins/editions/performance" Details
-    .col.yellow
-      .header
-        .product Creative
-        .price
-          span $
-          | 499
-          span 00
-        .payment per domain
-        .pricer-label Most popular
-      .details
-        ul
           li 
-            strong Includes all Performance features, plus:
+            a href="/licenses/domain"
+              | 1 Wildcard domain license
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-performance-license" class="btn btn-primary"
+            strong Buy Now
+          a href="/plugins/editions/performance" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span3 
+        div style="background-color: #FC9100;"
+          h2.licensetitle Creative
+          h3.licenseprice $499
+        ul.licensecontent
+          strong Includes all Performance features, plus:
           li Flexible text & image overlay support
           li Image filtering suite
-          li Content-aware image resizing
-          li Advanced file format support (PSD, CR2, DNG, etc)
+          li Advanced file format support (PSD, CR2, CNG, etc.)
           li Optional WIC processing pipeline (2-8x performance increase)
           li Smart whitespace removal (great for product photos!)
           li Metadata preservation
-      .signup
-          a href="https://store.imazen.io/products/imageresizer-creative-license"
-            span
-            | Add to cart
-      .signup
-        a href="/plugins/editions/creative" Details
-    .col.red
-      .header
-        .product Elite
-        .price
-          span $
-          | 849
-          span 00
-        .payment 
-          | per 
-          strong enterprise
-        .pricer-label All-inclusive
-      .details
-        ul
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-creative-license" class="btn btn-primary"
+            strong Buy Now
+          a href="/plugins/editions/creative" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span3 
+        div style="background-color: #FA2F2F;"
+          h2.licensetitle Elite
+          h3.licenseprice $849
+        ul.licensecontent
+          strong Includes all Creative features, plus:
           li 
-            strong Includes all Creative features, plus:
-          li DRM-free Enterprise-level license
-          li Automatic and manual red-eye detection and removal
+            | DRM-free 
+            a href="/licenses/enterprise"
+              | Enterprise-wdie license
+            |  to all plugins
+          li Automatic and manual red-eye detection
           li Facial detection and smart cropping
           li PSD editing and rendering
           li Batch processing and .zip file creation
-      .signup
-          a href="https://store.imazen.io/products/imageresizer-elite-license"
-            span
-            | Add to cart
-      .signup
-        a href="/plugins/editions/elite" Details
-    .col.bronze
-      .header
-        .product Bronze 6 MO
-        .price
-          span $
-          | 949
-          span 00
-        .payment 
-          | per 
-          strong enterprise
-        .pricer-label Best Value
-      .details
-        ul
-          li 
-            strong Includes all Elite features, plus:
-          li 6 months of free major version upgrades
-          li Same business day priority support
-          li Best-effort hotfix delivery
-          li 1 support incident per month
-          li 1 free assisted installation
-          li 30 minute free consultation with author
-          li 1 hour coding assistance
-          li Support is limited to 1 designated employee
-      .signup
-        a href="/support/contracts"
-          span
-          | View Contracts
-
-
-
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-elite-license" class="btn btn-primary"
+            strong Buy Now
+          a href="/plugins/editions/elite" class="btn btn-primary"
+            strong Find Out More
 
 
   div style="clear:both"
 
-.row
-  .span4
-    markdown:
-      ## Overview
-      The core and [18 plugins](/plugins/free) are free and open-source. No restrictions, no money, and no strings attached. They are provided under [a modified MIT license called the Freedom license](/licenses/freedom). 
+.container
+  .row
+    .span4
+      markdown:
+        ## Overview
+        The ImageResizer core library and [18 plugins in the Essential edition](/plugins/editions/free) are free and open-source. In version 4, they are provided under the [Apache 2 license](/licenes/apache); in v3 they are provided under [the Resizer Freedom license](/licenses/freedom). 
 
-      Development of this project is funded by people purchasing [the enhanced editions (which include additional plugins)](/buy) and [support contracts](/support/contracts). 
+        Development of ImageResizer is funded by our commerical licenses ([Performance](/plugins/editions/performance), [Creative](/plugins/editions/creative), [Elite](/plugins/editions/elite), [OEM](/licenses/oem), and [SaaS](/licenses/saas)) and [support contracts (which include permanent licenses)](/support/contracts). All liceneses include source code and permit modification; most permit some redistribution. 
 
-      The enhanced editions are also *nearly* open-source. They all include source code and encourage modification. Patches are accepted through GitHub. Redistribution and sub-licensing rights vary by license, however. 
+        All Imazen software is open-source, and your funds help (both directly, and indirectly) maintain dozens of critical low-level, permissively-licensed OSS libraries across a wide spectrum. Visit [our GitHub profile](https://github.com/imazen) to see some of the work we maintian. 
 
-      Every licenese has been written to provide maximum freedom, minimum restrictions, and maximum simplicity. 99% of use cases should be covered. If yours is not, e-mail **sales@imageresizing.net**. Please note we will not sell plugins individually.
-  .span4
-    markdown:
-      ## List of licenses
+        If you are able to comply with the AGPL v3 and provide the public with access to the complete source code for your website/service under any [AGPL v3](/licenses/agpl) acceptable terms (which includes MIT, GPLv3, and [Apache 2](/licenes/apache)), then you may use all ImageResizer plugins for free under the terms of the [AGPL v3](/licenses/agpl).
+    .span4
+      markdown:
+         ## Index of licenses
 
-       * [Freedom][freedom]: The [core and 18 free plugins](/plugins/free) are provided under this license.
-       * [Resizer Trial][trial]: You get this for free. Allows unlimited development and local testing of the software, without time-limits.
-       * [Resizer Domain][domain]: The [Performance](/plugins/editions/performance) and [Creative](/plugins/editions/creative) editions are provided under this license.
-       * [Resizer Enterprise][enterprise]: The [Elite edition](/plugins/editions/performance) and [support contracts](/support/contracts) use this license.
-       * [Resizer OEM][oem]: You buy this for business-wide use and resale. Custom pricing; contact sales@imageresizing.net.
-       * [Resizer Professional Client][proclient]: This license can be given to you by a holder of an [Enterprise][enterprise] license, for use as part of a delivered project. It can also be sold to you by a holder of the [OEM][oem] license as part of a software package.
+         
+         * [Apache 2][apache]
+         * [Resizer Freedom][freedom]
+         * [Resizer Trial][trial]: You get this for free. Allows unlimited development and local testing of the software, without time-limits.
+         * [Resizer Domain][domain]: The [Performance](/plugins/editions/performance) and [Creative](/plugins/editions/creative) editions are provided under this license.
+         * [Resizer Enterprise][enterprise]: The [Elite edition](/plugins/editions/performance) and [support contracts](/support/contracts) use this license.
+         * [Resizer OEM][oem]: You buy this for business-wide use and resale. Available for purchase [here](https://store.imazen.io/products/oem-saas-support-contract).
+         * [Resizer SaaS][saas]: You buy this for using ImageResizer in a SaaS product. Available for purchase [here](https://store.imazen.io/products/oem-saas-support-contract).
+         * [Resizer Professional Client][proclient]: This license can be given to you by a holder of an [Enterprise][enterprise] license, for use as part of a custom development project. It can also be sold to you by a holder of the [OEM][oem] license as part of a software package.
+         * [AGPLv3][agpl]
+         * [PdfRenderer License](/licenses/pdfrenderer)
+         * [Imazen Contributor Agreement](/licenses/contribute)
+         * [Imazen Software Grant and Corporate Contributor License Agreement](/licenses/contribute-corp)
 
-     
-      [freedom]: /licenses/freedom  "Resizer Freedom License"
-      [trial]: /licenses/trial  "Resizer Trial License"
-      [domain]: /licenses/domain  "Imazen Domain License"
-      [pro]: /licenses/pro  "Resizer Professional License"
-      [proclient]: /licenses/proclient  "Resizer Professional Client License"
-      [enterprise]: /licenses/enterprise  "Resizer Enterprise License"
-      [oem]: /licenses/oem  "Resizer OEM License"
-      [contribute]: /licenses/contribute  "Imazen Contributor Agreement"
-  .span4
-    markdown:
-      ## Top questions from our [Sales FAQ](/docs/faq#licensing)
-      Q: Do licenses expire?
-      : No, even support contracts include permanent licenses. Unless you have a support contract, you *will* have to pay to upgrade when a new major version is released.
-      
-      Q: Can I buy plugins individually?
-      : No &mdash; they're designed to work together. Plugins can only be purchased in the editions you see here.
+        [apache]: /licenses/apaache  "Apache 2 License"
+        [agpl]: /licenses/agpl  "GNU Affero General Public License v3"
+        [freedom]: /licenses/freedom  "Resizer Freedom License"
+        [trial]: /licenses/trial  "Resizer Trial License"
+        [domain]: /licenses/domain  "Imazen Domain License"
+        [pro]: /licenses/pro  "Resizer Professional License"
+        [proclient]: /licenses/proclient  "Resizer Professional Client License"
+        [enterprise]: /licenses/enterprise  "Resizer Enterprise License"
+        [oem]: /licenses/oem  "Resizer OEM License"
+        [saas]: /licenses/oem  "Resizer SaaS License"
+        [contribute]: /licenses/contribute  "Imazen Contributor Agreement"
+    .span4
+      markdown:
+        ## Top questions from our [Sales FAQ](https://store.imazen.io/faq)
+        Q: Do licenses expire?
+        : No, even support contracts include permanent licenses. Unless you have a support contract, you *will* have to pay to upgrade when a new major version is released.
+        
+        Q: Can I buy plugins individually?
+        : No &mdash; they're designed to work together. Plugins can only be purchased in the editions you see here.
 
-      Q: Can I upgrade from one license to another? 
-      : Our offline license keys can't be changed, which makes this impossible. We encourage you to select a license  appropriate for your future needs when possible.
-      
-      Q: What can I use for free?
-      : All 19 plugins in the [Essential Edition](/plugins/editions/essential) and all sample projects can be used under the [Freedom license](/licenses/freedom). Check your diagnostics page to verify you're not using any paid plugins.
-
+        Q: Can I upgrade from one license to another? 
+        : Our permanent, offline license keys can't be changed, which makes this impossible. We encourage you to select a license  appropriate for your future needs when possible.
+        
+        Q: What can I use for free?
+        : The [Essential Edition](/plugins/editions/essential) and all sample projects. Check your diagnostics page to verify you're not using any paid/AGPL3 plugins.
 

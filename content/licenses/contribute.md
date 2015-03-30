@@ -1,4 +1,7 @@
-# Imazen Contributor Agreement V1.0
+textclass: t legal
+Libs: -comments
+
+# Imazen Contributor Agreement
 
 *This contribution agreement grants us non-exclusive copyright and patent licenses to your contributions, and absolves you of warranty obligations. It is based on the Apache Individual Contributor License Agreement.*
 
@@ -9,15 +12,17 @@ When contributing source code to any Imazen project, your contributions must be 
     - [Name] [Date]
 
 
-This contribution agreement is identical to the *Apache Individual Contributor License Agreement ("Agreement") V2.0* found at [apache.org/licenses](http://www.apache.org/licenses/), except for the following changes:
+
+This contribution agreement is identical to the *Apache Individual Contributor License Agreement V2.0* found at [apache.org/licenses](http://www.apache.org/licenses/), except for the following changes:
 
 1. Your agreement is with Imazen LLC, not the Apache Software Foundation, and the term "the Foundation" has been replaced with "the Managing Organization".
 2. The license preface has been shortened and the requirement for a physical signature has been removed.
 3. The fields for a physical copy have been moved to the bottom of the page.
 4. You may opt-out of this agreement for future contributions through an explicit statement, although your contributions will not be accepted.
 
-## Imazen Contributor Agreement V1.0
+## Imazen Contributor Agreement v1.0
 
+Imazen Contributor Agreement ("Agreement") v1.0
 
 ### License Preface
 
@@ -44,9 +49,9 @@ and interest in and to Your Contributions.
 
 1. Definitions.
 
-   "The Managing Organization" shall mean "Imazen LLC".
+   * "The Managing Organization" shall mean "Imazen LLC".
 
-   "You" (or "Your") shall mean the copyright owner or legal entity
+   * "You" (or "Your") shall mean the copyright owner or legal entity
    authorized by the copyright owner that is making this Agreement
    with the Managing Organization. For legal entities, the entity making a
    Contribution and all other entities that control, are controlled
@@ -57,7 +62,7 @@ and interest in and to Your Contributions.
    otherwise, or (ii) ownership of fifty percent (50%) or more of the
    outstanding shares, or (iii) beneficial ownership of such entity.
 
-   "Contribution" shall mean any original work of authorship,
+   * "Contribution" shall mean any original work of authorship,
    including any modifications or additions to an existing work, that
    is intentionally submitted by You to the Managing Organization for inclusion
    in, or documentation of, any of the products owned or managed by
@@ -98,12 +103,12 @@ and interest in and to Your Contributions.
    litigation is filed.
 
 4. You represent that you are legally entitled to grant the above
-   license. If your employer(s) has rights to intellectual property
+   license. **If your employer(s) has rights to intellectual property
    that you create that includes your Contributions, you represent
    that you have received permission to make Contributions on behalf
    of that employer, that your employer has waived such rights for
    your Contributions to the Managing Organization, or that your employer has
-   executed a separate Corporate CLA with the Managing Organization.
+   executed a separate [Corporate CLA with the Managing Organization](/licenses/contribute-corp).**
 
 5. You represent that each of Your Contributions is Your original
    creation (see section 7 for submissions on behalf of others).  You
@@ -134,7 +139,7 @@ and interest in and to Your Contributions.
    which you become aware that would make these representations
    inaccurate in any respect.
 
-** A digital statement in a commit message or e-mail is sufficient for our purposes. However, if you have decided to submit a scanned copy instead, please complete the following fields. **
+**A digital statement in a commit message or e-mail is sufficient for our purposes. However, if you have decided to submit a scanned copy instead, please complete the following fields.**
 
 
     Full name: ______________________________________________________

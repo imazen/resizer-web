@@ -15,7 +15,7 @@ See the [purchase page](/buy) for a cleaner overview.
 
 | Edition | Essential | Performance | Creative | Elite 
 | --- | --- | --- | --- | --- |
-| License Type | Freedom | 1 Wildcard domain (floating) | 1 Wildcard domain (floating) | Enterprise-wide  DRM-free
+| License Type | Freedom | 1 Wildcard domain  | 1 Wildcard domain  | Enterprise-wide  DRM-free
 | Price | free | $249 USD | $499 USD | $849 USD 
 | Free minor (3.X) upgrades |  | yes | yes | yes
 | RESTful Imaging API | yes | yes | yes | yes

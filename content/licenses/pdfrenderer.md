@@ -1,43 +1,50 @@
+Libs: -comments
+
 # PdfRenderer licensing
 
 
-## The long winded explanation
+## TLDR; PdfRenderer is GPLv3 or AGPlv3, depending on which version of Ghostscript you use it with. This  affects your apps.
 
-This plugin (PdfRenderer) uses the Ghostscript library, which is licensed [under the GPL v3](http://www.gnu.org/copyleft/gpl.html).
+## The long explanation
 
-Therefore, this plugin (PdfRenderer) is also made available under the GPL v3, 
-as the current version links dynamically to the Ghostscript library. 
+PdfRenderer uses Ghostscript. Ghostscript v9.06 and earlier are licensed [under the GPL v3](http://www.gnu.org/copyleft/gpl.html); 9.07 and later are licensed [under the AGPL v3](/licenses/agpl).
 
-While the GPL v3 does not allow us to license the binaries under the MIT license 
-(since they are derivative works when used with the ghostscript dlls), 
-we can license the source under the MIT license. 
+Therefore, the PdfRenderer binaries are also made available under both the GPL v3 or the AGPL v3, as PdfRenderer (in its current form) links dynamically to the Ghostscript library. 
+
+While the GPL v3 and AGPLv3 do not allow us to license the binaries under the MIT license 
+(since they are derivative works when used with the ghostscript DLLs), 
+we can license the *source* under the MIT license. 
 
 This allows any future user to take the source code and modify it to either 
 
- * (a) not use ghostscript, or 
+ * (a) replace Ghostscript with the BSD-licensed [PDFium (foxit)](https://code.google.com/p/pdfium/) and (optionally) LGPL-licensed [PDFiumViewer](https://github.com/pvginkel/PdfiumViewer/issues/12)
  * (b) use ghostscript via an external executable, and therefore lift the GPL v3 requirement.
 
-Be aware that (unlike any of the other plugins), this places restrictions on the binaries of any code 
-that uses the PdfRenderer plugin; because it too becomes under the GPL, 
-in addition to any other license it is under.
+Ghostscript has serious issues with multi-tenanting, and eventually
+works itself into an invalid state over time, with some PDFs. PDFium might replace one set of bugs with another, but it seems like a very useful experiment, and would certainly fix the licensing issues (as would using Ghostscript in a separate process).
 
+
+** Be aware that (unlike other plugins), the use of Ghostscript places restrictions on the binaries of any code 
+that uses the PdfRenderer plugin; because it too becomes under the GPL (or AGPL), 
+in addition to any other license it is under.**
+
+## If you are using Ghostscript 9.06 and earlier
 If you are not distributing binaries of your code which uses the PdfRenderer plugin, 
 or are only using them on your web server, it is unlikely you need to be concerned about this.
 
-However, **if you are including this plugin as part of a product or deliverable, 
-you should make sure you understand the implications**.
+## If you are using Ghostiscript 9.07 or later, OR if you are conveying/distributing your software in any way...
 
-One way to fix this licensing problem would be to have a version which uses the 
-GhostScript executables instead of the DLL. It may have reduced performance, 
-but would not require the plugin to be GPL licensed.
+You will need to comply with the terms of the [AGPLv3](/licenses/agpl)
 
 If you are interested in funding development of a GPL-free version, please contact support@imageresizing.net.
 
-**To sum up: Compiled versions which use Ghostscript are under the GPL v3. Source is under MIT or GPL v3, your pick**. 
+**To sum up: Compiled versions which use Ghostscript are under the GPL v3 or AGPL v3. Source is under MIT, GPL v3, or AGPL v3, your pick**. 
 
-### GPL v3 License
+### Licenses
 
-[It's long, click here](http://www.gnu.org/copyleft/gpl.html).
+[GPL v3](http://www.gnu.org/copyleft/gpl.html).
+[AGPL v3](/licenses/agpl)
+
 
 ## MIT License (only on source code)
 

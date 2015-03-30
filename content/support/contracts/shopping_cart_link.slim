@@ -5,6 +5,7 @@ ruby:
   silver_skus = ["Silver1YR","Silver2YR" ,"Silver6MO"]
   bronze_skus = ["Bronze1YR" ,"Bronze2YR" , "Bronze6MO"]
   elite_sku = "R3Elite"
+  oem_sku = "OEMSaaS"
   web = ""
   if gold_skus.include? product_value
     web = "https://store.imazen.io/products/imageresizer-gold-support-contract-and-elite-license"
@@ -17,6 +18,9 @@ ruby:
   end
   if elite_sku == product_value
     web = "https://store.imazen.io/products/imageresizer-elite-license"
+  end
+  if oem_sku == product_value
+    web = "https://store.imazen.io/products/oem-saas-support-contract"
   end
 
 

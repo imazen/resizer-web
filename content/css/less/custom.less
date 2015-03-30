@@ -5,6 +5,58 @@
  .savetrees { display: none !important; } 
 }
 
+
+.legal table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 14px;
+
+  > thead{
+    > tr {
+      > th,
+      > td {
+        padding: 8px;
+        line-height: 14px;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 8px;
+        line-height: 14px;
+        vertical-align: top;
+        border-bottom: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid #ddd;
+  }
+
+  // Nesting
+  .table {
+    background-color: transparent;
+  }
+}
+
+
 .slide-caption {
   max-width: 35%;
 }

@@ -1,8 +1,13 @@
 title: Resizer Freedom License
+Libs: -comments
 
 #Resizer Freedom license
 
-Used by the Resizer Core, the [17+ free plugins](/plugins) in the ImageResizer.Plugins.Basic namespace, and the [Logging plugin](/plugins/logging).
+In ImageResizer V4, software published under the Resizer Freedom license is instead provided under the more permissive [Apache License 2.0][apache]. 
+
+Nearly all ImageResizer V4 “Essential Edition” plugins offered by Imazen may be used under the terms of the Apache License 2.0. See [LICENSE.md in the project root for details](https://github.com/imazen/resizer/blob/develop/LICENSE.md).
+
+In ImageResizer V3, this license is used by the Resizer Core, the [17+ free plugins](/plugins) in the ImageResizer.Plugins.Basic namespace, and the [Logging plugin](/plugins/logging).
 
 ##License summary:
 
@@ -58,4 +63,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+
+[freedom]: /licenses/freedom  "Resizer Freedom License"
+[trial]: /licenses/trial  "Resizer Trial License"
+[pro]: /licenses/pro  "Resizer Professional License"
+[proclient]: /licenses/proclient  "Resizer Professional Client License"
+[enterprise]: /licenses/enterprise  "Resizer Enterprise License"
+[oem]: /licenses/oem  "ImageResizer OEM License"
+[saas]: /licenses/saas "Imazen SaaS License"
+[domain]: /licenses/domain "Imazen Domain License"
+[apache]: /licenses/apache "Apache License"
+[agpl]: /licenses/agpl "GNU Affero General Public License"
 

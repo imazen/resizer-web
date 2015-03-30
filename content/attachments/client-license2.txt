@@ -1,7 +1,3 @@
-textclass: t legal
-Libs: -comments
-Aliases: /licenses/proclient
-
 #ImageResizer Professional Client License v2.0
 
 
@@ -21,13 +17,13 @@ You can purchase a full license at http://imageresizing.net/ for a very reasonab
 
 ## Summary - For Providers
 
-As a holder of an [Enterprise][enterprise] or [OEM][oem] license, you may redistribute ImageResizer (as part of a larger software project) to a paying Client, along with this license.
+As a holder of an Enterprise or OEM license, you may redistribute ImageResizer (as part of a larger software project) to a paying Client, along with this license.
 
 This permits a developer or business to integrate ImageResizer on behalf of a Client, without the need for the client to purchase an additional license. The developer may provide both source code and binaries to the Client.
 
-The Provider must include [a plain-text copy of this license](/attachments/client-license2.txt) with the Project provided to the client, and should also communicate to the client the restrictions inherent in this license. The Provider must also include a copy of the [Apache 2](/licenses/apache) license, which applies to a subset of the Software.
+The Provider must include a plain-text copy of this license with the Project provided to the client, and should also communicate to the client the restrictions inherent in this license. The Provider must also include a copy of the Apache 2 license, which applies to a subset of the Software.
 
-This license is very restrictive, but the Client can always purchase a full license at http://imageresizing.net/ for a very reasonable fee if the Client needs to perform in-house development with the Software. The Client may also use the software indefinitely for testing purposes under the [Trial][trial] license.
+This license is very restrictive, but the Client can always purchase a full license at http://imageresizing.net/ for a very reasonable fee if the Client needs to perform in-house development with the Software. The Client may also use the software indefinitely for testing purposes under the Trial license.
 
 ## License summary
 
@@ -91,11 +87,11 @@ Unlike the license terms below, content above this sentence is not legally bindi
 
 ### 2. How you should receive this license
 
-You, the Client, should be receiving a copy of this license from a Provider who has purhcased an [OEM][oem] or [Enterprise][enterprise] license from the Licensor. You should also recieve copies of alternate licenses, licenses which only apply to portions of the Software, and copyright notices.
+You, the Client, should be receiving a copy of this license from a Provider who has purhcased an OEM or Enterprise license from the Licensor. You should also recieve copies of alternate licenses, licenses which only apply to portions of the Software, and copyright notices.
 
-If the Provider purchased an [OEM license][oem], you should be recieving the Software *only* as part of a Larger Project that you have purchased from the Provider, and which is specifically included an a scope agreement between the Provider and Licensor. Proof of the Client’s transaction with the Provider must exist.
+If the Provider purchased an OEM license, you should be recieving the Software *only* as part of a Larger Project that you have purchased from the Provider, and which is specifically included an a scope agreement between the Provider and Licensor. Proof of the Client’s transaction with the Provider must exist.
 
-If the Provider does not have an OEM license, but holds an [Enterprise][enterprise] license, You should be recieving the Software *only* as part of a custom, bespoke software project that the Provider has developed for You, the Client. Proof of the contracting relationship and of exchange of payment between the Client and the Provider must exist. 
+If the Provider does not have an OEM license, but holds an Enterprise license, You should be recieving the Software *only* as part of a custom, bespoke software project that the Provider has developed for You, the Client. Proof of the contracting relationship and of exchange of payment between the Client and the Provider must exist. 
 
 Under no condition may the Client be anonymous to the Provider, nor may the Provider publish software which both includes the Software and competes with the Licensor’s Software or other software previously published by the Licensor.
 
@@ -148,7 +144,7 @@ This License does NOT permit
  * Installation for use by other parties. For example, this DOES NOT grant a hosting provider the right to install the software for customer use unless that customer has purchased a license separately.
  * Reselling hosted usage of the software (Software as a Service). 
 
-Nearly all of these restrictions can be lifted if you [purchase the appropriate license from the Licensor](http://imageresizing.net/licenses), such as a [Domain][domain], [enterprise-wide][enterprise], [SaaS][saas], or [OEM][oem] license. 
+Nearly all of these restrictions can be lifted if you purchase the appropriate license from the Licensor (http://imageresizing.net/licenses), such as a Domain, enterprise-wide, SaaS, or OEM license. 
 
 The restrictions contained within this license shall not prohibit you from exercising rights granted by a different license. For example, you may choose to use Apache 2-licensed portions of the work under the terms of the Apache 2 license, and modify and redistribute those portions as permitted by the Apache 2 license agreement. 
 
@@ -165,7 +161,7 @@ If You institute patent litigation against any entity (including a cross-claim o
 
 Unless You explicitly state otherwise, by submitting any Contribution to the Licensor for inclusion in the Work, you grant the Licensor a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sub-license, and distribute the Work and such Derivative Works in Source or Object form.
 
-In addition, unless You explicitly state otherwise, any Contribution submitted for inclusion in the Work by You to the Licensor shall be implicitly released by You under the terms and conditions of the [Imazen Contributor Agreement](/licenses/contribute) AND (if applicable) the  [Imazen Software Grant and Corporate Contributor License Agreement](/licences/contribute-corp), without any additional terms or conditions.
+In addition, unless You explicitly state otherwise, any Contribution submitted for inclusion in the Work by You to the Licensor shall be implicitly released by You under the terms and conditions of the [Imazen Contributor Agreement](http://imageresizing.net/licenses/contribute) AND (if applicable) the  [Imazen Software Grant and Corporate Contributor License Agreement](http://imageresizing.net/licences/contribute-corp), without any additional terms or conditions.
 
 Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with the Licensor regarding such Contributions.
 
@@ -192,13 +188,13 @@ In no event and under no legal theory, whether in tort (including negligence), c
 
 
 
-[freedom]: /licenses/freedom  "Resizer Freedom License"
-[trial]: /licenses/trial  "Resizer Trial License"
-[pro]: /licenses/pro  "Resizer Professional License"
-[proclient]: /licenses/proclient  "Resizer Professional Client License"
-[enterprise]: /licenses/enterprise  "Resizer Enterprise License"
-[oem]: /licenses/oem  "ImageResizer OEM License"
-[saas]: /licenses/saas "Imazen SaaS License"
-[domain]: /licenses/domain "Imazen Domain License"
-[apache]: /licenses/apache "Apache License"
-[agpl]: /licenses/agpl "GNU Affero General Public License"
+http://imageresizing.net/licenses/freedom  "Resizer Freedom License"
+http://imageresizing.net/licenses/trial  "Resizer Trial License"
+http://imageresizing.net/licenses/pro  "Resizer Professional License"
+http://imageresizing.net/licenses/proclient  "Resizer Professional Client License"
+http://imageresizing.net/licenses/enterprise  "Resizer Enterprise License"
+http://imageresizing.net/licenses/oem  "ImageResizer OEM License"
+http://imageresizing.net/licenses/saas "Imazen SaaS License"
+http://imageresizing.net/licenses/domain "Imazen Domain License"
+http://imageresizing.net/licenses/apache "Apache License"
+http://imageresizing.net/licenses/agpl "GNU Affero General Public License"

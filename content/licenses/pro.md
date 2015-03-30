@@ -1,10 +1,13 @@
-title: Resizer Professional License
-warning: This license will be retired on Feb. 1st, 2013
+title: Resizer Personal License
+warning: This license does not apply to any purchases after Feb. 1st, 2013
+Libs: -comments
 
-# Resizer Personal (Professional) license
+# (deprecated) Resizer Personal license
 
 
-The [paid plugin bundles](/plugins/bundles) can be purchased under this license. 
+This license was discontinued on on Feb. 1st, 2013. Unless you purchased a  [plugin bundle](/plugins/bundles) prior to that date, these terms do not apply to you. 
+
+This license has also been referred to as the “Resizer Professional License”.
 
 ## License summary
 

@@ -52,9 +52,15 @@ ruby:
 
     - if contract.lifetime_license && contract.major_upgrades
       markdown:
-       This support contract includes a permanent, [Enterprise-wide Elite license](/plugins/editions/elite). You will be able to continue using the product after your subscription expires. While your support contract is active, you will receive free upgrades to all software included in your license. Major releases published *after* your contract expires are *not* included.
+        This support contract includes a permanent, [Enterprise-wide Elite license](/plugins/editions/elite). You will be able to continue using the product after your subscription expires. While your support contract is active, you will receive free upgrades to all software included in your license. Major releases published *after* your contract expires are *not* included.
 
-       Features include:
+      - if contract.includes_oem
+        markdown:
+
+         This contract also includes an inactive [OEM/SaaS license](/licenses/oem). **To activate this license, you must [contact us](mailto:support@imageresizing.net) to agree on a scope for your project.**
+
+      markdown:
+        Features include:
     
 
     - if contract.response_2
@@ -113,10 +119,10 @@ ruby:
           - contract.lengths.each do |prod|
             td
               == partial(:shopping_cart_link, {locals: {button_text: prod.price_usd_str, product_value: prod.sku}})
-         
-        tr
-          td.feature-subhead Discount
-          == render_cells(contract.lengths){|prod| prod.percent_discount == 0 ? "" : "%.f\%" % prod.percent_discount}
+        -unless contract.lengths.length < 2
+          tr
+            td.feature-subhead Discount
+            == render_cells(contract.lengths){|prod| prod.percent_discount == 0 ? "" : "%.f\%" % prod.percent_discount}
         tr
           td.features-subhead Business Hours Incidents
           == render_numbers(contract,:total_support_incidents)
@@ -132,9 +138,10 @@ ruby:
         tr
           th Architecture/Q&A/Preventative Consulting
           == render_hours(contract,:total_architecture_hours)
-        tr
-          th Custom Development
-          == render_hours(contract,:total_dev_hours)
+        -unless contract.dev_hours_yr == 0
+          tr
+            th Custom Development
+            == render_hours(contract,:total_dev_hours)
         tr
           th Assisted Installs
           == render_numbers(contract,:total_assisted_installs)

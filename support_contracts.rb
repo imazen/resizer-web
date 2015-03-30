@@ -15,6 +15,7 @@ class SupportTier
 
   attr_accessor :response_time_hours
   attr_accessor :hotfix_time_days
+  attr_accessor :includes_oem
 
 
   def total_of(member, divisor = 1, ceil = false)
@@ -90,6 +91,7 @@ class SupportTier
     @price_usd = 849
     @min_dev_hours = 0
     @min_architecture_hours = 0
+    @includes_oem = false
     @lengths = []
     @lengths << create_support_sku(6,849,'R3Elite')
     @lengths << create_support_sku(12,849,'R3Elite')
@@ -146,6 +148,7 @@ class SupportTier
     @lengths << create_support_sku(6,3000,'Silver6MO')
     @lengths << create_support_sku(12,5000,'Silver1YR')
     @lengths << create_support_sku(24,8000,'Silver2YR')
+    @includes_oem = true
     
   end
 
@@ -165,6 +168,27 @@ class SupportTier
     @lengths << create_support_sku(24,17000,'Gold2YR')
     
   end
+
+  def set_oem_tier
+    set_elite_tier
+    @dev_hours_yr = 0
+    @name = "OEM/SaaS"
+    @target_customer = 'Startup'
+    @includes_oem = true
+    @price_usd = 2800
+    @architecture_hours_yr = 2
+    @contacts = 1
+    @support_incidents_mo = 1
+    @response_time_hours = 24
+    @major_upgrades = true
+    @early_access = true
+    @email_support = true
+    @min_architecture_hours = 2
+    @lengths = []
+    @lengths << create_support_sku(24, 2800, 'OEMSaaS')
+    
+  end
+
 
   def self.elite
     n = SupportTier.new
@@ -187,5 +211,10 @@ class SupportTier
     n.set_bronze_tier()
     n
   end 
+  def self.oem
+    n = SupportTier.new
+    n.set_oem_tier
+    n
+  end
 end
 
