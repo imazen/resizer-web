@@ -11,7 +11,7 @@ The following sample code generates a GUID filename for each upload, determines 
 		HttpPostedFile file = HttpContext.Current.Request.Files[fileKey];
 		if (file.ContentLength <= 0) continue; //Skip unused file controls.
 		
-		//The resizing settings can specify any of 30 commands.. See http://imageresizing.net for details.
+		//The resizing settings can specify any of 30 commands. See http://imageresizing.net for details.
 		//Destination paths can have variables like <guid> and <ext>, or 
 		//even a santizied version of the original filename, like <filename:A-Za-z0-9>
 		ImageResizer.ImageJob i = new ImageResizer.ImageJob(file, "~/uploads/<guid>.<ext>", new ImageResizer.ResizeSettings( 
@@ -28,7 +28,7 @@ The following sample code generates a GUID filename for each upload, determines 
 	For Each fileKey As String In HttpContext.Current.Request.Files.Keys
 			Dim file As HttpPostedFile = HttpContext.Current.Request.Files(fileKey)
 			If (file.ContentLength > 0) Then 'Skip unused file controls.
-				'The resizing settings can specify any of 30 commands.. See http://imageresizing.net for details.
+				'The resizing settings can specify any of 30 commands. See http://imageresizing.net for details.
 				'Destination paths can have variables like <guid> and <ext>, or 
 				'even a santizied version of the original filename, like <filename:A-Za-z0-9>
 				Dim i As ImageResizer.ImageJob = New ImageResizer.ImageJob(file, "~/uploads/<guid>.<ext>", New ImageResizer.ResizeSettings("width=2000;height=2000;format=jpg;mode=max"))
