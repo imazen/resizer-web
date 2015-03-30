@@ -17,7 +17,7 @@ url: http://www.imageresizing.net/
 author:
    name: Nathanael Jones
    uri: http://nathanaeljones.com
-   email: n@imazen.io
+   email: support@imageresizing.net
    google_profile: "http://google.com/profiles/104429865496810073908"
    linkedin_profile: "http://www.linkedin.com/in/nathanaeljones"
    twitter_profile: "https://twitter.com/nathanaeljones"
@@ -25,8 +25,8 @@ author:
 
 
 github:
-  editurl: https://github.com/imazen/resizer-web/edit/smart-theme-migration/content
-  showeditbutton: true
+  editurl: https://github.com/imazen/resizer-web/edit/master/content
+  showeditbutton: false
 
 disqus_short_name: resizer
 
