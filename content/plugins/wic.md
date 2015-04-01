@@ -5,11 +5,15 @@ Tagline: "3 plugins:  WicDecoder supports decoding images through WIC, supportin
 
 # WIC Plugins (V3.1+)
 
-ImageResizer.Plugins.Wic.dll contains 3 plugins: WicImageDecoder, WicImageEncoder, and WicImageBuilder.
+### Windows Imaging Components is an operating system component maintained by Microsoft. WicBuilder is a wrapper around the underlying operating system API.
 
-These plugins require Windows 7 or Windows Server 2008 R2 for best performance and correct behavior.
+### As of April 2015, new, blocking issues within Windows Imaging Components have been discovered, and we do not have a workaround. **We have deprecated the use of WIC in favor of the FastScaling plugin.** 
 
-Vista or Windows Server 2008 with the Platform Update applied should also work.
+***
+
+ImageResizer.Plugins.Wic.dll contains 3 plugins: WicImageDecoder, WicImageEncoder, and WicImageBuilder. 
+
+These plugins require Windows 7 or Windows Server 2008 R2 and higher for best performance and correct behavior.
 
 ## Installation
 
