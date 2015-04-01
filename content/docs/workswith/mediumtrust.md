@@ -1,7 +1,7 @@
 
 # Medium trust
 
-### ImageResizer is designed to support medium trust (and low trust). Some plugins, however, require full trust due to their nature.
+### ImageResizer v3 is designed to support medium trust (and low trust). Some plugins, however, require full trust due to their nature. v4 does not support medium trust
 
 Note: Insure you're using `requirePermission="false"` when registering the ImageResizer configSection in Web.config
 
