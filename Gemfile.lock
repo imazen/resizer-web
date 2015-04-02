@@ -21,9 +21,7 @@ GEM
       timers (~> 4.0.0)
     coderay (1.1.0)
     commonjs (0.2.7)
-    daemons (1.1.9)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     ffi (1.9.6)
     github-markdown (0.6.8)
     hitimes (1.2.2)
@@ -43,6 +41,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -70,10 +70,6 @@ GEM
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
-    thin (1.6.3)
-      daemons (~> 1.0, >= 1.0.9)
-      eventmachine (~> 1.0)
-      rack (~> 1.0)
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
@@ -93,6 +89,7 @@ DEPENDENCIES
   kramdown
   less
   pry
+  puma
   rack-cache
   rack-test
   rake
@@ -102,6 +99,5 @@ DEPENDENCIES
   shotgun
   slim
   therubyracer
-  thin
   webrat
   yui-compressor
