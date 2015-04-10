@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: 124b23e5dd3adb35d3c496e38bea376c229e1afb
+  revision: ed3a6cebee644c8ee47f5e84f5ccb26fef1a344b
   specs:
     hardwired (0.3.2)
       nokogiri
@@ -58,10 +58,10 @@ GEM
     sass (3.4.9)
     shotgun (0.9)
       rack (>= 1.0)
-    sinatra (1.4.5)
+    sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
+      tilt (>= 1.3, < 3)
     slim (3.0.0)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
