@@ -248,4 +248,5 @@
 /support/contracts/gold
 /support/contracts/oem
 /support/contracts/silver
+/support/custom_plugins
 /testimonials

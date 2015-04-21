@@ -1,13 +1,13 @@
-Template: plugin_page
+Aliases: /plugins/custom
+Libs: -comments
 
-# Custom plugin development - Imazen
+# Custom plugin development
 
 ## Overview
 
 Imazen offers custom plugin development services to all open source and Support Contract customers.
 
 As the authors of the library we have unique in-depth knowledge, and can create future-proof, scalable solutions you won't get elsewhere. We're extremely cost-effective; our code is high quality and we never waste your time.
-
 
 
 ## Pricing
