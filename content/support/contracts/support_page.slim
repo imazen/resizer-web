@@ -1,24 +1,27 @@
-Layout: page
+Layout: layout
 Flags: hidden
 
-h1
-  == page.meta.title
 
-ul.nav.nav-pills
-  == menu_tag_current 'active','li' do
-    li
-      a href="/support/contracts" Overview
-    li
-      a href="/support/contracts/compare" Compare
-    li
-      a href="/support/contracts/bronze" Bronze
-    li
-      a href="/support/contracts/silver" Silver
-    li
-      a href="/support/contracts/gold" Gold
-    li
-      a href="/support/contracts/oem" OEM/SaaS
+.row
+  article class="span12"
+    h1
+      == page.meta.title
+
+    ul.nav.nav-pills
+      == menu_tag_current 'active','li' do
+        li
+          a href="/support/contracts" Overview
+        li
+          a href="/support/contracts/compare" Compare
+        li
+          a href="/support/contracts/bronze" Bronze
+        li
+          a href="/support/contracts/silver" Silver
+        li
+          a href="/support/contracts/gold" Gold
+        li
+          a href="/support/contracts/oem" OEM/SaaS
 
 
 
-== yield
+    == yield
