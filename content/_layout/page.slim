@@ -3,19 +3,12 @@ Layout: layout
 - s = page.meta.sidebar && !(/\Afalse|null|nil|off|none\Z/i =~ page.meta.sidebar) ? page.meta.sidebar : nil
 
 .row
-  article class=(s ? "span9" : "span12")
+  article class=(s ? "span8" : "span12")
     - if page.lib?('plusone')
       div style="width:70px;padding-top:25px;float:right"
         .g-plusone
     - if page.meta.warning
       .alert = page.meta.warning
-    - if !s && page.path.start_with?("/docs")
-      .sub_nav_bar
-        ul.category_headers
-          - config.categories.each do |c|
-            li class=(page.meta.category == c.tag ? "active" : "")
-              a href=c.page
-                =c.title
 
     - if page.meta.prepend
       == partial page.meta.prepend.to_sym
@@ -37,12 +30,7 @@ Layout: layout
     == partial :comments
 
   - if s
-    aside.span3.sidebar
-      ul.category_headers
-        - config.categories.each do |c|
-          li class=(page.meta.category == c.tag ? "active" : "")
-            a href=c.page
-              =c.title
+    aside.span4.sidebar
 
       == partial page.meta.sidebar
 
