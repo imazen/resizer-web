@@ -18,6 +18,70 @@ class Site < Hardwired::Bootstrap
 
 
     helpers do
+
+      def versions
+        [{id: "v2", 
+          folder: "/docs/v2/", 
+          home: "/docs/v2",
+          title: "v2.X"},
+          {id: "v3", 
+            folder: "/docs/v3/", 
+            home: "/docs/v3", 
+            title: "v3.x"}]
+
+      end 
+
+      def nav_generate_plugins(version)
+        index.pages_tagged("plugin")
+        .select{|path| page.path.start_with?("/docs/#{version}")}
+        .map{|page| {"path" =>  page.path, "title" => page.heading}}
+      end 
+      def nav_generate_releases(version)
+        releases.map{|page| {"path" =>  page.path, "title" => page.heading}}
+      end 
+      def nav_resolve(yaml_tree, relative_to)
+        #Process generated content
+        gen_name = yaml_tree["generate"]
+        gen_arg_1 = yaml_tree["generate_arg_1"]
+        if (gen_name == "plugins")
+          yaml_tree["items"] = nav_generate_plugins(gen_arg_1)
+        end 
+        if (gen_name == "releases")
+          yaml_tree["items"] = nav_generate_releases(gen_arg_1)
+        end 
+
+        #resolve relative URLs
+        path = yaml_tree["path"]
+        unless path.nil?
+          path = File.join(relative_to,path) unless path.start_with?('/')
+          yaml_tree["path"] = path
+        end
+
+        #recurse
+        yaml_tree["items"].each do |child|
+          nav_resolve(child, relative_to)
+        end unless yaml_tree["items"].nil?
+        yaml_tree
+      end 
+      def nav_docs_tree(version)
+        yml = YAML.load(File.read(Hardwired::Paths.content_path("docs/#{version}/nav.yml")))
+        nav_resolve(yml, "/docs/#{version}/")
+      end 
+
+
+      def default_version
+        "v3"
+      end
+
+      def active_version
+        m = /\A\/docs\/(v[0-9\.]+|latest)/.match(request.path)
+        return m[1] unless m.nil?
+
+        default_version
+      end
+
+
+
       def cache_for(time)
         response['Cache-Control'] = "public, max-age=#{time.to_i}"
       end
@@ -47,6 +111,8 @@ class Site < Hardwired::Bootstrap
 
     before do
       redirect request.url.sub(/\/nathanaeljones\.com/, '/www.nathanaeljones.com'), 301 if request.host.start_with?("nathanaeljones.com")
+      #store_version! if request.path.start_with?("/docs/v")
+      cache_for(dev? ? 30 : 60 * 60 * 24) #1 day
     end
 
 
@@ -66,9 +132,7 @@ class Site < Hardwired::Bootstrap
       "google-site-verification: google#{code}.html" if config.google_verify.include?(code)
     end
 
-    after '*' do 
-      cache_for(dev? ? 30 : 60 * 60 * 24) #1 day
-    end  
+
 
     Hardwired::Index.add_common_file('atom.xml.slim','atom.xml')
     add_alias('/rss.xml','atom.xml')
@@ -94,7 +158,7 @@ class Site < Hardwired::Bootstrap
 
 
       def optimize_js(options, &block)
-        Hardwired::JsOptimize.filter_includes(options,block.call)
+        dev? ? block.call : Hardwired::JsOptimize.filter_includes(options,block.call)
       end 
 
 
@@ -117,6 +181,8 @@ class Site < Hardwired::Bootstrap
     end
 
 
+
+
     get '/alljs/jquery.min.map' do
       status 404
     end
@@ -133,6 +199,13 @@ class Site < Hardwired::Bootstrap
       cache_for 60 * 60 * 24 * 30 #1 month
       Hardwired::JsOptimize.create_combined_response(Site, scripts, no_minify: dev?)
     end 
+
+    #Fall back to having no version
+    get '*' do
+      output = render_file(request.path_info.gsub(/\/docs\/(v[0-9\.]+|latest)\//, ""))
+      pass if output.nil?
+      output 
+    end 
 end
 
 
@@ -143,27 +216,14 @@ module Hardwired
       flag?('hidden') or draft?
     end
 
-    def bundle_name
-      meta.bundle
-    end
-       
-    def bundle
-      Hardwired::Index["/plugins/bundles/#{meta.bundle}"]
-    end
-
     def edition
       Hardwired::Index["/plugins/editions/#{meta.edition}"]
     end
 
     def edition_plugins
-      @edition_plugins ||= Hardwired::Index.enum_files { |p| p.is_page? && p.can_render? && !meta.edition.nil? && !p.meta.edition.nil? && meta.edition.casecmp(p.meta.edition) == 0 && !p.flag?('edition')}.to_a.sort { |x, y| y.meta.sort_field <=> x.meta.sort_field }
+      @edition_plugins ||= Hardwired::Index.enum_files { |p| p.path.start_with?("/docs/v3/plugins") && p.is_page? && p.can_render? && !meta.edition.nil? && !p.meta.edition.nil? && meta.edition.casecmp(p.meta.edition) == 0 && !p.flag?('edition')}.to_a.sort { |x, y| y.meta.sort_field <=> x.meta.sort_field }
     end
-
-
-    def bundle_plugins
-      @bundle_plugins ||= Hardwired::Index.enum_files { |p| p.is_page? && p.can_render? && p.bundle_name == bundle_name && !p.flag?('bundle')}.to_a
-    end
-
+  
   end
 end
 
