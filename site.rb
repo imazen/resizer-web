@@ -131,7 +131,7 @@ class Site < Hardwired::Bootstrap
       content_type "text/javascript"
       last_modified Time.new(request["m"])
       cache_for 60 * 60 * 24 * 30 #1 month
-      Hardwired::JsOptimize.create_combined_response(Site, scripts, dev?)
+      Hardwired::JsOptimize.create_combined_response(Site, scripts, no_minify: dev?)
     end 
 end
 
