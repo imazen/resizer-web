@@ -44,6 +44,14 @@ google_custom_search: "005556834036073640702:j3bnlceufnc"
 
 
 categories:
+
+  - tag: benefits
+    include: 
+    - /benefits
+    page: /
+    meta: 
+      prepend: /benefits/nav
+
   - tag: install
     title: Install/Debug
     include:

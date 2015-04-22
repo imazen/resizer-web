@@ -5,6 +5,7 @@
 /atom.xml
 /benefits
 /benefits/agile
+/benefits/compatible
 /benefits/comprehensive
 /benefits/customers
 /benefits/performant
