@@ -1,8 +1,6 @@
 ---
 :aliases: "/docs /docs/git"
 :edit_info: master/docs/intro.md
-:versions:
-- docs/v3
 ---
 
 # What is ImageResizer?

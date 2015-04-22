@@ -1,0 +1,84 @@
+---
+:edit_info: master/readme.md
+:heading: Generate Thumbnails and Multiple Sizes to Disk
+:aliases: "/docs/howto/generate-versions"
+---
+
+<p><a name="thumbnails"></a></p>
+
+<h2>Generate Thumbnails and Multiple Sizes to Disk</h2>
+
+<p>While the ImageResizer shines at on-the-fly image processing, you can also use it to drastically simplify pre-processing and ahead-of-time resizing as well. <strong>We strongly recommend using the dynamic method instead of pre-generating your images, as pre-generating versions reduces agility and flexibility.</strong> In the examples below, only one line is required to perform all the image decoding, format conversion, processing, resizing, and re-encoding. The rest is path/filename logic. Two different solutions are presented - 1 for processing images as they are uploaded, and another for processing images that are already saved to disk.</p>
+
+<h4>During Upload</h4>
+
+<p>This method generates 3 versions of an image as it is uploaded, adding a _thumb, _medium, and _large suffix to each filename. Uploaded files are named using a generated GUID, as uploaded file names are never safe for use as-is. Even with proper sanitization (alphanumeric filtering AND length limiting), you will encounter duplicates using uploaded filenames on your server.</p>
+
+<pre lang="c#"><code>    Dictionary&lt;string, string&gt; versions = new Dictionary&lt;string, string&gt;();
+    //Define the versions to generate
+    versions.Add("_thumb", "width=100&amp;height=100&amp;crop=auto&amp;format=jpg"); //Crop to square thumbnail
+    versions.Add("_medium", "maxwidth=400&amp;maxheight=400&amp;format=jpg"); //Fit inside 400x400 area, jpeg
+    versions.Add("_large", "maxwidth=1900&amp;maxheight=1900&amp;format=jpg"); //Fit inside 1900x1200 area
+
+    //Loop through each uploaded file
+    foreach (string fileKey in HttpContext.Current.Request.Files.Keys) {
+        HttpPostedFile file = HttpContext.Current.Request.Files[fileKey];
+        if (file.ContentLength &lt;= 0) continue; //Skip unused file controls.
+
+        //Get the physical path for the uploads folder and make sure it exists
+        string uploadFolder = MapPath("~/uploads");
+        if (!Directory.Exists(uploadFolder)) Directory.CreateDirectory(uploadFolder);
+
+        //Generate each version
+        foreach (string suffix in versions.Keys) {
+            //Generate a filename (GUIDs are best).
+            string fileName = Path.Combine(uploadFolder, System.Guid.NewGuid().ToString() + suffix);
+
+            //Let the image builder add the correct extension based on the output file type
+            fileName = ImageBuilder.Current.Build(file, fileName, new ResizeSettings(versions[suffix]), false, true);
+        }
+
+    }
+
+</code></pre>
+
+<h4>After Upload</h4>
+
+<p>This example method generates 3 versions of the specified file, and returns a list of the final path names.</p>
+
+<p>For example,</p>
+
+<pre lang="c#"><code>    GenerateVersions("~/images/image.jpg")
+</code></pre>
+
+<p>Will generate<br>
+    /images/image_thumb.jpg<br>
+    /images/image_medium.jpg<br>
+    /images/image_large.jpg</p>
+
+<p>And will return a list of those paths.</p>
+
+<pre lang="c#"><code>    public IList&lt;string&gt; GenerateVersions(string original) {
+            Dictionary&lt;string, string&gt; versions = new Dictionary&lt;string, string&gt;();
+            //Define the versions to generate and their filename suffixes.
+            versions.Add("_thumb", "width=100&amp;height=100&amp;crop=auto&amp;format=jpg"); //Crop to square thumbnail
+            versions.Add("_medium", "maxwidth=400&amp;maxheight=400format=jpg"); //Fit inside 400x400 area, jpeg
+            versions.Add("_large", "maxwidth=1900&amp;maxheight=1900&amp;format=jpg"); //Fit inside 1900x1200 area
+
+
+            string basePath = ImageResizer.Util.PathUtils.RemoveExtension(original);
+
+            //To store the list of generated paths
+            List&lt;string&gt; generatedFiles = new List&lt;string&gt;();
+
+            //Generate each version
+            foreach (string suffix in versions.Keys)
+                    //Let the image builder add the correct extension based on the output file type
+                    generatedFiles.Add(ImageBuilder.Current.Build(original, basePath + suffix, 
+                        new ResizeSettings(versions[suffix]), false, true));
+
+            return generatedFiles;   
+    }
+</code></pre>
+
+<p></p>

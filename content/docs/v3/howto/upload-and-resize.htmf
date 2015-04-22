@@ -1,0 +1,47 @@
+---
+:edit_info: master/readme.md
+:heading: Convert and Resize Images as They Are Uploaded
+:aliases: "/docs/howto/upload-and-resize"
+---
+
+<p><a name="resize_upload"></a></p>
+
+<h2>Convert and Resize Images as They Are Uploaded</h2>
+
+<p>Resizing and processing images as they are uploaded is very straightforward. Most of the required code is about paths and directories.</p>
+
+<p>The following sample code generates a GUID filename for each upload, determines the appropriate file extension that is needed, then resizes/crops/formats the image according to the specified ResizeSettings.</p>
+
+<pre lang="c#"><code>    //Loop through each uploaded file
+    foreach (string fileKey in HttpContext.Current.Request.Files.Keys) 
+    {
+        HttpPostedFile file = HttpContext.Current.Request.Files[fileKey];
+        if (file.ContentLength &lt;= 0) continue; //Skip unused file controls.
+
+        //The resizing settings can specify any of 30 commands.. See http://imageresizing.net for details.
+        //Destination paths can have variables like &lt;guid&gt; and &lt;ext&gt;, or 
+        //even a santizied version of the original filename, like &lt;filename:A-Za-z0-9&gt;
+        ImageResizer.ImageJob i = new ImageResizer.ImageJob(file, "~/uploads/&lt;guid&gt;.&lt;ext&gt;", new ImageResizer.ResizeSettings( 
+                                "width=2000;height=2000;format=jpg;mode=max"));
+        i.CreateParentDirectory = true; //Auto-create the uploads directory.
+        i.Build();
+    }
+</code></pre>
+
+<h4>For VB.NET Users</h4>
+
+<pre lang="vbnet"><code>    'Loop through each uploaded file
+    For Each fileKey As String In HttpContext.Current.Request.Files.Keys
+            Dim file As HttpPostedFile = HttpContext.Current.Request.Files(fileKey)
+            If (file.ContentLength &gt; 0) Then 'Skip unused file controls.
+                'The resizing settings can specify any of 30 commands.. See http://imageresizing.net for details.
+                'Destination paths can have variables like &lt;guid&gt; and &lt;ext&gt;, or 
+                'even a santizied version of the original filename, like &lt;filename:A-Za-z0-9&gt;
+                Dim i As ImageResizer.ImageJob = New ImageResizer.ImageJob(file, "~/uploads/&lt;guid&gt;.&lt;ext&gt;", New ImageResizer.ResizeSettings("width=2000;height=2000;format=jpg;mode=max"))
+                i.CreateParentDirectory = True 'Auto-create the uploads directory.
+                i.Build()
+            End If
+    Next
+</code></pre>
+
+<p></p>

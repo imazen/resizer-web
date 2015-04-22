@@ -1,0 +1,29 @@
+---
+:edit_info: master/readme.md
+:heading: Installing A Plugin Manually
+---
+
+<p><a name="install_plugin"></a></p>
+
+<h4>Manual Plugin Installation</h4>
+
+<ol>
+<li>In <em>your</em> project, add a reference to the plugin DLL (or project, if you're using the source).</li>
+<li>Configure the plugin to be installed at startup via (i) or (ii). 
+
+<ol>
+<li> In the <a href="#config_reference">&lt;plugins /&gt; section</a> of Web.config, insert <code>&lt;add name="PluginName" /&gt;</code>
+</li>
+<li> In <code>Application_Start</code>, create an instance of the plugin and install it.</li>
+</ol>
+</li>
+</ol>
+
+<pre lang="c#"><code>  new PluginName().Install(ImageResizer.Configuration.Config.Current);
+</code></pre>
+
+<p>You will need need to add the appopriate namespace reference to access the plugin.</p>
+
+<p>Most configuration and plugin installation issues can be resolved by checking ImageResizer&rsquo;s self-diagnostics page. If your local website is running at <code>http://localhost:5000/</code>, then you should browse to <code>http://localhost:5000/resizer.debug.ashx</code> to access it. See <a href="#troubleshooting%20section">the Troubleshooting</a> for more details. </p>
+
+<p></p>
