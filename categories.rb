@@ -23,7 +23,7 @@ module Hardwired
         c = @@cats_by_tag[meta.category]
 
         #Clone all specified metadata, without overwriting anything
-        @meta = RecursiveOpenStruct.new(c.meta.to_hash.merge((meta || {}).to_hash)) unless c.meta.nil?
+        @meta = RecursiveOpenStruct.new(c.meta.to_hash.merge((meta || {}).to_hash)) unless c.nil? || c.meta.nil?
     
         #p "Categorized #{path} as #{meta.categories * ','}  (primary #{meta.category})"
 
