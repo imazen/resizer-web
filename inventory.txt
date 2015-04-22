@@ -62,6 +62,7 @@
 /docs/extending
 /docs/extending-imagebuilder
 /docs/faq
+/docs/fcnmode
 /docs/geterror
 /docs/git
 /docs/howto/avoid-network-limit
