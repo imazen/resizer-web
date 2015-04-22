@@ -1,0 +1,21 @@
+title: ImageResizer v2 Docs
+items:
+- title: Home
+  path: /docs/v2
+- title: "Changelog & Releases"
+  path: changelog
+- title: Migrate to v3
+  items: 
+  - title: Why upgrade? 
+    path: 2to3
+
+  - title: Migration Overview
+    path: 2to3/guide
+
+  - title: Migrating Configuration
+    path: 2to3/configuration
+  - title: Migrating WatermarkSettings.cs
+    path: 2to3/watermarksettings
+  - title: Migrating CustomFolders.cs
+    path: 2to3/customfolders
+ 

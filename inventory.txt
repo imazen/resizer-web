@@ -99,15 +99,14 @@
 /docs/system_requirements
 /docs/troubleshoot
 /docs/tutorials
+/docs/v2
 /docs/v2/2to3
 /docs/v2/2to3/configuration
 /docs/v2/2to3/customfolders
-/docs/v2/2to3/diff
-/docs/v2/2to3/features
 /docs/v2/2to3/guide
-/docs/v2/2to3/upgrade
 /docs/v2/2to3/watermarksettings
 /docs/v2/changelog
+/docs/v3
 /docs/workswith
 /docs/workswith/dotnetnuke
 /docs/workswith/ektron
