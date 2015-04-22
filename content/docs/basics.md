@@ -1,4 +1,4 @@
-Aliases: /docs/examples
+Aliases: /docs/examples /docs/howto/crop
 
 # Basic commands
 
@@ -98,6 +98,17 @@ Dislike white? Transparent padding is added (when required) for PNGs and GIFs, b
 Add **bgcolor=name** or **bgcolor=33ddff** to set the background (matte) color. Named colors and hex values supported.
 
 <img src="http://img.imageresizing.net/quality-original.jpg;w=100;h=100;bgcolor=33ddff" />
+
+## Cropping 
+
+The URL syntax for cropping is `&crop=x1,y1,x2,y2`. The coordinates are relative to the top-left corner of the original image - if they are positive values.
+
+If X2 or Y2 are 0 or less, they are relative to the bottom-right corner. This allows easy trimming without knowing the size of the image.
+
+For example, crop=0,0,0,0 leaves the image uncropped. crop=10,10,-10,-10 removes 10 pixels from all edges of the image.
+
+In addition, you can specify `cropxunits` and `cropyunits`. Setting them to 100 allows you to crop by percentage. Example which crops 10% off each edge: `?cropxunits=100&cropyunits=100&crop=10,10,90,90`. Setting them to the width/height of the display image allows you to crop in display coordinates, without needing to know the original size of the image.
+
 
 ## Disk Caching - why you need it
 
