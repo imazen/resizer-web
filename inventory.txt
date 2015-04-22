@@ -42,6 +42,7 @@
 /docs/best-practices
 /docs/cleanurls
 /docs/cloud
+/docs/cms_compatibility
 /docs/community
 /docs/compatible
 /docs/configuration
@@ -94,6 +95,7 @@
 /docs/redist
 /docs/reference
 /docs/requirements
+/docs/system_requirements
 /docs/troubleshoot
 /docs/tutorials
 /docs/v2/2to3
