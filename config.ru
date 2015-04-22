@@ -23,6 +23,8 @@ if defined?(Honeybadger)
   use Honeybadger::Rack
 end
 
+require 'tilt/template'
+require 'kramdown'
 require './categories'
 require './support_contracts'
 require './site'

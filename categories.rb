@@ -35,3 +35,20 @@ module Hardwired
   end
 end
 
+
+
+module Tilt
+
+  class KramdownTemplate < Template
+
+
+    def prepare
+      options[:smart_quotes] = DUMB_QUOTES unless options[:smartypants]
+
+      options[:input] = :GFM
+      options[:hard_wrap] = false
+      @engine = Kramdown::Document.new(data, options)
+      @output = nil
+    end
+  end
+end
