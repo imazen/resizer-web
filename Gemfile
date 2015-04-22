@@ -12,7 +12,7 @@ gem 'sass'
 gem 'erubis'
 
 #gem 'hardwired', :path => "../hardwired"
-gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git"
+gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git", :branch => :develop
 
 gem 'puma' #we use this for both development and production
 
