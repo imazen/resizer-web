@@ -7,14 +7,14 @@ GIT
 
 GIT
   remote: git://github.com/nathanaeljones/hardwired.git
-  revision: 3b9ffd5bfaca87ffc69251b498b02d0e22109f59
+  revision: 545579b932ed9d30af4e219dfbee43b5f4c5f329
   branch: develop
   specs:
-    hardwired (0.3.2)
+    hardwired (0.4)
       erubis
       nokogiri
       sinatra (>= 1.3.3)
-      tilt
+      tilt (>= 2.0.1)
 
 GEM
   remote: http://rubygems.org/
@@ -72,7 +72,7 @@ GEM
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
-    tilt (1.4.1)
+    tilt (2.0.1)
     timers (4.0.1)
       hitimes
     webrat (0.7.3)
@@ -101,6 +101,5 @@ DEPENDENCIES
   shotgun
   slim
   therubyracer
-  tilt (~> 1.4.1)
   webrat
   yui-compressor

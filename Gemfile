@@ -16,7 +16,6 @@ gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git", :branc
 
 gem 'puma' #we use this for both development and production
 
-gem 'tilt', '~> 1.4.1'
 
 #gem 'honeybadger', :group => :production
 
