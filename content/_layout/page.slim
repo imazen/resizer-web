@@ -16,6 +16,11 @@ Layout: layout
             li class=(page.meta.category == c.tag ? "active" : "")
               a href=c.page
                 =c.title
+
+    - if page.meta.prepend
+      == partial page.meta.prepend.to_sym
+
+
     - if page.meta.textclass
       div class=(page.meta.textclass)
         == yield
