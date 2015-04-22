@@ -29,7 +29,7 @@ div
     a href="https://github.com/imazen/resizer/edit/#{page.meta.edit_info}"
       | Edit this page on GitHub.
   - else
-    a href="https://github.com/imazen/resizer-web/edit/master/content/#{page.path}"
+    a href="https://github.com/imazen/resizer-web/edit/master/content#{Hardwired::Index.make_almost_virtual(page.filename, false)}"
       | Edit this page on GitHub
 
 
