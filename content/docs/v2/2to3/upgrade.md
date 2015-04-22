@@ -1,4 +1,5 @@
-Aliases: /plugins/upgradefrom2
+Aliases: /plugins/upgradefrom2 /docs/2to3/upgrade
+
 
 # Upgrade from version 2
 

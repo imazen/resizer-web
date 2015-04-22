@@ -1,3 +1,4 @@
+Aliases: /docs/2to3/watermarksettings
 
 # WatermarkSettings.cs migration
 

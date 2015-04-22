@@ -1,3 +1,4 @@
+Aliases: /docs/2to3/diff
 
 # Differences between V2 and V3
 

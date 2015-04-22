@@ -1,3 +1,4 @@
+Aliases: /docs/2to3/features
 
 # New features in V3 core
 

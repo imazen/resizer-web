@@ -1,3 +1,4 @@
+Aliases: /docs/2to3/configuration
 
 # Migrating Web.Config from V2 to V3
 

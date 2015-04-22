@@ -1,3 +1,5 @@
+Aliases: /docs/2to3/guide
+
 # V2 to V3 migration guide
 
 1. [Purchase the v3 Performance Edition](/plugins/upgradefrom2). .

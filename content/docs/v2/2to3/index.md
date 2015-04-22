@@ -1,3 +1,4 @@
+Aliases: /docs/2to3
 
 # Why you should upgrade to V3
 
