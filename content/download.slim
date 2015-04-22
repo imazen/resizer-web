@@ -10,92 +10,85 @@ h1 Download ImageResizer
     | Step 1: Download V
     = latest_release.meta.shortversion
 
-.row
-  .span1
-  .span9.bottompadding
-    p style="margin-top:30px; margin-bottom:10px"
-      a href=latest_release.meta.fullfile class="btn btn-buynow"
-        | Download Everything
-    p 
-      |  Includes source, binaries, plugins, and sample code (20MB)
- 
-    p style="margin-top:5px;font-size:12px; color:gray;margin-bottom:0"
-       
-      a href=releases.first.path
-        | Release notes: 
-        == latest_release.meta_summary    
+.download_section.bottompadding
+  p style="margin-top:30px; margin-bottom:10px"
+    a href=latest_release.meta.fullfile class="btn btn-buynow"
+      | Download Everything
+  p 
+    |  Includes source, binaries, plugins, and sample code (20MB)
+
+  p style="margin-top:5px;font-size:12px; color:gray;margin-bottom:0"
      
-    h3 style="margin-bottom:0; margin-top: 20px"
-      strong OR: 
-      |Install with Nuget.
-    div
-      code.nuget
-        | PM> Install-Package ImageResizer.MvcWebConfig
-        br
-        | PM> Install-Package ImageResizer.Plugins.DiskCache
-        br
-        | PM> Install-Package ImageResizer.Plugins.PrettyGifs
-    br
-    p
-      a href="/docs/install/nuget" class="btn btn-primary"
-        strong Nuget Installation Instructions  
-  .span2
+    a href=releases.first.path
+      | Release notes: 
+      == latest_release.meta_summary    
+   
+  h3 style="margin-bottom:0; margin-top: 20px"
+    strong OR: 
+    |Install with Nuget.
+  div
+    code.nuget
+      | PM> Install-Package ImageResizer.MvcWebConfig
+      br
+      | PM> Install-Package ImageResizer.Plugins.DiskCache
+      br
+      | PM> Install-Package ImageResizer.Plugins.PrettyGifs
+  br
+  p
+    a href="/docs/install/nuget" class="btn btn-primary"
+      strong Nuget Installation Instructions  
+
 
 .titledownload
   h1
    |Step 2: Choose a License
-.row
-  .span1
-  .span9
-    h3 style="margin-bottom:0"
-      |We have a variety of licenses to suit any developer's needs, including 
-      strong trial licenses 
-      |for testing and 
-      strong free licenses 
-      |for basic capabilities and open-source projects.
-    p.bottompadding style="margin-top:10px"
-      a href="/licenses" class="btn btn-primary"
-        strong Compare Licenses
-    /p style="padding-top: 5px"
-      |Not sure which license fits your needs?  
-      a href="/license-questions" Answer a few questions 
-      | and we'll find the license that's right for you.
-  .span2
+.download_section
+  h3 style="margin-bottom:0"
+    |We have a variety of licenses to suit any developer's needs, including 
+    strong trial licenses 
+    |for testing and 
+    strong free licenses 
+    |for basic capabilities and open-source projects.
+  p.bottompadding style="margin-top:10px"
+    a href="/licenses" class="btn btn-primary"
+      strong Compare Licenses
+  /p style="padding-top: 5px"
+    |Not sure which license fits your needs?  
+    a href="/license-questions" Answer a few questions 
+    | and we'll find the license that's right for you.
+
 .titledownload
   h1
     |Step 3: Enjoy ImageResizer
-.row
-  .span1
-  .span9
-    h3
-      |We take our commitment to deliver high-quality, easy-to-use software very seriously. Here are some ways you can guarantee you're getting the most out of our product.
-    ul.arrow_list
-      li
-        a href="/support/contracts"  Get a support contract.
-        |  Eliminate risk and get the most of out ImageResizer with a support contract. Support contracts include architecture planning, preventative consultation, emergency incident support, and custom development for your business's unique needs.
-      li
-        a href="/docs/basics" Learn the basics. 
-        |  Spend a few minutes learning the ropes before you get started making beautiful, functional, responsive websites in half the time.      
-      li
-        a href="/docs/benefits/comprehensive" Visit our Tutorials page. 
-        |  We hear 
-        em all the time 
-        | from customers who never realized the sheer variety of ImageResizer's capabilities. Come and see some of ImageResizer's wide assortment of features.
-      li
-        a href="/newsletter/signup" Make sure you signed up for our newsletter. 
-        |It's only happened once (a long time ago), but if there is a security-related bug, this is how we let you know. 
-        strong Extremely low-volume.
-    
-    p
-      form#signupform.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('signupform');"
-        input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou"
-        input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
-        | Email: 
-        input type="text" name="email" placeholder="name@domain.com"
-        |  &nbsp; 
-        button type="submit" name="Submit" class="btn btn-primary" style="margin-bottom:10px"
-         | Subscribe (avg 4 per year) &raquo;
-  .span2
+.download_section
+  h3
+    |We take our commitment to deliver high-quality, easy-to-use software very seriously. Here are some ways you can guarantee you're getting the most out of our product.
+  ul.arrow_list
+    li
+      a href="/support/contracts"  Get a support contract.
+      |  Eliminate risk and get the most of out ImageResizer with a support contract. Support contracts include architecture planning, preventative consultation, emergency incident support, and custom development for your business's unique needs.
+    li
+      a href="/docs/basics" Learn the basics. 
+      |  Spend a few minutes learning the ropes before you get started making beautiful, functional, responsive websites in half the time.      
+    li
+      a href="/docs/benefits/comprehensive" Visit our Tutorials page. 
+      |  We hear 
+      em all the time 
+      | from customers who never realized the sheer variety of ImageResizer's capabilities. Come and see some of ImageResizer's wide assortment of features.
+    li
+      a href="/newsletter/signup" Make sure you signed up for our newsletter. 
+      |It's only happened once (a long time ago), but if there is a security-related bug, this is how we let you know. 
+      strong Extremely low-volume.
+
+  p
+    form#signupform.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('signupform');"
+      input type="hidden" name="redirect" value="http://imageresizing.net/newsletter/thankyou"
+      input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
+      | Email: 
+      input type="text" name="email" placeholder="name@domain.com"
+      |  &nbsp; 
+      button type="submit" name="Submit" class="btn btn-primary" style="margin-bottom:10px"
+       | Subscribe (avg 4 per year) &raquo;
 
 / Google Code for View download page Conversion Page
 javascript:
