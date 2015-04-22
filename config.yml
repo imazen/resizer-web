@@ -44,62 +44,31 @@ google_custom_search: "005556834036073640702:j3bnlceufnc"
 
 
 categories:
-
-  - tag: benefits
-    include: 
-    - /benefits
-    page: /
-    meta: 
-      prepend: /benefits/nav
-
-  - tag: install
-    title: Install/Debug
-    include:
-      - /docs/install
-      - /docs/workswith
-      - /docs/migrating
-      - /docs/2to3
-    page: /docs/install
-    meta:
-      sidebar: /docs/install/sidebar
-      append: /docs/install/generic
-
-  - tag: extend
-    title: Extend
-    include:
-      - /docs/extend
-    page: /docs/extend
-    meta:
-      sidebar: /docs/extend/sidebar
+- tag: benefits
+  include: 
+  - /benefits
+  page: /
+  meta: 
+    prepend: /benefits/nav
 
 
-  - tag: use
-    title: Using ImageResizer
-    include: /docs
-    page: /docs
-    meta: 
-      sidebar: /docs/sidebar
+- tag: docs
+  include: 
+  - /docs
+  - /download
+  - /plugins
+  page: /docs
+  meta: 
+    sidebar: /docs/sidebar
 
-  - tag: plugins
-    title: Plugins
-    include: /plugins
-    page: /plugins
-    meta:
-      sidebar: /plugins/sidebar
-
-#  - tag: licenses
-#    title: Licenses
-#    include: /licenses
-#    default: /licenses
-
-  - tag: releases
-    title: Releases
-    include: /releases
-    page: /releases
-    meta:
-      layout: release
-      libs: plusone
-      sidebar: /releases/sidebar
+- tag: releases
+  title: Releases
+  include: /releases
+  page: /releases
+  meta:
+    layout: release
+    libs: plusone
+    sidebar: /docs/sidebar
 
 
 

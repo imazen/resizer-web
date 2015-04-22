@@ -1,0 +1,14 @@
+layout: false
+Flags: hidden
+
+- if node["items"]
+  h2.tocify-header 
+    = node["title"]
+  ul
+    - node["items"].each do |child|
+      li.tocify-subheader
+        == partial :sidebar_recursive, {:locals => {:node => child}}
+- else
+  a href=(node["path"])
+    = node["title"]
+

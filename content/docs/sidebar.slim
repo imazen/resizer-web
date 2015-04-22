@@ -1,10 +1,40 @@
 layout: false
 Flags: hidden
 
+div
+  | Switch to 
+  ul.inline_nav
+    - versions.each do |v|
+      - if v[:id] == active_version
+        li.active
+          = v[:id]
+          |  docs
+      - else
+        li
+          a href=v[:home]
+            = v[:id]
+            |  docs
+div 
+  - @versions = page.reachable_in_versions(versions)
+  - if @versions.length > 1
+    | Alternate versions of this page: 
+    ul.inline_nav
+      - @versions.select{|v| !v[:active]}.each do |v|
+        li
+          a href=(v[:page_path])
+            = v[:title]
+          
+div
+  - if page.meta.edit_info 
+    a href="https://github.com/imazen/resizer/edit/#{page.meta.edit_info}"
+      | Edit this page on GitHub.
+  - else
+    a href="https://github.com/imazen/resizer-web/edit/master/content/#{page.path}"
+      | Edit this page on GitHub
 
 
-h2: a href="/docs" Using ImageResizer
-ul.arrow_list
-  - index.pages_tagged("use").each do |e|
-    li
-      a(href="#{e.path}")= e.heading
+div#toc
+  .tocify
+    == partial :sidebar_recursive, {:locals => {:node => nav_docs_tree(active_version)}}
+
+
