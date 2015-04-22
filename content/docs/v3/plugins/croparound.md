@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :aliases: "/plugins/croparound"
 :tags: plugin
 :edition: elite

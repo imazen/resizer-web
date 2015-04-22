@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :uservoice: true
 :edition: elite

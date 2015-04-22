@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :edition: elite
 :tags: plugin
 :tagline: Provides face detection

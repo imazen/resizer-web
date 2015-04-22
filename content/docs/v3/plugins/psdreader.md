@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :aliases: "/plugins/psd /plugins/psdr.. /plugins/psdreader"
 :edition: elite

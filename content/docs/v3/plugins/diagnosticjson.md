@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: free
 :aliases: "/plugins/diagnosticjson"

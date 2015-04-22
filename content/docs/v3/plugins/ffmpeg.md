@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: elite
 :tagline: Extract frames from videos by time or percentage. Includes basic blank frame

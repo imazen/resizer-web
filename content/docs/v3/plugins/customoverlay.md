@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :aliases: "/plugins/customoverlay"
 :tags: plugin
 :edition: free

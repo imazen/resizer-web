@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :aliases: "/plugins/pdfrenderer"
 :tags: Plugin
 :bundle: free

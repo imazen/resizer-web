@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: performance
 :tagline: Allows blobstore images to be resized and served. (Azure 2.0 compatible)

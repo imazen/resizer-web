@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: elite
 :tagline: Asynchronously generated .zip archives of files and resized images. Great

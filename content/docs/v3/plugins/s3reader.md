@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: performance
 :tagline: Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider.

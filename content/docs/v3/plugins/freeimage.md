@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: creative
 :tagline: 'Includes 4 plugins: FreeImageDecoder adds support for RAW & HDR source

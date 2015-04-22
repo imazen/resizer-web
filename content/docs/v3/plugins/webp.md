@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: elite
 :tagline: Decode and encode .webp images

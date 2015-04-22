@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :aliases: "/plugins/remotetreader /plugins/remotereader"
 :edition: performance

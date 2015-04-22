@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: creative
 :tagline: '3 plugins:  WicDecoder supports decoding images through WIC, supporting

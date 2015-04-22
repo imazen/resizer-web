@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: creative
 :tagline: Render multiple image & text overlays and background layers with incredible

@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: performance
 :tagline: Makes dynamic image processing as responsive and scalable as static images

@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: elite
 :tagline: Provides sophisticated eye detection and red eye correction

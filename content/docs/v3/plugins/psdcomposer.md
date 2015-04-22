@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: elite
 :tagline: Dynamically edit and render PSD files - turn layers on and off, edit text

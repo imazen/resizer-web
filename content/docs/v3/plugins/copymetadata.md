@@ -1,4 +1,5 @@
 ---
+:append: edition_info
 :tags: plugin
 :edition: creative
 :tagline: Preserve metadata during image processing
