@@ -1,3 +1,4 @@
+Aliases: /docs/howto/upload-and-resize
 
 # How to resize images as they are uploaded
 

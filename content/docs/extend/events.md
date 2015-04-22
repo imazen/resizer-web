@@ -1,4 +1,4 @@
-Aliases: /docs/events
+Aliases: /docs/events /docs/extend/events
 
 # Events
 

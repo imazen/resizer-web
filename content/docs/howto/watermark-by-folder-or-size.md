@@ -1,3 +1,4 @@
+Aliases: /docs/howto/watermark-by-folder-or-size
 
 # How to require a watermark by folder or image size
 

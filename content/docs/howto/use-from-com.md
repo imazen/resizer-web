@@ -1,3 +1,4 @@
+Aliases: /docs/howto/use-from-com
 
 # Using the ImageResizer from COM
 

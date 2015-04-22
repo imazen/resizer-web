@@ -1,4 +1,4 @@
-Aliases: /docs/extending /docs/plugins/extending
+Aliases: /docs/extending /docs/plugins/extending /docs/extend/extending 
 
 # Extending the Image Resizer
 

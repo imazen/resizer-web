@@ -1,3 +1,5 @@
+Aliases: /docs/process-and-cache
+
 # Independent processing and caching
 
 The ImageResizer HttpModule offers two independently controlled sets of behaviors - processing, and caching.

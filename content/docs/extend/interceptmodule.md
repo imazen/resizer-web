@@ -1,4 +1,4 @@
-Aliases: /docs/interceptmodule
+Aliases: /docs/interceptmodule /docs/extend/interceptmodule
 
 # InterceptModule 
 

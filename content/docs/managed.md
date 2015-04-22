@@ -1,3 +1,5 @@
+Aliases: /docs/managed
+
 #Managed API usage
 
 Most tasks with the managed API only require one line:

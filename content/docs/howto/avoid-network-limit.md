@@ -1,3 +1,5 @@
+Aliases: /docs/howto/avoid-network-limit
+
 # Network BIOS limit reached
 
 Users of IIS and ASP.NET often receive the following error message when running a website from a network share or NAS device.

@@ -1,4 +1,5 @@
 Tag: install
+Aliases: /docs/troubleshoot
 
 # Troubleshooting guide
 

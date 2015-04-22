@@ -1,3 +1,4 @@
+Aliases: /docs/configuration
 
 #Configuration
 

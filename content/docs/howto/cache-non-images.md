@@ -1,3 +1,4 @@
+Aliases: /docs/howto/cache-non-images
 
 # How to DiskCache non-image files.
 

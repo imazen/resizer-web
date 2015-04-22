@@ -1,4 +1,4 @@
-Aliases: /docs/howto/multi-tenanting
+Aliases: /docs/howto/multi-tenanting /docs/extend/multi-tenanting
 
 # Support multi-tenanting
 

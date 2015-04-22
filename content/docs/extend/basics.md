@@ -1,4 +1,4 @@
-Aliases: /docs/plugins/basics /docs/extend
+Aliases: /docs/plugins/basics /docs/extend /docs/extend/basics
 
 # Making a plugin
 

@@ -1,3 +1,5 @@
+Aliases: /docs/faq
+
 # Frequently Asked Questions
 
 ##General

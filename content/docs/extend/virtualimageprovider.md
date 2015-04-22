@@ -1,4 +1,4 @@
-Aliases: /docs/plugins/virtualimageprovider
+Aliases: /docs/plugins/virtualimageprovider /docs/extend/virtualimageprovider
 
 # Virtual Image Providers
 

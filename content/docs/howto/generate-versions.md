@@ -1,3 +1,6 @@
+Aliases: /docs/howto/generate-versions
+
+
 # Generated resized versions of an image
 
 While the ImageResizer shines at on-the-fly image processing, you can also use it to drastically simplify pre-processing and ahead-of-time resizing as well.

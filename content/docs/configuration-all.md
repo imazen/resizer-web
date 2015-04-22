@@ -1,3 +1,4 @@
+Aliases: /docs/configuration-all
 
 # Configuration Reference
 

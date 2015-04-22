@@ -1,4 +1,5 @@
 Libs: plusone
+Aliases: /docs/reference
 
 # Reference
 
