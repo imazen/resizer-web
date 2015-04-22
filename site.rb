@@ -87,9 +87,7 @@ class Site < Hardwired::Bootstrap
         @@releases ||= Hardwired::Index.posts_tagged(:releases)
       end
       
-      def bundles
-        Hardwired::Index.enum_files { |p| p.flag?(:bundle)}
-      end
+
        def editions
         Hardwired::Index.enum_files { |p| p.flag?(:edition)}.to_a.sort_by { |i| i.meta.sort_field || 0 }
       end

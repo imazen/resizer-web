@@ -19,10 +19,3 @@
           a(href="#{plugin.path}")= plugin.heading
           |  - 
           = plugin.meta.tagline
-- if page.flag? 'bundle'
-  ul
-    -page.bundle_plugins.each do |plugin|
-      li
-        a(href="#{plugin.path}")= plugin.heading
-        |  - 
-        = plugin.meta.tagline
