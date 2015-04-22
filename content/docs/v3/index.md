@@ -40,9 +40,10 @@ PM> Install-Package ImageResizer.MvcWebConfig
   1.  In the [&lt;plugins /> section](#config_reference) of Web.config, insert `<add name="PluginName" />`
   2.  In `Application_Start`, create an instance of the plugin and install it.
 
-```c#
+``` c#
   new PluginName().Install(ImageResizer.Configuration.Config.Current);
 ```
+
 You will need need to add the appopriate namespace reference to access the plugin.
 
 Most configuration and plugin installation issues can be resolved by checking ImageResizer’s self-diagnostics page. If your local website is running at `http://localhost:5000/`, then you should browse to `http://localhost:5000/resizer.debug.ashx` to access it. See [the Troubleshooting](#troubleshooting section) for more details. 
