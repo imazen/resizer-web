@@ -31,24 +31,24 @@ class Site < Hardwired::Bootstrap
 
       end 
 
-      def nav_generate_plugins(version)
+      def nav_generate_plugins(version, arg_1)
         
         index.pages_tagged("plugin").select{|page| page.path.start_with?("/docs/#{version}/")}.map do |page|
           {"path" =>  page.path, "title" => page.heading}
         end
       end 
-      def nav_generate_releases(version)
+      def nav_generate_releases(version, arg_1)
         releases.map{|page| {"path" =>  page.path, "title" => page.heading}}
       end 
-      def nav_resolve(yaml_tree, relative_to)
+      def nav_resolve(yaml_tree, relative_to, version_id)
         #Process generated content
         gen_name = yaml_tree["generate"]
         gen_arg_1 = yaml_tree["generate_arg_1"]
         if (gen_name == "plugins")
-          yaml_tree["items"] = nav_generate_plugins(gen_arg_1)
+          yaml_tree["items"] = nav_generate_plugins(version_id, gen_arg_1)
         end 
         if (gen_name == "releases")
-          yaml_tree["items"] = nav_generate_releases(gen_arg_1)
+          yaml_tree["items"] = nav_generate_releases(version_id, gen_arg_1)
         end 
 
         #resolve relative URLs
@@ -60,13 +60,13 @@ class Site < Hardwired::Bootstrap
 
         #recurse
         yaml_tree["items"].each do |child|
-          nav_resolve(child, relative_to)
+          nav_resolve(child, relative_to, version_id)
         end unless yaml_tree["items"].nil?
         yaml_tree
       end 
       def nav_docs_tree(version)
         yml = YAML.load(File.read(Hardwired::Paths.content_path("docs/#{version}/nav.yml")))
-        nav_resolve(yml, "/docs/#{version}/")
+        nav_resolve(yml, "/docs/#{version}/", version)
       end 
 
 
