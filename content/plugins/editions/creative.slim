@@ -26,4 +26,4 @@ markdown:
   If purchased with the Elite Edition or Support Contracts, you do not need to register your domains.
   Only the Watermark and SimpleFilters plugins are medium-trust compatible, and only in ImageResizer v3 and below.
 
-== partial :my_plugins, {:locals => {display_edition: :creative, includes_editions: includes_editions || [:free, :performance]}}
+== partial :my_plugins, {:locals => {display_edition: :creative, includes_editions: defined?(includes_editions) ? includes_editions : [:free, :performance]}}
