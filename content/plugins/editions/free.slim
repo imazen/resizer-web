@@ -15,4 +15,4 @@ markdown:
   Logging, MvcRoutingShim, and PdfRenderer are seperate DLLs (due to extra dependencies), but all the rest are found in `ImageResizer.dll` in the `ImageResizer.Plugins.Basic` namespace.
 
 
-== partial :my_plugins, options
+== partial :my_plugins, {:locals => {display_edition: :creative, includes_editions: defined?(includes_editions) ? includes_editions : []}}

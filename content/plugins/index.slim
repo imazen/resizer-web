@@ -15,23 +15,21 @@ h1 Plugin Index
 h2
   a href="/plugins/editions/performance" Performance Edition 
   | (11 plugins) - $249/domain
-== index["/plugins/editions/performance"].body(self, {locals: {:hide_inherited_plugins => true}})
+== partial("/plugins/editions/performance",{locals: {includes_editions:[]}})
 
 h2
   a href="/plugins/editions/creative" Creative Edition 
   | (11 + 13 plugins) - $499/domain
-== index["/plugins/editions/creative"].body(self,{locals: {:hide_inherited_plugins => true}})
-
+== partial("/plugins/editions/creative",{locals: {includes_editions:[]}})
 h2
   a href="/plugins/editions/elite" Elite Edition 
   | (11 + 13 + 6 plugins) - $849/enterprise
-== index["/plugins/editions/elite"].body(self, {locals: {:hide_inherited_plugins => true}})
-
+== partial("/plugins/editions/elite",{locals: {includes_editions:[]}})
 h2
   a href="/plugins/editions/free" Essential Edition 
   | (17 plugins) - free
-== index["/plugins/editions/free"].body(self, {locals: {:hide_inherited_plugins => true}})
-
+== partial("/plugins/editions/free",{locals: {includes_editions:[]}})
 .well
   markdown: 
     **Don't see the plugin or feature you need?** Imazen offers [custom plugin development](/support/custom_plugins).
+

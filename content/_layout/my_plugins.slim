@@ -1,13 +1,13 @@
-- if page.flag? 'edition'
+- if defined?(display_edition)
   ul
-    - page.edition_plugins.each do |plugin|
+    - index["plugins/editions/#{display_edition}"].edition_plugins.each do |plugin|
       li
         a(href="#{plugin.path}")= plugin.heading
         |  - 
         = plugin.meta.tagline
 
-- if page.meta.includes_editions && !options[:hide_inherited_plugins]
-  - page.meta.includes_editions.split(',').map{ |id| index["plugins/editions/#{id.strip}"] }.to_a.sort_by {|i| i.meta.sort_field}.each do |e|
+- if defined?(includes_editions)
+  - includes_editions.map{ |id| index["plugins/editions/#{id}"] }.to_a.sort_by {|i| i.meta.sort_field}.each do |e|
     - if e
       h3 
         | Also includes plugins from the 

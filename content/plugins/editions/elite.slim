@@ -9,4 +9,4 @@ h1 Elite Edition
 markdown:
   The Elite edition is available under an [enterprise-wide](/licenses/enterprise), [SaaS](/licenses/saas), or [OEM](/licenses/oem) license.
 
-== partial :my_plugins, options
+== partial :my_plugins, {:locals => {display_edition: :creative, includes_editions: defined?(includes_editions) ? includes_editions : [:free, :performance, :creative]}}
