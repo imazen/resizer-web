@@ -32,9 +32,10 @@ class Site < Hardwired::Bootstrap
       end 
 
       def nav_generate_plugins(version)
-        index.pages_tagged("plugin")
-        .select{|path| page.path.start_with?("/docs/#{version}")}
-        .map{|page| {"path" =>  page.path, "title" => page.heading}}
+        
+        index.pages_tagged("plugin").select{|page| page.path.start_with?("/docs/#{version}/")}.map do |page|
+          {"path" =>  page.path, "title" => page.heading}
+        end
       end 
       def nav_generate_releases(version)
         releases.map{|page| {"path" =>  page.path, "title" => page.heading}}
