@@ -4,6 +4,9 @@ require 'time'
 #Set the root directory
 Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 
+
+DEFAULT_DOCS_VERSION = "v4"
+
 ##The location of the current file is used for calculating the default 'root' setting
 class Site < Hardwired::Bootstrap
     #require 'debugger' if development?
@@ -27,7 +30,11 @@ class Site < Hardwired::Bootstrap
           {id: "v3", 
             folder: "/docs/v3/", 
             home: "/docs/v3", 
-            title: "v3.x"}]
+            title: "v3.x"},
+          {id: "v4", 
+            folder: "/docs/v4/", 
+            home: "/docs/v4", 
+            title: "v4.x"}]
 
       end 
 
@@ -71,7 +78,7 @@ class Site < Hardwired::Bootstrap
 
 
       def default_version
-        "v3"
+        DEFAULT_DOCS_VERSION
       end
 
       def active_version
@@ -222,7 +229,7 @@ module Hardwired
     end
 
     def edition_plugins
-      @edition_plugins ||= Hardwired::Index.enum_files { |p| p.path.start_with?("/docs/v3/plugins") && p.is_page? && p.can_render? && !meta.edition.nil? && !p.meta.edition.nil? && meta.edition.casecmp(p.meta.edition) == 0 && !p.flag?('edition')}.to_a.sort { |x, y| y.meta.sort_field <=> x.meta.sort_field }
+      @edition_plugins ||= Hardwired::Index.enum_files { |p| p.path.start_with?("/docs/#{DEFAULT_DOCS_VERSION}/plugins") && p.is_page? && p.can_render? && !meta.edition.nil? && !p.meta.edition.nil? && meta.edition.casecmp(p.meta.edition) == 0 && !p.flag?('edition')}.to_a.sort { |x, y| y.meta.sort_field <=> x.meta.sort_field }
     end
   
   end
