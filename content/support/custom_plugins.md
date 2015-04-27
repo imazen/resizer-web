@@ -23,7 +23,7 @@ Support contracts [include between 1 and 10 hours of custom coding per year](/su
 
 All custom plugins developed are released to you under the [Enterprise license](/licenses/enterprise); we retain all rights except those provided by the aforementioned license.
 
-Many custom plugins are selected for redistribution and indefinite maintenance as part of an ImageResizer edition, meaning you can generally look forward to new features and improved performance in your custom plugin over time, perhaps even getting updates through NuGet.
+Many custom plugins are selected for redistribution and indefinite maintenance as part of an ImageResizer edition, meaning you can generally look forward to new features and improved performance in your custom plugin over time, and even getting updates through NuGet.
 
 In addition, the software may also be licensed to you (and the public) under the [Freedom license](/licenses/freedom) or [Apache 2 license](/licenes/apache) if the custom software is deemed appropriately generic to be included in the [Essential Edition](/plugins/editions/free).
 
@@ -31,4 +31,4 @@ In addition, the software may also be licensed to you (and the public) under the
 ## Alternatives
 
 1. Post your plugin/enhancement idea on [the UserVoice site](https://resizer.uservoice.com/forums/108373-image-resizer-v3) and encourage others to vote for it. This can take months to years, but won't cost you anything.
-2. Develop it yourself, using our extensive documentation, and [contribute it back to the community](/docs/contribute). We assist contributors with maintenance, documentation, and retaining compatibility.
+2. Develop it yourself, using our extensive documentation, and [contribute it back to the community](/docs/contribute). We assist contributors with maintenance, documentation, and compatibility.

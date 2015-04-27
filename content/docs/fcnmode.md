@@ -10,7 +10,7 @@ Users of IIS and ASP.NET often receive the following error message when running 
 
 There are two causes; one from IIS, and one from ASP.NET. Both problems are triggered by a large number of folders in the site, and the protocol inefficiency of over-the-network storage.
 
-The easy solution is - don't host your content on a SAN. Go cloud; put the content on S3, your server on EC2, and use CloudFront to make that tiny server scale like mad. If that's not an option, keep reading.
+The easy solution is - don't host your content on a SAN. Go cloud; put the content on S3, your server on EC2, and use CloudFront to make that system *scale*. If that's not an option, keep reading.
 
 If both your storage server and ASP.NET server are running Windows Server 2008, [it's possible this *may* not bite you](http://www.iis.net/learn/troubleshoot/performance-issues/troubleshooting-smb-netbios-fcn-limit-issues-with-remote-content). Still, you'll probably see improved performance by stopping IIS & ASP.NET's per-folder OCD behavior.
 
