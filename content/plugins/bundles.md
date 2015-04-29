@@ -14,7 +14,7 @@ Note that bundles were not overlapping, but rather a-la-carte.
 ## Performance Bundle
 
 
-The Performance bundle cost $249 for an enterprise-wide license, or $99 for a personal license. 
+The Performance bundle costs $249 for an enterprise-wide license, or $99 for a personal license. 
  
 Included:
 
