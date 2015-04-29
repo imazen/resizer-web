@@ -1,11 +1,13 @@
 ---
 :append: edition_info
-:aliases: "/plugins/pdfrenderer"
+:aliases: []
 :tags: Plugin
 :bundle: free
 :edition: free
 :tagline: Render PDFs to images dynamically, then crop or process them as an image.
-:edit_info: master/contrib/pdfrenderer/pdfrenderer_readme.md
+:edit_info: support/v3/contrib/pdfrenderer/pdfrenderer_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # PdfRenderer (New in V3.1.3)

@@ -1,7 +1,9 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Generate Thumbnails and Multiple Sizes to Disk
-:aliases: "/docs/howto/generate-versions"
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="thumbnails"></a></p>

@@ -5,8 +5,10 @@
 :bundle: free
 :tagline: Allows you to configure the default setting values when commands (like `scale`)
   are omitted.
-:aliases: "/plugins/defaultsettings"
-:edit_info: master/core/plugins/basic/defaultsettings_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/defaultsettings_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # DefaultSettings plugin (V3.1+)

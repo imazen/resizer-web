@@ -1,10 +1,12 @@
 ---
 :append: edition_info
-:aliases: "/plugins/customoverlay"
+:aliases: []
 :tags: plugin
 :edition: free
 :bundle: free
-:edit_info: master/samples/customoverlayplugin/readme.md
+:edit_info: support/v3/samples/customoverlayplugin/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Custom Overlay plugin

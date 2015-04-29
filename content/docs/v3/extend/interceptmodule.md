@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/interceptmodule /docs/extend/interceptmodule"
-:edit_info: master/docs/extend/interceptmodule.md
+:aliases: []
+:edit_info: support/v3/docs/extend/interceptmodule.md
+:flags:
+- "-sitemap"
 ---
 
 # InterceptModule 

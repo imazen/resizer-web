@@ -1,11 +1,13 @@
 ---
 :append: edition_info
 :tags: plugin
-:aliases: "/plugins/remotetreader /plugins/remotereader"
+:aliases: []
 :edition: performance
 :tagline: Allows images located on external servers to be securely resized and processed
   as if they existed locally.
-:edit_info: master/plugins/remotereader/readme.md
+:edit_info: support/v3/plugins/remotereader/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # RemoteReader plugin

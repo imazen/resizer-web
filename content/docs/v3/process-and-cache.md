@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/process-and-cache"
-:edit_info: master/docs/process-and-cache.md
+:aliases: []
+:edit_info: support/v3/docs/process-and-cache.md
+:flags:
+- "-sitemap"
 ---
 
 # Independent processing and caching

@@ -1,10 +1,12 @@
 ---
 :append: edition_info
-:aliases: "/plugins/croparound"
+:aliases: []
 :tags: plugin
 :edition: elite
 :tagline: Automatic cropping based on a set of areas to preserve specified areas.
-:edit_info: master/plugins/faces/croparound_readme.md
+:edit_info: support/v3/plugins/faces/croparound_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # CropAround plugin

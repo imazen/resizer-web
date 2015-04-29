@@ -1,0 +1,54 @@
+---
+:edit_info: develop/readme.md
+:aliases: "/docs/geterror"
+---
+
+<p><a name="error_messages"></a></p>
+
+<h2>Getting Detailed Error Messages</h2>
+
+<p>If some images are not displaying correctly, you <em>must</em> visit the image url directly to get the exact error message.</p>
+
+<p>The image URL is <strong>not</strong> the same as the page URL; viewing the broken image icons on the parent page doesn't tell us anything useful.</p>
+
+<h4>How to Open the Image URL Directly</h4>
+
+<ul>
+<li>In Chrome, right-click on the broken image and choose "Open Image in New Tab".</li>
+<li>In Firefox, right-click and choose "View Image".</li>
+<li>In IE, right-click the image and choose "Properties". Copy and paste the "Address" (URL) field contents into the address bar of a new window.</li>
+</ul>
+
+<h4>Once You're Viewing the Image URL Directly</h4>
+
+<p>If you do not get a specific error message, you must enable detailed error messages on your ASP.NET site.</p>
+
+<p>If you have local access to the server, you can set the <a href="http://msdn.microsoft.com/en-us/library/h0hfz6fc%28v=vs.100%29.aspx">customErrors mode</a> to RemoteOnly and access the URLs using "localhost".</p>
+
+<p>Otherwise, you may need to temporarily set customErrors to "Off", so you can get error messages from a remote location. <strong>Temporarily is the key word!</strong> Detailed error messages are considered a security risk and have enabled certain types of attacks to function. They should not be enabled for more than a few hours at most on a publicly accessible server.</p>
+
+<p>You may also have to <strong>temporarily</strong> change &lt;deployment retail to "False" for the customErrors setting to take effect. </p>
+
+<p>The customErrors setting is case-sensitive; use "Off", "On", and "RemoteOnly".</p>
+
+<p><a name="self_diagnostics"></a></p>
+
+<h2>Accessing Self-Diagnostics</h2>
+
+<p>Most configuration and plugin installation issues can be resolved by checking ImageResizer&rsquo;s self-diagnostics page. If your local website is running at <code>http://localhost:5000/</code>, then you can visit it at <code>http://localhost:5000/resizer.debug.ashx</code>.</p>
+
+<p>If you&rsquo;re not using ImageResizer from a web app, you can access the page as a string via <code>ImageResizer.Configuration.Config.Current.GetDiagnosticsPage()</code> or write it to disk with <code>ImageResizer.Configuration.Config.Current.WriteDiagnosticsTo(string path)</code>. </p>
+
+<h4>Diagnostics Page Not Working?</h4>
+
+<p>By default, the Diagnostics plugin uses the same setting as <a href="http://msdn.microsoft.com/en-us/library/h0hfz6fc%28v=vs.100%29.aspx">customErrors</a> (which defaults to Localhost). Thus, if you can see ASP.NET error messages, you will also be able to get the diagnostics page. This ensures that the diagnostics page never exposes data to a host that doesn't already have access to detailed error messages. </p>
+
+<p>To override, add one of the following to the &lt;resizer&gt; section.</p>
+
+<pre lang="xml"><code>  &lt;diagnostics enableFor="AllHosts" /&gt;
+  &lt;diagnostics enableFor="Localhost" /&gt;
+  &lt;diagnostics enableFor="None" /&gt;
+
+</code></pre>
+
+<p></p>

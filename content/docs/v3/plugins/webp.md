@@ -3,8 +3,10 @@
 :tags: plugin
 :edition: elite
 :tagline: Decode and encode .webp images
-:aliases: "/plugins/webp"
-:edit_info: master/plugins/webp/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/webp/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # WebP plugins

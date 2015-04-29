@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/plugins/basics /docs/extend /docs/extend/basics"
-:edit_info: master/docs/extend/basics.md
+:aliases: []
+:edit_info: support/v3/docs/extend/basics.md
+:flags:
+- "-sitemap"
 ---
 
 # Making a plugin

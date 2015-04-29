@@ -3,9 +3,11 @@
 :tags: plugin
 :bundle: free
 :edition: free
-:aliases: "/plugins/friendlyurls /plugins/folderresizesyntax"
+:aliases: []
 :tagline: Resize images without using the query string.
-:edit_info: master/core/plugins/basic/folderresizesyntax_readme.md
+:edit_info: support/v3/core/plugins/basic/folderresizesyntax_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # FolderResizeSyntax plugin

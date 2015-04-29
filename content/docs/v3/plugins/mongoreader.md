@@ -4,8 +4,10 @@
 :uservoice: true
 :edition: elite
 :tagline: Allows GridFS files to be resized and served
-:aliases: "/plugins/mongoreader"
-:edit_info: master/plugins/mongoreader/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/mongoreader/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # MongoReader plugin

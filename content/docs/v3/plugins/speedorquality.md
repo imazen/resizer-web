@@ -4,8 +4,10 @@
 :bundle: free
 :edition: free
 :tagline: Gain a 15-30% speed boost by sacrificing rendering quality.
-:aliases: "/plugins/speedorquality"
-:edit_info: master/core/plugins/basic/speedorquality_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/speedorquality_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # SpeedOrQuality (v3.1+)

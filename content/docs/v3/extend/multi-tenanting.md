@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/howto/multi-tenanting /docs/extend/multi-tenanting"
-:edit_info: master/docs/extend/multi-tenanting.md
+:aliases: []
+:edit_info: support/v3/docs/extend/multi-tenanting.md
+:flags:
+- "-sitemap"
 ---
 
 # Support multi-tenanting

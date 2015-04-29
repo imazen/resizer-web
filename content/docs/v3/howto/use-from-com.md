@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/howto/use-from-com"
-:edit_info: master/docs/howto/use-from-com.md
+:aliases: []
+:edit_info: support/v3/docs/howto/use-from-com.md
+:flags:
+- "-sitemap"
 ---
 
 # Using the ImageResizer from COM

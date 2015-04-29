@@ -1,5 +1,5 @@
 ---
-:edit_info: master/docs/install/non-web.md
+:edit_info: support/v3/docs/install/non-web.md
 ---
 
 # So you're not using ImageResizer's URL API?

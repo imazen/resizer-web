@@ -5,8 +5,10 @@
 :edition: performance
 :tagline: Process and resize images located in a MS SQL database. Extremely configurable,
   can work with nearly any database schema. A VirtualPathProvider.
-:aliases: "/plugins/sqlreader"
-:edit_info: master/plugins/sqlreader/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/sqlreader/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # SQLReader plugin

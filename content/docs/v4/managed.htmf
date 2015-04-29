@@ -1,0 +1,79 @@
+---
+:edit_info: develop/readme.md
+:heading: Managed API
+:aliases: "/docs/managed"
+---
+
+<p><a name="managed_api"></a></p>
+
+<h2>Managed API examples</h2>
+
+<p>Most tasks with the managed API only require one line:</p>
+
+<pre lang="c#"><code>  ImageResizer.ImageBuilder.Current.Build(object source, object dest, ResizeSettings settings)
+
+  or
+
+  Bitmap b = ImageResizer.ImageBuilder.Current.Build(object source, ResizeSettings settings)
+
+</code></pre>
+
+<h4>Object Source</h4>
+
+<p>May be a physical path (C:..), an app-relative virtual path (~/folder/image.jpg), an Image, Bitmap, Stream, VirtualFile, or HttpPostedFile instance. </p>
+
+<h4>Object Dest</h4>
+
+<p>May be a Stream instance, a physical path, or an app-relative virtual path.</p>
+
+<h4>ResizeSetting Settings</h4>
+
+<p>ResizeSettings is a friendly wrapper for a query string which provides named properties as well as the regular NameValueCollection interface.</p>
+
+<p>You can create one like so:</p>
+
+<pre lang="c#"><code>
+  new ResizeSettings("maxwidth=200&amp;maxheight=200")
+
+  //or
+  new ResizeSettings(Request.QueryString)
+
+  //or
+  var r = new ResizeSettings();
+  r.MaxWidth = 200;
+  r.MaxHeight = 300;
+
+</code></pre>
+
+<h4>Examples</h4>
+
+<pre lang="c#"><code>  using ImageResizer;
+
+  //Converts a jpeg into a png
+
+  ImageBuilder.Current.Build("~/images/photo.jpg","~/images/photo.png", 
+                             new ResizeSettings("format=png"));
+
+  //Crops to a square (in place)
+  ImageBuilder.Current.Build("~/images/photo.jpg","~/images/photo.jpg", 
+                             new ResizeSettings("width=100&amp;height=200&amp;crop=auto"));
+</code></pre>
+
+<h4>Using Variables in the Destination Path (3.1.3+)</h4>
+
+<p>Variables include the correct extension <ext>, random GUID <guid>, source path <path>, source filename <filename>, <width>, <height>, and any settings value <settings.>. </settings.></height></width></filename></path></guid></ext></p>
+
+<p>This makes many scenarios much easier to code, and reduces room for error. Many users make critical errors in their upload code, such as not sanitizing filenames, or using the original extension (immediate server highjacking, here we go). </p>
+
+<p>With the new feature, a proper upload system is 3 lines:</p>
+
+<pre lang="c#"><code>    ImageJob i = new ImageJob(file, 
+    "~/uploads/&lt;guid&gt;.&lt;ext&gt;", 
+    new ResizeSettings("width=1600")); 
+    i.CreateParentDirectory = true;
+    i.Build();
+</code></pre>
+
+<p>You can also filter values. <code>&lt;filename:A-Za-z0-9&gt;</code> keeps only the alphanumeric characters from the original filename.</p>
+
+<p></p>

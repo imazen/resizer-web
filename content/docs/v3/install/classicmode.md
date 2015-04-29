@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/cleanurls /docs/install/classicmode"
-:edit_info: master/docs/install/classicmode.md
+:aliases: []
+:edit_info: support/v3/docs/install/classicmode.md
+:flags:
+- "-sitemap"
 ---
 
 # How to get clean URLs on IIS5, IIS6, and IIS7 Classic Mode

@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/extending /docs/plugins/extending /docs/extend/extending"
-:edit_info: master/docs/extend/extending.md
+:aliases: []
+:edit_info: support/v3/docs/extend/extending.md
+:flags:
+- "-sitemap"
 ---
 
 # Extending the Image Resizer

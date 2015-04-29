@@ -1,7 +1,9 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Convert and Resize Images as They Are Uploaded
-:aliases: "/docs/howto/upload-and-resize"
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="resize_upload"></a></p>

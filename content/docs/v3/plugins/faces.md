@@ -3,8 +3,10 @@
 :edition: elite
 :tags: plugin
 :tagline: Provides face detection
-:aliases: "/plugins/faces"
-:edit_info: master/plugins/faces/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/faces/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Faces plugin

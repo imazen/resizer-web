@@ -5,8 +5,10 @@
 :bundle: free
 :tagline: "(default) - Sets Cache-control, Expires, and Last-modified headers for
   optimum performance."
-:aliases: "/plugins/clientcache"
-:edit_info: master/core/plugins/basic/clientcache_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/clientcache_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # ClientCache plugin

@@ -4,8 +4,10 @@
 :bundle: free
 :edition: free
 :tagline: 'Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.'
-:aliases: "/plugins/gradient"
-:edit_info: master/core/plugins/basic/gradient_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/gradient_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Gradient plugin

@@ -1,8 +1,8 @@
 ---
-:aliases: "/docs/workswith/dotnetnuke /docs/workswith/ektron /docs/workswith/episerver
-  /docs/workswith/umbraco /docs/workswith/sitecore /docs/workswith/sitefinity /docs/workswith/orchard
-  /docs/cms_compatibility"
-:edit_info: master/docs/cms_compatibility.md
+:aliases: []
+:edit_info: support/v3/docs/cms_compatibility.md
+:flags:
+- "-sitemap"
 ---
 
 #CMS Compatibility

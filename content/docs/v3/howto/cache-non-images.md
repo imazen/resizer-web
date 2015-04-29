@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/howto/cache-non-images"
-:edit_info: master/docs/howto/cache-non-images.md
+:aliases: []
+:edit_info: support/v3/docs/howto/cache-non-images.md
+:flags:
+- "-sitemap"
 ---
 
 # How to DiskCache non-image files.

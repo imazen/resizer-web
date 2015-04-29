@@ -5,8 +5,10 @@
 :edition: free
 :tagline: Created named settings groups and reference them with ?preset=name instead
   of specifying them all in the URL.
-:aliases: "/plugins/presets"
-:edit_info: master/core/plugins/basic/presets_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/presets_readme.md
+:flags:
+- "-sitemap"
 ---
 
 #Presets plugin (v3.1+)

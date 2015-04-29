@@ -1,0 +1,226 @@
+---
+:edit_info: develop/readme.md
+:heading: Full Command Reference
+:aliases: "/docs/reference"
+---
+
+<p><a name="full_command"></a></p>
+
+<h2>Full Command Reference</h2>
+
+<h4>Selecting a frame or page</h4>
+
+<ul>
+<li>
+<strong>frame=x</strong> &ndash; Choose which frame of an animated GIF to display.</li>
+<li>
+<strong>page=x</strong>&ndash; Choose which page of a multi-page TIFF document to display.</li>
+</ul>
+
+<h4>Rotation &amp; flipping</h4>
+
+<ul>
+<li>
+<strong>autorotate=true</strong> Automatically rotates the image based on the EXIF info from the camera. (Requires the <a href="http://www.imageresizing.net/plugins/autorotate">AutoRotate plugin</a>)</li>
+<li>
+<strong>sflip=none|x|y|xy</strong> Flips the source image prior to processing (new in V3.1).</li>
+<li>
+<strong>srotate=0|90|180|270</strong> Rotates the source image prior to processing (only 90 degree intervals) (new in V3.1).</li>
+<li>
+<strong>rotate=degrees</strong> &ndash; Rotates the image any arbitrary angle (occurs after cropping).</li>
+<li>
+<strong>flip=none|x|y|xy</strong> - Flips the image after everything is done.</li>
+</ul>
+
+<h4>Manual cropping</h4>
+
+<ul>
+<li>
+<strong>crop=(x1,y1,x2,y2)</strong> &ndash; Crop the image to the specified rectangle on the source image. You can use negative coordinates to specify bottom-right relative locations.</li>
+<li>
+<strong>cropxunits</strong> The width which the x1 and x2 coordinates are relative to, e.g., use '100' to make x1 and x2 percentages. Useful when you don't know the original image size.</li>
+<li>
+<strong>cropyunits</strong> The height which the y1 and y2 coordinates are relative to, e.g., use '100' to make y1 and y2 percentages. Useful when you don't know the original image size.</li>
+</ul>
+
+<h4>Sizing (and padding, autocropping, carving and stretching)</h4>
+
+<p><em>Please note that width/height/maxwidth/maxheight do NOT include border, margin, or padding widths, and do not include the extra space used by rotation.</em> They constrain the image, not the canvas.</p>
+
+<ul>
+<li>
+<strong>maxwidth, maxheight</strong> &ndash; Fit the image within the specified bounds, preserving aspect ratio.</li>
+<li>
+<strong>width, height</strong> &ndash; Force the final width and/or height to certain dimensions. Whitespace will be added if the aspect ratio is different.</li>
+<li>
+<strong>mode=max|pad|crop|carve|stretch</strong> - How to handle aspect-ratio conflicts between the image and width+height. 'pad' adds whitespace, 'crop' crops minimally, 'carve' uses seam carving, 'stretch' loses aspect-ratio, stretching the image. 'max' behaves like maxwidth/maxheight (new in V3.1).</li>
+<li>
+<strong>anchor=topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright</strong> How to anchor the image when padding or cropping (new in V3.1).</li>
+<li>
+<strong>scale=both|upscaleonly|downscaleonly|upscalecanvas</strong> &ndash; By default, images are never upscaled. Use &amp;scale=both to upscale images if they are smaller than width and height.</li>
+<li>
+<strong>zoom=0..infinity</strong> - Scale the image by a multiplier. Useful for mobile devices and situations where you need to retain all the existing width/height/crop settings, but scale the result up or down. Defaults to 1. 0.5 produces a half-size image, 2 produces a double-size image.</li>
+</ul>
+
+<h4>Border, padding, margins and background colors</h4>
+
+<ul>
+<li>
+<strong>bgcolor=color name | hex code (6-char).</strong> Sets the background/whitespace color.</li>
+<li>
+<strong>paddingWidth=px &amp; paddingColor=color|hex</strong> paddingColor defaults to bgcolor, which defaults to white.</li>
+<li>
+<strong>borderWidth=px, borderColor=color|hex</strong> borderColor defaults to transparent.</li>
+<li>
+<strong>margin=3 or margin=5,5,10,10</strong> Specify a universal margin or left,top,right,bottom widths (new in V3.1.</li>
+</ul>
+
+<h4>Output format</h4>
+
+<ul>
+<li>
+<strong>format=jpg|png|gif</strong> - The output format to use.</li>
+<li>
+<strong>quality</strong> - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly.</li>
+<li>
+<strong>colors=2-255</strong> &ndash; Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit (<a href="http://www.imageresizing.net/plugins/prettygifs">PrettyGifs plugin</a> required).</li>
+</ul>
+
+<h4>Misc</h4>
+
+<ul>
+<li>
+<strong>ignoreicc</strong> - true|false. If true, the ICC profile embedded in the source image will be ignored.</li>
+<li>
+<strong>cache</strong> - always|no|default - Always forces the image to be cached even if it wasn't modified by the resizing module. Doesn't disable caching if it was modified.</li>
+<li>
+<strong>process</strong> - always|no|default - Always forces the image to be re-encoded even if it wasn't modified. Does not prevent the image from being modified.</li>
+<li>
+<strong>dpi=90|300|600</strong> - The DPI at which the image should be printed. Ignored by all browsers, most operating systems, and most printers.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/watermark">Watermark plugin</a></h4>
+
+<ul>
+<li>
+<strong>watermark</strong> - The name of one or more watermark layers (or layer groups) to render.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/image404">Image404 plugin</a></h4>
+
+<ul>
+<li>
+<strong>404</strong> - The path to the fallback image, or a named preset.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/gradient">Gradient plugin</a></h4>
+
+<ul>
+<li>
+<strong>color1,color2</strong> - 6 or 8 digit hex values specifying the start and end gradient colors. </li>
+<li>
+<strong>angle</strong> - 0 is horizontal. Degrees to rotate the gradient.</li>
+<li>
+<strong>width/height</strong> - The size of the gradient image.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/prettygifs">PrettyGifs plugin</a></h4>
+
+<ul>
+<li>
+<strong>colors</strong> - 2 to 256 (the number of colors to allow in the output image palette). For Gifs and 8-bit PNGs.</li>
+<li>
+<strong>dither</strong>=true|false|4pass|30|50|79|[percentage] - How much to dither.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/simplefilters">SimpleFilters plugin</a></h4>
+
+<ul>
+<li>&amp;s.grayscale=true|y|ry|ntsc|bt709|flat  (true, ntsc, and y produce identical results)</li>
+<li>&amp;s.sepia=true</li>
+<li>&amp;s.alpha= 0..1</li>
+<li>&amp;s.brightness=-1..1</li>
+<li>&amp;s.contrast=-1..1</li>
+<li>&amp;s.saturation=-1..1</li>
+<li>&amp;s.invert=true</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/advancedfilters">AdvancedFilters plugin</a></h4>
+
+<ul>
+<li>&amp;a.blur=radius - Gaussian blur with adjustable radius.</li>
+<li>&amp;a.sharpen=radius - Gaussian sharpen with adjustable radius.</li>
+<li>&amp;a.contrast=-1..1</li>
+<li>&amp;a.saturation=-1..1</li>
+<li>&amp;a.brightness=-1..1</li>
+<li>&amp;a.equalize=true - Adjusts contrast, saturation, and brightness with curves based on the histogram. Good for adjusting slightly foggy or dark daytime photos. </li>
+<li>&amp;a.sepia=true - Sepia effect, slightly different from the one in SimpleFilters.</li>
+<li>&amp;a.oilpainting=1..100 -Try <code>1</code> for impressionist, <code>100</code> for modern art :)</li>
+<li>&amp;a.removenoise=1-100 - Not a blur effect - designed to remove color noise, 'pepper noise'. Very conservative, doesn't affect edges.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/dropshadow">DropShadow plugin</a></h4>
+
+<ul>
+<li>
+<strong>shadowWidth</strong> - Width of the shadow.</li>
+<li>
+<strong>shadowOffset</strong> - (x,y) how to offset the drop shadow.</li>
+<li>
+<strong>shadowColor</strong> - Named or hex color of the shadow.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/speedorquality">SpeedOrQuality plugin</a></h4>
+
+<ul>
+<li>
+<strong>speed</strong>=0..5 - The amount of quality to sacrifice for speed - each value uses different settings and techniques, and may not support all features.</li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/presets">Presets plugin</a></h4>
+
+<ul>
+<li>
+<strong>preset</strong>=name1,name2,name3 - A list of preset settings groups to apply. </li>
+</ul>
+
+<h4><a href="http://www.imageresizing.net/plugins/whitespacetrimmer">WhitespaceTrimmer plugin</a></h4>
+
+<ul>
+<li>
+<strong>trim.threshold=80</strong> - The threshold to use for trimming whitespace.</li>
+<li>
+<strong>trim.percentpadding=0.5</strong> - The percentage of padding to restore after trimming.</li>
+</ul>
+
+<h4>
+<a href="http://www.imageresizing.net/plugins/wic">WicBuilder</a> &amp; <a href="http://www.imageresizing.net/plugins/freeimage">FreeImageBuilder</a>
+</h4>
+
+<ul>
+<li>
+<strong>builder=freeimage|wic</strong> - Enables the FreeImage or Wic pipeline instead of the default GDI pipeline. Special effect plugins not supported.</li>
+</ul>
+
+<h4>
+<a href="http://www.imageresizing.net/plugins/freeimage">FreeImageDecoder</a>, <a href="http://www.imageresizing.net/plugins/wic">WicDecoder</a>
+</h4>
+
+<p>These act as fallback decoders, but you can tell them to try first by using </p>
+
+<ul>
+<li><strong>decoder=wic|freeimage</strong></li>
+</ul>
+
+<h4>
+<a href="http://www.imageresizing.net/plugins/freeimage">FreeImageEncoder</a>, <a href="http://www.imageresizing.net/plugins/wic">WicEncoder</a>
+</h4>
+
+<p>In addition to jpeg quality and gif/png colors, you can configure the jpeg subsampling for both Wic and FreeImage.</p>
+
+<ul>
+<li>
+<strong>subsampling</strong>==444|422|420</li>
+</ul>
+
+<p></p>

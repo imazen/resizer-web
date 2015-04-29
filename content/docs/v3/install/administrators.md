@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/install/administrators"
-:edit_info: master/docs/install/administrators.md
+:aliases: []
+:edit_info: support/v3/docs/install/administrators.md
+:flags:
+- "-sitemap"
 ---
 
 # Guide for Server Administrators

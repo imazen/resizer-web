@@ -5,8 +5,10 @@
 :edition: free
 :tagline: Create an IIS-like virtual folder that works in Cassini as well as IIS,
   and doesn't require IIS configuration.
-:aliases: "/plugins/virtualfolder"
-:edit_info: master/core/plugins/basic/virtualfolder_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/virtualfolder_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # VirtualFolder plugin

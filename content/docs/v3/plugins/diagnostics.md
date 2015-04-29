@@ -5,8 +5,10 @@
 :bundle: free
 :tagline: "(default) - Whenever you have an issue, go to localhost/resizer.debug and
   you'll probably be told what is wrong."
-:aliases: "/plugins/diagnostics /plugins/diagnostic"
-:edit_info: master/core/plugins/basic/diagnostics_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/diagnostics_readme.md
+:flags:
+- "-sitemap"
 ---
 
 #Diagnostics plugin

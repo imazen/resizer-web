@@ -1,7 +1,9 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Watermark Images Based on Folder Name or Display Size
-:aliases: "/docs/howto/watermark-by-folder-or-size"
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="watermark"></a></p>

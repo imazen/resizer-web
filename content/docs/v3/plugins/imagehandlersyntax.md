@@ -3,11 +3,12 @@
 :tags: plugin
 :bundle: free
 :edition: free
-:aliases: "/plugins/imagehandlersyntax%20compatibility%20shim%20that%20mimics%20the%20URL%20syntax%20of%20Web%20Image%20Resize%20Handler
-  /plugins/imagehandlersyntax"
+:aliases: []
 :tagline: Migrate websites from other image resizing handlers without breaking any
   URLs.
-:edit_info: master/core/plugins/basic/imagehandlersyntax_readme.md
+:edit_info: support/v3/core/plugins/basic/imagehandlersyntax_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # ImageHandlerSyntax plugin

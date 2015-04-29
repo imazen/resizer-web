@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/configuration-all"
-:edit_info: master/docs/configuration-all.md
+:aliases: []
+:edit_info: support/v3/docs/configuration-all.md
+:flags:
+- "-sitemap"
 ---
 
 # Configuration Reference

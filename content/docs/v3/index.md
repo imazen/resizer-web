@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs /docs/git"
-:edit_info: master/docs/intro.md
+:aliases: []
+:edit_info: support/v3/docs/intro.md
+:flags:
+- "-sitemap"
 ---
 
 # What is ImageResizer?

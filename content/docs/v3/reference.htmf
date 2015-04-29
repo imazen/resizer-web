@@ -1,7 +1,9 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Full Command Reference
-:aliases: "/docs/reference"
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="full_command"></a></p>

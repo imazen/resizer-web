@@ -1,6 +1,8 @@
 ---
-:edit_info: master/readme.md
-:aliases: "/docs/geterror"
+:edit_info: support/v3/readme.md
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="error_messages"></a></p>

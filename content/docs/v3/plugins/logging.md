@@ -4,8 +4,10 @@
 :bundle: free
 :edition: free
 :tagline: Allows logging through NLog
-:aliases: "/plugins/logging"
-:edit_info: master/plugins/logging/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/logging/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Logging plugin (v3.1+)

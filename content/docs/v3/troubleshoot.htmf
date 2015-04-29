@@ -1,8 +1,10 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Troubleshooting
-:aliases: "/docs/troubleshoot"
+:aliases: []
 :textclass: t troubleshooting
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="troubleshooting_list"></a></p>

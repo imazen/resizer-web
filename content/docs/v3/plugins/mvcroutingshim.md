@@ -4,8 +4,10 @@
 :bundle: free
 :edition: free
 :tagline: Prevent MVC Routes from taking over the ImageResizer's requests.
-:aliases: "/plugins/mvcroutingshim"
-:edit_info: master/core/plugins/basic/mvcroutingshim_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/mvcroutingshim_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # MvcRoutingShim plugin

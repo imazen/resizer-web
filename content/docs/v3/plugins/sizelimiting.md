@@ -5,8 +5,10 @@
 :edition: free
 :tagline: "(default)- Limit maximum resolution of photos, or the total size of all
   processed images."
-:aliases: "/plugins/sizelimiting"
-:edit_info: master/core/plugins/basic/sizelimiting_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/sizelimiting_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # SizeLimiting plugin

@@ -5,8 +5,10 @@
 :edition: performance
 :tagline: Allows you to use Amazon CloudFront with the resizer. Highly recommended
   - offers inexpensive worldwide edge caching and great scalability.
-:aliases: "/plugins/cloudfront"
-:edit_info: master/plugins/cloudfront/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/cloudfront/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # CloudFront plugin

@@ -4,8 +4,10 @@
 :bundle: free
 :edition: free
 :tagline: Use the EXIF rotation data from the camera to auto-rotate your images.
-:aliases: "/plugins/autorotate"
-:edit_info: master/core/plugins/basic/autorotate_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/autorotate_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # AutoRotate plugin (v3.1+)

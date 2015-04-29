@@ -5,8 +5,10 @@
 :tagline: Makes dynamic image processing as responsive and scalable as static images
   - because they are! Suggested, nay, required for websites with significant traffic.
   Medium-trust compatible.
-:aliases: "/plugins/diskcache"
-:edit_info: master/plugins/diskcache/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/diskcache/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # DiskCache plugin

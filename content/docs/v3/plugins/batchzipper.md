@@ -4,8 +4,10 @@
 :edition: elite
 :tagline: Asynchronously generated .zip archives of files and resized images. Great
   for providing customized downloads to customers.
-:aliases: "/plugins/batchzipper"
-:edit_info: master/plugins/batchzipper/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/batchzipper/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # BatchZipper plugin

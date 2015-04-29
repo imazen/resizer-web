@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/howto/use-without-asp-net /docs/install/standalone"
-:edit_info: master/docs/install/standalone.md
+:aliases: []
+:edit_info: support/v3/docs/install/standalone.md
+:flags:
+- "-sitemap"
 ---
 
 # ImageResizer - Standalone Installation Tips

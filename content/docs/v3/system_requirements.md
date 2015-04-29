@@ -1,7 +1,8 @@
 ---
-:aliases: "/docs/requirements /docs/workswith/requirements /docs/workswith/mediumtrust
-  /docs/workswith/hosting /docs/system_requirements"
-:edit_info: master/docs/system_requirements.md
+:aliases: []
+:edit_info: support/v3/docs/system_requirements.md
+:flags:
+- "-sitemap"
 ---
 
 # System Requirements

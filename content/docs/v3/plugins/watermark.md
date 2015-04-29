@@ -4,8 +4,10 @@
 :edition: creative
 :tagline: Render multiple image & text overlays and background layers with incredible
   flexibility and great performance.
-:aliases: "/plugins/watermark"
-:edit_info: master/plugins/watermark/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/watermark/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Watermark plugin

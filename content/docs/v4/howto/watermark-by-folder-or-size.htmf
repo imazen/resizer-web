@@ -1,0 +1,58 @@
+---
+:edit_info: develop/readme.md
+:heading: Watermark Images Based on Folder Name or Display Size
+:aliases: "/docs/howto/watermark-by-folder-or-size"
+---
+
+<p><a name="watermark"></a></p>
+
+<h2>Watermark Images Based on Folder Name or Display Size</h2>
+
+<p>The <em>PostRewrite</em> event is the last of the URL rewriting events, and can be used to enforce certain settings.</p>
+
+<p>You can add an event handler during the Application\Start method in Global.asax.cs.</p>
+
+<p>The following sample code applies a watermark to all images inside 'folder' that are probably above 100x100. I say probably, because the size estimation is based on the assumption that the original image is a 600x600 square. Given a 600x100 actual image size and the querystring "?height=99", the image could escape watermarking and display at 594x99.</p>
+
+<p>So, with this code, you can only know that <em>one</em> of the dimensions will be less than 100px - you can't know that both will be.</p>
+
+<pre lang="c#"><code>  Config.Current.Pipeline.PostRewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
+      //Check folder
+      string folder = VirtualPathUtility.ToAbsolute("~/folder");
+      if (ev.VirtualPath.StartsWith(folder, StringComparison.OrdinalIgnoreCase)) {
+          //Estimate final image size, based on the original image being 600x600. 
+          Size estimatedSize = ImageBuilder.Current.GetFinalSize(new System.Drawing.Size(600,600),
+              new ResizeSettings(ev.QueryString));
+          if (estimatedSize.Width &gt; 100 || estimatedSize.Height &gt; 100){
+              //It's over 100px, apply watermark
+              ev.QueryString["watermark"] = "Sun_256.png";
+          }
+      }
+  };
+</code></pre>
+
+<h4>Important note</h4>
+
+<p>While the above enforces watermarking on all processed images, the <code>process=no</code> command can disable processing of the image completely, avoiding all resizing and watermarking.</p>
+
+<p>To prevent this, you should add some more code inside PostRewrite</p>
+
+<pre lang="c#"><code>  Config.Current.Pipeline.PostRewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
+      //Check folder
+      string folder = VirtualPathUtility.ToAbsolute("~/folder");
+      if (ev.VirtualPath.StartsWith(folder, StringComparison.OrdinalIgnoreCase)) {
+          //Estimate final image size, based on the original image being 600x600.
+          Size estimatedSize = ImageBuilder.Current.GetFinalSize(new System.Drawing.Size(600,600),
+                          new ResizeSettings(ev.QueryString));
+          if (estimatedSize.Width &gt; 100 || estimatedSize.Height &gt; 100){
+              //It's over 100px, apply watermark
+              ev.QueryString["watermark"] = "Sun_256.png";
+              //Force processing if it's an image
+              if (Config.Current.Pipeline.IsAcceptedImageType(ev.VirtualPath))
+                ev.QueryString["process"] = "Always";
+          }
+      }
+  };
+</code></pre>
+
+<p></p>

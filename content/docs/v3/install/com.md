@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/install/asp /docs/install/com"
-:edit_info: master/docs/install/com.md
+:aliases: []
+:edit_info: support/v3/docs/install/com.md
+:flags:
+- "-sitemap"
 ---
 
 # ImageResizer - Installing for COM applications

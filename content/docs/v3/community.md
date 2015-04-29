@@ -1,7 +1,9 @@
 ---
-:aliases: "/docs/wrappers /docs/contribute /docs/community"
+:aliases: []
 :icon: github-alt
-:edit_info: master/docs/community.md
+:edit_info: support/v3/docs/community.md
+:flags:
+- "-sitemap"
 ---
 
 # Communuty plugins and articles

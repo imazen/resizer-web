@@ -4,8 +4,10 @@
 :bundle: free
 :edition: free
 :tagline: Supply default images instead of a 404 when an image is missing.
-:aliases: "/plugins/image404 /plugins/404image"
-:edit_info: master/core/plugins/basic/image404_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/image404_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Image404 plugin

@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/plugins/imagebuilder /docs/extend/imagebuilder"
-:edit_info: master/docs/extend/imagebuilder.md
+:aliases: []
+:edit_info: support/v3/docs/extend/imagebuilder.md
+:flags:
+- "-sitemap"
 ---
 
 # Order of command execution

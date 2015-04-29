@@ -4,8 +4,10 @@
 :edition: performance
 :bundle: 3
 :tagline: Allows blobstore images to be resized and served. (Azure 1.X compatible).
-:aliases: "/plugins/azurereader"
-:edit_info: master/plugins/azurereader/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/azurereader/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # AzureReader plugin

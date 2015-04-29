@@ -2,8 +2,10 @@
 :append: edition_info
 :tags: plugin
 :edition: free
-:aliases: "/plugins/diagnosticjson"
-:edit_info: master/plugins/diagnosticjson/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/diagnosticjson/readme.md
+:flags:
+- "-sitemap"
 ---
 
 #DiagnosticJson plugin

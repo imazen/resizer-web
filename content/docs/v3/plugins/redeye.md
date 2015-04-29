@@ -3,8 +3,10 @@
 :tags: plugin
 :edition: elite
 :tagline: Provides sophisticated eye detection and red eye correction
-:aliases: "/plugins/redeye"
-:edit_info: master/plugins/redeye/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/redeye/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # RedEye plugin

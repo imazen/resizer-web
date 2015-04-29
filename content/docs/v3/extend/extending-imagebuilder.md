@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/extending-imagebuilder /docs/plugins/extending-imagebuilder /docs/extend/extending-imagebuilder"
-:edit_info: master/docs/extend/extending-imagebuilder.md
+:aliases: []
+:edit_info: support/v3/docs/extend/extending-imagebuilder.md
+:flags:
+- "-sitemap"
 ---
 
 #Extending ImageBuilder

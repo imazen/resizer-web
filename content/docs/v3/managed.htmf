@@ -1,7 +1,9 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Managed API
-:aliases: "/docs/managed"
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="managed_api"></a></p>

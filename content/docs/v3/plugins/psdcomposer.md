@@ -4,8 +4,10 @@
 :edition: elite
 :tagline: Dynamically edit and render PSD files - turn layers on and off, edit text
   layer contents, and apply certain effects.
-:aliases: "/plugins/psdcomposer"
-:edit_info: master/plugins/psdcomposer/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/psdcomposer/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # PsdComposer

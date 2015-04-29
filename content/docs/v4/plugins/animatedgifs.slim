@@ -1,0 +1,46 @@
+---
+:append: edition_info
+:tags: plugin
+:edition: performance
+:tagline: Process and resize GIF animations like normal GIF images. Every frame is
+  processed and re-encoded.
+:libs: twentytwenty
+:icon: cogs
+:aliases: "/plugins/animatedgifs"
+:edit_info: develop/plugins/animatedgifs/readme.slim
+---
+
+h1 AnimatedGifs plugin
+
+markdown:
+
+  Adds support for resizing animated gifs. Once added, animated gifs will be resized while maintaining all animated frames. By default, .NET only saves the first frame of the GIF image.
+
+  Best used with disk caching, as large animations can take a while to process (sometimes even over a second).
+
+- image_width = 300
+
+.row-fluid
+  .span4.well
+    div style="position:relative; text-align:center; width:100%;"
+      span style="position:absolute; left:0"
+        | Original
+      span style="position:absolute; right:0"
+        | AnimatedGifs
+    br
+    p
+      .twentytwenty-container
+        img src="http://z.zr.io/rw/pluginexamples/example-animated.gif?format=jpeg&width=#{image_width}" id="plugin-example-before"
+        img src="http://z.zr.io/rw/pluginexamples/example-animated.gif?width=#{image_width}" id="plugin-example-after"
+
+    p 
+      | Settings: width = 300
+
+
+markdown: 
+  ## Installation
+
+  Either run `Install-Package ImageResizer.Plugins.AnimatedGifs` in the NuGet package manager, or:
+  
+  1.  Add ImageResizer.Plugins.AnimatedGifs to your project
+  2. Add `<add name="AnimatedGifs" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.

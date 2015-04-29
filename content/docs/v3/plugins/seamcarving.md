@@ -3,8 +3,10 @@
 :tags: plugin
 :edition: creative
 :tagline: Content-aware image resizing.
-:aliases: "/plugins/seamcarving"
-:edit_info: master/plugins/seamcarving/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/seamcarving/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # SeamCarving plugin

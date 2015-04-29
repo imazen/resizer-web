@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/plugins/virtualimageprovider /docs/extend/virtualimageprovider"
-:edit_info: master/docs/extend/virtualimageprovider.md
+:aliases: []
+:edit_info: support/v3/docs/extend/virtualimageprovider.md
+:flags:
+- "-sitemap"
 ---
 
 # Virtual Image Providers

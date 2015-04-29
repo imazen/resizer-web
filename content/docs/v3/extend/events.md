@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/events /docs/extend/events"
-:edit_info: master/docs/extend/events.md
+:aliases: []
+:edit_info: support/v3/docs/extend/events.md
+:flags:
+- "-sitemap"
 ---
 
 # Events

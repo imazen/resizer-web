@@ -1,10 +1,12 @@
 ---
 :append: edition_info
 :tags: plugin
-:aliases: "/plugins/psd /plugins/psdr.. /plugins/psdreader"
+:aliases: []
 :edition: elite
 :tagline: Adds support for PSD source files.
-:edit_info: master/plugins/psdreader/readme.md
+:edit_info: support/v3/plugins/psdreader/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # PsdReader plugin

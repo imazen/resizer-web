@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/install/web-config"
-:edit_info: master/docs/install/web-config.md
+:aliases: []
+:edit_info: support/v3/docs/install/web-config.md
+:flags:
+- "-sitemap"
 ---
 
 # Editing Web.Config

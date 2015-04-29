@@ -1,6 +1,8 @@
 ---
-:aliases: "/docs/faq"
-:edit_info: master/docs/faq.md
+:aliases: []
+:edit_info: support/v3/docs/faq.md
+:flags:
+- "-sitemap"
 ---
 
 # Frequently Asked Questions

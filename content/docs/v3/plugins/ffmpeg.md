@@ -4,8 +4,10 @@
 :edition: elite
 :tagline: Extract frames from videos by time or percentage. Includes basic blank frame
   avoidance. Based on ffmpeg.
-:aliases: "/plugins/ffmpeg"
-:edit_info: master/plugins/ffmpeg/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/ffmpeg/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # FFmpeg Plugin

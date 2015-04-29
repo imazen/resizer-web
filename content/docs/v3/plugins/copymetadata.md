@@ -3,8 +3,10 @@
 :tags: plugin
 :edition: creative
 :tagline: Preserve metadata during image processing.
-:aliases: "/plugins/copymetadata"
-:edit_info: master/plugins/copymetadata/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/copymetadata/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # CopyMetadata plugin

@@ -1,7 +1,9 @@
 ---
-:edit_info: master/readme.md
+:edit_info: support/v3/readme.md
 :heading: Configuration Reference
-:aliases: "/docs/configuration"
+:aliases: []
+:flags:
+- "-sitemap"
 ---
 
 <p><a name="config_reference"></a></p>

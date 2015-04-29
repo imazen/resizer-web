@@ -4,8 +4,10 @@
 :edition: free
 :bundle: free
 :tagline: Adds drop-shadow feature (shadowOffset, shadowWidth, shadowColor).
-:aliases: "/plugins/dropshadow"
-:edit_info: master/core/plugins/basic/dropshadow_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/dropshadow_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # Drop Shadow plugin

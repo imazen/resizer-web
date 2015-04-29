@@ -5,8 +5,10 @@
 :edition: free
 :tagline: Automatically serve GIF versions of PNG files to IE6 and below clients.
   Opt-in or opt-out, very configurable.
-:aliases: "/plugins/iepngfix"
-:edit_info: master/core/plugins/basic/iepngfix_readme.md
+:aliases: []
+:edit_info: support/v3/core/plugins/basic/iepngfix_readme.md
+:flags:
+- "-sitemap"
 ---
 
 # IEPngFix plugin (New in V3.1.3)

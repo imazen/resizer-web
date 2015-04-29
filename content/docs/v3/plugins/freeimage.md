@@ -6,8 +6,10 @@
   images - over 20 formats supported. FreeImageEcoder provides 2-4x Faster jpeg encoding.
   FreeImageResizer adds support for Lanczos3 and CatmullRom scaling. FreeImageBuilder
   provides an alternate imaging pipeline.'
-:aliases: "/plugins/freeimage"
-:edit_info: master/plugins/freeimage/readme.md
+:aliases: []
+:edit_info: support/v3/plugins/freeimage/readme.md
+:flags:
+- "-sitemap"
 ---
 
 # FreeImage Plugins
