@@ -32,7 +32,7 @@ Some V3 plugins are under a [slightly more restrictive license](/licenses), but 
 
 ImageResizer can be found on GitHub at [github.com/imazen/resizer](https://github.com/imazen/resizer). Our [release history for V3 may also help you locate changelog information](/releases).
 
-Due to the design of V3, we were able to maintain backwards compatibility through 4 years of steadily adding plugins, pipelines, and functionality. The v3 of 2014 resembles the v3 of 2011 little when it comes to capabilities; yet painless upgrades are possible.
+Due to the design of V3, we were able to maintain backwards compatibility through 4 years of steadily adding plugins, pipelines, and functionality. The v3 of 2014 barely resembles the v3 of 2011 in terms of capabilities; yet painless upgrades between versions of v3 are possible.
 
 #### Version 4
 
@@ -40,7 +40,7 @@ Version 4 is the first version of ImageResizer that is OSI-compliant. All softwa
 
 v4 introduces async support, requires .NET 4.5, and drops support for medium trust. It is highly backwards-compatible with v3, but does make some breaking changes to support new scenarios and functionality. 
 
-v4 also introduces a high-peroformance, high-quality image scaling component that can work side-by-side with GDI+, allowing up to 8x the throughput while retaining all the functionality and compatibility of the default pipeline.
+v4 also introduces a high-performance, high-quality image scaling component that can work side-by-side with GDI+, allowing up to 8x the throughput while retaining all the functionality and compatibility of the default pipeline.
 
 ### Imazen
 

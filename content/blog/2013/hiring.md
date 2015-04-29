@@ -5,7 +5,7 @@ icon: building
 
 **Can you write code for humans, not just compilers?**
 
-Imazen is hiring talented, experienced software engineers who have a history of open-source software development. We care about your code more than your resumè, so give us your GitHub/CodePlex username if you want to be considered.
+Imazen is hiring talented, experienced software engineers who have a history of open-source software development. We care about your code more than your résumé, so give us your GitHub/CodePlex username if you want to be considered.
 
 **You'll be working on:** ImageResizer and related products in C#, ASP.NET, C, and Ruby. Umbraco experience a plus.
 

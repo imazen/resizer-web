@@ -30,7 +30,7 @@ h1 Redistribution and CMS Integration guide
     markdown:
       TinyCache is a lighter version of DiskCache, suitable for small websites and projects which aren't photo heavy.
 
-      TinyCache offers a fixed-size (30MB), disk-persisted memory cache. The average size of a resized image is 30KB, so TinyCache can generally store the 1,000 most popular image variations. We reccommend that websites with over a few hundred images upgrade to DiskCache, which is designed to cache millions of images.
+      TinyCache offers a fixed-size (30MB), disk-persisted memory cache. The average size of a resized image is 30KB, so TinyCache can generally store the 1,000 most popular image variations. We recommend that websites with over a few hundred images upgrade to DiskCache, which is designed to cache millions of images.
 
       TinyCache is free, and included in ImageResizer Essential Edition. It can be redistributed at no charge.
 
@@ -58,7 +58,7 @@ hr
 markdown:
   ### File delivery
 
-  While most CMSes offer customized systems for file delivery, those systems are not optimized for dynamic image processing or disk caching. To achieve scalability and good performance, you should install the ImageResizer HttpModule in Web.Config and use it in the reccomended fashion. URL rewriting, caching configuration, and authorization systems are all accessible through events exposed by the Config.Pipeline class.
+  While most CMSes offer customized systems for file delivery, those systems are not optimized for dynamic image processing or disk caching. To achieve scalability and good performance, you should install the ImageResizer HttpModule in Web.Config and use it in the recommended fashion. URL rewriting, caching configuration, and authorization systems are all accessible through events exposed by the Config.Pipeline class.
 
 
   ### File storage
@@ -67,7 +67,7 @@ markdown:
 
   ### Uploads
 
-  Uploads can be accepted in a variety of ways; postback, MVC, WebAPI, HttpHandler - ImageResizer doesn't care. We suggest ensuring whitelist-based character and extension sanitization, and reccomend GUID filenames to prevent concurrency bugs. 
+  Uploads can be accepted in a variety of ways; postback, MVC, WebAPI, HttpHandler - ImageResizer doesn't care. We suggest ensuring whitelist-based character and extension sanitization, and recommend GUID filenames to prevent concurrency bugs. 
 
   You may also consider sending uploads directly to blob storage, using the appropriate blob storage API. This will take load off your application servers, and ImageResizer can process the images dynamically as requested.
 
