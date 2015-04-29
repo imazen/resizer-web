@@ -4,7 +4,7 @@
 :edition: free
 :bundle: free
 :tagline: "(default) Adjustable jpeg compression, 24-bit PNG with transparency support,
-  and standard .NET GIF encoding (which is very lousy)."
+  and standard (poor) .NET GIF encoding."
 :aliases: "/plugins/defaultencoder"
 :edit_info: master/core/plugins/basic/defaultencoder_readme.md
 ---

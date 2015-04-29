@@ -4,7 +4,7 @@
 :edition: free
 :bundle: free
 :tagline: Allows you to configure the default setting values when commands (like `scale`)
-  are omitted
+  are omitted.
 :aliases: "/plugins/defaultsettings"
 :edit_info: master/core/plugins/basic/defaultsettings_readme.md
 ---

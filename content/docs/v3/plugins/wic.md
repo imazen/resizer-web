@@ -7,7 +7,7 @@
   images through WIC for better performance and more control. Adjust jpeg quality,
   subsampling, gif dithering, and palette size. WicBuilder provides a completely alternate
   pipeline, which supports most basic resize/crop/pad operations. 2-4x faster than
-  the default pipeline. Enable on a per-request bass.'
+  the default pipeline. Enable on a per-request basis.'
 :aliases: "/plugins/wic"
 :edit_info: master/plugins/wic/readme.md
 ---

@@ -2,7 +2,7 @@
 :append: edition_info
 :tags: plugin
 :edition: creative
-:tagline: Preserve metadata during image processing
+:tagline: Preserve metadata during image processing.
 :aliases: "/plugins/copymetadata"
 :edit_info: master/plugins/copymetadata/readme.md
 ---
@@ -26,6 +26,8 @@ Install `ImageResizer.Plugins.CopyMetadata`, *or*...
 
 * `copymetadata=true`
 
-## Special ability when installed alongside the Faces plugin
 
-* c.focus=faces - Perfoms on-the-fly face detection and uses those coordinates. Can be resource intensive, so disk caching is reccommended.
+### Resources
+
+http://stackoverflow.com/a/25162782/166893
+https://msdn.microsoft.com/en-us/library/system.drawing.imaging.propertyitem.id.aspx

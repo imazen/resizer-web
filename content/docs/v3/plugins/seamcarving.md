@@ -2,7 +2,7 @@
 :append: edition_info
 :tags: plugin
 :edition: creative
-:tagline: Content-aware image resizing (Fast C++ exe, requires Full Trust)
+:tagline: Content-aware image resizing.
 :aliases: "/plugins/seamcarving"
 :edit_info: master/plugins/seamcarving/readme.md
 ---

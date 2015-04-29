@@ -16,19 +16,19 @@
 
 <p>So, with this code, you can only know that <em>one</em> of the dimensions will be less than 100px - you can't know that both will be.</p>
 
-<pre lang="c#"><code>    Config.Current.Pipeline.PostRewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
-        //Check folder
-        string folder = VirtualPathUtility.ToAbsolute("~/folder");
-        if (ev.VirtualPath.StartsWith(folder, StringComparison.OrdinalIgnoreCase)) {
-            //Estimate final image size, based on the original image being 600x600. 
-            Size estimatedSize = ImageBuilder.Current.GetFinalSize(new System.Drawing.Size(600,600),
-                            new ResizeSettings(ev.QueryString));
-            if (estimatedSize.Width &gt; 100 || estimatedSize.Height &gt; 100){
-                //It's over 100px, apply watermark
-                ev.QueryString["watermark"] = "Sun_256.png";
-            }
-        }
-    };
+<pre lang="c#"><code>  Config.Current.Pipeline.PostRewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
+      //Check folder
+      string folder = VirtualPathUtility.ToAbsolute("~/folder");
+      if (ev.VirtualPath.StartsWith(folder, StringComparison.OrdinalIgnoreCase)) {
+          //Estimate final image size, based on the original image being 600x600. 
+          Size estimatedSize = ImageBuilder.Current.GetFinalSize(new System.Drawing.Size(600,600),
+              new ResizeSettings(ev.QueryString));
+          if (estimatedSize.Width &gt; 100 || estimatedSize.Height &gt; 100){
+              //It's over 100px, apply watermark
+              ev.QueryString["watermark"] = "Sun_256.png";
+          }
+      }
+  };
 </code></pre>
 
 <h4>Important note</h4>
@@ -37,22 +37,22 @@
 
 <p>To prevent this, you should add some more code inside PostRewrite</p>
 
-<pre lang="c#"><code>    Config.Current.Pipeline.PostRewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
-            //Check folder
-            string folder = VirtualPathUtility.ToAbsolute("~/folder");
-            if (ev.VirtualPath.StartsWith(folder, StringComparison.OrdinalIgnoreCase)) {
-                    //Estimate final image size, based on the original image being 600x600.
-                    Size estimatedSize = ImageBuilder.Current.GetFinalSize(new System.Drawing.Size(600,600),
-                                                    new ResizeSettings(ev.QueryString));
-                    if (estimatedSize.Width &gt; 100 || estimatedSize.Height &gt; 100){
-                            //It's over 100px, apply watermark
-                            ev.QueryString["watermark"] = "Sun_256.png";
-                            //Force processing if it's an image
-                            if (Config.Current.Pipeline.IsAcceptedImageType(ev.VirtualPath))
-                                ev.QueryString["process"] = "Always";
-                    }
-            }
-    };
+<pre lang="c#"><code>  Config.Current.Pipeline.PostRewrite += delegate(IHttpModule sender, HttpContext context, IUrlEventArgs ev) {
+      //Check folder
+      string folder = VirtualPathUtility.ToAbsolute("~/folder");
+      if (ev.VirtualPath.StartsWith(folder, StringComparison.OrdinalIgnoreCase)) {
+          //Estimate final image size, based on the original image being 600x600.
+          Size estimatedSize = ImageBuilder.Current.GetFinalSize(new System.Drawing.Size(600,600),
+                          new ResizeSettings(ev.QueryString));
+          if (estimatedSize.Width &gt; 100 || estimatedSize.Height &gt; 100){
+              //It's over 100px, apply watermark
+              ev.QueryString["watermark"] = "Sun_256.png";
+              //Force processing if it's an image
+              if (Config.Current.Pipeline.IsAcceptedImageType(ev.VirtualPath))
+                ev.QueryString["process"] = "Always";
+          }
+      }
+  };
 </code></pre>
 
 <p></p>

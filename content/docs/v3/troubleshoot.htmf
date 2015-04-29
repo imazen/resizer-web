@@ -9,7 +9,7 @@
 
 <h2>What Might Be Wrong</h2>
 
-<p>To get support or use this guide, make sure you get the detailed error message from visiting the image URL directly. This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far to generic to be useful. </p>
+<p>To get support or use this guide, make sure you get the detailed error message from visiting the image URL directly. This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far too generic to be useful. </p>
 
 <p>If this page doesn't resolve your issue, <a href="http://www.imageresizing.net/support">visit the Support page</a> for information about the bug bounty and free support requirements.</p>
 
@@ -94,8 +94,7 @@
 
 <h4>This type of page is not served. (HTTP 403 error)</h4>
 
-<pre><code>Description: The type of page you have requested is not served because it has been explicitly forbidden.  The extension '.jpg' may be incorrect.   Please review the URL below and make sure that it is spelled correctly. 
-</code></pre>
+<p>Description: The type of page you have requested is not served because it has been explicitly forbidden.  The extension '.jpg' may be incorrect.   Please review the URL below and make sure that it is spelled correctly. </p>
 
 <p>Possible causes</p>
 
@@ -108,23 +107,23 @@
 
 <h4>Method Not Found (System.MissingMethodException)</h4>
 
-<pre><code>Server Error in '/' Application. 
------------------------------- 
-Method not found: 'Void System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.
-Exception Details: System.MissingMethodException: Method not found: 'Void 
-System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.
-</code></pre>
+<p>Server Error in '/' Application. </p>
 
-<p>This error occurs when you do not have .NET 2.0 Service Pack 2 applied. No other conditions cause this error. The RemapHanlder method was added in .NET 2.0 SP2, and is required by this product.<br>
+<hr>
+
+<p>Method not found: 'Void System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.<br>
+  Exception Details: System.MissingMethodException: Method not found: 'Void <br>
+  System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.</p>
+
+<p>This error occurs when you do not have .NET 2.0 Service Pack 2 applied. No other conditions cause this error. The RemapHandler method was added in .NET 2.0 SP2, and is required by this product.<br>
 Yes, it is possible to have .NET 3, 3.5, and .NET 4 installed (and up-to-date), yet not have .NET SP2 installed. This peculiar circumstance has been verified on over 5 machines.</p>
 
 <h4>Server object error 'ASP 0178 : 80070005'</h4>
 
-<pre><code>Server object error 'ASP 0178 : 80070005'
-Server.CreateObject Access Error
-The call to Server.CreateObject failed while checking permissions. 
-Access is denied to this object.
-</code></pre>
+<p>Server object error 'ASP 0178 : 80070005'<br>
+  Server.CreateObject Access Error<br>
+  The call to Server.CreateObject failed while checking permissions. <br>
+  Access is denied to this object.</p>
 
 <p>This error usually means that the user that the ASP website is running under does not have NTFS permissions to the ImageResizer dlls. <br>
 Right click the <code>C:\Program Files\ImageResizingNet\v3</code> folder and choose Properties, Security, hit Edit, then click Add, type in the user name your website is running under, hit OK, then check Read &amp; Execute, and hit OK, then Apply.</p>
@@ -137,28 +136,27 @@ Right click the <code>C:\Program Files\ImageResizingNet\v3</code> folder and cho
 
 <h4>System.Security.SecurityException</h4>
 
-<pre><code>System.Security.SecurityException: Request for the 
-permission of type 'System.Configuration.ConfigurationPermission, 
-System.Configuration, Version=2.0.0.0, Culture=neutral, 
-PublicKeyToken=b03f5f7f11d50a3a' failed
-</code></pre>
+<p>System.Security.SecurityException: Request for the <br>
+  permission of type 'System.Configuration.ConfigurationPermission, <br>
+  System.Configuration, Version=2.0.0.0, Culture=neutral, <br>
+  PublicKeyToken=b03f5f7f11d50a3a' failed</p>
 
 <p>This can occur in certain medium or low trust environments. To correct, set <code>requirePermission="false"</code> on the resizer section declaration in Web.config.</p>
 
-<pre lang="xml"><code>    &lt;?xml version="1.0" encoding="utf-8" ?&gt;
-    &lt;configuration&gt;
-        &lt;configSections&gt;
-            &lt;section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" /&gt;
-        &lt;/configSections&gt;
-        ...
+<pre lang="xml"><code>  &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+  &lt;configuration&gt;
+    &lt;configSections&gt;
+      &lt;section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" /&gt;
+    &lt;/configSections&gt;
+    ...
 </code></pre>
 
 <h4>Error parsing Web.Config</h4>
 
 <p>If you are using NuGet and recently upgraded from an older release, there may be duplicate XML elements in Web.Config. Delete the one lacking the requirePermission="false" attribute.</p>
 
-<pre lang="xml"><code>    &lt;section name="resizer" type="ImageResizer.ResizerSection"/&gt;
-    &lt;section name="resizer" type="ImageResizer.ResizerSection" requirePermission="false"/&gt;
+<pre lang="xml"><code>  &lt;section name="resizer" type="ImageResizer.ResizerSection"/&gt;
+  &lt;section name="resizer" type="ImageResizer.ResizerSection" requirePermission="false"/&gt;
 </code></pre>
 
 <h4>Quality loss when resizing 8-bit Grayscale Jpeg images</h4>

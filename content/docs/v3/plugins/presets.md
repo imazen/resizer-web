@@ -3,8 +3,8 @@
 :tags: plugin
 :bundle: free
 :edition: free
-:tagline: Created named settings groups and and reference them with ?preset=name instead
-  of specifying them all in the URL
+:tagline: Created named settings groups and reference them with ?preset=name instead
+  of specifying them all in the URL.
 :aliases: "/plugins/presets"
 :edit_info: master/core/plugins/basic/presets_readme.md
 ---

@@ -38,9 +38,9 @@
 <li>
 <strong>crop=(x1,y1,x2,y2)</strong> &ndash; Crop the image to the specified rectangle on the source image. You can use negative coordinates to specify bottom-right relative locations.</li>
 <li>
-<strong>cropxunits</strong> The width the x1 and x2 coordinates are relative, e.g., use '100' to make x1 and x2 percentages. Useful when you don't know the original image size.</li>
+<strong>cropxunits</strong> The width which the x1 and x2 coordinates are relative to, e.g., use '100' to make x1 and x2 percentages. Useful when you don't know the original image size.</li>
 <li>
-<strong>cropyunits</strong> The height the y1 and y2 coordinates are relative, e.g., use '100' to make y1 and y2 percentages. Useful when you don't know the original image size.</li>
+<strong>cropyunits</strong> The height which the y1 and y2 coordinates are relative to, e.g., use '100' to make y1 and y2 percentages. Useful when you don't know the original image size.</li>
 </ul>
 
 <h4>Sizing (and padding, autocropping, carving and stretching)</h4>
@@ -81,7 +81,7 @@
 <li>
 <strong>format=jpg|png|gif</strong> - The output format to use.</li>
 <li>
-<strong>quality</strong> - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly .</li>
+<strong>quality</strong> - Jpeg compression: 0-100 100=best, 90=very good balance, 0=ugly.</li>
 <li>
 <strong>colors=2-255</strong> &ndash; Control the palette size of PNG and GIF images. If omitted, PNGs will be 24-bit (<a href="http://www.imageresizing.net/plugins/prettygifs">PrettyGifs plugin</a> required).</li>
 </ul>

@@ -22,7 +22,7 @@
 <pre lang="c#"><code>  new PluginName().Install(ImageResizer.Configuration.Config.Current);
 </code></pre>
 
-<p>You will need need to add the appopriate namespace reference to access the plugin.</p>
+<p>You will need to add the appropriate namespace reference to access the plugin.</p>
 
 <p>Most configuration and plugin installation issues can be resolved by checking ImageResizer&rsquo;s self-diagnostics page. If your local website is running at <code>http://localhost:5000/</code>, then you should browse to <code>http://localhost:5000/resizer.debug.ashx</code> to access it. See <a href="#troubleshooting%20section">the Troubleshooting</a> for more details. </p>
 
