@@ -33,7 +33,7 @@ class Site < Hardwired::Bootstrap
 
       def nav_generate_plugins(version, arg_1)
         
-        index.pages_tagged("plugin").select{|page| page.path.start_with?("/docs/#{version}/")}.map do |page|
+        index.pages_tagged("plugin").sort_by{|page| page.heading}.select{|page| page.path.start_with?("/docs/#{version}/")}.map do |page|
           {"path" =>  page.path, "title" => page.heading}
         end
       end 
