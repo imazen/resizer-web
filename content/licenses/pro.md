@@ -36,7 +36,7 @@ This license grants the purchaser of the software the following rights:
 
 Subject to the following restrictions:
 
- * Redistribution is **only permitted as part of a larger project that does not compete with the Software or any products distributed by the the owner of the Software**. The receiving party is licensed the software under the [Professional Client license][proclient].
+ * Redistribution is **only permitted as part of a larger project that does not compete with the Software or any products distributed by the owner of the Software**. The receiving party is licensed the software under the [Professional Client license][proclient].
   	For example, it is permitted to integrate the Software in a project for a client, and the client may use the project on any number of servers. But for the client to integrate the Software with another project themselves, they must buy  a license. 
  * A copy of the [Professional Client license][proclient] must be included with the Software when it is distributed.
  * When redistributing a modified copy of the Software, a notice that the Software has been modified must be included.
@@ -44,7 +44,7 @@ Subject to the following restrictions:
 
 Suggestions:
 
- * It is suggested, but not required, that redistributed changes be submitted to the the owner of the Software for code review. Without code review, the owner of the Software cannot support modified versions of the Software.
+ * It is suggested, but not required, that redistributed changes be submitted to the owner of the Software for code review. Without code review, the owner of the Software cannot support modified versions of the Software.
 
  * It is suggested, but not required, that a description of the changes made to the Software be included when the Software is redistributed.
 

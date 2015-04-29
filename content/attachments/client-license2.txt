@@ -117,7 +117,7 @@ This license can be revoked under any of the following conditions
 
 The Licensor is not required to contact you before revoking your license, nor is the Licensor obliged to provide any compensation if your license is revoked. 
 
-Examples of a abuse that may trigger a license revocation:
+Examples of an abuse that may trigger a license revocation:
 
 * Reselling usage of the software (See [SaaS license][saas]).
 * Using the Work outside of the Larger Project, or modifying the integration of the Work and the Larger Project (without purchasing a license).

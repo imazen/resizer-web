@@ -89,7 +89,7 @@ The Licensor is not required to contact you before revoking your license, nor is
 
 If this license is revoked, any sublicenses that have been issued to Clients are also immediately revoked. The Purchaser is held responsible for the collective actions of their Employees and subsidiaries in regard to this license.
 
-Examples of a abuse that may trigger a license revocation:
+Examples of an abuse that may trigger a license revocation:
 
 * Reselling usage of the software (See [SaaS license][saas]).
 * Redistributing the Work except as permitted by this License.

@@ -74,7 +74,7 @@ This license can be revoked under any of the following conditions
 
 The Licensor is not required to contact you before revoking your license, nor is the Licensor obliged to provide a refund if your license is revoked. 
 
-Examples of a abuse that may trigger a license revocation:
+Examples of an abuse that may trigger a license revocation:
 
 * Using the Software in production, or on publicly reachable websites.
 * Redistributing the Software
