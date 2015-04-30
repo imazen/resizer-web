@@ -24,8 +24,8 @@ javascript:
 
   var localOffset = now.getTimezoneOffset() / -60;
 
-  var a = (localOffset - edtOffset + 10) % 24;
-  var b = (localOffset - edtOffset + 21) % 24;
+  var a = (localOffset - edtOffset + 9) % 24;
+  var b = (localOffset - edtOffset + 17) % 24;
 
   var mins =  now.getMinutes().toString(); 
   if (mins.length == 1) mins = mins + '0';
