@@ -3,7 +3,7 @@
 :edit_info: develop/docs/extend/extending-imagebuilder.md
 ---
 
-#Extending ImageBuilder
+# Extending ImageBuilder
 
 
 ImageBuilder can be extended in two ways.

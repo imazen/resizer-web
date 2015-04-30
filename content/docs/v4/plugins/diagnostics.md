@@ -9,7 +9,7 @@
 :edit_info: develop/core/plugins/basic/diagnostics_readme.md
 ---
 
-#Diagnostics plugin
+# Diagnostics plugin
 
 The `/resizer.debug` page is provided by this plugin (which is installed by default)
 

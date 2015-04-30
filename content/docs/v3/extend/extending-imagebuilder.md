@@ -5,7 +5,7 @@
 - "-sitemap"
 ---
 
-#Extending ImageBuilder
+# Extending ImageBuilder
 
 
 ImageBuilder can be extended in two ways.

@@ -8,7 +8,7 @@
 :edit_info: develop/plugins/fastscaling/readme.md
 ---
 
-# FastScaling
+# FastScaling plugin
 
 Unlike the FreeImage and WIC pipelines, FastScaling integrates with the default GDI+ pipeline, replacing Graphics.DrawImage() with its own algorithms. 
 This [bypasses the severe performance and moderate quality issues of Graphics.DrawImage](#drawimage), while allowing existing plugins and System.Drawing-dependent code to function as-is.
@@ -37,6 +37,8 @@ Upscaling and downscaling may utilize the same algorithm, but should be tuned qu
 The default downscaling filter is Robidoux, and the default upscaling filter is Ginseng. To mimic DrawImage precisely, use Cubic
 
 ### Resampling filters
+
+Filters may be removed or renamed prior to release. You are reminded that FastScaling is still alphaware.
 
 * Robidoux
 * RobidouxSharp

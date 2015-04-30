@@ -9,7 +9,7 @@
 :edit_info: develop/core/plugins/basic/defaultencoder_readme.md
 ---
 
-#DefaultEncoder
+# DefaultEncoder
 
 Installed by default. 
 
