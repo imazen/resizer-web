@@ -1,7 +1,7 @@
 title: Resizer Freedom License
 Libs: -comments
 
-#Resizer Freedom license
+# Resizer Freedom license
 
 In ImageResizer V4, software published under the Resizer Freedom license is instead provided under the more permissive [Apache License 2.0][apache]. 
 
@@ -9,7 +9,7 @@ Nearly all ImageResizer V4 “Essential Edition” plugins offered by Imazen may
 
 In ImageResizer V3, this license is used by the Resizer Core, the [17+ free plugins](/plugins) in the ImageResizer.Plugins.Basic namespace, and the [Logging plugin](/plugins/logging).
 
-##License summary:
+## License summary:
 
 No restrictions, except you can't use my own code to compete with my own products.
 
@@ -25,7 +25,7 @@ An exact copy of the [MIT license](http://www.opensource.org/licenses/mit-licens
 
 If you purchased an [Enterprise](/licenses/enterprise) license read those terms instead. If you comply with them, you're automatically complying with this license.
 
-##License Terms
+## License Terms
 
 Copyright (c) 2012 Imazen
 

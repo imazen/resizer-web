@@ -3,7 +3,7 @@ textclass: t legal
 Libs: -comments
 
 
-#Resizer Trial License v2.0
+# Resizer Trial License v2.0
 
 Nearly all ImageResizer software can freely be used under the terms of this license. 
 

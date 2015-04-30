@@ -1,7 +1,7 @@
 Libs: -comments
 
 
-#ImageResizer v2
+# ImageResizer v2
 
 ImageResizer v2 is deprecated. To upgrade to v4, first follow the [migration guide for v2-> v3](/docs/v2/2to3/guide), then upgrade your binaries to v4 (which is backwards compatible). 
 

@@ -1,7 +1,7 @@
 textclass: t legal
 Libs: -comments
 
-#Imazen SaaS License v1.0
+# Imazen SaaS License v1.0
 
 The [OEM][oem] and [SaaS][saas] licenses are included with an [OEM, Silver, or Gold support contract](/support/contracts/compare).  These contracts also include an [Enterprise license][enterprise], which includes certain redistribution rights. The Imazen SaaS License does not grant redistribution rights, as it specifically grants the SaaS usage rights not permitted under the [OEM][oem] and [Enterprise][enterprise] licenses.
 

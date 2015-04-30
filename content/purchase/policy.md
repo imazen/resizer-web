@@ -2,7 +2,7 @@ Libs: -comments
 Aliases: /purchase/refunds
 Flags: -sitemap
 
-#Policies
+# Policies
 
 We work hard to protect our users and provide high quality software. Our full refund and privacy policies are below, but here is a summary of what they contain.
 

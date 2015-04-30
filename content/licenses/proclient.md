@@ -2,7 +2,7 @@ textclass: t legal
 Libs: -comments
 Aliases: /licenses/proclient
 
-#ImageResizer Professional Client License v2.0
+# ImageResizer Professional Client License v2.0
 
 
 ## Summary - For Clients

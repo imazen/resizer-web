@@ -1,7 +1,7 @@
 textclass: t legal
 Libs: -comments
 
-#Imazen Domain License v2.0
+# Imazen Domain License v2.0
 
 You can acquire this license by [purchasing the Performance or Creative Edition](/licenses).
 

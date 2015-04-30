@@ -126,13 +126,13 @@ Oh, and guess what - it's fully backwards compatible. You can take advantage of 
 
 ## [FreeImage](/plugins/freeimage)
 
-###Breaking changes
+### Breaking changes
 
 * FreeImageEncoder no longer acts as the default encoder. To enable, use `encoder=freeimage` in the request URL.
 * FreeImageBuilder is no longer activated via &freeimage=true. To activate, use `builder=freeimage`.
 * FreeImageDecoder can be requested as the primary decoder with `decoder=freeimage` instead of `freeimage=true`. As always, it is a default fallback decoder if the other decoders can't handle the stream.
 
-###The good news
+### The good news
 
 * Got a customized version of FreeImage based on libjpeg-turbo. 2-4x faster jpeg encoding and decoding!
 * Improved overall performance of non freeimage-related requests when a FreeImage plugin was installed by reordering some statements.

@@ -3,7 +3,7 @@ Renderer: RubyPoweredMarkdown
 Icon: download
 Layout: page
 
-#All releases
+# All releases
 
 <% releases.each do |p| %>
 * [<%= p.heading %>](<%= p.path %>) - <%= p.meta_summary ? p.meta_summary.strip : '' %>
