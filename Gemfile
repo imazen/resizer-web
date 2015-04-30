@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.1.5'
+ruby '2.1.6'
 
 gem 'slim'
 gem 'kramdown'
