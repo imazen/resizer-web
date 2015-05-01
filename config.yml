@@ -60,7 +60,8 @@ categories:
   page: /docs
   meta: 
     sidebar: /docs/sidebar
-
+    textclass: markdown-body
+    
 - tag: releases
   title: Releases
   include: /releases
