@@ -1,40 +1,41 @@
 layout: false
 Flags: hidden
 
-div
-  | Switch to 
-  ul.inline_nav
-    - versions.each do |v|
-      - if v[:id] == active_version
-        li.active
-          = v[:id]
-          |  docs
-      - else
-        li
-          a href=v[:home]
+div.markdown-body.no_bullet
+  div
+    | Switch to 
+    ul.inline_nav
+      - versions.each do |v|
+        - if v[:id] == active_version
+          li.active
             = v[:id]
             |  docs
-div 
-  - @versions = page.reachable_in_versions(versions)
-  - if @versions.length > 1
-    | Alternate versions of this page: 
-    ul.inline_nav
-      - @versions.select{|v| !v[:active]}.each do |v|
-        li
-          a href=(v[:page_path])
-            = v[:title]
-          
-div
-  - if page.meta.edit_info 
-    a href="https://github.com/imazen/resizer/edit/#{page.meta.edit_info}"
-      | Edit this page on GitHub.
-  - else
-    a href="https://github.com/imazen/resizer-web/edit/master/content#{Hardwired::Index.make_almost_virtual(page.filename, false)}"
-      | Edit this page on GitHub
+        - else
+          li
+            a href=v[:home]
+              = v[:id]
+              |  docs
+  div 
+    - @versions = page.reachable_in_versions(versions)
+    - if @versions.length > 1
+      | Alternate versions of this page: 
+      ul.inline_nav
+        - @versions.select{|v| !v[:active]}.each do |v|
+          li
+            a href=(v[:page_path])
+              = v[:title]
+            
+  div
+    - if page.meta.edit_info 
+      a href="https://github.com/imazen/resizer/edit/#{page.meta.edit_info}"
+        | Edit this page on GitHub.
+    - else
+      a href="https://github.com/imazen/resizer-web/edit/master/content#{Hardwired::Index.make_almost_virtual(page.filename, false)}"
+        | Edit this page on GitHub
 
 
-div#toc
-  .tocify
-    == partial :sidebar_recursive, {:locals => {:node => nav_docs_tree(active_version)}}
+  div#toc
+    .tocify
+      == partial :sidebar_recursive, {:locals => {:node => nav_docs_tree(active_version)}}
 
 
