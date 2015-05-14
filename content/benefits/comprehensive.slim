@@ -12,7 +12,7 @@ h2 Transform
 - def widths(*cols); cols.map{|w| (w / cols.inject(:+).to_f * (269 - 10 * (cols.count - 1))).round  } end;
 - def normal_width(count);  ((269 - 10 * (count - 1)) / count.to_f).round end;
 .row
-  .span3
+  .span4
     - w = widths(1.5,1,1,1).map{ |v| v + 4}
     h4 Scale with any fit mode
     img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}"
@@ -23,7 +23,7 @@ h2 Transform
     i.icon-arrow-right
     img src="http://z.zr.io/ri/2s.jpg?width=#{w[3]}&height=#{w[3]}&mode=crop"
     p Constrain, carve, pad, or crop to the perfect size with complete alignment control.
-  .span3
+  .span4
     - w = widths(1,1,1)
     h4 Rotate & Flip
     img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
@@ -32,7 +32,7 @@ h2 Transform
     i.icon-arrow-right
     img src="http://z.zr.io/ri/3s.jpg?width=#{(w[2] * 0.6).round}&rotate=30&flip=h"
     p Flip, rotate, or auto-rotate
-  .span3
+  .span4
     - w = widths(1,1,1)
     h4 Modify canvas
     img src="http://z.zr.io/ri/4s.jpg?width=#{w[0]}"
@@ -45,7 +45,7 @@ h2 Transform
       em within the image. 
       | No more box-model nightmares.
 .row
-  .span3
+  .span4
     - w = widths(1,1)
     h4 Manual crop
     img src="http://z.zr.io/ri/1s.jpg?width=#{w[0]}"
@@ -53,7 +53,7 @@ h2 Transform
     img src="http://z.zr.io/ri/1s.jpg?crop=18,26,60,70&cropxunits=100&cropyunits=100&width=#{w[1]}"
     p Crop by percent, pixels, or resolution-independent units (works seamlessly with jCrop).
 
-  .span3
+  .span4
     - w = widths(1.5,1,1)
     h4 Auto-remove whitespace
     img src="http://z.zr.io/ri/18s.jpg?width=#{w[0]}"
@@ -64,7 +64,7 @@ h2 Transform
 
     p Product photos are painless with energy-based whitespace removal. 
 
-  .span3
+  .span4
     - w = widths(1.3,1,1)
     h4 Face detection & auto-crop
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}"
@@ -76,7 +76,7 @@ h2 Transform
 hr
 h2 Enhance
 .row
-  .span3
+  .span4
     h4 Auto-white balance
     - [12,18, 26, 23].each_with_index do |n,ix|
       - ["","&a.balancewhite=true"].each_with_index do |q,ix|
@@ -84,7 +84,7 @@ h2 Enhance
           i.icon-arrow-right
         img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
       br
-  .span3
+  .span4
     h4 Auto Histogram Equalization
     - [19, 18, 26, 23].each_with_index do |n,ix|
       - ["", "&a.equalize=true"].each_with_index do |q,ix|
@@ -92,7 +92,7 @@ h2 Enhance
           i.icon-arrow-right
         img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
       br
-  .span3
+  .span4
     h4 +50% contrast
     - [19, 22, 26, 23].each do |n|
       - ["", "&s.contrast=0.5"].each_with_index do |q,ix|
@@ -101,7 +101,7 @@ h2 Enhance
         img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
       br
 .row
-  .span3
+  .span4
     h4 Unsharp Mask (Smart Sharpen)
     - [2,23,19,26].each_with_index do |n,i|
       - ["","&a.sharpen=20&quality=100"].each_with_index do |q,ix|
@@ -109,7 +109,7 @@ h2 Enhance
           i.icon-arrow-right
         img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
       br
-  .span3
+  .span4
     h4 +50% saturation
     - [19, 18, 26, 23].each_with_index do |n,i|
       - ["", "&s.saturation=0.5"].each_with_index do |q,ix|
@@ -117,7 +117,7 @@ h2 Enhance
           i.icon-arrow-right
         img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
       br
-  .span3
+  .span4
     h4 +15% exposure
     - [1,12,11].each_with_index do |n,i|
       - ["", "&s.brightness=0.15"].each_with_index do |q,ix|
@@ -133,7 +133,7 @@ hr
 h2 Filter
 .row
   - w = widths(1,1,1)
-  .span3
+  .span4
     h4 Grayscale fixes everything
     img src="http://z.zr.io/ri/utah2.jpg?width=#{w[0]}"
     i.icon-arrow-right
@@ -146,7 +146,7 @@ h2 Filter
     img src="http://z.zr.io/ri/utah2.jpg?width=#{w[1]}&s.grayscale=bt709"
     i.icon-arrow-right
     img src="http://z.zr.io/ri/utah2.jpg?width=#{w[2]}&s.grayscale=flat"
-  .span3
+  .span4
     h4 Sepia, Warming and Cooling Filters
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&s.sepia=true"
     i.icon-arrow-right
@@ -166,7 +166,7 @@ h2 Filter
     i.icon-arrow-right
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&s.shift=00C1B120"
 
-  .span3
+  .span4
     h4 Paint, posterize, and blur 
     img src="http://z.zr.io/ri/fix/2s.jpg?width=#{w[0]}&a.oilpainting=0"
     i.icon-arrow-right
@@ -186,7 +186,7 @@ h2 Filter
     i.icon-arrow-right
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&a.blur=15"
 .row
-  .span3
+  .span4
     - w = widths(1,1,1,1,0.5)
     h4 Round corners
     img src="http://z.zr.io/ri/14s.jpg?width=#{w[0]}"
@@ -198,7 +198,7 @@ h2 Filter
     img src="http://z.zr.io/ri/14s.jpg?width=#{w[3]}&s.roundcorners=100"
     i.icon-arrow-right
     img src="http://z.zr.io/ri/14s.jpg?width=#{w[4]}&height=#{w[4]}&mode=crop&s.roundcorners=100"
-  .span3
+  .span4
     - w = widths(1,1,1,1)
     h4 Feather edges
     img src="http://z.zr.io/ri/12s.jpg?width=#{w[0]}"
@@ -208,7 +208,7 @@ h2 Filter
     img src="http://z.zr.io/ri/12s.jpg?width=#{w[2]}&a.featheredges=200&bgcolor=black" 
     i.icon-arrow-right
     img src="http://z.zr.io/ri/12s.jpg?width=#{w[3]}&a.featheredges=200&bgcolor=white" 
-  .span3
+  .span4
     - w = widths(1,1,1)
     h4 Make JPEGs transparent
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}"
@@ -219,27 +219,29 @@ h2 Filter
 hr
 h2 Advanced
 .row
-  .span3
+  .span4
     - w = widths(1,1)
     h4 Face & Eye detection
     img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}&f.show=true"
     span.imagespacer
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&r.autoeyes=true"
-  .span3
+  .span4
     - w = widths(1)
     h4 Red-eye repair
     img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&r.autoeyes=true"
     p Our adaptive circle fill algorithm repairs red-eye while maintaining integrity.
-  /The second image is broken. We can uncomment this when we fix the bug that's breaking it.
-  /.span3
-  /  - w = widths(1,1)
-  /  h4 Change aspect ratio with seam carving
-  /  img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
-  /  i.icon-arrow-right
-  /  img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&height=#{w[1]}&mode=carve"
+  .span4
+    h4 Encode & Compress
+    ul
+      li Produce JPEG, PNG, GIF, and WebP results, with quality, progressive, and subsampling control.
+      li Generate high-quality GIF, 8-bit PNG, and animated gif results
+      li Set matte color
+      li Render PDFs and TIFF files to images, page-by-page
+      li Develop RAW, CR2, NEF, and HDR files directly.
+      li Decode a variety of ancient formats
 .row
 
-  .span3
+  .span4
     - w = widths(1,1,1,1)
     h4 Apply overlays and backgrounds
     img src="http://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=logo"
@@ -250,7 +252,7 @@ h2 Advanced
     span.imagespacer
     img src="http://z.zr.io/ri/23s.jpg?width=#{w[3]}&watermark=fill-text1&s.alpha=.5&text=We have flexible layout"
     p Overlay (or underlay) an unlimited number of text and image layers; exercise complete layout control.
-  .span3
+  .span4
     - w = widths(0.5,1,1)
     h4 Upscale on your terms
     img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[0]}&height=#{w[0]}"
@@ -259,15 +261,7 @@ h2 Advanced
     i.icon-arrow-right
     img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[2]}&height=#{w[2]}&scale=both&bgcolor=ddd&fi.scale=lanczos"
     p Upscale only when you want to, the way you want to, with the upscale filter you want.
-  .span3
-    h4 Encode & Compress
-    ul
-      li Produce JPEG, PNG, GIF, and WebP results, with quality, progressive, and subsampling control.
-      li Generate high-quality GIF, 8-bit PNG, and animated gif results
-      li Set matte color
-      li Render PDFs and TIFF files to images, page-by-page
-      li Develop RAW, CR2, NEF, and HDR files directly.
-      li Decode a variety of ancient formats
+
   .span3
 
 
