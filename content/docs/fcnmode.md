@@ -12,7 +12,7 @@ There are two causes; one from IIS, and one from ASP.NET. Both problems are trig
 
 The easy solution is - don't host your content on a SAN. Go cloud; put the content on S3, your server on EC2, and use CloudFront to make that system *scale*. If that's not an option, keep reading.
 
-If both your storage server and ASP.NET server are running Windows Server 2008, [it's possible this *may* not bite you](http://www.iis.net/learn/troubleshoot/performance-issues/troubleshooting-smb-netbios-fcn-limit-issues-with-remote-content). Still, you'll probably see improved performance by stopping IIS & ASP.NET's per-folder OCD behavior.
+If both your storage server and ASP.NET server are running Windows Server 2008 or higher, [it's possible this *may* not bite you](http://www.iis.net/learn/troubleshoot/performance-issues/troubleshooting-smb-netbios-fcn-limit-issues-with-remote-content). Still, you'll probably see improved performance by stopping IIS & ASP.NET's per-folder file watcher.
 
 ## Part 1: Stop IIS from continually checking every folder for a web.config file
 
@@ -32,8 +32,18 @@ There are two solutions (other than not using a SAN)
 2. Disable FCN (File change notifications) completely for ASP.NET. (Has side effects - no restart on web.config change, output cache gets dirty)
 3. Raise the command limit (has a ceiling that you will hit if you have over 40,000 folders in sites on your server). To reiterate, this is a server-wide limit, not a site-specific limit. Each watcher also consumes I/O and CPU resources, so simply raising the limit will have an impact.
 
+## Disabling FCN (.NET 4.5+)
 
-## Disabling FCN
+Starting with the Microsoft .NET Framework 4.5 and later versions, FCNMode can be configured by using the httpRuntime settings as follows:
+
+      <httpRuntime fcnMode="Disabled"/>
+
+This configuration will use a single watcher for the entire directory structure. While performance may still suffer, it should prevent outright failure:
+
+      <httpRuntime fcnMode="Single"/>
+
+
+## Disabling FCN (below .NET 4.5)
 
 1. Open Regedit.exe (not RegEdt32!)
 
@@ -55,12 +65,6 @@ Many companies are successfully running over 20TB of imagery through IIS and ASP
 
 [Microsoft KB article](http://support.microsoft.com/?id=911272)
 
-## Monitoring the current command count
-
-On Windows Server 2003 and 2003 R2, you can view the number of SMB connections using Performance Monitor. Add the `Current Commands` counter in the `SMB Redirector` performance object to Performance Monitor.
-
-Please note that the performance counter [always shows 0 on Vista, Windows 7, Server 2008, or Server 2008 R2](http://social.technet.microsoft.com/Forums/windowsserver/en-US/a36a297c-6fba-409c-af02-1878600138ef/redirector-current-commands-perfmon-counter-always-reads-zero), and [Microsoft has not issued a patch or hotfix](
-http://support.microsoft.com/kb/2523382). Current Commands should always be a positive value; if it's zero, it's lying.
 
 ## Raise the command/watcher limit
 
