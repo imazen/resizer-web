@@ -5,6 +5,8 @@ h1 Blissfully compatible with practically everything
 .well
   markdown:
     ### Remember, ImageResizer is a web service, which means you can always [run it in standalone mode](/docs/install/standalone) if embedded mode isn't an option. Embedded mode means running in-process, inside an existing ASP.NET application (the most popular scenario).
+
+    ImageResizer v3 is compatible with Windows Server 2003, Windows XP, and Mono; it uses .NET 2.0. ImageResizer v4 requires .NET 4.5.
 .row
   .span3
     h2 Image Storage Backends
@@ -83,9 +85,7 @@ h1 Blissfully compatible with practically everything
   .span3
     h2 Hosting providers
     p 
-      | If possible, look for a provider that allows full trust. 
-      a href="/docs/workswith/mediumtrust" Medium Trust is supported for most functionality
-      | , but not all. We've personally used the following hosting providers:
+      | Ensure your provider offers full trust. ASP.NET no longer supports Medium or Partial Trust environments.
     ul.star_list
       li AppHarbor
       li Azure
@@ -99,39 +99,27 @@ h1 Blissfully compatible with practically everything
   .span3
     h2 Host Operating Systems
     ul.star_list
-      ul Windows Server 2003 SP1 or higher
-      ul Windows Server 2003 R2
-      ul Windows Server 2008
+      ul Windows Server 2008 SP2
+      ul Windows Server 2008 R2 SP1
       ul Windows Server 2012
-      ul Windows XP SP2 or higher
-      ul Windows Vista
+      ul Windows Server 2012 R2
+      ul Windows Server 10
+      ul Windows Vista SP2
       ul Windows 7
       ul Windows 8, 8.1
+      ul Windows 10
   .span3
     h2 Web servers
     ul.star_list
-      li IIS 5
-      li IIS 5.1
-      li IIS 6
       li IIS 7
       li IIS 7.5
       li IIS 8
       li IIS 8.5
-      li Visual Studio Web Server (Cassini)
-      li 
-        | Nginx 
-        a href="http://www.mono-project.com/FastCGI_Nginx" (with FastCGI)
-      li LightHttpd
-      li Apache (with mod_mono)
-      li xsp
+      li IIS Express
+
   .span3
     h2 .NET Framework Editions
     ul.star_list
-      li .NET 2.0 SP2 (ImageResizer v3)
-      li .NET 3.0 (ImageResizer v3)
-      li .NET 3.5 (ImageResizer v3)
-      li .NET 4.0 (ImageResizer v3)
       li .NET 4.5
       li .NET 4.6
-      li Mono 2.10.5 or higher (ImageResizer v3)
 
