@@ -11,7 +11,7 @@ While you're in checkout, you might notice a strange new step in the process: li
 
 1. If license key validation fails, a red dot will appear on your images, but nothing will "stop working". You can still use premium plugins for development and testing without a purchase.
 
-2. After checkout, you can verify your license key works by adding it to Web.config and visiting the ImageResizer diagnostics page `/resizer.debug`. It should explain which functionality your license includes. License key validation is done offline using public-key cryptography; it does not use the network.
+2. After checkout, you can verify your license key works by [adding it to Web.config](/docs/v4/install/license_keys) and visiting the ImageResizer diagnostics page `/resizer.debug`. It should explain which functionality your license includes. License key validation is done offline using public-key cryptography; it does not use the network.
 
 3. You can access DRM-free nuget pacakges, source, and binaries if you have an Elite, OEM or SaaS license or a support contract. 
 

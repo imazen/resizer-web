@@ -82,7 +82,7 @@ All functionality will continue to work, but newly generated images will have a 
     </modules>
   </system.webServer>
 </configuration>
-
+```
 
 ### Can I just delete the code that enforces license keys?
 
