@@ -21,7 +21,7 @@
 
 <ul>
 <li>
-<strong>autorotate=true</strong> Automatically rotates the image based on the EXIF info from the camera. (Requires the <a href="http://www.imageresizing.net/plugins/autorotate">AutoRotate plugin</a>)</li>
+<strong>autorotate=true</strong> Automatically rotates the image based on the EXIF info from the camera. <strong>autorotate.default=true</strong> will only autorotate if the image is processed.</li>
 <li>
 <strong>sflip=none|x|y|xy</strong> Flips the source image prior to processing (new in V3.1).</li>
 <li>

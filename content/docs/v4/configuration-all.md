@@ -1,5 +1,6 @@
 ---
 :aliases: "/docs/configuration-all"
+:flags: hidden
 :edit_info: develop/docs/configuration-all.md
 ---
 

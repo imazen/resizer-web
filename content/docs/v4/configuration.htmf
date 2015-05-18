@@ -8,7 +8,7 @@
 
 <h2>Configuration Reference</h2>
 
-<p>The following is a basic, typical configuration, V3+. <a href="http://www.imageresizing.net/docs/2to3/configuration">Click here</a> to see a configuration example that mimics the V2 defaults.</p>
+<p>The following is a basic, typical configuration of v4.</p>
 
 <pre lang="xml"><code>  &lt;?xml version="1.0" encoding="utf-8" ?&gt;
   &lt;configuration&gt;
@@ -20,7 +20,7 @@
       &lt;!-- Unless you (a) use Integrated mode, or (b) map all reqeusts to ASP.NET, 
            you'll need to add .ashx to your image URLs: image.jpg.ashx?width=200&amp;height=20 
            Optional - this is the default setting --&gt;
-      &lt;pipeline fakeExtensions=".ashx" /&gt;
+      &lt;pipeline fakeExtensions=".ashx" defaultCommands="autorotate.default=true" /&gt;
 
       &lt;plugins&gt;
         &lt;add name="DiskCache" /&gt;
@@ -30,7 +30,7 @@
 
     &lt;system.web&gt;
       &lt;httpModules&gt;
-        &lt;!-- This is for IIS5, IIS6, and IIS7 Classic, and Cassini/VS Web Server--&gt;
+        &lt;!-- This is for IIS7/8 Classic and Cassini--&gt;
         &lt;add name="ImageResizingModule" type="ImageResizer.InterceptModule"/&gt;
       &lt;/httpModules&gt;
     &lt;/system.web&gt;
@@ -38,7 +38,7 @@
     &lt;system.webServer&gt;
       &lt;validation validateIntegratedModeConfiguration="false"/&gt;
       &lt;modules&gt;
-        &lt;!-- This is for IIS7+ Integrated mode --&gt;
+        &lt;!-- This is for IIS7/8 Integrated mode --&gt;
         &lt;add name="ImageResizingModule" type="ImageResizer.InterceptModule"/&gt;
       &lt;/modules&gt;
     &lt;/system.webServer&gt;

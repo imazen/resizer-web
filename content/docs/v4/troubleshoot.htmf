@@ -9,7 +9,7 @@
 
 <h2>What Might Be Wrong</h2>
 
-<p>To get support or use this guide, make sure you get the detailed error message from visiting the image URL directly. This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far too generic to be useful. </p>
+<p>To get support or use this guide, make sure you get the detailed error message from visiting the image URL directly. This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far too generic to be useful. The troubleshooting tips presented here are specific to v4. Switch to the v3 troubleshooting page if you are using v3.</p>
 
 <p>If this page doesn't resolve your issue, <a href="http://www.imageresizing.net/support">visit the Support page</a> for information about the bug bounty and free support requirements.</p>
 
@@ -27,16 +27,6 @@
 <li>The ImageResizer.dll file in /bin is corrupt. Verify it has the correct file size and version number, or re-copy it from the download. </li>
 </ol>
 
-<h4>Blank page, invalid image error in browser, or Page cannot be displayed on image URL.</h4>
-
-<p>If this only happens when the image <em>doesn't</em> have a querystring, you're running IIS6, and you have mapped individual extensions to ASP.NET instead of wildcard mapping:</p>
-
-<ul>
-<li>See <a href="http://support.microsoft.com/Default.aspx?kbid=909641">this fantastic Microsoft KB article for ways to fix this</a>.</li>
-</ul>
-
-<p>Keep reading if it's a <code>404: File Not Found error</code></p>
-
 <h4>The type or namespace name "ImageResizer" could not be found</h4>
 
 <p>When using the ImageResizer from a .NET project that is not a web project you may get the following build error:</p>
@@ -47,41 +37,25 @@
 
 <p>This is caused by using a Client Profile version of .NET instead of the Full version. You can change this in Project Properties -&gt; Application -&gt; Target Framework. The ImageResizer requires the full version, as it is also designed to support ASP.NET usage and references the System.Web assembly (which is not part of the client profile version of .NET).</p>
 
-<h4>File not found</h4>
-
-<p>Potential causes:</p>
-
-<ol>
-<li>You are using the .jpg.ashx syntax, and you did not register the HttpModule properly in both places of your Web.config file.</li>
-<li>You are using the .jpg.ashx syntax, but you're not using a query string. You should drop the '.ashx' unless you actually want to process the file.</li>
-<li>You have Precompilation enabled, and are using an image provider. <a href="http://stackoverflow.com/questions/12397/net-virtualpathproviders-and-pre-compilation">This is caused by a long-standing bug in the .NET framework</a>.</li>
-</ol>
-
-<h4>File not found for JSON requests (Faces, RedEye plugins)</h4>
-
-<ol>
-<li>You have not copied Newtonsoft.Json.dll into the /bin folder, and are using .NET 4.0.</li>
-</ol>
-
 <h4>Image appears original size</h4>
 
 <p>Potential causes: </p>
 
 <ol>
-<li>You did not register the HttpModule properly in both places of your Web.config file.</li>
-<li>You are using IIS 6 (or earlier), or IIS7 Classic Pipeline, and are not using the .jpg.ashx syntax, and you have not <a href="http://www.imageresizing.net/docs/cleanurls">mapped all requests to the ASP.NET runtime</a>. </li>
+<li>You did not register the HttpModule properly in both places of your Web.config file. Verify you can access /resizer.debug. If not, this is the problem.</li>
+<li>You are the IIS Classic Pipeline, and are not using the .jpg.ashx syntax, and you have not <a href="http://www.imageresizing.net/docs/cleanurls">mapped all requests to the ASP.NET runtime</a>. </li>
 <li>You are mistyping the querystring commands. </li>
 <li>The original image is smaller than the size you are requesting, and you are not using <code>&amp;scale=both</code> (The default behavior is to never upscale images, <a href="http://www.imageresizing.net/plugins/defaultsettings">but this can be changed</a>).</li>
 </ol>
 
-<h4>File not found only on images without a querystring</h4>
+<h4>File not found</h4>
 
-<p>Possible causes</p>
+<p>Potential causes:</p>
 
 <ol>
-<li><p>You are using the .ashx syntax. This is normal; you should only add the .ashx suffix if you are also adding a querystring to tell ImageResizer to do something.</p></li>
-<li><p>The images are from S3 or Sql: The S3Reader and SqlReader plugins require AspNetHostingPermission to register themselves as VirtualPathProviders. If they lack permission, they register as IVirtualImageProviders instead - but then only the image resizer can find them, and the image resizer only accepts requests with a querystring that uses one of the defined commands.</p></li>
-<li><p>Alternatively, you may have a URL rewriting event that is affecting the path names.</p></li>
+<li>You did not register the HttpModule properly in both places of your Web.config file.  Verify you can access /resizer.debug. If not, this is the problem.</li>
+<li>You (a) aren't specifying a command string, (b) have Precompilation enabled, and (c) are using an image provider. <a href="http://stackoverflow.com/questions/12397/net-virtualpathproviders-and-pre-compilation">This is caused by a long-standing bug in the .NET framework</a>.</li>
+<li>You have a URL rewriting event that is affecting path names.</li>
 </ol>
 
 <h4>This type of page is not served. (HTTP 403 error)</h4>
@@ -96,19 +70,6 @@
 </ol>
 
 <p>This generic error message often hides a more descriptive message, but that message is always guaranteed to be a "Not Authorized To View this Content" kind of error.</p>
-
-<h4>Method Not Found (System.MissingMethodException)</h4>
-
-<p>Server Error in '/' Application. </p>
-
-<hr>
-
-<p>Method not found: 'Void System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.<br>
-  Exception Details: System.MissingMethodException: Method not found: 'Void <br>
-  System.Web.HttpContext.RemapHandler(System.Web.IHttpHandler)'.</p>
-
-<p>This error occurs when you do not have .NET 2.0 Service Pack 2 applied. No other conditions cause this error. The RemapHandler method was added in .NET 2.0 SP2, and is required by this product.<br>
-Yes, it is possible to have .NET 3, 3.5, and .NET 4 installed (and up-to-date), yet not have .NET SP2 installed. This peculiar circumstance has been verified on over 5 machines.</p>
 
 <h4>Server object error 'ASP 0178 : 80070005'</h4>
 
@@ -125,31 +86,6 @@ Right click the <code>C:\Program Files\ImageResizingNet\v3</code> folder and cho
 <p>If that fails, providing Readonly access to the Everyone group should work, but that may not be acceptable if you have highly-isolated application pools which you don't want to be able to access the ImageResizer dlls files.</p>
 
 <p>If you still encounter issues, perform a reinstall with COMInstaller.exe, and save the install log. If the reinstall doesn't fix the problem, send the install log to <a href="mailto:support@imageresizing.net">support@imageresizing.net</a> to get help with your issue.</p>
-
-<h4>System.Security.SecurityException</h4>
-
-<p>System.Security.SecurityException: Request for the <br>
-  permission of type 'System.Configuration.ConfigurationPermission, <br>
-  System.Configuration, Version=2.0.0.0, Culture=neutral, <br>
-  PublicKeyToken=b03f5f7f11d50a3a' failed</p>
-
-<p>This can occur in certain medium or low trust environments. To correct, set <code>requirePermission="false"</code> on the resizer section declaration in Web.config.</p>
-
-<pre lang="xml"><code>  &lt;?xml version="1.0" encoding="utf-8" ?&gt;
-  &lt;configuration&gt;
-    &lt;configSections&gt;
-      &lt;section name="resizer" type="ImageResizer.ResizerSection,ImageResizer" requirePermission="false" /&gt;
-    &lt;/configSections&gt;
-    ...
-</code></pre>
-
-<h4>Error parsing Web.Config</h4>
-
-<p>If you are using NuGet and recently upgraded from an older release, there may be duplicate XML elements in Web.Config. Delete the one lacking the requirePermission="false" attribute.</p>
-
-<pre lang="xml"><code>  &lt;section name="resizer" type="ImageResizer.ResizerSection"/&gt;
-  &lt;section name="resizer" type="ImageResizer.ResizerSection" requirePermission="false"/&gt;
-</code></pre>
 
 <h4>Quality loss when resizing 8-bit Grayscale Jpeg images</h4>
 
@@ -178,22 +114,5 @@ with <code>builder=freeimage</code> or <code>builder=wic</code>
 <h4>SizeLimitException - The dimensions of the output image (4800x2700) exceed the maximum permitted dimensions of 3200x3200.</h4>
 
 <p>By default, ImageResizer limits the output size of images to 3200x3200. This can be changed <a href="http://www.imageresizing.net/plugins/sizelimiting">by configuring (or removing) the SizeLimiting plugin</a>.</p>
-
-<h4>0-byte response with status 200 returned when DiskCache is enabled</h4>
-
-<p>IIS 7+ gives you granular control over which IIS components can be installed. If the Static Content module is not installed, you will get empty responses for disk-cached content. </p>
-
-<p>If you have enabled asyncWrites, the first request per URL will succeed, but all subsequent operations will fail.</p>
-
-<p>You need at minimum the following IIS modules installed for correct operation:</p>
-
-<ul>
-<li>Static Content</li>
-<li>HTTP Errors</li>
-<li>HTTP Redirection</li>
-<li>URL Authorization</li>
-<li>.NET Extensibility 4.5</li>
-<li>ASP.NET 4.5</li>
-</ul>
 
 <p></p>
