@@ -1,7 +1,7 @@
 Date: May 1 2015
-Summary: ImageResizer V4's Licensing is Changing
+Summary: ImageResizer v4 brings licensing changes
 
-# ImageResizer V4's Licensing is Changing
+# ImageResizer v4 brings licensing changes
 
 Hello again! ImageResizer v4 is just about ready for release, and it's faster and better than ever before. In fact, if you would like to purchase a v4 license just to be ready when it comes out (also valid for v3 in the meantime), you can visit our [store page](https://store.imazen.io/) now and do just that.
 

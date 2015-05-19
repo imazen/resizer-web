@@ -29,11 +29,12 @@ Including the jpeg encoding and decoding cost (which FastScaling does not addres
 
 The following benchmarks were created by opening the FastScaling solution on [commit de24b168](https://github.com/imazen/resizer/commit/de24b168457279da74202676e4be4eccad1b6b53) and running the Benchmark program in 64-bit Release mode, using an Azure D14 instance with Visual Studio 2015 RC installed. Source images are 4,000 x 4,000 jpeg images, and destination images are 800x800 jpegs.
 
-This benchmark measures only rendering performance (it excludes jpeg encoding/decoding, which is not affected by FastScaling)
+This benchmark measures only rendering performance (it excludes jpeg encoding/decoding, which is not affected by FastScaling). Relative performance peaks at 43.5x faster (on 15 threads).
 
 ![FastScaling vs DrawImage (Azure D14 instance)](http://z.zr.io/rw/scaling-benchmark.png?crop=30,40,-1,-1&width=700)
 
-This benchmark measures end-to-end image decoding, rendering, and re-encoding. It excludes I/O. 
+This benchmark measures end-to-end image decoding, rendering, and re-encoding. It excludes I/O. Relative performance peaks at 9.6x faster (on 8 threads).
+
 ![FastScaling vs DrawImage (including decode and encode) (Azure D14 instance)](http://z.zr.io/rw/decode-scale-encode.png?crop=30,0,-1,-1&width=700)
 
 The raw [CSV results are here](https://github.com/imazen/Graphics-vNext/blob/master/fastscaling-benchmark-azure-d14.csv), and include a performance delta row. 
