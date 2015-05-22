@@ -4,10 +4,8 @@
 :edition: performance
 :tagline: Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider.
   Works best when combined with DiskCache.
-:aliases: []
+:aliases: "/plugins/s3reader"
 :edit_info: support/v3/plugins/s3reader/readme.md
-:flags:
-- "-sitemap"
 ---
 
 # S3Reader plugin

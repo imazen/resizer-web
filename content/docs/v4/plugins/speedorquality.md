@@ -8,7 +8,7 @@
 :edit_info: develop/core/plugins/basic/speedorquality_readme.md
 ---
 
-# SpeedOrQuality (v3.1+)
+# SpeedOrQuality
 
 Gain a 15-30% speed boost by sacrificing rendering quality.
 

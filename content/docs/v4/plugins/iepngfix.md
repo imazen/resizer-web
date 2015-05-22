@@ -9,7 +9,7 @@
 :edit_info: develop/core/plugins/basic/iepngfix_readme.md
 ---
 
-# IEPngFix plugin (New in V3.1.3)
+# IEPngFix plugin
 
 This plugin automatically redirects PNG file requests from Internet Explorer 6 and below to GIF versions of the images. For best results, use with the PrettyGifs plugin, as the default .NET GIF encoding is very poor.
 

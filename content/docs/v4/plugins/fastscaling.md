@@ -3,7 +3,7 @@
 :tags: plugin
 :edition: performance
 :tagline: FastScaling offers the highest-quality image scaling and sharpening available.
-  It can also be up to 30x faster than GDI+ DrawImage.
+  It can also be up to 43x faster than Graphics.DrawImage, the default.
 :aliases: "/plugins/fastscaling"
 :edit_info: develop/plugins/fastscaling/readme.md
 ---
@@ -142,3 +142,28 @@ There are certain features of DrawImage that FastScaling does not replace. You a
 Note that if you specify a colorMatrix, FastScaling will do all work in the srgb space instead of in linear light. This is required for the colorMatrix values to be interpreted in a manner consistent with DrawImage.
 
 If you are working with a format other than 32-bit BGRA, 32-bit BGR, or 24-bit BGR, you should first convert to BGR or BGRA before using FastScaling. It is still faster to convert to/from BGR(A) and use FastScaling than it is to use DrawImage directly.
+
+## Installation
+
+FastScaling is a self-contained mixed-mode DLL. You will need to install the correct NuGet package depending upon whether your application is run as a 32-bit program or as a 64-bit program. IIS Express can run in either mode, and different installations of Visual Studio can have different results. 
+
+`Install-Package ImageResizer.Plugins.FastScaling.x64`
+
+or
+
+`Install-Package ImageResizer.Plugins.FastScaling.x86`
+
+If FastScaling has not yet been published to nuget.org, you will need to use our nightly feed, `https://www.myget.org/F/imazen-nightlies/api/v2`.
+
+After installing the nuget package or dll, you will need to install the plugin. You may also want to enable FastScaling for all requests, instead of per-request, via `defaultCommands="fastscale=true"`. 
+
+```
+<resizer>
+  <pipeline defaultCommands="fastscale=true" />
+  <plugins>
+    <add name="FastScaling" />
+  </plugins>
+</resizer>
+```
+
+If you are installing via code instead of XML, call `new ImageResizer.Plugins.FastScaling.FastScalingPlugin().Install(Config.Current);` during application startup. You will need to explicitly specify `&fastscale=true` on every image job or request in order to activate the plugin.
