@@ -95,7 +95,7 @@ class SupportTier
     @lengths = []
     @lengths << create_support_sku(6,849,'R3Elite')
     @lengths << create_support_sku(12,849,'R3Elite')
-    @lengths << create_support_sku(24,849,'R3Elite')
+    #@lengths << create_support_sku(24,849,'R3Elite')
     
   end 
 
@@ -127,7 +127,7 @@ class SupportTier
     @lengths = [] #So the clones reference the same array and can access their siblings
     @lengths << create_support_sku(6,949,'Bronze6MO')
     @lengths << create_support_sku(12,1500,'Bronze1YR')
-    @lengths << create_support_sku(24,2000,'Bronze2YR')
+    #@lengths << create_support_sku(24,2000,'Bronze2YR')
     
   end
 
@@ -147,7 +147,7 @@ class SupportTier
     @lengths = []
     @lengths << create_support_sku(6,3000,'Silver6MO')
     @lengths << create_support_sku(12,5000,'Silver1YR')
-    @lengths << create_support_sku(24,8000,'Silver2YR')
+    #@lengths << create_support_sku(24,8000,'Silver2YR')
     @includes_oem = true
     
   end
@@ -185,7 +185,7 @@ class SupportTier
     @email_support = true
     @min_architecture_hours = 2
     @lengths = []
-    @lengths << create_support_sku(24, 2800, 'OEMSaaS')
+    @lengths << create_support_sku(12, 2800, 'OEMSaaS')
     
   end
 
