@@ -66,9 +66,12 @@ ruby:
     - if contract.response_2
       markdown:
         -Maximum email/phone response time in **2 business hours**. 
-    - elsif contract.response_24
+    - elsif contract.response_6
       markdown:
-        -Maximum email/phone response time in **24 business hours**. 
+        -Maximum email/phone response time in **6 business hours**. 
+    - elsif contract.response_48
+      markdown:
+        -Maximum email/phone response time in **48 business hours**. 
 
 
     - if contract.hotfix_2
@@ -156,7 +159,7 @@ ruby:
       3. Consulting hours, Custom Development hours, Emergency Incidents, and Assisted installations roll over to the next year (and the next contract) as long as the contract is continually renewed on time.
       4. Priority support requests submitted late on a Friday may not be answered until the following Monday.
       5. Support services are not available until payment clears, regardless of other billing terms.
-      6. We reserve the right to cancel and pro-rata refund any support contract (we've never had to do this).
+      6. We reserve the right to cancel and pro-rata refund any support contract (we've never had to do this). Refunds shall exlcude the price of an Elite license, which you will retain.
       7. Our international development team works in both European and U.S. time zones; posted business hours may change due to developer availability. 
       8. Hotfix response times are relative to identification of the issue, not to the beginning of the diagnostic process (which is generally only a few hours). Some flaws may be outside of our direct control, such as in third-party or operating-system components, and workarounds may not always be possible within the given time frame. We always endeavor to exceed the speed of our posted response times, but these times are not absolute guarantees. If at any time you feel we are not meeting your quality expectations, you can request a prorated refund. All services are provided on a best-effort basis, and do not constitute a legal warranty or guarantee of any kind; please consult the [Enterprise license for details](/licenses/enterprise).
       9. Additional emergency support incidents may be purchased for $3,500 each. By contacting emergency support outside of business hours, you agree to either debit your quota of emergency support incidents or pay separately for the utilized incident. It is your responsibility to verify you have remaining emergency support incidents prior to using the emergency hotline. 

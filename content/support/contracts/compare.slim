@@ -94,10 +94,16 @@ ruby:
           == render_checkmarks(col, :so_support)
         tr
           td.features-subhead
-            | 24-hour response time
+            | 48-hour response time
             a href="#note2"
               sup 2
-          == render_checkmarks(col, :response_24)
+          == render_checkmarks(col, :response_48)
+        tr
+          td.features-subhead
+            | 6-hour response time
+            a href="#note2"
+              sup 3
+          == render_checkmarks(col, :response_6)
         tr
           td.features-subhead
             | Rapid 2 hour response time
@@ -157,15 +163,15 @@ ul
   li
     a#note2
       | [2]
-    |  24-hour response time available Monday - Friday. Support requests sent on a Friday may be answered the following Monday.
+    |  48-hour response time available Monday - Friday. 
 
   li
     a#note3
       | [3]
-    |  During business hours.
+    |  Response times require use of the correct email/phone contact channels.
 
   li
     a#note4
       | [4]
-    | Emergency Support Incidents are those that require assistance outside normal business hours.
+    |  Emergency Support Incidents are those that require assistance outside normal business hours.
 

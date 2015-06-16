@@ -76,6 +76,15 @@ class SupportTier
     response_time_hours && response_time_hours <= 24
   end
 
+
+  def response_48
+    response_time_hours && response_time_hours <= 48
+  end
+
+  def response_6
+    response_time_hours && response_time_hours <= 6
+  end
+
   def response_2
     response_time_hours && response_time_hours <= 2
   end
@@ -119,7 +128,7 @@ class SupportTier
     @architecture_hours_yr = 0.5
     @contacts = 1
     @support_incidents_mo = 1
-    @response_time_hours = 24
+    @response_time_hours = 48
     @major_upgrades = true
     @early_access = true
     @email_support = true
@@ -134,7 +143,7 @@ class SupportTier
     set_bronze_tier
     @name = 'Silver'
     @target_customer = 'Small Business'
-    @response_time_hours = 2
+    @response_time_hours = 6
     @hotfix_time_days = 7
     @contacts = Float::INFINITY
     @emergency_incidents_yr = 1
@@ -146,9 +155,7 @@ class SupportTier
     @lengths = []
     @lengths << create_support_sku(6,3000,'Silver6MO')
     @lengths << create_support_sku(12,5000,'Silver1YR')
-    
     @includes_oem = true
-    
   end
 
   def set_gold_tier
@@ -161,9 +168,10 @@ class SupportTier
     @min_architecture_hours = 5
     @emergency_incidents_yr = Float::INFINITY
     @hotfix_time_days = 2
+    @response_time_hours = 2
     @lengths = []
-    @lengths << create_support_sku(6,6000,'Gold6MO')
-    @lengths << create_support_sku(12,10000,'Gold1YR')
+    @lengths << create_support_sku(6,10000,'Gold6MO')
+    @lengths << create_support_sku(12,18000,'Gold1YR')
     
   end
 
@@ -177,14 +185,13 @@ class SupportTier
     @architecture_hours_yr = 2
     @contacts = 1
     @support_incidents_mo = 1
-    @response_time_hours = 24
+    @response_time_hours = 48
     @major_upgrades = true
     @early_access = true
     @email_support = true
     @min_architecture_hours = 2
     @lengths = []
     @lengths << create_support_sku(12, 2800, 'OEMSaaS')
-    
   end
 
 
