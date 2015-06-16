@@ -127,7 +127,6 @@ class SupportTier
     @lengths = [] #So the clones reference the same array and can access their siblings
     @lengths << create_support_sku(6,949,'Bronze6MO')
     @lengths << create_support_sku(12,1500,'Bronze1YR')
-    #@lengths << create_support_sku(24,2000,'Bronze2YR')
     
   end
 
@@ -147,7 +146,7 @@ class SupportTier
     @lengths = []
     @lengths << create_support_sku(6,3000,'Silver6MO')
     @lengths << create_support_sku(12,5000,'Silver1YR')
-    #@lengths << create_support_sku(24,8000,'Silver2YR')
+    
     @includes_oem = true
     
   end
@@ -165,7 +164,6 @@ class SupportTier
     @lengths = []
     @lengths << create_support_sku(6,6000,'Gold6MO')
     @lengths << create_support_sku(12,10000,'Gold1YR')
-    @lengths << create_support_sku(24,17000,'Gold2YR')
     
   end
 
