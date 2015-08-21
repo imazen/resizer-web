@@ -1,10 +1,11 @@
+Encoding.default_external = 'UTF-8'
 require 'bundler/setup'
 Bundler.require(:default)
 
 if defined?(Rack::PerftoolsProfiler)
   require 'rack/perftools_profiler'
   use ::Rack::PerftoolsProfiler, :default_printer => 'gif'
-end 
+end
 
 use Rack::Cache
 use Rack::ETag
