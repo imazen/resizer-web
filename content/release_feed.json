@@ -1,1 +1,8 @@
-{}
+[
+  {"version": "3.4.3",
+   "release_date": "20140508T175303Z",
+   "release_notes": "http://imageresizing.net/releases/3-4-3",
+   "drm_free_artifact": "http://downloads.imageresizing.net/Resizer3-4-3-full-May-8-2014.zip",
+   "drm_artifact": "http://downloads.imageresizing.net/Resizer3-4-3-full-May-8-2014.zip"
+  }
+]
