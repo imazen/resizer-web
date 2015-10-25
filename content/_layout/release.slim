@@ -2,8 +2,9 @@ Layout: page
 
 p
   a href=page.meta.fullfile class="btn btn-primary" Download source, binaries, plugins, and sample code (15MB)
-  |  or 
-  a href=page.meta.minfile class="btn" Download core binary only (170K)
+  - if page.meta.minfile
+    |  or 
+    a href=page.meta.minfile class="btn" Download core binary only (170K)
 
 == yield
 
