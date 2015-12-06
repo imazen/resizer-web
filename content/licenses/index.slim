@@ -9,64 +9,14 @@ h1 Licenses
 
 == content_for :banner do
  
-        
+.container 
+.row.lrow.out style="padding-bottom: 50px; margin-right: 10px;"
+  h1.mainheader
+    | Redistributable Licenses
 
-.row.lrow.out style="padding-bottom: 30px; margin-right: 10px;"
-  h1.mainheader.lic License Packages
   .row-fluid
-    .lrow
-      div.licensebox.span3
-        div style="background-color: #C62AD4;"
-          h2.licensetitle Essential
-          h3.licenseprice Free
-        ul.licensecontent
-          li RESTful URL-based Imaging API
-          li Mirrored URL and Managed APIs
-          li Intuitively crop, resize, rotate, flip, constrain and encode
-          li Render PDFs into images
-          li 19 plugins cover most common tasks
-          li Includes TinyCache for small websites
-        .buy-buttons
-          a href="/plugins/editions/free" class="btn btn-primary"
-            strong Find Out More
-      div.licensebox.span3 
-        div style="background-color: #0FAD07;"
-          h2.licensetitle Performance
-          h3.licenseprice $249
-        ul.licensecontent
-          strong Includes all Essential Features, plus:
-          li Free minor version upgrades
-          li Disk + Memory input/output caching for terabytes of images
-          li SQL, Azure, and Amazon S3 support
-          li Amazon CloudFront & Azure CDN compatible
-          li 8-bit PNG/GIF & animated GIF processing
-          li Secure remote image processing
-          li 
-            a href="/licenses/domain"
-              | 1 Wildcard domain license
-        .buy-buttons
-          a.button1 href="https://store.imazen.io/products/imageresizer-performance-license-r4performance" class="btn btn-primary"
-            strong Buy Now
-          a href="/plugins/editions/performance" class="btn btn-primary"
-            strong Find Out More
-      div.licensebox.span3 
-        div style="background-color: #FC9100;"
-          h2.licensetitle Creative
-          h3.licenseprice $499
-        ul.licensecontent
-          strong Includes all Performance features, plus:
-          li Flexible text & image overlay support
-          li Image filtering suite
-          li Advanced file format support (PSD, CR2, CNG, etc.)
-          li Optional WIC processing pipeline (2-8x performance increase)
-          li Smart whitespace removal (great for product photos!)
-          li Metadata preservation
-        .buy-buttons
-          a.button1 href="https://store.imazen.io/products/imageresizer-creative-license-r4creative" class="btn btn-primary"
-            strong Buy Now
-          a href="/plugins/editions/creative" class="btn btn-primary"
-            strong Find Out More
-      div.licensebox.span3 
+    .lrow 
+      div.licensebox.span4
         div style="background-color: #FA2F2F;"
           h2.licensetitle Elite
           h3.licenseprice $849
@@ -86,6 +36,90 @@ h1 Licenses
             strong Buy Now
           a href="/plugins/editions/elite" class="btn btn-primary"
             strong Find Out More
+      div.licensebox.span4
+        div style="background-color: #2B8FE0;"
+          h2.licensetitle OEM
+          h3.licenseprice $2800
+        ul.licensecontent
+          strong 
+            | This includes an Elite license and an 
+            a href="/licenses/oem"
+              | OEM Redistribution license. 
+            | A scope agreement for redistribution is required.
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/r4-oem-license" class="btn btn-primary"
+            strong Buy Now
+      div.licensebox.span4
+        div style="background-color: #8B8FE0;"
+          h2.licensetitle SaaS
+          h3.licenseprice $7800
+        ul.licensecontent
+          strong 
+            | This includes an Elite license and an 
+            a href="/licenses/saas"
+              | SaaS usage license. 
+            | A scope agreement for SaaS usage is required.
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/r4-saas-license" class="btn btn-primary"
+            strong Buy Now          
+
+.row.lrow.out style="margin-top: -20px; padding-bottom: 30px; margin-right: 10px;"
+  h1.mainheader.lic Domain Licenses
+  .row-fluid
+    .lrow
+      div.licensebox.span4
+        div style="background-color: #C62AD4;"
+          h2.licensetitle Essential
+          h3.licenseprice Free
+        ul.licensecontent
+          li RESTful URL-based Imaging API
+          li Mirrored URL and Managed APIs
+          li Intuitively crop, resize, rotate, flip, constrain and encode
+          li Render PDFs into images
+          li 19 plugins cover most common tasks
+          li Includes TinyCache for small websites
+        .buy-buttons
+          a href="/plugins/editions/free" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span4
+        div style="background-color: #0FAD07;"
+          h2.licensetitle Performance
+          h3.licenseprice $249
+        ul.licensecontent
+          strong Includes all Essential Features, plus:
+          li Free minor version upgrades
+          li Disk + Memory input/output caching for terabytes of images
+          li SQL, Azure, and Amazon S3 support
+          li Amazon CloudFront & Azure CDN compatible
+          li 8-bit PNG/GIF & animated GIF processing
+          li Secure remote image processing
+          li 
+            a href="/licenses/domain"
+              | 1 Wildcard domain license.
+            |  Must be a valid public-facing domain. Image requests must reach ImageResizer with a matching HOST header. An Elite license is reccomended for load-balanced, proxied, or clustered deployments of ImageResizer.
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-performance-license-r4performance" class="btn btn-primary"
+            strong Buy Now
+          a href="/plugins/editions/performance" class="btn btn-primary"
+            strong Find Out More
+      div.licensebox.span4
+        div style="background-color: #FC9100;"
+          h2.licensetitle Creative
+          h3.licenseprice $499
+        ul.licensecontent
+          strong Includes all Performance features, plus:
+          li Flexible text & image overlay support
+          li Image filtering suite
+          li Advanced file format support (PSD, CR2, CNG, etc.)
+          li Optional WIC processing pipeline (2-8x performance increase)
+          li Smart whitespace removal (great for product photos!)
+          li Metadata preservation
+        .buy-buttons
+          a.button1 href="https://store.imazen.io/products/imageresizer-creative-license-r4creative" class="btn btn-primary"
+            strong Buy Now
+          a href="/plugins/editions/creative" class="btn btn-primary"
+            strong Find Out More
+
 
 
   div style="clear:both"
@@ -97,7 +131,7 @@ h1 Licenses
         ## Overview
         The ImageResizer core library and [18 plugins in the Essential edition](/plugins/editions/free) are free and open-source. In version 4, they are provided under the [Apache 2 license](/licenses/apache); in v3 they are provided under [the Resizer Freedom license](/licenses/freedom). 
 
-        Development of ImageResizer is funded by our commerical licenses ([Performance](/plugins/editions/performance), [Creative](/plugins/editions/creative), [Elite](/plugins/editions/elite), [OEM](/licenses/oem), and [SaaS](/licenses/saas)) and [support contracts (which include permanent licenses)](/support/contracts). All licenses include source code and permit modification; most permit some redistribution. 
+        Development of ImageResizer is funded by our commerical licenses ([Performance](/plugins/editions/performance), [Creative](/plugins/editions/creative), [Elite](/plugins/editions/elite), [OEM](/licenses/oem), and [SaaS](/licenses/saas)). All licenses include source code and permit modification; most permit some redistribution. 
 
         All Imazen software is open-source, and your funds help (both directly, and indirectly) maintain dozens of critical low-level, permissively-licensed OSS libraries across a wide spectrum. Visit [our GitHub profile](https://github.com/imazen) to see some of the work we maintian. 
 
@@ -111,9 +145,9 @@ h1 Licenses
          * [Resizer Freedom][freedom]
          * [Resizer Trial][trial]: You get this for free. Allows unlimited development and local testing of the software, without time-limits.
          * [Resizer Domain][domain]: The [Performance](/plugins/editions/performance) and [Creative](/plugins/editions/creative) editions are provided under this license.
-         * [Resizer Enterprise][enterprise]: The [Elite edition](/plugins/editions/performance) and [support contracts](/support/contracts) use this license.
-         * [Resizer OEM][oem]: You buy this for business-wide use and resale. Available for purchase [here](https://store.imazen.io/products/oem-saas-support-contract).
-         * [Resizer SaaS][saas]: You buy this for using ImageResizer in a SaaS product. Available for purchase [here](https://store.imazen.io/products/oem-saas-support-contract).
+         * [Resizer Enterprise][enterprise]: The [Elite edition](/plugins/editions/elite), OEM, and SaaS products include and Enterprise license.
+         * [Resizer OEM][oem]: You buy this for business-wide use and resale. Available for purchase [here](https://store.imazen.io/products/r4-oem-license).
+         * [Resizer SaaS][saas]: You buy this for using ImageResizer in a SaaS product. Available for purchase [here](https://store.imazen.io/products/r4-saas-license).
          * [Resizer Professional Client][proclient]: This license can be given to you by a holder of an [Enterprise][enterprise] license, for use as part of a custom development project. It can also be sold to you by a holder of the [OEM][oem] license as part of a software package.
          * [AGPLv3][agpl]
          * [PdfRenderer License](/licenses/pdfrenderer)
