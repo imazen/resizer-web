@@ -4,7 +4,9 @@ Libs: -comments
 
 # ImageResizer OEM license v2.0
 
-The [OEM][oem] and [SaaS][saas] licenses are included with an [OEM, Silver, or Gold support contract](/support/contracts/compare). 
+OEM licenses can now be purchased without a support contract - [click here to purchase](https://store.imazen.io/products/r4-oem-license).
+
+The [OEM][oem] and [SaaS][saas] licenses were also included with the [OEM, Silver, or Gold support contract](/support/contracts/compare). 
 
 This is not the only license available. We offer [enterprise-wide][enterprise], [domain][domain], and [SaaS][saas] licenses for [immediate purchase](/licenses). ImageResizer V4 and later may also be used under the terms of the [AGPL 3.0][agpl]. Portions of ImageResizer V4 may be used under the terms of the [Apache License 2.0][apache]. For development and testing, you may use the software under the terms of the [Trial license][trial].
 

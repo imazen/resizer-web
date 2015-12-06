@@ -3,7 +3,9 @@ Libs: -comments
 
 # Imazen SaaS License v1.0
 
-The [OEM][oem] and [SaaS][saas] licenses are included with an [OEM, Silver, or Gold support contract](/support/contracts/compare).  These contracts also include an [Enterprise license][enterprise], which includes certain redistribution rights. The Imazen SaaS License does not grant redistribution rights, as it specifically grants the SaaS usage rights not permitted under the [OEM][oem] and [Enterprise][enterprise] licenses.
+SaaS licenses can now be purchased without a support contract - [click here to purchase](https://store.imazen.io/products/r4-saas-license).
+
+The [OEM][oem] and [SaaS][saas] licenses were included with an [OEM, Silver, or Gold support contract](/support/contracts/compare).  These contracts also include an [Enterprise license][enterprise], which includes certain redistribution rights. The Imazen SaaS License does not grant redistribution rights, as it specifically grants the SaaS usage rights not permitted under the [OEM][oem] and [Enterprise][enterprise] licenses.
 
 This is not the only license available. We offer [enterprise-wide][enterprise], [domain][domain], and [OEM][oem] licenses for [immediate purchase](/licenses). ImageResizer V4 and later may also be used under the terms of the [AGPL 3.0][agpl]. Portions of ImageResizer V4 may be used under the terms of the [Apache License 2.0][apache]. For development and testing, you may use the software under the terms of the [Trial license][trial].
 
