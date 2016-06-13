@@ -7,21 +7,107 @@ Icon: none
 
 h1 ASP.NET library and image server
 
+== content_for :banner do
+  div style="width:100%; background-color: #00aec4; margin-bottom:5px"
+    .container
+      .row-fluid
+        .span12 style="text-align:center;"
+          h2 style="color:white"
+            a href="https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image" style="color:white"
+              | Pre-order Imageflow via Kickstarter and save up to 85% off until Jun 27th.
+          
+  .container
+    .row-fluid
+      .span6 style="text-align:center;"
+        
+        p
+          a href="https://www.imageflow.io"
+            img src="https://www.imageflow.io/images/imageflow.svg" alt="Imageflow" width="200"
+        p
+
+
+          img src="https://img.shields.io/badge/status-in%20development-green.svg"
+          |  
+          img src="https://img.shields.io/badge/OS-Windows, Linux, Mac-green.svg"
+          |  
+          img src="https://img.shields.io/badge/embeddable by-all C compatible languages-green.svg"
+          |  
+          img src="https://img.shields.io/badge/official bindings-C%23%2fNode%2fRuby%2fRust and .NET Core-green.svg"
+          |  
+          img src="https://img.shields.io/badge/REST APIs-JSON API, Querystring API-green.svg"
+        
+          |  
+          img src="https://img.shields.io/badge/web server-built%20in-green.svg"
+          |  
+          img src="https://img.shields.io/badge/codecs-OSS+custom-green.svg"
+          |  
+          img src="https://img.shields.io/badge/file sizes-world class-green.svg"
+          |  
+          img src="https://img.shields.io/badge/performance-unparalleled-green.svg"
+          |  
+          img src="https://img.shields.io/badge/color profiles-correct-green.svg"
+          
+          |  
+          img src="https://img.shields.io/badge/built with-Rust, C11, C++-green.svg"
+          |  
+          img src="https://img.shields.io/badge/components-separate libimageflow.dll, imageflow_server.exe-green.svg"
+          |  
+          img src="https://img.shields.io/badge/rendering engine-custom-green.svg"
+        markdown: 
+          | We expect a usable beta of [libimageflow and imageflow-server](https://www.imageflow.io) around September 2016, with a stable release the following year. [Imageflow](https://www.imageflow.io) makes a [cross-platform ImageResizer 5 possible](http://www.imageflow.io/imageresizer/). If you have [backed Imageflow on Kickstarter](https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image), you can already [access a limited command-line version of the tool](https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image/posts/1598662). 
+
+      .span6 style="text-align:center;"
+        p 
+          img src="/img/ir-logos/imageresizer_00AEC4_transparent.svg" alt="Imageresizer" width="200"
+        p
+          
+          img src="https://img.shields.io/badge/status-highly%20stable-green.svg"
+          |  
+          img src="https://img.shields.io/badge/OS-Windows%20Server-green.svg"
+          |   
+          img src="https://img.shields.io/badge/embeddable by-C%23%2FF%23%2FVB.NET except .NET Core-green.svg"
+          |  
+          img src="https://img.shields.io/badge/bindings-C%23-green.svg"
+          |  
+          img src="https://img.shields.io/badge/REST APIs-Querystring API-green.svg"
+          |  
+          img src="https://img.shields.io/badge/web server-IIS-green.svg"
+          |  
+          img src="https://img.shields.io/badge/codecs-Windows APIs-green.svg"
+          |  
+          img src="https://img.shields.io/badge/file sizes-decent-green.svg"
+          |  
+          img src="https://img.shields.io/badge/performance-good-green.svg"
+          |  
+          img src="https://img.shields.io/badge/color profiles-limited by Windows-green.svg"
+          |  
+          img src="https://img.shields.io/badge/built with-C%23,F%23,C++/CLI,C89-green.svg"
+          |  
+          img src="https://img.shields.io/badge/components-combined server, client, and library-green.svg"
+          |  
+          img src="https://img.shields.io/badge/rendering engine-GDI+ (free) / custom (with Performance license)-green.svg"
+        p ImageResizer is the best image server for ASP.NET. It can be dropped into existing apps and works alongside your CMS or existing platform to eliminate manual image tasks, enable fast and adaptive websites, and improve your sales by reducing page load time. 
+
+  
+  .container
+    .row-fluid
+      .span12 style="text-align:center;"
+          h2 style="color:black; font-style:bold;"
+            a href="https://www.imageflow.io/resizer_support" style="color:black"
+              | Support contracts for both are available
+              |  exclusively via the Kickstarter
+            |  – don't wait!
+hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #e3e3e3;"
 .container-wrap
   .container
-    h1.leftzero
-      a href="https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image"
-        | Support our Kickstarter
-      |  and make ImageResizer 5 possible.
-    hr
-    h1.leftzero
+    h2.leftzero
       | Your server can prepare images 
       del
         | 5,000
       |  
       a href="/blog/2015/v4highlights"
         | 50,000
-      |  times faster than you.
+      |  times faster than you. Let it compress more than your HTML.
 
     .hidden-phone
       .row-fluid style="margin-top:1em; margin-bottom:1em;"
@@ -68,8 +154,17 @@ h1 ASP.NET library and image server
 
     .home3
       
-      a href="download" class="btn btn-buynow" style="margin:6px"
-        | Get ImageResizer Now
+      a href="https://imageflow.io/ks" class="btn btn-buynow" style="margin:6px"
+        | Pre-order Imageflow now and save!
+      a href="/download" class="btn btn-buynow" style="margin:6px"
+        | Download ImageResizer for Windows Server
+      markdown: 
+        Imageflow discounts will not be available after June 27th, when [the Imageflow Kickstarter ends](https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image).
+
+        Read [more about ImageResizer vs Imageflow here](http://www.imageflow.io/imageresizer/).
+
+
+
 
 .statsbar.home3
   .container 
