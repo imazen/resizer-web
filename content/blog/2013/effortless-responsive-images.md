@@ -21,7 +21,7 @@ You can install both via NuGet, or [install ImageResizer](/docs/install) manuall
 
 
     Install-Package ImageResizer.MvcWebConfig
-    Install-Package ImageResizer.DiskCache
+    Install-Package ImageResizer.Plugins.DiskCache
     Install-Package Imazen.SlimResponse
 
 
