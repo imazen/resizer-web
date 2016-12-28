@@ -167,7 +167,7 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
         a.block.statsbar href="http://www.nuget.org/profiles/nathanaeljones/"
           p
             i.icon-white.icon-cloud-download.statsnumber
-             |  1,095,000
+             |  1,491,000
           p
             |NuGet downloads of ImageResizer
           .clear
@@ -191,7 +191,7 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
         a.block.statsbar href="https://stackoverflow.com/questions/tagged/imageresizer?sort=votes&pageSize=50"
           p
             i.icon-white.icon-question-sign.statsnumber
-             |  421+
+             |  450+
           p
             | Answers on StackOverflow
           .clear
@@ -292,7 +292,7 @@ hr
       h1.headerpadding.home3
         |Explore Our Site
       .row-fluid.bottompadding
-        .span2
+        .span4
         .span4.tiny-news
           h2.sidespace News
           - for p in index.posts[0..5]
@@ -303,27 +303,11 @@ hr
               == p.summary(self,100)
           p.sidespace
             a href="/blog" more...
-        .span4
-          .row-fluid
-            h2.sidespace
-              |Imazen
-            p.sidespace
-              |Imageresizer is a product of Imazen LLC. Imazen specializes in developing open source software targeted at developer needs.
-            .home3
-              a href="http://www.imazen.io" class="btn btn-primary"
-                | Imazen Homepage     
-          .row-fluid
-            h2.sidespace
-              |Meet the Staff
-            p.sidespace
-              |The same small size that ensures personalized service for all our clients also lets us show you everyone in our company on a single page. Come and see who'll answer that email you sent us.
-            .home3
-              a href="/staff" class="btn btn-primary"
-                | Staff Page
-          .span2
+
   .container.home3
     h1.headerpadding.home3
-      |More Open-Source Products from Imazen
+      |More Open-Source Products from 
+      a href="https://www.imazen.io" Imazen
     .row-fluid.bottompadding
       .span4
         h2.sidespace
