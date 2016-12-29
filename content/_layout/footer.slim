@@ -43,47 +43,38 @@ Layout: false
 
 
       .span4
-        h3 We're on GitHub
+        h3 Everything is on GitHub
         ul.star_list
           li: a href="https://github.com/imazen/resizer" github.com/imazen/resizer
+          li: a href="https://github.com/imazen/imageflow" github.com/imazen/imageflow
           li: a href="https://github.com/imazen" github.com/imazen
           li: a href="https://github.com/nathanaeljones" github.com/nathanaeljones
-          li: a href="https://github.com/imazen/imageflow" github.com/imazen/imageflow
 
 
         h3 You're our sales team
-        p We prefer to invest in engineering instead of advertising. 
         p 
-          | Word-of-mouth is very important; tell your friends! Blogging about ImageResizer or Imageflow 
-          a href="/support" can earn you priority support
-          | .
-        p 
+          | We invest in engineering instead of advertising. 
+        p
           strong 
-            | We also need your help with 
-            a href="https://imageflow.io"
-              | Imageflow
-            | ; Share the Kickstarter and be a part of making ImageResizer 5 possible.
-
-        h4 Last and least, the requisite cliché sharing icons:
-
-
-        - if page.lib?('plusone')
-          .g-plusone  data-href="http://imageresizing.net/"
-
-        #social-r.tooltips
-          a.googleplus href="https://plusone.google.com/_/+1/confirm?url=http://imageresizing.net/" target="_blank"  Google+
-          a.twitter href="http://twitter.com/share?url=http://imageresizing.net&amp;text=Simple+image+processing+from+the+URL" target="_blank" Twitter
-          a.facebook href="http://www.facebook.com/sharer.php?u=http://imageresizing.net/" target="_blank" Facebook
-          a.linkedin href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fimageresizing.net%2F&amp;title=Process%20images%20via%20the%20URL%20-%20Simple%2C%20secure%20API" target="_blank" LinkedIn
-          a.stumbleupon href="http://www.stumbleupon.com/submit?url=http://imageresizing.net&amp;title=RESTful+Image+Processing" target="_blank" StumbleUpon
-          .clear
-      
+            | Our open-source model works only as long as our users continue sharing their experiences.
+          
       .span4
         h3 Contact
+        ul.arrow_list
+          li: strong Sales: sales@imazen.io
+          li: strong Sales phone: +1.812.809.0605
+          li
+            strong
+              | Support: 
+              a href="/plugins/diagnostics"
+                | After running diagnostics
+              | , 
+              a href="/support" 
+                | visit /support
+          
+
         markdown:
           We [encourage feedback and feature requests on our UserVoice site](http://resizer.uservoice.com/forums/108373-image-resizer), where others can vote on your proposals.
-
-          For support requests, [visit our support page, which explains how to generate a diagnostics page and get help on Stack Overflow](/support). 
 
           *Please* reserve on-page comments for questions and clarifications *related to the current page*. The comments are *not* the appropriate place to ask for support or troubleshooting assistance.
 
