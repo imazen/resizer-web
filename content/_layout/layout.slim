@@ -25,8 +25,6 @@ html(lang="en" class="no-js")
     /   link href="/css/twentytwenty.css" rel="stylesheet"
     / link href="/css/less/parallax-slider.css" rel="stylesheet"
 
-    link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Economica:700,400italic|Droid+Serif|Boogaloo|Source+Code+Pro:500'
-
     /[if IE 9]
       link href="/css/less/styleie9.css" rel="stylesheet"
 
@@ -46,12 +44,16 @@ html(lang="en" class="no-js")
       link rel="stylesheet" href="/css/less/prism.css"
 
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
-
-
+    
+    link rel="preload" href="/css/fonts/fontawesome-webfont.woff?v=3.0.1" as="font"
+    link rel="preload" href="/img/icons/list/blue/list_arrow.png" as="image"
+    link rel="preload" href="/img/ir-logos/imageresizer-logo-gray-160.png" as="image"
     /[if lt IE 9]
       script src="https://html5shim.googlecode.com/svn/trunk/html5.js"
 
     == partial :analytics
+
+    == partial :fonts
   body
     == partial :header
 
@@ -75,7 +77,7 @@ html(lang="en" class="no-js")
 
     == partial :search
 
-    == optimize_js :defer => true do
+    == optimize_js :async => true do
       script src="/js/jquery-1.9.1.js"
       script src="/js/jquery-migrate-1.1.1.js"
 
@@ -147,5 +149,20 @@ html(lang="en" class="no-js")
 
     - if page.lib?("plusone")
       script async="async" defer="defer" src="https://apis.google.com/js/plusone.js"
+
+    - if page.meta.conversion_id
+      / Google Code for View download page Conversion Page
+      javascript:
+        var google_conversion_id = "#{page.meta.conversion_id}";
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "#{page.meta.conversion_label}";
+        var google_conversion_value = 0;
+      script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"
+      noscript
+        div style="display:inline;"
+          img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/#{page.meta.conversion_id}/?label=#{page.meta.conversion_label}&amp;guid=ON&amp;script=0"
+
 
 
