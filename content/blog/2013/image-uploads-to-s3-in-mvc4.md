@@ -82,7 +82,7 @@ Now we can safely have Visual Studio build out our Controllers and Views. Lets s
 
 This will pull up the followig dialog where you want to type the name of the controller `PhotosController`
 
-<img src="http://z.zr.io/rw/tutorials/responsive-upload/s3upload-add-controller-dialog.png" alt="">
+<img src="https://z.zr.io/rw/tutorials/responsive-upload/s3upload-add-controller-dialog.png" alt="">
 
 
 Controllers/PhotosController.cs ( [view on github](), [raw]() ) :

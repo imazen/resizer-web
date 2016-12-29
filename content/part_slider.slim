@@ -9,12 +9,12 @@ Layout: false
           - def widths(*cols); cols.map{|w| (w / cols.inject(:+).to_f * (369 - 15 * (cols.count - 1))).round  } end;
           - def normal_width(count);  ((369 - 15 * (count - 1)) / count.to_f).round end;
           li
-            img src="http://z.zr.io/rw/clients/increo-1.jpg?width=1170"
+            img src="https://z.zr.io/rw/clients/increo-1.jpg?width=1170"
             .slide-caption.n.hidden-phone
               h3 Eilev Hagen, System developer, InCreo Interactive Creations
               p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended.
           li
-            img src="http://z.zr.io/rw/clients/increo-2.png?format=jpg&width=1170&height=390&mode=crop&anchor=topcenter"
+            img src="https://z.zr.io/rw/clients/increo-2.png?format=jpg&width=1170&height=390&mode=crop&anchor=topcenter"
             .slide-caption.n.hidden-phone
               h3 Eilev Hagen, System developer, InCreo Interactive Creations
               p Handling images in various formats is a daily challenge in our projects. Using the ImageResizer saves valuable time. We don't have to use effort creating different sizes or dealing with optimization, it just works. This library is strongly recommended.
@@ -26,7 +26,7 @@ Layout: false
                   - ["","&a.balancewhite=true"].each_with_index do |q,ix|
                     - if ix > 0
                       i.icon-arrow-right
-                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                    img src="https://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
               .span4
                 h4 Auto Histogram Equalization
@@ -34,7 +34,7 @@ Layout: false
                   - ["", "&a.equalize=true"].each_with_index do |q,ix|
                     - if ix > 0
                       i.icon-arrow-right
-                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                    img src="https://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
               .span4
                 h4 +50% contrast
@@ -42,7 +42,7 @@ Layout: false
                   - ["", "&s.contrast=0.5"].each_with_index do |q,ix|
                     - if ix > 0
                       i.icon-arrow-right
-                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                    img src="https://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
           li
             .row
@@ -52,7 +52,7 @@ Layout: false
                   - ["","&a.sharpen=20&quality=100"].each_with_index do |q,ix|
                     - if ix > 0
                       i.icon-arrow-right
-                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                    img src="https://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
               .span4
                 h4 +50% saturation
@@ -60,7 +60,7 @@ Layout: false
                   - ["", "&s.saturation=0.5"].each_with_index do |q,ix|
                     - if ix > 0
                       i.icon-arrow-right
-                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                    img src="https://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
               .span4
                 h4 +15% exposure
@@ -68,38 +68,38 @@ Layout: false
                   - ["", "&s.brightness=0.15"].each_with_index do |q,ix|
                     - if ix > 0
                       i.icon-arrow-right
-                    img src="http://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
+                    img src="https://z.zr.io/ri/fix/#{n}s.jpg?width=#{normal_width(2)}#{q}"
                   br
           li
             .row
               .span4
                 - w = widths(1.1,1,1,1).map{ |v| v + 4}
                 h4 Scale with any fit mode
-                img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}"
+                img src="https://z.zr.io/ri/2s.jpg?width=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/2s.jpg?width=#{w[1]}&height=#{w[1]}&mode=max"
+                img src="https://z.zr.io/ri/2s.jpg?width=#{w[1]}&height=#{w[1]}&mode=max"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/2s.jpg?width=#{w[2]}&height=#{w[2]}&mode=pad&bgcolor=eee"
+                img src="https://z.zr.io/ri/2s.jpg?width=#{w[2]}&height=#{w[2]}&mode=pad&bgcolor=eee"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/2s.jpg?width=#{w[3]}&height=#{w[3]}&mode=crop"
+                img src="https://z.zr.io/ri/2s.jpg?width=#{w[3]}&height=#{w[3]}&mode=crop"
                 p Constrain, carve, pad, or crop to the perfect size.
               .span4
                 - w = widths(0.7,1,1)
                 h4 Rotate & Flip
-                img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
+                img src="https://z.zr.io/ri/3s.jpg?width=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&srotate=90"
+                img src="https://z.zr.io/ri/3s.jpg?width=#{w[1]}&srotate=90"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/3s.jpg?width=#{(w[2] * 0.6).round}&rotate=30&flip=h"
+                img src="https://z.zr.io/ri/3s.jpg?width=#{(w[2] * 0.6).round}&rotate=30&flip=h"
                 p Flip, rotate, or auto-rotate.
               .span4
                 - w = widths(1,1,1)
                 h4 Modify canvas
-                img src="http://z.zr.io/ri/4s.jpg?width=#{w[0]}"
+                img src="https://z.zr.io/ri/4s.jpg?width=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/4s.jpg?width=#{w[1] - 10}&margin=5&bgcolor=eee"
+                img src="https://z.zr.io/ri/4s.jpg?width=#{w[1] - 10}&margin=5&bgcolor=eee"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/4s.jpg?width=#{w[1] - 30}&paddingWidth=5&paddingColor=ccc&borderWidth=5&borderColor=ddd&margin=5&bgcolor=eee"
+                img src="https://z.zr.io/ri/4s.jpg?width=#{w[1] - 30}&paddingWidth=5&paddingColor=ccc&borderWidth=5&borderColor=ddd&margin=5&bgcolor=eee"
                 p
                   | Add padding, borders, and margins
                   em within the image.
@@ -108,73 +108,73 @@ Layout: false
               .span4
                 - w = widths(1,1)
                 h4 Manual crop
-                img src="http://z.zr.io/ri/1s.jpg?width=#{w[0]}"
+                img src="https://z.zr.io/ri/1s.jpg?width=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/1s.jpg?crop=18,26,60,70&cropxunits=100&cropyunits=100&width=#{w[1]}"
+                img src="https://z.zr.io/ri/1s.jpg?crop=18,26,60,70&cropxunits=100&cropyunits=100&width=#{w[1]}"
                 p Crop by percent, pixels, or resolution-independent units.
 
               .span4
                 - w = widths(1.5,1,1)
                 h4 Auto-remove whitespace
-                img src="http://z.zr.io/ri/18s.jpg?width=#{w[0]}"
+                img src="https://z.zr.io/ri/18s.jpg?width=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/18s.jpg?width=#{w[1]}&trim.threshold=33&trim.percentpadding=5"
+                img src="https://z.zr.io/ri/18s.jpg?width=#{w[1]}&trim.threshold=33&trim.percentpadding=5"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/18s.jpg?width=#{w[2]}&trim.threshold=80&trim.percentpadding=5"
+                img src="https://z.zr.io/ri/18s.jpg?width=#{w[2]}&trim.threshold=80&trim.percentpadding=5"
 
                 p Product photos are painless with energy-based whitespace removal.
 
               .span4
                 - w = widths(1.3,1,1)
                 h4 Face detection & auto-crop
-                img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}"
+                img src="https://z.zr.io/ri/5s.jpg?width=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&height=#{w[1]}&mode=crop&c.focus=faces"
+                img src="https://z.zr.io/ri/5s.jpg?width=#{w[1]}&height=#{w[1]}&mode=crop&c.focus=faces"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/5s.jpg?width=#{w[2]}&height=#{w[2]}&mode=crop&c.focus=faces&c.zoom=true"
+                img src="https://z.zr.io/ri/5s.jpg?width=#{w[2]}&height=#{w[2]}&mode=crop&c.focus=faces&c.zoom=true"
                 p Provide focus points or use automatic face detection to ensure everyone stays in the photo.
           / li
           /   .row
           /     .span4
           /       - w = widths(1,1)
           /       h4 Face & Eye detection
-          /       img src="http://z.zr.io/ri/2s.jpg?width=#{w[0]}&f.show=true"
+          /       img src="https://z.zr.io/ri/2s.jpg?width=#{w[0]}&f.show=true"
           /       span.imagespacer
-          /       img src="http://z.zr.io/ri/5s.jpg?width=#{w[1]}&r.autoeyes=true"
+          /       img src="https://z.zr.io/ri/5s.jpg?width=#{w[1]}&r.autoeyes=true"
           /     .span4
           /       - w = widths(1)
           /       h4 Red-eye repair
-          /       img src="http://z.zr.io/ri/5s.jpg?width=#{w[0]}&r.autoeyes=true"
+          /       img src="https://z.zr.io/ri/5s.jpg?width=#{w[0]}&r.autoeyes=true"
           /       p Our adaptive circle fill algorithm repairs red-eye while maintaining reflection integrity.
           /     .span4
           /       - w = widths(1,1)
           /       h4 Change aspect ratio with seam carving
-          /       img src="http://z.zr.io/ri/3s.jpg?width=#{w[0]}"
+          /       img src="https://z.zr.io/ri/3s.jpg?width=#{w[0]}"
           /       i.icon-arrow-right
-          /       img src="http://z.zr.io/ri/3s.jpg?width=#{w[1]}&height=#{w[1]}&mode=carve"
+          /       img src="https://z.zr.io/ri/3s.jpg?width=#{w[1]}&height=#{w[1]}&mode=carve"
           li
             .row
               .span4
                 - w = widths(1,1)
                 h4 Apply image overlays and backgrounds
-                img src="http://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=logo"
+                img src="https://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=logo"
                 span.imagespacer
-                img src="http://z.zr.io/ri/23s.jpg?width=#{w[1]}&watermark=bg&s.alpha=0.7&s.roundcorners=100"
+                img src="https://z.zr.io/ri/23s.jpg?width=#{w[1]}&watermark=bg&s.alpha=0.7&s.roundcorners=100"
                 p Overlay (or underlay) an unlimited number of text and image layers; exercise complete layout control.
               .span4
                 - w = widths(1,1)
                 h4 Apply flexible text overlays
-                img src="http://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=fill-text1&s.alpha=.5&text=hi"
+                img src="https://z.zr.io/ri/23s.jpg?width=#{w[0]}&watermark=fill-text1&s.alpha=.5&text=hi"
                 span.imagespacer
-                img src="http://z.zr.io/ri/23s.jpg?width=#{w[1]}&watermark=fill-text1&s.alpha=.5&text=We have flexible layout"
+                img src="https://z.zr.io/ri/23s.jpg?width=#{w[1]}&watermark=fill-text1&s.alpha=.5&text=We have flexible layout"
               .span4
                 - w = widths(0.5,1,1)
                 h4 Upscale on your terms
-                img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[0]}&height=#{w[0]}"
+                img src="https://z.zr.io/ri/15tiny.jpg?width=#{w[0]}&height=#{w[0]}"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[1]}&height=#{w[1]}&scale=canvas&bgcolor=ddd"
+                img src="https://z.zr.io/ri/15tiny.jpg?width=#{w[1]}&height=#{w[1]}&scale=canvas&bgcolor=ddd"
                 i.icon-arrow-right
-                img src="http://z.zr.io/ri/15tiny.jpg?width=#{w[2]}&height=#{w[2]}&scale=both&bgcolor=ddd&fi.scale=lanczos"
+                img src="https://z.zr.io/ri/15tiny.jpg?width=#{w[2]}&height=#{w[2]}&scale=both&bgcolor=ddd&fi.scale=lanczos"
                 p Upscale only when you want to, the way you want to, with the upscale filter you want.
 
         ul.flex-direction-nav

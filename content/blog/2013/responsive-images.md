@@ -23,7 +23,7 @@ For performance, we must prevent duplicate requests.
 The &lt;noscript> tag can solve both of these challenges... when accompanied by a little javascript.
 
     <noscript data-ri>
-      <img src="http://z.zr.io/ri/1s.jpg?width=150" />
+      <img src="https://z.zr.io/ri/1s.jpg?width=150" />
     </noscript>
 
 

@@ -7,9 +7,10 @@
     var disqus_shortname = '#{config.disqus_short_name}';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        dsq.setAttribute('data-timestamp', +new Date());
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
   noscript
     | Enable Javascript or
-    a(href="http://disqus.com/?ref_noscript") click here to view the comments.
+    a(href="https://disqus.com/?ref_noscript") click here to view the comments.

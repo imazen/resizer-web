@@ -35,22 +35,22 @@ We're going to combine SwipeBox with ImageResizer, and serve device-tailored ful
 
     <div class="box">
       <a href="http://z.zr.io/ri/3s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Harbor">
-        <img src="http://z.zr.io/ri/3s.jpg?width=200&height=200" alt="Harbor">
+        <img src="https://z.zr.io/ri/3s.jpg?width=200&height=200" alt="Harbor">
       </a>
     </div>
     <div class="box">
       <a href="http://z.zr.io/ri/4s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Sunset">
-        <img src="http://z.zr.io/ri/4s.jpg?width=200&height=200" alt="Sunset">
+        <img src="https://z.zr.io/ri/4s.jpg?width=200&height=200" alt="Sunset">
       </a>
     </div>
     <div class="box">
       <a href="http://z.zr.io/ri/5s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Summer">
-        <img src="http://z.zr.io/ri/5s.jpg?width=200&height=200" alt="Summer">
+        <img src="https://z.zr.io/ri/5s.jpg?width=200&height=200" alt="Summer">
       </a>
     </div>
     <div class="box">
       <a href="http://z.zr.io/ri/8s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Dolomites">
-        <img src="http://z.zr.io/ri/8s.jpg?width=200&height=200" alt="Dolomites">
+        <img src="https://z.zr.io/ri/8s.jpg?width=200&height=200" alt="Dolomites">
       </a>
     </div>
 
@@ -98,21 +98,21 @@ We're going to combine SwipeBox with ImageResizer, and serve device-tailored ful
 
 <div class="box">
   <a href="http://z.zr.io/ri/3s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Harbor">
-    <img src="http://z.zr.io/ri/3s.jpg?width=200&height=200" alt="Harbor">
+    <img src="https://z.zr.io/ri/3s.jpg?width=200&height=200" alt="Harbor">
   </a>
 </div>
 <div class="box">
   <a href="http://z.zr.io/ri/4s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Sunset">
-    <img src="http://z.zr.io/ri/4s.jpg?width=200&height=200" alt="Sunset">
+    <img src="https://z.zr.io/ri/4s.jpg?width=200&height=200" alt="Sunset">
   </a>
 </div>
 <div class="box">
   <a href="http://z.zr.io/ri/5s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Summer">
-    <img src="http://z.zr.io/ri/5s.jpg?width=200&height=200" alt="Summer">
+    <img src="https://z.zr.io/ri/5s.jpg?width=200&height=200" alt="Summer">
   </a>
 </div>
 <div class="box">
   <a href="http://z.zr.io/ri/8s.jpg?width=1200&height=1200&mode=max&quality=85" class="swipebox" title="Dolomites">
-    <img src="http://z.zr.io/ri/8s.jpg?width=200&height=200" alt="Dolomites">
+    <img src="https://z.zr.io/ri/8s.jpg?width=200&height=200" alt="Dolomites">
   </a>
 </div>
