@@ -138,7 +138,7 @@ $(function(){
                             "h=200&s.sepia=true"
                             ];
         var img = $('.change-this-image');
-        var imgPath = "http://z.zr.io/ri/u3.jpg?"
+        var imgPath = "https://z.zr.io/ri/u3.jpg?"
         $(".home-code-box .type-this").typed({
           strings: queryStrings,
           backDelay:2000,
