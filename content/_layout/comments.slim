@@ -4,6 +4,9 @@
     javascript:
       var disqus_developer = true;
   javascript:
+    var disqus_config = function () {
+        this.page.url = 'http://imageresizing.net#{request.path_info}';
+    };
     var disqus_shortname = '#{config.disqus_short_name}';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
