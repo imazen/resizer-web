@@ -5,8 +5,10 @@ GIT
     rerun (0.11.0)
       listen (~> 3.0)
 
-PATH
-  remote: ../hardwired
+GIT
+  remote: https://github.com/nathanaeljones/hardwired.git
+  revision: 6c09509322a56eedd87a85ce2e0952d70290e32f
+  branch: develop
   specs:
     hardwired (0.4)
       erubis
