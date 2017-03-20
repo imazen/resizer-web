@@ -26,7 +26,7 @@ h1 ASP.NET library and image server
         p
           span.shield.gap
             span.shield_k status
-            span.shield_v in development
+            span.shield_v technical preview
           span.shield.gap
             span.shield_k OS
             span.shield_v Windows, Linux, Mac
@@ -54,9 +54,6 @@ h1 ASP.NET library and image server
           span.shield.gap
             span.shield_k built with
             span.shield_v Rust, C11, C++
-          span.shield.gap
-            span.shield_k components
-            span.shield_v separate libimageflow.dll, imageflow_server.exe-green
           span.shield.gap
             span.shield_k rendering engine
             span.shield_v custom
@@ -86,7 +83,11 @@ h1 ASP.NET library and image server
           |  
           img src="https://img.shields.io/badge/rendering engine-custom-green.svg"
         markdown: 
-          We expect a usable beta of [libimageflow and imageflow-server](https://www.imageflow.io) in 2016, with a stable release the following year. [Imageflow](https://www.imageflow.io) makes a [cross-platform ImageResizer 5 possible](http://www.imageflow.io/imageresizer/). If you [backed Imageflow on Kickstarter](https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image), you can already [access a limited command-line version of the tool](https://www.kickstarter.com/projects/njones/imageflow-respect-the-pixels-a-secure-alt-to-image/updates). 
+          [Imageflow](https://www.imageflow.io) is in development, but you can [download a working preview](https://github.com/imazen/imageflow/releases) and give us feedback. 
+          
+          * *libimageflow.dll* makes a [cross-platform ImageResizer library possible](http://www.imageflow.io/imageresizer/).
+          * *imageflow_server* is a RESTful image server and faster ImageResizer replacement. 
+          * *imageflow_tool* is perfect for batch processing - up to 17x faster than ImageMagick. 
 
       .span6 style="text-align:center;"
         p 
@@ -122,9 +123,6 @@ h1 ASP.NET library and image server
           span.shield.gap
             span.shield_k built with
             span.shield_v C#, F#, C++/CLI, C89
-          span.shield.gap
-            span.shield_k components
-            span.shield_v combined server, client, and library
           span.shield.gap
             span.shield_k rendering engine
             span.shield_v GDI+ (free) / custom (with Performance license)
@@ -234,7 +232,7 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
         a.block.statsbar href="http://www.nuget.org/profiles/nathanaeljones/"
           p
             i.icon-white.icon-cloud-download.statsnumber
-             |  1,491,000
+             |  1,680,000
           p
             |NuGet downloads of ImageResizer
           .clear
@@ -258,7 +256,7 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
         a.block.statsbar href="https://stackoverflow.com/questions/tagged/imageresizer?sort=votes&pageSize=50"
           p
             i.icon-white.icon-question-sign.statsnumber
-             |  450+
+             |  470+
           p
             | Answers on StackOverflow
           .clear
