@@ -102,18 +102,6 @@ function verifyRequired(id) {
 	return true;
 }
 
-
-/*function EJEJC_config() {
-EJEJC_BEACON = "https://www.googleadservices.com/pagead/conversion/0062225003/?value=1&label=purchase&script=0";
-}
-
-
-$(function(){
-  ejGATracker = _gat._getTracker("UA-XXXXX-X");
-});
-	*/
-
-
 $(function(){
   var noun = $(".ml_noun");
   setInterval(function(){
