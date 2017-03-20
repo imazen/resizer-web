@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.1.6'
+ruby '2.4.0'
 
 gem 'slim'
 gem 'kramdown'
@@ -11,20 +11,22 @@ gem 'less'
 gem 'sass'
 gem 'erubis'
 
-#gem 'hardwired', :path => "../hardwired"
-gem 'hardwired', :git => "git://github.com/nathanaeljones/hardwired.git", :branch => :develop
+gem 'hardwired', :path => "../hardwired"
+#gem 'hardwired', :git => "https://github.com/nathanaeljones/hardwired.git", :branch => :develop
 
 gem 'puma' #we use this for both development and production
 
+gem 'diffy'
 
 #gem 'honeybadger', :group => :production
 
 gem 'yui-compressor'
 
+gem 'aws-sdk', '~> 2', :group => :development
 
 gem 'rack-test' #Warning, needed for production
 
-gem "rerun", :git => "git://github.com/alexch/rerun.git", :group => :development
+gem "rerun", :git => "https://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
 gem "rb-fsevent", :group => :development
 gem "webrat", :group => :development
