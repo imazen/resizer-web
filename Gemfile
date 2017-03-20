@@ -25,6 +25,7 @@ gem 'yui-compressor'
 gem 'aws-sdk', '~> 2', :group => :development
 
 gem 'rack-test' #Warning, needed for production
+gem 'test-unit'
 
 gem "rerun", :git => "https://github.com/alexch/rerun.git", :group => :development
 gem "shotgun", :group => :development
