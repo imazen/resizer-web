@@ -21,6 +21,12 @@ class Site < Hardwired::Bootstrap
 
 
     helpers do
+      def canonical
+        pn = request[:page]
+        uri = URI::join(config.url,page.path)
+        uri.query = URI.encode_www_form({"page" => pn})
+        uri
+      end
 
       def versions
         [{id: "v2", 
