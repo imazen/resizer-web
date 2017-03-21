@@ -24,7 +24,9 @@ class Site < Hardwired::Bootstrap
       def canonical
         pn = request[:page]
         uri = URI::join(config.url,page.path)
-        uri.query = URI.encode_www_form({"page" => pn})
+        if pn
+          uri.query = URI.encode_www_form({"page" => pn})
+        end
         uri
       end
 
