@@ -20,6 +20,8 @@ html(lang="en" class="no-js")
 
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
 
+    == partial :gtm
+
     link href="/css/less/site.css" rel="stylesheet"
     / - if page.lib? :twentytwenty
     /   link href="/css/twentytwenty.css" rel="stylesheet"
@@ -57,10 +59,9 @@ html(lang="en" class="no-js")
     /[if lt IE 9]
       script src="https://html5shim.googlecode.com/svn/trunk/html5.js"
 
-    == partial :analytics
-
     == partial :fonts
   body
+    == partial :gtm_fallback
     == partial :header
 
     == yield_content(:banner)
@@ -150,22 +151,5 @@ html(lang="en" class="no-js")
           tab_position: 'middle-right',
           tab_inverted: false
         }]);
-
-
-    - if page.meta.conversion_id
-      / Google Code for View download page Conversion Page
-      javascript:
-        var google_conversion_id = parseInt("#{page.meta.conversion_id}", 10);
-        var google_conversion_language = "en";
-        var google_conversion_format = "3";
-        var google_conversion_color = "ffffff";
-        var google_conversion_label = "#{page.meta.conversion_label}";
-        var google_conversion_value = parseInt("#{page.meta.conversion_value}", 10);
-        var google_conversion_currency = "USD";
-      script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"
-      noscript
-        div style="display:inline;"
-          img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/#{page.meta.conversion_id}/?label=#{page.meta.conversion_label}&amp;guid=ON&amp;script=0"
-
 
 
