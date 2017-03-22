@@ -5,8 +5,6 @@
 
   javascript:
     google.load('search', '1', {language : 'en', style : google.loader.themes.SHINY});
-    var _gaq = _gaq || [];
-    _gaq.push(["_setAccount", "#{config.google_analytics_code}"]);
     function _trackQuery(control, searcher, query) {
       var gaQueryParamName = "q";
       var loc = document.location;
@@ -18,7 +16,7 @@
         '=',
         encodeURIComponent(query)
       ].join('');
-      _gaq.push(["_trackPageview", url]);
+      ga("_trackPageview", url);
     }
     google.setOnLoadCallback(function() {
       var customSearchControl = new google.search.CustomSearchControl('#{config.google_custom_search}');
