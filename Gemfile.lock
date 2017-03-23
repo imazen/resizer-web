@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/nathanaeljones/hardwired.git
-  revision: 6c09509322a56eedd87a85ce2e0952d70290e32f
+  revision: a20c3c9dc9289d6a90dc611d2fc692118e794c8b
   branch: develop
   specs:
     hardwired (0.4)
