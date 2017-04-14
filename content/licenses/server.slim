@@ -1,0 +1,68 @@
+title: Server Licenses - Image Resizer
+Icon: notes
+Libs: -comments, uservoice, license
+Flags: unwrap
+Layout: layout
+
+
+h1 Licenses
+
+== content_for :banner do
+
+.container 
+.row.lrow.out style="padding-bottom: 30px; margin-right: 10px;"
+  h1.mainheader.lic Server Count Licensing
+  .row-fluid
+    .span12 style="text-align:center;"
+      h4
+        | Process images within your hosted service or app. Direct and indirect usage resale permited, whether you offer an e-commerce platform or an image processing service. 
+      h2
+        | 1 server = 4 cores (logical processors). One shared license key.
+      h2
+        | No limits on business size, instances or domains. These are floating, concurrent use licenses. Billed monthly. No contracts. Adjust the quantity from your portal. 
+
+
+  .row-fluid
+    .lrow
+      div.licensebox.span6
+        div style="background-color: #0FAD07;"
+          h2.licensetitle Performance
+          h3.licenseprice $70/mo
+        ul.licensecontent
+          strong Includes all Essential Features, plus:
+
+          li 
+            | FastScaling engine for 
+            a href="https://imageresizing.net/docs/v4/plugins/fastscaling"
+              | 4-10x better performance.
+          li Disk + Memory input/output caching for terabytes of images
+          li SQL, Azure, and Amazon S3 support
+          li 8-bit PNG/GIF & animated GIF processing
+          li Secure remote image processing
+          li 
+
+        .buy-buttons
+          a href="https://imazen.chargebee.com/hosted_pages/plans/per-server-imageresizer-performance" class="btn btn-primary btn-buynow-green"
+            strong Get 30 days free &#8226; $70/mo/server
+
+      div.licensebox.span6
+        div style="background-color: #FC9100;"
+          h2.licensetitle Elite
+          h3.licenseprice $100/mo
+        ul.licensecontent
+          strong Includes all Performance features, plus:
+          li Flexible image and watermark overlay support
+          li Image filtering suite
+          li Advanced file format support (PSD, CR2, CNG, etc.)
+          li Smart whitespace removal (great for product photos!)
+          li Metadata preservation
+          li Automatic and manual red-eye detection and correction
+          li Face detection and smart cropping
+          li Batch processing and .zip file creation
+        .buy-buttons
+          a href="https://imazen.chargebee.com/hosted_pages/plans/per-server:-imageresizer-elite" class="btn btn-primary btn-buynow-orange"
+            strong Get 30 days free &#8226; $100/mo/server
+
+  div style="clear:both"
+== partial :"subscription/editions"
+== partial :"subscription/footer"

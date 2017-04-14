@@ -3,7 +3,7 @@ Libs: -comments
 
 # Imazen Domain License v2.0
 
-You can acquire this license by [purchasing the Performance or Creative Edition](/licenses).
+You can acquire this license by [purchasing a domain license to the Performance or Creative Edition](/licenses).
 
 This is not the only license available. We offer [enterprise-wide][enterprise], [OEM][oem], and [SaaS][saas] licenses for [immediate purchase](/licenses). ImageResizer V4 and later may also be used under the terms of the [AGPL 3.0][agpl]. Portions of ImageResizer V4 may be used under the terms of the [Apache License 2.0][apache].  For development and testing, you may use the software under the terms of the [Trial license][trial].
 

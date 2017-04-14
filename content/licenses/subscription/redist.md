@@ -1,8 +1,9 @@
-title: ImageResizer OEM Subscription License
+title: Imazen Redistributor Agreement
 textclass: t legal
 Libs: -comments
+Aliases: /licenses/oem-subscription
 
-# ImageResizer OEM Subscription License v1.0
+# Imazen Redistributor Agreement v1.1
 
 ### Summary
 
@@ -23,9 +24,9 @@ If you wish to sell or distribute a product which contains ImageResizer plugins,
 
 This license (or a later revision) is valid as long as your subscription remains active. You must use the latest revision of this license to access the latest releases of this Software. 
 
-## ImageResizer OEM Subscription License
+## Imazen Redistributor Agreement
 
-*Version 1.0, April 2017*  
+*Version 1.1, April 2017*  
 *Copyright © 2017 Imazen LLC*
 
 ## Terms and Conditions for use, reproduction, and distribution
@@ -203,17 +204,12 @@ In no event and under no legal theory, whether in tort (including negligence), c
 
 While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
 
+[apache]: /licenses/apache  "Apache 2 License"
+[agpl]: /licenses/agpl  "GNU Affero General Public License v3"
+[contribute]: /licenses/contribute  "Imazen Individual Contributor Agreement"
+[contribute-corp]: /licenses/contribute-corp  "Imazen Corporate Contributor Agreement"
+[site]: /licenses/subscription/site "Site-wide Subscription License"
+[server]: /licenses/subscription/server "Imazen Server License"
+[redist]: /licenses/subscription/redist "Imazen Redistributor Agreement"
+[recipient]: /licenses/subscription/recipient "Imazen Recipient License"
 
-
-
-
-[freedom]: /licenses/freedom  "Resizer Freedom License"
-[trial]: /licenses/trial  "Resizer Trial License"
-[pro]: /licenses/pro  "Resizer Professional License"
-[proclient]: /licenses/proclient  "Resizer Professional Client License"
-[enterprise]: /licenses/enterprise  "Resizer Enterprise License"
-[oem]: /licenses/oem  "ImageResizer OEM License"
-[saas]: /licenses/saas "Imazen SaaS License"
-[domain]: /licenses/domain "Imazen Domain License"
-[apache]: /licenses/apache "Apache License"
-[agpl]: /licenses/agpl "GNU Affero General Public License"
