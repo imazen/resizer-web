@@ -1,6 +1,5 @@
 textclass: t legal
 Libs: -comments
-Aliases: /licenses/proclient
 
 # ImageResizer Professional Client License v2.0
 

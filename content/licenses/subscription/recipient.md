@@ -1,6 +1,5 @@
 textclass: t legal
 Libs: -comments
-Aliases: /licenses/proclient
 
 # Imazen Redistribution Recipient License v1.0
 
