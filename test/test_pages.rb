@@ -33,6 +33,7 @@ class TestAllPages < Test::Unit::TestCase
   Hardwired::Index.pages.each do |page|
     define_method(("test_" + page.path).to_sym) do 
       visit page.path
+      
       assert_contain "ImageResizer" 
     end unless (page.flag?(:hidden) || page.path.end_with?("sitemap.xml"))
   end 

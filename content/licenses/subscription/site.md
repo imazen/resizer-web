@@ -5,7 +5,7 @@ Libs: -comments
 # ImageResizer Site-wide Subscription License v1.0
 
 <div class="well">
-This document has not yet been finalized. Please contact support@imazen.io for details.
+This document has not yet been finalized. Please contact support@imazen.io for details.g
 </div>
 
 You can acquire this license by purchasing the [Elite Edition](/licenses) or any [support contract](/support/contracts). 
