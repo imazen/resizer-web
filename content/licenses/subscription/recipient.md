@@ -4,6 +4,9 @@ Aliases: /licenses/proclient
 
 # Imazen Redistribution Recipient License v1.0
 
+<div class="well">
+This document has not yet been finalized. Please contact support@imazen.io for details.
+</div>
 
 ## Summary - For Recipients
 

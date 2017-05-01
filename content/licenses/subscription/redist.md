@@ -5,6 +5,11 @@ Aliases: /licenses/oem-subscription
 
 # Imazen Redistributor Agreement v1.1
 
+
+<div class="well">
+This document has not yet been finalized. Please contact support@imazen.io for details.
+</div>
+
 ### Summary
 
 If you wish to sell or distribute a product which contains ImageResizer plugins, this is the license you need.

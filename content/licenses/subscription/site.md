@@ -4,6 +4,10 @@ Libs: -comments
 
 # ImageResizer Site-wide Subscription License v1.0
 
+<div class="well">
+This document has not yet been finalized. Please contact support@imazen.io for details.
+</div>
+
 You can acquire this license by purchasing the [Elite Edition](/licenses) or any [support contract](/support/contracts). 
 
 This is not the only license available. We offer [domain][domain], [OEM][oem], and [SaaS][saas] licenses for [immediate purchase](/licenses). ImageResizer V4 and later may also be used under the terms of the [AGPL 3.0][agpl]. Portions of ImageResizer V4 may be used under the terms of the [Apache License 2.0][apache].  For development and testing, you may use the software under the terms of the [Trial license][trial].

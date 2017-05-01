@@ -5,6 +5,9 @@ Libs: -comments
 # Imazen Per-Server Subscription License v1.0
 
 
+<div class="well">
+This document has not yet been finalized. Please contact support@imazen.io for details.
+</div>
 
 ### Summary
 
