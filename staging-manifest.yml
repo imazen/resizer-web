@@ -1,0 +1,8 @@
+---
+applications:
+- name: resizer-web
+  buildpack: ruby_buildpack
+  routes:
+  - route: resizer-web-staging.run.platform.nirdhost.com
+  memory: 256MB
+  instances: 1
