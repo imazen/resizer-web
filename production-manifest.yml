@@ -1,0 +1,9 @@
+---
+applications:
+- name: resizer-web
+  buildpack: ruby_buildpack
+  routes:
+  - route: resizer-web-production.run.platform.nirdhost.com
+  - route: imageresizing.net
+  memory: 256MB
+  instances: 2
