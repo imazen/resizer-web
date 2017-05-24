@@ -10,6 +10,16 @@ YELLOW='\033[0;33m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+ACTUAL_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} # Obtain actual branch if we are building under Travis
+ACTUAL_BRANCH=${ACTUAL_BRANCH:-$CIRCLE_BRANCH}              # Obtain actual branch if we are building under CircleCI
+ACTUAL_BRANCH=${ACTUAL_BRANCH:-$CI_BRANCH}              # Obtain actual branch if we are building under Codeship
+
+
+if [ "$ACTUAL_BRANCH" != "staging" -a "$ACTUAL_BRANCH" != "production" ] ; then
+    echo -e "${YELLOW}Not deploying the branch $ACTUAL_BRANCH."
+    exit 0;
+fi
+
 echo -e "=================${YELLOW} Deployment Steps =================="
 echo -e " 1.) ${YELLOW}Download CLI"
 echo -e " 2.) ${YELLOW}Login to CF"
