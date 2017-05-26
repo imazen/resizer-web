@@ -1,12 +1,13 @@
 Flags: edition
 Edition: elite
-Cost: The Elite edition costs $850 per enterprise
 sort field: 3
 Includes Editions: free, performance, creative
 
 h1 Elite Edition
 
 markdown:
-  The Elite edition is available under an [enterprise-wide](/licenses/enterprise), [SaaS](/licenses/saas), or [OEM](/licenses/oem) license.
+    Includes all plugins from the Creative, Performance, and Essential editions.
+
+    To see which plans include these plugins, visit the [licenses](/licenses) page.
 
 == partial :my_plugins, {:locals => {display_edition: :elite, includes_editions: defined?(includes_editions) ? includes_editions : [:free, :performance, :creative]}}

@@ -1,12 +1,12 @@
 Flags: edition
-Edition: creative
-Cost: The Creative edition costs $499 per domain. 
+Edition: creative 
 sort_field: 2
 Includes Editions: free, performance
 
 h1 Creative Edition
 
 p With the Creative Edition, you have access to a comprehensive imaging suite. 
+p Includes all pluugins from the Performance and Essential editions.
 
 ul.arrow_list
   li Bring clarity to your photos with the unsharp mask, white balance adjustment, and noise removal tools. 
@@ -22,8 +22,6 @@ ul.arrow_list
   li Get a 2-4x speed boost with the WicBuilder pipeline, for a slight quality penalty.
 
 markdown: 
-  When purchased as the Creative Edition (under the [Domain license](/licenses/domain)), you are allowed to use the plugins on one registered domain and any subdomains.
-  If purchased with the Elite Edition or Support Contracts, you do not need to register your domains.
-  Only the Watermark and SimpleFilters plugins are medium-trust compatible, and only in ImageResizer v3 and below.
+    To see which plans include these plugins, visit the [licenses](/licenses) page.
 
 == partial :my_plugins, {:locals => {display_edition: :creative, includes_editions: defined?(includes_editions) ? includes_editions : [:free, :performance]}}
