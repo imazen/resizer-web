@@ -5,5 +5,6 @@ applications:
   routes:
   - route: resizer-web-production.run.platform.nirdhost.com
   - route: imageresizing.net
+  - route: www.imageresizing.net
   memory: 256MB
   instances: 2
