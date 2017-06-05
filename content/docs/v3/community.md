@@ -6,7 +6,7 @@
 - "-sitemap"
 ---
 
-# Community plugins and articles
+# Communuty plugins and articles
 
 
 
