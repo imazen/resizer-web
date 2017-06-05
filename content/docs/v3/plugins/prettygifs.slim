@@ -39,19 +39,19 @@ p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantiza
     br
     p
       .twentytwenty-container
-        img src="https://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
-        img src="https://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false" id="plugin-example-after"
+        img src="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
+        img src="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false" id="plugin-example-after"
  
     .row-fluid.hidden-phone
       - example_images.each do | img |
         .span2
           p 
             a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-websafe.gif?width=#{image_width}#{image_scale}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_width}#{image_scale}&colors=216&dither=4pass&preservePalette=false&random=#{cache_buster}"
-              img src="https://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}"
     .visible-phone
       - example_images.each do | img |
         a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-websafe.gif?width=#{image_width}#{image_scale}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_width}#{image_scale}&colors=216&dither=4pass&preservePalette=false&random=#{cache_buster}"
-          img src="https://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
+          img src="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
         | &nbsp;
 
 

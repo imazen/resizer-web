@@ -45,7 +45,7 @@ h1 AdvancedFilters plugin
           - random_image = "%03d" % Random.new.rand(1..30)
           - image_options.each do | opt |
             li
-              img src="https://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&#{opt}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&#{opt}"
               .slide-caption.n.hidden-phone
                 - if canny_options.include? opt
                   h3 Canny Edge Detector
