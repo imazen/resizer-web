@@ -1,4 +1,10 @@
 [
+  {"version": "4.1.8",
+   "release_date": "20170617T175303Z",
+   "release_notes": "http://imageresizing.net/releases/4-1-8",
+   "drm_free_artifact": {"bucket": "resizer-releases", "blob": "Resizer4-1-8-full-Jun-17-2017-drm-free.zip"},
+   "drm_artifact": "https://s3.amazonaws.com/resizer-releases/Resizer4-1-8-full-Jun-17-2017.zip"
+  },
   {"version": "4.1.7",
    "release_date": "20170606T175303Z",
    "release_notes": "http://imageresizing.net/releases/4-1-7",
