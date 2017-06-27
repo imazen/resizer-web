@@ -213,7 +213,7 @@ class Site < Hardwired::Bootstrap
             restricted: "",
             icon: "icon-globe",
             summary: "Large business - more than 500 employees.",
-            discount: 1.0, 
+            discount: 0, 
             coupon: "LARGEBIZ_ONLY"
           },
           "medium" => {
