@@ -123,6 +123,142 @@ class Site < Hardwired::Bootstrap
 
         Hardwired::RecursiveOpenStruct.new({quote: nil, domain: domain, vertical:vert, tags: tags, index: ix, url: "https://z.zr.io/rw/showcase/#{w}.png"})
       end 
+
+      def generate_products(discount, coupon)
+        Hash[{
+          elite_basic: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 7200, 
+                     addon_id: "basic-email-support"}, 
+             monthly: {id: "enterprise-wide-elite-edition-monthly", 
+                     price: 700, 
+                     addon_id: "basic-email-support"},         
+
+          },
+          elite: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 3600}, 
+             monthly: {id: "enterprise-wide-elite-edition-monthly", 
+                     price: 400, 
+                     trial: 30},         
+
+          },
+          performance: {
+              yearly: {id: "enterprise-wide-performance-edition-yearly", 
+                     price: 2400}, 
+             monthly: {id: "enterprise-wide-performance-edition-monthly", 
+                     price: 260},         
+
+          },
+          project_performance: {
+              yearly: {id: "project-performance-yearly", 
+                     price: 1800}      
+
+          }
+        }.map{ |k, d|  
+
+          # Add price and signup link
+          d = Hash[d.map{ |k, v|  
+              price = Money.new((v[:price] - (v[:price] * discount)) * 100, "USD")
+              query =  {}
+              query["subscription[coupon]"] = coupon if coupon
+              query["addons[id][0]"] = v[:addon_id] if v[:addon_id]
+              adjustments = {
+                price: price,
+                link: "https://account.imazen.io/hosted_pages/plans/#{v[:id]}?#{URI.encode_www_form(query)}"
+              }
+              [k, v.merge(adjustments)]
+          }]
+
+          # Calculate yearly discount
+          d = Hash[d.map{ |k, v| 
+              price = v[:price] 
+              yearly_saves = d[:monthly][:price] * 12 - d[:yearly][:price] if d[:monthly]
+
+              trial_prefix = v[:trial] ? "Free #{v[:trial]} day trial &#8226; " : ""
+
+              text = ""
+              if k == :monthly then 
+                text = v[:trial] ? 
+                  "#{trial_prefix} then #{price.format}/month" :
+                  "Start now &#8226; #{price.format}/month"
+              elsif yearly_saves
+                text = v[:trial] ? 
+                  "#{trial_prefix} Save #{yearly_saves.format}/year with yearly billing" 
+                  : "Save #{yearly_saves.format}/year with yearly billing"
+              else
+                text = v[:trial] ? 
+                  "#{trial_prefix} Sign up yearly billing" 
+                  : "Sign up with yearly billing"
+              end 
+              
+              adjustments = {
+                price_summary: k == :monthly ? "#{price.format}/mo" : "#{(price / 12).format}/month billed yearly",
+                #price_monthly: k == :monthly ? "#{price.format}/mo" : "#{(price / 12).format}/mo billed yearly",
+                #price_yearly: k == :monthly ? "#{(price * 12).format}/yr (billed monthly)" : "#{price.format}/yr",
+                button: text
+              }
+              [k, v.merge(adjustments)]
+          }]
+
+          d[:price_summary] = d[:yearly][:price_summary]
+          [k, d]
+        }] 
+      end 
+
+      def generate_org_sizes
+        Hash[{
+            "large" => {
+            name: "Large Business",
+            restricted: "",
+            icon: "icon-globe",
+            summary: "Large business - more than 500 employees.",
+            discount: 1.0, 
+            coupon: "LARGEBIZ_ONLY"
+          },
+          "medium" => {
+            name: "Medium Business",
+            restricted: "with fewer than 500 employees.",
+            icon: "icon-building",
+            summary: "Medium business - fewer than 500 employees.",
+            discount: 0.5, 
+            coupon: "SMB_ONLY"
+          },
+          "small" => {
+            name: "Small Business",
+            restricted: "with fewer than 30 employees.",
+            icon: "icon-group",
+            summary: "Small business - fewer than 30 employees.",
+            discount: 0.6, 
+            coupon: "SMALLBIZ_ONLY"
+          },
+          "micro" => {
+            name: "Microenterprise",
+            restricted: "with fewer than 5 employees and gross revenue below $250,000/quarter USD.",
+            icon: "icon-user",
+            summary: "Microenterprise - fewer than 5 employees. Gross revenue below $250,000/quarter USD.",
+            discount: 0.75, 
+            coupon: "MICROENTERPRISE_ONLY"
+          },
+          
+          "nonprofit" => {
+            name: "Non-profit",
+            restricted: "with non-profit and tax-exempt status.",
+            icon: "icon-medkit",
+            summary: "Charitable organizations - with non-profit and tax-exempt status.",
+            discount: 0.6, 
+            coupon: "NONPROFIT_ONLY"
+          }
+        }.map{|k,v| 
+          adjustments = {tag: k, products: generate_products(v[:discount], v[:coupon])}
+          #STDERR << adjustments.inspect
+          [k, adjustments.merge(v)]
+        }]
+      end 
+
+      def org_sizes
+        @@org_sizes ||= generate_org_sizes
+      end 
     end
 
     before do
@@ -142,6 +278,14 @@ class Site < Hardwired::Bootstrap
       request[:tag] = tag
       select_menu = '/blog'
       render_file('/blog')
+    end
+
+    get '/pricing/for/:tag' do |tag|
+      sizes = org_sizes
+      request[:org] = sizes[tag]
+
+      select_menu = '/pricing'
+      render_file('/pricing/for')
     end
 
     get %r{/google([0-9a-z]+).html?} do |code|

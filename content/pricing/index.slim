@@ -1,0 +1,32 @@
+title: Pricing - Image Resizer
+Icon: notes
+Libs: -comments, uservoice, license
+Aliases: /pricing /prices /buy /licenses
+
+h1 Select your company or organization size.
+
+css:
+  
+  ul.org_sizes{
+    font-size:200%; 
+    list-style: none; 
+    margin:0;
+  }
+  ul.org_sizes li{
+    line-height: 3em;
+  }
+  ul.org_sizes li i.icon-white{
+    padding-right: 1em;
+  }
+
+ul.org_sizes
+  - org_sizes.values.each do |org|
+    li
+      a href="/pricing/for/#{org[:tag]}"
+        i class="icon-white #{org[:icon]}"
+        = org[:summary]
+p
+  | Note: Employee count shall include independent contractors that have been with your organization for more than 3 months and average more than 20 hours per week. 
+p
+  | If your non-profit employs fewer than 30 people, be sure to compare microenterprise and small-business pricing. These may be lower than non-profit pricing.
+== partial :"footer"
