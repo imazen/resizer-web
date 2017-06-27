@@ -18,6 +18,7 @@ gem 'puma' #we use this for both development and production
 
 gem 'diffy'
 
+gem 'money'
 #gem 'honeybadger', :group => :production
 
 gem 'yui-compressor'

@@ -1,9 +1,9 @@
 require 'base64'
 require 'time'
-
+require 'money'
 #Set the root directory
 Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
-
+I18n.config.available_locales = :en
 
 DEFAULT_DOCS_VERSION = "v4"
 
