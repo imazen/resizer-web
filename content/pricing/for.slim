@@ -29,9 +29,21 @@ css:
         h2
           | Unlimited servers, instances, and domains. One license key for your entire organization.
         h4
-          | No contracts. Change or cancel any time at 
+          | Redistribution with custom software is free. Add #{request[:org][:products][:addon_oem][:price_summary]} to distribute with a product (contact us). 
+        h4 
+          | Reselling usage? 4  
+          a href="/pricing/per-server" 
+            | SaaS server licenses
+          |  included. Extras are #{request[:org][:products][:addon_server_performance][:price_summary]} (Performance) or #{request[:org][:products][:addon_server_elite][:price_summary]} (Elite).
+        h4
+          | Free perpetual license after 3 years (for existing releases).
+        h4 
           a href="https://account.imazen.io"
-            | account.imazen.io. 
+            | Sign in
+          |  to switch between e-mail support (#{request[:org][:products][:addon_basic][:price_summary]}), 24/7 phone support (#{request[:org][:products][:addon_247][:price_summary]}), and 
+          a href="https://stackoverflow.com/tags/imageresizer" style="color: inherit"
+            | StackOverflow ($0).
+
     .row-fluid
       .lrow 
         div.licensebox.span4
@@ -43,7 +55,7 @@ css:
             strong
               | All 
               a href="#editions"
-                |  ImageResizer Elite Edition features
+                |  Elite Edition features
               | , plus:
             li
               strong
@@ -51,22 +63,9 @@ css:
             li
               strong
                 | Onboarding call and media architecture review with our dev team (up to 30 minutes)
-            li 
-              | We support all your employees and contractors
             li
               | Maximum response time of 3 business days
-            li
-              strong
-              | Free perpetual license after 3 years (for existing releases)
-            li
-              | Redistribute with bespoke software
-            li 
-              | Redistribute with your product for +#{request[:org][:products][:addon_oem][:price_summary]} 
-            li
-              | Usage resale (SaaS) permitted on up to 16 cores (see  
-              a href="/pricing/per-server" 
-                | SaaS usage
-              | )
+            
       
           .buy-buttons
             a.btn.btn-primary.btn-buynow-purple href=request[:org][:products][:elite_basic][:monthly][:link]
@@ -83,27 +82,18 @@ css:
               = request[:org][:products][:elite][:price_summary]
           ul.licensecontent
             strong
-              | All 
+              | All
               a href="#editions"
-                |  ImageResizer Elite Edition features
+                |  Performance Edition features
               | , plus:
-            li
-              | An enterprise-wide license which covers all offices, parent companies, and subsidiaries
-            li
-              strong
-              | Free perpetual license after 3 years (for existing releases)
-            li
-              | Community support via StackOverflow
-            li
-              | Redistribute with bespoke software
-            li 
-              | Redistribute with your product for +#{request[:org][:products][:addon_oem][:price_summary]}
-            li
-              | Usage resale (SaaS) permitted on up to 16 cores (see  
-              a href="/pricing/per-server" 
-                | SaaS usage
-              | )
-      
+            li Watermark and flexible image overlay support
+            li Advanced file format support (PSD, CR2, CNG, etc.)
+            li Smart whitespace removal (great for product photos!)
+            li Face detection and smart cropping
+            li Image filtering & batch processing
+            a href="/plugins/editions/elite"
+              | View plugin list
+
           .buy-buttons
             a.btn.btn-primary.btn-buynow-green href=request[:org][:products][:elite][:monthly][:link]
               strong
@@ -115,35 +105,19 @@ css:
          
         div.licensebox.span4
           div style="background-color: #FC9100;"
-            h2.licensetitle Performance Edition Enterprise-wide
+            h2.licensetitle Performance Edition Enterprise
             h3.licenseprice
               = request[:org][:products][:performance][:price_summary]
           ul.licensecontent
-            strong
-              | All 
-              a href="#editions"
-                |  ImageResizer Performance Edition features
-              | , plus:
-            li
-              | An enterprise-wide license which covers all offices, parent companies, and subsidiaries
-            li
-              strong
-              | Free perpetual license after 3 years (for existing releases)
-            li
-              | Community support via StackOverflow
-            li
-              | Redistribute with bespoke software
+            li Resize, crop, rotate, flip, constrain, and encode via URL or C#
             li 
-              | Redistribute with your product for +#{request[:org][:products][:addon_oem][:price_summary]} 
-            li 
-              | Unlimited  
-              a href="#kinds"
-                | servers and cores.
-            li
-              | Usage resale (SaaS) permitted on 16 cores across 4 servers Add #{request[:org][:products][:addon_server_performance][:price_summary]} per 
-              a href="/pricing/per-server" 
-                | additional 4-core server.
-
+              | FastScaling engine for 
+              a href="https://imageresizing.net/docs/v4/plugins/fastscaling"
+                | 4-10x better performance.
+            li Disk + Memory input/output caching for terabytes of images
+            li Supports images in SQL, Azure, Amazon S3, and on other HTTP servers. 
+            a href="/plugins/editions/performance"
+              | View plugin list
           .buy-buttons
             a.btn.btn-primary.btn-buynow-orange href=request[:org][:products][:performance][:monthly][:link]
               span
@@ -156,26 +130,14 @@ css:
     .row-fluid
       .span12 style="text-align:center;"
         h3
-          | You can change your billing interval, product edition, and add/remove support at 
+          | You can always change your billing interval, product edition, and add/remove support at 
           a href="https://account.imazen.io"
             | account.imazen.io. 
-        - if request[:org][:coupon]
-          h4 
-            | If you signed up before July 1st 2017, you may need to remove your existing coupon and add 
-            strong
-              == request[:org][:coupon]
-            |  instead to get the correct pricing. 
-        h4
-          | Need more SaaS server licenses? Want to add OEM redistribution? These require extra work on our end - they're not self-service yet. Sign up for a trial and shoot us an e-mail; we'll help adjust your subscription.
-        h2
-          | 24/7 business support can be added to your plan for $599/mo. You can add this through your account portal or contact us for more information. 
+          | Use coupon #{request[:org][:coupon]}
         h2 
-          | Email sales@imazen.io
-        /
-          li
-            | If your usage remains extremely low (8 cores or less), we can help you downgrade to a Project license at any time, and apply prorated credit to your subscription. We'll likewise help you upgrade from a Project license if we see your usage exceeds the plan limits. 
-          li
-            | If you need to add server licenses (for extensive SaaS usage) or OEM redistribution rights, contact support@imageresizing.net. 
+          | Need help? Email sales@imazen.io or  
+          a href="https://lc.chat/now/8717566/"
+            | chat with us. 
 
     div style="clear:both"
   == partial :"editions"
