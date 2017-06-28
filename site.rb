@@ -147,45 +147,60 @@ class Site < Hardwired::Bootstrap
               yearly: {id: "enterprise-wide-performance-edition-yearly", 
                      price: 2400}, 
              monthly: {id: "enterprise-wide-performance-edition-monthly", 
-                     price: 260},         
+                     price: 260, 
+                     trial: 30},         
 
           },
           project_performance: {
               yearly: {id: "project-performance-yearly", 
                      price: 1800}      
 
+          },
+          addon_server_performance: {
+             monthly: {nodiscount_price: 70},         
+          },
+          addon_server_elite: {
+             monthly: {nodiscount_price: 100},         
+          },
+          addon_247: {
+             monthly: {nodiscount_price: 599},         
+          },
+          addon_basic: {
+             monthly: {price: 300},         
+          },
+          addon_oem: {
+             monthly: {price: 400},         
           }
         }.map{ |k, d|  
 
           # Add price and signup link
           d = Hash[d.map{ |k, v|  
-              price = Money.new((v[:price] - (v[:price] * discount)) * 100, "USD")
+              price = Money.new((v[:nodiscount_price] || (v[:price] - (v[:price] * discount))) * 100, "USD")
               query =  {}
               query["subscription[coupon]"] = coupon if coupon
               query["addons[id][0]"] = v[:addon_id] if v[:addon_id]
               adjustments = {
-                price: price,
-                link: "https://account.imazen.io/hosted_pages/plans/#{v[:id]}?#{URI.encode_www_form(query)}"
+                price: price
               }
+              adjustments[:link] = "https://account.imazen.io/hosted_pages/plans/#{v[:id]}?#{URI.encode_www_form(query)}" if v[:id]
               [k, v.merge(adjustments)]
           }]
 
           # Calculate yearly discount
           d = Hash[d.map{ |k, v| 
               price = v[:price] 
-              yearly_saves = d[:monthly][:price] * 12 - d[:yearly][:price] if d[:monthly]
+              yearly_saves = d[:monthly][:price] * 12 - d[:yearly][:price] if d[:monthly] && d[:yearly]
 
               trial_prefix = v[:trial] ? "Free #{v[:trial]} day trial &#8226; " : ""
 
               text = ""
               if k == :monthly then 
                 text = v[:trial] ? 
-                  "#{trial_prefix} then #{price.format}/month" :
+                  "#{trial_prefix} #{price.format}/month" :
                   "Start now &#8226; #{price.format}/month"
               elsif yearly_saves
-                text = v[:trial] ? 
-                  "#{trial_prefix} Save #{yearly_saves.format}/year with yearly billing" 
-                  : "Save #{yearly_saves.format}/year with yearly billing"
+                text = "#{trial_prefix} Bill yearly and save #{yearly_saves.format}" 
+                  
               else
                 text = v[:trial] ? 
                   "#{trial_prefix} Sign up yearly billing" 
@@ -193,7 +208,7 @@ class Site < Hardwired::Bootstrap
               end 
               
               adjustments = {
-                price_summary: k == :monthly ? "#{price.format}/mo" : "#{(price / 12).format}/month billed yearly",
+                price_summary: k == :monthly ? "#{price.format}/month" : "#{(price / 12).format}/month billed yearly",
                 #price_monthly: k == :monthly ? "#{price.format}/mo" : "#{(price / 12).format}/mo billed yearly",
                 #price_yearly: k == :monthly ? "#{(price * 12).format}/yr (billed monthly)" : "#{price.format}/yr",
                 button: text
@@ -201,7 +216,7 @@ class Site < Hardwired::Bootstrap
               [k, v.merge(adjustments)]
           }]
 
-          d[:price_summary] = d[:yearly][:price_summary]
+          d[:price_summary] = (d[:yearly] || d[:monthly])[:price_summary]
           [k, d]
         }] 
       end 
@@ -210,11 +225,10 @@ class Site < Hardwired::Bootstrap
         Hash[{
             "large" => {
             name: "Large Business",
-            restricted: "",
+            restricted: "with 500 or more employees.",
             icon: "icon-globe",
             summary: "Large business - more than 500 employees.",
-            discount: 0, 
-            coupon: "LARGEBIZ_ONLY"
+            discount: 0
           },
           "medium" => {
             name: "Medium Business",

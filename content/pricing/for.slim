@@ -59,13 +59,14 @@ css:
               strong
               | Free perpetual license after 3 years (for existing releases)
             li
-              | Redistribute only with bespoke software
+              | Redistribute with bespoke software
             li 
-              | Redistribute with your product for +$200/mo (see OEM add-on) 
+              | Redistribute with your product for +#{request[:org][:products][:addon_oem][:price_summary]} 
             li
-              | Includes 4 licenses (16 cores) for  
+              | Usage resale (SaaS) permitted on up to 16 cores (see  
               a href="/pricing/per-server" 
                 | SaaS usage
+              | )
       
           .buy-buttons
             a.btn.btn-primary.btn-buynow-purple href=request[:org][:products][:elite_basic][:monthly][:link]
@@ -94,13 +95,14 @@ css:
             li
               | Community support via StackOverflow
             li
-              | Redistribute only with bespoke software
+              | Redistribute with bespoke software
             li 
-              | Redistribute with your product for +$200/mo (see OEM) 
+              | Redistribute with your product for +#{request[:org][:products][:addon_oem][:price_summary]}
             li
-              | Includes 4 licenses (16 cores) for  
+              | Usage resale (SaaS) permitted on up to 16 cores (see  
               a href="/pricing/per-server" 
                 | SaaS usage
+              | )
       
           .buy-buttons
             a.btn.btn-primary.btn-buynow-green href=request[:org][:products][:elite][:monthly][:link]
@@ -130,14 +132,18 @@ css:
             li
               | Community support via StackOverflow
             li
-              | Redistribute only with bespoke software
+              | Redistribute with bespoke software
             li 
-              | Redistribute with your product for +$200/mo (see OEM) 
+              | Redistribute with your product for +#{request[:org][:products][:addon_oem][:price_summary]} 
+            li 
+              | Unlimited  
+              a href="#kinds"
+                | servers and cores.
             li
-              | Includes 4 licenses (16 cores) for  
+              | Usage resale (SaaS) permitted on 16 cores across 4 servers Add #{request[:org][:products][:addon_server_performance][:price_summary]} per 
               a href="/pricing/per-server" 
-                | SaaS usage
-      
+                | additional 4-core server.
+
           .buy-buttons
             a.btn.btn-primary.btn-buynow-orange href=request[:org][:products][:performance][:monthly][:link]
               span
@@ -150,11 +156,15 @@ css:
     .row-fluid
       .span12 style="text-align:center;"
         h3
-          | You can always change billing interval, production edition, and support add-ons at 
+          | You can change your billing interval, product edition, and add/remove support at 
           a href="https://account.imazen.io"
-            | account.imazen.io.  
-        h4 
-          | If you signed up before July 1st 2017, we may need to add the appropriate coupon code to your account to ensure you get the correct pricing. 
+            | account.imazen.io. 
+        - if request[:org][:coupon]
+          h4 
+            | If you signed up before July 1st 2017, you may need to remove your existing coupon and add 
+            strong
+              == request[:org][:coupon]
+            |  instead to get the correct pricing. 
         h4
           | Need more SaaS server licenses? Want to add OEM redistribution? These require extra work on our end - they're not self-service yet. Sign up for a trial and shoot us an e-mail; we'll help adjust your subscription.
         h2
@@ -169,5 +179,26 @@ css:
 
     div style="clear:both"
 == partial :"editions"
-== partial :"kinds"
+
+.row.lrow.out style="margin-top: -20px; padding-bottom: 30px; margin-right: 10px;"
+  h1.mainheader.lic#kinds What's the difference between our licensing models?
+  .row-fluid
+    .span12 style="text-align:center;"
+      .license-kind-container
+        markdown: 
+          | Enterprise-wide |  Per-Project | Per-Server Add-on | OEM Add-on | 
+          |----------------------|--------------------------------------------------------------------|-----------------------------------------------------------|--------------|                          
+          | ✓ Unlimited instances | ✓ Unlimited instances  | ✓ Unlimited instances | ✓ Unlimited instances |
+          | ✓ Unlimited projects |  ★ 1 project | ✓ Unlimited projects   | ★ 1 product |
+          | ✓ Unlimited servers | ★ Limited to 2 servers, 8 cores | ★ Adjustable quantity; each covers 4 cores | ✓ Unlimited servers |
+          | ✓ Unlimited domain names | ★ Limited to 2 domains and their subdomains. | ✓ Unlimited domain names | ✓ Unlimited domain names |
+          | ★ Usage resale (SaaS usage) limited to 4 servers, 16 cores | ✗ You may not directly or indirectly resell usage of ImageResizer | ✓ You can resell usage | ✗ Not applicable | 
+          | ✓ Redistribute with *custom* software you develop (shared license key) | ✗ Not applicable | ✗ Not applicable | ✓ Redistribute (sublicense) with your software product  (shared license key)  | 
+          | ★ Restricted to the licensee, subsidiaries, and sublicensees | ✓ Unrestricted | ✓ Unrestricted | ★ Restricted to the licensee, subsidiaries, and sublicensees |
+          | ✓ Perpetual license add-on available (free after 3 years) | ✓ Perpetual license add-on available | ✗ No perpetual licensing | ★ Not perpetual, but lighter enforcement model |
+          | ★ Best value; start here | ★ Cheapest, but very limited | Flat [per-server rate](/pricing/per-server) | ★ Great for redistribution |
+          | [Performance: #{request[:org][:products][:performance][:yearly][:link]}](#{request[:org][:products][:performance][:price_summary]}) <br /> [Elite: #{request[:org][:products][:elite][:yearly][:link]}](#{request[:org][:products][:elite][:yearly][:price_summary]}) | [Performance: #{request[:org][:products][:project_performance][:yearly][:link]}](#{request[:org][:products][:project_performance][:price_summary]}) | Performance: #{request[:org][:products][:addon_server_performance][:price_summary]} per 4 core server <br /> Elite: #{request[:org][:products][:addon_server_elite][:price_summary]} per 4 core server. <br /> Contact sales@imazen.io to purchase. | #{request[:org][:products][:addon_oem][:price_summary]} <br /> Contact sales@imazen.io to purchase.|
+
+
+  div style="clear:both"
 == partial :"footer"
