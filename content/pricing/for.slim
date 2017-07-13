@@ -36,7 +36,8 @@ css:
             | SaaS server licenses
           |  included. Extras are #{request[:org][:products][:addon_server_performance][:price_summary]} (Performance) or #{request[:org][:products][:addon_server_elite][:price_summary]} (Elite).
         h4
-          | Free perpetual license after 3 years (for existing releases).
+          strong
+            | Free perpetual license (for existing releases) if you sign up for a yearly plan before July 31st 2017 (Save #{request[:org][:products][:addon_elite_perpetual][:price_summary]}).
         h4 
           a href="https://account.imazen.io"
             | Sign in
@@ -71,7 +72,7 @@ css:
             a.btn.btn-primary.btn-buynow-purple href=request[:org][:products][:elite_basic][:monthly][:link]
               == request[:org][:products][:elite_basic][:monthly][:button]
           .buy-buttons
-            a.btn.btn-primary.btn-buynow-blue href=request[:org][:products][:elite_basic][:yearly][:link]
+            a href=request[:org][:products][:elite_basic][:yearly][:link]
               em
                 == request[:org][:products][:elite_basic][:yearly][:button]
          
@@ -99,7 +100,7 @@ css:
               strong
                 == request[:org][:products][:elite][:monthly][:button]
           .buy-buttons
-            a.btn.btn-primary.btn-buynow-blue href=request[:org][:products][:elite][:yearly][:link]
+            a href=request[:org][:products][:elite][:yearly][:link]
               em
                 == request[:org][:products][:elite][:yearly][:button]
          
@@ -123,10 +124,17 @@ css:
               span
                 == request[:org][:products][:performance][:monthly][:button]
           .buy-buttons
-            a.btn.btn-primary.btn-buynow-blue href=request[:org][:products][:performance][:yearly][:link]
+            a href=request[:org][:products][:performance][:yearly][:link]
               em
                 == request[:org][:products][:performance][:yearly][:button]
-         
+          / 
+            .buy-buttons
+              p
+                | Get a perpetual license immediately:
+              a href=request[:org][:products][:performance_perpetual][:yearly][:link]
+                em
+                  == request[:org][:products][:performance_perpetual][:yearly][:button]
+           
     .row-fluid
       .span12 style="text-align:center;"
         h3
