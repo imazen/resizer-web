@@ -129,25 +129,45 @@ class Site < Hardwired::Bootstrap
           elite_basic: {
             yearly: {id: "enterprise-wide-elite-edition-yearly", 
                      price: 7200, 
-                     addons: ["basic-email-support", "promotional-perpetual-license-upgrade"]}, 
+                     addons: ["basic-email-support"]}, 
              monthly: {id: "enterprise-wide-elite-edition-monthly", 
                      price: 700, 
                      addons: ["basic-email-support"]},         
 
           },
+          elite_basic_perpetual: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 7200, 
+                     first: {
+                        price: 10800
+                     }, 
+                     addons: ["basic-email-support","enterprise-wide-elite-perpetual-upgrade"]}, 
+     
+
+          },
           elite: {
             yearly: {id: "enterprise-wide-elite-edition-yearly", 
                      price: 3600, 
-                     addons: ["promotional-perpetual-license-upgrade"]}, 
+                     addons: []}, 
              monthly: {id: "enterprise-wide-elite-edition-monthly", 
                      price: 400, 
                      trial: 30},         
 
           },
+          elite_perpetual: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 3600, 
+                     first: {
+                        price: 7200
+                     }, 
+                     addons: ["enterprise-wide-elite-perpetual-upgrade"]}, 
+     
+
+          },
           performance: {
               yearly: {id: "enterprise-wide-performance-edition-yearly", 
                      price: 2400, 
-                     addons: ["promotional-perpetual-license-upgrade"]}, 
+                     addons: []}, 
              monthly: {id: "enterprise-wide-performance-edition-monthly", 
                      price: 260, 
                      trial: 30},         
@@ -165,6 +185,15 @@ class Site < Hardwired::Bootstrap
           project_performance: {
               yearly: {id: "project-performance-yearly", 
                      price: 1800}      
+
+          },
+          project_performance_perpetual: {
+              yearly: {id: "project-performance-yearly", 
+                     price: 1800,
+                     first: {
+                        price: 3600
+                     }, 
+                     addons: ["project-performance-perpetual-upgrade"]}      
 
           },
           addon_server_performance: {
