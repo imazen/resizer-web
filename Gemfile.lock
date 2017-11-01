@@ -34,6 +34,7 @@ GEM
     ffi (1.9.18)
     github-markdown (0.6.9)
     hub (1.12.4)
+    i18n (0.8.4)
     jmespath (1.3.1)
     kramdown (1.13.2)
     less (2.6.0)
@@ -45,6 +46,8 @@ GEM
       ruby_dep (~> 1.2)
     method_source (0.8.2)
     mini_portile2 (2.1.0)
+    money (6.9.0)
+      i18n (>= 0.6.4, < 0.9)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     power_assert (0.4.1)
@@ -102,6 +105,7 @@ DEPENDENCIES
   hub
   kramdown
   less
+  money
   pry
   puma
   rack-cache

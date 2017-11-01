@@ -1,9 +1,9 @@
 require 'base64'
 require 'time'
-
+require 'money'
 #Set the root directory
 Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
-
+I18n.config.available_locales = :en
 
 DEFAULT_DOCS_VERSION = "v4"
 
@@ -123,6 +123,229 @@ class Site < Hardwired::Bootstrap
 
         Hardwired::RecursiveOpenStruct.new({quote: nil, domain: domain, vertical:vert, tags: tags, index: ix, url: "https://z.zr.io/rw/showcase/#{w}.png"})
       end 
+
+      def generate_products(discount, coupon)
+        Hash[{
+          elite_basic: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 7200, 
+                     addons: ["basic-email-support", "promotional-imageflow-license"]}, 
+             monthly: {id: "enterprise-wide-elite-edition-monthly", 
+                     price: 700, 
+                     addons: ["basic-email-support", "promotional-imageflow-license"]},         
+
+          },
+          elite_basic_perpetual: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 7200, 
+                     first: {
+                        price: 10800
+                     }, 
+                     addons: ["basic-email-support","enterprise-wide-elite-perpetual-upgrade", "promotional-imageflow-license"]}, 
+     
+
+          },
+          elite: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 3600, 
+                     addons: ["promotional-imageflow-license"]}, 
+             monthly: {id: "enterprise-wide-elite-edition-monthly", 
+                     price: 400, 
+                     trial: 30, 
+                     addons: ["promotional-imageflow-license"]},         
+
+          },
+          elite_perpetual: {
+            yearly: {id: "enterprise-wide-elite-edition-yearly", 
+                     price: 3600, 
+                     first: {
+                        price: 7200
+                     }, 
+                     addons: ["enterprise-wide-elite-perpetual-upgrade", "promotional-imageflow-license"]}, 
+     
+
+          },
+          performance: {
+              yearly: {id: "enterprise-wide-performance-edition-yearly", 
+                     price: 2400, 
+                     addons: ["promotional-imageflow-license"]}, 
+             monthly: {id: "enterprise-wide-performance-edition-monthly", 
+                     price: 260, 
+                     trial: 30, 
+                     addons: ["promotional-imageflow-license"]},         
+
+          },
+          performance_perpetual: {
+              yearly: {id: "enterprise-wide-performance-edition-yearly", 
+                     price: 2400, 
+                     first: {
+                        price: 4800
+                     }, 
+                     addons: ["enterprise-wide-performance-perpetual-upgrade", "promotional-imageflow-license"]}, 
+                    
+          },
+          project_performance: {
+              yearly: {id: "project-performance-yearly", 
+                     price: 1800}      
+
+          },
+          project_performance_perpetual: {
+              yearly: {id: "project-performance-yearly", 
+                     price: 1800,
+                     first: {
+                        price: 3600
+                     }, 
+                     addons: ["project-performance-perpetual-upgrade"]}      
+
+          },
+          addon_server_performance: {
+             monthly: {nodiscount_price: 70},         
+          },
+          addon_server_elite: {
+             monthly: {nodiscount_price: 100},         
+          },
+          addon_247: {
+             monthly: {nodiscount_price: 599},         
+          },
+          addon_basic: {
+             monthly: {price: 300},         
+          },
+          addon_oem: {
+             monthly: {price: 400},         
+          },
+          addon_imageflow: {
+             monthly: {price: 140},         
+          },
+          addon_performance_perpetual: {
+             once: {price: 2400},         
+          },
+          addon_elite_perpetual: {
+             once: {price: 3600},         
+          }
+        }.map{ |k, d|  
+
+          # Add price and signup link
+          d = Hash[d.map{ |k, v|  
+              query =  {}
+              query["subscription[coupon]"] = coupon if coupon
+              if v[:addons]
+                v[:addons].each_with_index do |e, ix|
+                   query["addons[id][#{ix}]"] = e
+                end
+              end 
+
+              def get_price(h, discount)
+                Money.new((h[:nodiscount_price] || (h[:price] - (h[:price] * discount))) * 100, "USD")
+              end 
+
+              adjustments = {
+                price: get_price(v, discount),
+                first_price: v[:first] ? get_price(v[:first], discount) : nil
+              }
+              adjustments[:link] = "https://account.imazen.io/hosted_pages/plans/#{v[:id]}?#{URI.encode_www_form(query)}" if v[:id]
+              [k, v.merge(adjustments)]
+          }]
+
+          # Calculate yearly discount
+          d = Hash[d.map{ |k, v| 
+              price = v[:price] 
+              first_price = v[:first_price] 
+              trial_prefix = v[:trial] ? "Free #{v[:trial]} day trial &#8226; " : ""
+
+              text = ""
+              price_summary = ""
+
+              raise "not implemented" if first_price && k != :yearly 
+
+              if k == :monthly then 
+                text = v[:trial] ? 
+                  "#{trial_prefix} #{price.format}/month" :
+                  "Start now &#8226; #{price.format}/month"
+
+                price_summary = "#{price.format}/month"
+              elsif k == :yearly
+                if first_price then 
+                  price_summary = text = "#{trial_prefix} Pay #{first_price.format} 1st year, then #{price.format} yearly"
+                else
+                  if d[:monthly] && d[:yearly] then 
+                    yearly_saves = d[:monthly][:price] * 12 - d[:yearly][:price]
+                    text = "#{trial_prefix} Pay #{d[:yearly][:price].format} yearly &#8226; Save #{yearly_saves.format} yearly" 
+                  else
+                    text = "#{trial_prefix} Sign up yearly billing"
+                  end 
+
+                  price_summary = "#{(price / 12).format}/month billed yearly" 
+                end 
+              elsif k == :once
+                text = "#{trial_prefix} #{price.format}"
+                price_summary = "#{price.format}"
+              else 
+                raise "not supported"
+              end 
+
+              [k, v.merge({
+                price_summary: price_summary.strip,
+                button: text.strip
+              })]
+          }]
+
+          d[:price_summary] = (d[:yearly] || d[:monthly] || d[:once])[:price_summary]
+          [k, d]
+        }] 
+      end 
+
+      def generate_org_sizes
+        Hash[{
+            "large" => {
+            name: "Large Business",
+            restricted: "with 500 or more employees.",
+            icon: "icon-globe",
+            summary: "Large business - more than 500 employees.",
+            discount: 0
+          },
+          "medium" => {
+            name: "Medium Business",
+            restricted: "with fewer than 500 employees.",
+            icon: "icon-building",
+            summary: "Medium business - fewer than 500 employees.",
+            discount: 0.5, 
+            coupon: "SMB_ONLY"
+          },
+          "small" => {
+            name: "Small Business",
+            restricted: "with fewer than 30 employees.",
+            icon: "icon-group",
+            summary: "Small business - fewer than 30 employees.",
+            discount: 0.6, 
+            coupon: "SMALLBIZ_ONLY"
+          },
+          "micro" => {
+            name: "Microenterprise",
+            restricted: "with fewer than 5 employees and gross revenue below $250,000/quarter USD.",
+            icon: "icon-user",
+            summary: "Microenterprise - fewer than 5 employees. Gross revenue below $250,000/quarter USD.",
+            discount: 0.8, 
+            coupon: "MICRO_ENTERPRISE_ONLY"
+          },
+          
+          "nonprofit" => {
+            name: "Non-profit",
+            restricted: "with non-profit and tax-exempt status.",
+            icon: "icon-medkit",
+            summary: "Charitable organizations - with non-profit and tax-exempt status.",
+            discount: 0.6, 
+            coupon: "NONPROFIT_ONLY"
+          }
+        }.map{|k,v| 
+          adjustments = {tag: k, products: generate_products(v[:discount], v[:coupon])}
+          #STDERR << adjustments.inspect
+          [k, adjustments.merge(v)]
+        }]
+      end 
+
+      def org_sizes
+        @@org_sizes ||= generate_org_sizes
+      end 
     end
 
     before do
@@ -142,6 +365,14 @@ class Site < Hardwired::Bootstrap
       request[:tag] = tag
       select_menu = '/blog'
       render_file('/blog')
+    end
+
+    get '/pricing/for/:tag' do |tag|
+      sizes = org_sizes
+      request[:org] = sizes[tag]
+
+      select_menu = '/pricing'
+      render_file('/pricing/for')
     end
 
     get %r{/google([0-9a-z]+).html?} do |code|
