@@ -4,7 +4,7 @@
 :edit_info: develop/docs/community.md
 ---
 
-# Community plugins and articles
+# Communuty plugins and articles
 
 
 

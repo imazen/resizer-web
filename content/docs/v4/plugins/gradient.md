@@ -3,12 +3,17 @@
 :tags: plugin
 :bundle: free
 :edition: free
-:tagline: 'Create gradients from css, js, or html: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.'
+:tagline: 'Create gradients from CSS, JS, or HTML: /gradient.png?color1=FFFFFFAA&color2=BBBBBB99&width=10&width=10&rotate=90.'
 :aliases: "/plugins/gradient"
 :edit_info: develop/core/plugins/basic/gradient_readme.md
 ---
 
 # Gradient plugin
+
+*PLEASE NOTE*
+* **This plugin may be removed in a future major release.**
+* **For forwards-compatibility with ImageResizer and Imageflow, avoid use.**
+
 
 Generates gradients on the fly. Very useful for rapid prototyping and design - but safe for production use!
 
@@ -34,7 +39,7 @@ Generates gradients on the fly. Very useful for rapid prototyping and design - b
 
 * `/gradient.png?width=200&height=10&color1=0066a1&color2=black`: ![gradient](http://img.imageresizing.net/gradient.png;width=200;height=10;color1=0066a1;color2=black)
 
-* `/gradient.png?width=200&height=10&color1=0066a122&color2=00000044&angle=90`: ![gradient](http://img.imageresizing.net/gradient.png;width=100;height=10;color1=0066a122;color2=00000044;angle=10)
+* `/gradient.png?width=200&height=10&color1=0066a122&color2=00000044&angle=10`: ![gradient](http://img.imageresizing.net/gradient.png;width=100;height=10;color1=0066a122;color2=00000044;angle=10)
 
 
 ## Source code to plugin
