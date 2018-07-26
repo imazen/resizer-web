@@ -13,8 +13,12 @@
 h1 SimpleFilters plugin
 
 .markdown-body
-  p This plugin provides grayscale, sepia, brightness, saturation, contrast, inversion, and alpha filtering options. It also includes beta support for rounded corners.
-  p These filters are implemented as adjustment matrices and are processed by native code for very high performance.
+	markdown: 
+		This plugin provides grayscale, sepia, brightness, saturation, contrast, inversion, and alpha filtering options. It also includes beta support for rounded corners, although we suggest [CSS border-radius](http://caniuse.com/#search=border-radius) instead.  
+		
+		These filters are implemented as adjustment matrices and are processed by native code for very high performance.
+		
+		No forwards-compatibility is guaranteed for any SimpleFilters commands, but `s.roundcorners` is the least likely to be present in a future major release.
 
 
 - image_width = 400
@@ -40,7 +44,7 @@ h1 SimpleFilters plugin
           - random_image = "%03d" % Random.new.rand(1..30)
           - image_options.each do | opt |
             li
-              img src="https://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&#{opt}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{random_image}.jpg?format=png&width=#{image_width}&#{opt}"
               .slide-caption.n.hidden-phone
                 - if round_options.include? opt
                   h3 Rounded Corners
@@ -74,7 +78,7 @@ div.markdown-body
     1. Add `ImageResizer.Plugins.SimpleFilters.dll` to your project
     2. Add `<add name="SimpleFilters" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
     
-    ## Usage (v3.1+)
+    ## Usage
 
     **Note the order in which effects are applied *MAY CHANGE* in future releases.**
 
@@ -90,19 +94,19 @@ div.markdown-body
 
     ## Examples
 
-    ![Original image](https://z.zr.io/ri/utah2.jpg;width=200)
+    ![Original image](http://img.imageresizing.net/utah2.jpg;width=200)
 
     ### Evenly rounded
 
     `s.roundcorners=30`
 
-    ![s.roundcorners=30](https://z.zr.io/ri/utah2.jpg;width=200;s.roundcorners=30)
+    ![s.roundcorners=30](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=30)
 
     ### Specify individual radii
 
     `s.roundcorners=45,0,45,0`
 
-    ![s.roundcorners=45,0,45,0](https://z.zr.io/ri/utah2.jpg;width=200;s.roundcorners=45,0,45,0)
+    ![s.roundcorners=45,0,45,0](http://img.imageresizing.net/utah2.jpg;width=200;s.roundcorners=45,0,45,0)
 
     ### 4 ways to grayscale
 
@@ -110,23 +114,23 @@ div.markdown-body
 
     The following examples use NTSC/Y/True, RY, BT709, and Flat respectively
 
-    ![s.grayscale=true](https://z.zr.io/ri/utah2.jpg;width=200;s.grayscale=true)
-    ![s.grayscale=ry](https://z.zr.io/ri/utah2.jpg;width=200;s.grayscale=ry)
-    ![s.grayscale=bt709](https://z.zr.io/ri/utah2.jpg;width=200;s.grayscale=bt709)
-    ![s.grayscale=flat](https://z.zr.io/ri/utah2.jpg;width=200;s.grayscale=flat)
+    ![s.grayscale=true](http://img.imageresizing.net/utah2.jpg;width=200;s.grayscale=true)
+    ![s.grayscale=ry](http://img.imageresizing.net/utah2.jpg;width=200;s.grayscale=ry)
+    ![s.grayscale=bt709](http://img.imageresizing.net/utah2.jpg;width=200;s.grayscale=bt709)
+    ![s.grayscale=flat](http://img.imageresizing.net/utah2.jpg;width=200;s.grayscale=flat)
 
 
     ### 1 way to sepia
     
     `s.sepia=true`
 
-    ![s.sepia=true](https://z.zr.io/ri/utah2.jpg;width=200;s.sepia=true)
+    ![s.sepia=true](http://img.imageresizing.net/utah2.jpg;width=200;s.sepia=true)
 
     ### Inversion
 
     `s.invert=true`
     
-    ![s.invert=true](https://z.zr.io/ri/utah2.jpg;width=200;s.invert=true)
+    ![s.invert=true](http://img.imageresizing.net/utah2.jpg;width=200;s.invert=true)
 
     ### Adjust opacity/alpha
 
@@ -134,55 +138,55 @@ div.markdown-body
 
     For true transparency, combine with `format=png`. Otherwise, the image will be blended against `bgcolor`.
 
-    ![s.alpha=0.25](https://z.zr.io/ri/utah.jpg;width=200;s.alpha=0.25)
-    ![s.alpha=0.75](https://z.zr.io/ri/utah.jpg;width=200;s.alpha=0.75)
-    ![s.alpha=0.85](https://z.zr.io/ri/utah.jpg;width=200;s.alpha=0.85)
-    ![s.alpha=1](https://z.zr.io/ri/utah.jpg;width=200;s.alpha=1)
+    ![s.alpha=0.25](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=0.25)
+    ![s.alpha=0.75](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=0.75)
+    ![s.alpha=0.85](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=0.85)
+    ![s.alpha=1](http://img.imageresizing.net/utah.jpg;width=200;s.alpha=1)
 
     ### Adjust contrast
 
     `s.contrast` = `-1..1`
 
-    ![s.contrast=-0.80](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=-0.99)
-    ![s.contrast=-0.80](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=-0.80)
-    ![s.contrast=-0.40](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=-0.40)
-    ![s.contrast=-0.20](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=-0.20)
+    ![s.contrast=-0.80](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.99)
+    ![s.contrast=-0.80](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.80)
+    ![s.contrast=-0.40](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.40)
+    ![s.contrast=-0.20](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=-0.20)
 
 
-    ![s.contrast=0](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=0)
+    ![s.contrast=0](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0)
 
-    ![s.contrast=0.20](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=0.20)
-    ![s.contrast=0.40](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=0.40)
-    ![s.contrast=0.80](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=0.80)
-    ![s.contrast=0.99](https://z.zr.io/ri/utah.jpg;width=200;s.contrast=0.99)
+    ![s.contrast=0.20](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.20)
+    ![s.contrast=0.40](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.40)
+    ![s.contrast=0.80](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.80)
+    ![s.contrast=0.99](http://img.imageresizing.net/utah.jpg;width=200;s.contrast=0.99)
 
     ### Adjust brightness
 
     `s.brightness`=`-1..1`
 
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=-1)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=-0.7)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=-0.5)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=-0.2)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=0)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=0.2)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=0.5)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=0.7)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.brightness=1)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-1)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-0.7)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-0.5)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=-0.2)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0.2)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0.5)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=0.7)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.brightness=1)
 
     ### Adjust saturation
     `s.saturation` = `-1..1`
 
 
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=-1)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=-0.9)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=-0.5)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=-0.2)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=0)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=0.2)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=0.5)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=0.9)
-    ![](https://z.zr.io/ri/red-leaf.jpg;width=100;s.saturation=1)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-1)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-0.9)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-0.5)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=-0.2)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0.2)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0.5)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=0.9)
+    ![](http://img.imageresizing.net/red-leaf.jpg;width=100;s.saturation=1)
 
     ### Legacy syntax (Before v3.1)
 

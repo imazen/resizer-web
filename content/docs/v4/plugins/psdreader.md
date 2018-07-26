@@ -3,11 +3,15 @@
 :tags: plugin
 :aliases: "/plugins/psd /plugins/psdr.. /plugins/psdreader"
 :edition: elite
-:tagline: Adds support for PSD source files.
+:tagline: Adds support for PSD source files (reads embedded preview).
 :edit_info: develop/plugins/psdreader/readme.md
 ---
 
 # PsdReader plugin
+
+*PLEASE NOTE*
+* **Do not use with untrusted PSD files. This plugin has not undergone security testing.**
+
 
 Adds support for .PSD source files. No configuration required.
 
@@ -26,7 +30,7 @@ Simply reference a .psd file as you would a .jpg
 
     image.psd?width=100
 
-A 100px wide jpeg will be returned. 
+A 100px wide JPEG will be returned.
 
 You can also simply convert the image to another format.
 

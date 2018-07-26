@@ -9,13 +9,15 @@
 :edit_info: develop/core/plugins/basic/iepngfix_readme.md
 ---
 
-# IEPngFix plugin
+# IEPngFix plugin (deprecated)
+
+*PLEASE NOTE*
+* **This plugin will be removed in a future major release, as there are no known users.**
+* **For forwards-compatibility with ImageResizer and Imageflow, avoid use.**
 
 This plugin automatically redirects PNG file requests from Internet Explorer 6 and below to GIF versions of the images. For best results, use with the PrettyGifs plugin, as the default .NET GIF encoding is very poor.
 
 Does not work well with Amazon CloudFront, CDNs, or caching proxies. 
-
-Introduced in V3.1.3
 
 ## Installation
 
