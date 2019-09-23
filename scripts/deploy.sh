@@ -4,12 +4,13 @@ TAG=$(printf "%s.%s" `git rev-list --count HEAD` `git rev-parse --short HEAD`)
 IMAGE_NAME="resizer-web:$TAG"
 FULL_IMAGE_NAME="gcr.io/$PROJECT_ID/$IMAGE_NAME"
 ACTUAL_BRANCH=${ACTUAL_BRANCH:-$CI_BRANCH}      
-NAMESPACE=`echo "resizerweb-$ACTUAL_BRANCH" | tr '[:upper:]' '[:lower:]'`
+#NAMESPACE=`echo "resizerweb-$ACTUAL_BRANCH" | tr '[:upper:]' '[:lower:]'`
+NAMESPACE=`echo "resizerweb-production" | tr '[:upper:]' '[:lower:]'`
 
-if [ "$ACTUAL_BRANCH" != "staging" -a "$ACTUAL_BRANCH" != "production" ] ; then
-    echo -e "Not deploying the branch $ACTUAL_BRANCH."
-    exit 0;
-fi
+#if [ "$ACTUAL_BRANCH" != "staging" -a "$ACTUAL_BRANCH" != "production" ] ; then
+#    echo -e "Not deploying the branch $ACTUAL_BRANCH."
+#    exit 0;
+#fi
 
 
 #### INSTALL GCLOUD SDK ######
