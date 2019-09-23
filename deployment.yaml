@@ -1,0 +1,44 @@
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: resizer-web
+  namespace: $NAMESPACE
+  labels:
+    app: resizer-web 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resizer-web
+  template:
+    metadata:
+      labels:
+        app: resizer-web
+    spec:
+      restartPolicy: Always
+      containers:
+      - image: $FULL_IMAGE_NAME 
+        name: resizer-web
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+        - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resizer-web
+  namespace: $NAMESPACE
+  labels:
+    app: resizer-web
+spec:
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  selector:
+    app: resizer-web
+

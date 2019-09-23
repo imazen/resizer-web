@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  secret_key_base: MGE1ODI5ZjI1YTk4ZmZiNDM5ZDAwNjhmZjVjMDg5MGIxOTE1YzYwYTgwYjVkY2E1M2ZlYmFiMjlhYmNmMGM5MTk1NzFjNWJmMjYwMjQxMzA2NjE2MTk1NjM3NWE1MjIxZTVlZTc2Y2E2NjJmMjJkMmNjOGRkNWQ5NDVhZDlhYWM=
+kind: Secret
+metadata:
+  name: advocatecq-web-secret
+  namespace: advocatecq-production
+type: Opaque
