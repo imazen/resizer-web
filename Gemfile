@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.4.0'
+ruby '>= 2.4.0'
 
 gem 'slim'
 gem 'kramdown'
@@ -7,12 +7,12 @@ gem 'rack-cache'
 
 gem 'therubyracer' # jS V8 engine - Required for 'less'
 gem 'less'
-
+gem 'kramdown-parser-gfm'
 gem 'sass'
 gem 'erubis'
 
 #gem 'hardwired', :path => "../hardwired"
-gem 'hardwired', :git => "https://github.com/nathanaeljones/hardwired.git", :branch => :develop
+gem 'hardwired', :git => "https://github.com/imazen/hardwired.git", :branch => :develop
 
 gem 'puma' #we use this for both development and production
 
