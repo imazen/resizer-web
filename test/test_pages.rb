@@ -7,7 +7,6 @@ require 'test/unit'
 Bundler.require(:default)
 Bundler.require(:development)
 require_relative '../categories'
-require_relative '../support_contracts'
 require_relative '../site'
 
 

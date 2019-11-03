@@ -8,7 +8,6 @@ task :inventory do
   require 'bundler/setup'
   Bundler.require(:default)
   require './categories'
-  require './support_contracts'
   require './site'
   s = Site.new
 

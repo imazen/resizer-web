@@ -4,6 +4,8 @@ require 'money'
 #Set the root directory
 Hardwired::Paths.root = ::File.expand_path('.', ::File.dirname(__FILE__))
 I18n.config.available_locales = :en
+Money.locale_backend = :i18n
+I18n.locale = :en
 
 DEFAULT_DOCS_VERSION = "v4"
 
@@ -21,6 +23,10 @@ class Site < Hardwired::Bootstrap
 
 
     helpers do
+
+      def benefits_widths(*cols); cols.map{|w| (w / cols.inject(:+).to_f * (269 - 10 * (cols.count - 1))).round  } end;
+      def benefits_normal_width(count);  ((269 - 10 * (count - 1)) / count.to_f).round end;
+      \
       def canonical
         pn = request[:page]
         uri = URI::join(config.url,page.path)
@@ -356,7 +362,7 @@ class Site < Hardwired::Bootstrap
 
 
 
-    get %r{\A/blog/(\d\d\d\d)\Z} do |year|
+    get %r{/blog/(\d\d\d\d)} do |year|
       request[:year] = year
       select_menu = '/blog'
       render_file('/blog')

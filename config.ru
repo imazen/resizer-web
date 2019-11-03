@@ -27,6 +27,5 @@ end
 require 'tilt/template'
 require 'kramdown'
 require './categories'
-require './support_contracts'
 require './site'
 run Site.new
