@@ -9,24 +9,10 @@ h1 Download ImageResizer
 
 .titledownload
   h1
-    | Step 1: Download V
-    = latest_release.meta.shortversion
+    | Step 1: Download 
 
 .download_section.bottompadding
-  p style="margin-top:30px; margin-bottom:10px"
-    a href=latest_release.meta.fullfile class="btn btn-buynow"
-      | Download Everything
-  p 
-    |  Includes source, binaries, plugins, and sample code (20MB)
-
-  p style="margin-top:5px;font-size:12px; color:gray;margin-bottom:0"
-     
-    a href=releases.first.path
-      | Release notes: 
-      == latest_release.meta_summary    
-   
   h3 style="margin-bottom:0; margin-top: 20px"
-    strong OR: 
     |Install with Nuget.
   div
     code.nuget
@@ -37,7 +23,7 @@ h1 Download ImageResizer
       | PM> Install-Package ImageResizer.Plugins.PrettyGifs
   br 
   markdown:
-   Looking for bleeding-edge v4? Add this nuget feed: `https://www.myget.org/F/imazen-nightlies/`
+   Looking for bleeding-edge per-commit builds? Add this nuget feed: `https://www.myget.org/F/imazen-nightlies/`
 
 
 .titledownload
@@ -66,7 +52,7 @@ h1 Download ImageResizer
     |We take our commitment to deliver high-quality, easy-to-use software very seriously. Here are some ways you can guarantee you're getting the most out of our product.
   ul.arrow_list
     li
-      a href="/support/contracts"  Get a support contract.
+      a href="/pricing"  Get a support contract.
       |  Eliminate risk and get the most of out ImageResizer with a support contract. Support contracts include architecture planning, preventative consultation, emergency incident support, and custom development for your business's unique needs.
     li
       a href="/docs/basics" Learn the basics. 
