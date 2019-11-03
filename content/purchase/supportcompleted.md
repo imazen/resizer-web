@@ -20,5 +20,3 @@ You will get a call back at the scheduled time.
 
 * Email: support@imageresizing.net
 * Phone: +1 (812) 809-0605
-* Skype: nathanaeldjones
-* Google Talk: nathanael.jones@gmail.com

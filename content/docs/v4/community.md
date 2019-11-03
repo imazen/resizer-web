@@ -65,19 +65,19 @@ Confirmed bugs should also be reported via GitHub issues.
 
 * [Greg Duncan, Channel 9: Funny, you look bigger in real life... Server side image resizing with the free and open source ImageResizer](http://channel9.msdn.com/coding4fun/blog/Funny-you-look-bigger-in-real-life-Server-side-image-resizing-with-the-free-and-open-source-ImageRes)
 * [Scott Hanselman: NuGet Package of the Week: ImageResizer](http://www.hanselman.com/blog/NuGetPackageOfWeek11ImageResizerEnablesCleanClearImageResizingInASPNET.aspx)
-* [Scott Hanselman (podcast): Deep inside image resizing and scaling with ASP.NET and IIS, with ImageResizing.net author Nathanael Jones](http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na)
+* [Scott Hanselman (podcast): Deep inside image resizing and scaling with ASP.NET and IIS, with ImageResizing.net author](http://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na)
 * [Ben Foster: FluentExtensions for ImageResizer](https://github.com/benfoster/ImageResizer.FluentExtensions)
 * [cskardon: Using ImageResizer on Azure 2.0](http://geekswithblogs.net/cskardon/archive/2013/02/26/imageresizer-azurereader2-and-wellhellip-azure-duh.aspx)
 * [Dave Gardner: Building a Gallery Module for Orchard with ImageResizer (7-part series!)](http://bigsitesdoneright.com/big-blog/orchard-cascade-gallery-tutorial-series)
 * [Frederik Vig: Add powerful image resizing, cropping and manipulation support to your EPiServer website](http://www.frederikvig.com/2013/01/add-powerful-image-resizing-cropping-and-manipulation-support-to-your-episerver-website/)
-* [Nathanael Jones: 29 image resizing pitfalls](http://www.nathanaeljones.com/blog/2009/20-image-resizing-pitfalls)
+* [29 image resizing pitfalls](http://www.nathanaeljones.com/blog/2009/20-image-resizing-pitfalls)
 
 * [How we built MSN UK's Responsive Olympics Site](http://www.netmagazine.com/features/how-we-built-msn-uks-responsive-olympics-site)
 * [Scott Hanselman: Dynamic Image Generation](http://www.hanselman.com/blog/BackToBasicsDynamicImageGenerationASPNETControllersRoutingIHttpHandlersAndRunAllManagedModulesForAllRequests.aspx)
 * [Bertrand Le Roy (Orchard author): State of .NET Image Resizing: how does imageresizer do?](http://weblogs.asp.net/bleroy/archive/2011/10/22/state-of-net-image-resizing-how-does-imageresizer-do.aspx) * Note the performance chart is bogus due to a mistake in the Bertrand's benchmark code. [The corrected chart](http://downloads.imageresizing.net/Oct29-2011-comparison.png) displays actual apples-to-apples data, instead of comparing low-quality and high-quality image resizing as the original benchmark does.
 * [Anders Hattestad: Automatically change images in a responsive design to scale (EPiServer)](http://world.episerver.com/Blogs/Anders-Hattestad/Dates/2012/8/Automatically-change-images-in-a-responsive-design-to-scale/)
 * [Nokia Developer Guide: Delivering image tiles to Windows Phone with ImageResizer](http://www.developer.nokia.com/Community/Wiki/Generating_Live_tiles_for_Windows_Phone_from_Live_Data#ImageResizer) (Note - while they're using an MVC action, we strongly suggest using the HttpModule instead if you wish to have caching work properly)
-* [Nathanael Jones: Using JCrop with ImageResizer in 11 lines of javascript](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
+* [Using JCrop with ImageResizer in 11 lines of javascript](http://nathanaeljones.com/573/combining-jcrop-and-server-side-image-resizing/)
 * [heltBlank: Umbraco and ImageResizer](http://heltblank.wordpress.com/2012/02/13/imageresizing-net-and-umbraco-5-jupiter/)
 * [uBootstrap for Umbraco](http://our.umbraco.org/projects/starter-kits/ubootstrap) now [includes ImageResizer to handle responsive imaging needs](http://jlusar.es/ubootstrap-fluent-layout)
 

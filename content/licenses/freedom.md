@@ -41,7 +41,7 @@ all copies or substantial portions of the Software.
 
 2. **Sale, public distribution, marketing, and publishing of derivative works 
 are not permitted if those works directly and primarily compete with previously published product
-offerings of the authors (Imazen LLC and Nathanael Jones).**
+offerings of the authors (Imazen LLC).**
 
 **To comply with this clause, compare the purpose of your derived product 
 to the purpose of each of the products listed on <http://imageresizing.net/> and <http://imazen.io>.

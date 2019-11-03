@@ -15,13 +15,13 @@ url: https://imageresizing.net/
 # http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.feed
 #
 author:
-   name: Nathanael Jones
-   uri: http://nathanaeljones.com
+   name: Lilith River 
+   uri: http://trans.lilithriver.com
    email: support@imageresizing.net
    google_profile: "http://google.com/profiles/104429865496810073908"
-   linkedin_profile: "http://www.linkedin.com/in/nathanaeljones"
-   twitter_profile: "https://twitter.com/nathanaeljones"
-   github_profile: "https://github.com/nathanaeljones"
+   linkedin_profile: "http://www.linkedin.com/in/lilithriver"
+   twitter_profile: "https://twitter.com/lilith_river"
+   github_profile: "https://github.com/lilith"
 
 
 github:

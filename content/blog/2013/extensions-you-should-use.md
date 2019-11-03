@@ -34,7 +34,7 @@ You've been lagging behind the curve with responsive design; this project can he
 [View Project](https://github.com/mindrevolution/ImageResizer-ResponsivePresets)  [Download Zip](https://github.com/mindrevolution/ImageResizer-ResponsivePresets/archive/master.zip)
 
 
-## [StudioJS](http://github.com/nathanaeljones/studiojs) by [Nathanael Jones](http://github.com/nathanaeljones)
+## [StudioJS](https://github.com/imazen/studiojs) 
  
 A UI for ImageResizer, implemented as a fast jQuery plugin.
  
@@ -53,7 +53,7 @@ Here's what's already implemented:
 * Blur, Posterize, Oil Painting
 * It's open-source, and we accept patches. Please fork and contribute!
  
-[View Project](https://github.com/nathanaeljones/studiojs)  [Download Zip](https://github.com/nathanaeljones/studiojs/archive/master.zip)
+[View Project](https://github.com/imazen/studiojs)  [Download Zip](https://github.com/imazen/studiojs/archive/master.zip)
 
 ## Free support rules
 

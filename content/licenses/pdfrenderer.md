@@ -48,7 +48,7 @@ If you are interested in funding development of a GPL-free version, please conta
 
 ## MIT License (only on source code)
 
-Copyright (c) 2012 Jason Morse and Nathanael Jones
+Copyright (c) 2012 Jason Morse and Lilith River
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
 associated documentation files (the "Software"), to deal in the Software without restriction, including
