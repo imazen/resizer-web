@@ -14,7 +14,7 @@ h1 ASP.NET library and image server
         .span12 style="text-align:center;"
           h2 style="color:white"
             a href="/pricing" style="color:white"
-              | Get Imageflow for free with a new ImageResizer subcription. Offer expires Sept 25th. 
+              | Get Imageflow for free with a new ImageResizer subcription.
           
   .container
     .row-fluid
@@ -142,7 +142,7 @@ h1 ASP.NET library and image server
         markdown: 
           [Imageflow](https://www.imageflow.io) is our next-generation product.  
           
-          * [Imageflow.NET Server](https://github.com/imazen/imageflow-dotnet-server) supports .NET Core and offers largely the same functionality as ImageResizer,
+          * [**Imageflow.NET Server**](https://github.com/imazen/imageflow-dotnet-server) supports .NET Core and offers largely the same functionality as ImageResizer,
           except it is much faster, produces higher quality images, and compresses images better.
           * [Imageflow.NET](https://github.com/imazen/imageflow-dotnet) is a fluent API for manipulating images on .NET Standard 2.0.
           * [imageflow_tool](https://github.com/imazen/imageflow/releases) is perfect for batch processing - up to 17x faster than ImageMagick. 
@@ -206,12 +206,13 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
 
     .home3
       
-      a href="/download" class="btn btn-buynow" style="margin:6px"
+      a href="/download" class="btn" style="margin:6px"
         | Download ImageResizer for Windows Server
-      markdown: 
-        Read [more about ImageResizer vs Imageflow here](http://www.imageflow.io/imageresizer/).
+      br 
 
-        Follow [Imageflow development on Github here](https://github.com/imazen/imageflow). 
+      a href="https://github.com/imazen/imageflow-dotnet-server" class="btn btn-buynow" style="margin:6px"
+        | Get Imageflow.NET Server for Windows/Linux/macOS
+
 
         
 
@@ -226,7 +227,7 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
         a.block.statsbar href="https://www.nuget.org/profiles/imazen/"
           p
             i.icon-white.icon-cloud-download.statsnumber
-             |  1,680,000
+             |  2,763,726
           p
             |NuGet downloads of ImageResizer
           .clear
@@ -250,7 +251,7 @@ hr style="margin:0; margin-top:5px; border-top: 1px solid #e3e3e3; border-bottom
         a.block.statsbar href="https://stackoverflow.com/questions/tagged/imageresizer?sort=votes&pageSize=50"
           p
             i.icon-white.icon-question-sign.statsnumber
-             |  470+
+             |  550+
           p
             | Answers on StackOverflow
           .clear
@@ -347,86 +348,22 @@ hr
           p
             |We never stop working to make ImageResizer better, but we get a lot of help. Check out some of the work our awesome, dedicated, and expansive community has made.
   
-  .oddhomepageitem
-    .container
-      h1.headerpadding.home3
-        |Explore Our Site
-      .row-fluid.bottompadding
-        .span4
-        .span4.tiny-news
-          h2.sidespace News
-          - for p in index.posts[0..5]
-            h3.sidespace
-              a href=p.path
-                = p.meta.short_heading || p.heading
+  / 
+    .oddhomepageitem
+      .container
+        h1.headerpadding.home3
+          |Explore Our Site
+        .row-fluid.bottompadding
+          .span4
+          .span4.tiny-news
+            h2.sidespace News
+            - for p in index.posts[0..5]
+              h3.sidespace
+                a href=p.path
+                  = p.meta.short_heading || p.heading
+              p.sidespace
+                == p.summary(self,100)
             p.sidespace
-              == p.summary(self,100)
-          p.sidespace
-            a href="/blog" more...
+              a href="/blog" more...
 
-  .container.home3
-    h1.headerpadding.home3
-      |More Open-Source Products from 
-      a href="https://www.imazen.io" Imazen
-    .row-fluid.bottompadding
-      .span4
-        h2.sidespace
-          a href="https://github.com/imazen/slimmage"
-            | Slimmage
-        p.sidespace
-          | Slimmage allows CSS, not HTML, to control which image size is downloaded. Creating responsive images has never been so easy.
-        .tech-labels
-          span.badge.badge-sucess JS
-          |   
-          span.badge.badge-sucess C#
-      .span4
-        h2.sidespace
-          a href="https://github.com/nathanaeljones/studiojs"
-            |Studio JS
-        p.sidespace
-          | Studio JS is a rapidly growing collection of jQuery plugins for image cropping, resizing, and editing. 
-          a href="http://studio.imageresizing.net/studio.html" Click here for a live demo.
-        .tech-labels
-          span.badge.badge-sucess JS
-
-      .span4
-        h2.sidespace
-          a href="https://github.com/imazen/keyhub"
-            |Keyhub
-        p.sidespace
-          | KeyHub is an open source license key management system. 
-        .techlabels
-          span.badge.badge-sucess C#
-          |    
-          span.badge.badge-sucess MVC5
-    .row-fluid.bottompadding
-      .span4
-        h2.sidespace
-          a href="http://repositext.org/"
-            |Repositext
-        p.sidespace
-          |Repositext is a collection of components and recipes to create your ideal large-scale publishing workflow.
-        .tech-labels
-          span.badge.badge-sucess Ruby
-          |   
-          span.badge.badge-sucess C
-      .span4
-        h2.sidespace
-          a href="https://github.com/nathanaeljones/hardwired"
-            |Hardwired CMS
-        p.sidespace
-          |Hardwired is the coder's ideal CMS. Tiny, unrestrictive, managed with Git and a text editor. Used by all Imazen sites.
-        .tech-labels
-          span.badge.badge-sucess Ruby
-          |   
-          span.badge.badge-sucess Sinatra
-      .span4
-        h2.sidespace
-          a href="https://github.com/imazen/reunion"
-            |Reunion
-        p.sidespace
-          |Reunion is both a library and a local webapp for repeatable accounting. Do your accounting in a single day.
-        .tech-labels
-          span.badge.badge-sucess Ruby
-          |   
-          span.badge.badge-sucess Sinatra     
+   
