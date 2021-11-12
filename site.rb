@@ -127,7 +127,7 @@ class Site < Hardwired::Bootstrap
 
         domain = (parts * "-") + "." + tld
 
-        Hardwired::RecursiveOpenStruct.new({quote: nil, domain: domain, vertical:vert, tags: tags, index: ix, url: "https://z.zr.io/rw/showcase/#{w}.png"})
+        Hardwired::NormalizingRecursiveOpenStruct.new({quote: nil, domain: domain, vertical:vert, tags: tags, index: ix, url: "https://z.zr.io/rw/showcase/#{w}.png"})
       end 
 
       def generate_products(discount, coupon)
