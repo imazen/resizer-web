@@ -141,7 +141,7 @@ DEPENDENCIES
   yui-compressor
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.7.4p191
 
 BUNDLED WITH
    2.1.4
