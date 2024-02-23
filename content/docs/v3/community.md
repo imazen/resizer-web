@@ -13,7 +13,6 @@
 ## Where to go
 ImageResizer is [developed in the open on GitHub](http://github.com/imazen/resizer). We happily accept and test any [correctly licensed](/licenses/contribute) pull requests we receive against the 'develop' branch. We also try to promote third-party plugins.
 
-[Ideas for new functionality can be posted to the UserVoice forum](http://resizer.uservoice.com/forums/108373-image-resizer) in order gauge general interest. If you have a clear picture of how to implement the feature, you should also open a GitHub issue and link the two. 
 
 We try to track and support seamless integration with a wide range of CMSes, WYSIYG editors, and media tooling; but this is an area that we are quite dependent upon community (your!) expertise and support. We cannot be experts in all tools and all CMSes. 
 

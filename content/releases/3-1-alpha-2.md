@@ -10,8 +10,6 @@ This is the first public release of 3.1. It's a major milestone, involving over 
 
 In fact, to encourage everyone to actively look for bugs and report them, I'm **currently offering a $5-$50 bounty per bug you find and report before anyone else**! Most bug reports are firmly in the $5 category, but a security hole or memory leak could net you $50 for the one bug. Payments sent via PayPal. All class libraries whose names start with ImageResizer are eligible. Email bug reports to `support@imageresizing.net`.
 
-Please [visit the idea forum](http://resizer.uservoice.com/forums/108373-image-resizer-v3) and share any new plugin ideas or features you don't see listed in this release or on the forums. 
-
 ### Changes since [3.0.13 (Oct 12)](/releases/3-0-13)
 
 As nearly all plugins were modified in this release, please refer to the individual plugin-specific sections below to see how you might be affected.

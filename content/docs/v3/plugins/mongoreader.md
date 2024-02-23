@@ -1,7 +1,6 @@
 ---
 :append: edition_info
 :tags: plugin
-:uservoice: true
 :edition: elite
 :tagline: Allows GridFS files to be resized and served
 :aliases: []

@@ -1,5 +1,5 @@
 Title: Plugin Bundles - Image Resizer
-Libs: uservoice, -comments
+Libs: -comments
 Warning: Bundles were discontinued on Feb. 1 2013 in favor of a simplified product model.
 Aliases: /plugins/bundles/1 /plugins/bundles/2 /plugins/bundles/3 /plugins/bundles/4  /plugins/bundles
 

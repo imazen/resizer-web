@@ -1,7 +1,6 @@
 ---
 :append: edition_info
 :tags: plugin
-:uservoice: true
 :edition: performance
 :tagline: Allows you to use Amazon CloudFront with the resizer. Highly recommended
   - offers inexpensive worldwide edge caching and great scalability.

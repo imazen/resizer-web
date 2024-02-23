@@ -1,7 +1,6 @@
 ---
 :append: provider_info
 :tags: plugin
-:uservoice: true
 :edition: performance
 :tagline: Process and resize images located in a MS SQL database. Extremely configurable,
   can work with nearly any database schema.

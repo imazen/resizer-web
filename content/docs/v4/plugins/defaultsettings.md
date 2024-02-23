@@ -11,7 +11,7 @@
 
 # DefaultSettings plugin
 
-Allows you to specify the default settings to use when certain settings are omitted. Currently supports ScaleMode defaults. May be extended to allow defaults for other settings in the future - please [create an idea](http://resizer.uservoice.com) for additional features you'd like to see.
+Allows you to specify the default settings to use when certain settings are omitted. Currently supports ScaleMode defaults. 
 
 
 ## Installation
@@ -69,4 +69,4 @@ If you voted for upscaling the canvas, use
    <defaultsettings explicitSizeScaleMode="UpscaleCanvas" maxSizeScaleMode="UpscaleCanvas" />
   
 
-Hopefully this will help make everyone happy - feel free to contact me at support@imageresizing.net or [create an idea](http://resizer.uservoice.com) if you have ideas or suggestions, I'm always willing and eager to make the Image Resizer easier to understand and use.
+Hopefully this will help make everyone happy - feel free to contact me at support@imageresizing.net if you have ideas or suggestions, I'm always willing and eager to make the Image Resizer easier to understand and use.
