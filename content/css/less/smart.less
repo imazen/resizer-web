@@ -13,6 +13,10 @@
 
 @o-accent-color: @blue;//#29a9df;
 
+@base-font-size: 14.66px;
+@base-line-height: 18px;
+
+
 html { -webkit-font-smoothing: antialiased; }
 
 .clear {
@@ -21,7 +25,7 @@ html { -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: 'Droid Sans';
-  font-size: 12px;
+  font-size: @base-font-size;
   color: @o-text-color;
 }
 
@@ -34,32 +38,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: @base-font-size *3;
   line-height: 40px;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: @base-font-size * 1.75;
   line-height: 40px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: @base-font-size * 1.5;
   line-height: 32px;
 }
 
 h4 {
-  font-size: 13px;
+  font-size: @base-font-size * 1.1;
   line-height: 30px;
 }
 
 h5 {
-  font-size: 12px;
+  font-size: @base-font-size;
   line-height: 26px;
 }
 
 h6 {
-  font-size: 11px;
+  font-size: @base-font-size * 0.9;
   line-height: 24px;
 }
 
@@ -117,7 +121,7 @@ header {
 .brand  {
   color: #ddd !important;
   text-decoration: none !important;
-  font-size: 28px !important;
+  font-size: @base-font-size * 2.125 !important;
   margin-left: 10px;
   text-shadow: none !important;
   margin-top: 10px;
@@ -762,7 +766,7 @@ a .icons-box-vert p{
 }
 
 .team-name span {
-  font-size: 12px;
+  font-size: @base-font-size;
   font-weight: normal;
   color: #888;
 }
@@ -829,8 +833,8 @@ input[type="button"] {
 =================================================================== */
 .alert {
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
   margin-bottom: 15px;
   position: relative;
   padding: 14px 40px 14px 18px;
@@ -1205,13 +1209,13 @@ ol li ol.childlist{
 ol.commentlist li ol.childlist li:first-child {
   border-top: 1px solid #e9e9e9;
   padding: 25px 0 0 0;
-  font-size: 12px;
+  font-size: @base-font-size;
 }
 
 ol.commentlist li ol.childlist li {
   border-top: 1px solid #e9e9e9;
   margin:25px 0 15px 0;
-  font-size: 12px;
+  font-size: @base-font-size;
 }
 
 .comments {
@@ -1407,7 +1411,7 @@ a.buy:hover {
 }
 
 .time {
-  font-size: 12px;
+  font-size: @base-font-size;
   font-weight: normal;
 }
 
@@ -1863,7 +1867,7 @@ li.current {
   display: inline-block;
   color: @o-text-color;
   text-decoration: none;
-  font-size: 12px;
+  font-size: @base-font-size;
   font-family: 'Droid Sans';
   text-transform: lowercase;
   padding: 10px 15px 10px 0px;
