@@ -3,24 +3,24 @@ Layout: false
 
 
 .row
-  .span5
-    .hero-unit
-      form#homesignup.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
-        input type="hidden" name="redirect" value=latest_release.meta.fullfile
-        input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
+  / .span5
+  /   .hero-unit
+  /     form#homesignup.form-inline method="post" action="http://news.imazen.io/subscribe" accept-charset="UTF-8" onsubmit="return verifyRequired('homesignup');"
+  /       input type="hidden" name="redirect" value=latest_release.meta.fullfile
+  /       input type="hidden" name="list" value="9qAaYaDsCOem6WVY7jWnhA"
 
-        h3
-          | Download ImageResizer V#{latest_release.meta.shortversion}
-        input type="text" name="email" placeholder="name@domain.com"
-        |  &nbsp;
-        button type="submit" name="Submit" class="btn btn-primary"
-          | Download &amp; subscribe &raquo;
-        p
-          | We send an average of 4 newsletters per year, and you can unsubscribe at any time.
-          a href=releases.first.path
-            | V#{latest_release.meta.shortversion} includes
-            = latest_release.meta_summary
-            |  (see release notes and download page).
+  /       h3
+  /         | Download ImageResizer V#{latest_release.meta.shortversion}
+  /       input type="text" name="email" placeholder="name@domain.com"
+  /       |  &nbsp;
+  /       button type="submit" name="Submit" class="btn btn-primary"
+  /         | Download &amp; subscribe &raquo;
+  /       p
+  /         | We send an average of 4 newsletters per year, and you can unsubscribe at any time.
+  /         a href=releases.first.path
+  /           | V#{latest_release.meta.shortversion} includes
+  /           = latest_release.meta_summary
+  /           |  (see release notes and download page).
   .span2
     h3 Install
     ul.arrow_list
