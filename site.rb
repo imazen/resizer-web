@@ -141,16 +141,6 @@ class Site < Hardwired::Bootstrap
                      addons: ["basic-email-support", "promotional-imageflow-license"]},         
 
           },
-          elite_basic_perpetual: {
-            yearly: {id: "enterprise-wide-elite-edition-yearly", 
-                     price: 7200, 
-                     first: {
-                        price: 10800
-                     }, 
-                     addons: ["basic-email-support","enterprise-wide-elite-perpetual-upgrade", "promotional-imageflow-license"]}, 
-     
-
-          },
           elite: {
             yearly: {id: "enterprise-wide-elite-edition-yearly", 
                      price: 3600, 
@@ -159,16 +149,6 @@ class Site < Hardwired::Bootstrap
                      price: 400, 
                      trial: 30, 
                      addons: ["promotional-imageflow-license"]},         
-
-          },
-          elite_perpetual: {
-            yearly: {id: "enterprise-wide-elite-edition-yearly", 
-                     price: 3600, 
-                     first: {
-                        price: 7200
-                     }, 
-                     addons: ["enterprise-wide-elite-perpetual-upgrade", "promotional-imageflow-license"]}, 
-     
 
           },
           performance: {
@@ -181,27 +161,9 @@ class Site < Hardwired::Bootstrap
                      addons: ["promotional-imageflow-license"]},         
 
           },
-          performance_perpetual: {
-              yearly: {id: "enterprise-wide-performance-edition-yearly", 
-                     price: 2400, 
-                     first: {
-                        price: 4800
-                     }, 
-                     addons: ["enterprise-wide-performance-perpetual-upgrade", "promotional-imageflow-license"]}, 
-                    
-          },
           project_performance: {
               yearly: {id: "project-performance-yearly", 
                      price: 1800}      
-
-          },
-          project_performance_perpetual: {
-              yearly: {id: "project-performance-yearly", 
-                     price: 1800,
-                     first: {
-                        price: 3600
-                     }, 
-                     addons: ["project-performance-perpetual-upgrade"]}      
 
           },
           addon_server_performance: {
@@ -221,12 +183,6 @@ class Site < Hardwired::Bootstrap
           },
           addon_imageflow: {
              monthly: {price: 140},         
-          },
-          addon_performance_perpetual: {
-             once: {price: 2400},         
-          },
-          addon_elite_perpetual: {
-             once: {price: 3600},         
           }
         }.map{ |k, d|  
 

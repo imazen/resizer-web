@@ -13,26 +13,24 @@ css:
   .buy-buttons{
     margin-top: 5px;
   }
-  .perpetual{
-    display: none;
-  }
 - if request[:org]
   .row.lrow.out style="padding-bottom: 50px; margin-right: 10px;"
     h1.mainheader
-      | #{request[:org][:name]} Pricing
+      | #{request[:org][:name]} Pricing for Imageflow and ImageResizer
 
     .row-fluid
       .span12 style="text-align:center;"
         - if request[:org][:restricted]
           p style="font-weight:bold"
-            | Exclusively for companies and organizations #{request[:org][:restricted]} 
+            | Exclusively for companies and organizations #{request[:org][:restricted]}
+            | Include parent companies and their subsidiaries in the employee count.
             a href="/pricing"
               | Smaller/larger?
           
         h2
           | Unlimited servers, instances, and domains. One license key for your entire organization.
         h2 style="color:#0FAD07;"
-          | Sign up by September 25th and get Imageflow for free! Requires any Enterprise-wide plan.
+          | Includes ImageResizer, Imageflow, and Imageflow Server
         h4
           | Redistribution with custom software is free. Add #{request[:org][:products][:addon_oem][:price_summary]} to distribute with a product (contact us). 
         h4 
@@ -41,14 +39,9 @@ css:
             | SaaS server licenses
           |  included. Extras are #{request[:org][:products][:addon_server_performance][:price_summary]} (Performance) or #{request[:org][:products][:addon_server_elite][:price_summary]} (Elite).
         h4
-          strong
-            | Perpetual license (for existing releases) free after 3 years or 
-            a href="#perpetual" onclick="$('.perpetual').fadeIn(1200);"
-              | with one-time fee
-            | . 
-        h4 
+          | Existing customer? 
           a href="https://account.imazen.io"
-            | Sign in
+            | Sign in to the customer portal
           |  to switch between e-mail support (#{request[:org][:products][:addon_basic][:price_summary]}), 24/7 phone support (#{request[:org][:products][:addon_247][:price_summary]}), and 
           a href="https://stackoverflow.com/tags/imageresizer" style="color: inherit"
             | StackOverflow ($0).
@@ -73,6 +66,12 @@ css:
               strong
                 | Onboarding call and media architecture review with our dev team (up to 30 minutes)
             li
+              strong 
+                | Send us some of your photos and we'll generate a side-by-side to help you choose the best compression balance for your needs.
+            li
+              strong
+                | Get a quick performance review of your site so you know what to change for the biggest, easiest wins.
+            li
               | Maximum response time of 3 business days
             
       
@@ -85,13 +84,6 @@ css:
             a href=request[:org][:products][:elite_basic][:yearly][:link]
               em
                 == request[:org][:products][:elite_basic][:yearly][:button]
-          .perpetual
-            .buy-buttons
-              | &mdash; or buy perpetual rights up-front &mdash;
-            .buy-buttons
-              a href=request[:org][:products][:elite_basic_perpetual][:yearly][:link]
-                em
-                  == request[:org][:products][:elite_basic_perpetual][:yearly][:button]
         div.licensebox.span4
           div style="background-color: #0FAD07;"
             h2.licensetitle Elite Edition Enterprise-wide
@@ -103,13 +95,11 @@ css:
               a href="#editions"
                 |  Performance Edition features
               | , plus:
-            li Watermark and flexible image overlay support
-            li Advanced file format support (PSD, CR2, CNG, etc.)
-            li Smart whitespace removal (great for product photos!)
-            li Face detection and smart cropping
-            li Image filtering & batch processing
+            li Imageflow Orchestrate (coming soon) - Self-deploys, self-configures, and self-heals on AWS and Azure. Blend server and serverless scaling to minimize costs without limiting scalability.
+            li For ImageResizer 4 and below: Watermarks, face detection, smart whitespace cropping, face detection, and image filtering. 
+            li For ImageResizer 5 and above: all supported features unlocked (not all v4 features are supported in v5 yet)
             a href="/plugins/editions/elite"
-              | View plugin list
+              | View ImageResizer 4 and below plugin list
 
           .buy-buttons
             a.btn.btn-primary.btn-buynow-green href=request[:org][:products][:elite][:monthly][:link]
@@ -121,28 +111,26 @@ css:
             a href=request[:org][:products][:elite][:yearly][:link]
               em
                 == request[:org][:products][:elite][:yearly][:button]
-          .perpetual
-            .buy-buttons
-              | &mdash; or buy perpetual rights up-front &mdash;
-            .buy-buttons
-              a href=request[:org][:products][:elite_perpetual][:yearly][:link]
-                em
-                  == request[:org][:products][:elite_perpetual][:yearly][:button]
         div.licensebox.span4
           div style="background-color: #FC9100;"
             h2.licensetitle Performance Edition Enterprise
             h3.licenseprice
               = request[:org][:products][:performance][:price_summary]
           ul.licensecontent
-            li Resize, crop, rotate, flip, constrain, and encode via URL or C#
-            li 
-              | FastScaling engine for 
-              a href="https://imageresizing.net/docs/v4/plugins/fastscaling"
-                | 4-10x better performance.
-            li Disk + Memory input/output caching for terabytes of images
-            li Supports images in SQL, Azure, Amazon S3, and on other HTTP servers. 
-            a href="/plugins/editions/performance"
-              | View plugin list
+            li Includes Imageflow, Imageflow Server, and ImageResizer Peformance
+            li Cut load times for ANY site or app with our cutting-edge compression and maximum-fidelity imaging engine.
+            li Innovate instantly with on-demand image modification; no build steps, no batch processing required
+            li It's all open-source: avoid vendor-lock in, unpredictable fees, and compliance issues with a single flat yearly rate. 
+            li We've maintained URL compatibility for longer than most image SaaS companies have existed, across 15 years of rewrites and updates.
+            li We put security first (before features), and use Rust and C# primarily. 
+            li Use source files from Azure, Amazon S3, remote HTTP servers, or disk and get variants instantly. 
+            li Increase product appeal with our novel resizing+sharpening enhancement engine. Smart-crop whitespace or add watermarks with ease.
+            li Cache to cloud (in preview), memory, and disk with our 10th gen cache database engine. Just Works with any CDN for additional edge caching.
+            li Supports WebP, Jpeg, Gif, Png. 
+            li Exstensible with C#; supports custom authorization, authentication, and watermarking rules. 
+          ImageResizer (prior to v5) does not include all of the above features:
+          a href="/plugins/editions/performance"
+              |  See the ImageResizer v4 plugin/feature list
           .buy-buttons
             a.btn.btn-primary.btn-buynow-orange href=request[:org][:products][:performance][:monthly][:link]
               span
@@ -153,13 +141,6 @@ css:
             a href=request[:org][:products][:performance][:yearly][:link]
               em
                 == request[:org][:products][:performance][:yearly][:button]
-          .perpetual
-            .buy-buttons
-              | &mdash; or buy perpetual rights up-front &mdash;
-            .buy-buttons
-              a href=request[:org][:products][:performance_perpetual][:yearly][:link]
-                em
-                  == request[:org][:products][:performance_perpetual][:yearly][:button]
            
     .row-fluid
       .span12 style="text-align:center;"
@@ -167,9 +148,9 @@ css:
           | You can always change your billing interval, product edition, and add/remove support at 
           a href="https://account.imazen.io"
             | account.imazen.io. 
-          | Use coupon #{request[:org][:coupon]}
+          | You coupon code will be applied on the final step. Use coupon #{request[:org][:coupon]}
         h4
-          | All plans are recurring and will charge your card at the specified interval until canceled. If you have perpetual usage rights, you can continue using ImageResizer versions released before your cancellation date.
+          | All plans are recurring and will charge your card at the specified interval until canceled. 
         h2 
           | Need help? Email sales@imazen.io 
 
@@ -182,18 +163,17 @@ css:
       .span12 style="text-align:center;"
         .license-kind-container
           markdown: 
-            | Enterprise-wide |  Per-Project | Per-Server Add-on | OEM Add-on | 
+            | Enterprise-wide |  Per-Server Add-on | OEM Add-on | 
             |----------------------|--------------------------------------------------------------------|-----------------------------------------------------------|--------------|                          
-            | ✓ Unlimited instances | ✓ Unlimited instances  | ✓ Unlimited instances | ✓ Unlimited instances |
-            | ✓ Unlimited projects |  ★ 1 project | ✓ Unlimited projects   | ★ 1 product |
-            | ✓ Unlimited servers | ★ Limited to 2 servers, 8 cores | ★ Adjustable quantity; each covers 4 cores | ✓ Unlimited servers |
-            | ✓ Unlimited domain names | ★ Limited to 2 domains and their subdomains. | ✓ Unlimited domain names | ✓ Unlimited domain names |
-            | ★ Usage resale (SaaS usage) limited to 4 servers, 16 cores | ✗ You may not directly or indirectly resell usage of ImageResizer | ✓ You can resell usage | ✗ Not applicable | 
-            | ✓ Redistribute with *custom* software you develop (shared license key) | ✗ Not applicable | ✗ Not applicable | ✓ Redistribute (sublicense) with your software product  (shared license key)  | 
-            | ★ Restricted to the licensee, subsidiaries, and sublicensees | ✓ Unrestricted | ✓ Unrestricted | ★ Restricted to the licensee, subsidiaries, and sublicensees |
-            | ✓ Perpetual license add-on available (free after 3 years) | ✓ Perpetual license add-on available | ✗ No perpetual licensing | ★ Not perpetual, but lighter enforcement model |
-            | ★ Best value; start here | ★ Cheapest, but very limited | Flat [per-server rate](/pricing/per-server) | ★ Great for redistribution |
-            | [Performance: #{request[:org][:products][:performance][:yearly][:link]}](#{request[:org][:products][:performance][:price_summary]}) <br /> [Elite: #{request[:org][:products][:elite][:yearly][:link]}](#{request[:org][:products][:elite][:yearly][:price_summary]}) | [Performance: #{request[:org][:products][:project_performance][:yearly][:link]}](#{request[:org][:products][:project_performance][:price_summary]}) <br /> Performance with perpetual license: [#{request[:org][:products][:project_performance_perpetual][:yearly][:link]}](#{request[:org][:products][:project_performance_perpetual][:yearly][:button]}) | Performance: #{request[:org][:products][:addon_server_performance][:price_summary]} per 4 core server <br /> Elite: #{request[:org][:products][:addon_server_elite][:price_summary]} per 4 core server. <br /> Contact sales@imazen.io to purchase. | #{request[:org][:products][:addon_oem][:price_summary]} <br /> Contact sales@imazen.io to purchase.|
+            | ✓ Unlimited instances | ✓ Unlimited instances | ✓ Unlimited instances |
+            | ✓ Unlimited projects |  ✓ Unlimited projects   | ★ 1 product |
+            | ✓ Unlimited servers | ★ Adjustable quantity; each covers 4 cores | ✓ Unlimited servers |
+            | ✓ Unlimited domain names | ✓ Unlimited domain names | ✓ Unlimited domain names |
+            | ★ Usage resale (SaaS usage) limited to 4 servers, 16 cores |  ✓ You can resell usage | ✗ Not applicable | 
+            | ✓ Redistribute with *custom* software you develop (shared license key) | ✗ Not applicable | ✓ Redistribute (sublicense) with your software product  (shared license key)  | 
+            | ★ Restricted to the licensee, subsidiaries, and sublicensees | ✓ Unrestricted | ★ Restricted to the licensee, subsidiaries, and sublicensees |
+            | ★ Best value; start here | Flat [per-server rate](/pricing/per-server) | ★ Great for redistribution |
+            | [Performance: #{request[:org][:products][:performance][:yearly][:link]}](#{request[:org][:products][:performance][:price_summary]}) <br /> [Elite: #{request[:org][:products][:elite][:yearly][:link]}](#{request[:org][:products][:elite][:yearly][:price_summary]}) | Performance: #{request[:org][:products][:addon_server_performance][:price_summary]} per 4 core server <br /> Elite: #{request[:org][:products][:addon_server_elite][:price_summary]} per 4 core server. <br /> Contact sales@imazen.io to purchase. | #{request[:org][:products][:addon_oem][:price_summary]} <br /> Contact sales@imazen.io to purchase.|
 
 
     div style="clear:both"
