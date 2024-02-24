@@ -27,10 +27,8 @@ css:
               |  Smaller/larger?
             |  Include parent companies and their subsidiaries in the employee count.
         h2
-          | Unlimited servers, instances, and domains. One flat rate, one license key for your entire organization.
-        h2 style="color:#0FAD07;"
-          | Paid subscriptions include 
-          a href="https://github.com/imazen/resizer"
+          | Unlimited servers, instances, and domains. One flat rate, one license key for your entire org, for 
+          | a href="https://github.com/imazen/resizer"
             | ImageResizer
           | , 
           a href="https://github.com/imazen/imageflow"
@@ -38,10 +36,10 @@ css:
           | , and 
           a href="https://github.com/imazen/imageflow-dotnet-server"
             | Imageflow Server
-          | .
-        h3
+          | combined.
+        h4
           | Reduce your risk and cost, improve your site performance/revenue, and innovate faster with our cutting-edge image processing and delivery platforms. 
-          | We've maintained URL compatibility for longer than most image SaaS companies have existed, across 15 years of rewrites and updates. Adding ?width=300 (etc) is so intuitive, it's almost invisible.
+          | We've maintained URL compatibility for longer than most image SaaS companies have existed, across 15 years of rewrites and updates. Adding ?width=300 (etc) is so intuitive, it's almost invisible. 
           | We build with Rust and C#, and put security ahead of features and gimmicks. Support@imazen.io goes straight the lead developer, so you can count on stability being prioritized. 
           | It's all open-source: avoid vendor-lock in, unpredictable fees, and compliance issues (host anywhere, achieve any security needs) with a single flat yearly rate. 
           | Deployment costs are minimal; we provide Docker images, Dockerfiles, NuGet packages, and templates. 
@@ -117,14 +115,14 @@ css:
             h2.licensetitle Performance Edition Enterprise
             h3.licenseprice
               = request[:org][:products][:performance][:price_summary]
-          Cut load times for ANY site or app with our cutting-edge compression and maximum-fidelity imaging engine.
-          Innovate instantly with on-demand image modification; no build steps, no batch processing required. 
+          |  Cut load times for ANY site or app with our cutting-edge compression and maximum-fidelity imaging engine. 
+          |  Innovate instantly with on-demand image modification; no build steps, no batch processing required.  
           ul.licensecontent
             li Includes Imageflow (built in Rust) and bindings to many languages for in-process use on Windows, Linux, and macOS.            
             li Includes Imageflow Server (built with .NET 6 and 8) and Docker images for 'microservice' deployment, as well as NuGet packages for 'monolith' inclusion within a ASP.NET 6+ app.
             li Includes ImageResizer Perfomance Edition (built with .NET 4.8, Windows-only) for use in .NET Framework applications (or as a standalone app).
-            li Includes Imageflow Tool (built in Rust) for command-line and scripted use. *does not include cloud or caching features.
-            li Increase product appeal with our novel resizing+sharpening enhancement engine. Smart-crop whitespace or add watermarks with ease.
+            li Includes Imageflow Tool (built in Rust) for command-line and scripted use.
+            li Increase product appeal with our novel smart sharpening and resizing enhancement engine. Smart-crop whitespace or add watermarks with ease.
             li Achieve incredible file sizes and fidelity, with cutting-edge compression algorithms for WebP, JPEG, GIF, and PNG files.
             li Use source files from Azure, Amazon S3, remote HTTP servers, or disk and get variants instantly. 
             li Cache to cloud (in preview), memory, and disk with our 10th gen cache database engine. Just Works with any CDN for additional edge caching.
@@ -149,7 +147,8 @@ css:
           | You can always change your billing interval, product edition, and add/remove support at 
           a href="https://account.imazen.io"
             | account.imazen.io. 
-          | You coupon code will be applied on the final step. Use coupon #{request[:org][:coupon]}
+          if request[:org][:coupon]
+            | You coupon code will be applied on the final step. Use coupon #{request[:org][:coupon]}
         h4
           | All plans are recurring and will charge your card at the specified interval until canceled. 
         h2 
@@ -170,7 +169,6 @@ css:
             | StackOverflow ($0).
 
     div style="clear:both"
-  == partial :"editions"
 
   .row.lrow.out style="margin-top: -20px; padding-bottom: 30px; margin-right: 10px;"
     h1.mainheader.lic#kinds What's the difference between our licensing models?
