@@ -33,8 +33,8 @@ disqus_short_name: resizer
 
 content: content
 
-google_tag_manager: "GTM-5JKQ2GP"
-
+# google_tag_manager: "GTM-5JKQ2GP"
+plausible: true
 
 # Google Webmaster and Analytics usually require a 'google[code].html' file be placed on the domain
 # Use this feature to do this without polluting your directory structure
