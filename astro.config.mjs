@@ -3,24 +3,45 @@ import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator'
 import starlightVersions from 'starlight-versions'
 import starlightBlog from 'starlight-blog'
+import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://imageresizing.net',
 	integrations: [
 		starlight({
+
+			editLink: {
+				baseUrl: 'https://github.com/imazen/resizer-web/edit/astro/',
+			},
+
 			plugins: [
 				starlightBlog(),
+				starlightUtils({
+					navLinks: {
+						leading: { useSidebarLabelled: 'leadingNavLinks' }
+					}
+				}),
+				starlightBlog({
+					authors: {
+						lilith: {
+							name: 'Lilith',
+							title: 'Lead engineer & owner',
+							picture: '/lilith.jpg', // Images in the `public` directory are supported.
+							url: 'https://github.com/lilith',
+						},
+					},
+				}),
 				starlightLinksValidator(),
 				// starlightVersions({
 				//   versions: [{ slug: '1-0', label: '1' }],
 				// }),
-			  ],
-			  defaultLocale: 'root', 
-			  locales: {
+			],
+			defaultLocale: 'root',
+			locales: {
 				root: {
-				  label: 'English',
-				  lang: 'en', // lang is required for root locales
+					label: 'English',
+					lang: 'en', // lang is required for root locales
 				},
 				'es': {
 					label: 'Español',
@@ -31,7 +52,7 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/imageresizer_400_00aec4.png',
 				replacesTitle: true,
-			  },
+			},
 			social: {
 				github: 'https://github.com/imazen/resizer',
 			},
@@ -47,7 +68,17 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				{
+					label: 'leadingNavLinks',
+					items: [
+						{ label: 'Start', link: '/start' },
+						{ label: 'Docs', link: '/docs' },
+						{ label: 'Support', link: '/support' },
+						{ label: 'Pricing', link: '/pricing' },
+					]
+				}
 			],
+
 		}),
 	],
 });
