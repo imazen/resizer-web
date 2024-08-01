@@ -1,3 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "exclude": ["**/legacy_content/**", "**/legacy/***","**/dist/**", "**/__coverage__/**"],
+  //"include" : ["src/**/*.ts", "src/**/*.tsx"]
 }
