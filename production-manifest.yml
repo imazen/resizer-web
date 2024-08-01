@@ -1,6 +1,0 @@
----
-applications:
-- name: resizer-web
-  buildpack: ruby_buildpack
-  memory: 256MB
-  instances: 2
