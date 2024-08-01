@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/starlight": "^0.25.3",
     "@lorenzo_lewis/starlight-utils": "^0.1.2",
     "astro": "^4.10.2",
+    "astro-redirect-from": "^1.1.0",
     "sharp": "^0.32.5",
     "starlight-blog": "^0.11.1",
     "starlight-links-validator": "^0.10.0",
