@@ -6,3 +6,6 @@
 .idea
 /*.pstore
 *.log
+node_modules
+dist
+.astro

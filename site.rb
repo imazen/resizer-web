@@ -409,6 +409,28 @@ class Site < Hardwired::Bootstrap
       Hardwired::JsOptimize.create_combined_response(Site, scripts, no_minify: dev?)
     end 
 
+    # We want to redirect any /pricing*, /licenses*, /support*., /purchase* urls to https://imazen.io/{path}
+    get '/pricing*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+    get '/licenses*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+    get '/licences*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+    get '/support*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+    get '/purchase*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+
+
     #Fall back to having no version
     get '*' do
       output = render_file(request.path_info.gsub(/\/docs\/(v[0-9\.]+|latest)\//, ""))
