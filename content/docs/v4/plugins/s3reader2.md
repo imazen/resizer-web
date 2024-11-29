@@ -10,7 +10,7 @@
 
 # S3Reader2 plugin
 
-Compatible with AWSSDK 2.0+
+Compatible with AWSSDK 3.1+
 
 Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk. 
 
@@ -25,10 +25,10 @@ See Samples/S3ReaderSample/ in the download for a sample project.
 
 ### Features
 
-* Fast - no unnecessary http requests
+* Fast - no unnecessary HTTP requests
 * Offers mode for checking for newer files on a configured interval (useful when combined with disk caching)
 * Works great with the DiskCache and CloudFront caching plugins
-* Has an optional ssl mode
+* Has an optional SSL mode
 * Can be configured to access private bucket files with an access key
 
 
@@ -49,7 +49,7 @@ Use multiple installations of S3Reader2 with different prefixes if you need to s
         "ap-northeast-1", "Asia Pacific (Tokyo)"
         "ap-southeast-1", "Asia Pacific (Singapore)"
         "ap-southeast-2", "Asia Pacific (Sydney)"
-        "sa-east-1", "South America (Sao Paulo)"
+        "sa-east-1", "South America (São Paulo)"
         "us-gov-west-1", "US GovCloud West (Oregon)"
 
 
@@ -64,8 +64,6 @@ When creating a bucket, you should avoid certain characters to ensure that DNS w
 * Bucket names should be between 3 and 63 characters long
 * Bucket names cannot contain dashes next to periods (e.g., "my-.bucket.com" and "my.-bucket" are invalid)
 * Bucket names cannot contain periods - Amazon states this is not supported for SSL-secured access, due to DNS complications. Your mileage may vary.
-
-
 
 ## Configuration
 

@@ -11,8 +11,13 @@
 ---
 
 h1 PrettyGifs plugin
+
 p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantization and dithering, and allows 8-bit PNG creation. Compatible with all plugins.
 
+markdown: 
+  	**The `colors`, `dither`, and `preservePalette` querystring commands supported by this plugin are unlikely to be supported in Imageflow and future major ImageResizer releases.**
+	
+	We reserve the right to replace the quantization algorithm used here; **do not expect pixel-identical results between versions or products**. If you're not using this plugin, different versions of Windows will produce different results.
 
 - image_width = 600
 - image_thumb_width = 100
@@ -37,19 +42,19 @@ p Replaces .NET's disgusting default GIF encoding algorithm with Octree quantiza
     br
     p
       .twentytwenty-container
-        img src="https://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
-        img src="https://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false" id="plugin-example-after"
+        img src="http://z.zr.io/rw/pluginexamples/example-017-websafe.gif?format=gif#{image_scale}&width=#{image_width}" id="plugin-example-before"
+        img src="http://z.zr.io/rw/pluginexamples/example-017.jpg?format=gif#{image_scale}&width=#{image_width}&colors=216&dither=4pass&preservePalette=false" id="plugin-example-after"
  
     .row-fluid.hidden-phone
       - example_images.each do | img |
         .span2
           p 
             a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-websafe.gif?width=#{image_width}#{image_scale}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_width}#{image_scale}&colors=216&dither=4pass&preservePalette=false&random=#{cache_buster}"
-              img src="https://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}"
+              img src="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}"
     .visible-phone
       - example_images.each do | img |
         a.plugin-example-button data-image-before="http://z.zr.io/rw/pluginexamples/example-#{img}-websafe.gif?width=#{image_width}#{image_scale}&random=#{cache_buster}" data-image-after="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_width}#{image_scale}&colors=216&dither=4pass&preservePalette=false&random=#{cache_buster}"
-          img src="https://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
+          img src="http://z.zr.io/rw/pluginexamples/example-#{img}.jpg?width=#{image_thumb_width}&random=#{cache_buster}" width="55" height="55"
         | &nbsp;
 
 
@@ -90,7 +95,7 @@ a href="http://members.ozemail.com.au/~dekker/NEUQUANT.HTML"
 p
   a id="note1"
     | [1]
-  | : Default GIF: .NET Default GIF behaviour simulated with the 216 color web pallette in Adobe Photoshop. Results may differ depending upon your operating system. Pre-2009 versions of windows use a fixed pallette, while WS2008R2 and later use a different (although still poor) quantization system. 
+  | : Default GIF: .NET Default GIF behaviour simulated with the 216 color web palette in Adobe Photoshop. Results may differ depending upon your operating system. Pre-2009 versions of windows use a fixed palette, while WS2008R2 and later use a different (although still poor) quantization system.
 p
   a id="note2"
     | [2]
