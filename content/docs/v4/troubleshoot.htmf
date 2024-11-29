@@ -11,7 +11,7 @@
 
 <p>To get support or use this guide, make sure you get the detailed error message from visiting the image URL directly. This guide cannot offer a solution to a generic 500 error, 404 error, or a "broken image icon", as those symptoms are far too generic to be useful. The troubleshooting tips presented here are specific to v4. Switch to the v3 troubleshooting page if you are using v3.</p>
 
-<p>If this page doesn't resolve your issue, <a href="http://www.imageresizing.net/support">visit the Support page</a>.</p>
+<p>If this page doesn't resolve your issue, <a href="http://www.imageresizing.net/support">visit the Support page</a> for information about the bug bounty and free support requirements.</p>
 
 <h4>Server Error in '/' Application. Out of memory.</h4>
 
