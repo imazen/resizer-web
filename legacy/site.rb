@@ -390,6 +390,27 @@ class Site < Hardwired::Bootstrap
     end
 
 
+    # We want to redirect any /pricing*, /licenses*, /support*., /purchase* urls to https://imazen.io/{path}
+    get '/pricing*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+    get '/licenses*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+    get '/licences*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+    get '/support*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+    get '/purchase*' do
+      redirect to("https://imazen.io/#{request.path_info}")
+    end
+
+
 
 
     get '/alljs/jquery.min.map' do
