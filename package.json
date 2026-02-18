@@ -18,6 +18,7 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "starlight-links-validator": "^0.19.2"
   }
 }

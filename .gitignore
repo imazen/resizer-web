@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # template backup (safe to delete)
 _starlight_template_backup/
+
+# playwright
+test-results/
