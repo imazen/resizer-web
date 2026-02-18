@@ -95,6 +95,52 @@ test.describe('navigation and structure', () => {
 	});
 });
 
+test.describe('image playground', () => {
+	test('playground input and preview image exist', async ({ page }) => {
+		await page.goto(`${BASE}/`);
+		const input = page.locator('.pg-input');
+		await expect(input).toBeVisible();
+		await expect(input).toHaveValue(/width=300/);
+		const img = page.locator('.pg-img');
+		await expect(img).toBeAttached();
+		await expect(img).toHaveAttribute('src', /z\.zr\.io/);
+	});
+
+	test('typing updates the image src', async ({ page }) => {
+		await page.goto(`${BASE}/`);
+		const input = page.locator('.pg-input');
+		await input.clear();
+		await input.fill('height=100');
+		// Wait for debounce
+		await page.waitForTimeout(600);
+		const img = page.locator('.pg-img');
+		await expect(img).toHaveAttribute('src', /height=100/);
+	});
+
+	test('autocomplete appears when typing a parameter name', async ({ page }) => {
+		await page.goto(`${BASE}/`);
+		const input = page.locator('.pg-input');
+		await input.clear();
+		await input.type('mo', { delay: 50 });
+		const ac = page.locator('.pg-autocomplete');
+		await expect(ac).toBeVisible();
+		await expect(ac.locator('.ac-key')).toContainText(['mode']);
+	});
+
+	test('autocomplete completes on Tab and hides', async ({ page }) => {
+		await page.goto(`${BASE}/`);
+		const input = page.locator('.pg-input');
+		await input.clear();
+		await input.type('mo', { delay: 50 });
+		const ac = page.locator('.pg-autocomplete');
+		await expect(ac).toBeVisible();
+		await input.press('ArrowDown');
+		await input.press('Tab');
+		await expect(ac).toBeHidden();
+		await expect(input).toHaveValue(/mode=/);
+	});
+});
+
 test.describe('accessibility basics', () => {
 	test('home page has no missing alt text on images', async ({ page }) => {
 		await page.goto(`${BASE}/`);
