@@ -1,0 +1,18 @@
+# Redirect commercial pages to imazen.io
+/pricing/*          https://imazen.io/pricing/:splat       301
+/pricing            https://imazen.io/pricing              301
+/licenses/*         https://imazen.io/licenses/:splat      301
+/licenses           https://imazen.io/licenses             301
+/licences/*         https://imazen.io/licences/:splat      301
+/licences           https://imazen.io/licences             301
+/support/*          https://imazen.io/support/:splat       301
+/support            https://imazen.io/support              301
+/purchase/*         https://imazen.io/purchase/:splat      301
+/purchase           https://imazen.io/purchase             301
+
+# Legacy content redirects
+/releases/*         /blog/:splat                           301
+
+# Translated 404s
+/:lang/*            /:lang/404/     404
+/*                  /404/           404

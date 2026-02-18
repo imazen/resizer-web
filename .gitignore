@@ -12,10 +12,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
 
 # macOS-specific files
 .DS_Store
+
+# editor
+.cursor/
+
+# template backup (safe to delete)
+_starlight_template_backup/
