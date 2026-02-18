@@ -28,7 +28,7 @@ class Site < Hardwired::Bootstrap
       def benefits_normal_width(count);  ((269 - 10 * (count - 1)) / count.to_f).round end;
       \
       def canonical
-        pn = request[:page]
+        pn = params[:page]
         uri = URI::join(config.url,page.path)
         if pn
           uri.query = URI.encode_www_form({"page" => pn})
@@ -86,7 +86,7 @@ class Site < Hardwired::Bootstrap
         yaml_tree
       end 
       def nav_docs_tree(version)
-        yml = YAML.load(File.read(Hardwired::Paths.content_path("docs/#{version}/nav.yml")))
+        yml = YAML.safe_load(File.read(Hardwired::Paths.content_path("docs/#{version}/nav.yml")), permitted_classes: [Symbol, Date, Time])
         nav_resolve(yml, "/docs/#{version}/", version)
       end 
 
@@ -319,19 +319,19 @@ class Site < Hardwired::Bootstrap
 
 
     get %r{/blog/(\d\d\d\d)} do |year|
-      request[:year] = year
+      params[:year] = year
       select_menu = '/blog'
       render_file('/blog')
     end
     get '/blog/tags/:tag' do |tag|
-      request[:tag] = tag
+      params[:tag] = tag
       select_menu = '/blog'
       render_file('/blog')
     end
 
     get '/pricing/for/:tag' do |tag|
       sizes = org_sizes
-      request[:org] = sizes[tag]
+      params[:org] = sizes[tag]
 
       select_menu = '/pricing'
       render_file('/pricing/for')
@@ -402,12 +402,13 @@ class Site < Hardwired::Bootstrap
 
 
     get '/alljs/:scripts' do |scripts|
-      
+
       content_type "text/javascript"
-      last_modified Time.new(request["m"])
+      m = params["m"]
+      last_modified(m ? Time.parse(m) : Time.now)
       cache_for 60 * 60 * 24 * 30 #1 month
       Hardwired::JsOptimize.create_combined_response(Site, scripts, no_minify: dev?)
-    end 
+    end
 
     # We want to redirect any /pricing*, /licenses*, /support*., /purchase* urls to https://imazen.io/{path}
     get '/pricing*' do

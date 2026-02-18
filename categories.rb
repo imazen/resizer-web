@@ -57,18 +57,14 @@ end
 
 
 
-module Tilt
+require 'tilt/kramdown'
 
-  class KramdownTemplate < Template
-
-
-    def prepare
-      options[:smart_quotes] = DUMB_QUOTES unless options[:smartypants]
-
-      options[:input] = :GFM
-      options[:hard_wrap] = false
-      @engine = Kramdown::Document.new(data, options)
-      @output = nil
-    end
-  end
+# Override KramdownTemplate to use GFM input mode
+dumb_quotes = [39, 39, 34, 34].freeze
+Tilt.send(:remove_const, :KramdownTemplate)
+Tilt::KramdownTemplate = Tilt::StaticTemplate.subclass do
+  @options[:smart_quotes] = dumb_quotes.dup unless @options[:smartypants]
+  @options[:input] = :GFM
+  @options[:hard_wrap] = false
+  Kramdown::Document.new(@data, @options).to_html
 end

@@ -1,147 +1,148 @@
 GIT
-  remote: https://github.com/alexch/rerun.git
-  revision: a95b61eb1e5ac4fa9706d46dad10798c33eda59f
-  specs:
-    rerun (0.13.1)
-      listen (~> 3.0)
-
-GIT
   remote: https://github.com/imazen/hardwired.git
-  revision: 3824b6072806c7b6c7b5a641ee84b79cee9f1779
-  branch: develop
+  revision: 7274dfd818e8791cf110c6bfedbb7ae99785d63a
+  branch: ruby34
   specs:
-    hardwired (0.4)
-      erubis
+    hardwired (0.5.0)
+      erubi
       nokogiri
       recursive-open-struct
       sinatra (>= 1.3.3)
       tilt (>= 2.0.1)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    aws-eventstream (1.2.0)
-    aws-sdk (2.11.632)
-      aws-sdk-resources (= 2.11.632)
-    aws-sdk-core (2.11.632)
-      aws-sigv4 (~> 1.0)
-      jmespath (~> 1.0)
-    aws-sdk-resources (2.11.632)
-      aws-sdk-core (= 2.11.632)
-    aws-sigv4 (1.4.0)
-      aws-eventstream (~> 1, >= 1.0.2)
+    base64 (0.3.0)
+    bigdecimal (4.0.1)
     coderay (1.1.3)
-    commonjs (0.2.7)
-    concurrent-ruby (1.1.9)
-    diffy (3.4.0)
-    erubis (2.7.0)
-    ffi (1.15.4)
-    github-markdown (0.6.9)
-    hub (1.12.4)
-    i18n (1.8.11)
+    concurrent-ruby (1.3.6)
+    diffy (3.4.4)
+    erubi (1.13.1)
+    ffi (1.17.3-aarch64-linux-gnu)
+    ffi (1.17.3-aarch64-linux-musl)
+    ffi (1.17.3-arm-linux-gnu)
+    ffi (1.17.3-arm-linux-musl)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x86_64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
+    ffi (1.17.3-x86_64-linux-musl)
+    i18n (1.14.8)
       concurrent-ruby (~> 1.0)
-    jmespath (1.4.0)
-    kramdown (2.3.1)
-      rexml
+    io-console (0.8.2)
+    kramdown (2.5.2)
+      rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    less (2.6.0)
-      commonjs (~> 0.2.7)
-    libv8 (3.16.14.19)
-    listen (3.7.0)
+    listen (3.10.0)
+      logger
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    method_source (1.0.0)
-    mini_portile2 (2.6.1)
-    money (6.16.0)
-      i18n (>= 0.6.4, <= 2)
-    mustermann (1.1.1)
+    logger (1.7.0)
+    method_source (1.1.0)
+    money (7.0.2)
+      bigdecimal
+      i18n (~> 1.9)
+    mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nio4r (2.7.5)
+    nokogiri (1.19.1-aarch64-linux-gnu)
       racc (~> 1.4)
-    power_assert (2.0.1)
-    pry (0.14.1)
+    nokogiri (1.19.1-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.1-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.1-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.1-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.1-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.1-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.1-x86_64-linux-musl)
+      racc (~> 1.4)
+    ostruct (0.6.3)
+    power_assert (3.0.1)
+    pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    puma (5.5.2)
+      reline (>= 0.6.0)
+    puma (7.2.0)
       nio4r (~> 2.0)
-    racc (1.6.0)
-    rack (2.2.3)
-    rack-cache (1.13.0)
+    racc (1.8.1)
+    rack (3.2.5)
+    rack-cache (1.17.0)
       rack (>= 0.4)
-    rack-protection (2.1.0)
-      rack
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
-    rake (13.0.6)
-    rb-fsevent (0.11.0)
-    rb-inotify (0.10.1)
+    rack-protection (4.2.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    rake (13.3.1)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
       ffi (~> 1.0)
-    recursive-open-struct (1.1.3)
-    ref (2.0.0)
-    rexml (3.2.5)
+    recursive-open-struct (2.1.0)
+      ostruct
+    reline (0.6.3)
+      io-console (~> 0.5)
+    rerun (0.14.0)
+      listen (~> 3.0)
+    rexml (3.4.4)
     ruby2_keywords (0.0.5)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    shotgun (0.9.2)
-      rack (>= 1.0)
-    sinatra (2.1.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.1.0)
+    sinatra (4.2.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.2.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    slim (4.1.0)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
-    temple (0.8.2)
-    test-unit (3.5.1)
+    slim (5.2.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    temple (0.10.4)
+    test-unit (3.7.7)
       power_assert
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
-    tilt (2.0.10)
+    tilt (2.7.0)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    yui-compressor (0.12.0)
 
 PLATFORMS
-  ruby
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
-  aws-sdk (~> 2)
   diffy
-  erubis
-  github-markdown (~> 0.6.8)
+  erubi
   hardwired!
-  hub
   kramdown
   kramdown-parser-gfm
-  less
   money
   pry
   puma
   rack-cache
   rack-test
   rake
-  rb-fsevent
-  rerun!
-  sass
-  shotgun
+  rerun
   slim
   test-unit
-  therubyracer
   webrat
-  yui-compressor
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 3.4.5p51
 
 BUNDLED WITH
-   2.1.4
+   2.6.9

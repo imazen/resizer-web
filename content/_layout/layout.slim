@@ -23,28 +23,19 @@ html(lang="en" class="no-js")
     == partial :gtm
     == partial :plausible
     
-    link href="/css/less/site.css" rel="stylesheet"
-    / - if page.lib? :twentytwenty
-    /   link href="/css/twentytwenty.css" rel="stylesheet"
-    / link href="/css/less/parallax-slider.css" rel="stylesheet"
-
-    /[if IE 9]
-      link href="/css/less/styleie9.css" rel="stylesheet"
-
-    /[if IE 7]
-      link href="/css/less/font-awesome-ie7.css"
+    link href="/css/site.css" rel="stylesheet"
 
     - if page.lib? :license
-      link rel="stylesheet" href="/css/less/license.css"
+      link rel="stylesheet" href="/css/license.css"
 
     - if page.lib? :swipebox
-      link rel="stylesheet" href="/css/less/swipebox.css"
+      link rel="stylesheet" href="/css/swipebox.css"
 
     - if page.lib? :textillate
-      link rel="stylesheet" href="/css/less/animate.css"
+      link rel="stylesheet" href="/css/animate.css"
 
     - if page.lib? :prism
-      link rel="stylesheet" href="/css/less/prism.css"
+      link rel="stylesheet" href="/css/prism.css"
 
     link href="/atom.xml" rel="alternate" type="application/atom+xml"
     

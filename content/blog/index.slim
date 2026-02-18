@@ -3,15 +3,15 @@ Layout: layout
 
 h1 News
 
-- @y = request[:year].to_i
+- @y = params[:year].to_i
 - @y = nil if @y==0
-- @t = request[:tag]
+- @t = params[:tag]
 
 - @results = index.posts
 - @results = @results.select{|p| p.date.year == @y } unless @y.nil?
 - @results = @results.select{|p| p.tags.include?(@t) } unless @t.nil?
 
-- @ix = (request[:page] || 1).to_i
+- @ix = (params[:page] || 1).to_i
 - @per_page = 15
 - @results_page  =@results.each_slice(@per_page).to_a[@ix-1]
 
