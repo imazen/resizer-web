@@ -19,6 +19,14 @@ const site = 'https://imageresizing.net/';
 export default defineConfig({
 	site,
 	trailingSlash: 'always',
+	vite: {
+		server: {
+			allowedHosts: true,
+		},
+		preview: {
+			allowedHosts: true,
+		},
+	},
 	integrations: [
 		starlight({
 			title: 'ImageResizer',
