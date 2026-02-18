@@ -1,9 +1,11 @@
 import type { StarlightRouteData } from '@astrojs/starlight/route-data';
 
+const ALL_VERSIONS = ['2', '3', '4'] as const;
+
 /**
- * Route middleware that filters the sidebar to show only the relevant version
- * section when browsing versioned docs. Common sections (Start Here, Releases,
- * Blog, About) remain visible on all pages.
+ * Route middleware that:
+ * 1. Filters the sidebar to show only the relevant version section
+ * 2. Attaches version switcher data for the PageTitle component
  */
 export const onRequest: Parameters<
 	typeof import('@astrojs/starlight').defineRouteMiddleware
@@ -25,6 +27,19 @@ export const onRequest: Parameters<
 	}
 
 	const currentVersion = versionMatch[1]!;
+	const subPath = slug.replace(/^docs\/v\d+/, '');
+
+	// Build version switcher links: for each version, link to the equivalent
+	// page if it exists, otherwise link to the version index.
+	const versionLinks = ALL_VERSIONS.map((v) => ({
+		version: v,
+		label: `v${v}`,
+		href: `/docs/v${v}${subPath ? subPath : '/'}`,
+		isCurrent: v === currentVersion,
+	}));
+
+	// Attach to route for the PageTitle component to read.
+	(route as Record<string, unknown>).versionLinks = versionLinks;
 
 	// Filter sidebar: keep the current version's group (expanded), common
 	// sections, and version links for switching.

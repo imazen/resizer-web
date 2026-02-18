@@ -24,6 +24,9 @@ export default defineConfig({
 			title: 'ImageResizer',
 			lastUpdated: true,
 			routeMiddleware: ['./src/routeData.ts'],
+			components: {
+				PageTitle: './src/components/PageTitle.astro',
+			},
 			editLink: {
 				baseUrl: 'https://github.com/imazen/resizer-web/edit/starlight/',
 			},

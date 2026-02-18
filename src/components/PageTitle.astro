@@ -1,0 +1,69 @@
+---
+interface VersionLink {
+	version: string;
+	label: string;
+	href: string;
+	isCurrent: boolean;
+}
+
+const route = Astro.locals.starlightRoute as typeof Astro.locals.starlightRoute & {
+	versionLinks?: VersionLink[];
+};
+const versionLinks = route.versionLinks;
+---
+
+<h1 id="_top">{route.entry.data.title}</h1>
+{
+	versionLinks && (
+		<nav class="version-switcher" aria-label="Version" data-pagefind-ignore>
+			{versionLinks.map((v) =>
+				v.isCurrent ? (
+					<span class="version-link current" aria-current="true">
+						{v.label}
+					</span>
+				) : (
+					<a class="version-link" href={v.href}>
+						{v.label}
+					</a>
+				)
+			)}
+		</nav>
+	)
+}
+
+<style>
+	@layer starlight.core {
+		h1 {
+			margin-top: 1rem;
+			font-size: var(--sl-text-h1);
+			line-height: var(--sl-line-height-headings);
+			font-weight: 600;
+			color: var(--sl-color-white);
+		}
+	}
+	.version-switcher {
+		display: flex;
+		gap: 0.25rem;
+		margin-top: 0.5rem;
+		margin-bottom: 0.25rem;
+	}
+	.version-link {
+		display: inline-block;
+		padding: 0.2rem 0.6rem;
+		border-radius: 1rem;
+		font-size: var(--sl-text-xs);
+		font-weight: 600;
+		text-decoration: none;
+		border: 1px solid var(--sl-color-gray-5);
+		color: var(--sl-color-gray-2);
+	}
+	.version-link:hover {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-accent);
+	}
+	.version-link.current {
+		background-color: var(--sl-color-accent);
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+	}
+</style>
