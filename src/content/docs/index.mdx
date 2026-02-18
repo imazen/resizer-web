@@ -18,16 +18,13 @@ hero:
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import ImageDemo from '../../components/ImageDemo.astro';
 
-## What it does
+## Try it
 
-Add query commands to any image URL on your site. ImageResizer handles resizing, cropping, format conversion, and caching — no manual Photoshop export step, no build pipeline.
+Add query commands to any image URL. ImageResizer handles the rest — no export step, no build pipeline.
 
-```
-/photos/concert.jpg?width=300&height=200&mode=crop
-```
-
-Your server delivers the processed result in milliseconds, cached to disk for subsequent requests.
+<ImageDemo />
 
 ## Why it exists
 

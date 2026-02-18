@@ -1,0 +1,138 @@
+---
+/**
+ * Interactive demo showing ImageResizer's URL API.
+ * Types out query strings and updates the image in real-time.
+ */
+const baseUrl = 'https://z.zr.io/ri/u3.jpg?';
+const queries = [
+	'height=150',
+	'w=170&h=170&mode=crop',
+	'w=170&h=170&mode=pad',
+	'w=170&h=170&mode=max',
+	'h=200&s.grayscale=true',
+	'crop=770,590,1170,790',
+	'srotate=90&height=200',
+	'h=200&s.sepia=true',
+];
+---
+
+<div class="image-demo" data-base-url={baseUrl} data-queries={JSON.stringify(queries)}>
+	<div class="demo-code">
+		<code>&lt;img src="img.jpg?<span class="demo-typed"></span><span class="demo-cursor">|</span>"&gt;</code>
+	</div>
+	<div class="demo-image">
+		<img src={`${baseUrl}height=200`} alt="Demo: cable car photo processed by ImageResizer" loading="lazy" />
+	</div>
+</div>
+
+<style>
+	.image-demo {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		align-items: center;
+		margin: 1.5rem 0;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
+	@media (max-width: 600px) {
+		.image-demo {
+			grid-template-columns: 1fr;
+		}
+	}
+	.demo-code {
+		padding: 1.5rem;
+		background: var(--sl-color-gray-6);
+		font-family: var(--sl-font-mono, monospace);
+		font-size: var(--sl-text-sm);
+		line-height: 1.6;
+		overflow-x: auto;
+	}
+	.demo-code code {
+		color: var(--sl-color-gray-2);
+	}
+	.demo-typed {
+		color: var(--sl-color-accent);
+		font-weight: 600;
+	}
+	.demo-cursor {
+		color: var(--sl-color-accent);
+		animation: blink 0.7s infinite;
+	}
+	@keyframes blink {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0; }
+	}
+	.demo-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		min-height: 220px;
+		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+	}
+	.demo-image img {
+		max-width: 100%;
+		max-height: 200px;
+		border-radius: 0.25rem;
+		transition: opacity 0.3s;
+	}
+</style>
+
+<script>
+	class ImageDemoController {
+		container: HTMLElement;
+		typedEl: HTMLElement;
+		imgEl: HTMLImageElement;
+		baseUrl: string;
+		queries: string[];
+		queryIndex = 0;
+		charIndex = 0;
+		typing = true;
+
+		constructor(container: HTMLElement) {
+			this.container = container;
+			this.typedEl = container.querySelector('.demo-typed')!;
+			this.imgEl = container.querySelector('.demo-image img')!;
+			this.baseUrl = container.dataset.baseUrl!;
+			this.queries = JSON.parse(container.dataset.queries!);
+			this.tick();
+		}
+
+		tick() {
+			const current = this.queries[this.queryIndex]!;
+
+			if (this.typing) {
+				this.charIndex++;
+				this.typedEl.textContent = current.slice(0, this.charIndex);
+
+				if (this.charIndex >= current.length) {
+					// Finished typing — update image, pause, then erase.
+					this.imgEl.src = this.baseUrl + current;
+					this.typing = false;
+					setTimeout(() => this.tick(), 2000);
+					return;
+				}
+				setTimeout(() => this.tick(), 50);
+			} else {
+				this.charIndex--;
+				this.typedEl.textContent = current.slice(0, this.charIndex);
+
+				if (this.charIndex <= 0) {
+					// Finished erasing — move to next query.
+					this.queryIndex = (this.queryIndex + 1) % this.queries.length;
+					this.typing = true;
+					setTimeout(() => this.tick(), 300);
+					return;
+				}
+				setTimeout(() => this.tick(), 25);
+			}
+		}
+	}
+
+	// Initialize all demo instances on the page.
+	document.querySelectorAll<HTMLElement>('.image-demo').forEach((el) => {
+		new ImageDemoController(el);
+	});
+</script>
