@@ -18,7 +18,7 @@ const queries = [
 
 <div class="image-demo" data-base-url={baseUrl} data-queries={JSON.stringify(queries)}>
 	<div class="demo-code">
-		<code>&lt;img src="img.jpg?<span class="demo-typed"></span><span class="demo-cursor">|</span>"&gt;</code>
+		<code><span class="qs-tag">&lt;img</span> <span class="qs-key">src</span><span class="qs-sep">=</span><span class="qs-tag">"</span>img.jpg?<span class="demo-typed"></span><span class="demo-cursor">|</span><span class="qs-tag">"&gt;</span></code>
 	</div>
 	<div class="demo-image">
 		<img src={`${baseUrl}height=200`} alt="Demo: cable car photo processed by ImageResizer" loading="lazy" />
@@ -50,12 +50,13 @@ const queries = [
 		overflow-x: auto;
 	}
 	.demo-code code {
-		color: var(--sl-color-gray-2);
+		color: var(--sl-color-gray-3);
 	}
-	.demo-typed {
-		color: var(--sl-color-accent);
-		font-weight: 600;
-	}
+	.qs-tag { color: var(--sl-color-gray-3); }
+	.qs-key { color: var(--sl-color-accent-high); font-weight: 600; }
+	.qs-sep { color: var(--sl-color-gray-3); }
+	.qs-val { color: var(--sl-color-text-accent); }
+	.qs-amp { color: var(--sl-color-gray-3); font-weight: 600; }
 	.demo-cursor {
 		color: var(--sl-color-accent);
 		animation: blink 0.7s infinite;
@@ -81,6 +82,44 @@ const queries = [
 </style>
 
 <script>
+	/** Syntax-highlight a partial query string into HTML spans. */
+	function highlightQuery(text: string): string {
+		if (!text) return '';
+		let html = '';
+		let i = 0;
+		while (i < text.length) {
+			// Read a key (up to = or & or end)
+			let key = '';
+			while (i < text.length && text[i] !== '=' && text[i] !== '&') {
+				key += text[i++];
+			}
+			if (key) html += `<span class="qs-key">${esc(key)}</span>`;
+
+			if (i >= text.length) break;
+
+			if (text[i] === '=') {
+				html += `<span class="qs-sep">=</span>`;
+				i++;
+				// Read a value (up to & or end)
+				let val = '';
+				while (i < text.length && text[i] !== '&') {
+					val += text[i++];
+				}
+				if (val) html += `<span class="qs-val">${esc(val)}</span>`;
+			}
+
+			if (i < text.length && text[i] === '&') {
+				html += `<span class="qs-amp">&amp;</span>`;
+				i++;
+			}
+		}
+		return html;
+	}
+
+	function esc(s: string): string {
+		return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+
 	class ImageDemoController {
 		container: HTMLElement;
 		typedEl: HTMLElement;
@@ -100,15 +139,18 @@ const queries = [
 			this.tick();
 		}
 
+		render(text: string) {
+			this.typedEl.innerHTML = highlightQuery(text);
+		}
+
 		tick() {
 			const current = this.queries[this.queryIndex]!;
 
 			if (this.typing) {
 				this.charIndex++;
-				this.typedEl.textContent = current.slice(0, this.charIndex);
+				this.render(current.slice(0, this.charIndex));
 
 				if (this.charIndex >= current.length) {
-					// Finished typing — update image, pause, then erase.
 					this.imgEl.src = this.baseUrl + current;
 					this.typing = false;
 					setTimeout(() => this.tick(), 2000);
@@ -117,10 +159,9 @@ const queries = [
 				setTimeout(() => this.tick(), 50);
 			} else {
 				this.charIndex--;
-				this.typedEl.textContent = current.slice(0, this.charIndex);
+				this.render(current.slice(0, this.charIndex));
 
 				if (this.charIndex <= 0) {
-					// Finished erasing — move to next query.
 					this.queryIndex = (this.queryIndex + 1) % this.queries.length;
 					this.typing = true;
 					setTimeout(() => this.tick(), 300);
@@ -131,7 +172,6 @@ const queries = [
 		}
 	}
 
-	// Initialize all demo instances on the page.
 	document.querySelectorAll<HTMLElement>('.image-demo').forEach((el) => {
 		new ImageDemoController(el);
 	});
