@@ -1,0 +1,326 @@
+---
+/**
+ * Interactive image playground: editable query string with autocomplete
+ * and live preview from z.zr.io.
+ */
+---
+
+<div class="playground" data-pagefind-ignore>
+	<div class="pg-editor">
+		<label class="pg-label" for="pg-input">
+			<span class="pg-prefix">img.jpg?</span>
+		</label>
+		<div class="pg-input-wrap">
+			<input
+				id="pg-input"
+				type="text"
+				class="pg-input"
+				value="width=300&height=200&mode=crop"
+				spellcheck="false"
+				autocomplete="off"
+			/>
+			<div class="pg-autocomplete" hidden></div>
+		</div>
+	</div>
+	<div class="pg-preview">
+		<img
+			class="pg-img"
+			src="https://z.zr.io/ri/u3.jpg?width=300&height=200&mode=crop"
+			alt="Live preview"
+		/>
+	</div>
+	<div class="pg-ref" hidden></div>
+</div>
+
+<style>
+	.playground {
+		margin: 1.5rem 0;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
+	.pg-editor {
+		display: flex;
+		align-items: center;
+		background: var(--sl-color-gray-6);
+		padding: 0.75rem 1rem;
+		gap: 0;
+	}
+	.pg-label {
+		flex-shrink: 0;
+	}
+	.pg-prefix {
+		font-family: var(--sl-font-mono, monospace);
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+		user-select: none;
+	}
+	.pg-input-wrap {
+		flex: 1;
+		position: relative;
+	}
+	.pg-input {
+		width: 100%;
+		font-family: var(--sl-font-mono, monospace);
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--sl-color-white);
+		background: transparent;
+		border: none;
+		outline: none;
+		padding: 0;
+		caret-color: var(--sl-color-accent);
+	}
+	.pg-autocomplete {
+		position: absolute;
+		top: calc(100% + 0.5rem);
+		left: 0;
+		z-index: 100;
+		min-width: 300px;
+		max-height: 260px;
+		overflow-y: auto;
+		background: var(--sl-color-bg-nav);
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.375rem;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+		font-family: var(--sl-font-mono, monospace);
+		font-size: var(--sl-text-xs);
+	}
+	.pg-autocomplete :global(.ac-item) {
+		padding: 0.35rem 0.6rem;
+		cursor: pointer;
+		display: flex;
+		gap: 0.75rem;
+		align-items: baseline;
+	}
+	.pg-autocomplete :global(.ac-item:hover),
+	.pg-autocomplete :global(.ac-item.active) {
+		background: var(--sl-color-gray-6);
+	}
+	.pg-autocomplete :global(.ac-key) {
+		color: #9cdcfe;
+		font-weight: 600;
+		flex-shrink: 0;
+	}
+	.pg-autocomplete :global(.ac-vals) {
+		color: #ce9178;
+		flex-shrink: 0;
+	}
+	.pg-autocomplete :global(.ac-desc) {
+		color: var(--sl-color-gray-3);
+		font-family: var(--sl-font, sans-serif);
+		font-size: var(--sl-text-xs);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.pg-preview {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 240px;
+		padding: 1rem;
+		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+	}
+	.pg-img {
+		max-width: 100%;
+		max-height: 400px;
+		border-radius: 0.25rem;
+	}
+</style>
+
+<script>
+	interface Param {
+		key: string;
+		values?: string;
+		desc: string;
+	}
+
+	const PARAMS: Param[] = [
+		{ key: 'width', values: 'px', desc: 'Max width in pixels' },
+		{ key: 'height', values: 'px', desc: 'Max height in pixels' },
+		{ key: 'w', values: 'px', desc: 'Alias for width' },
+		{ key: 'h', values: 'px', desc: 'Alias for height' },
+		{ key: 'mode', values: 'max|pad|crop|stretch|carve', desc: 'How bounds are interpreted' },
+		{ key: 'scale', values: 'down|both|canvas', desc: 'Whether to upscale' },
+		{ key: 'anchor', values: 'topleft|topcenter|topright|middleleft|middlecenter|middleright|bottomleft|bottomcenter|bottomright', desc: 'Alignment origin for crop/pad' },
+		{ key: 'format', values: 'jpg|png|gif', desc: 'Output format' },
+		{ key: 'quality', values: '0..100', desc: 'JPEG quality (default 90)' },
+		{ key: 'crop', values: 'x1,y1,x2,y2', desc: 'Crop rectangle in source pixels' },
+		{ key: 'cropxunits', values: 'number', desc: 'Crop coordinate space width' },
+		{ key: 'cropyunits', values: 'number', desc: 'Crop coordinate space height' },
+		{ key: 'bgcolor', values: 'name|hex', desc: 'Background/matte color' },
+		{ key: 'srotate', values: '90|180|270', desc: 'Rotate before resizing' },
+		{ key: 'rotate', values: '0..360', desc: 'Rotate after resizing' },
+		{ key: 'flip', values: 'h|v|both', desc: 'Flip horizontal/vertical' },
+		{ key: 'colors', values: '2..256', desc: 'Palette size for GIF/8-bit PNG' },
+		{ key: 'dither', values: 'true|false', desc: 'Enable dithering for GIF' },
+		{ key: 's.grayscale', values: 'true|ry|bt709|flat', desc: 'Grayscale conversion' },
+		{ key: 's.sepia', values: 'true', desc: 'Sepia tone filter' },
+		{ key: 's.invert', values: 'true', desc: 'Invert colors' },
+		{ key: 's.alpha', values: '0..1', desc: 'Opacity/transparency' },
+		{ key: 's.contrast', values: '-1..1', desc: 'Adjust contrast' },
+		{ key: 's.brightness', values: '-1..1', desc: 'Adjust brightness' },
+		{ key: 's.saturation', values: '-1..1', desc: 'Adjust saturation' },
+		{ key: 'cache', values: 'no|default|always', desc: 'Disk caching behavior' },
+		{ key: 'process', values: 'no|default|always', desc: 'Processing behavior' },
+	];
+
+	const BASE = 'https://z.zr.io/ri/u3.jpg?';
+
+	class Playground {
+		input: HTMLInputElement;
+		img: HTMLImageElement;
+		ac: HTMLElement;
+		debounceTimer = 0;
+		activeIndex = -1;
+		matches: Param[] = [];
+
+		constructor(el: HTMLElement) {
+			this.input = el.querySelector('.pg-input')!;
+			this.img = el.querySelector('.pg-img')!;
+			this.ac = el.querySelector('.pg-autocomplete')!;
+
+			this.input.addEventListener('input', () => this.onInput());
+			this.input.addEventListener('keydown', (e) => this.onKeydown(e));
+			this.input.addEventListener('blur', () => {
+				setTimeout(() => this.hideAc(), 150);
+			});
+			this.input.addEventListener('focus', () => this.onInput());
+		}
+
+		onInput() {
+			// Debounce image update
+			clearTimeout(this.debounceTimer);
+			this.debounceTimer = window.setTimeout(() => {
+				this.img.src = BASE + this.input.value;
+			}, 400);
+
+			this.updateAc();
+		}
+
+		/** Find the partial key being typed at the cursor position. */
+		getCurrentToken(): string {
+			const val = this.input.value;
+			const cursor = this.input.selectionStart ?? val.length;
+			// Walk back from cursor to find start of current token
+			let start = cursor;
+			while (start > 0 && val[start - 1] !== '&' && val[start - 1] !== '=') {
+				start--;
+			}
+			// If the char before our token is '=', we're typing a value, not a key
+			if (start > 0 && val[start - 1] === '=') return '';
+			return val.slice(start, cursor).toLowerCase();
+		}
+
+		updateAc() {
+			const token = this.getCurrentToken();
+			if (!token) {
+				this.hideAc();
+				return;
+			}
+			this.matches = PARAMS.filter(p =>
+				p.key.startsWith(token) && p.key !== token
+			).slice(0, 8);
+
+			if (this.matches.length === 0) {
+				this.hideAc();
+				return;
+			}
+
+			this.activeIndex = -1;
+			this.renderAc();
+			this.ac.hidden = false;
+		}
+
+		renderAc() {
+			this.ac.innerHTML = this.matches.map((p, i) =>
+				`<div class="ac-item${i === this.activeIndex ? ' active' : ''}" data-index="${i}">` +
+				`<span class="ac-key">${esc(p.key)}</span>` +
+				(p.values ? `<span class="ac-vals">=${esc(p.values)}</span>` : '') +
+				`<span class="ac-desc">${esc(p.desc)}</span>` +
+				`</div>`
+			).join('');
+
+			// Click handlers
+			this.ac.querySelectorAll('.ac-item').forEach((item) => {
+				item.addEventListener('mousedown', (e) => {
+					e.preventDefault();
+					const idx = parseInt((item as HTMLElement).dataset.index!);
+					this.complete(this.matches[idx]!);
+				});
+			});
+		}
+
+		hideAc() {
+			this.ac.hidden = true;
+			this.matches = [];
+			this.activeIndex = -1;
+		}
+
+		complete(param: Param) {
+			const val = this.input.value;
+			const cursor = this.input.selectionStart ?? val.length;
+			// Find start of current token
+			let start = cursor;
+			while (start > 0 && val[start - 1] !== '&' && val[start - 1] !== '=') {
+				start--;
+			}
+			// Replace the partial token with the full key + '='
+			const before = val.slice(0, start);
+			const after = val.slice(cursor);
+			const insert = param.key + '=';
+			this.input.value = before + insert + after;
+			const newCursor = start + insert.length;
+			this.input.setSelectionRange(newCursor, newCursor);
+			this.input.focus();
+			this.hideAc();
+			this.onInput();
+		}
+
+		onKeydown(e: KeyboardEvent) {
+			if (this.ac.hidden || this.matches.length === 0) {
+				if (e.key === 'Enter') {
+					e.preventDefault();
+					clearTimeout(this.debounceTimer);
+					this.img.src = BASE + this.input.value;
+				}
+				return;
+			}
+
+			switch (e.key) {
+				case 'ArrowDown':
+					e.preventDefault();
+					this.activeIndex = Math.min(this.activeIndex + 1, this.matches.length - 1);
+					this.renderAc();
+					break;
+				case 'ArrowUp':
+					e.preventDefault();
+					this.activeIndex = Math.max(this.activeIndex - 1, -1);
+					this.renderAc();
+					break;
+				case 'Tab':
+				case 'Enter':
+					if (this.activeIndex >= 0) {
+						e.preventDefault();
+						this.complete(this.matches[this.activeIndex]!);
+					} else if (this.matches.length === 1) {
+						e.preventDefault();
+						this.complete(this.matches[0]!);
+					}
+					break;
+				case 'Escape':
+					this.hideAc();
+					break;
+			}
+		}
+	}
+
+	function esc(s: string): string {
+		return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+
+	document.querySelectorAll<HTMLElement>('.playground').forEach((el) => {
+		new Playground(el);
+	});
+</script>
