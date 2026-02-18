@@ -1,12 +1,12 @@
 ---
-title: ImageResizer — URL-based image processing
-description: High-performance, URL-based image resizing for every language and platform.
+title: ImageResizer — image processing for ASP.NET
+description: Drop-in image processing for ASP.NET and IIS. Resize, crop, and optimize images on-the-fly with a URL API.
 template: splash
 editUrl: false
 lastUpdated: false
 hero:
   title: ImageResizer
-  tagline: URL-based image processing that works with every language and platform.
+  tagline: Drop-in image processing for ASP.NET and IIS. Add commands to any image URL and get the result in milliseconds.
   actions:
     - text: Get started
       icon: right-arrow
@@ -14,5 +14,53 @@ hero:
     - text: View on GitHub
       icon: external
       variant: minimal
-      link: https://github.com/imazen
+      link: https://github.com/imazen/resizer
 ---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## What it does
+
+Add query commands to any image URL on your site. ImageResizer handles resizing, cropping, format conversion, and caching — no manual Photoshop export step, no build pipeline.
+
+```
+/photos/concert.jpg?width=300&height=200&mode=crop
+```
+
+Your server delivers the processed result in milliseconds, cached to disk for subsequent requests.
+
+## Why it exists
+
+Responsive sites need many image variants. Creating them by hand doesn't scale. ImageResizer sits inside IIS, intercepts image requests, and generates what you need on the fly. You keep one source image; the URL determines the output.
+
+<CardGrid>
+  <Card title="URL API" icon="pencil">
+    Resize, crop, rotate, pad, watermark, and adjust images with query parameters. No code changes to your app — works with any `<img>` tag.
+  </Card>
+  <Card title="40+ plugins" icon="puzzle">
+    Disk caching, S3/Azure storage, watermarking, face detection, white balance, seam carving, PDF rendering, and more. Enable what you need.
+  </Card>
+  <Card title="Drop-in install" icon="rocket">
+    NuGet install into any ASP.NET app. Works alongside your existing CMS — DNN, Umbraco, Orchard, Sitefinity, and others.
+  </Card>
+  <Card title="Built for servers" icon="setting">
+    Designed for multi-year uptimes. Managed disk cache, memory limits, DDOS-resistant request pipeline. Not a desktop library repurposed for the web.
+  </Card>
+</CardGrid>
+
+## Versions
+
+<CardGrid>
+  <LinkCard title="Version 4" description="Latest. .NET 4.5+, IIS 7+. FastScaling, blob providers, improved pipeline." href="/docs/v4/" />
+  <LinkCard title="Version 3" description=".NET 2.0+, IIS 6+. Stable, widely deployed. 40+ plugins." href="/docs/v3/" />
+  <LinkCard title="Version 2" description="Legacy. Upgrade guide available." href="/docs/v2/" />
+</CardGrid>
+
+## Quick links
+
+<CardGrid>
+  <LinkCard title="Basic commands" description="width, height, mode, scale, format — the essentials." href="/docs/basics/" />
+  <LinkCard title="Installation" description="NuGet packages and manual setup." href="/docs/v4/install/" />
+  <LinkCard title="Configuration reference" description="Web.config settings for v4." href="/docs/v4/configuration-all/" />
+  <LinkCard title="Releases" description="Changelog and release notes." href="/releases/3-4-3/" />
+</CardGrid>
