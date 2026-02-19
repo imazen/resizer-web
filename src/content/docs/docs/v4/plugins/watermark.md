@@ -88,7 +88,7 @@ Like the old version, you can also specify watermark images by name, which will 
 
 ## TextLayer specific attributes
 
-* **text** - The text to display. May contain querystring-specified values, referenced like this: "Hello #{name}" - `image.jpg?watermark=hi&name=Nathanael`.
+* **text** - The text to display. May contain querystring-specified values, referenced like this: "Hello #{name}" - `image.jpg?watermark=hi&name=World`.
 * **vertical** - True to display the text vertically. May also be achieved with Angle, but rendering may be slightly better.
 * **color** - A 3, 6, or 8-digit hex color reference, or a named color.
 * **font** - like "Verdana". The font family.
