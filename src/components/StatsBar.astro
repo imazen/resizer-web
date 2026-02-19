@@ -1,0 +1,59 @@
+---
+/**
+ * Stats bar showing key project metrics.
+ * Dark accent background, 4-column grid (2x2 on mobile).
+ */
+---
+
+<div class="stats-bar">
+	<div class="stat">
+		<span class="stat-number">4.1M+</span>
+		<span class="stat-label">NuGet downloads</span>
+	</div>
+	<div class="stat">
+		<span class="stat-number">45</span>
+		<span class="stat-label">Countries</span>
+	</div>
+	<div class="stat">
+		<span class="stat-number">2,550+</span>
+		<span class="stat-label">Commits</span>
+	</div>
+	<div class="stat">
+		<span class="stat-number">570+</span>
+		<span class="stat-label">Stack Overflow answers</span>
+	</div>
+</div>
+
+<style>
+	.stats-bar {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+		padding: 2rem 1.5rem;
+		margin: 2rem 0;
+		background: var(--sl-color-accent-low);
+		border: 1px solid var(--sl-color-accent);
+		border-radius: 0.5rem;
+		text-align: center;
+	}
+	.stat-number {
+		display: block;
+		font-size: var(--sl-text-2xl);
+		font-weight: 700;
+		color: var(--sl-color-accent-high);
+		line-height: 1.2;
+	}
+	.stat-label {
+		display: block;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+		margin-top: 0.25rem;
+	}
+	@media (max-width: 600px) {
+		.stats-bar {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+			padding: 1.5rem 1rem;
+		}
+	}
+</style>

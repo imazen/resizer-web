@@ -1,0 +1,144 @@
+---
+title: "Comprehensive Image Suite"
+description: "Transform, enhance, filter, and analyze images with a URL API. See every feature with live before-and-after examples."
+---
+
+ImageResizer does far more than resize. With 40+ plugins, you can transform, enhance, filter, and compose images — all from a URL query string. Every example below is a live image processed by ImageResizer.
+
+## Transform
+
+### Scale with fit modes
+
+Control how images fit their target dimensions.
+
+| Mode | Result |
+|------|--------|
+| **max** (default) | Scales down to fit within the box, preserving aspect ratio |
+| **pad** | Scales to fit, adding whitespace to fill remaining space |
+| **crop** | Scales to fill the box, cropping excess |
+| **stretch** | Distorts to fill exact dimensions |
+
+![Fit max — proportional downscale](https://z.zr.io/ri/utah2.jpg?width=200&height=150&mode=max)
+![Fit pad — padded to fill](https://z.zr.io/ri/utah2.jpg?width=200&height=150&mode=pad)
+![Fit crop — filled and cropped](https://z.zr.io/ri/utah2.jpg?width=200&height=150&mode=crop)
+
+### Rotate and flip
+
+![Rotated 45 degrees](https://z.zr.io/ri/utah2.jpg?width=200&rotate=45)
+![Flipped horizontally](https://z.zr.io/ri/utah2.jpg?width=200&flip=x)
+![Flipped vertically](https://z.zr.io/ri/utah2.jpg?width=200&flip=y)
+
+### Canvas padding
+
+Add space around an image with a configurable background color.
+
+![Padded with white canvas](https://z.zr.io/ri/utah2.jpg?width=200&paddingWidth=20&paddingColor=white)
+![Padded with color](https://z.zr.io/ri/utah2.jpg?width=200&paddingWidth=20&paddingColor=336699)
+
+### Manual crop
+
+Extract a region from the source image, then resize.
+
+![Cropped region](https://z.zr.io/ri/utah2.jpg?crop=100,100,500,400&width=200)
+
+### Automatic whitespace removal
+
+The WhitespaceTrimmer plugin detects and removes uniform borders.
+
+### Face detection crop
+
+The Faces plugin detects faces and adjusts crop rectangles to keep them in frame.
+
+---
+
+## Enhance
+
+### White balance (AutoWhiteBalance plugin)
+
+Corrects color temperature to produce neutral tones.
+
+![Original](https://z.zr.io/ri/red-leaf.jpg?width=200)
+![Auto white balance](https://z.zr.io/ri/red-leaf.jpg?width=200&a.balancewhite=true)
+
+### Histogram equalization
+
+Distributes tonal range evenly across the image for better contrast.
+
+![Original](https://z.zr.io/ri/red-leaf.jpg?width=200)
+![Equalized](https://z.zr.io/ri/red-leaf.jpg?width=200&a.equalize=true)
+
+### Contrast and brightness
+
+![More contrast](https://z.zr.io/ri/red-leaf.jpg?width=200&s.contrast=0.5)
+![More brightness](https://z.zr.io/ri/red-leaf.jpg?width=200&s.brightness=0.5)
+
+### Sharpen
+
+![Sharpened](https://z.zr.io/ri/red-leaf.jpg?width=200&a.sharpen=5)
+
+### Saturation
+
+![Boosted saturation](https://z.zr.io/ri/red-leaf.jpg?width=200&s.saturation=0.5)
+![Reduced saturation](https://z.zr.io/ri/red-leaf.jpg?width=200&s.saturation=-1)
+
+---
+
+## Filter
+
+### Grayscale
+
+![Grayscale — true](https://z.zr.io/ri/utah2.jpg?width=200&s.grayscale=true)
+![Grayscale — flat](https://z.zr.io/ri/utah2.jpg?width=200&s.grayscale=flat)
+![Grayscale — Y](https://z.zr.io/ri/utah2.jpg?width=200&s.grayscale=y)
+
+### Color filters — sepia, warming, cooling
+
+![Sepia](https://z.zr.io/ri/utah2.jpg?width=200&s.sepia=true)
+![Warming](https://z.zr.io/ri/utah2.jpg?width=200&a.colormatrix=warming-1)
+
+### Artistic effects
+
+![Oil painting](https://z.zr.io/ri/utah2.jpg?width=200&a.oilpainting=5)
+![Posterize](https://z.zr.io/ri/utah2.jpg?width=200&a.posterize=5)
+![Blur](https://z.zr.io/ri/utah2.jpg?width=200&a.blur=5)
+
+### Round corners
+
+![Round corners](https://z.zr.io/ri/utah2.jpg?width=200&s.roundcorners=30)
+
+### Feather edges
+
+Softens the image border with a customizable feather radius.
+
+### Transparency
+
+Output as PNG with a transparent background for compositing workflows.
+
+---
+
+## Advanced
+
+### Face and eye detection
+
+The **Faces** plugin uses OpenCV to detect faces and eyes. Use it to auto-crop portraits, apply red-eye correction, or build face-aware thumbnails.
+
+### Red-eye repair (RedEye plugin)
+
+Automatically detects and corrects red-eye in flash photography.
+
+### Encoding and compression
+
+- **JPEG** quality tuning — `quality=10` to `quality=100`
+- **WebP** output via the WebP plugin
+- **PNG** with 8-bit quantization via PrettyGifs
+
+![Low quality JPEG](https://z.zr.io/ri/utah2.jpg?width=200&quality=10)
+![High quality JPEG](https://z.zr.io/ri/utah2.jpg?width=200&quality=90)
+
+### Overlays and watermarks
+
+The **Watermark** plugin composites text or image overlays at configurable positions and opacity levels. Supports tiling, relative sizing, and per-image override.
+
+### Upscaling
+
+By default, ImageResizer only downscales. Set `scale=both` to allow upscaling when needed, or `scale=canvas` to upscale only the canvas.

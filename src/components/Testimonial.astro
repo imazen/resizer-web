@@ -1,0 +1,48 @@
+---
+/**
+ * Testimonial blockquote with attribution.
+ */
+interface Props {
+	quote: string;
+	author: string;
+	role?: string;
+	company?: string;
+}
+
+const { quote, author, role, company } = Astro.props;
+---
+
+<blockquote class="testimonial">
+	<p>{quote}</p>
+	<footer>
+		<strong>{author}</strong>
+		{(role || company) && (
+			<span class="attribution">
+				{role}{role && company && ', '}{company}
+			</span>
+		)}
+	</footer>
+</blockquote>
+
+<style>
+	.testimonial {
+		border-left: 3px solid var(--sl-color-accent);
+		padding: 1rem 1.5rem;
+		margin: 1.5rem 0;
+		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+		border-radius: 0 0.5rem 0.5rem 0;
+	}
+	.testimonial p {
+		font-style: italic;
+		margin: 0 0 0.75rem;
+		line-height: 1.6;
+	}
+	.testimonial footer {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+	.attribution {
+		display: block;
+		color: var(--sl-color-gray-3);
+	}
+</style>

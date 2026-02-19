@@ -52,6 +52,17 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Benefits',
+					items: [
+						'benefits/comprehensive',
+						'benefits/compatible',
+						'benefits/performant',
+						'benefits/stable',
+						'benefits/agile',
+						'benefits/testimonials',
+					],
+				},
+				{
 					label: 'Version 4',
 					collapsed: false,
 					items: [
