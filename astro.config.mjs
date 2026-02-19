@@ -30,11 +30,6 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'ImageResizer',
-			logo: {
-				dark: './src/assets/logo-dark.svg',
-				light: './src/assets/logo-light.svg',
-				replacesTitle: true,
-			},
 			lastUpdated: true,
 			customCss: ['./src/styles/custom.css'],
 			routeMiddleware: ['./src/routeData.ts'],
