@@ -96,8 +96,14 @@ test.describe('navigation and structure', () => {
 });
 
 test.describe('image playground', () => {
-	test('playground input and preview image exist', async ({ page }) => {
+	/** Switch to the playground tab before each test. */
+	async function openPlayground(page: import('@playwright/test').Page) {
 		await page.goto(`${BASE}/`);
+		await page.click('[data-tab="try"]');
+	}
+
+	test('playground input and preview image exist', async ({ page }) => {
+		await openPlayground(page);
 		const input = page.locator('.pg-input');
 		await expect(input).toBeVisible();
 		await expect(input).toHaveValue(/width=300/);
@@ -107,7 +113,7 @@ test.describe('image playground', () => {
 	});
 
 	test('typing updates the image src', async ({ page }) => {
-		await page.goto(`${BASE}/`);
+		await openPlayground(page);
 		const input = page.locator('.pg-input');
 		await input.clear();
 		await input.fill('height=100');
@@ -118,7 +124,7 @@ test.describe('image playground', () => {
 	});
 
 	test('autocomplete appears when typing a parameter name', async ({ page }) => {
-		await page.goto(`${BASE}/`);
+		await openPlayground(page);
 		const input = page.locator('.pg-input');
 		await input.clear();
 		await input.type('mo', { delay: 50 });
@@ -128,7 +134,7 @@ test.describe('image playground', () => {
 	});
 
 	test('autocomplete completes on Tab and hides', async ({ page }) => {
-		await page.goto(`${BASE}/`);
+		await openPlayground(page);
 		const input = page.locator('.pg-input');
 		await input.clear();
 		await input.type('mo', { delay: 50 });

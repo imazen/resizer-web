@@ -1,0 +1,76 @@
+---
+/**
+ * Tabbed container for the typing demo and interactive playground.
+ * Shows tabs on all viewports for quick switching.
+ */
+import ImageDemo from './ImageDemo.astro';
+import ImagePlayground from './ImagePlayground.astro';
+---
+
+<div class="demo-tabs">
+	<div class="tab-bar" role="tablist">
+		<button class="tab active" role="tab" aria-selected="true" data-tab="watch">Watch</button>
+		<button class="tab" role="tab" aria-selected="false" data-tab="try">Try it yourself</button>
+	</div>
+	<div class="tab-panel active" role="tabpanel" data-panel="watch">
+		<ImageDemo />
+	</div>
+	<div class="tab-panel" role="tabpanel" data-panel="try" hidden>
+		<ImagePlayground />
+	</div>
+</div>
+
+<style>
+	.demo-tabs {
+		margin: 1rem 0;
+	}
+	.tab-bar {
+		display: flex;
+		gap: 0;
+		border-bottom: 2px solid var(--sl-color-gray-5);
+	}
+	.tab {
+		flex: 1;
+		padding: 0.6rem 1rem;
+		font-family: var(--sl-font, sans-serif);
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--sl-color-gray-3);
+		background: none;
+		border: none;
+		border-bottom: 2px solid transparent;
+		margin-bottom: -2px;
+		cursor: pointer;
+		transition: color 0.15s, border-color 0.15s;
+	}
+	.tab:hover {
+		color: var(--sl-color-white);
+	}
+	.tab.active {
+		color: var(--sl-color-accent);
+		border-bottom-color: var(--sl-color-accent);
+	}
+</style>
+
+<script>
+	document.querySelectorAll<HTMLElement>('.demo-tabs').forEach((container) => {
+		const tabs = container.querySelectorAll<HTMLButtonElement>('.tab');
+		const panels = container.querySelectorAll<HTMLElement>('.tab-panel');
+
+		tabs.forEach((tab) => {
+			tab.addEventListener('click', () => {
+				const target = tab.dataset.tab!;
+
+				tabs.forEach((t) => {
+					t.classList.toggle('active', t.dataset.tab === target);
+					t.setAttribute('aria-selected', String(t.dataset.tab === target));
+				});
+				panels.forEach((p) => {
+					const isTarget = p.dataset.panel === target;
+					p.classList.toggle('active', isTarget);
+					p.hidden = !isTarget;
+				});
+			});
+		});
+	});
+</script>
