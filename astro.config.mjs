@@ -31,6 +31,7 @@ export default defineConfig({
 		starlight({
 			title: 'ImageResizer',
 			lastUpdated: true,
+			customCss: ['./src/styles/custom.css'],
 			routeMiddleware: ['./src/routeData.ts'],
 			components: {
 				PageTitle: './src/components/PageTitle.astro',

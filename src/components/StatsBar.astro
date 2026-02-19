@@ -1,59 +1,87 @@
 ---
 /**
  * Stats bar showing key project metrics.
- * Dark accent background, 4-column grid (2x2 on mobile).
+ * Full-bleed gradient background, 4-column grid with SVG icons.
  */
 ---
 
-<div class="stats-bar">
-	<div class="stat">
-		<span class="stat-number">4.1M+</span>
-		<span class="stat-label">NuGet downloads</span>
-	</div>
-	<div class="stat">
-		<span class="stat-number">45</span>
-		<span class="stat-label">Countries</span>
-	</div>
-	<div class="stat">
-		<span class="stat-number">2,550+</span>
-		<span class="stat-label">Commits</span>
-	</div>
-	<div class="stat">
-		<span class="stat-number">570+</span>
-		<span class="stat-label">Stack Overflow answers</span>
+<div class="stats-bar bleed bleed-accent">
+	<div class="stats-grid">
+		<div class="stat">
+			<div class="stat-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+			</div>
+			<span class="stat-number">4.1M+</span>
+			<span class="stat-label">NuGet downloads</span>
+		</div>
+		<div class="stat">
+			<div class="stat-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+			</div>
+			<span class="stat-number">45</span>
+			<span class="stat-label">Countries</span>
+		</div>
+		<div class="stat">
+			<div class="stat-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+			</div>
+			<span class="stat-number">2,550+</span>
+			<span class="stat-label">Commits</span>
+		</div>
+		<div class="stat">
+			<div class="stat-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+			</div>
+			<span class="stat-number">570+</span>
+			<span class="stat-label">Stack Overflow answers</span>
+		</div>
 	</div>
 </div>
 
 <style>
 	.stats-bar {
+		text-align: center;
+	}
+	.stats-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 1.5rem;
-		padding: 2rem 1.5rem;
-		margin: 2rem 0;
-		background: var(--sl-color-accent-low);
-		border: 1px solid var(--sl-color-accent);
-		border-radius: 0.5rem;
-		text-align: center;
+		gap: 2rem;
+		max-width: 56rem;
+		margin: 0 auto;
+	}
+	.stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	.stat-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 50%;
+		background: var(--sl-color-accent);
+		color: var(--sl-color-accent-low);
+		margin-bottom: 0.25rem;
 	}
 	.stat-number {
 		display: block;
-		font-size: var(--sl-text-2xl);
-		font-weight: 700;
-		color: var(--sl-color-accent-high);
-		line-height: 1.2;
+		font-size: clamp(var(--sl-text-2xl), 1rem + 2vw, var(--sl-text-4xl));
+		font-weight: 800;
+		color: var(--sl-color-white);
+		line-height: 1.1;
 	}
 	.stat-label {
 		display: block;
 		font-size: var(--sl-text-sm);
 		color: var(--sl-color-gray-2);
-		margin-top: 0.25rem;
 	}
 	@media (max-width: 600px) {
-		.stats-bar {
+		.stats-grid {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 1rem;
-			padding: 1.5rem 1rem;
+			gap: 1.5rem;
 		}
 	}
 </style>

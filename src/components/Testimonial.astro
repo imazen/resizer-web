@@ -1,6 +1,6 @@
 ---
 /**
- * Testimonial blockquote with attribution.
+ * Testimonial blockquote with decorative quote mark and attribution.
  */
 interface Props {
 	quote: string;
@@ -13,6 +13,7 @@ const { quote, author, role, company } = Astro.props;
 ---
 
 <blockquote class="testimonial">
+	<div class="quote-mark" aria-hidden="true">&ldquo;</div>
 	<p>{quote}</p>
 	<footer>
 		<strong>{author}</strong>
@@ -26,23 +27,44 @@ const { quote, author, role, company } = Astro.props;
 
 <style>
 	.testimonial {
-		border-left: 3px solid var(--sl-color-accent);
-		padding: 1rem 1.5rem;
+		position: relative;
+		border: 1px solid var(--sl-color-gray-5);
+		border-left: 4px solid var(--sl-color-accent);
+		padding: 1.75rem 2rem 1.5rem 2rem;
 		margin: 1.5rem 0;
-		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
-		border-radius: 0 0.5rem 0.5rem 0;
+		background: linear-gradient(
+			135deg,
+			var(--sl-color-gray-6) 0%,
+			var(--sl-color-black) 100%
+		);
+		border-radius: 0 0.75rem 0.75rem 0;
+	}
+	.quote-mark {
+		position: absolute;
+		top: -0.1rem;
+		left: 0.75rem;
+		font-size: 4rem;
+		line-height: 1;
+		color: var(--sl-color-accent);
+		opacity: 0.4;
+		font-family: Georgia, serif;
+		pointer-events: none;
 	}
 	.testimonial p {
 		font-style: italic;
-		margin: 0 0 0.75rem;
-		line-height: 1.6;
+		margin: 0 0 1rem;
+		line-height: 1.7;
+		font-size: var(--sl-text-base);
+		color: var(--sl-color-gray-1);
+		position: relative;
 	}
 	.testimonial footer {
 		font-size: var(--sl-text-sm);
-		color: var(--sl-color-gray-2);
+		color: var(--sl-color-white);
 	}
 	.attribution {
 		display: block;
-		color: var(--sl-color-gray-3);
+		color: var(--sl-color-accent-high);
+		font-weight: 500;
 	}
 </style>

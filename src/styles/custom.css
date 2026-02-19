@@ -1,0 +1,77 @@
+/* ── Homepage / splash page styling ── */
+
+/*
+ * Full-bleed section backgrounds.
+ * The .bleed class breaks out of Starlight's content container
+ * using the viewport-width negative margin trick.
+ */
+.bleed {
+	margin-inline: calc(50% - 50vw);
+	padding-inline: calc(50vw - 50%);
+}
+
+.bleed-accent {
+	background: linear-gradient(
+		135deg,
+		var(--sl-color-accent-low) 0%,
+		hsl(224, 40%, 12%) 100%
+	);
+	border-top: 1px solid var(--sl-color-accent);
+	border-bottom: 1px solid var(--sl-color-accent);
+	padding-block: 2.5rem;
+	margin-block: 2rem;
+}
+
+.bleed-subtle {
+	background: var(--sl-color-gray-6);
+	border-top: 1px solid var(--sl-color-gray-5);
+	border-bottom: 1px solid var(--sl-color-gray-5);
+	padding-block: 2.5rem;
+	margin-block: 2rem;
+}
+
+.bleed-dark {
+	background: linear-gradient(
+		180deg,
+		hsl(224, 15%, 8%) 0%,
+		var(--sl-color-black) 100%
+	);
+	border-top: 1px solid var(--sl-color-gray-5);
+	border-bottom: 1px solid var(--sl-color-gray-5);
+	padding-block: 2.5rem;
+	margin-block: 2rem;
+}
+
+/* ── Section headings inside bleed sections ── */
+.bleed h2 {
+	margin-top: 0;
+}
+
+/* ── Kicker / lead text above headings ── */
+.kicker {
+	display: block;
+	font-size: var(--sl-text-sm);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--sl-color-accent);
+	margin-bottom: 0.25rem;
+}
+
+/* ── Highlight large lead text ── */
+.lead {
+	font-size: var(--sl-text-xl);
+	color: var(--sl-color-white);
+	line-height: 1.5;
+	max-width: 50rem;
+}
+
+/* ── Override Card borders on splash page for more color ── */
+[data-has-hero] .card-grid .sl-link-card {
+	border-color: var(--sl-color-gray-4);
+	transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+}
+[data-has-hero] .card-grid .sl-link-card:hover {
+	border-color: var(--sl-color-accent);
+	transform: translateY(-2px);
+}
