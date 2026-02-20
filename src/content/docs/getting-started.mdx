@@ -1,6 +1,131 @@
 ---
 title: Getting Started
-description: Get started with ImageResizer.
+description: Install ImageResizer in your ASP.NET project and start resizing images in minutes.
 ---
 
-Welcome to ImageResizer. Documentation is being migrated — check back soon.
+import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
+
+ImageResizer is an IIS/ASP.NET HttpModule that intercepts image requests, applies transformations via URL query parameters, and caches the results to disk. You add commands to image URLs; it handles the rest.
+
+## Install via NuGet
+
+<Tabs>
+  <TabItem label="Package Manager Console">
+    Open the NuGet console in Visual Studio via **Tools > NuGet Package Manager > Package Manager Console**, then run:
+
+    ```powershell
+    PM> Install-Package ImageResizer.WebConfig
+    PM> Install-Package ImageResizer.Plugins.DiskCache
+    PM> Install-Package ImageResizer.Plugins.PrettyGifs
+    ```
+
+    `ImageResizer.WebConfig` adds the required `Web.config` entries automatically (it only adds, never deletes). If you prefer to manage Web.config yourself, use `ImageResizer.MvcWebConfig` instead.
+  </TabItem>
+  <TabItem label="NuGet GUI">
+    <Steps>
+    1. Right-click your project in Solution Explorer and choose **Manage NuGet Packages**.
+    2. Search for **Imazen** using the search bar.
+    3. Install **ImageResizer Web.config Installation** (with MVC support).
+    4. Install **ImageResizer.Plugins.DiskCache** and **ImageResizer.Plugins.PrettyGifs**.
+    </Steps>
+
+    All plugins can be safely combined. Check [individual plugin docs](/docs/v4/plugins/) for any additional activation steps.
+  </TabItem>
+  <TabItem label="Manual">
+    <Steps>
+    1. [Download and unzip the package](https://github.com/imazen/resizer/releases). Add `ImageResizer.dll` and any plugin DLLs to your project's `/bin` folder (or use **Add Reference** in Visual Studio).
+
+    2. Add the following to your `Web.config`:
+
+        ```xml
+        <?xml version="1.0" encoding="utf-8" ?>
+        <configuration>
+          <configSections>
+            <section name="resizer"
+                     type="ImageResizer.ResizerSection,ImageResizer"
+                     requirePermission="false" />
+          </configSections>
+
+          <resizer>
+            <pipeline fakeExtensions=".ashx"
+                      defaultCommands="autorotate.default=true"/>
+            <plugins>
+              <add name="MvcRoutingShim" />
+              <add name="DiskCache" />
+              <!-- <add name="PrettyGifs" /> -->
+            </plugins>
+          </resizer>
+
+          <system.web>
+            <httpModules>
+              <!-- IIS 7/8 Classic Mode and Cassini -->
+              <add name="ImageResizingModule"
+                   type="ImageResizer.InterceptModule"/>
+            </httpModules>
+          </system.web>
+
+          <system.webServer>
+            <validation validateIntegratedModeConfiguration="false"/>
+            <modules>
+              <!-- IIS 7+ Integrated mode -->
+              <add name="ImageResizingModule"
+                   type="ImageResizer.InterceptModule"/>
+            </modules>
+          </system.webServer>
+        </configuration>
+        ```
+
+    3. Build and run your site.
+    </Steps>
+  </TabItem>
+</Tabs>
+
+## Verify the installation
+
+Browse to `/resizer.debug.ashx` on your running site (e.g., `http://localhost:5000/resizer.debug.ashx`). This self-diagnostics page shows installed plugins, configuration, and any issues. Bookmark it — it's the first place to check when something isn't working.
+
+## Resize your first image
+
+Add query parameters to any image URL on your site:
+
+```
+/images/photo.jpg?width=300&height=200&mode=crop
+```
+
+That's it. ImageResizer intercepts the request, generates a cropped 300x200 version, caches it to disk, and serves it. Subsequent requests for the same parameters are served directly from the cache.
+
+### Key parameters
+
+| Parameter | Example | Effect |
+|-----------|---------|--------|
+| `width` | `?width=400` | Scale to fit within 400px wide (aspect ratio preserved) |
+| `height` | `?height=300` | Scale to fit within 300px tall |
+| `mode` | `?mode=crop` | `pad`, `crop`, `max` (default), `stretch`, or `carve` |
+| `format` | `?format=webp` | Convert to a specific output format |
+| `quality` | `?quality=85` | JPEG/WebP compression quality (0–100, default 90) |
+
+By default, images are **not** upscaled. Use `scale=both` to allow enlargement (though blurriness will result).
+
+See [Basic commands](/docs/basics/) for the full rundown on resizing modes, alignment, cropping, filters, and format conversion.
+
+## Disk caching matters
+
+Every production deployment should have the **DiskCache** plugin enabled. Without it, ImageResizer decodes and reprocesses the source image on every request. A single image decode can require 50–100 MB of contiguous RAM, which limits concurrent processing.
+
+DiskCache writes processed images to a hash-tree directory structure and lets IIS serve them as static files. This improves throughput by orders of magnitude and scales to hundreds of thousands of image variants.
+
+If you installed via NuGet with the commands above, DiskCache is already included. Verify it's active on the diagnostics page (`/resizer.debug.ashx`).
+
+## Using MVC or Web API?
+
+Always install `MvcRoutingShim` to prevent conflicts between ImageResizer's HttpModule and ASP.NET Routing. The NuGet package includes it.
+
+Do **not** wrap ImageResizer in an MVC Action or custom HttpHandler. Application frameworks are designed for HTML/JSON, not large binary payloads. ImageResizer's HttpModule integrates directly with IIS for efficient static file delivery and disk caching — wrapping it in an Action loses all of that.
+
+## Next steps
+
+- [Basic commands](/docs/basics/) — width, height, mode, scale, format, cropping, filters
+- [Best practices](/docs/best-practices/) — security, caching, file naming, scaling guidance
+- [Configuration reference](/docs/v4/configuration-all/) — all Web.config settings for v4
+- [Plugin directory](/docs/v4/plugins/) — browse the 40+ available plugins
+- [Compatibility](/benefits/compatible/) — supported CMSs, CDNs, storage backends, and .NET versions
