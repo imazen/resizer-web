@@ -69,8 +69,23 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Version 4',
+					label: 'Version 5',
 					collapsed: false,
+					items: [
+						'docs/v5',
+						'docs/v5/faq',
+						'docs/v5/system_requirements',
+						'docs/v5/configuration-all',
+						'docs/v5/migration',
+						{
+							label: 'Installation',
+							autogenerate: { directory: 'docs/v5/install' },
+						},
+					],
+				},
+				{
+					label: 'Version 4',
+					collapsed: true,
 					items: [
 						'docs/v4',
 						'docs/v4/faq',
