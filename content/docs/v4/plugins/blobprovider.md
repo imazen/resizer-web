@@ -7,8 +7,6 @@
 :edit_info: develop/plugins/imageresizer.storage/readme.md
 ---
 
-# BlobProviderBase plugin
-
 BlobProviderBase allows you to quickly create a file provider for ImageResizer - while only implementing 2 methods. 
 
 ```
@@ -28,3 +26,13 @@ BlobProviderBase supports both synchronous and asynchronous interfaces, and can 
 
 
 ## Configuration
+
+## Version history
+
+### v4.3 (current)
+
+All .NET Framework projects now target .NET 4.7.2 (previously 4.5/4.5.2). No functional changes to this plugin.
+
+### v4.2.8 and prior
+
+This plugin has been stable since its initial release. No breaking changes.

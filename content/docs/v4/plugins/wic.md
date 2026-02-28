@@ -12,9 +12,6 @@
 :edit_info: develop/plugins/wic/readme.md
 ---
 
-# WIC Plugins
-
-
 ### Windows Imaging Components is an operating system component maintained by Microsoft. WicBuilder is a wrapper around the underlying operating system API. **We have deprecated WIC in favor of the [FastScaling plugin](/plugins/fastscaling), which offers superior quality and is under our control.**
 
 ImageResizer.Plugins.Wic.dll contains 3 plugins: WicImageDecoder, WicImageEncoder, and WicImageBuilder.
@@ -26,23 +23,23 @@ These plugins require Windows 7+ or Windows Server 2008 R2+ for best performance
 1. Either run `Install-Package ImageResizer.Plugins.Wic` in the NuGet package manager, or add ImageResizer.Plugins.Wic.dll to your project
 2. Add `<add name="WicDecoder" />` inside the `<plugins>` section of Web.config.
 3. Add `<add name="WicEncoder" />` inside the `<plugins>` section of Web.config.
-4. Add `<add name="WicBuilder" />` inside the `<plugins>` section of Web.config.
+4. Add `<add name="WicBuilder" enableHighQualityCubic="false" />` inside the `<plugins>` section of Web.config.
 
 
 ## WicDecoder
 
-Supports decoding images through WIC, supporting any image codecs installed on the computer. When combined with a codec pack, can open RAW files. 
+Supports decoding images through WIC, supporting any image codecs installed on the computer. When combined with a codec pack, can open RAW files.
 
-Activate with `&decoder=wic`. 
+Activate with `&decoder=wic`.
 
 * page=1..?
 * frame=1..?
 
 ## WicEncoder
 
-Encode jpeg, gif, and png images through WIC for better performance and more control. Adjust jpeg quality, subsampling, gif dithering, and palette size.
+Encode JPEG, GIF, and PNG images through WIC for better performance and more control. Adjust JPEG quality, subsampling, GIF dithering, and palette size.
 
-Vs. PrettyGifs: 3-8x faster for encoding 8-bit PNG images. 2-5x faster for GIF images. 
+Vs. PrettyGifs: 3-8x faster for encoding 8-bit PNG images. 2-5x faster for GIF images.
 
 Activate with `&encoder=wic`
 
@@ -54,13 +51,18 @@ Activate with `&encoder=wic`
 
 ## WicBuilder
 
-Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations. 
+Provides a completely alternate pipeline, which supports most basic resize/crop/pad operations.
 
-2-4x faster than the default pipeline. Slightly reduced image quality.
+WIC HighQualityCubic is at least 2x slower than FastScaling.
+WIC Fant is 2-3x faster. Fant offers truly terrible quality.
 
 Activate with `&builder=wic`
 
-Select the resizing filter with `w.filter=fant|bicubic|linear|nearest`
+Select the resizing filter with `w.filter=fant|bicubic|linear|nearest|highqualitycubic`
+
+Set `enableHighQualityCubic="true"` on Windows 10 and later to access a better quality filter.
+If false, `fant` will be substituted for `highqualitycubic` (the default).
+
 
 ### Supported settings
 
@@ -83,3 +85,13 @@ Select the resizing filter with `w.filter=fant|bicubic|linear|nearest`
 ## License
 
 This set of plugins is part of the [Design](/plugins) bundle, and licensed accordingly.
+
+## Version history
+
+### v4.3 (current)
+
+All .NET Framework projects now target .NET 4.7.2 (previously 4.5/4.5.2). No functional changes to this plugin.
+
+### v4.2.8 and prior
+
+This plugin has been stable since its initial release. No breaking changes.

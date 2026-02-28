@@ -7,8 +7,6 @@
 :edit_info: develop/plugins/tinycache/readme.md
 ---
 
-# TinyCache plugin
-
 TinyCache is a size-limited disk cache (30MB, max 1024 cache items). It writes to a single file located at `~/App_Data/tiny_cache.cache`.
 
 The cache is stored in RAM, but periodically flushed to disk so that it can survive application restarts. It uses ProtoBuf to serialize the cache structure to disk quickly.
@@ -25,3 +23,13 @@ Either run `Install-Package ImageResizer.Plugins.TinyCache` in the NuGet package
 
 1. Add ImageResizer.Plugins.TinyCache.dll to your project
 2. Add `<add name="TinyCache" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+## Version history
+
+### v4.3 (current)
+
+All .NET Framework projects now target .NET 4.7.2 (previously 4.5/4.5.2). No functional changes to this plugin.
+
+### v4.2.8 and prior
+
+This plugin has been stable since its initial release. No breaking changes.

@@ -7,11 +7,11 @@
 :edit_info: develop/plugins/logging/readme.md
 ---
 
-# Logging plugin
-
 The Logging plugin allows the Image Resizer to perform logging (to disk, SQL, e-mail, whatever you configure).
 
 It is a wrapper for NLog, and as such, requires NLog.dll
+
+This plugin is not officially supported, as it relies on the process-wide NLog singleton, and very few of our users have been able to get NLog to work.
 
 ## Installation
 
@@ -27,7 +27,7 @@ NuGet or not, you'll need to manually add a configuration section for NLog and c
   </configSections>
   <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  
+
     <targets  async="true" >
       <target name="resizer" xsi:type="File" fileName="${basedir}/Logs/Resizer.txt" />
       <target name="diskcache" xsi:type="File" fileName="${basedir}/Logs/Diskcache.txt" layout="${processid} ${pad:padCharacter= :padding=3:inner=${threadid}} ${time} ${message}"  />
@@ -43,3 +43,15 @@ NuGet or not, you'll need to manually add a configuration section for NLog and c
 ## Notes
 
 Currently, detailed logging has only been implemented for the DiskCache plugin. Set `logging=true` on the `<diskcache />` element to enable it.
+
+## Version history
+
+### v4.3 (current)
+
+* **BREAKING:** NLog upgraded from 3.2.0 to 6.1.0. This is a major version jump; review the [NLog migration guides](https://nlog-project.org/config/) if you have custom NLog configuration that relies on removed or changed features.
+* All .NET Framework projects now target .NET 4.7.2 (previously 4.5/4.5.2).
+
+### v4.2.8 and prior
+
+* Used NLog 3.2.0.
+* Targeted .NET 4.5/4.5.2.

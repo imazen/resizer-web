@@ -2,18 +2,24 @@
 :append: edition_info
 :tags: plugin
 :edition: creative
-:tagline: Content-aware image resizing.
+:tagline: "(Deprecated) Content-aware image resizing."
 :aliases: "/plugins/seamcarving"
 :edit_info: develop/plugins/seamcarving/readme.md
 ---
 
-# SeamCarving plugin
+*PLEASE NOTE*
+* **This plugin is has been deprecated, and will be removed in a future release.**
+* **Photoshop now has this functionality, and your image editor is a more appropriate place for this kind of operation.**
+* **Seam carving is very CPU intensive, and can take over 30 seconds for moderate image sizes.**
+* **Do not use for on-demand processing. We do not offer support for this plugin.**
+
+
 
 Provides content-aware image resizing and 5 different algorithms.
 
 Based on the [CAIR (v2.19)](https://sites.google.com/site/brainrecall/cair) library.
 
-This plugin requires full trust to work. On 32-bit PNG images, the alpha channel is reduced to a single bit. Works best with jpeg and gif images.
+This plugin requires full trust to work. On 32-bit PNG images, the alpha channel is reduced to a single bit. Works best with JPEG and GIF images.
 
 For live examples, [see this page](http://nathanaeljones.com/596/dynamic-seam-carving-with-imageresizing-net/).
 
@@ -36,3 +42,13 @@ Either run `Install-Package ImageResizer.Plugins.SeamCarving` in the NuGet packa
 
 1. Add ImageResizer.Plugins.SeamCarving.dll to your project
 2. Add `<add name="SeamCarving" />` inside `<resizer><plugins></plugins></resizer>` in Web.config.
+
+## Version history
+
+### v4.3 (current)
+
+All .NET Framework projects now target .NET 4.7.2 (previously 4.5/4.5.2). No functional changes to this plugin.
+
+### v4.2.8 and prior
+
+This plugin has been stable since its initial release. No breaking changes.
