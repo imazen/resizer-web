@@ -3,9 +3,9 @@ title: "S3Reader2 plugin"
 description: "Process and resize images located on a remote Amazon S3 bucket. A VirtualPathProvider."
 ---
 
-Compatible with AWSSDK 2.0+
+Compatible with AWSSDK 3.1+
 
-Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk. 
+Allows images located on Amazon S3 to be processed and resized as if they were located locally on the disk.
 
 
 ### Example URLs
@@ -18,10 +18,10 @@ See Samples/S3ReaderSample/ in the download for a sample project.
 
 ### Features
 
-* Fast - no unnecessary http requests
+* Fast - no unnecessary HTTP requests
 * Offers mode for checking for newer files on a configured interval (useful when combined with disk caching)
 * Works great with the DiskCache and CloudFront caching plugins
-* Has an optional ssl mode
+* Has an optional SSL mode
 * Can be configured to access private bucket files with an access key
 
 
@@ -58,8 +58,6 @@ When creating a bucket, you should avoid certain characters to ensure that DNS w
 * Bucket names cannot contain dashes next to periods (e.g., "my-.bucket.com" and "my.-bucket" are invalid)
 * Bucket names cannot contain periods - Amazon states this is not supported for SSL-secured access, due to DNS complications. Your mileage may vary.
 
-
-
 ## Configuration
 
 You must specify a comma-delimited list of permitted bucket names that can be accessed.
@@ -73,3 +71,17 @@ If you want to access non-public bucket items, you will need to specify an acces
 * region - Set to the region containing your buckets.
 * useSsl - Defaults to false. Set to true to transfer the image data over an encrypted connection. Decreases performance.
 * accessKeyId, secretAccessKey - Use these if you need to access non-public files in your amazon buckets.
+
+## Version history
+
+### v4.3 (current)
+
+* AWSSDK.Core upgraded from 3.1.3.2 to 3.7.500.85.
+* AWSSDK.S3 upgraded from 3.1.3.1 to 3.7.510.11.
+* No breaking API changes (AWS SDK v3 maintains backwards compatibility).
+* All .NET Framework projects now target .NET 4.7.2 (previously 4.5/4.5.2).
+
+### v4.2.8 and prior
+
+* Used AWSSDK.Core 3.1.3.2 and AWSSDK.S3 3.1.3.1.
+* Targeted .NET 4.5/4.5.2.
